@@ -6,7 +6,7 @@ show_downloads: false
 url: "https://highinthefssky.github.io" # change this to the base hostname & protocol for your site
 
 
-google_analytics:
+google_analytics: UA-177201520-1
 
 # cayman-blog date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
