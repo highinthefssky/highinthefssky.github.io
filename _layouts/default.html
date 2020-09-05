@@ -89,15 +89,12 @@
         <section class="page-header">
             <h1 class="project-name">
                 {% if page.tag or page.title %}
-                {% if page.tag %}
-                  {{ page.tag | escape }}
-                {% else %}
-                  {{ page.title | escape }}
-                {% endif %}
-                -
-              {% endif %}
-              {{ site.title | escape }}
-              {% unless page.tag or page.title %}
+                    {% if page.tag %}
+                        {{ page.tag | escape }}
+                    {% else %}
+                        {{ page.title | escape }}
+                    {% endif %}
+                {% enfif %}
             </h1>
             <h2 class="project-tagline">{{ page-tagline }}</h2>
             {% if page.layout == 'home' and site.github.is_project_page %}
