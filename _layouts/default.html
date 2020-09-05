@@ -95,10 +95,9 @@
                   {{ page.title | escape }}
                 {% endif %}
                 -
-                {% endif %}
-                {{ site.title | escape }}
-                {% unless page.tag or page.title %}
-                {% endunless %}
+              {% endif %}
+              {{ site.title | escape }}
+              {% unless page.tag or page.title %}
             </h1>
             <h2 class="project-tagline">{{ page-tagline }}</h2>
             {% if page.layout == 'home' and site.github.is_project_page %}
@@ -127,6 +126,7 @@
         <section class="main-content">
             
             {{ content | markdownify }}
+
             
             <footer class="site-footer">
                 <!-- SVG icons from https://iconmonstr.com -->
