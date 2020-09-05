@@ -44,12 +44,10 @@
           -
         {% endif %}
         {% if paginator and paginator.page and paginator.total_pages > 1 and paginator.page > 1 %}
-          Page {{ paginator.page }} of {{ paginator.total_pages }} -
+          Page {{ paginator.page }} of {{ paginator.total_pages }}
         {% endif %}
         {{ site.title | escape }}
         {% unless page.tag or page.title %}
-          - {{ site.description | escape }}
-        {% endunless %}
       </title>
     
     {% if site.plugins contains "jekyll-seo-tag" %}
@@ -103,7 +101,6 @@
                 {% endif %}
                 {{ site.title | escape }}
                 {% unless page.tag or page.title %}
-                    - {{ site.description | escape }}
                 {% endunless %}
             </h1>
             <h2 class="project-tagline">{{ page-tagline }}</h2>
