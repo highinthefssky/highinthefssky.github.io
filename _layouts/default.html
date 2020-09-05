@@ -97,6 +97,7 @@
                         {{ page.title | escape }}
                     {% endif %}
                 {% endif %}
+                {{ site.title | escape }}
             </h1>
             <h2 class="project-tagline">{{ page-tagline }}</h2>
             {% if page.layout == 'home' and site.github.is_project_page %}
