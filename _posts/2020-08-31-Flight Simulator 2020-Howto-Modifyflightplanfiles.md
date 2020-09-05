@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Flight Simulator 2020 - How to - Modify flight plan files"
+description: "In this video I will show you how you can manually modify flight plan files created by Flight Simulator 2020."
 tags:
 - Flight Simulator 2020
 - Rotterdam The Hague Airport

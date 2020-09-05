@@ -89,7 +89,23 @@
         {% endif %}
         
         <section class="page-header">
-            <h1 class="project-name">{{ page-title }}</h1>
+            <h1 class="project-name">
+                {% if page.tag or page.title %}
+                {% if page.tag %}
+                  {{ page.tag | escape }}
+                {% else %}
+                  {{ page.title | escape }}
+                {% endif %}
+                -
+                {% endif %}
+                {% if paginator and paginator.page and paginator.total_pages > 1 and paginator.page > 1 %}
+                    Page {{ paginator.page }} of {{ paginator.total_pages }} -
+                {% endif %}
+                {{ site.name | escape }}
+                {% unless page.tag or page.title %}
+                    - {{ site.description | escape }}
+                {% endunless %}
+            </h1>
             <h2 class="project-tagline">{{ page-tagline }}</h2>
             {% if page.layout == 'home' and site.github.is_project_page %}
             <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
@@ -116,7 +132,7 @@
         
         <section class="main-content">
             
-            {{ content }}
+            {{ content | markdownify }}
             
             <footer class="site-footer">
                 <!-- SVG icons from https://iconmonstr.com -->
