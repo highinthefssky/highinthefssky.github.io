@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Flight Simulator 2020 - How to - Cessna 172 Skyhawk G1000 - Set flight plan"
+description: "In this how to we are going to look how we can configure our flight plan manually in our navigation system from our Cessna 172."
 tags:
 - Flight Simulator 2020
 - Rotterdam The Hague Airport
