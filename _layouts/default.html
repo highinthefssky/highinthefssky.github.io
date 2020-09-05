@@ -13,7 +13,7 @@
     </script>
     {% endif %}
     
-    
+    <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{site.description | truncate: 160 }}{% endif %}" />
     <!-- Non social metatags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,21 +35,7 @@
     <meta name="twitter:image" content="https://highintheflightsimsky.nl/assets/images/WebSite.jpg">
 
     <title>
-        {% if page.tag or page.title %}
-            {% if page.tag %}
-                {{ page.tag | escape }}
-            {% else % }
-                {{ page.title | escape }}
-            {% endif %}
-            -
-        {% endif %}
-        {% if paginator and paginator.page and paginator.total_pages > 1 and paginator.page > 1 %}
-            Page {{ paginator.page }} of {{ paginator.total_pages }} - 
-        {% endif %}
-        {{ site.name | escape }}
-        {% unless page.tag or page.title %}
-        - {{site.description | escape }}
-        {% endunless %}
+ 
     </title>
     
     {% if site.plugins contains "jekyll-seo-tag" %}
