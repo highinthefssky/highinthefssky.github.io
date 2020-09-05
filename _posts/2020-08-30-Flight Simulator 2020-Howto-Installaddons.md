@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Flight Simulator 2020 - How to - Install addons"
+description: "In this video I will show you two ways how to add addons to your Flight Simulator 2020 installation."
 tags:
 - Flight Simulator 2020
 - flight plan
