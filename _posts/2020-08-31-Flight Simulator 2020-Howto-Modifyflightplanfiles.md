@@ -22,7 +22,7 @@ tags:
 - airport
 - intersection,
 - light planning
-catogory: tutorials
+catogories: tutorials
 permalink: /MSFS2020-Howto-ModifyFlightPlanFiles/
 youtubeId: EEUjujHJe1A
 

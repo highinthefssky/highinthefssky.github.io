@@ -12,7 +12,7 @@ tags:
 - flight simulator
 - microsoft flight simulator 2020
 - msfs 2020
-category: landing challenges
+categories: landing challenges
 permalink: /MSFS2020-LiveEvent-LandingChallengeCourChevel/
 youtubeId: mnUZlC5KPVQ
 
