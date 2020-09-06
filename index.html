@@ -8,7 +8,7 @@
 layout: home
 ---
 {% for category in site.categories %}
-    {{ category | first }}
+    site: {{ category | first }}
 {% endfor %}
 
 {% for post in paginator.posts %}
