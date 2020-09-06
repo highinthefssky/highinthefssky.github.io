@@ -15,7 +15,7 @@ tags:
 - msfs 2020,tutorials
 - flight training
 - flight sim 2020
-category: tutorials
+categories: tutorials
 permalink: /MSFS2020-Howto-Cessna172-SetFlightPlan/
 youtubeId: 11k7PxqQ2DA
 

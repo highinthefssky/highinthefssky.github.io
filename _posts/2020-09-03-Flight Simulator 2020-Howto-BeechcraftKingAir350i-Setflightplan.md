@@ -19,7 +19,7 @@ tags:
 - how to set a flight plan in microsoft flight simulator
 - king air 350
 - beechcraft king air 350
-catogory: tutorials
+catogories: tutorials
 permalink: /MSFS2020-Howto-BeechcraftKingAir350i-SetFlightPlan/
 youtubeId: EEUjujHJe1A
 
