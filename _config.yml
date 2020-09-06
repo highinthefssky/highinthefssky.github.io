@@ -33,3 +33,16 @@ target-blank:
     rel: nofollow
 
 header_page_refs: ['about']
+
+# define category collections
+collections:
+  category:
+    output: true
+  
+  defaults:
+    -
+      scope:
+        path: ""
+        type: category
+      values:
+        layout: "category"
