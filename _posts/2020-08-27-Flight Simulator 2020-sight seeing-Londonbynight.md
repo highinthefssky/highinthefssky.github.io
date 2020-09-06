@@ -28,17 +28,17 @@ As next challenge we decrease our altitude and will fly under several bridges al
 After we are done with tricks we fly back following the Thames and return to London City Airport.
 We will land on runway 09 to finish our site seeing.
 
-*0:00 title screen
-*0:10 departing from London City Airport
-*2:00 O2 arena
-*2:20 Canary Warf
-*3:30 Tower Bridge & the Tower of London
-*4:40 Big Ben (Houses of Parliament)
-*10:03 Buckingham Palace
-*11:47 The Shard
-*12:15 Fly through the pillars of the Tower Bridge
-*16:15 Fly lower over the Thames and under some bridges
-*22:00 Return to London City Airport
-*25:00 Land at London City Airport
+* 0:00 title screen
+* 0:10 departing from London City Airport
+* 2:00 O2 arena
+* 2:20 Canary Warf
+* 3:30 Tower Bridge & the Tower of London
+* 4:40 Big Ben (Houses of Parliament)
+* 10:03 Buckingham Palace
+* 11:47 The Shard
+* 12:15 Fly through the pillars of the Tower Bridge
+* 16:15 Fly lower over the Thames and under some bridges
+* 22:00 Return to London City Airport
+* 25:00 Land at London City Airport
 
 {% include youtubePlayer.html id=page.youtubeId %}
