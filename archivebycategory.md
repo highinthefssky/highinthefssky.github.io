@@ -2,7 +2,6 @@
 layout: page
 title: Post by Category
 permalink: /category/
-sitemap: false
 ---
 <div>
     {% assign categories = site.categories | sort %}
