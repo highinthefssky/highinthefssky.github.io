@@ -28,10 +28,10 @@ Normally you would probably plan your flight using the build-in flight planner f
 
 The waypoint we are going to use in our flight plan are:
 
-*EHRD
-*ANDIK
-*UNEXO
-*EHAL
+* EHRD
+* ANDIK
+* UNEXO
+* EHAL
 
 Below you can see an image of our route
 
