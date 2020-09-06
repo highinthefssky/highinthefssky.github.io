@@ -14,7 +14,7 @@ tags:
  - London City Airport
  - sightseeing,flight simulator 2020 gameplay
  - flight sim 2020
-catogory: sightseeing 
+category: sightseeing 
 permalink: /MSFS2020-SightSeeing-LondonbyNight/
 youtubeId: VGmQpmKyozg
 
