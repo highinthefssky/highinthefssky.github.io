@@ -24,7 +24,14 @@ permalink: /MSFS2020-Howto-BeechcraftKingAir350i-SetFlightPlan/
 youtubeId: EEUjujHJe1A
 
 ---
-
+  <div class="tags">
+    {% assign sortedCategories = page.categories | sort %}
+    {% for category in sortedCategories %}
+        <span class="tag">
+           tags:  <a href="/category/{{ category }}">#{{ category }}</a>
+        </span>
+    {% endfor %}
+    
 In this video I will show you how you can manually modify flight plan files created by Flight Simulator 2020.
 
 {% include youtubePlayer.html id=page.youtubeId %}
