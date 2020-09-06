@@ -19,19 +19,6 @@ layout: default
     {{ content | markdownify }}
   </div>
 
-  {{ page.category }}
-
-  <div class="row related-posts">
-    <h2 class="text-center">More {{ page.category }} Posts!</h2>
-    <div class="medium-12 small-12 columns">
-      <h3>
-        <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
-        </a>
-      </h3>
-    </div>
-  </div>
-
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}
