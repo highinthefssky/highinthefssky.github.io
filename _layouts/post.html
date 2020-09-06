@@ -19,18 +19,17 @@ layout: default
     {{ content | markdownify }}
   </div>
 
-  {{ page.category }}
-  
-  <div class="row related-posts">
-    <h2 class="text-center">More {{ page.category }} Posts!</h2>
-    <div class="medium-12 small-12 columns">
-         <h3>
-          <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-          </a>
-         </h3>
-    </div>
-  </div>
+  {% capture category %}{{ page.categories | first }}{% endcapture %}
+
+  {% for post in site.categories[category] limit: 5 %}
+      <li>
+          <p>
+              <a href="{{ post.url | relative_url }}">
+                  {{ post.title | escape }}
+              </a>
+          </p>
+      </li>
+  {% endfor %}
 
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
