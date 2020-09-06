@@ -18,6 +18,7 @@ tags:
 category: tutorials
 permalink: /MSFS2020-Howto-Cessna172-SetFlightPlan/
 youtubeId: 11k7PxqQ2DA
+image: /assets/images/tutorials/MSFS2020-Howto-Cessna172-SetFlightPlan.jpg
 
 ---
 

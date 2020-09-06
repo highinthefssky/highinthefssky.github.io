@@ -20,6 +20,7 @@ tags:
 category: tutorials
 permalink: /MSFS2020-Howto-ICONA5-SetFlightPlan/
 youtubeId: DlfEEEOaOpA
+image: /assets/images/tutorials/MSFS2020-Howto-ICONA5-SetFlightPlan.jpg
 
 ---
 

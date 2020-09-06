@@ -22,6 +22,7 @@ tags:
 category: tutorials
 permalink: /MSFS2020-Howto-InstallAddons/
 youtubeId: NMR93kwRM9c
+/assets/images/tutorials/MSFS2020-Howto-InstallAddons.jpg
 
 ---
 
