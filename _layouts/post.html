@@ -18,7 +18,8 @@ layout: default
   <div itemprop="articleBody">
     {{ content | markdownify }}
   </div>
-
+  post tag: {{post.tag}}
+  post tags: {{post.tags}}
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}
