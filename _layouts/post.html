@@ -19,16 +19,13 @@ layout: default
     {{ content | markdownify }}
   </div>
 
+  //
+  //
+
   {% capture category %}{{ page.categories | first }}{% endcapture %}
 
   {% for post in site.categories[category] limit: 5 %}
-      <li>
-          <p>
-              <a href="{{ post.url | relative_url }}">
-                  {{ post.title | escape }}
-              </a>
-          </p>
-      </li>
+    [{{ post.title | escape }}]({% post.url | relative_url %})|
   {% endfor %}
 
   {% if site.disqus.shortname %}
