@@ -17,7 +17,7 @@ tags:
 - flight training
 - flight sim 2020
 - simbrief
-categories: tutorials
+category: tutorials
 permalink: /MSFS2020-Howto-ICONA5-SetFlightPlan/
 youtubeId: DlfEEEOaOpA
 

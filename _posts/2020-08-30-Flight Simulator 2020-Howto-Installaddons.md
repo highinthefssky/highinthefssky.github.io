@@ -19,7 +19,7 @@ tags:
 - FS2020 airplane addons
 - FS2020 scenery addons
 - FS2020 liveries
-categories: tutorials
+category: tutorials
 permalink: /MSFS2020-Howto-InstallAddons/
 youtubeId: NMR93kwRM9c
 
