@@ -20,14 +20,18 @@ layout: default
   {% for category in site.categories %}
   {% if category[0] == page.category %}
     <div class="related-posts">
-      <h2>Related Posts</h2>
-      <table class="table_relatedposts">
-        <tr>
-        {% for post in category[1] %}
-            <td><a href="{{ post.url }}"><img src="{{ post.image | prepend: site.baseurl }}" title="{{ post.title }}" alt="{{ post.title }}"></a></td>
-        {% endfor %}
-        </tr>
-      </table>
+      <div class="hvrbox">
+        <h2>Related Posts</h2>
+        <table class="table_relatedposts">
+          <tr>
+          {% for post in category[1] %}
+              <td><a href="{{ post.url }}"><img src="{{ post.image | prepend: site.baseurl }}" title="{{ post.title }}" alt="{{ post.title }}" class="hvrbox-layer_bottom"><div class="hvrbox-layer_top hvrbox-layer_slidedown">
+                <div class="hvrbox-text">{{ post.title }}</div>
+              </div></a></td>
+          {% endfor %}
+          </tr>
+        </table>
+      </div>
     </div>
   {% endif %}
 {% endfor %}
