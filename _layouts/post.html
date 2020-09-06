@@ -14,7 +14,14 @@ layout: default
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
       {% endif %}</p>
   </header> -->
-
+  <div class="tags">
+    {% assign sortedCategories = page.categories | sort %}
+    {% for category in sortedCategories %}
+        <span class="tag">
+            <a href="/category/{{ category }}">#{{ category }}</a>
+        </span>
+    {% endfor %}
+</div>
   <div itemprop="articleBody">
     {{ content | markdownify }}
   </div>
