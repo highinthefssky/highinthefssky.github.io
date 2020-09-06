@@ -1,5 +1,5 @@
 ---
 layout: category
-categories: tutorials
+category-name: tutorials
 permalink: "/category/tutorials"
 ---
