@@ -16,6 +16,8 @@ layout: default
   </header> -->
 </div>
   <div itemprop="articleBody">
+    {{post.categories | capitalize | join: ', '}}
+    {{page.categories | capitalize | join: ', '}}
     {{ content | markdownify }}
   </div>
   {% if site.disqus.shortname %}
