@@ -35,5 +35,5 @@ target-blank:
 header_page_refs: ['about']
 
 collections:
-  categories:
+  category:
     output: true
