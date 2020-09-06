@@ -227,42 +227,6 @@ a {
     max-width: 100%;
   }
 
-  /* Parent Container */
-  .img_relatedpost{
-    position: relative;
-    width: 200px;
-    height: 200px;
-    float: left;
-    margin-right: 10px;
-  }
-  
-  /* Child Text Container */
-  .img_relatedpost div{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: black;
-    color: white;
-    margin-bottom: 5px;
-    font-family: sans-serif;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: visibility 0s, opacity 0.5s linear; 
-    transition: visibility 0s, opacity 0.5s linear;
-  }
-  
-  /* Hover on Parent Container */
-  .img_relatedpost:hover{
-    cursor: pointer;
-  }
-  
-  .img_relatedpost:hover div{
-    width: 150px;
-    padding: 8px 15px;
-    visibility: visible;
-    opacity: 0.7; 
-  }
-
   h1,
   h2,
   h3,
