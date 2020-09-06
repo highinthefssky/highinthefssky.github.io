@@ -16,7 +16,8 @@ layout: default
   </header> -->
 
   <div itemprop="articleBody">
-    {{post.category}}
+    {% assign categories = post.categories %}
+    {categories}
     {{ content | markdownify }}
   </div>
 
