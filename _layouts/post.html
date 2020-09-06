@@ -24,7 +24,10 @@ layout: default
       <table border="0">
         <tr>
         {% for post in category[1] %}
+        <div class="img_relatedpost">
           <td><a href="{{ post.url }}"><img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}"></a></td>
+          <div>{{ post.title }}</div> 
+        </div>
         {% endfor %}
         </tr>
       </table>
