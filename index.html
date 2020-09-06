@@ -14,7 +14,7 @@ layout: home
     <span class="date">{{ post.date | date: date_format }}</span>
   </p>
   <div class="content">
-    {{ post.content }}
+    {{ post.content | markdownify}}
   </div>
 {% endfor %}
 
