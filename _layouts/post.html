@@ -16,27 +16,9 @@ layout: default
   </header> -->
 
   <div itemprop="articleBody">
-    {% assign categories = post.categories %}
-    {categories}
     {{ content | markdownify }}
   </div>
 
-  <div class = "related">
-    <h3>Related Posts</h3>
-    
-    category: {{page.categories}} {{page.category}} {{post.categories}} {{post.category}}
-    {% assign firstCategory = page.categories | first %}
-    {% assign relatedCount = 0 %}
-    {% for related in site.categories[firstCategory] %}
-      {% unless page.permalink == related.permalink %}
-        <a href="{{related.permalink}}">{{ related.title }} </a>
-      {% endunless %}
-
-      {% if relatedcount == 3 %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-  </div>
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}
