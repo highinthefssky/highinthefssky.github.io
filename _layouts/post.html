@@ -25,14 +25,13 @@ layout: default
         <tr>
         {% for post in category[1] %}
           <div class=" overlay-image _b1 ">
-            <td><a href="{{ post.url }}"><img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}">
+            <td><a href="{{ post.url }}"><img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}"></a></td>
             <div class=" normal _b4 ">
               <div class=" text _2 ">Image + text ORIGINAL</div>
             </div>
             <div class=" hover _b3 ">
               <div class=" text _2 ">Background + text HOVER</div>
             </div>
-          </a></td>
           </div>
         {% endfor %}
         </tr>
