@@ -19,15 +19,19 @@ layout: default
     {{ content | markdownify }}
   </div>
 
-  //
-  //
 
   <div class="row related-posts">
     <h2 class="text-center">More {{ page.category }} Posts!</h2>
     <div class="medium-12 small-12 columns">
-      <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-          </a>|
+      <table>
+        <tr>
+          <td>
+            <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
+              {{ post.title }}
+            </a>
+        </td>
+        </tr>
+        </table>
     </div>
   </div>
 
