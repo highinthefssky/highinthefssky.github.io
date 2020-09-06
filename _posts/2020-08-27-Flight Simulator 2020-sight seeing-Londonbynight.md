@@ -20,11 +20,20 @@ youtubeId: VGmQpmKyozg
 
 ---
 
-In this video we will depart from London City Airport (LCY/EGLC) in our Cessna 172 and fly over London on a very low altitude. London City airport is known for it's short runway but with the Cessna it shouldn't be an issue. Our Cessna is already standing on runway 27 and is ready for departure. Runway 27's dimensions are: 4948 x 98 feet / 1508 x 30 meters.
+In this video we will depart from London City Airport (LCY/EGLC) in our Cessna 172 and fly over London on a very low altitude. 
+
+London City airport is known for it's short runway but with the Cessna it shouldn't be an issue. Our Cessna is already standing on runway 27 and is ready for departure. Runway 27's dimensions are: 4948 x 98 feet / 1508 x 30 meters.
+
 First we visit the O2 arena which is close to the airport and is very near Canary Warf which is the financial district of London and several large banks have their offices here.
-After visiting Canary Warf we will continue to the city center of London. The first touristic attraction which we see are both the Tower Bridge and the The Tower of London which are close to each other. Near the Tower Bridge we pass the HMS Belfast a navy ship on the left side before continuing our trip further down the city center. Next attraction is the Big Ben and the Houses of Parliament on the right side. But just before arriving there we pass the London Eye on the left side. Once we bypassed the Big Ben a right turn is made and we are going to visit the queen who is at Buckingham Palace, so don't forget to wave ;-)
+
+After visiting Canary Warf we will continue to the city center of London. The first touristic attraction which we see are both the Tower Bridge and the The Tower of London which are close to each other. Near the Tower Bridge we pass the HMS Belfast a navy ship on the left side before continuing our trip further down the city center. 
+
+Next attraction is the Big Ben and the Houses of Parliament on the right side. But just before arriving there we pass the London Eye on the left side. Once we bypassed the Big Ben a right turn is made and we are going to visit the queen who is at Buckingham Palace, so don't forget to wave ;-)
+
 On our return we pass The Shard which is a large Skycraper which is housing offices, restaurants and hotel rooms. Once we passed it we make a turn back and fly towards the Tower Bridge and will try to fly through the pillars, check the video if it worked ;-). 
+
 As next challenge we decrease our altitude and will fly under several bridges almost hitting the water. The lowest altitude you will see in the altitude meter will be around 20FT.
+
 After we are done with tricks we fly back following the Thames and return to London City Airport.
 We will land on runway 09 to finish our site seeing.
 

@@ -28,25 +28,25 @@ Our ICON A5 is already located on the runway which is from the type grass.
 
 Today we will fly from Texel Airport (EHTX) to Eelde Airport (EHGG) which will be a straight line if you would not use any waypoints. In this case we will use [simbrief.com](https://www.simbrief.com/) as our flight planning tool. It will require you to register before you can create flight plans. We will use it to configure a roundtrip in the Netherlands. The waypoints which we are going to use in the flight plan are:
 
-*EHTX
-*HDR
-*SPY
-*OA
-*AMS
-*CH
-*RTM
-*HSD
-*WDT
-*GZR
-*EHV
-*MAS
-*VKL
-*DLN
-*EHHV
-*FRO
-*EHHO
-*EHST
-*EHGG
+* EHTX
+* HDR
+* SPY
+* OA
+* AMS
+* CH
+* RTM
+* HSD
+* WDT
+* GZR
+* EHV
+* MAS
+* VKL
+* DLN
+* EHHV
+* FRO
+* EHHO
+* EHST
+* EHGG
 
 Below you can see an image of our route
 
