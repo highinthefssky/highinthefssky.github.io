@@ -24,7 +24,7 @@ layout: default
       <table class="table_relatedposts">
         <tr>
         {% for post in category[1] %}
-            <td><a href="{{ post.url }}"><img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}"></a></td>
+            <td><a href="{{ post.url }}"><img src="{{ post.image | prepend: site.baseurl }}" title="{{ post.title }}" alt="{{ post.title }}"></a></td>
         {% endfor %}
         </tr>
       </table>
