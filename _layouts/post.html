@@ -26,7 +26,6 @@ layout: default
           {% for post in category[1] %}
               <td>
                   <a href="{{ post.url }}"><img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}"></a>
-                  <img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}">
               </td>
           {% endfor %}
           </tr>
