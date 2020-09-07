@@ -19,15 +19,44 @@ layout: default
   </div>
   {% for category in site.categories %}
   {% if category[0] == page.category %}
+  {% assign counter = 1 %}
     <div class="related-posts">
-      <h2>Related Posts</h2>
-      <table>
-        <tr>
-        {% for post in category[1] %}
-          <td><a href="{{ post.url }}"><img src="{{ post.image | prepend: site.baseurl }}" alt="post.title"></a></td>
-        {% endfor %}
-        </tr>
-      </table>
+        <h2>Related Posts</h2>
+        <table class="table_relatedposts">
+          <tr>
+          {% for post in category[1]%}
+          {% if page.title != post.title and counter <= 3 %}
+          {% assign counter = counter | plus: 1 %} 
+          <td>
+            <div class="related-posts-container">
+              <div class="relatedposts-content">
+                
+                  {% if post.title contains "How to" %}
+                    {% assign title = 'How to' %}
+                    {% assign text = post.title | split: 'Flight Simulator 2020 - How to - '%}
+                  {% elsif post.title contains "landing challenges" %}
+                    {% assign title = 'landing challenges' %}                  
+                    {% assign text = post.title | split: 'Flight Simulator 2020 - landing challenges - '%}
+                  {% elsif post.title contains "sightseeing" %}
+                    {% assign title = 'sightseeing' %}
+                    {% assign text = post.title | split: 'Flight Simulator 2020 - sightseeing - '%}
+                  {% endif %}
+
+                      <a href="{{ post.url }}">
+                      <div class="relatedposts-content-overlay"></div>
+                      <img class="relatedposts-content-image" src="{{ post.image | prepend: site.baseurl }}">
+                      <div class="relatedposts-content-details relatedposts-fadeIn-bottom">
+                      <h4 class="relatedposts-content-title">{{ title }}</h4>
+                      <p class="relatedposts-content-text">{{ text }}</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </td>
+            {% endif %}
+          {% endfor %}
+          </tr>
+        </table>
     </div>
   {% endif %}
 {% endfor %}
