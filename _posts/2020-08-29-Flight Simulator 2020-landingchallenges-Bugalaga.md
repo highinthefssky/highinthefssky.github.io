@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Flight Simulator 2020 - landing challenges - Bugalaga"
-description "In this challenge I will show you how I approached the Bugalaga airport and landed successfully on runway 24."
+description: "In this challenge I will show you how I approached the Bugalaga airport and landed successfully on runway 24."
 tags:
 - Flight Simulator 2020
 - short runway
@@ -20,7 +20,6 @@ tags:
 category: landing challenges
 permalink: /MSFS2020-LandingChellenge-Bugalaga/
 youtubeId: 66qceZjG0Bg
-
 ---
 
 Flight Simulator 2020 - landing challenge

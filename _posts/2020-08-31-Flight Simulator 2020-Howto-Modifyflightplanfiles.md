@@ -25,7 +25,7 @@ tags:
 category: tutorials
 permalink: /MSFS2020-Howto-ModifyFlightPlanFiles/
 youtubeId: EEUjujHJe1A
-/assets/images/tutorials/MSFS2020-Howto-ModifyFlightPlanFiles.jpg
+image: /assets/images/tutorials/MSFS2020-Howto-ModifyFlightPlanFiles.jpg
 ---
 
 In this video I will show you how you can manually modify flight plan files created by Flight Simulator 2020.
