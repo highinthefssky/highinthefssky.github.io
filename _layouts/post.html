@@ -25,15 +25,12 @@ layout: default
           <tr>
           {% for post in category[1] %}
               <td>
-                  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}">
-                        <div class="overlay">
-                          <h3>{{ post.title }}</h3>
-                          <a class="info" href="{{ post.url }}">{{ post.title }}</a>
-                        </div>
-                    </div>
+                <div class="container">
+                  <img class="image_relatedblog" src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}">
+                  <div class="overlay_relatedblog">
+                    <div class="text_relatedblog"><a href="{{ post.url }}">{{ post.title }}</a></div>
                   </div>
+                </div>
               </td>
           {% endfor %}
           </tr>
