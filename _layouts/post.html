@@ -17,84 +17,44 @@ layout: default
   <div itemprop="articleBody">
     {{ content | markdownify }}
   </div>
-  {% for category in site.categories %}
-  {% if category[0] == page.category %}
-  {% assign counter = 1 %}
-    <div class="related-posts">
-        <h2>Related Posts</h2>
-        <table class="table_relatedposts">
-          <tr>
-          {% for post in category[1]%}
-          {% if page.title != post.title and counter <= 3 %}
-          {% assign counter = counter | plus: 1 %} 
-          <td>
-            <div class="related-posts-container">
-              <div class="relatedposts-content">
-                
-                  {% if post.title contains "How to" %}
-                    {% assign title = 'How to' %}
-                    {% assign text = post.title | split: 'Flight Simulator 2020 - How to - '%}
-                  {% elsif post.title contains "landing challenges" %}
-                    {% assign title = 'landing challenges' %}                  
-                    {% assign text = post.title | split: 'Flight Simulator 2020 - landing challenges - '%}
-                  {% elsif post.title contains "sightseeing" %}
-                    {% assign title = 'sightseeing' %}
-                    {% assign text = post.title | split: 'Flight Simulator 2020 - sightseeing - '%}
-                  {% endif %}
-
-                      <a href="{{ post.url }}">
-                      <div class="relatedposts-content-overlay"></div>
-                      <img class="relatedposts-content-image" src="{{ post.image | prepend: site.baseurl }}">
-                      <div class="relatedposts-content-details relatedposts-fadeIn-bottom">
-                      <h4 class="relatedposts-content-title">{{ title }}</h4>
-                      <p class="relatedposts-content-text">{{ text }}</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </td>
-            {% endif %}
-          {% endfor %}
-          </tr>
-        </table>
-    </div>
-  {% endif %}
-{% endfor %}
 
 {% for category in site.categories %}
   {% if category[0] == page.category %}
     <div class="related-posts">
       <h2>Related Posts</h2>
-      {% assign filtered_posts = site.posts | where: page.category, category[0] %}
+      {% assign filtered_posts = site.posts | where: 'category', category[0] %}
+
       <table class="table_relatedposts">
         <tr>
-      {% for post in category[1] %}
+      {% for post in filtered_posts %}
         {% if page.title == post.title %}
           {% assign currentIndex = forloop.index0 %}
           {% assign previousIndex = currentIndex | minus: 1 %}
           {% assign nextIndex = currentIndex | plus: 1 %}
           {% assign articleIndexLength = forloop.length | minus: 1 %}
+          {% if articleIndexLength >= 3 %}
+            {% assign previousIndexPlusOne = currentIndex | minus: 2 %}
+            {% assign nextIndexPlusOne = currentIndex | plus: 2 %}
+          {% endif %}
 
           {% if currentIndex == 0 %}
             <td>
               <div class="related-posts-container">
                 <div class="relatedposts-content">
-                  {% if post.title contains "How to" %}
+                  {% if filtered_posts[nextIndex].title contains "How to" %}
                     {% assign title = 'How to' %}
-                    {% assign text = post.title | split: 'Flight Simulator 2020 - How to - '%}
-                  {% elsif post.title contains "landing challenges" %}
+                    {% assign text = filtered_posts[nextIndex].title | split: 'Flight Simulator 2020 - How to - '%}
+                  {% elsif filtered_posts[nextIndex].title contains "landing challenges" %}
                     {% assign title = 'landing challenges' %}                  
-                    {% assign text = post.title | split: 'Flight Simulator 2020 - landing challenges - '%}
-                  {% elsif post.title contains "sightseeing" %}
+                    {% assign text = filtered_posts[nextIndex].title | split: 'Flight Simulator 2020 - landing challenges - '%}
+                  {% elsif filtered_posts[nextIndex].title contains "sightseeing" %}
                     {% assign title = 'sightseeing' %}
-                    {% assign text = post.title | split: 'Flight Simulator 2020 - sightseeing - '%}
+                    {% assign text = filtered_posts[nextIndex].title | split: 'Flight Simulator 2020 - sightseeing - '%}
                   {% endif %}
-                      {{currentIndex}}
-                      {{previousIndex}}
-                      {{nextIndex}}
-                      <a href="{{ post.url }}">
+
+                      <a href="{{ filtered_posts[nextIndex].url }}">
                       <div class="relatedposts-content-overlay"></div>
-                      <img class="relatedposts-content-image" src="{{ post.image | prepend: site.baseurl }}">
+                      <img class="relatedposts-content-image" src="{{ filtered_posts[nextIndex].image | prepend: site.baseurl }}">
                       <div class="relatedposts-content-details relatedposts-fadeIn-bottom">
                       <h4 class="relatedposts-content-title">{{ title }}</h4>
                       <p class="relatedposts-content-text">{{ text }}</p>
@@ -103,17 +63,133 @@ layout: default
                 </div>
               </div>
             </td>
+            <td>
+              <div class="related-posts-container">
+                <div class="relatedposts-content">
+                  {% if filtered_posts[nextIndexPlusOne].title contains "How to" %}
+                    {% assign title = 'How to' %}
+                    {% assign text = filtered_posts[nextIndexPlusOne].title | split: 'Flight Simulator 2020 - How to - '%}
+                  {% elsif filtered_posts[nextIndexPlusOne].title contains "landing challenges" %}
+                    {% assign title = 'landing challenges' %}                  
+                    {% assign text = filtered_posts[nextIndexPlusOne].title | split: 'Flight Simulator 2020 - landing challenges - '%}
+                  {% elsif filtered_posts[nextIndexPlusOne].title contains "sightseeing" %}
+                    {% assign title = 'sightseeing' %}
+                    {% assign text = filtered_posts[nextIndexPlusOne].title | split: 'Flight Simulator 2020 - sightseeing - '%}
+                  {% endif %}
+
+                      <a href="{{ filtered_posts[nextIndexPlusOne].url }}">
+                      <div class="relatedposts-content-overlay"></div>
+                      <img class="relatedposts-content-image" src="{{ filtered_posts[nextIndexPlusOne].image | prepend: site.baseurl }}">
+                      <div class="relatedposts-content-details relatedposts-fadeIn-bottom">
+                      <h4 class="relatedposts-content-title">{{ title }}</h4>
+                      <p class="relatedposts-content-text">{{ text }}</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </td>            
           {% elsif currentIndex < articleIndexLength and currentIndex != 0 %}
             <td>
-                previousarticle
+              <div class="related-posts-container">
+                <div class="relatedposts-content">
+                  {% if filtered_posts[previousIndex].title contains "How to" %}
+                    {% assign title = 'How to' %}
+                    {% assign text = filtered_posts[previousIndex].title | split: 'Flight Simulator 2020 - How to - '%}
+                  {% elsif filtered_posts[previousIndex].title contains "landing challenges" %}
+                    {% assign title = 'landing challenges' %}                  
+                    {% assign text = filtered_posts[previousIndex].title | split: 'Flight Simulator 2020 - landing challenges - '%}
+                  {% elsif filtered_posts[previousIndex].title contains "sightseeing" %}
+                    {% assign title = 'sightseeing' %}
+                    {% assign text = filtered_posts[previousIndex].title | split: 'Flight Simulator 2020 - sightseeing - '%}
+                  {% endif %}
+
+                      <a href="{{ filtered_posts[previousIndex].url }}">
+                      <div class="relatedposts-content-overlay"></div>
+                      <img class="relatedposts-content-image" src="{{ filtered_posts[previousIndex].image | prepend: site.baseurl }}">
+                      <div class="relatedposts-content-details relatedposts-fadeIn-bottom">
+                      <h4 class="relatedposts-content-title">{{ title }}</h4>
+                      <p class="relatedposts-content-text">{{ text }}</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </td>
             <td>
-                nextarticle
+              <div class="related-posts-container">
+                <div class="relatedposts-content">
+                  {% if filtered_posts[nextIndex].title contains "How to" %}
+                    {% assign title = 'How to' %}
+                    {% assign text = filtered_posts[nextIndex].title | split: 'Flight Simulator 2020 - How to - '%}
+                  {% elsif filtered_posts[nextIndex].title contains "landing challenges" %}
+                    {% assign title = 'landing challenges' %}                  
+                    {% assign text = filtered_posts[nextIndex].title | split: 'Flight Simulator 2020 - landing challenges - '%}
+                  {% elsif filtered_posts[nextIndex].title contains "sightseeing" %}
+                    {% assign title = 'sightseeing' %}
+                    {% assign text = filtered_posts[nextIndex].title | split: 'Flight Simulator 2020 - sightseeing - '%}
+                  {% endif %}
+
+                      <a href="{{ filtered_posts[nextIndex].url }}">
+                      <div class="relatedposts-content-overlay"></div>
+                      <img class="relatedposts-content-image" src="{{ filtered_posts[nextIndex].image | prepend: site.baseurl }}">
+                      <div class="relatedposts-content-details relatedposts-fadeIn-bottom">
+                      <h4 class="relatedposts-content-title">{{ title }}</h4>
+                      <p class="relatedposts-content-text">{{ text }}</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </td>
           {% elsif currentIndex == articleIndexLength %}
             <td>
-              previousarticle
+              <div class="related-posts-container">
+                <div class="relatedposts-content">
+                  {% if filtered_posts[previousIndex].title contains "How to" %}
+                    {% assign title = 'How to' %}
+                    {% assign text = filtered_posts[previousIndex].title | split: 'Flight Simulator 2020 - How to - '%}
+                  {% elsif filtered_posts[previousIndex].title contains "landing challenges" %}
+                    {% assign title = 'landing challenges' %}                  
+                    {% assign text = filtered_posts[previousIndex].title | split: 'Flight Simulator 2020 - landing challenges - '%}
+                  {% elsif filtered_posts[previousIndex].title contains "sightseeing" %}
+                    {% assign title = 'sightseeing' %}
+                    {% assign text = filtered_posts[previousIndex].title | split: 'Flight Simulator 2020 - sightseeing - '%}
+                  {% endif %}
+
+                      <a href="{{ filtered_posts[previousIndex].url }}">
+                      <div class="relatedposts-content-overlay"></div>
+                      <img class="relatedposts-content-image" src="{{ filtered_posts[previousIndex].image | prepend: site.baseurl }}">
+                      <div class="relatedposts-content-details relatedposts-fadeIn-bottom">
+                      <h4 class="relatedposts-content-title">{{ title }}</h4>
+                      <p class="relatedposts-content-text">{{ text }}</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </td>
+            <td>
+              <div class="related-posts-container">
+                <div class="relatedposts-content">
+                  {% if filtered_posts[previousIndexPlusOne].title contains "How to" %}
+                    {% assign title = 'How to' %}
+                    {% assign text = filtered_posts[previousIndexPlusOne].title | split: 'Flight Simulator 2020 - How to - '%}
+                  {% elsif filtered_posts[previousIndexPlusOne].title contains "landing challenges" %}
+                    {% assign title = 'landing challenges' %}                  
+                    {% assign text = filtered_posts[previousIndexPlusOne].title | split: 'Flight Simulator 2020 - landing challenges - '%}
+                  {% elsif filtered_posts[previousIndexPlusOne].title contains "sightseeing" %}
+                    {% assign title = 'sightseeing' %}
+                    {% assign text = filtered_posts[previousIndexPlusOne].title | split: 'Flight Simulator 2020 - sightseeing - '%}
+                  {% endif %}
+
+                      <a href="{{ filtered_posts[previousIndexPlusOne].url }}">
+                      <div class="relatedposts-content-overlay"></div>
+                      <img class="relatedposts-content-image" src="{{ filtered_posts[previousIndexPlusOne].image | prepend: site.baseurl }}">
+                      <div class="relatedposts-content-details relatedposts-fadeIn-bottom">
+                      <h4 class="relatedposts-content-title">{{ title }}</h4>
+                      <p class="relatedposts-content-text">{{ text }}</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </td>            
           {% endif %}
         </tr>
       </table>
