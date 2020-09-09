@@ -44,6 +44,9 @@
         {% if paginator and paginator.page and paginator.total_pages > 1 and paginator.page > 1 %}
           - Page {{ paginator.page }} of {{ paginator.total_pages }}
         {% endif %}
+        {% unless page.tag or page.title %}
+            {{ site.title | escape }}
+        {% endunless %}
       </title>
     
     {% if site.plugins contains "jekyll-seo-tag" %}
