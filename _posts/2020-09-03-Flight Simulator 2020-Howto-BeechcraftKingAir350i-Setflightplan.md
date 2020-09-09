@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Flight Simulator 2020 - How to - Beechcraft King Air 350i - Set flight plan"
-description: "description: "Always wanted to know how to manually set the flight plan in a Beechcraft King Air 350i than you found the right resource.""
+description: "Always wanted to know how to manually set the flight plan in a Beechcraft King Air 350i than you found the right resource."
 tags:
 - Flight Simulator 2020
 - flight plan
@@ -11,7 +11,7 @@ tags:
 - msfs 2020
 - tutorials
 - flight training
-- flight sim 2020,
+- flight sim 2020
 - Chicago O'Hara International Airport
 - Chicago Rockford International Airport
 - How to set flight plan in Beechcraft King Air 350i
