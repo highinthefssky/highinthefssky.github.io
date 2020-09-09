@@ -14,13 +14,13 @@ tags:
 - flight training
 - flight sim 2020
 - how to modify flight plan
-- how to modify pln files
+- how to modify plan files
 - how to modify flight plan in FS2020
 - how to modify flight plan files in Flight Simulator 2020
 - NDB beacon
 - VOR beacon
 - airport
-- intersection,
+- intersection
 - light planning
 category: tutorials
 permalink: /MSFS2020-Howto-ModifyFlightPlanFiles/

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Flight Simulator 2020  - How to - Daher TBM 930 - Set flight plan"
-description: "description: "Always wanted to know how to manually set the flight plan in a Daher TBM 930 than you found the right resource.""
+description: "Always wanted to know how to manually set the flight plan in a Daher TBM 930 than you found the right resource."
 tags:
 - Flight Simulator 2020
 - flight plan
