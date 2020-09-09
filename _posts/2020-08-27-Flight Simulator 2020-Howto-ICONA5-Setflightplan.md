@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Flight Simulator 2020 - How to - ICON A5 - Set flight plan"
-description: "In this how to we are going to look how we can configure our flight plan manually in our navigation system from our ICON A5. We will use simbrief.com which is one of the online flight planners available"
+description: "Always wanted to know how to manually set the flight plan in a ICON A5 than you found the right resource."
 tags:
 - Flight Simulator 2020
 - Eelde Airport
