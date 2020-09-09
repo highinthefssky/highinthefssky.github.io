@@ -54,7 +54,7 @@ layout: default
 
                       <a href="{{ filtered_posts[nextIndex].url }}">
                       <div class="relatedposts-content-overlay"></div>
-                      <img class="relatedposts-content-image" src="{{ filtered_posts[nextIndex].image | prepend: site.baseurl }}">
+                      <img class="relatedposts-content-image" src="{{ filtered_posts[nextIndex].image | prepend: site.baseurl }}" alt="{{ title}} {{ text }}">
                       <div class="relatedposts-content-details relatedposts-fadeIn-bottom">
                       <h4 class="relatedposts-content-title">{{ title }}</h4>
                       <p class="relatedposts-content-text">{{ text }}</p>
