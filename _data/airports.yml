@@ -1,0 +1,215 @@
+- name: Paderborn Lippstadt Airport
+  icao: EDLP
+  city: Paderborn / Lippstadt	
+  country: Germany
+  longtitude: 51.611451798324836
+  latitude: 8.60811677442276
+  url: https://www.aerosoft.com/en/flight-simulation/news/1st-aerosoft-dlc-for-the-new-msfs-for-free
+  skyvector: https://skyvector.com/airport/EDLP/Paderborn-Lippstad-Airport
+  author: Aerosoft
+
+- name: Nerlerit Inaat Airport
+  icao: BGCO
+  city: Jameson Land
+  country: Greenland
+  longtitude: 70.7435273281337
+  latitude: -22.66159439086914
+  url: https://www.flightsim.to/file/79/nerlerit-inaat-airport-greenland
+  skyvector: https://skyvector.com/airport/BGCO/Nerlerit-Inaat-Airport
+  author: Ryan Flint
+
+- name: Machmell Fisheries, British Columbia 
+  icao: NA
+  country: Canada
+  url: https://www.flightsim.to/file/78/machmell-fisheries-british-columbia-canada
+  skyvector: https://www.airport-data.com/world-airports/KNZY-NZY/
+  author: Ryan Flint
+
+- name: North Island NAS
+  icao: KNZY
+  city: San Diego
+  country: USA
+  longtitude: 32.70152799041822
+  latitude: -117.21105463347745
+  url: https://reddit.com/r/FS2020Creation/comments/ih8mel/i_made_my_first_airport_knzy_north_island_nas/
+  skyvector: https://skyvector.com/airport/NZY/North-Island-NAS-Halsey-Field--Airport
+  author: julysfire
+  source: reddit
+
+- name: Meigs Field
+  icao: KCGX
+  city: Chicago
+  country: USA
+  url: https://reddit.com/r/FS2020Creation/comments/ihueiu/kcgx_meigs_field_link_in_comments/
+  author: ichankal
+  source: reddit
+
+- name: Sandane
+  icao: ENSD
+  city: 
+  country: Norway
+  url: https://www.fsdeveloper.com/forum/threads/ensd-sandane-airport-anda.448511/page-2#post-852533
+  skyvector: https://skyvector.com/airport/ENSD/Sandane-Anda-Airport
+  author: Augustin Winther
+  
+- name: Baraboo-Wisconsin Dells Regional Airport
+  icao: KDLL
+  city: Baraboo
+  country: USA
+  longtitude: 43.523362841933256
+  latitude: -89.77797425627014
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/86
+  skyvector: https://skyvector.com/airport/DLL/Baraboo-Wisconsin-Dells-Regional-Airport
+  author: CaptainVTOL
+
+- name: Monterey Regional Airport, Monterey, USA
+  icao: KMRY
+  city: Monterey
+  country: USA
+  longtitude: 36.58720784077659
+  latitude: -121.85166406631471
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/82
+  skyvector: https://skyvector.com/airport/MRY/Monterey-Regional-Airport
+  author: CaptainVTOL
+
+- name: Bad Hersfeld
+  icao: EDEN
+  city: Johannesberg
+  country: Germany
+  url: https://www.fsdeveloper.com/forum/threads/eden-bad-hersfeld.448561/
+  skyvector: https://skyvector.com/airport/EDEN/Bad-Hersfeld-Airport
+  author: Christoph Jurczyk
+
+- name: Norilks Airport
+  icao: UOOO
+  city: Norilsk
+  country: Russia
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/66
+  skyvector: https://skyvector.com/airport/UOOO/Norilsk-Airport
+  author: Instantlysi 
+
+- name: Berlin Tegel Airport
+  icao: EDDT
+  city: Berlin
+  country: Germany
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/52
+  skyvector: https://skyvector.com/airport/EDDT/Berlin-Tegel-Airport
+  author: Revyn112
+
+- name: Fairways Airport
+  icao: EDDT
+  city: Oregon City
+  country: USA
+  url: https://orbxdirect.com/product/og20-msfs
+  skyvector: https://skyvector.com/airport/OG20/Fairways-Airport
+  author: ORBX
+
+- name: Aeropuerto El Caraño
+  icao: SKUI
+  city: Quibdó
+  country: Colombia
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/103
+  skyvector: https://skyvector.com/airport/OG20/Fairways-Airport
+  author: Leandro Sousa
+
+- name: Coulter Field 
+  icao: KCFD
+  city: Bryan
+  country: USA
+  url: https://reddit.com/r/FS2020Creation/comments/imaqeh/kcfd_coulter_field_bryan_tx/
+  skyvector: https://skyvector.com/airport/CFD/Coulter-Field-Airport
+  author: CardiCopia
+  source: reddit
+
+- name: Kumlinge GA Airfield
+  icao: EFKG
+  city: Kumlinge
+  country: Åland Islands 
+  url: https://files.fsnordic.net/kumlinge-efkg-2020
+  skyvector: https://skyvector.com/airport/EFKG/Kumlinge-Airport
+  author: FISD/Bamce Fabricius
+
+- name: Torbacka
+  icao: EFTO
+  city: Degerby
+  country: Ingå
+  url: https://files.fsnordic.net/efto-msfs
+  skyvector: https://skyvector.com/airport/EFTO/Torbacka-Airport
+  author: FISD/Bamce 
+
+- name: Old Warden Aerodrome
+  icao: EGTH 
+  city: Bedfordshire
+  country: United Kingdom
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/59
+  skyvector: https://skyvector.com/airport/EGTH/Old-Warden-Airport
+  author: FISD/Bamce 
+
+- name: Flugplatz Strausberg
+  icao: EDAY  
+  city: Strausberg
+  country: Germany
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/60
+  skyvector: https://skyvector.com/airport/EDAY/Strausberg-Airport
+  author: FISD/Bamce 
+
+- name: White Waltham Airfield Tree Fix
+  icao: EGLM 
+  city: Maidenhead
+  country: United Kingdom
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/57
+  skyvector: https://skyvector.com/airport/EGLM/White-Waltham-Airport
+  author: julysfire
+
+- name: White Waltham Airfield Tree Fix
+  icao: EGLM 
+  city: Maidenhead
+  country: United Kingdom
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/57
+  skyvector: https://skyvector.com/airport/EGLM/White-Waltham-Airport
+  author: julysfire
+
+- name:  Glenforsa Airfield
+  icao: EG13
+  city: Isle of Mull
+  country: United Kingdom
+  url: https://reddit.com/r/FS2020Creation/comments/iixzja/glenforsa_airfield_isle_of_mull_scotland_download/
+  skyvector: 
+  author: mattgarner
+  source: reddit
+
+- name: Coal Aston Airfield
+  icao: EGCA
+  city: Apperknowle
+  country: United Kingdom
+  url: https://reddit.com/r/FS2020Creation/comments/ihsaqf/coal_aston_airfield_download/
+  skyvector: 
+  author: mattgarner
+  source: reddit
+
+- name:  Knockbain Farm Airfield 
+  icao: EGIM
+  city: 
+  country: United Kingdom
+  url: https://reddit.com/r/FS2020Creation/comments/ilzv2g/knockbain_farm_airfield_download/
+  skyvector: 
+  author: mattgarner  
+  source: reddit
+
+- name: Strathaven Airfield
+  icao: EGTY
+  city: Strathaven
+  country: United Kingdom
+  url: https://reddit.com/r/FS2020Creation/comments/iktto7/strathaven_airfield_near_glasgow_scotland_download/
+  skyvector: 
+  author: mattgarner
+  source: reddit
+
+- name: Fort Augustus Airfield
+  icao: EVGZ
+  city: 
+  country: United Kingdom
+  url: https://reddit.com/r/FS2020Creation/comments/ik2wo1/fort_augustus_airfield_near_loch_ness_scotland/
+  skyvector: 
+  author: mattgarner
+  source: reddit
