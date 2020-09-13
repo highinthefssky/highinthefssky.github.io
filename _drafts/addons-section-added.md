@@ -23,3 +23,16 @@ date: 2020-09-13 22:00:00
 A new section has been added to the site "addons". This section contains an overview of community addons for Flight Simulator 2020 which I found based on several sources.
 The plan is to keep this list up-to-date and add more addons in the coming weeks.
 In addition to this I am planning to perform a weekly posts with the latest additions.
+
+The addons are divided in the following sections
+
+
+* Airports
+* Airstrips
+* Sceneries
+    * Airport accessories 
+    * Buildings
+    * Cities
+    * Landmarks
+
+Airplanes are not yet on the site but will be added soon.
