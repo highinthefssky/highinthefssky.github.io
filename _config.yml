@@ -28,9 +28,15 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
 
+# define number of articles per page
 paginate: 5
 
+# ensure target-blank is not followed
 target-blank:
     rel: nofollow
 
-header_page_refs: ['categories', 'about']
+# define links for header
+header_page_refs: ['addons', 'categories', 'about']
+
+# disable showing future posts
+future: false

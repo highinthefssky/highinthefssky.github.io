@@ -1,0 +1,2036 @@
+- name: Adelaide Oval
+  type: stadium
+  city: Adelaide	
+  country: Australia
+  region: APAC 
+  url: https://reddit.com/r/FS2020Creation/comments/iiw6wd/release_adelaide_oval/
+  author: High_Frame_Rates
+  source: reddit
+
+- name: Angel of the North
+  city: Gateshead	
+  country: United Kingdom
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/ikqh28/angel_of_the_north_united_kingdom_free_download/
+  author: High_Frame_Rates
+  source: reddit
+
+- name: Mário Cravo's Christ
+  type: landmark
+  city:  Bahia	
+  country: Brazil
+  region: AMER
+  url: https://reddit.com/r/FS2020Creation/comments/ijpreh/m%C3%A1rio_cravos_christ_v2_bahia_brazil_download_link/
+  author: xurimp
+  source: reddit
+
+- name: Atlantic City Skyline
+  type: city
+  city: New Jersey	
+  country: USA
+  region: AMER
+  url: https://reddit.com/r/FS2020Creation/comments/ij1dmn/atlantic_city_skyline_release_link_in_comments/
+  author: mbiebel872
+  source: reddit
+
+- name: Auckland Harbour Bridge
+  type: landmark 
+  city: Auckland	
+  country: New Zealand
+  region: APAC
+  url: https://reddit.com/r/FS2020Creation/comments/ilf4v1/release_auckland_harbour_bridge/
+  author: Spas3man
+  source: reddit
+
+- name: Sky Tower
+  type: tower
+  city: Auckland	
+  country: New Zealand
+  region: APAC 
+  url: https://reddit.com/r/FS2020Creation/comments/ilf1ut/release_auckland_sky_tower/
+  author: Spas3man
+  source: reddit
+
+- name: Alaska Water Height Fix Anchorage and Southern National Parks
+  type: landmark
+  city: 	
+  country: USA
+  region: AMER
+  url: https://reddit.com/r/FS2020Creation/comments/ilf1ut/release_auckland_sky_tower/
+  author: Spas3man
+  source: reddit
+
+- name: Iceland Overhaul
+  type: landmark
+  city: 	
+  country: Iceland
+  region: EMEA
+  url: https://reddit.com/r/MicrosoftFlightSim/comments/ik427w/update_831_buildings_freeware_iceland_overhaul/
+  author: baddweapon
+  source: reddit
+
+- name: Royal Crescent
+  type: building
+  city: Bath
+  country: United Kingdom
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/iiyt2b/royal_cresent_bath_somerset_united_kingdom_taken/
+  author: Yetty
+  source: reddit
+
+- name: Bergen
+  type: city
+  city: Bergen
+  country: Norway
+  region: EMEA
+  url: https://reddit.com/r/flightsim/comments/icaccj/fixed_bergen_scenery/
+  author: henrikx
+  source: reddit
+
+- name: Blackpool Tower
+  type: building
+  city: Blackpool
+  country: United Kingdom
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/ih082f/i_modelled_blackpool_tower_and_placed_it_in_the/
+  author: HarissonRC
+  source: reddit
+
+- name: Buffalo Skyline Pack
+  type: city
+  city: New York
+  country: USA
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/ikxyim/buffalo_ny_skyline_pack_released_download_inside/
+  author: thek00laidman
+  source: reddit
+
+- name: Cardington Sheds
+  type: building
+  city: Bedfordshire
+  region: EMEA
+  country: United Kingdom
+  url: https://www.flightsim.to/file/96/cardington-sheds
+  author: timhuckle
+
+- name: Devils Tower
+  type: building
+  city: DWyoming
+  country: USA
+  region: AMER
+  url: https://reddit.com/r/FS2020Creation/comments/im5q8w/devils_tower_release_download/
+  author: VFXSimmer
+  source: reddit
+
+- name: Removal of Monolith Near LEBL
+  type: landmark
+  city: Barcelona
+  country: Spain
+  region: EMEA
+  url: https://www.fsdeveloper.com/forum/threads/eden-bad-hersfeld.448561/
+  author: Diisaster
+
+- name: Woodward Hall UNCC
+  city: Charlotte
+  country: USA
+  region: AMER
+  url: https://reddit.com/r/FS2020Creation/comments/ih1b1e/woodward_hall_uncc_near_kjqf_wip_download_in/
+  author: Blurredpixel
+  source: reddit
+
+- name: Downtown Los Angeles
+  type: city
+  city: Los Angeles
+  country: USA
+  region: AMER
+  url: https://reddit.com/r/FS2020Creation/comments/ilzoec/downtown_los_angeles_including_wilshire_grand/
+  author: senecadriver
+  source: reddit
+
+- name: Edinburgh
+  type: city
+  city: Edinburgh
+  country: United Kingdom
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/ijhrmu/release_edinburgh_scenery_v2/
+  author: SirLeinad4
+  source: reddit
+
+- name: The Three Sisters
+  type: landmark
+  city: Katoomba
+  country: Australia
+  region: APAC
+  url: https://reddit.com/r/FS2020Creation/comments/ikgo8q/the_three_sisters_katoomba_nsw_australia_download/
+  author: corinoco
+  source: reddit
+
+- name: Euromast
+  type: building
+  city: Rotterdam
+  country: Netherlands
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/imcia6/rotterdam_euromast/
+  author: Geraldar98
+  source: reddit
+
+- name: Feyenoord Stadium (De Kuip)
+  city: Rotterdam
+  country: Netherlands
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/iloksj/release_feyenoord_stadium_de_kuip_rotterdam/
+  author: High_Frame_Rates
+  source: reddit
+
+- name: Replot Bridge
+  type: landmark
+  city: Korsholm
+  country: Finland
+  region: EMEA
+  url: https://files.fsnordic.net/replotbridge-fs2020
+  author: FISD/Bamce Fabricius
+
+- name: Lyon
+  type: city
+  city: Lyon
+  country: France
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/ii9ydr/my_city_in_no_more_autogen_p/
+  author: robin00795
+  source: reddit
+
+- name: Shell fuel trucks
+  type: airport accessories
+  city: 
+  country:
+  region: 
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/23
+  author: TheReaperr
+
+- name: Glasgow full city centre
+  type: city
+  city: Glasgow
+  country: United Kingdom
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/iidgov/glasgow_photogrammetry_full_city_centre/
+  author: Seank23
+  source: reddit
+
+- name: Glastonbury Tor
+  type: building
+  city: Glastonbury
+  country: United Kingdom
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/ije2s2/overhauled_my_glastonbury_tor_scenery_mod_with_a/
+  author: Yetty
+  source: reddit
+
+- name: Hassan II Mosque
+  type: building
+  city: Casablanca
+  country: Morocco
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/ihas9x/thanks_to_umagicalpedro_for_helping_add_the/
+  author: mr_batman
+  source: reddit
+
+- name: National Stadium
+  type: stadium
+  city: 
+  country: Singapore
+  region: APAC
+  url: https://reddit.com/r/FS2020Creation/comments/ihas9x/thanks_to_umagicalpedro_for_helping_add_the/
+  author: goonify
+  source: reddit
+
+- name: Hudson Yards
+  type: park
+  city: New York
+  country: USA
+  region: AMER
+  url: https://reddit.com/r/FS2020Creation/comments/ile4yr/release_hudson_yards_new_york_download/
+  author: VFXSimmer
+  source: reddit
+
+- name: Beaver Stadium, University Park
+  type: stadium
+  city: Pennsylvania
+  country: USA
+  region: AMER
+  url: https://reddit.com/r/FS2020Creation/comments/iilkex/beaver_stadium_as_requested_by_ummpa78/
+  author: Huyster
+  source: reddit
+
+- name: Wembley Stadium
+  type: stadium
+  city: London
+  country: United Kingdom
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/ikio7e/release_wembley_stadium/
+  author: Huyster
+  source: reddit
+
+- name: Jersey Lighthouses
+  type: landmark
+  city: New Jersey
+  country: USA
+  region: AMER
+  url: https://www.flightsim.to/file/154/jersey-lighthouses
+  author: mbiebel872
+
+- name: Johan Cruyff Arena
+  type: stadium
+  city: Amsterdam
+  country: Netherlands
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/il8mq3/release_johan_cruyff_arena_home_of_ajax/
+  author: High_Frame_Rates
+  source: reddit
+
+- name: London stadium 
+  type: stadium 
+  city: London 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iky0el/london_stadium_free_download_in_comments/?utm_source=share&utm_medium=web2x&context=3
+  author: SBGKarlinho 
+  source: reddit 
+  date: 9/2/2020
+
+- name: Lovell Telescope
+  type: landmark
+  city: Macclesfield
+  country: United Kingdom
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/iksjq2/the_lovell_telescope_jodrell_bank_manchester_uk/
+  author: timhuckle
+  source: reddit
+
+- name: Lyon Missing Buildings
+  type: city
+  city: Lyon
+  country: France
+  region: EMEA
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/105
+  author: Keke92
+
+- name: Marvel Stadium
+  type: stadium
+  city: Melbourne
+  country: Australia
+  region: APAC
+  url: https://reddit.com/r/FS2020Creation/comments/iivhzg/release_marvel_stadium_melbourne/
+  author: High_Frame_Rates
+  source: reddit
+
+- name: Melbourne Cricket Ground
+  type: landmark
+  city: Melbourne
+  country: Australia
+  region: APAC
+  url: https://reddit.com/r/FS2020Creation/comments/iitcmt/release_update_melbourne_cricket_ground/
+  author: High_Frame_Rates
+  source: reddit
+
+- name: Southern Star Wheel
+  type: landmark
+  city: Melbourne
+  country: Australia
+  region: APAC
+  url: https://reddit.com/r/FS2020Creation/comments/ij7ijj/southern_star_wheel_for_docklands_to_go_with_that/
+  author: EggMan28
+  source: reddit
+
+- name: Moncton Downtown
+  city: Moncton
+  country: Canada
+  region: APAC
+  url: https://reddit.com/r/FS2020Creation/comments/im4phf/anyone_here_been_to_the_maritimes_downtown_moncton/
+  author: Snyperwulf
+  source: reddit
+
+- name: Charilaos Trikoupis Bridge
+  type: landmark
+  city: Gefira Charilaos Trikoupis
+  country: Greece
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/ilflep/release_rio_antirio_bridge_in_greece_longest/
+  author: nikpristjohnson
+  source: reddit
+
+- name: Amphitheatre of Nîmes
+  type: building
+  city: Nîmes
+  country: France
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/ifuyrq/i_added_the_amphitheatre_of_n%C3%AEmes_into_flight/
+  author: GhostofSatan
+  source: reddit
+
+- name: The Croix du Nivolet
+  type: landmark
+  city: Les Déserts
+  country: France
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/ie77ia/my_first_janky_test_scenery_creation_the_croix_du/
+  author: MagicalPedro
+  source: reddit
+
+- name: Old Trafford Stadium and Cricket Ground
+  type: stadium
+  city: Manchester
+  country: United Kingdom
+  region: EMEA
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/76
+  author: utd4life
+
+- name: Oslo Opera House
+  type: building
+  city: Oslo
+  country: Norway
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/ih2kmm/oslo_opera_from_google_maps/
+  author: ToxZec
+  source: reddit
+
+- name: Paris Missing Buildings
+  type: city
+  city: Paris
+  country: France
+  region: EMEA
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/49
+  author: Keke92
+
+- name: Perth Arena
+  type: bulding
+  city: Perth
+  country: Australia
+  region: APAC
+  url: https://reddit.com/r/FS2020Creation/comments/iiv9fx/release_update_perth_arena/
+  author: High_Frame_Rates
+  source: reddit
+
+- name: Melbourne Police Academy
+  type: building
+  city: Melbourne
+  country: Australia
+  region: APAC
+  url: https://www.flightsim.to/file/153/melbourne-police-academy
+  author: SixDegrees
+
+- name: Riga Radio and TV Tower
+  type: building
+  city: Riga
+  country: Latvia
+  region: EMEA
+  url: https://reddit.com/r/flightsim/comments/ikkzvi/goodbye_autogen_apartment_block_hello_hand/
+  author: HarissonRC
+  source: reddit
+
+- name: EDTF - Rosskopf Windmills
+  type: landmark
+  city: Freiburg
+  country: Germany
+  region: EMEA
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/36
+  author: LeFix
+
+- name: Ruhr Area Cooling Towers
+  type: building
+  city: 
+  country: Germany
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/il61p4/release_ruhr_area_cooling_towers_download/
+  author: High_Frame_Rates
+  source: reddit
+
+- name: Sydney Tower
+  type: building
+  city: Sydney
+  country: Australia
+  region: APAC
+  url: https://reddit.com/r/FS2020Creation/comments/il5r1f/release_update_sydney_tower_by_night_download/
+  author: Oh_Gaz
+  source: reddit
+
+- name:  PSV Stadium
+  type: stadium
+  city: Eindhoven
+  country: Netherlands
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/ihdmp1/decided_to_import_psv_stadium_into_the_game_link/
+  author: GamerOne48
+  source: reddit
+
+- name: Signal Iduna Park
+  type: park
+  city: Dortmund
+  country: Germany
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/il0mwc/release_signal_iduna_park_home_of_borussia/
+  author: High_Frame_Rates
+  source: reddit
+
+- name: Glasgow Science Centre (Photogrammetry)
+  type: building
+  city: Glasgow
+  country: United Kingdom
+  region: EMEA
+  url: https://www.flightsim.to/file/99/glasgow-science-centre-photogrammetry
+  author: RustyAnkle
+
+- name: Missouri River Water Fix
+  type: landmark
+  city: 
+  country: USA
+  region: AMER
+  url: https://www.flightsim.to/file/80/missouri-river-terrain-height-fix
+  author: Slibit
+
+- name: Stade de France
+  type: stadium
+  city: Paris
+  country: France
+  region: EMEA
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/29
+  author: Keke92
+
+- name: Stafford Castle
+  type: bulding
+  city: Stafford
+  country: United Kingdom
+  region: EMEA
+  url: https://www.flightsim.to/file/126/stafford-castle-england
+  author: Yetty
+
+- name: Stonehenge
+  type: landmark
+  city: Salisbury
+  country: United Kingdom
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/imcoya/stonehenge_alternative_release/
+  author: ElectroGloop
+  source: reddit
+
+- name: Swissport Ground Service Textures
+  type: airport accessories
+  city:
+  country:
+  region: 
+  url: https://www.flightsim.to/file/92/ground-service-textures
+  author: Porter2411
+
+- name: Sydney Harbour Bridge
+  type: landmark 
+  city: Sydney
+  country: Australia
+  region: APAC
+  url: https://www.flightsim.to/file/92/ground-service-textures
+  author: Porter2411
+
+- name: Three Mile Island
+  type: city
+  city: Pennsylvania
+  country: USA
+  region: AMER
+  url: https://reddit.com/r/FS2020Creation/comments/ija8ov/release_three_mile_island_pennsylvania_usa/
+  author: High_Frame_Rates
+  source: reddit
+
+- name: Tokyo Tower
+  tpye: building
+  city: Tokyo
+  country: Japan
+  region: APAC
+  url: https://reddit.com/r/MicrosoftFlightSim/comments/igws22/tokyo_tower_in_fs2020_gmaps_import/
+  author: Apache_3348
+  source: reddit
+
+- name: Tower of Hercules, ‎A Coruña
+  type: building
+  city: Galicia
+  country: Spain
+  region: EMEA
+  url: https://www.flightsim.to/file/97/torre-de-hercules-lighthouse-a-coruna
+  author: g0per
+
+- name: Ulmer Münster
+  type: city
+  city: Ulm
+  country: Germany
+  region: EMEA
+  url: https://reddit.com/r/FS2020Creation/comments/igc0nm/adding_google_3d_structure_in_msfs_m%C3%BCnster_of_ulm/
+  author: Lucamadeus93
+  source: reddit
+
+- name: Washington Air Route Traffic Control Facility (ZDC)
+  type: building
+  city: Leesburg
+  country: USA
+  url: https://www.nexusmods.com/microsoftflightsimulator/mods/62
+  author: RiverSkyHigh
+
+- name: The St. Louis Wheel
+  type: landmark
+  city: St. Louis
+  country: USA
+  region: AMER
+  url: https://reddit.com/r/FS2020Creation/comments/ijrbp8/st_louis_wheel_update_v11_link_in_comments/
+  author: zrb
+  source: reddit
+
+- name: Gravensteen Castle
+  type: building
+  city: Gent
+  country: Belgium
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqn9nu/release_gravensteen_castle_in_ghent_belgium/?utm_source=share&utm_medium=web2x&context=3
+  author: jonasbaine2
+  source: reddit
+  date: 09/11/2020
+
+- name: KBC Tower
+  type: building
+  city: Gent
+  country: Belgium
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqdqfz/release_kbc_tower_in_ghent_belgium/?utm_source=share&utm_medium=web2x&context=3
+  author: jonasbaine2
+  source: reddit
+  date: 09/11/2020
+
+- name: Raippaluoto Bridge
+  type: landmark
+  city: 
+  country: Finland
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ijb7l8/finlands_longest_bridge/?utm_source=share&utm_medium=web2x&context=3
+  author: WildLynxPilot
+  source: reddit
+  date: 08/30/2020
+
+- name: Disneyland Paris
+  type: landmark
+  city: Paris
+  country: France
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ir3ng5/here_is_the_10_version_of_disneyland_paris_free/?utm_source=share&utm_medium=web2x&context=3
+  author: SBGKarlinho 
+  source: reddit
+  date: 09/12/2020
+
+- name: The Croix du Nivolet
+  type: landmark
+  city: Savoy
+  country: France
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ir2j1w/croix_du_nivolet_update_2/
+  author: MagicalPedro 
+  source: reddit
+  date: 09/12/2020
+
+- name: Chartres Cathedral
+  type: building
+  city: Chartres
+  country: France
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipbhdd/chartres_cathedral/?utm_source=share&utm_medium=web2x&context=3
+  author: thalixte 
+  source: reddit
+  date: 09/09/2020
+
+- name: Saint-Malo
+  type: city
+  city: Brittany
+  country: France
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipbggn/saintmalo_city/?utm_source=share&utm_medium=web2x&context=3
+  author: thalixte
+  source: reddit
+  date: 09/09/2020
+
+- name: Millau Viaduct
+  type: landmark
+  city: Occitanie
+  country: France
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipbfgw/release_millau_viaduct_france/?utm_source=share&utm_medium=web2x&context=3
+  author:  thalixte
+  source: reddit
+  date: 09/09/2020
+
+- name: Notre Dame
+  type: building
+  city: Paris
+  country: France
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/in2676/notre_dame_paris_no_longer_a_pancake/?utm_source=share&utm_medium=web2x&context=3
+  author: GhostofSatan
+  source: reddit
+  date: 09/05/2020
+
+- name: Notre Dame
+  type: building
+  city: Paris
+  country: France
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/in2676/notre_dame_paris_no_longer_a_pancake/?utm_source=share&utm_medium=web2x&context=3
+  author: GhostofSatan
+  source: reddit
+  date: 09/05/2020
+
+- name: Dusseldorf City Landmarks
+  type: city
+  city: Dusseldorf
+  country: Germany
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/in2676/notre_dame_paris_no_longer_a_pancake/?utm_source=share&utm_medium=web2x&context=3
+  author: omarsmak
+  source: reddit
+  date: 09/05/2020
+
+- name: Dusseldorf City Landmarks
+  type: city
+  city: Dusseldorf
+  country: Germany
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/in2676/notre_dame_paris_no_longer_a_pancake/?utm_source=share&utm_medium=web2x&context=3
+  author: omarsmak
+  source: reddit
+  date: 09/10/2020
+
+- name: VELTINS-Arena
+  type: stadium
+  city: Gelsenkirchen
+  country: Germany
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iodjxg/first_scenery_veltinsarena_schalke_04_stadium/?utm_source=share&utm_medium=web2x&context=3
+  author: Schlicki
+  source: reddit
+  date: 09/07/2020
+
+- name: Herkules Complex
+  type: building
+  city: Kassel
+  country: Germany
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ioc6py/release_herkules_kassel/?utm_source=share&utm_medium=web2x&context=3
+  author: AhmedMirzalli
+  source: reddit
+  date: 09/07/2020
+
+- name: Freiburg Cathedral
+  type: building
+  city: Freiburg im Breisgau
+  country: Germany
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/inwp48/release_my_first_attempt_at_importing_google_maps/?utm_source=share&utm_medium=web2x&context=3
+  author: maggiforever
+  source: reddit
+  date: 09/07/2020
+
+- name: Stuttgart Scenery
+  type: city
+  city: Stuttgart
+  country: Germany
+  region: EMEA 
+  url: https://www.reddit.com/r/FS2020Creation/comments/innfq7/stuttgart_landmarks/?utm_source=share&utm_medium=web2x&context=3
+  author: br34ker
+  source: reddit
+  date: 09/06/2020
+
+- name: Stuttgart Fernsehturm
+  type: city
+  city: Stuttgart
+  country: Germany
+  region: EMEA 
+  url: http://www.mediafire.com/folder/8w3xfntoo6fxt
+  author: MichiEDDS
+  source: reddit
+  date: 09/06/2020
+
+- name: Stuttgart Fernsehturm
+  type: city
+  city: Stuttgart
+  country: Germany
+  region: EMEA 
+  url: http://www.mediafire.com/folder/8w3xfntoo6fxt
+  author: MichiEDDS
+  source: reddit
+  date: 09/05/2020
+
+- name: Lünen Powerplant 
+  type: building 
+  city: Lünen 
+  country: Germany 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/imms6c/release_lunen_powerplant_oldnew_download/?utm_source=share&utm_medium=web2x&context=3
+  author: FkGamingFX 
+  source: reddit 
+  date: 09/04/2020
+  
+- name: Knossos Ancient Site 
+  type: landmark
+  city: Crete 
+  country: Greece 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/inmvzu/release_knossos_ancient_site_greece_links/?utm_source=share&utm_medium=web2x&context=3
+  author: nikpristjohnson 
+  source: reddit 
+  date: 09/06/2020
+
+- name: Charilaos Trikoupis Bridge 
+  type: landmark
+  city: Patras 
+  country: Greece 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ilflep/release_rio_antirio_bridge_in_greece_longest/
+  author: nikpristjohnson 
+  source: reddit 
+  date: 09/02/2020
+
+- name: Budapest city landmarks 
+  type: city
+  city: Budapest 
+  country: Hungary 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqve7f/hungaryvfr_fs2020/?utm_source=share&utm_medium=web2x&context=3
+  author: darealgege 
+  source: reddit 
+  date: 09/11/2020
+
+- name: San Gimignano 
+  type: city
+  city: Tuscany 
+  country: Italy 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqm8zv/release_san_gimignano_tuscany_italy/?utm_source=share&utm_medium=web2x&context=3
+  author: Kansur_Krew 
+  source: reddit 
+  date: 09/11/2020
+
+- name: The Leaning Tower of Pisa 
+  type: building 
+  city: Pisa 
+  country: Italy 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqamnn/release_leaning_tower_of_pisa/?utm_source=share&utm_medium=web2x&context=3
+  author: kevlarsjal 
+  source: reddit 
+  date: 09/10/2020
+
+- name: Siena 
+  type: city
+  city: Tuscany 
+  country: Italy 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iq7ani/release_siena_tuscany_italy/?utm_source=share&utm_medium=web2x&context=3
+  author: Kansur_Krew 
+  source: reddit 
+  date: 09/10/2020
+
+- name: Lucca 
+  type: city
+  city: Tuscany 
+  country: Italy 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ioxzfp/release_lucca_tuscany_italy/?utm_source=share&utm_medium=web2x&context=3
+  author: Kansur_Krew 
+  source: reddit 
+  date: 09/08/2020
+
+- name: Brienenoord Bridge 
+  type: landmark
+  city: Rotterdam 
+  country: Netherlands 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipr015/rotterdam_brienenoord_bridge/?utm_source=share&utm_medium=web2x&context=3
+  author: Geraldar98 
+  source: reddit 
+  date: 09/10/2020
+
+- name: Amsterdam Tower & Centraal Station 
+  type: building 
+  city: Amsterdam 
+  country: Netherlands 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipogjn/release_amsterdam_tower_centraal_station/?utm_source=share&utm_medium=web2x&context=3
+  author: master414 
+  source: reddit 
+  date: 09/09/2020
+
+- name: Rotterdam Central Station 
+  type: building 
+  city: Rotterdam 
+  country: Netherlands 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipdugq/rotterdam_ns_train_station_delftse_poort/?utm_source=share&utm_medium=web2x&context=3
+  author: Geraldar98 
+  source: reddit 
+  date: 09/09/2020
+
+- name: Ziggo Dome 
+  type: building 
+  city: Amsterdam 
+  country: Netherlands 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iovxj9/release_ziggo_dome_amsterdam/?utm_source=share&utm_medium=web2x&context=3
+  author: Oh_Gaz 
+  source: reddit 
+  date: 09/08/2020
+
+- name: Central Train Station 
+  type: building 
+  ity: The Hague 
+  country: Netherlands 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iodqbd/update_rotterdam_the_hague_landmarks/
+  author: Geraldar98 
+  source: reddit 
+  date: 09/07/2020
+
+- name: Clio Plein 
+  type: building 
+  city: The Hague 
+  country: Netherlands 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iodqbd/update_rotterdam_the_hague_landmarks/
+  author: Geraldar98 
+  source: reddit 
+  date: 09/07/2020
+
+- name: Willemsbrug 
+  type: landmark
+  city: Rotterdam 
+  country: Netherlands 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iodqbd/update_rotterdam_the_hague_landmarks/
+  author: Geraldar98 
+  source: reddit 
+  date: 09/07/2020
+
+- name: SS Rotterdam Historical Cruiseship 
+  type: landmark
+  city: Rotterdam 
+  country: Netherlands 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iodqbd/update_rotterdam_the_hague_landmarks/
+  author: Geraldar98 
+  source: reddit 
+  date: 09/07/2020
+
+- name: Euromast 
+  type: building 
+  city: Rotterdam 
+  country: Netherlands 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iodqbd/update_rotterdam_the_hague_landmarks/
+  author: Geraldar98 
+  source: reddit 
+  date: 09/07/2020
+
+- name: Kop Van Zuid Skyline 
+  type: city
+  city: Rotterdam 
+  country: Netherlands 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iodqbd/update_rotterdam_the_hague_landmarks/
+  author: Geraldar98 
+  source: reddit 
+  date: 09/07/2020
+
+- name: Erasmus Bridge 
+  type: landmark
+  city: Rotterdam 
+  country: Netherlands 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iodqbd/update_rotterdam_the_hague_landmarks/
+  author: Geraldar98 
+  source: reddit 
+  date: 09/07/2020
+   
+- name: Cristo Rei and Ponte 25 de Abril 
+  type: landmark
+  city: Lisbon 
+  country: Portugal 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iht2ic/lisbon_pois_cristo_rei_and_ponte_25_de_abril/?utm_source=share&utm_medium=web2x&context=3
+  author: Eux86 
+  source: reddit 
+  date: 08/27/2020
+
+- name: Benalmádena 
+  type: city
+  city: Benalmádena 
+  country: Spain 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqukgn/benalmadena_v2/?utm_source=share&utm_medium=web2x&context=3
+  author: kafkaphoenix 
+  source: reddit 
+  date: 09/11/2020
+
+- name: Benalmádena Antenna 
+  type: landmark
+  city: Malaga 
+  country: Spain 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/io995z/benalmadena_antenna_spain_v01/?utm_source=share&utm_medium=web2x&context=3
+  author: kafkaphoenix 
+  source: reddit 
+  date: 09/07/2020
+
+- name: San Mamés stadium 
+  type: stadium 
+  city: Bilbao 
+  country: Spain 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/imrg0j/san_mames_home_of_spanish_team_athletic_club_free/?utm_source=share&utm_medium=web2x&context=3
+  author: SBGKarlinho 
+  source: reddit 
+  date: 09/05/2020
+
+- name: Uddevalla Bridge 
+  type: landmark
+  city: Uddevalla 
+  country: Sweden 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqb1nw/release_uddevalla_bridge_uddevalla_sweden/?utm_source=share&utm_medium=web2x&context=3
+  author: smekre 
+  source: reddit 
+  date: 09/10/2020
+
+- name: Malmö city Pack 
+  type: city
+  city: Malmö 
+  country: Sweden 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iotl2q/release_malmo_city_pack/?utm_source=share&utm_medium=web2x&context=3
+  author: Oggeley 
+  source: reddit 
+  date: 09/08/2020
+
+- name: Eleda stadium 
+  type: stadium 
+  city: Malmö 
+  country: Sweden 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/io7fbo/eleda_stadion_malmo/?utm_source=share&utm_medium=web2x&context=3
+  author: Oggeley 
+  source: reddit 
+  date: 09/07/2020
+
+- name: Turning Torso 
+  type: building 
+  city: Malmö 
+  country: Sweden 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/inkyrp/release_turning_torso_malmo_sweden/?utm_source=share&utm_medium=web2x&context=3
+  author: Hasselid 
+  source: reddit 
+  date: 09/06/2020
+
+- name: King Power stadium 
+  type: stadium 
+  city: Leicester 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/incm17/king_power_stadium_free_download_in_the_comments/?utm_source=share&utm_medium=web2x&context=3
+  author: SBGKarlinho 
+  source: reddit 
+  date: 09/06/220
+
+- name: Lincoln Cathedral 
+  type: building 
+  city: Lincoln 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iidfgq/lincoln_cathedral_download_in_comments/?utm_source=share&utm_medium=web2x&context=3
+  author: SameRandomTramp 
+  source: reddit 
+  date: 08/28/2020
+
+- name: Carrow Road stadium 
+  type: stadium 
+  city: Norwich 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/impang/carrow_road_stadium_norwich_fc_dl_link_in_comments/?utm_source=share&utm_medium=web2x&context=3
+  author: SimpleBeings 
+  source: reddit 
+  date: 09/05/2020
+
+- name: Norwich Castle 
+  type: building 
+  city: Norwich 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/immubr/i_know_someone_already_made_a_norwich_castle_but/?utm_source=share&utm_medium=web2x&context=3
+  author: SimpleBeings 
+  source: reddit 
+  date: 09/04/2020
+
+- name: Norwich Castle 
+  type: building 
+  city: Norwich 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/imdw3a/norwich_castle_first_attempt/?utm_source=share&utm_medium=web2x&context=3
+  author: brittben17 
+  source: reddit 
+  date: 09/04/2020
+
+- name: Cardington Sheds 
+  type: building 
+  city: Bedfordshire 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/igy1av/cardington_sheds_modelling_request/?utm_source=share&utm_medium=web2x&context=3
+  author: tohide 
+  source: reddit 
+  date: 08/26/2020
+
+- name: Arsenal stadium (Highbury) 
+  type: stadium 
+  city: Highbury, London 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ilcl5h/arsenal_stadium_highbury_free_download_in_comments/
+  author: SBGKarlinho 
+  source: reddit 
+  date: 09/02/2020
+
+- name: Arsenal Emirates stadium 
+  type: stadium 
+  city: London 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ik0bvy/release_arsenal_emirates_stadium/
+  author: Razorstar00 
+  source: reddit 
+  date: 08/31/2020
+
+- name: British Steel 
+  type: landmark
+  city: Redcar & Cleveland 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqde19/release_british_steel_redcar_cleveland/?utm_source=share&utm_medium=web2x&context=3
+  author: kevlarsjal 
+  source: reddit 
+  date: 09/11/2020
+
+- name: Teesside University Main building 
+  type: building 
+  city: Middlesbrough 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipl025/release_teesside_university_main_building/?utm_source=share&utm_medium=web2x&context=3
+  author: kevlarsjal 
+  source: reddit 
+  date: 09/09/2020
+
+- name: Gateshead Millenium Bridge 
+  type: landmark
+  city: Gateshead 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ip0adq/gateshead_millennium_bridge_gateshead_uk/?utm_source=share&utm_medium=web2x&context=3
+  author: GhostofSatan 
+  source: reddit 
+  date: 09/08/2020
+
+- name: Combined Court Centre, Council, Nightclub 
+  type: building 
+  city: Middlesbrough 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ioznp8/release_middlesbrough_teesside_combined_court/?utm_source=share&utm_medium=web2x&context=3
+  author: kevlarsjal 
+  source: reddit 
+  date: 09/08/2020
+
+- name: Newport Bridge 
+  type: landmark
+  city: Middlesbrough 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ioctv8/release_newport_bridge_middlesbrough/?utm_source=share&utm_medium=web2x&context=3
+  author: kevlarsjal 
+  source: reddit 
+  date: 09/07/2020
+
+- name: Transporter Bridge 
+  type: landmark
+  city: Middlesbrough 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ioborm/release_transporter_bridge_middlesbrough/?utm_source=share&utm_medium=web2x&context=3
+  author: kevlarsjal 
+  source: reddit 
+  date: 09/07/2020
+
+- name: Redcar Offshore Wind Farm 
+  type: landmark
+  city: North East 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/io6tpy/release_redcar_offshore_wind_farm/?utm_source=share&utm_medium=web2x&context=3
+  author: kevlarsjal 
+  source: reddit 
+  date: 09/07/2020
+
+- name: St. James Park 
+  type: stadium 
+  city: Newcastle 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/io5xk0/release_st_james_park_newcastle_united/?utm_source=share&utm_medium=web2x&context=3
+  author: kevlarsjal 
+  source: reddit 
+  date: 09/07/2020
+
+- name: Riverside stadium 
+  type: stadium 
+  city: Middlesbrough 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/inrrfu/release_riverside_stadium_middlesbrough_fc/?utm_source=share&utm_medium=web2x&context=3
+  author: kevlarsjal 
+  source: reddit 
+  date: 09/06/2020
+
+- name: Angel of the North 
+  type: landmark
+  city: Newcastle/Gateshead 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ikqh28/angel_of_the_north_united_kingdom_free_download/
+  author: HarrisonRC 
+  source: reddit 
+  date: 09/01/2020
+
+- name: Harland & Wolff Cranes 
+  type: landmark
+  city: Belfast 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/inpzxu/belfast_harland_wolff_cranes_link_in_comments/?utm_source=share&utm_medium=web2x&context=3
+  author: Sweetman94 
+  source: reddit 
+  date: 09/06/2020
+
+- name: Liverpool Photogrammetry 
+  type: city
+  city: Liverpool 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iq7ou4/liverpool_full_city_photogrammetry/?utm_source=share&utm_medium=web2x&context=3
+  author: Seank23 
+  source: reddit 
+  date: 09/10/2020
+
+- name: Goodison Park stadium 
+  type: stadium 
+  city: Liverpool 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipljen/goodison_park_updated_google_ortho_3d_objects_on/?utm_source=share&utm_medium=web2x&context=3
+  author: C0rsten 
+  source: reddit 
+  date: 09/09/2020
+
+- name: The airport Pub 
+  type: building 
+  city: Manchester 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iowylg/the_airport_pub_manchester_egcc/
+  author: emokill93 
+  source: reddit 
+  date: 09/08/2020
+
+- name: DW stadium 
+  type: stadium 
+  city: Wigan, Greater Manchester 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/imi4nu/dw_stadium_uk/ 
+  author: emokill93 
+  source: reddit 
+  date: 09/04/2020
+
+- name: Anfield stadium 
+  type: stadium 
+  city: Liverpool 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ilpvcp/release_anfield_liverpool/?utm_source=share&utm_medium=web2x&context=3
+  author: High_Frame_Rates 
+  source: reddit 
+  date: 09/03/2020
+
+- name: The Lovell Telescope, Jodrell Bank 
+  type: landmark
+  city: Cheshire 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iksjq2/the_lovell_telescope_jodrell_bank_manchester_uk/
+  author: timhuckle 
+  source: reddit 
+  date: 09/01/2020
+
+- name: Old Trafford Football Ground 
+  type: stadium 
+  city: Manchester 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ijsad7/old_trafford_football_ground_uk/?utm_source=share&utm_medium=web2x&context=3
+  author: tohide 
+  source: reddit 
+  date: 08/31/2020
+
+- name: Blackpool Tower 
+  type: building 
+  city: Blackpool 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ih082f/i_modelled_blackpool_tower_and_placed_it_in_the/?utm_source=share&utm_medium=web2x&context=3
+  author: HarrisonRC 
+  source: reddit 
+  date: 08/26/2020
+
+- name: The Loch Ness Monster 
+  type: Fictional 
+  city: Scotland 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ijxz22/added_loch_ness_monster/?utm_source=share&utm_medium=web2x&context=3
+  author: EggMan28 
+  source: reddit 
+  date: 08/31/2020
+
+- name: Edinburgh Scenery Pack 
+  type: city
+  city: Edinburgh 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ijhrmu/release_edinburgh_scenery_v2/
+  author: SirLeinad4 
+  source: reddit 
+  date: 08/30/2020
+
+- name: Glasgow Centre Photogrammetry 
+  type: city
+  city: Glasgow 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iidgov/glasgow_photogrammetry_full_city_centre/?utm_source=share&utm_medium=web2x&context=3
+  author: Seank23 
+  source: reddit 
+  date: 08/28/2020
+
+- name: White Waltham Airfield Tree Fix 
+  type: Fix 
+  city: South East England 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/imjiat/eglm_white_waltham_airfield_tree_fix/?utm_source=share&utm_medium=web2x&context=3
+  author: julysfire 
+  source: reddit 
+  date: 09/04/2020
+
+- name: Stonehenge 
+  type: landmark
+  city: England 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/imcoya/stonehenge_alternative_release/?utm_source=share&utm_medium=web2x&context=3
+  author: ElectroGloop 
+  source: reddit 
+  date: 2020/09/04
+
+- name: Glastonbury Tor 
+  type: building 
+  city: Glastonbury 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ije2s2/overhauled_my_glastonbury_tor_scenery_mod_with_a/?utm_source=share&utm_medium=web2x&context=3
+  author: _Yetty_ 
+  source: reddit 
+  date: 08/30/2020
+
+- name: Bath landmarks 
+  type: city
+  city: Bath 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iiyt2b/royal_cresent_bath_somerset_united_kingdom_taken/?utm_source=share&utm_medium=web2x&context=3
+  author: _Yetty_ 
+  source: reddit 
+  date: 08/29/2020
+
+- name: Stonehenge 
+  type: landmark
+  city: England 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/igdaue/stonehenge_version_2_link_in_comments/?utm_source=share&utm_medium=web2x&context=3
+  author: MagicalPedro 
+  source: reddit 
+  date: 08/25/2020
+
+- name: Birmingham landmarks 
+  type: city
+  city: Birmingham 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/iotqrj/released_birmingham_uk_landmarks_aston_villa/?utm_source=share&utm_medium=web2x&context=3
+  author: TheStoneFox 
+  source: reddit 
+  date: 09/08/2020
+
+- name: Aston Photogrammetry 
+  type: city
+  city: Aston 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/im0fw8/birmingham_uk_scenery_initial_release_google_maps/?utm_source=share&utm_medium=web2x&context=3
+  author: TheStoneFox 
+  source: reddit 
+  date: 09/03/2020
+
+- name: Birmingham Photogrammetry 
+  type: city
+  city: Birmingham 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/im0fw8/birmingham_uk_scenery_initial_release_google_maps/?utm_source=share&utm_medium=web2x&context=3
+  author: TheStoneFox 
+  source: reddit 
+  date: 09/03/2020
+
+- name: Stafford Castle 
+  type: building 
+  city: Staffordshire 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ijig7h/stafford_castle_england/ 
+  author: _Yetty_ 
+  source: reddit 
+  date: 08/30/2020
+
+- name: Emley Moor Transmitter 
+  type: landmark
+  city: Huddersfield, Yorkshire 
+  country: United Kingdom 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/io427y/emley_moor_transmitter_near_huddersfield_yorkshire/?utm_source=share&utm_medium=web2x&context=3
+  author: leighhobson89 
+  source: reddit 
+  date: 07/09/2020
+
+- name: Hong Kong Island (North)
+  type: city
+  city: 
+  country: Hong Kong
+  region: APAC
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqnh4r/hong_kong_island_north/?utm_source=share&utm_medium=web2x&context=3
+  author: bobsleigh44
+  source: reddit 
+  date: 09/11/2020
+
+- name: Kowloon Station Buildings
+  type: city
+  city: 
+  country: Hong Kong
+  region: APAC
+  url: https://www.reddit.com/r/FS2020Creation/comments/iissvf/complete_collection_of_kowloon_station_buildings/?utm_source=share&utm_medium=web2x&context=3
+  author: goonify
+  source: reddit 
+  date: 08/29/2020
+
+- name: Gundam RX-78
+  type: landmark
+  city: Yokohama
+  country: Japan
+  region: APAC
+  url: https://www.reddit.com/r/FS2020Creation/comments/ijuemr/gundam_rx78_at_yokohama/?utm_source=share&utm_medium=web2x&context=3
+  author: EggMan28 
+  source: reddit 
+  date: 08/29/2020
+
+- name: Gundam Unicorn
+  type: landmark
+  city: Tokyo
+  country: Japan
+  region: APAC
+  url: https://www.reddit.com/r/FS2020Creation/comments/ij8p8g/gundam_unicorn_at_odaiba/?utm_source=share&utm_medium=web2x&context=3
+  author: EggMan28 
+  source: reddit 
+  date: 08/29/2020
+
+- name: Singapore Sports Hub
+  type: stadium
+  city: 
+  country: Singapore
+  region: APAC
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipr2n8/singapore_sports_hub/?utm_source=share&utm_medium=web2x&context=3
+  author: VoodooKing 
+  source: reddit 
+  date: 09/10/2020
+
+- name: Downtown Salvador
+  type: city
+  city: Salvador
+  country: Brazil
+  region: AMER
+  url: https://www.reddit.com/r/FS2020Creation/comments/io07g1/downtown_salvador_brazil/?utm_source=share&utm_medium=web2x&context=3
+  author: ciaporadomato 
+  source: reddit 
+  date: 9/7/2020
+
+- name: Downtown Salvador
+  type: city
+  city: Salvador
+  country: Brazil
+  region: AMER
+  url: https://www.reddit.com/r/FS2020Creation/comments/io07g1/downtown_salvador_brazil/?utm_source=share&utm_medium=web2x&context=3
+  author: ciaporadomato 
+  source: reddit 
+  date: 9/7/2020
+
+- name: Downtown Moncton 
+  type: bundle 
+  city: Moncton, New Brunswick 
+  country: Canada 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/im4phf/anyone_here_been_to_the_maritimes_downtown_moncton/?utm_source=share&utm_medium=web2x&context=3
+  author: Snyperwulf 
+  source: reddit 
+  date: 9/4/2020
+
+- name: Mexico city landmarks 
+  type: city 
+  city: Mexico city 
+  country: Mexico 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqvvj1/mexico_city_landmarks_wip/?utm_source=share&utm_medium=web2x&context=3
+  author: AndresHdz77 
+  source: reddit 
+  date: 9/11/2020
+
+- name: Estadio Corregidora 
+  type: stadium 
+  city: Santiago de Queretaro 
+  country: Mexico 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipo7dk/release_estadio_corregidora_gallos_de/?utm_source=share&utm_medium=web2x&context=3
+  author: AndresHdz77 
+  source: reddit 
+  date: 9/9/2020
+
+- name: Guadalajara 
+  type: city 
+  city: Guadalajara 
+  country: Mexico 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ip4ry2/wip_guadalajara_mexico/?utm_source=share&utm_medium=web2x&context=3
+  author: AirbusDriverSG-MX 
+  source: reddit 
+  date: 9/9/2020
+
+- name: Pumas U.N.A.M. stadium 
+  type: stadium 
+  city: Mexico city 
+  country: Mexico 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ioye3u/release_first_try_in_google_3d_models_pumas_unam/?utm_source=share&utm_medium=web2x&context=3
+  author: AndresHdz77 
+  source: reddit 
+  date: 9/8/2020
+
+- name: Ponce 
+  type: city 
+  city: Ponce 
+  country: Puerto Rico 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqrhrf/ponce_puerto_rico_vfr/?utm_source=share&utm_medium=web2x&context=3
+  author: JSairbus 
+  source: reddit 
+  date: 9/11/2020
+
+
+- name: Yosemite Valley 
+  type: natural wonder 
+  city: Sierra Nevada Mountains 
+  country: United States 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqm4j8/yosemite_valley_release/?utm_source=share&utm_medium=web2x&context=3
+  author: VFXSimmer 
+  source: reddit 
+  date: 9/11/2020
+
+
+- name: Downtown Los Angeles 
+  type: bundle 
+  city: Los Angeles 
+  country: United States 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ilzoec/downtown_los_angeles_including_wilshire_grand/?utm_source=share&utm_medium=web2x&context=3
+  author: senecadriver 
+  source: reddit 
+  date: 9/3/2020
+
+
+- name: Godzilla 
+  type: fictional 
+  city: San Francisco 
+  country: United States 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iielrz/i_needed_a_break_from_buildings_and_san_francisco/
+  author: GhostofSatan 
+  source: reddit 
+  date: 8/28/2020
+
+- name: Washington Scenery 
+  type: bundle 
+  city: Washington 
+  country: United States 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/inf4a9/washington_dc_alpha_release_links_in_comments/?utm_source=share&utm_medium=web2x&context=3
+  author: wyum 
+  source: reddit 
+  date: 9/6/2020
+
+- name: Pearl Harbor Scenery 
+  type: bundle 
+  city: Pearl Harbor, Hawaii 
+  country: United States 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/in6az2/release_pearl_harbor_hawaii_scenery_addon_navy/?utm_source=share&utm_medium=web2x&context=3
+  author: ProjectionistPSN 
+  source: reddit 
+  date: 9/5/2020
+
+- name: Boise landmark bundle 
+  type: bundle 
+  city: Boise, Idaho 
+  country: United States 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/imnyb3/release_boise_id_bundle_v1_5_boise_landmarksareas/?utm_source=share&utm_medium=web2x&context=3
+  author: ElectronicJump 
+  source: reddit 
+  date: 9/4/2020
+
+- name: Chicago Skyline 
+  type: bundle 
+  city: Chicago 
+  country: United States 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/in8ofz/chicago_enhanced_first_release/?utm_source=share&utm_medium=web2x&context=3
+  author: gamr101 
+  source: reddit 
+  date: 9/5/2020
+
+- name: Buffalo Skyline 
+  type: city 
+  city: Buffalo, New York 
+  country: United States 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/inpqs9/buffalo_skyline_pack_version_2_released_download/
+  author: thek00laidman 
+  source: reddit 
+  date: 9/6/2020
+
+- name: Star Destroyer 
+  type: fictional 
+  city: New York 
+  country: United States 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ijaw9b/star_destroyer_at_statue_of_liberty/?utm_source=share&utm_medium=web2x&context=3
+  author: EggMan28 
+  source: reddit 
+  date: 8/30/2020
+
+- name: Buffalo city Hall 
+  type: building 
+  city: Buffalo, New York 
+  country: United States 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iidlvp/buffalo_ny_city_hall/?utm_source=share&utm_medium=web2x&context=3
+  author: thek00laidman 
+  source: reddit 
+  date: 8/28/2020
+
+- name: Charlotte 
+  type: city 
+  city: Charlotte 
+  country: United States 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ir5mw4/charlotte_nc/?utm_source=share&utm_medium=web2x&context=3
+  author: GiorgioRutto 
+  source: reddit 
+  date: 9/12/2020
+
+- name: Woodward Hall 
+  type: building 
+  city: North Carolina 
+  country: United States 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ih1b1e/woodward_hall_uncc_near_kjqf_wip_download_in/?utm_source=share&utm_medium=web2x&context=3
+  author: Blurredpixel 
+  source: reddit 
+  date: 8/26/2020
+
+- name: Three Mile Island 
+  type: building 
+  city: Pennsylvania 
+  country: United States 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ija8ov/release_three_mile_island_pennsylvania_usa/?utm_source=share&utm_medium=web2x&context=3 
+  author: High_Frame_Rates 
+  source: reddit 
+  date: 8/30/2020
+
+- name: Devils Tower 
+  type: Natural Wonder 
+  city: Wyoming 
+  country: United States 
+  region: AMER 
+  url: https://www.reddit.com/r/FS2020Creation/comments/imsxot/updated_fix_for_devils_tower_v_11/?utm_source=share&utm_medium=web2x&context=3
+  author: VFXSimmer 
+  source: reddit 
+  date: 9/5/2020
+
+- name: SDF-1 (Macross/Robotech) 
+  type: fictional 
+  city: Sydney 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipe94g/added_sdf1_from_macross_robotech/?utm_source=share&utm_medium=web2x&context=3
+  author: EggMan28 
+  source: reddit 
+  date: 9/10/2020
+
+- name: Sydney CBD 
+  type: city 
+  city: Sydney 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/io2yvm/sydney_cbd_new_south_wales_australia/?utm_source=share&utm_medium=web2x&context=3
+  author: Urbanhunterdva 
+  source: reddit 
+  date: 9/7/2020
+
+- name: Fort Denison 
+  type: building 
+  city: Sydney 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ilqkiy/fort_denison_sydney_harbour_australia/?utm_source=share&utm_medium=web2x&context=3
+  author: tromac2010 
+  source: reddit 
+  date: 9/3/2020
+
+- name: Sydney Tower 
+  type: building 
+  city: Sydney 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/il5r1f/release_update_sydney_tower_by_night_download/
+  author: Oh_Gaz 
+  source: reddit 
+  date: 9/2/2020
+
+- name: The Three Sisters 
+  type: natural wonder 
+  city: Katoomba, NSW 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ikgo8q/the_three_sisters_katoomba_nsw_australia_download/
+  author: corinoco 
+  source: reddit 
+  date: 9/1/2020
+
+- name: Sydney Harbour Bridge 
+  type: landmark 
+  city: Sydney 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ihjck6/release_download_sydney_harbour_bridge/?utm_source=share&utm_medium=web2x&context=3
+  author: High_Frame_Rates 
+  source: reddit 
+  date: 8/27/2020
+
+- name: Brisbane Pack 
+  type: city 
+  city: Brisbane 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqf7cw/released_microsoft_flight_simulator_2020_brisbane/?utm_source=share&utm_medium=web2x&context=3
+  author: HybridNz 
+  source: reddit 
+  date: 9/11/2020
+
+- name: The Gabba 
+  type: stadium 
+  city: Brisbane 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipz1yr/the_gabba_brisbane_australia/?utm_source=share&utm_medium=web2x&context=3
+  author: KasperSim90 
+  source: reddit 
+  date: 9/10/2020
+
+
+- name: Adelaide CBD 
+  type: city 
+  city: Adelaide 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iq3c15/release_adelaide_cbd_low_poly_download/?utm_source=share&utm_medium=web2x&context=3
+  author: High_Frame_Rates 
+  source: reddit 
+  date: 9/10/2020
+
+- name: Adelaide Oval 
+  type: stadium 
+  city: Adelaide 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iiw6wd/release_adelaide_oval/?utm_source=share&utm_medium=web2x&context=3
+  author: High_Frame_Rates 
+  source: reddit 
+  date: 8/29/2020
+
+- name: Albert Park 
+  type: landmark 
+  city: Melbourne 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ir8uo1/albert_park_upgrade_australia/?utm_source=share&utm_medium=web2x&context=3
+  author: Urbanhunterdva 
+  source: reddit 
+  date: 9/12/2020
+
+- name: St Kilda Marina 
+  type: landmark 
+  city: Melbourne 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ir83vi/st_kilda_marina/?utm_source=share&utm_medium=web2x&context=3
+  author: sixdegreesofflight 
+  source: reddit 
+  date: 9/12/2020
+
+- name: Melbourne 
+  type: city 
+  city: Melbourne 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqq3pr/melbourne_australia/?utm_source=share&utm_medium=web2x&context=3
+  author: Urbanhunterdva 
+  source: reddit 
+  date: 9/11/2020
+
+- name: Melbourne cityscape 
+  type: city 
+  city: Melbourne 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqhzmu/melbourne_australia_cityscape/?utm_source=share&utm_medium=web2x&context=3
+  author: HamerheadH 
+  source: reddit 
+  date: 9/11/2020
+
+- name: Station Pier 
+  type: landmark 
+  city: Melbourne 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipuuh7/station_pier_melbourne_australia/?utm_source=share&utm_medium=web2x&context=3
+  author: Urbanhunterdva 
+  source: reddit 
+  date: 9/10/2020
+
+- name: Royal Exhibition building 
+  type: building 
+  city: Melbourne 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ip5bpe/release_royal_exhibition_building_and_melbourne/
+  author: Nails042 
+  source: reddit 
+  date: 9/8/2020
+
+- name: Shrine of Remembrance 
+  type: building 
+  city: Melbourne 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ionr00/melbourne_shrine_of_remembrance/?utm_source=share&utm_medium=web2x&context=3
+  author: sixdegreesofflight 
+  source: reddit 
+  date: 9/8/2020
+
+- name: Lunar Park 
+  type: building 
+  city: St. Kilda 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/io1r9v/lunar_park_in_st_kilda_victoria_australia/?utm_source=share&utm_medium=web2x&context=3
+  author: sixdegreesofflight 
+  source: reddit 
+  date: 9/7/2020
+
+- name: Royal Melbourne Hospital 
+  type: building 
+  city: Melbourne 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/io04k3/royal_melbourne_hospital/?utm_source=share&utm_medium=web2x&context=3
+  author: sixdegreesofflight 
+  source: reddit 
+  date: 9/7/2020
+
+
+- name: Melbourne Police Academy 
+  type: building 
+  city: Melbourne 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iln66z/melbourne_police_academy/?utm_source=share&utm_medium=web2x&context=3
+  author: sixdegreesofflight 
+  source: reddit 
+  date: 9/3/2020
+
+- name: Southern Star Wheel 
+  type: landmark 
+  city: Melbourne 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ij7ijj/southern_star_wheel_for_docklands_to_go_with_that/?utm_source=share&utm_medium=web2x&context=3
+  author: EggMan28 
+  source: reddit 
+  date: 8/30/2020
+
+- name: Melbourne Cricket Ground 
+  type: stadium 
+  city: Melbourne 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iitcmt/release_update_melbourne_cricket_ground/?utm_source=share&utm_medium=web2x&context=3
+  author: High_Frame_Rates 
+  source: reddit 
+  date: 8/29/2020
+
+- name: Aami Park 
+  type: stadium 
+  city: Melbourne 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iiso4e/release_aami_park_melbourne/?utm_source=share&utm_medium=web2x&context=3
+  author: High_Frame_Rates 
+  source: reddit 
+  date: 8/29/2020
+
+- name: Perth CBD 
+  type: city 
+  city: Perth 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iq65zy/release_perth_cbd_download/?utm_source=share&utm_medium=web2x&context=3
+  author: High_Frame_Rates 
+  source: reddit 
+  date: 9/10/2020
+
+- name: Perth Arena 
+  type: stadium 
+  city: Perth 
+  country: Australia 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iiv9fx/release_update_perth_arena/?utm_source=share&utm_medium=web2x&context=3
+  author: High_Frame_Rates 
+  source: reddit 
+  date: 8/29/2020
+
+
+- name: Wellington Railway Station 
+  type: building 
+  city: Wellington 
+  country: New Zealand 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqovm4/released_wellington_railway_station_new_zealand/?utm_source=share&utm_medium=web2x&context=3
+  author: Calvin_PG88 
+  source: reddit 
+  date: 9/11/2020
+
+- name: Te Papa Museum 
+  type: building 
+  city: Wellington 
+  country: New Zealand 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/iqny48/te_papa_museum_update_add_boats_around_the_area/?utm_source=share&utm_medium=web2x&context=3
+  author: Calvin_PG88 
+  source: reddit 
+  date: 9/11/2020
+
+- name: Victoria University of Wellington 
+  type: building 
+  city: Wellington 
+  country: New Zealand 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipeljz/victoria_university_of_wellington_cbd_new_zealand/?utm_source=share&utm_medium=web2x&context=3
+  author: Calvin_PG88 
+  source: reddit 
+  date: 9/9/2020
+
+- name: Aoraki/Mount Cook & Mount Tasman 
+  type: natural wonder 
+  city: Southern Alps 
+  country: New Zealand 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ios8fg/aorakimt_cook_and_mt_tasman_released/?utm_source=share&utm_medium=web2x&context=3
+  author: spas3man 
+  source: reddit 
+  date: 9/8/2020
+
+- name: Parliament buildings 
+  type: building 
+  city: Wellington 
+  country: New Zealand 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/io4jye/update_parliament_buildings_wellington_new/?utm_source=share&utm_medium=web2x&context=3
+  author: Calvin_PG88 
+  source: reddit 
+  date: 9/7/2020
+
+- name: Wellington Skysport stadium 
+  type: stadium 
+  city: Wellington 
+  country: New Zealand 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/inh69v/release_wellington_skysport_stadium_new_zealand/?utm_source=share&utm_medium=web2x&context=3
+  author: Calvin_PG88 
+  source: reddit 
+  date: 9/6/2020
+
+- name: Auckland Sky Tower 
+  type: building 
+  city: Auckland 
+  country: New Zealand 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ilf1ut/release_auckland_sky_tower/
+  author: spas3man 
+  source: reddit 
+  date: 9/3/2020
+
+- name: Auckland Harbour Bridge 
+  type: landmark 
+  city: Auckland 
+  country: New Zealand 
+  region: APAC 
+  url: https://www.reddit.com/r/FS2020Creation/comments/ilf4v1/release_auckland_harbour_bridge/
+  author: spas3man 
+  source: reddit 
+  date: 9/3/2020
