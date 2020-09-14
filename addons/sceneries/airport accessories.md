@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /addons/sceneries/buildings
-title: Buildings
+permalink: /addons/sceneries/airportaccesories/
+title: Airport accesories
 ---
 
 
