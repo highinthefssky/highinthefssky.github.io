@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "New addon sectio"
+title: "New addon section"
 description: "This is an overview of the community addons released this week for Flight Simulator 2020"
 tags:
 - Flight Simulator 2020
