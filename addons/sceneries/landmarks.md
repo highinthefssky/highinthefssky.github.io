@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /addons/sceneries/landmarks
+permalink: /addons/sceneries/landmarks/
 title: Landmarks
 ---
 
