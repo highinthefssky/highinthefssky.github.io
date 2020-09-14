@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /addons/sceneries/buildings
+permalink: /addons/sceneries/buildings/
 title: Buildings
 ---
 

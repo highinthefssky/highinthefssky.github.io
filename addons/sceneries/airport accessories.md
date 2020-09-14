@@ -21,7 +21,7 @@ title: Airport accesories
         <th>author</th>
       </tr>
  
-        {% for accesory in accessories %}
+        {% for accessory in accessories %}
         <tr>
           <td>{{accessory.name}}</td>
           <td>{{accessory.city}}</td>

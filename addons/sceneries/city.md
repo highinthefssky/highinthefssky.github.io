@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /addons/sceneries/cities
+permalink: /addons/sceneries/cities/
 title: Cities
 ---
 
