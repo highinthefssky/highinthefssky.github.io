@@ -27,12 +27,12 @@ In addition to this I am planning to perform a weekly posts with the latest addi
 The addons are divided in the following sections
 
 
-* [Airports](https://highinthefssky.nl/addons/airports/)
-* [Airstrips](https://highinthefssky.nl/addons/airstrips/)
-* [Sceneries](https://highinthefssky.nl/addons/sceneries/)
-    * [Airport accessories](https://highinthefssky.nl//addons/sceneries/airportaccesories/)
-    * [Buildings](https://highinthefssky.nl//addons/sceneries/buildings/)
-    * [Cities](https://highinthefssky.nl/addons/sceneries/cities//)
-    * [Landmarks](https://highinthefssky.nl/addons/sceneries/landmarks/)
+* [Airports](https://highintheflightsimsky.nl/addons/airports/)
+* [Airstrips](https://highintheflightsimsky.nl/addons/airstrips/)
+* [Sceneries](https://highintheflightsimsky.nl/addons/sceneries/)
+    * [Airport accessories](https://highintheflightsimsky.nl/addons/sceneries/airportaccesories/)
+    * [Buildings](https://highintheflightsimsky.nl/addons/sceneries/buildings/)
+    * [Cities](https://highintheflightsimsky.nl/addons/sceneries/cities//)
+    * [Landmarks](https://highintheflightsimsky.nl/addons/sceneries/landmarks/)
 
 Airplanes are not yet on the site but will be added soon.
