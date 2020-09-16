@@ -2,6 +2,7 @@
   icao: EDLP
   city: Paderborn / Lippstadt	
   country: Germany
+  region: EMEA
   longtitude: 51.611451798324836
   latitude: 8.60811677442276
   url: https://www.aerosoft.com/en/flight-simulation/news/1st-aerosoft-dlc-for-the-new-msfs-for-free
@@ -12,6 +13,7 @@
   icao: BGCO
   city: Jameson Land
   country: Greenland
+  region: AMER
   longtitude: 70.7435273281337
   latitude: -22.66159439086914
   url: https://www.flightsim.to/file/79/nerlerit-inaat-airport-greenland
@@ -29,6 +31,7 @@
   icao: KNZY
   city: San Diego
   country: USA
+  region: AMER
   longtitude: 32.70152799041822
   latitude: -117.21105463347745
   url: https://reddit.com/r/FS2020Creation/comments/ih8mel/i_made_my_first_airport_knzy_north_island_nas/
@@ -40,6 +43,7 @@
   icao: KCGX
   city: Chicago
   country: USA
+  region: AMER
   url: https://reddit.com/r/FS2020Creation/comments/ihueiu/kcgx_meigs_field_link_in_comments/
   author: ichankal
   source: reddit
@@ -48,6 +52,7 @@
   icao: ENSD
   city: 
   country: Norway
+  region: EMEA
   url: https://www.fsdeveloper.com/forum/threads/ensd-sandane-airport-anda.448511/page-2#post-852533
   skyvector: https://skyvector.com/airport/ENSD/Sandane-Anda-Airport
   author: Augustin Winther
@@ -56,6 +61,7 @@
   icao: KDLL
   city: Baraboo
   country: USA
+  region: AMER
   longtitude: 43.523362841933256
   latitude: -89.77797425627014
   url: https://www.nexusmods.com/microsoftflightsimulator/mods/86
@@ -66,6 +72,7 @@
   icao: KMRY
   city: Monterey
   country: USA
+  region: AMER
   longtitude: 36.58720784077659
   latitude: -121.85166406631471
   url: https://www.nexusmods.com/microsoftflightsimulator/mods/82
@@ -76,6 +83,7 @@
   icao: EDEN
   city: Johannesberg
   country: Germany
+  region: EMEA
   url: https://www.fsdeveloper.com/forum/threads/eden-bad-hersfeld.448561/
   skyvector: https://skyvector.com/airport/EDEN/Bad-Hersfeld-Airport
   author: Christoph Jurczyk
@@ -84,6 +92,7 @@
   icao: UOOO
   city: Norilsk
   country: Russia
+  region: EMEA
   url: https://www.nexusmods.com/microsoftflightsimulator/mods/66
   skyvector: https://skyvector.com/airport/UOOO/Norilsk-Airport
   author: Instantlysi 
@@ -92,6 +101,7 @@
   icao: EDDT
   city: Berlin
   country: Germany
+  region: EMEA
   url: https://www.nexusmods.com/microsoftflightsimulator/mods/52
   skyvector: https://skyvector.com/airport/EDDT/Berlin-Tegel-Airport
   author: Revyn112
@@ -100,6 +110,7 @@
   icao: EDDT
   city: Oregon City
   country: USA
+  region: AMER
   url: https://orbxdirect.com/product/og20-msfs
   skyvector: https://skyvector.com/airport/OG20/Fairways-Airport
   author: ORBX
@@ -108,6 +119,7 @@
   icao: SKUI
   city: Quibdó
   country: Colombia
+  region: AMER
   url: https://www.nexusmods.com/microsoftflightsimulator/mods/103
   skyvector: https://skyvector.com/airport/OG20/Fairways-Airport
   author: Leandro Sousa
@@ -116,6 +128,7 @@
   icao: KCFD
   city: Bryan
   country: USA
+  region: AMER  
   url: https://reddit.com/r/FS2020Creation/comments/imaqeh/kcfd_coulter_field_bryan_tx/
   skyvector: https://skyvector.com/airport/CFD/Coulter-Field-Airport
   author: CardiCopia
@@ -124,7 +137,8 @@
 - name: Kumlinge GA Airfield
   icao: EFKG
   city: Kumlinge
-  country: Åland Islands 
+  country: Åland Islands
+  region: EMEA
   url: https://files.fsnordic.net/kumlinge-efkg-2020
   skyvector: https://skyvector.com/airport/EFKG/Kumlinge-Airport
   author: FISD/Bamce Fabricius
@@ -133,6 +147,7 @@
   icao: EFTO
   city: Degerby
   country: Ingå
+  region: EMEA
   url: https://files.fsnordic.net/efto-msfs
   skyvector: https://skyvector.com/airport/EFTO/Torbacka-Airport
   author: FISD/Bamce 
@@ -141,6 +156,7 @@
   icao: EGTH 
   city: Bedfordshire
   country: United Kingdom
+  region: EMEA
   url: https://www.nexusmods.com/microsoftflightsimulator/mods/59
   skyvector: https://skyvector.com/airport/EGTH/Old-Warden-Airport
   author: FISD/Bamce 
@@ -149,6 +165,7 @@
   icao: EDAY  
   city: Strausberg
   country: Germany
+  region: EMEA
   url: https://www.nexusmods.com/microsoftflightsimulator/mods/60
   skyvector: https://skyvector.com/airport/EDAY/Strausberg-Airport
   author: FISD/Bamce 
@@ -157,6 +174,7 @@
   icao: EGLM 
   city: Maidenhead
   country: United Kingdom
+  region: EMEA
   url: https://www.nexusmods.com/microsoftflightsimulator/mods/57
   skyvector: https://skyvector.com/airport/EGLM/White-Waltham-Airport
   author: julysfire
@@ -165,6 +183,7 @@
   icao: EGLM 
   city: Maidenhead
   country: United Kingdom
+  region: EMEA  
   url: https://www.nexusmods.com/microsoftflightsimulator/mods/57
   skyvector: https://skyvector.com/airport/EGLM/White-Waltham-Airport
   author: julysfire
@@ -173,6 +192,7 @@
   icao: EG13
   city: Isle of Mull
   country: United Kingdom
+  region: EMEA  
   url: https://reddit.com/r/FS2020Creation/comments/iixzja/glenforsa_airfield_isle_of_mull_scotland_download/
   skyvector: 
   author: mattgarner
@@ -182,6 +202,7 @@
   icao: EGCA
   city: Apperknowle
   country: United Kingdom
+  region: EMEA  
   url: https://reddit.com/r/FS2020Creation/comments/ihsaqf/coal_aston_airfield_download/
   skyvector: 
   author: mattgarner
@@ -191,6 +212,7 @@
   icao: EGIM
   city: 
   country: United Kingdom
+  region: EMEA  
   url: https://reddit.com/r/FS2020Creation/comments/ilzv2g/knockbain_farm_airfield_download/
   skyvector: 
   author: mattgarner  
@@ -200,6 +222,7 @@
   icao: EGTY
   city: Strathaven
   country: United Kingdom
+  region: EMEA  
   url: https://reddit.com/r/FS2020Creation/comments/iktto7/strathaven_airfield_near_glasgow_scotland_download/
   skyvector: 
   author: mattgarner
@@ -209,7 +232,19 @@
   icao: EVGZ
   city: 
   country: United Kingdom
+  region: EMEA  
   url: https://reddit.com/r/FS2020Creation/comments/ik2wo1/fort_augustus_airfield_near_loch_ness_scotland/
   skyvector: 
   author: mattgarner
   source: reddit
+
+- name: Stuttgart Airport
+  icao: EDDS
+  city: Stuttgart
+  country: Germany
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipny9b/edds_stuttgart_airport_work_in_progress_missing/
+  skyvector: https://skyvector.com/airport/EDDS/Stuttgart-Airport
+  author: Sub_S7v7n
+  source: reddit
+  date: 2020-09-15
