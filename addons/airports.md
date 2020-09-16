@@ -31,7 +31,7 @@ title: Airports
           <td>{{airport.icao}}</td>
           <td>{{airport.city}}</td>
           <td>{{airport.country}}</td>
-          <td>{{airport.regiob}}</td>           
+          <td>{{airport.region}}</td>           
           <td><a href="{{airport.url}}" target="_blank">open</a></td>
           <td>
             {% if airport.source == "reddit" %}
