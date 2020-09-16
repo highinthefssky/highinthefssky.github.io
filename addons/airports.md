@@ -17,7 +17,7 @@ title: Airports
         <th>city</th>
         <th>country</th>
         <th>region</th>
-        <th>download</th>
+        <th>link</th>
         <th>author</th>
       </tr>
  

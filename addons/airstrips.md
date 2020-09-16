@@ -15,7 +15,7 @@ title: Airstrips
         <th>airport</th>
         <th>city</th>
         <th>country</th>
-        <th>download</th>
+        <th>link</th>
         <th>author</th>
       </tr>
  
