@@ -18,7 +18,7 @@ tags:
 - Cessna 208 B
 - cessna 208b grand caravan ex
 category: landing challenges
-permalink: /MSFS2020-LandingChellenge-Bugalaga/
+permalink: /MSFS2020-LandingChallenge-Bugalaga/
 youtubeId: 66qceZjG0Bg
 ---
 
