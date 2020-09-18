@@ -248,3 +248,289 @@
   author: Sub_S7v7n
   source: reddit
   date: 2020-09-15
+
+- name: Barra Airport
+  icao: EGPR
+  city: Barra
+  country: United Kingdom
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/ipny9b/edds_stuttgart_airport_work_in_progress_missing/
+  skyvector: https://skyvector.com/airport/EGPR/Barra-Airport
+  author: superspud
+  source: flightsim.to
+  date: 2020-09-18
+
+- name: Moirana Rossvoll Airport
+  icao: ENRA
+  city: Nordland
+  country: Norway
+  region: EMEA
+  url: https://flightsim.to/file/586/enra-mo-i-rana-lufthavn
+  skyvector: https://skyvector.com/airport/ENRA/Moirana-Rossvoll-Airport
+  author: eddrik84
+  source: flightsim.to
+  date: 2020-09-18
+
+- name: Bendigo Airport
+  icao: YBDG
+  city: Victoria
+  country: Australia
+  region: APAC
+  url: https://flightsim.to/file/581/ybdg-bendigo-victoria-australia
+  skyvector: https://skyvector.com/airport/YBDG/Bendigo-Airport
+  author: ichankal
+  source: flightsim.to
+  date: 2020-09-18
+
+- name: Lausanne Blecheret Airport
+  icao: LSGL
+  city: Laussane
+  country: Switzerland
+  region: EMEA
+  url: https://flightsim.to/file/580/lsgl-lausanne-la-blecherette-airport-switzerland
+  skyvector: https://skyvector.com/airport/LSGL/Lausanne-Blecheret-Airport
+  author: Kaymel
+  source: flightsim.to
+  date: 2020-09-18
+
+- name: Ameland Airport
+  icao: EHAL
+  city: Ameland
+  country: Netherlands
+  region: EMEA
+  url: https://flightsim.to/file/576/ameland-airport-ehal-incl-ameland-lighthouse
+  skyvector: https://flightsim.to/file/576/ameland-airport-ehal-incl-ameland-lighthouse
+  author: SinusJayCee
+  source: flightsim.to
+  date: 2020-09-18
+
+- name: Albi Le Sequestre Airport
+  icao: LBI
+  city: Midi-Pyrenees
+  country: France
+  region: EMEA
+  url: https://flightsim.to/file/573/aeroclub-loberia
+  skyvector: https://skyvector.com/airport/LFCI/Albi-Le-Sequestre-Airport
+  author: Chukakis
+  source: flightsim.to
+  date: 2020-09-18
+
+- name: Doylestown Airport
+  icao: KDYL
+  city: Doylestown
+  country: USA
+  region: AMER
+  url: https://flightsim.to/file/572/kdyl-doylestown-airport
+  skyvector: https://skyvector.com/airport/DYL/Doylestown-Airport
+  author: eclair4151
+  source: flightsim.to
+  date: 2020-09-18
+
+- name: Banff Airport
+  icao: CYBA
+  city: Alberta
+  country: Canada
+  region: AMER
+  url: https://flightsim.to/file/569/cyba-banff-alberta-canada
+  skyvector: https://skyvector.com/airport/CYBA/Banff-Airport
+  author: Rory McAlduff
+  source: flightsim.to
+  date: 2020-09-18
+
+- name: Bella Coola Airport
+  icao: CYBD
+  city: British Columbia
+  country: Canada
+  region: AMER
+  url: https://flightsim.to/file/564/cybd-bella-coola-valley-water-level-fix
+  skyvector: https://skyvector.com/airport/CYBD/Bella-Coola-Airport
+  author: Zepingouin35
+  source: flightsim.to
+  date: 2020-09-18
+
+- name: Benambra Airport
+  icao: YBRA
+  city: Benambra
+  country: Australia
+  region: APAC
+  url: https://flightsim.to/file/551/benambra-airport-ybra
+  skyvector: 
+  author: Hoynedawg
+  source: flightsim.to
+  date: 2020-09-17
+
+- name: Bronnoysund/Bronnoy Airport
+  icao: ENBN
+  city: Benambra
+  country: Australia
+  region: APAC
+  url: https://flightsim.to/file/550/enbn-bronnoysund-lufthavn
+  skyvector: https://skyvector.com/airport/ENBN/Bronnoysund-Bronnoy-Airport
+  author: eddrik84
+  source: flightsim.to
+  date: 2020-09-17
+
+- name: Redcliffe Airport
+  icao: YRED
+  city: Queensland
+  country: Australia
+  region: APAC
+  url: https://flightsim.to/file/532/yred-airport
+  skyvector: https://skyvector.com/airport/YRED/Redcliffe-Airport
+  author: Gavin Saunders
+  source: flightsim.to
+  date: 2020-09-16
+
+- name: Wellington Airport
+  icao: NZWN
+  city: Wellington
+  country: New Zealand
+  region: APAC
+  url: https://flightsim.to/file/523/wellington-airport-enhancement
+  skyvector: https://skyvector.com/airport/NZWN/Wellington-Int-Airport
+  author: Jon Murchison
+  source: flightsim.to
+  date: 2020-09-16
+
+- name: Auckland Airport
+  icao: NZAA
+  city: Auckland
+  country: New Zealand
+  region: APAC
+  url: https://flightsim.to/file/522/auckland-airport-enhancement
+  skyvector: https://skyvector.com/airport/NZAA/Auckland-Airport
+  author: Jon Murchison
+  source: flightsim.to
+  date: 2020-09-16
+
+- name: Bathurst Harbour Airport
+  icao: YBHB
+  city: Auckland
+  country: New Zealand
+  region: APAC
+  url: https://flightsim.to/file/521/bathurst-harbour-airport
+  skyvector: 
+  author: Hoynedawg
+  source: flightsim.to
+  date: 2020-09-16
+
+- name: Bathurst Harbour Airport
+  icao: YBHB
+  city: Auckland
+  country: New Zealand
+  region: APAC
+  url: https://flightsim.to/file/521/bathurst-harbour-airport
+  skyvector: 
+  author: Hoynedawg
+  source: flightsim.to
+  date: 2020-09-16
+
+- name: Craiova Airport
+  icao: LRCV
+  city: Dolj
+  country: Romania
+  region: EMEA
+  url: https://flightsim.to/file/500/craiova-international-airport
+  skyvector: https://skyvector.com/airport/LRCV/Craiova-Airport
+  author: Hoynedawg
+  source: flightsim.to
+  date: 2020-09-15
+
+- name: Craiova Airport
+  icao: LRCV
+  city: Dolj
+  country: Romania
+  region: EMEA
+  url: https://flightsim.to/file/500/craiova-international-airport
+  skyvector: https://skyvector.com/airport/LRCV/Craiova-Airport
+  author: Hoynedawg
+  source: flightsim.to
+  date: 2020-09-15
+
+- name: George Valentin Bibescu airport
+  icao: LRPO
+  city: Dojl
+  country: Romania
+  region: EMEA
+  url: https://flightsim.to/file/498/george-valentin-bibescu-airport
+  skyvector: 
+  author: Lucian CRISTEA
+  source: flightsim.to
+  date: 2020-09-15
+
+- name: Mosjoen Kjaerstad Airport
+  icao: ENMS
+  city: Moskjoen
+  country: Norway
+  region: EMEA
+  url: https://flightsim.to/file/498/george-valentin-bibescu-airport
+  skyvector: https://skyvector.com/airport/ENMS/Mosjoen-Kjaerstad-Airport
+  author: eddrik84
+  source: flightsim.to
+  date: 2020-09-14
+
+- name: North Palm Beach County General Aviation Airport
+  icao: F45
+  city: West Palm Beach
+  country: USA
+  region: AMER
+  url: https://flightsim.to/file/476/f45-north-palm-beach-county-general-aviation-airport
+  skyvector: https://skyvector.com/airport/F45/North-Palm-Beach-County-General-Aviation-Airport
+  author: julysfire
+  source: flightsim.to
+  date: 2020-09-14
+
+- name: North Palm Beach County General Aviation Airport
+  icao: F45
+  city: West Palm Beach
+  country: USA
+  region: AMER
+  url: https://flightsim.to/file/476/f45-north-palm-beach-county-general-aviation-airport
+  skyvector: https://skyvector.com/airport/F45/North-Palm-Beach-County-General-Aviation-Airport
+  author: julysfire
+  source: flightsim.to
+  date: 2020-09-14
+
+- name: Svea Airport
+  icao: ENSA
+  city: Svalbard
+  country: Norway
+  region: EMEA
+  url: https://flightsim.to/file/435/ensa-svalbard-sveat
+  skyvector: https://skyvector.com/airport/ENSA/Svea-Airport
+  author: frkristi
+  source: flightsim.to
+  date: 2020-09-13
+
+- name: Barwon Heads/Geelong Airport
+  icao: YBRS
+  city: Victoria
+  country: Australia
+  region: APAC
+  url: https://flightsim.to/file/427/ybrs-barwon-heads-airport-australia
+  skyvector: https://skyvector.com/airport/YBRS/Barwon-Heads-Airport
+  author: JordanJames94
+  source: flightsim.to
+  date: 2020-09-13
+
+- name: Barwon Heads/Geelong Airport
+  icao: YBRS
+  city: Victoria
+  country: Australia
+  region: APAC
+  url: https://flightsim.to/file/427/ybrs-barwon-heads-airport-australia
+  skyvector: https://skyvector.com/airport/YBRS/Barwon-Heads-Airport
+  author: JordanJames94
+  source: flightsim.to
+  date: 2020-09-13
+
+- name: Plettenberg Huinghausen Airport
+  icao: EDKP
+  city: Plettenburg
+  country: Germany
+  region: EMEA
+  url: https://flightsim.to/file/424/edkp-airfield-scenery
+  skyvector: https://skyvector.com/airport/EDKP/Plettenberg-Huinghausen-Airport
+  author: Habbel
+  source: flightsim.to
+  date: 2020-09-13

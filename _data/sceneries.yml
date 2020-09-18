@@ -32,6 +32,7 @@
   url: https://reddit.com/r/FS2020Creation/comments/ij1dmn/atlantic_city_skyline_release_link_in_comments/
   author: mbiebel872
   source: reddit
+  date: 2020-09-16
 
 - name: Auckland Harbour Bridge
   type: landmark 
@@ -2150,3 +2151,73 @@
   author: sixdegreesofflight
   source: reddit 
   date: 2020-09-12
+
+- name: PortAventuraWorld
+  type: landmark 
+  city: Tarragona
+  country: Spain 
+  region: EMEA
+  url: https://www.reddit.com/r/FS2020Creation/comments/itnxpt/portaventuraworld/?utm_source=share&utm_medium=web2x&context=3
+  author: Droid_G
+  source: reddit 
+  date: 2020-09-16
+
+- name: Greater Toronto Area Enhancement
+  type: city 
+  city: Ontario
+  country: Canada 
+  region: AMER
+  url: https://www.reddit.com/r/FS2020Creation/comments/iu06rs/greater_toronto_area_enhancement_pack/?utm_source=share&utm_medium=web2x&context=3
+  author: moebiuscat
+  source: reddit 
+  date: 2020-09-16
+
+- name: Wright Brothers National Memorial
+  type: landmark 
+  city: Outer Banks
+  country: USA 
+  region: AMER
+  url: https://www.reddit.com/r/FS2020Creation/comments/itlu31/wright_brothers_national_memorial/?utm_source=share&utm_medium=web2x&context=3
+  author: trynaeat
+  source: reddit 
+  date: 2020-09-16
+
+- name: Mount Rushmore
+  type: landmark 
+  city: South Dakota
+  country: USA 
+  region: AMER
+  url: https://www.reddit.com/r/FS2020Creation/comments/itacay/mt_rushmore_for_msfs/?utm_source=share&utm_medium=web2x&context=3
+  author: BlntSmokeTrauma
+  source: reddit 
+  date: 2020-09-15
+
+- name: Lansing, MI & Michigan State University
+  type: city 
+  city: Michigan
+  country: USA 
+  region: AMER
+  url: https://www.reddit.com/r/FS2020Creation/comments/itczn2/release_lansing_michigan_michigan_state_university/?utm_source=share&utm_medium=web2x&context=3
+  author: msu2k
+  source: reddit 
+  date: 2020-09-15
+
+- name: Hard Rock Stadium
+  type: stadium 
+  city: Miami Gardens
+  country: USA 
+  region: AMER
+  url: https://www.reddit.com/r/FS2020Creation/comments/it560k/hard_rock_stadium_florida/?utm_source=share&utm_medium=web2x&context=3
+  author: Urbanhunterdva
+  source: reddit 
+  date: 2020-09-15
+
+- name: Christchurch Art Gallery
+  type: building 
+  city: Christchurch
+  country: Australia 
+  region: APAC
+  url: https://www.reddit.com/r/FS2020Creation/comments/it7bbp/christchurch_art_gallery_with_lod_release/?utm_source=share&utm_medium=web2x&context=3
+  author: spas3man
+  source: reddit 
+  date: 2020-09-15
