@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What are PAPI lights"
+title: "What are PAPI lights?"
 description: "In this article we shortly describe what PAPI light are"
 tags:
 - Flight Simulator 2020
