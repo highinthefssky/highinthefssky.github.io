@@ -2223,417 +2223,459 @@
   date: 2020-09-15
 
 -  name: Victoria University Pipi Tea & Law School 
+   type: landmark
    city: Wellington 
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/610/fixed-victoria-university-pipi-tea-law-school-wellington-new-zealand
    author: Calvin Guanawan 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
 -  name: Apple Park - Apple Inc HQ 
+   type: building
    city: Cupertino 
    country: United States 
    region: AMER 
    url: https://flightsim.to/file/618/apple-park-apple-inc-hq 
    author: Urbanhunterdva 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
 -  name: Christchurch 
+   type: city
    city: Christchurch 
    country: New Zealand 
    region: APAC 
    url: https://flightsim.to/file/620/christchurch-new-zealand 
    author: spas3man 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
 -  name: Deutsche Bank Park 
+   type: landmark
    city: Frankfurt am Main 
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/633/deutsche-bank-park-frankfurt-am-main 
    author: Kaestorfer 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
 -  name: Disneyland California 
-   city:  
+   type: landmark
+   city: Anaheim
    country: United States 
    region: AMER 
    url: https://flightsim.to/file/611/disneyland-california 
    author: Urbanhunterdva 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
 -  name: Domtoren 
+   type: l
    city: Utrecht 
    country: Netherlands 
    region: EMEA 
    url: https://flightsim.to/file/599/domtoren-utrecht 
    author: Dotmatrix 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
 -  name: Etihad Stadium 
+   type: stadium
    city: Manchester 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/614/etihad-stadium-manchester-city-england 
    author: Calvin Gunawan 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
 -  name: Girit Kalesi 
+   type: landmark
    city:  
    country: Greece 
    region: EMEA 
    url: https://flightsim.to/file/635/girit-kalesi 
    author: Aytunc YILDIZ 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
 -  name: Gothenburg City Landmarks 
+   type: landmark
    city: Gothenburg 
    country: Sweden 
    region: EMEA 
    url: https://flightsim.to/file/622/gothenburg-city-landmarks 
    author: reverentan 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
 -  name: Jet2 Hangar Manchester 
+   type: airport accessories
    city: Manchester 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/619/jet2-hangar-manchester 
    author: jacobcreates 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
 -  name: Knotts Berry Farm 
+   type: landmark
    city:  
    country: United States 
    region: EMEA 
    url: https://flightsim.to/file/612/knott-s-berry-farm 
    author: Urbanhunterdva 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
 -  name: Lyon Landmarks 
+   type: city
    city: Lyon 
    country: France 
    region: EMEA 
    url: https://flightsim.to/file/625/lyon-landmarks 
    author: vogel69 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
--  name: Melbourne Australia Cityscape Optimised 
+-  name: Melbourne
+   type: city 
    city: Melbourne 
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/609/melbourne-australia-cityscape-optimised 
    author: HammerheadH 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
--  name: Pistoia, Tuscany, Italy 
+-  name: Pistoia 
+   type: city
    city: Pistoia 
    country: Italy 
    region: EMEA 
    url: https://flightsim.to/file/615/pistoia-tuscany-italy 
    author: RazorRay 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
--  name: Wanda Metropolitano | Atletico de Madrid | Spain V1.0 
-   city: Wanda 
+-  name: Wanda Metropolitano
+   type: stadium 
+   city: Madrid 
    country: Spain 
    region: EMEA 
    url: https://flightsim.to/file/630/wanda-metropolitano 
    author: Rakoff 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
--  name: Washington DC Landmarks Pack 
+-  name: Washington DC Landmarks Pack
+   type: landmark 
    city: Washington 
    country: United States 
    region: EMEA 
    url: https://flightsim.to/file/631/washington-dc-landmarks-pack 
    author: srinivasman 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
--  name: Wellington City, New Zealand - Megapack (AIO)  
+-  name: Wellington City
+   type: city 
    city: Wellington 
    country: New Zealand 
    region: APAC 
    url: https://flightsim.to/file/617/wellington-city-new-zealand-megapack-aio 
    author: Calvin Gunawan 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
 
--  name: Worcester City UK 
+-  name: Worcester City
+   type: city
    city: Worcester 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/608/worcester-ciity-uk 
    author: deepspacedaz 
-   source:  
+   source: flightsim.to
    date: 2020-09-19
 
--  name: Funkturm Berlin 
-   city: Funkturm 
+-  name: Funkturm
+   type: landmark 
+   city: Berlin 
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/583/funkturm-berlin 
    author: Ape42 
-   source:  
+   source: flightsim.to
    date: 2020-09-18
 
 
--  name: Ipswich, United Kingdom Scenery Pack 
+-  name: Ipswich
+   type: city 
    city: Ipswich 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/589/ipswich-united-kingdom-scenery-pack 
    author: alextheepic228 
-   source:  
+   source: flightsim.to
    date: 2020-09-18
 
 
--  name: Las Palmas de G.C. v1.0 
+-  name: Las Palmas de G.C.
+   type: city
    city: Las Palmas
    country: Spain 
    region: APAC 
    url: https://flightsim.to/file/579/las-palmas-de-g-c-v1-0 
    author: Francisco J. Padilla 
-   source:  
+   source: flightsim.to
    date: 2020-09-18
 
 
 -  name: Leverkusen | Mini-Pack 
+   type: city
    city: Leverkusen 
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/593/leverkusen-mini-pack 
    author: Papierfranz 
-   source:  
+   source: flightsim.to
    date: 2020-09-18
 
 
 -  name: Auckland Pack 1.0 
-   city: Microsoft 
+   type: city
+   city: Auckland 
    country: New Zealand 
    region: APAC 
    url: https://flightsim.to/file/574/microsoft-flight-simulator-2020-auckland-pack-1-0 
    author: Sprout, MartyNz, Nethiuz, HybridNz 
-   source:  
+   source: flightsim.to
    date: 2020-09-18
 
 
--  name: San Siro Stadium (Milan) 
-   city: San 
+-  name: San Siro Stadium
+   type: stadium 
+   city: Milan
    country: Italy 
    region: EMEA 
    url: https://flightsim.to/file/587/san-siro-stadium-milan 
    author: Sergio Del Rosso 
-   source:  
+   source: flightsim.to
    date: 2020-09-18
 
 
 -  name: South Africa PTA Tower 
+   type: building
    city: South 
    country: South Africa 
    region: EMEA 
    url: https://flightsim.to/file/575/south-africa-pta-tower 
    author: JLR29 
-   source:  
+   source: flightsim.to
    date: 2020-09-18
 
 
--  name: Telecom Italia Tower (Milan) v1.1 
-   city: Telecom 
+-  name: Telecom Italia Tower 
+   type: building
+   city: Milan 
    country: Italy 
    region: EMEA 
    url: https://flightsim.to/file/588/telecom-italia-tower-milan-v1-1 
    author: Sergio Del Rosso 
-   source:  
+   source: flightsim.to
    date: 2020-09-18
 
 
--  name: Television Tower Berlin 
-   city: Television 
+-  name: Television Tower
+   type: building
+   city: Berlin 
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/585/television-tower-berlin 
    author: Ape42 
-   source:  
+   source: flightsim.to
    date: 2020-09-18
 
 
 -  name: Vienna Landmark Pack 
+   type: city
    city: Vienna 
    country: Austria 
    region: EMEA 
    url: https://flightsim.to/file/592/vienna-landmark-pack 
    author: Troglodytus 
-   source:  
+   source: flightsim.to
    date: 2020-09-18
 
 
 -  name: Doha City and Lite Airport 
+   type: city
    city: Doha 
    country: Qatar 
    region: EMEA 
    url: https://flightsim.to/file/547/doha-city-and-lite-airport 
    author: risuali and Chris B 
-   source:  
+   source: flightsim.to
    date: 2020-09-17
 
 
 -  name: Hanshin Koshien Stadium 
+   type: stadium
    city: Nishinomiya 
    country: Japan
    region: APAC
    url: https://flightsim.to/file/553/hanshin-koshien-stadium 
    author: taku0707 
-   source:  
+   source: flightsim.to
    date: 2020-09-17
 
 
 -  name: Hemel Hempstead Kodak & Riverside 
-   city: Hemel 
+   type: landmark
+   city: Hemel Hempstead
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/558/hemel-hempstead-kodak-riverside 
    author: TiJayFLY 
-   source:  
+   source: flightsim.to
    date: 2020-09-17
 
 
--  name: Mediaset Tower Milan V1.1 (light fix) 
-   city: Mediaset 
+-  name: Mediaset Tower
+   type: building
+   city: Milan
    country: Italy 
    region: EMEA 
    url: https://flightsim.to/file/561/mediaset-tower-milan-v1-1-light-fix 
    author: Blinn 
-   source:  
+   source: flightsim.to
    date: 2020-09-17
 
 
--  name: Mercedes Benz Arena Stuttgart 
-   city: Mercedes 
+-  name: Mercedes Benz Arena 
+   type: stadium
+   city: Stuttgart 
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/560/mercedes-benz-arena-stuttgart 
    author: Kaestorfer 
-   source:  
+   source: flightsim.to
    date: 2020-09-17
 
 
--  name: Montepulciano, Tuscany, Italy 
+-  name: Montepulciano 
+   type: city
    city: Montepulciano 
    country: Italy 
    region: EMEA 
    url: https://flightsim.to/file/549/montepulciano-tuscany-italy 
    author: RazorRay 
-   source:  
+   source: flightsim.to
    date: 2020-09-17
 
 
--  name: OWL Landmarks, NRW Germany 
+-  name: OWL Landmarks 
+   type: landmark
    city: OWL 
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/557/owl-landmarks-nrw-germany 
    author: sleepyt 
-   source:  
+   source: flightsim.to
    date: 2020-09-17
 
 -  name: Fort Boyard V1.0 
+   type: landmark
    city: Fort 
    country: France 
    region: EMEA 
    url: https://flightsim.to/file/534/fort-boyard-v1-0 
    author: Cpt Ivanov 
-   source:  
+   source: flightsim.to
    date: 2020-09-16
 
 
 -  name: Gerbrandy Tower 
+   type: landmark
    city: Gerbrandy 
    country: Netherlands 
    region: EMEA 
    url: https://flightsim.to/file/517/gerbrandy-tower 
    author: Dotmatrix 
-   source:  
+   source: flightsim.to
    date: 2020-09-16
 
 
--  name: Anzac Bridge Sydney (Hand-Crafted) 
-   city: Anzac 
+-  name: Anzac Bridge
+   type: landmark 
+   city: Sydney 
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/554/anzac-bridge-sydney-hand-crafted 
    author: vLegion 
-   source:  
+   source: flightsim.to
    date: 2020-09-17
 
 -  name: Cardiff Landmarks & Buildings 
+   type: city
    city: Cardiff 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/542/cardiff-landmarks-buildings 
    author: TiJayFLY (u/tjmortimer1989) 
-   source:  
+   source: flightsim.to
    date: 2020-09-16
 
 
 -  name: City Life Milan 
+   type: city
    city: City 
    country: Italy 
    region: EMEA 
    url: https://flightsim.to/file/530/city-life-milan 
    author: Sergio Del Rosso 
-   source:  
+   source: flightsim.to
    date: 2020-09-16
 
--  name: Jersey Lighthouses 
+-  name: Jersey Lighthouses
+   type: landmark 
    city: Jersey 
    country: United States 
-   region: EMEA 
+   region: AMER 
    url: https://flightsim.to/file/154/jersey-lighthouses 
    author: mbiebel872 
-   source:  
+   source: flightsim.to
    date: 2020-09-03
 
 -  name: DW Stadium 
+   type: stadium
    city: DW 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/172/dw-stadium 
    author: emokill00 
-   source:  
+   source: flightsim.to
    date: 2020-09-04
 
 -  name: Shell Fuel Trucks 
@@ -2642,842 +2684,962 @@
    region: 
    url: https://flightsim.to/file/52/shell-fuel-trucks 
    author: reap 
-   source:  
+   source: flightsim.to
    date: 2020-08-26
 
 
 -  name: Murrayfield Stadium 
+   type: stadium
    city: Edinburgh 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/91/edinburgh-murrayfield-stadium 
    author: SirLeinad4 
-   source:  
+   source: flightsim.to
    date: 2020-08-28
 
 -  name: Torre de Hercules lighthouse (A Coruña) 
+   type: landmark
    city: Torre 
    country: Spain 
-   region: APAC 
+   region: EMEA 
    url: https://flightsim.to/file/97/torre-de-hercules-lighthouse-a-coruna 
    author: g0per 
-   source:  
+   source: flightsim.to
    date: 2020-08-29
 
 -  name: Signal Iduna Park | Westfalenstadion  
+   type: stadion
    city: Signal 
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/140/signal-iduna-park-westfalenstadion 
    author: High_Frame_Rates 
-   source:  
+   source: flightsim.to
    date: 2020-09-02
 
 -  name: Moncton Downtown 
+   type: city
    city: Moncton 
    country: Canada 
    region: AMER
    url: https://flightsim.to/file/160/moncton-skyline 
    author: Snyperwulf 
-   source:  
+   source: flightsim.to
    date: 2020-09-04
 
--  name: Meteora Valley - Greece 
+-  name: Meteora Valley
+   type: landmark
    city: Meteora 
    country: Greece 
    region: EMEA 
    url: https://flightsim.to/file/177/meteora-valley-greece 
    author: NikPrist 
-   source:  
+   source: flightsim.to
    date: 2020-09-04
 
 -  name: Greater Toronto Area Enhancement Pack 
+   type: city
    city: Toronto 
    country: Canada 
-   region: EMEA 
+   region: AMER 
    url: https://flightsim.to/file/538/greater-toronto-area-enhancement-pack 
    author: romandesign 
-   source:  
+   source: flightsim.to
    date: 2020-09-16
 
 
 -  name: Messina, Sicily, Italy. The Harbour, Cathedral, Pylons of the Strait. Tindari Sanctuary.   
+   type: landmark
    city: Messina 
    country: Italy 
    region: EMEA 
    url: https://flightsim.to/file/539/messina-sicily-italy-the-harbour-cathedral-pylons-of-the-strait-tindari-sanctuary
    author: IronMinion 
-   source:  
+   source: flightsim.to
    date: 2020-09-16
 
 
 -  name: St James Park
+   type: landmark
    city: Newcastle
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/528/st-james-park-newcastle 
    author: mirabeau 
-   source:  
+   source: flightsim.to
    date: 2020-09-16
   
 -  name: Sydney Harbour Bridge (Hand-Crafted) + Lighting Improvement 
+   type: landmark   
    city: Sydney 
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/543/sydney-harbour-bridge-hand-crafted-lighting-improvement
    author: vLegion 
-   source:  
+   source: flightsim.to
    date: 2020-09-16
 
 
 -  name: Wright Brohers National Memorial 
-   city: Wright 
+   type: landmark
+   city: Kill Devil Hills 
    country: United States 
    region: EMEA 
    url: https://flightsim.to/file/520/wright-brohers-national-memorial 
    author: trynaeat 
-   source:  
+   source: flightsim.to
    date: 2020-09-16
 
 
--  name: Kyocera Dome 
+-  name: Kyocera Dome
+   type: landmark 
    city: Osaka 
    country: Japan 
    region: APAC 
    url: https://flightsim.to/file/490/kyocera-dome-osaka 
    author: taku0707 
-   source:  
+   source: flightsim.to
    date: 2020-09-15
 
 -  name: Arezzo
+   type: city
    city: Arezzo 
    country: Italy 
    region: EMEA 
    url: https://flightsim.to/file/495/arezzo-tuscany-italy 
    author: RazorRay 
-   source:  
+   source: flightsim.to
    date: 2020-09-15
 
 -  name: Auestadion/Kassel 
+   type: landmark   
    city: Auestadion 
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/505/auestadion-kassel 
    author: KingAxm3d 
-   source:  
+   source: flightsim.to
    date: 2020-09-15
 
 -  name: Australian Scenery Hand Crafted Pack 
-   city: Australian 
+   type: landmark
+   city:  
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/496/australian-scenery-hand-crafted-pack 
    author: vLegion 
-   source:  
+   source: flightsim.to
    date: 2020-09-15
 
 
--  name: Carowinds, Charlotte, NC  
-   city: Carowinds 
+-  name: Carowinds 
+   type: landmark   
+   city: Charlotte 
    country: United States 
-   region: EMEA 
+   region: AMER 
    url: https://flightsim.to/file/512/carowinds-charlotte-nc 
    author: CaptainGio 
-   source:  
+   source: flightsim.to
    date: 2020-09-15
 
 -  name: Ion Oblemenco Stadium 
+   type: stadium
    city: Ion 
    country: Romania 
    region: EMEA 
    url: https://flightsim.to/file/499/ion-oblemenco-stadium 
    author: Lucian CRISTEA 
-   source:  
+   source: flightsim.to
    date: 2020-09-15
 
 
 -  name: Königsplatz/Kassel 
+   type: landmark
    city: Kassel 
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/507/konigsplatz-kassel 
    author: KingAxm3d 
-   source:  
+   source: flightsim.to
    date: 2020-09-15
 
 -  name: Limoges train station, France 
+   type: landmark   
    city: Limoges 
    country: France 
    region: EMEA 
    url: https://flightsim.to/file/516/gare-de-limoges-limoges-train-station-fr 
    author: daftshark 
-   source:  
+   source: flightsim.to
    date: 2020-09-15
 
 -  name: Orangerie/Kassel 
+   type: landmark
    city: Kassel 
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/504/orangerie-kassel 
    author: KingAxm3d 
-   source:  
+   source: flightsim.to
    date: 2020-09-15
 
 -  name: Schloss Wilhelmshöhe/Kassel 
+   type: landmark
    city: Schloss 
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/508/schloss-wilhelmshohe-kassel 
    author: KingAxm3d 
-   source:  
+   source: flightsim.to
    date: 2020-09-15
 
 
 -  name: Torre Telefónica Santiago de Chile 
+   type: building
    city: Torre 
    country: Chile 
    region: AMER 
    url: https://flightsim.to/file/491/torre-telefonica-santiago-de-chile 
    author: rodacev30 
-   source:  
+   source: flightsim.to
    date: 2020-09-15
 
 -  name: Yokohama Gundam 
+   type: building   
    city: Yokohama 
    country: Japan 
    region: APAC 
    url: https://flightsim.to/file/513/yokohama-gundam 
    author: tipatat x scoopy 
-   source:  
+   source: flightsim.to
    date: 2020-09-15
 
 -  name: Air BP Fuel Trucks DRAG & DROP 
+   type: airport accessories
    city:
    country:  
    region: 
    url: https://flightsim.to/file/469/air-bp-australia-drag-drop 
    author: vLegion 
-   source:  
+   source: flightsim.to
    date: 2020-09-14
 
--  name: Ajinomoto Stadium 
+-  name: Ajinomoto Stadium
+   type: stadium
    city: Ajinomoto 
    country: Japan 
    region: APAC 
    url: https://flightsim.to/file/474/ajinomoto-stadium 
    author: motunabe 
-   source:  
+   source: flightsim.to
    date: 2020-09-14
 
 
--  name: Edgeley Park - Stockport County 
-   city: Edgeley 
+-  name: Edgeley Park 
+   type: stadium   
+   city: Stockport 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/472/edgeley-park-stockport-county 
    author: GZ07 
-   source:  
+   source: flightsim.to
    date: 2020-09-14
 
--  name: Le Havre - Landmarks V 1.1 
+-  name: Le Havre - Landmarks 
+   type: city
    city: Le Havre
    country: France 
    region: EMEA 
    url: https://flightsim.to/file/459/le-havre-landmarks-v-1-0 
    author: Cpt Ivanov 
-   source:  
+   source: flightsim.to
    date: 2020-09-14
 
 -  name: Melbourne CBD and Southbank - Cut Down 
+   type: landmark
    city: Melbourne 
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/457/melbourne-cbd-and-southbank-cut-down 
    author: Urbanhunterdva 
-   source:  
+   source: flightsim.to
    date: 2020-09-14
 
 
 -  name: Melbourne Parliament with St Patricks & Lutheran Trinity Church 
+   type: landmark
    city: Melbourne 
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/462/melbourne-parliament-with-st-patricks-lutheran-trinity-church
    author: SixDegrees 
-   source:  
+   source: flightsim.to
    date: 2020-09-14
 
 
--  name: Mole Antonelliana - Torino, Italy 
-   city: Mole 
+-  name: Mole Antonelliana 
+   type: landmark
+   city: Torino 
    country: Italy 
    region: EMEA 
    url: https://flightsim.to/file/479/mole-antonelliana-torino-italy 
    author: simog 
-   source:  
+   source: flightsim.to
    date: 2020-09-14
 
 -  name: Mont St Michel - Lights on 
-   city: Mont 
+   type: landmark
+   city: Mont St Michel
    country: France 
    region: EMEA 
    url: https://flightsim.to/file/470/mont-st-michel-lights-on 
    author: Cpt Ivanov 
-   source:  
+   source: flightsim.to
    date: 2020-09-14
 
 
--  name: Santiago de Compostela, Galicia, Spain 
-   city: Santiago 
+-  name: Santiago de Compostela 
+   type: landmark
+   city: Galicia 
    country: Spain 
    region: EMEA
    url: https://flightsim.to/file/481/santiago-de-compostela-galicia-spain 
    author: RazorRay and Jim 
-   source:  
+   source: flightsim.to
    date: 2020-09-14
 
--  name: AirBP and ExxonMobil Fuel Trucks 
-   city: AirBP 
-   country: New Zealand 
-   region: APAC 
-   url: https://flightsim.to/file/465/air-bp-fuel-trucks 
-   author: Reaver 
-   source:  
-   date: 2020-09-14
-
--  name: Bruges, Belgium landmarks 
+-  name: Bruges
+   type: city
    city: Bruges 
    country: Belgium 
    region: EMEA 
    url: https://flightsim.to/file/486/bruges-belgium-landmarks 
    author: jonasbaine2 
-   source:  
+   source: flightsim.to
    date: 2020-09-14
 
--  name: Monteriggioni 1.0 
+-  name: Monteriggioni
+   type: city
    city: Monteriggioni 
    country: Italy 
    region: EMEA 
    url: https://flightsim.to/file/461/monteriggioni-beta 
    author: Mauro Melone & IlParaCapo 
-   source:  
+   source: flightsim.to
    date: 2020-09-14
 
--  name: Kensington Palace  
-   city: Kensington 
+-  name: Kensington Palace 
+   type: landmark 
+   city: London 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/447/kensington-palace 
    author: Tackleberry1978 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
--  name: Chadstone Shopping Centre - Melbourne 
-   city: Chadstone 
+-  name: Chadstone Shopping Centre
+   type: landmark 
+   city: Melbourne 
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/434/chadstone-shopping-centre-melbourne 
    author: Urbanhunterdva 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
--  name: Doncaster Shopping Centre - Melbourne 
-   city: Doncaster 
+-  name: Doncaster Shopping Centre 
+   type: landmark
+   city: Melbourne 
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/417/doncaster-shopping-centre-melbourne 
    author: Urbanhunterdva 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
--  name: Harukas Osaka  
+-  name: Harukas Osaka 
+   type: landmark 
    city: Harukas 
    country: Japan 
    region: APAC 
    url: https://flightsim.to/file/425/harukas-osaka 
    author: taku0707 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
--  name: Le Pont de Tancarville - Tancarville Bridge 1.0 Public Beta 
-   city: Le 
+-  name: Le Pont de Tancarville
+   type: landmark
+   city: Tancarville 
    country: France 
    region: EMEA 
    url: https://flightsim.to/file/442/le-pont-de-tancarville-tancarville-bridge-1-0-public-beta
    author: Cpt Ivanov 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
--  name: Olympic Park - Melbourne 
-   city: Olympic 
+-  name: Olympic Park
+   type: landmark
+   city: Melbourne 
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/415/olympic-park-melbourne 
    author: Urbanhunterdva 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
 
--  name: Pisa, Tuscany, Italy 
+-  name: Pisa
+   type: city
    city: Pisa 
    country: Italy 
    region: EMEA 
    url: https://flightsim.to/file/423/pisa-tuscany-italy 
    author: RazorRay 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
 
--  name: Royal Childrens Hospital - Melbourne 
-   city: Royal 
+-  name: Royal Childrens Hospital 
+   type: landmark
+   city: Melbourne 
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/416/royal-children-s-hospital-melbourne 
    author: Urbanhunterdva 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
--  name: Southland Shopping Centre - Melbourne 
-   city: Southland 
+-  name: Southland Shopping Centre
+   type: landmark
+   city: Melbourne 
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/433/southland-shopping-centre-melbourne 
    author: Urbanhunterdva 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
 
 -  name: The tower of the sun 
-   city: The 
+   type: building
+   city: Osaka 
    country: Japan 
    region: APAC 
    url: https://flightsim.to/file/426/the-tower-of-the-sun 
    author: taku0707 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
--  name: Tsutenkaku Tower Osaka 
-   city: Tsutenkaku 
+-  name: Tsutenkaku Tower
+   type: building
+   city: Osaka 
    country: Japan 
    region: APAC 
    url: https://flightsim.to/file/445/tsutenkaku-tower-osaka 
    author: MaikDj And AdrianRLine 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
 
 -  name: Barton Scenery 
+   type: city
    city: Barton 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/443/barton-scenery 
    author: emokill00 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
 
 -  name: Le Pont de Normandie
+   type: landmark
    city: Normandie
    country: France 
    region: EMEA 
    url: https://flightsim.to/file/431/le-pont-de-normandie-normandy-bridge-1-0-public-beta
    author: Cpt Ivanov 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
 
 -  name: Dresden Television Tower 
+   type: labuildingndmark
    city: Dresden 
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/432/dresden-television-tower 
    author: FabeCraft 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
 -  name: Book Tower
+   type: building
    city: Ghent 
    country: Belgium 
    region: EMEA 
    url: https://flightsim.to/file/444/book-tower-ghent-belgium 
    author: jonasbaine2 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
 
--  name: Cathedrals and churches in Ghent, Belgium 
+-  name: Cathedrals and churches 
+   type: building
    city: Ghent 
    country: Belgium 
    region: EMEA 
    url: https://flightsim.to/file/411/cathedrals-and-churches-in-ghent-belgium 
    author: jonasbaine2 
-   source:  
+   source: flightsim.to
    date: 2020-09-13
 
 
 -  name: Buckingham Palace 
+   type: landmark
    city: London 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/407/buckingham-palace 
    author: Tackleberry1978 
-   source:  
+   source: flightsim.to
    date: 2020-09-12
 
 -  name: Albert Park Lake Upgrade 
+   type: landmark
    city: Albert 
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/396/albert-park-lake-upgrade 
    author: Urbanhunterdva 
-   source:  
+   source: flightsim.to
    date: 2020-09-12
 
 -  name: Canterbury Cathedral 
+   type: landmark
    city: London 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/376/canterbury-cathedral 
    author: Tackleberry1978 
-   source:  
+   source: flightsim.to
    date: 2020-09-11
 
 -  name: Bonn | Mini-Pack 
+   type: city
    city: Bonn 
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/380/bonn-mini-pack 
    author: Papierfranz 
-   source:  
+   source: flightsim.to
    date: 2020-09-11
 
 -  name: Texas A&M Enhanced 
+   type: landmark
    city: Texas 
    country: United States 
    region: AMER 
    url: https://flightsim.to/file/368/texas-a-m-enhanced 
    author: mbiebel872 
-   source:  
+   source: flightsim.to
    date: 2020-09-11
 
--  name: Casablanca twin center  
+-  name: Casablanca twin center
+   type: landmark  
    city: Casablanca 
    country: Morocco 
    region: EMEA 
    url: https://flightsim.to/file/355/casablanca-twin-center 
    author: nas 
-   source:  
+   source: flightsim.to
    date: 2020-09-10
 
 
--  name: Himejijo 
+-  name: Himejijo
+   type: city 
    city: Himejijo 
    country: Japan 
    region: APAC 
    url: https://flightsim.to/file/350/himejijo 
    author: waruiman 
-   source:  
+   source: flightsim.to
    date: 2020-09-10
 
 -  name: NAC Breda 
-   city: NAC 
+   type: stadium
+   city: Breda 
    country: Netherlands 
    region: EMEA 
    url: https://flightsim.to/file/330/nac-breda 
    author: Dotmatrix 
-   source:  
+   source: flightsim.to
    date: 2020-09-10
 
 -  name: Stadionul Dr.Constantin Radulescu - Cluj-Napoca scenery 
-   city: Stadionul 
+   type: stadium
+   city: Cluj-Napoca
    country: Romania 
    region: EMEA 
    url: https://flightsim.to/file/346/stadionul-dr-constantin-radulescu-cluj-napoca-scenery
    author: HIPGames 
-   source:  
+   source: flightsim.to
    date: 2020-09-10
 
--  name: Uddevallabron - the Uddevalla Bridge 
+-  name: Uddevallabron 
+   type: landmark
    city: Uddevallabron 
    country: Sweden 
    region: EMEA 
    url: https://flightsim.to/file/356/uddevallabron-the-uddevalla-bridge 
    author: smekre 
-   source:  
+   source: flightsim.to
    date: 2020-09-10
 
 
--  name: Westgate Bridge (Melbourne) Handcrafted 
-   city: Westgate 
+-  name: Westgate Bridge 
+   type: landmark
+   city: Melbourne 
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/334/westgate-bridge-melbourne-handcrafted 
    author: vLegion 
-   source:  
+   source: flightsim.to
    date: 2020-09-10
 
--  name: Te Papa Museum (Wellington, New Zealand) 
-   city: Te 
+-  name: Te Papa Museum 
+   type: landmark
+   city: Wellington 
    country: New Zealand 
    region: APAC 
    url: https://flightsim.to/file/343/te-papa-museum-wellington-new-zealand 
    author: Calvin Gunawan 
-   source:  
+   source: flightsim.to
    date: 2020-09-10
 
--  name: Eureka Skydeck (Melbourne) 
-   city: Eureka 
+-  name: Eureka Skydeck
+   type: landmark
+   city: Melbourne 
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/332/eureka-skydeck-melbourne 
    author: vLegion 
-   source:  
+   source: flightsim.to
    date: 2020-09-10
 
--  name: Amsterdam Tower + Centraal Station  
+-  name: Amsterdam Tower + Centraal Station 
+   type: landmark 
    city: Amsterdam 
    country: Netherlands 
    region: EMEA 
    url: https://flightsim.to/file/318/amsterdam-tower-centraal-station 
    author: master414 
-   source:  
+   source: flightsim.to
    date: 2020-09-09
 
 -  name: San Mamés 
+   type: city
    city: San Mamés 
    country: Spain 
    region: EMEA 
    url: https://flightsim.to/file/180/san-mames 
    author: SBGKarlinho 
-   source:  
+   source: flightsim.to
    date: 2020-09-05
 
 -  name: QE2 Bridge Dartford Crossing 
+   type: landmark
    city: QE 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/213/qe2-bridge-dartford-crossing 
    author: Tackleberry1978 
-   source:  
+   source: flightsim.to
    date: 2020-09-06
 
 -  name: Matterhorn Mountain  
+   type: landmark
    city: Matterhorn 
    country: Switzerland 
    region: EMEA 
    url: https://flightsim.to/file/197/matterhorn-mountain 
    author: NikPrist 
-   source:  
+   source: flightsim.to
    date: 2020-09-06
 
--  name: Benalmadena Rework - Spain 
+-  name: Benalmadena Rework
+   type: landmark
    city: Benalmadena 
    country: Spain 
    region: APAC 
    url: https://flightsim.to/file/236/benalmadena-antenna 
    author: kafkaphoenix 
-   source:  
+   source: flightsim.to
    date: 2020-09-07
 
 
 -  name: River Thames water fix.(ver2.2) 
-   city: River 
+   type: landmark
+   city: London 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/218/river-thames-water-fix-ver-1 
    author: DOR RAGER 
-   source:  
+   source: flightsim.to
    date: 2020-09-07
 
--  name: St Kilda Luna Park 
-   city: St 
+-  name: Luna Park 
+   type: landmark
+   city: St Kilda
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/224/st-kilda-lunar-park 
    author: SixDegrees 
-   source:  
+   source: flightsim.to
    date: 2020-09-07
 
 
 -  name: Frankfurt City-Package (WIP, more objects soon) 
+   type: city
    city: Frankfurt 
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/233/frankfurt-city-package-wip-more-objects-soon 
    author: KSDesignStudio 
-   source:  
+   source: flightsim.to
    date: 2020-09-07
 
--  name: Eleda Stadion - Malmö 
-   city: Eleda 
+-  name: Eleda Stadion
+   type: stadium
+   city: Malmö
    country: Sweden 
    region: EMEA 
    url: https://flightsim.to/file/235/eleda-stadion-malmo 
    author: Oggeley 
-   source:  
+   source: flightsim.to
    date: 2020-09-07
 
 -  name: Climatehouse
+   type: building
    city: Bremerhaven
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/228/climatehouse-bremerhaven 
    author: KSDesignStudio 
-   source:  
+   source: flightsim.to
    date: 2020-09-07
 
 -  name: Cathedral of Freiburg
+   type: landmark
    city: Freiburg
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/225/cathedral-of-freiburg-germany 
    author: maggiforever 
-   source:  
+   source: flightsim.to
    date: 2020-09-07
 
 -  name: Sofia Landmarks 
+   type: landmark
    city: Sofia 
    country: Bulgaria 
    region: EMEA 
    url: https://flightsim.to/file/265/sofia-landmarks 
    author: ChrisEDDF 
-   source:  
+   source: flightsim.to
    date: 2020-09-08
 
 -  name: Kennedy Space Center 
-   city: Kennedy 
+   type: landmark
+   city: Cape Canaveral 
    country: United States 
    region: EMEA 
    url: https://flightsim.to/file/246/kennedy-space-center 
    author: Acktu 
-   source:  
+   source: flightsim.to
    date: 2020-09-08
 
 -  name: Cruise Ships - Palma de Mallorca Harbour V1.1 
+   type: landmark
    city: Palma de Mallorca 
    country: Spain 
    region: APAC 
    url: https://flightsim.to/file/263/cruise-ships-palma-de-mallorca-harbour 
    author: Lucky1806 
-   source:  
+   source: flightsim.to
    date: 2020-09-08
 
 
--  name: Tamar Bridge England 
+-  name: Tamar Bridge England
+   type: landmark 
    city: Tamar 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/280/tamar-bridge-england 
    author: Tackleberry1978 
-   source:  
+   source: flightsim.to
    date: 2020-09-08
 
--  name: Blackpool UK landmarks 
+-  name: Blackpool UK landmarks
+   type: landmark 
    city: Blackpool 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/279/blackpool-uk-landmarks 
    author: utd4life12 
-   source:  
+   source: flightsim.to
    date: 2020-09-08
 
 -  name: Wembley Arena
+   type: stadium
    city: London 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/270/wembley-arena-london-uk 
    author: GhostofSatan 
-   source:  
+   source: flightsim.to
    date: 2020-09-08
 
--  name: Trogir, Croatia 
+-  name: Trogir 
+   type: city
    city: Trogir 
    country: Croatia 
    region: EMEA 
    url: https://flightsim.to/file/282/trogir-croatia 
    author: utd4life12 
-   source:  
+   source: flightsim.to
    date: 2020-09-08
 
 -  name: Ratcliffe Power Station East Midlands 
+   type: landmark
    city: Ratcliffe 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/278/ratcliffe-power-station-east-midlands 
    author: utd4life12 
-   source:  
+   source: flightsim.to
    date: 2020-09-08
 
 -  name: Osaka Castle 
+   type: landmark
    city: Osaka 
    country: Japan 
    region: APAC 
    url: https://flightsim.to/file/247/osaka-castle 
    author: RazorRay 
-   source:  
+   source: flightsim.to
    date: 2020-09-08
 
 
 -  name: Palma Cathedral 
+   type: landmark
    city: Palma de Mallorca
    country: Spain 
    region: EMEA 
    url: https://flightsim.to/file/277/palma-cathedral-palma-de-mallorca-spain 
    author: Lucky1806 
-   source:  
+   source: flightsim.to
    date: 2020-09-08
 
 -  name: National Exhibition Centre
+   type: building
    city: Birmingham 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/264/national-exhibition-centre-united-kingdom 
    author: FlyingTheston 
-   source:  
+   source: flightsim.to
    date: 2020-09-08
 
--  name: Melbourne Shrine 
+-  name: Melbourne Shrine
+   type: landmark 
    city: Melbourne 
    country: Australia 
    region: APAC 
    url: https://flightsim.to/file/245/melbourne-shrine 
    author: SixDegrees 
-   source:  
+   source: flightsim.to
    date: 2020-09-08
 
 -  name: Costanera Center Santiago de Chile 
+   type: landmark
    city: Costanera 
    country: Chile 
    region: AMER 
    url: https://flightsim.to/file/283/costanera-center-santiago-de-chile 
    author: rodacev30 
-   source:  
+   source: flightsim.to
    date: 2020-09-08
 
 -  name: Aston Villa Stadium - Villa Park (and surrounding buildings) 
+   type: stadium
    city: Aston 
    country: United Kingdom 
    region: EMEA 
    url: https://flightsim.to/file/267/aston-villa-stadium-villa-park-and-surrounding-buildings
    author: FlyingTheston 
-   source:  
+   source: flightsim.to
    date: 2020-09-08
 
 -  name: Köln (Cologne) | Mini-Pack 
+   type: city
    city: Köln 
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/316/cologne-koln-mini-pack 
    author: Papierfranz 
-   source:  
+   source: flightsim.to
    date: 2020-09-09
 
 
 -  name: Schwarzwald-Stadion
+   type: stadium
    city: Freiburg
    country: Germany 
    region: EMEA 
    url: https://flightsim.to/file/257/schwarzwald-stadion-freiburg-germany 
    author: Lucky1806 
-   source:  
+   source: flightsim.to
    date: 2020-09-08
+
+-  name: Alcatraz Island
+   type: landmark
+   city: San Fransisco
+   country: United States 
+   region: AMER
+   url: https://flightsim.to/file/639/alcatraz-island
+   author: Urbanhunterdva 
+   source: flightsim.to
+   date: 2020-09-20
+
+-  name: Avignon city center
+   type: city
+   city: Avignon
+   country: France
+   region: EMEA
+   url: https://flightsim.to/file/655/avignon-city-center
+   author: wtacod30650 
+   source: flightsim.to
+   date: 2020-09-20
+
+-  name: Limoges
+   type: city
+   city: Limoges
+   country: France
+   region: EMEA
+   url: https://flightsim.to/file/656/limoges-france-landmarks
+   author: daftshark 
+   source: flightsim.to
+   date: 2020-09-20
+
+-  name: Penshaw Monument
+   type: landmark
+   city: Sunderland
+   country: United Kingdom
+   region: EMEA
+   url: https://flightsim.to/file/638/penshaw-monument
+   author: Roblaunch 
+   source: flightsim.to
+   date: 2020-09-20
