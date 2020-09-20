@@ -795,10 +795,10 @@
   skyvector: https://skyvector.com/airport/DLL/Baraboo-Wisconsin-Dells-Regional-Airport
   author: CaptainVTOL
 
-- name: Monterey Regional Airport, Monterey, USA
+- name: Monterey Regional Airport
   icao: KMRY
   city: Monterey
-  country: USA
+  country: United States
   region: AMER
   url: https://www.nexusmods.com/microsoftflightsimulator/mods/82
   skyvector: https://skyvector.com/airport/MRY/Monterey-Regional-Airport
