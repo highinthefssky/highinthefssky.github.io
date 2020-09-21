@@ -888,3 +888,36 @@
   skyvector: 
   author: mattgarner
   source: reddit
+
+-  name: Aéroport Aulnat
+   icao: LFLC 
+   city: Clermont-Ferrand 
+   country: France 
+   region: EMEA 
+   url: https://flightsim.to/file/683/aeroport-aulnat-clermont-ferrand-auvergne-lflc
+   skyvector: https://skyvector.com/airport/LFLC/Clermont-Ferrand-Airport
+   author: PotDeMiel 
+   source: flightsim.to
+   date: 2020-09-21
+
+-  name: Thule Air Base Airport	
+   icao: BGTL 
+   city:  
+   country: Greenland 
+   region: AMER
+   url: https://flightsim.to/file/666/bgtl-thule-afb-greenland
+   skyvector: https://skyvector.com/airport/BGTL/Thule-Air-Base-Airport
+   author: superspud 
+   source: flightsim.to
+   date: 2020-09-21
+
+-  name: Flugtplatz Rotenburg
+   icao: EDXQ 
+   city:  Rotenburg
+   country: Germany 
+   region: EMEA
+   url: https://flightsim.to/file/665/edxq-flugtplatz-rotenburg
+   skyvector: https://skyvector.com/airport/EDXQ/Rotenburg-Wumme-Airport
+   author: kingma1999 
+   source: flightsim.to
+   date: 2020-09-21
