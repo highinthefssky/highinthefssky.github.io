@@ -16,6 +16,7 @@ tags:
 - FS2020 liveries
 category: tutorials
 permalink: /MSFS2020-Latest-Added-Week-38/
+date:  2020-09-21
 ---
 
 Below an overview of the addons released in week 38:
