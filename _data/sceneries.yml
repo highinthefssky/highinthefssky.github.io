@@ -3643,3 +3643,63 @@
    author: Roblaunch 
    source: flightsim.to
    date: 2020-09-20
+
+-  name: Christchurch & Poole Landmarks Pack	
+   type: city
+   city: Bournemouth
+   country: United Kingdom
+   region: EMEA
+   url: https://flightsim.to/file/678/bournemouth-christchurch-poole-landmarks-pack
+   author: Th3Scop3DJ - Kevin Kiessig	 
+   source: flightsim.to
+   date: 2020-09-21  
+
+-  name: Cluj-Napoca Landmarks
+   type: city
+   city: Cluj-Napoca
+   country: Romamia
+   region: EMEA
+   url: https://flightsim.to/file/670/cluj-napoca-landmarks-pack-version-1-0
+   author: HIPGames	 
+   source: flightsim.to
+   date: 2020-09-21
+
+-  name: Plaza De Toros
+   type: stadium
+   city: Granada
+   country: Spain
+   region: EMEA
+   url: https://flightsim.to/file/662/plaza-de-toros-granada
+   author: Jeppeson2001	 
+   source: flightsim.to
+   date: 2020-09-21
+
+-  name: Riyadh Landmarks
+   type: landmark
+   city: Riyadh
+   country: Saudi Arabia
+   region: EMEA
+   url: https://flightsim.to/file/673/riyadh-landmarks
+   author: EmeraldJoker
+   source: flightsim.to
+   date: 2020-09-21
+
+-  name: Turin Landmarks
+   type: landmark
+   city: Turn
+   country: Italy
+   region: EMEA
+   url: https://flightsim.to/file/675/turin-landmarks-italy
+   author: bongio94	 
+   source: flightsim.to
+   date: 2020-09-21
+
+-  name: Royal Netherlands Airforce HQ Tower (RNLAF) 
+   type: landmark
+   city: Breda
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/684/royal-netherlands-airforce-hq-tower-rnlaf-breda
+   author: AxeV	 
+   source: flightsim.to
+   date: 2020-09-21
