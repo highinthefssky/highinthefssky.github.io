@@ -921,3 +921,91 @@
    author: kingma1999 
    source: flightsim.to
    date: 2020-09-21
+
+-  name: Ballószög Airport
+   icao: LHBA 
+   city:  Ballószög
+   country: Hungary 
+   region: EMEA
+   url: https://flightsim.to/file/719/lhfc-bodmer-felcsut-repuloter
+   skyvector: 
+   author: matemate 
+   source: flightsim.to
+   date: 2020-09-22
+
+-  name: Bodmér-Felcsút Repülőtér	
+   icao: LHFC 
+   city:  Bodmér-Felcsút
+   country: Hungary 
+   region: EMEA
+   url: https://flightsim.to/file/703/lhba-balloszog-airport
+   skyvector: 
+   author: matemate 
+   source: flightsim.to
+   date: 2020-09-22
+
+-  name: Avalon Airport (YMAV) WIP
+   icao: YMAV 
+   city:  Avalan
+   country: Australia
+   region: APAC
+   url: https://flightsim.to/file/693/avalon-airport-ymav
+   skyvector: https://skyvector.com/airport/YMAV/Avalon-Airport 
+   author: Hoynedawg 
+   source: flightsim.to
+   date: 2020-09-22
+
+-  name: Avalon Airport (YMAV) WIP
+   icao: YMAV 
+   city:  Avalan
+   country: Australia
+   region: APAC
+   url: https://flightsim.to/file/693/avalon-airport-ymav
+   skyvector: https://skyvector.com/airport/YMAV/Avalon-Airport 
+   author: Hoynedawg 
+   source: flightsim.to
+   date: 2020-09-22
+
+-  name: Heubach Airport
+   icao: EDTH 
+   city:  Heubach
+   country: Germany
+   region: EMEA
+   url: https://flightsim.to/file/715/edth-heubach-germany
+   skyvector: https://skyvector.com/airport/EDTH/Heubach-Airport
+   author: br34ker 
+   source: flightsim.to
+   date: 2020-09-22
+
+-  name: RAF Fairford	
+   icao: EGVA 
+   city:  Fairford
+   country: United Kingdom
+   region: EMEA
+   url: https://flightsim.to/file/706/egva-raf-fairford-uk
+   skyvector: https://skyvector.com/airport/EGVA/Fairford-Airport
+   author: br34ker 
+   source: flightsim.to
+   date: 2020-09-22
+
+-  name: Aeroporto Internacional Pinto Martins - Fortaleza/Ceara
+   icao: SBFZ 
+   city:  Ceara
+   country: Brasil
+   region: AMER
+   url: https://flightsim.to/file/692/sbfz-aeroporto-internacional-pinto-martins
+   skyvector: https://skyvector.com/airport/SBFZ/Fortaleza-Pinto-Martins-Airport
+   author: Carlos Assis Filho 
+   source: flightsim.to
+   date: 2020-09-22
+
+-  name: Aeroporto Internacional Governador Aluizio Alves
+   icao: SBSG 
+   city:  Sao Goncalo
+   country: Brasil
+   region: AMER
+   url: https://flightsim.to/file/716/sbsg-aeroporto-internacional-governador-aluizio-alves-sao-goncalo-rn-better-night-view
+   skyvector: https://skyvector.com/airport/SBSG/Sao-Goncalo-Do-Amarante-Airport
+   author: Carlos Assis Filho 
+   source: flightsim.to
+   date: 2020-09-22
