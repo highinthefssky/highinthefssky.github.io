@@ -3533,7 +3533,7 @@
    date: 2020-09-08
 
 
--  name: Palma Cathedral 
+-  name: Palma de Mallorca Cathedral 
    type: landmark
    city: Palma de Mallorca
    country: Spain 
@@ -3863,3 +3863,23 @@
    author: Gobby	 
    source: flightsim.to
    date: 2020-09-22
+
+-  name: Corinth Canal
+   type: landmark
+   city: Peloponnese
+   country: Greece
+   region: EMEA
+   url: https://www.reddit.com/r/FS2020Creation/comments/iwcdyy/release_corinth_canal_greece_fixes_improvements/?utm_source=share&utm_medium=web2x&context=3
+   author: nikpristjohnson	 
+   source: reddit
+   date: 2020-09-20
+
+-  name: Kings Park Stadium
+   type: stadium
+   city: Durban
+   country: South Africa
+   region: EMEA
+   url: https://flightsim.to/file/749/south-africa-kingspark
+   author: flightsim.to	 
+   source: reddit
+   date: 2020-09-23

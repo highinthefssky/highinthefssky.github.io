@@ -1009,3 +1009,14 @@
    author: Carlos Assis Filho 
    source: flightsim.to
    date: 2020-09-22
+
+-  name: Kai Tak Airport International Airport
+   icao: VHHX 
+   city:  
+   country: Hong Kong
+   region: APAC
+   url: https://www.reddit.com/r/FS2020Creation/comments/iw4f1f/release_vhhx_kai_tak_airport_hong_kong/?utm_source=share&utm_medium=web2x&context=3
+   skyvector: 
+   author: blessedbt 
+   source: reddit
+   date: 2020-09-20
