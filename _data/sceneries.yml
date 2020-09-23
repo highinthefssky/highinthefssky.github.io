@@ -3883,3 +3883,114 @@
    author: flightsim.to	 
    source: reddit
    date: 2020-09-23
+
+-  name: City of Teotihuacán
+   type: landmark
+   city: Teotihuacán
+   country: Mexico
+   region: AMER
+   url: https://flightsim.to/file/731/city-of-teotihuacan
+   author: RiverSkyHigh
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: Ikea Headquarter Netherlands	
+   type: landmark
+   city: Delft
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/756/delft-ikea-headquarter-netherlands
+   author: Geraldar98
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: Nieuwe Kerk & Stadshuis
+   type: landmark
+   city: Delft
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/753/delft-nieuwe-kerk-stadshuis
+   author: Geraldar98
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: NS & City Hall	
+   type: landmark
+   city: Delft
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/755/delft-ns-city-hall
+   author: Geraldar98
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: Old Jan Church
+   type: landmark
+   city: Delft
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/754/delft-old-jan-church
+   author: Geraldar98
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: TU Faculty	
+   type: landmark
+   city: Delft
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/757/delft-tu-faculty
+   author: Geraldar98
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: Glasgow Royal Infirmary, Necropolis and tennents brewery
+   type: landmark
+   city: Glasgow
+   country: United Kingdom
+   region: EMEA
+   url: https://flightsim.to/file/729/glasgow-royal-infirmary-necropolis-and-tennents-brewery
+   author: MostlyRandom
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: Honfleur Landmarks
+   type: city
+   city: Honfleur
+   country: France
+   region: EMEA
+   url: https://flightsim.to/file/762/honfleur-landmarks-france
+   author: Jgodagno
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: Orwell Bridge
+   type: landmark
+   city: 
+   country: United Kingdom
+   region: EMEA
+   url: https://flightsim.to/file/742/orwell-more-coming-soon
+   author: Copvampire
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: Santa Cruz de Tenerife	
+   type: city
+   city: Tenerife
+   country: Spain
+   region: EMEA
+   url: https://flightsim.to/file/763/santa-cruz-de-tenerife
+   author: Francisco J. Padilla	
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: Tinshill BT Tower near Leeds/Bradford Airport (EGNM)
+   type: landmark
+   city: Leeds
+   country: United Kingdom
+   region: EMEA
+   url: https://flightsim.to/file/733/tinshill-bt-tower-near-leeds-bradford-airport-egnm
+   author: Jeppeson2001
+   source: flightsim.to
+   date: 2020-09-23
+   
