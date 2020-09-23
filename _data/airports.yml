@@ -1020,3 +1020,126 @@
    author: blessedbt 
    source: reddit
    date: 2020-09-20
+
+-  name: Gyõrszentiván-Bõny Airport
+   icao: LHBY 
+   city: Győr
+   country: Hungary
+   region: EMEA
+   url: https://flightsim.to/file/752/lhby-gyorszentivan-bony-airport
+   skyvector: 
+   author: matemate 
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: Gödöllő Airport
+   icao: LHGD 
+   city: Budapest 
+   country: Hungary
+   region: EMEA
+   url: https://flightsim.to/file/740/lhgd-godollo-airport
+   skyvector: 
+   author: matemate 
+   source: flightsim.to
+   date: 2020-09-23 
+
+-  name: Narsarsuaq	
+   icao: BGBW 
+   city: Narsarsuaq
+   country: Greenland
+   region: AMER
+   url: https://flightsim.to/file/734/bgbw-narsarsuaq-greenland
+   skyvector: https://skyvector.com/airport/BGBW/Narsarsuaq-Airport
+   author: thedude 
+   source: flightsim.to
+   date: 2020-09-23    
+
+-  name: Flagstaff Pulliam Airport
+   icao: KFLG 
+   city: Flagstaff
+   country: United States
+   region: AMER
+   url: https://flightsim.to/file/746/flagstaff-pulliam-airport-kflg
+   skyvector: https://skyvector.com/airport/FLG/Flagstaff-Pulliam-Airport
+   author: JustOkayPilot 
+   source: flightsim.to
+   date: 2020-09-23 
+
+-  name: Grand Canyon National Park Airport
+   icao: KGCN 
+   city: Grand Canyon
+   country: United States
+   region: AMER
+   url: https://flightsim.to/file/759/grand-canyon-national-park-airport-kgcn
+   skyvector: https://skyvector.com/airport/GCN/Grand-Canyon-National-Park-Airport
+   author: JustOkayPilot 
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: Jim Kelly Field
+   icao: KLXN
+   city: Lexington
+   country: United States
+   region: AMER
+   url: https://flightsim.to/file/751/klxn-jim-kelly-field-lexington-nebraska
+   skyvector: https://skyvector.com/airport/LXN/Jim-Kelly-Field-Airport
+   author: JustOkayPilot 
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: Payson Airport
+   icao: KPAN
+   city: Payson
+   country: United States
+   region: AMER
+   url: https://flightsim.to/file/760/payson-airport-kpan
+   skyvector: https://skyvector.com/airport/PAN/Payson-Airport
+   author: JustOkayPilot 
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: Stellar Airpark P19
+   icao: 
+   city: Chandler
+   country: United States
+   region: AMER
+   url: https://flightsim.to/file/761/stellar-airpark-p19
+   skyvector: 
+   author: JustOkayPilot 
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: Kalma International Airport
+   icao: ZKWS
+   city: Wonson
+   country: Korea
+   region: AMER
+   url: https://flightsim.to/file/732/wonsan-kalma-airport-zkws
+   skyvector: https://skyvector.com/airport/ZKWS/Kalma-International-Airport
+   author: Aidan MacDougal	
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: Tooradin Airfield	
+   icao: YTDN
+   city: 
+   country: Australia
+   region: APAC
+   url: https://flightsim.to/file/739/ytdn-tooradin-airfield-australia
+   skyvector: https://skyvector.com/airport/YTDN/Tooradin-Airport
+   author: JordanJames94
+   source: flightsim.to
+   date: 2020-09-23
+
+-  name: 3N6 - Old Bridge Airport
+   icao: 
+   city: 
+   country: United States
+   region: AMER
+   url: https://flightsim.to/file/689/3n6-old-bridge-airport
+   skyvector: 
+   author: JrPainkiller606
+   source: flightsim.to
+   date: 2020-09-22
+
+   	
