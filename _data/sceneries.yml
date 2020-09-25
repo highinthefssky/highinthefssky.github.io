@@ -4044,7 +4044,7 @@
    source: flightsim.to
    date: 2020-09-24
 
--  name: Erasmus MC - Dijkzicht		
+-  name: 'Erasmus MC - Dijkzicht'
    type: landmark
    city: Rotterdam
    country: Netherlands
@@ -4111,16 +4111,6 @@
    region: EMEA
    url: https://flightsim.to/file/792/iscor-building-pta
    author: AxeV
-   source: flightsim.to
-   date: 2020-09-24
-
--  name: Hoover Dam + Bridge	
-   type: landmark
-   city: Las Vegas
-   country: United States
-   region: EMEA
-   url: https://flightsim.to/file/784/hoover-dam-bridge
-   author: srinivasman
    source: flightsim.to
    date: 2020-09-24
 
