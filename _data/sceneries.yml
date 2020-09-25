@@ -4014,7 +4014,7 @@
    source: flightsim.to
    date: 2020-09-24
 
- -  name: Stadium ADO Den Haag & AD Building
+- name: Stadium ADO Den Haag & AD Building
    type: landmark
    city: The Hague
    country: Netherlands
