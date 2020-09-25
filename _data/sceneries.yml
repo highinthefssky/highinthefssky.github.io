@@ -3993,4 +3993,283 @@
    author: Jeppeson2001
    source: flightsim.to
    date: 2020-09-23
-   
+
+-  name: Winter Hill Mast
+   type: landmark
+   city: Horwich
+   country: United Kingdom
+   region: EMEA
+   url: https://flightsim.to/file/769/winter-hill-mast-horwich-north-west-uk
+   author: Nigie67
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Union Building
+   type: landmark
+   city: Meintjieskop
+   country: South Africa
+   region: EMEA
+   url: https://flightsim.to/file/777/union-building
+   author: Nigie67
+   source: flightsim.to
+   date: 2020-09-24
+
+ -  name: Stadium ADO Den Haag & AD Building
+   type: landmark
+   city: The Hague
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/766/the-hague-stadium-ado-den-haag
+   author: Geraldar98
+   source: flightsim.to
+   date: 2020-09-24 
+
+-  name: Sandton Buildings
+   type: city
+   city: Sandton
+   country: South Africa
+   region: EMEA
+   url: https://flightsim.to/file/794/sandton-buildings
+   author: JLR29
+   source: flightsim.to
+   date: 2020-09-24 
+
+-  name: Rotterdam Harbour - Radio Tower Waalhaven & PetroChemie Pipes	
+   type: landmark
+   city: Rotterdam
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/771/rotterdam-harbour-radio-tower-waalhaven-petrochemie-pipes
+   author: Geraldar98
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Erasmus MC - Dijkzicht		
+   type: landmark
+   city: Rotterdam
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/772/rotterdam-erasmus-mc-dijkzicht
+   author: Geraldar98
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: 3 towers Marconiplein	
+   type: landmark
+   city: Rotterdam
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/801/rotterdam-3-towers-marconiplein
+   author: Geraldar98
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Old Trafford - Manchester United Stadium w/ LODs
+   type: stadium
+   city: Manchester
+   country: United Kingdom
+   region: EMEA
+   url: https://flightsim.to/file/788/old-trafford-manchester-united-stadium-w-lods
+   author: Calvin Gunawan
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Molecule Man
+   type: stadium
+   city: Berlin
+   country: Germany
+   region: EMEA
+   url: https://flightsim.to/file/802/molecule-man-berlin
+   author: Ape42
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Loftus Stadium
+   type: stadium
+   city: Gauteng
+   country: South Africa
+   region: EMEA
+   url: https://flightsim.to/file/781/loftus-stadium
+   author: JLR29
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Leeuwarden Achmea tower and surrounding area	
+   type: landmark
+   city: Leeuwarden
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/789/leeuwarden-achmea-tower-and-surrounding-area
+   author: AxeV
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Iscor Building,PTA	
+   type: landmark
+   city: Pretoria
+   country: South Africa
+   region: EMEA
+   url: https://flightsim.to/file/792/iscor-building-pta
+   author: AxeV
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Hoover Dam + Bridge	
+   type: landmark
+   city: Las Vegas
+   country: United States
+   region: EMEA
+   url: https://flightsim.to/file/784/hoover-dam-bridge
+   author: srinivasman
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Hoover Dam + Bridge	
+   type: landmark
+   city: Las Vegas
+   country: United States
+   region: EMEA
+   url: https://flightsim.to/file/784/hoover-dam-bridge
+   author: srinivasman
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Coca Cola Dome	
+   type: landmark
+   city: Johannesburg
+   country: South Africa
+   region: EMEA
+   url: https://flightsim.to/file/798/coca-cola-dome
+   author: JLR29
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Cean
+   type: city
+   city: Cean
+   country: France
+   region: EMEA
+   url: https://flightsim.to/file/803/caen-landmarks-v1-0
+   author: Ivanov
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Transporter Bridge
+   type: landmark
+   city: 
+   country: United Kingdom
+   region: EMEA
+   url: https://flightsim.to/file/821/transporter-bridge
+   author: Vags
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: Toll Ambulance Rescue Sydney Base
+   type: airport accessory
+   city: Sydney
+   country: Australia
+   region: APAC
+   url: https://flightsim.to/file/815/toll-ambulance-rescue-sydney-base
+   author: jarvoss
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: St Andrew church 
+   type: landmark
+   city: Patra
+   country: Greece
+   region: EMEA
+   url: https://flightsim.to/file/809/st-andrew-church-patra
+   author: makgreek
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: Roman Odeon
+   type: landmark
+   city: Patra
+   country: Greece
+   region: EMEA
+   url: https://flightsim.to/file/810/roman-odeon-patra
+   author: makgreek
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: Riverside Stadium	
+   type: stadium
+   city: Middlesbrough
+   country: United Kingdom
+   region: EMEA
+   url: https://flightsim.to/file/822/riverside-stadium
+   author: Vags
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: Queen Elizabeth University Hospital		
+   type: landmark
+   city: Glasgow
+   country: United Kingdom
+   region: EMEA
+   url: https://flightsim.to/file/805/queen-elizabeth-university-hospital-glasgow
+   author: MostlyRandom
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: Waalbrug		
+   type: landmark
+   city: Nijmegen
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/819/nijmegen-waalbrug
+   author: Geraldar98
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: Waalbrug		
+   type: landmark
+   city: Nijmegen
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/819/nijmegen-waalbrug
+   author: Geraldar98
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: IKEA Tempe		
+   type: landmark
+   city: Sydney
+   country: Australia
+   region: APAC
+   url: https://flightsim.to/file/818/ikea-tempe-sydney-airport
+   author: jarvoss
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: TU Delft Campus	
+   type: landmark
+   city: Delft
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/825/delft-tu-delft-campus
+   author: JSSRDRG
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: Cholila Lodge Aero Fishing 	
+   type: landmark
+   city: Patagonia
+   country: Argentina
+   region: AMER
+   url: https://flightsim.to/file/813/cholila-lodge-aero-fishing-patagonia
+   author: Chukakis
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: John Frost Bridge	
+   type: landmark
+   city: Nijmegen
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/812/arnhem-john-frost-bridge
+   author: Geraldar98
+   source: flightsim.to
+   date: 2020-09-25

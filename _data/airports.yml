@@ -1141,3 +1141,135 @@
    author: JrPainkiller606
    source: flightsim.to
    date: 2020-09-22
+
+-  name: Yasser Arafat International Airport, Gaza
+   icao: LVGZ
+   city: Gaza
+   country: Gaza Strip
+   region: EMEA
+   url: https://flightsim.to/file/764/lgvz-yasser-arafat-international-airport-gaza
+   skyvector: 
+   author: superspud
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Saint Cyr La Campagne
+   icao: LF2721
+   city: Neuf Moulin
+   country: France
+   region: EMEA
+   url: https://flightsim.to/file/765/lf2721-saint-cyr-la-campagne
+   skyvector: 
+   author: Totof33120
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Huntsville International Jones Airport Terminal/Hangar Fix
+   icao: KHSV
+   city: Huntsville
+   country: United States
+   region: AMER
+   url: https://flightsim.to/file/775/huntsville-international-jones-khsv-airport-terminal-hangar-fix
+   skyvector: https://skyvector.com/airport/HSV/Huntsville-International-Carl-T-Jones-Field-Airport
+   author: aeneasaquinas
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Eindhoven Airport- incl Custom Buildings	
+   icao: EHEH
+   city: Eindhoven
+   country: Netherlands
+   region: EMEA
+   url: https://flightsim.to/file/785/eindhoven-airport-eheh-incl-custom-buildings
+   skyvector: https://skyvector.com/airport/EHEH/Eindhoven-Airport
+   author: Spoorobjecten
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Boire Field
+   icao: KASH
+   city: Nashua
+   country: United States
+   region: AMER
+   url: https://flightsim.to/file/778/boire-field-kash-nashua-nh-airport-update
+   skyvector: 
+   author: FlyingsCool
+   source: flightsim.to
+   date: 2020-09-24
+
+-  name: Newcastle International Airport
+   icao: EGNT
+   city: Newcastle
+   country: United Kingdom
+   region: EMEA
+   url: https://flightsim.to/file/804/newcastle-international-airport-egnt-wip
+   skyvector: https://skyvector.com/airport/EGNT/Newcastle-Airport
+   author: Roblaunch
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: Newcastle International Airport
+   icao: EGNT
+   city: Newcastle
+   country: United Kingdom
+   region: EMEA
+   url: https://flightsim.to/file/804/newcastle-international-airport-egnt-wip
+   skyvector: https://skyvector.com/airport/EGNT/Newcastle-Airport
+   author: Roblaunch
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: Newcastle Airport Scenery & Night Lighting Enhancements
+   icao: EGNT
+   city: Newcastle
+   country: United Kingdom
+   region: EMEA
+   url: https://flightsim.to/file/807/newcastle-airport-egnt-scenery-night-lighting-enhancements
+   skyvector: https://skyvector.com/airport/EGNT/Newcastle-Airport
+   author: Jeppeson2001
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: Newcastle Airport Scenery & Night Lighting Enhancements
+   icao: EGNT
+   city: Newcastle
+   country: United Kingdom
+   region: EMEA
+   url: https://flightsim.to/file/807/newcastle-airport-egnt-scenery-night-lighting-enhancements
+   skyvector: https://skyvector.com/airport/EGNT/Newcastle-Airport
+   author: Jeppeson2001
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: Lhasa Gonggar    
+   icao: ZULS
+   city: 
+   country: Tiber
+   region: APAC
+   url: https://flightsim.to/file/814/lhasa-gonggar-airport-v1-0-tibet
+   skyvector: https://skyvector.com/airport/ZULS/Lhasa-Gonggar-Airport
+   author: Sergio Del Rosso	
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: Lhasa Gonggar    
+   icao: ZULS
+   city: 
+   country: Tiber
+   region: APAC
+   url: https://flightsim.to/file/814/lhasa-gonggar-airport-v1-0-tibet
+   skyvector: https://skyvector.com/airport/ZULS/Lhasa-Gonggar-Airport
+   author: Sergio Del Rosso	
+   source: flightsim.to
+   date: 2020-09-25
+
+-  name: Győr-Pér Airport   
+   icao: LHPR
+   city: Győr
+   country: Hungary
+   region: APAC
+   url: https://flightsim.to/file/817/lhpr-gyor-per-airport
+   skyvector: https://skyvector.com/airport/LHPR/Gyor-Per-Airport
+   author: matemate	
+   source: flightsim.to
+   date: 2020-09-25     
