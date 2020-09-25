@@ -4034,7 +4034,7 @@
    source: flightsim.to
    date: 2020-09-24 
 
--  name: Rotterdam Harbour - Radio Tower Waalhaven & PetroChemie Pipes	
+-  name: Radio Tower Waalhaven & PetroChemie Pipes	
    type: landmark
    city: Rotterdam
    country: Netherlands
@@ -4044,7 +4044,7 @@
    source: flightsim.to
    date: 2020-09-24
 
--  name: 'Erasmus MC - Dijkzicht'
+-  name: Erasmus MC 
    type: landmark
    city: Rotterdam
    country: Netherlands
@@ -4064,7 +4064,7 @@
    source: flightsim.to
    date: 2020-09-24
 
--  name: Old Trafford - Manchester United Stadium w/ LODs
+-  name: Old Trafford
    type: stadium
    city: Manchester
    country: United Kingdom
