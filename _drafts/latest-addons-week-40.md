@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Latest addons: week 39"
+title: "Latest addons: week 40"
 description: "This is an overview of the community addons released in week 39 for Flight Simulator 2020"
 tags:
 - Flight Simulator 2020
@@ -15,11 +15,11 @@ tags:
 - FS2020 scenery addons
 - FS2020 liveries
 category: tutorials
-permalink: /MSFS2020-Latest-Added-Week-39/
-date:  2020-09-28
+permalink: /MSFS2020-Latest-Added-Week-40/
+date:  2020-10-04
 ---
 
-Below an overview of the addons released in week 39:
+Below an overview of the addons released in week 40:
 
  
 {% assign timeframe = 604800 %}
@@ -39,8 +39,8 @@ Below an overview of the addons released in week 39:
 
      {% for scenery in sceneries %}
         {% assign release_date = scenery.date | date: "%s" | plus: 0 %}
-        {% assign last_week = "2020-09-28" | date: "%s" |minus: timeframe %}
-        {% assign this_week = "2020-09-28" | date: "%s" | plus: 0 %}
+        {% assign last_week = "2020-10-04" | date: "%s" |minus: timeframe %}
+        {% assign this_week = "2020-10-04" | date: "%s" | plus: 0 %}
             {% if release_date > last_week and release_date < this_week and release_date != 0 %}
                 <tr>
                 <td>{{scenery.name}}</td>
@@ -74,8 +74,8 @@ Below an overview of the addons released in week 39:
 
      {% for airport in airports %}
         {% assign release_date = airport.date | date: "%s" | plus: 0 %}
-        {% assign last_week = "2020-09-28" | date: "%s" |minus: timeframe %}
-        {% assign this_week = "2020-09-28" | date: "%s" | plus: 0 %}
+        {% assign last_week = "2020-10-04" | date: "%s" |minus: timeframe %}
+        {% assign this_week = "2020-10-04" | date: "%s" | plus: 0 %}
             {% if release_date > last_week and release_date < this_week and release_date != 0  %}
                 <tr>
                 {% if airport_info != undefined %}
