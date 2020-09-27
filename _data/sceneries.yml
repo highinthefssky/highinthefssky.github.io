@@ -4263,3 +4263,243 @@
   author: Geraldar98
   source: flightsim.to
   date: 2020-09-25
+
+- name: Wainhouse Tower
+  type: landmark
+  city: Halifax
+  country: United Kingdom
+  region: EMEA
+  url: https://flightsim.to/file/844/wainhouse-tower-halifax-england
+  author: Jeppeson2001
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: Roterdam World Trade Center
+  type: landmark
+  city: Rotterdam
+  country: Netherlands
+  region: EMEA
+  url: https://flightsim.to/file/842/sbct-aeroporto-internacional-afonso-pena
+  author: MrResetti
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: Rotterdam Markthal	
+  type: landmark
+  city: Rotterdam
+  country: Netherlands
+  region: EMEA
+  url: https://flightsim.to/file/881/rotterdam-markthal
+  author: MrResetti
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: Riverside Museum and tall ship	
+  type: landmark
+  city: Glasgow
+  country: United Kingdom
+  region: EMEA
+  url: https://flightsim.to/file/873/riverside-museum-and-tall-ship-glasgow
+  author: MostlyRandom
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: Porto Venere	
+  type: landmark
+  city: Venere
+  country: Italy
+  region: EMEA
+  url: https://flightsim.to/file/859/porto-venere
+  author: IlParaCapo & Mauro Melone	
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: Perry's Monument
+  type: landmark
+  city: Put-in-Bay
+  country: United States
+  region: AMER
+  url: https://flightsim.to/file/888/perry-s-monument
+  author: Acktu
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: St. Stevenskerk (Church) & Boterwaag		
+  type: landmark
+  city: Nijmegen
+  country: Netherlands
+  region: EMEA
+  url: https://flightsim.to/file/862/nijmegen-st-stevenskerk-church
+  author: Geraldar98
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: Spoorbrug (Railway Bridge)		
+  type: landmark
+  city: Nijmegen
+  country: Netherlands
+  region: EMEA
+  url: https://flightsim.to/file/858/nijmegen-spoorbrug-railway-bridge
+  author: Geraldar98
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: Nijmegen - De Oversteek Bridge		
+  type: landmark
+  city: Nijmegen
+  country: Netherlands
+  region: EMEA
+  url: https://flightsim.to/file/860/nijmegen-de-oversteek-bridge
+  author: Geraldar98
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: Maastricht Landmarks		
+  type: landmark
+  city: Maastricht
+  country: Netherlands
+  region: EMEA
+  url: https://flightsim.to/file/884/maastricht-landmarks
+  author: CessnaHomeCockpit aka JeDa
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: Iceland Overhaul		
+  type: landmark
+  city: 
+  country: Iceland
+  region: EMEA
+  url: https://flightsim.to/file/848/iceland-overhaul
+  author: Baddweapon
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: Gent-Sint-Pieters Station			
+  type: landmark
+  city: Ghent
+  country: Belgium
+  region: EMEA
+  url: https://flightsim.to/file/869/gent-sint-pieters-station-ghent-belgium
+  author: jonasbaine2
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: Cinque Terre - Italy				
+  type: landmark
+  city: 
+  country: Italy
+  region: EMEA
+  url: https://flightsim.to/file/887/cinque-terre-italy
+  author: Troglodytus
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: Castle Hill					
+  type: landmark
+  city: Huddersfield
+  country: United Kingdom
+  region: EMEA
+  url: https://flightsim.to/file/843/castle-hill-huddersfield-england
+  author: Jeppeson2001
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: Barrowlands Ballroom and Barras market			
+  type: landmark
+  city: Glasgow
+  country: United Kingdom
+  region: EMEA
+  url: https://flightsim.to/file/850/barrowlands-ballroom-and-barras-market-glasgow
+  author: MostlyRandom
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: Spoorbrug Oosterbeek (Railway Bridge Oosterbeek)				
+  type: landmark
+  city: Arnhem
+  country: Netherlands
+  region: EMEA
+  url: https://flightsim.to/file/866/arnhem-spoorbrug-oosterbeek-railway-bridge-oosterbeek
+  author: Geraldar98
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: Antwerp Central Station					
+  type: landmark
+  city: Antwerp
+  country: Belgium
+  region: EMEA
+  url: https://flightsim.to/file/883/antwerp-central-station-belgium
+  author: jonasbaine2
+  source: flightsim.to
+  date: 2020-09-26
+
+- name: University Park,  - Penn State University Beaver Stadium					
+  type: stadium
+  city: Pennsylvania
+  country: United States
+  region: AMER
+  url: https://flightsim.to/file/893/university-park-pennsylvania-penn-state-university-beaver-stadium
+  author: msu2k
+  source: flightsim.to
+  date: 2020-09-27
+
+- name: Sibiu					
+  type: city
+  city: Sibiu
+  country: Romania
+  region: EMEA
+  url: https://flightsim.to/file/891/sibiu-romania
+  author: dinamogabry
+  source: flightsim.to
+  date: 2020-09-27
+
+- name: Portugese stadiums					
+  type: stadium
+  city: 
+  country: Portugal
+  region: EMEA
+  url: https://flightsim.to/file/907/portuguese-stadiums-v1-05
+  author: xicorttavares
+  source: flightsim.to
+  date: 2020-09-27
+
+- name: Nantes Landmarks				
+  type: landmark
+  city: Nantes
+  country: France
+  region: EMEA
+  url: https://flightsim.to/file/903/nantes-landmarks
+  author: Arva
+  source: flightsim.to
+  date: 2020-09-27
+
+- name: Cape Town		
+  type: city
+  city: Cape Town		
+  country: South Africa
+  region: EMEA
+  url: https://flightsim.to/file/904/cape-town-cbd-part1
+  author: JLR29
+  source: flightsim.to
+  date: 2020-09-27
+
+- name: Toyota Stadium			
+  type: stadium
+  city: Bloemfontein		
+  country: South Africa
+  region: EMEA
+  url: https://flightsim.to/file/906/bloemfontein-toyota-stadium
+  author: JLR29
+  source: flightsim.to
+  date: 2020-09-27
+
+- name: Castle Rosendael			
+  type: landmark
+  city: Arnhem		
+  country: Netherlands
+  region: EMEA
+  url: https://flightsim.to/file/890/arnhem-castle-rosendael
+  author: Geraldar98
+  source: flightsim.to
+  date: 2020-09-27
