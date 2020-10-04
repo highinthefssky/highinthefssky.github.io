@@ -1495,148 +1495,16 @@
    source: flightsim.to
    date: 2020-09-27  
 
--  name: Umbria International Airport 
-   icao: PEG 
-   city: Peugia San Fransesco DAssisi 
-   country: Italy 
-   region: EMEA 
-   url: https://flightsim.to/file/1231/lirz-perugia-san-francesco-d-assisi-umbria-international-airport#
-   skyvector: https://skyvector.com/airport/LIRZ/Perugia-S-Francesco-Airport 
-   author: MAG62 
-   source: flightsim.to 
-   date: 10/4/2020
-
--  name: Otopeni International Airport 
-   icao: LROP 
-   city: Bucharest 
-   country: Romania 
-   region: EMEA 
-   url: https://flightsim.to/file/1222/lrop-otopeni-bucharest-international-airport# 
-   skyvector: https://skyvector.com/airport/LROP/Henri-Coanda-Airport 
-   author: Lucian CRISTEA 
-   source: flightsim.to 
-   date: 10/4/2020
-
--  name: Surat International Airport 
-   icao: VASU 
-   city:  
-   country: India 
-   region: APAC 
-   url: https://flightsim.to/file/1211/vasu-surat-international-airport# 
-   skyvector: https://skyvector.com/airport/VASU/Surat-Airport 
-   author: Sarvesh Asopa 
-   source: flightsim.to 
-   date: 10/4/2020
-
--  name: Argyle Intl Airport 
-   icao: TVSA 
-   city: St. Vincent 
-   country: Saint Vincent and the Grenadines 
-   region: AMER 
-   url: https://flightsim.to/file/1210/tvsa-argyle-intl-airport-st-vincent-and-the-grenadines#
-   skyvector: https://skyvector.com/airport/TVSA/Kingstown-Argyle-Airport 
-   author: superspud 
-   source: flightsim.to 
-   date: 10/4/2020
-
--  name: Wellesbourne Mountford Airfield 
-   icao: EGBW 
-   city: Wellesbourne Mountford Airfield 
+-  name: White Waltam Airfield 
+   icao: EGLM 
+   city: Waltham 
    country: United Kingdom 
-   region: EMEA 
-   url: https://flightsim.to/file/1191/egbw-wellesbourne-mountford-airfield# 
-   skyvector: https://skyvector.com/airport/EGBW/Wellesbourne-Mountford-Airport 
-   author: FlyingTheston 
-   source: flightsim.to 
-   date: 10/3/2020
-
--  name: Kalunborg Airfield 
-   icao: EKKL 
-   city: Kalundborg 
-   country: Denmark 
-   region: EMEA 
-   url: https://flightsim.to/file/1180/ekkl-kalundborg-airfield# 
-   skyvector: https://skyvector.com/airport/EKKL/Kalundborg-Airport 
-   author: Claus Hansen 
-   source: flightsim.to 
-   date: 10/3/2020
-
--  name: Talavera la Real 
-   icao: LEBZ 
-   city: Talavera 
-   country: Spain 
-   region: EMEA 
-   url: https://flightsim.to/file/1178/lebz-badajoz-talavera-la-real# 
-   skyvector: https://skyvector.com/airport/LEBZ/Talavera-La-Real-Airport 
-   author: Jorge Santos 
-   source: flightsim.to 
-   date: 10/3/2020
-
--  name: Ostrava Airport 
-   icao: LKMT 
-   city: Ostrava 
-   country: Czech Republic 
-   region: EMEA 
-   url: https://flightsim.to/file/1167/lkmt-ostrava-airport# 
-   skyvector: https://skyvector.com/airport/LKMT/Ostrava-Mosnov-Airport 
-   author: FlyTo 
-   source: flightsim.to 
-   date: 10/3/2020
-
--  name: Namsos Lufthavn 
-   icao: ENNM 
-   city: Namos 
-   country: Norway 
-   region: EMEA 
-   url: https://flightsim.to/file/1161/ennm-namsos-lufthavn# 
-   skyvector: https://skyvector.com/airport/ENNM/Namsos-Airport 
-   author: eddrik84 
-   source: flightsim.to 
-   date: 10/3/2020
-
--  name: Aeroclub Galvez 
-   icao:  
-   city: SAGV Aero 
-   country: Argentina 
-   region: AMER 
-   url: https://flightsim.to/file/1148/sagv-aeroclub-galvez# 
-   skyvector:  
-   author: t4ka78 
-   source: flightsim.to 
-   date: 10/2/2020
-
--  name: Paine Field 
-   icao: KPAE 
-   city: Everett 
-   country: United States 
-   region: AMER 
-   url: https://flightsim.to/file/1136/paine-field-everett-wa-usa-kpae# 
-   skyvector: https://skyvector.com/airport/PAE/Snohomish-County-Paine-Field--Airport 
-   author: FreakyD 
-   source: flightsim.to 
-   date: 10/2/2020
-
--  name: Altisurface 
-   icao:  
-   city: Valberg 
-   country: France 
-   region: EMEA 
-   url: https://flightsim.to/file/1118/altisurface-lf0654-valberg# 
-   skyvector:  
-   author: zaelu 
-   source: flightsim.to 
-   date: 10/2/2020
-
--  name: Washington Dulles Airport 
-   icao: KAID 
-   city: Washington 
-   country: United States 
-   region: AMER 
-   url: https://flightsim.to/file/1113/kiad-washington-dulles-international-airport# 
-   skyvector: https://skyvector.com/airport/AID/Anderson-Municipal-Darlington-Field-Airport 
-   author: srinivasman 
-   source: flightsim.to 
-   date: 10/2/2020
+   region:  
+   url: https://flightsim.to/file/1058/white-waltham-airfield# 
+   skyvector: https://skyvector.com/airport/EGLM/White-Waltham-Airport 
+   author: frododo 
+   source:  
+   date: 2020-09-30
 
 -  name: Valladodid Villanubla Airport 
    icao: LEVD 
@@ -1647,7 +1515,7 @@
    skyvector: https://skyvector.com/airport/LEVD/Valladolid-Villanubla-Airport 
    author: Jorge Santos 
    source: flightsim.to 
-   date: 10/1/2020
+   date: 2020-10-01
 
 -  name: Cassarubio 
    icao:  
@@ -1658,7 +1526,7 @@
    skyvector:  
    author: Jorge Santos 
    source: flightsim.to 
-   date: 10/1/2020
+   date: 2020-10-01
 
 -  name: Zaragoza Airport 
    icao: LEZG 
@@ -1669,7 +1537,7 @@
    skyvector: https://skyvector.com/airport/LEZG/Zaragoza-Airport 
    author: andres291 
    source: flightsim.to 
-   date: 10/1/2020
+   date: 2020-10-01
 
 -  name: Teniente Rodolfo Marsh Martin Airport 
    icao: SCRM 
@@ -1680,7 +1548,7 @@
    skyvector: https://skyvector.com/airport/SCRM/Tte-Rodolfo-Marsh-Martin-Airport 
    author: GrafDresche 
    source: flightsim.to 
-   date: 10/1/2020
+   date: 2020-10-01
 
 -  name: Ronald Reagan Washington National Airport 
    icao: KDCA 
@@ -1691,7 +1559,7 @@
    skyvector: https://skyvector.com/airport/DCA/Ronald-Reagan-Washington-National-Airport 
    author: srinivasman 
    source: flightsim.to 
-   date: 10/1/2020
+   date: 2020-10-01
 
 -  name: Half Moon Bay Airport 
    icao: KHAF 
@@ -1702,15 +1570,147 @@
    skyvector: https://skyvector.com/airport/HAF/Half-Moon-Bay-Airport 
    author: Aircake1 
    source: flightsim.to 
-   date: 10/1/2020
+   date: 2020-10-01
+   
+-  name: Aeroclub Galvez 
+   icao:  
+   city: SAGV Aero 
+   country: Argentina 
+   region: AMER 
+   url: https://flightsim.to/file/1148/sagv-aeroclub-galvez# 
+   skyvector:  
+   author: t4ka78 
+   source: flightsim.to 
+   date: 2020-10-02
 
--  name: White Waltam Airfield 
-   icao: EGLM 
-   city: Waltham 
+-  name: Paine Field 
+   icao: KPAE 
+   city: Everett 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/1136/paine-field-everett-wa-usa-kpae# 
+   skyvector: https://skyvector.com/airport/PAE/Snohomish-County-Paine-Field--Airport 
+   author: FreakyD 
+   source: flightsim.to 
+   date: 2020-10-02
+
+-  name: Altisurface 
+   icao:  
+   city: Valberg 
+   country: France 
+   region: EMEA 
+   url: https://flightsim.to/file/1118/altisurface-lf0654-valberg# 
+   skyvector:  
+   author: zaelu 
+   source: flightsim.to 
+   date: 2020-10-02
+
+-  name: Washington Dulles Airport 
+   icao: KAID 
+   city: Washington 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/1113/kiad-washington-dulles-international-airport# 
+   skyvector: https://skyvector.com/airport/AID/Anderson-Municipal-Darlington-Field-Airport 
+   author: srinivasman 
+   source: flightsim.to 
+   date: 2020-10-02
+
+-  name: Wellesbourne Mountford Airfield 
+   icao: EGBW 
+   city: Wellesbourne Mountford Airfield 
    country: United Kingdom 
-   region:  
-   url: https://flightsim.to/file/1058/white-waltham-airfield# 
-   skyvector: https://skyvector.com/airport/EGLM/White-Waltham-Airport 
-   author: frododo 
-   source:  
-   date: 9/30/2020
+   region: EMEA 
+   url: https://flightsim.to/file/1191/egbw-wellesbourne-mountford-airfield# 
+   skyvector: https://skyvector.com/airport/EGBW/Wellesbourne-Mountford-Airport 
+   author: FlyingTheston 
+   source: flightsim.to 
+   date: 2020-10-03
+
+-  name: Kalunborg Airfield 
+   icao: EKKL 
+   city: Kalundborg 
+   country: Denmark 
+   region: EMEA 
+   url: https://flightsim.to/file/1180/ekkl-kalundborg-airfield# 
+   skyvector: https://skyvector.com/airport/EKKL/Kalundborg-Airport 
+   author: Claus Hansen 
+   source: flightsim.to 
+   date: 2020-10-03
+
+-  name: Talavera la Real 
+   icao: LEBZ 
+   city: Talavera 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/1178/lebz-badajoz-talavera-la-real# 
+   skyvector: https://skyvector.com/airport/LEBZ/Talavera-La-Real-Airport 
+   author: Jorge Santos 
+   source: flightsim.to 
+   date: 2020-10-03
+
+-  name: Ostrava Airport 
+   icao: LKMT 
+   city: Ostrava 
+   country: Czech Republic 
+   region: EMEA 
+   url: https://flightsim.to/file/1167/lkmt-ostrava-airport# 
+   skyvector: https://skyvector.com/airport/LKMT/Ostrava-Mosnov-Airport 
+   author: FlyTo 
+   source: flightsim.to 
+   date: 2020-10-03
+
+-  name: Namsos Lufthavn 
+   icao: ENNM 
+   city: Namos 
+   country: Norway 
+   region: EMEA 
+   url: https://flightsim.to/file/1161/ennm-namsos-lufthavn# 
+   skyvector: https://skyvector.com/airport/ENNM/Namsos-Airport 
+   author: eddrik84 
+   source: flightsim.to 
+   date: 2020-10-03
+
+-  name: Umbria International Airport 
+   icao: PEG 
+   city: Peugia San Fransesco DAssisi 
+   country: Italy 
+   region: EMEA 
+   url: https://flightsim.to/file/1231/lirz-perugia-san-francesco-d-assisi-umbria-international-airport#
+   skyvector: https://skyvector.com/airport/LIRZ/Perugia-S-Francesco-Airport 
+   author: MAG62 
+   source: flightsim.to 
+   date: 2020-10-04
+
+-  name: Otopeni International Airport 
+   icao: LROP 
+   city: Bucharest 
+   country: Romania 
+   region: EMEA 
+   url: https://flightsim.to/file/1222/lrop-otopeni-bucharest-international-airport# 
+   skyvector: https://skyvector.com/airport/LROP/Henri-Coanda-Airport 
+   author: Lucian CRISTEA 
+   source: flightsim.to 
+   date: 2020-10-04
+
+-  name: Surat International Airport 
+   icao: VASU 
+   city:  
+   country: India 
+   region: APAC 
+   url: https://flightsim.to/file/1211/vasu-surat-international-airport# 
+   skyvector: https://skyvector.com/airport/VASU/Surat-Airport 
+   author: Sarvesh Asopa 
+   source: flightsim.to 
+   date: 2020-10-04
+
+-  name: Argyle Intl Airport 
+   icao: TVSA 
+   city: St. Vincent 
+   country: Saint Vincent and the Grenadines 
+   region: AMER 
+   url: https://flightsim.to/file/1210/tvsa-argyle-intl-airport-st-vincent-and-the-grenadines#
+   skyvector: https://skyvector.com/airport/TVSA/Kingstown-Argyle-Airport 
+   author: superspud 
+   source: flightsim.to 
+   date: 2020-10-04
