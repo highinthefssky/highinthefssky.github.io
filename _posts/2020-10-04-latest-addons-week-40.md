@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Latest addons: week 40"
-description: "This is an overview of the community addons released in week 39 for Flight Simulator 2020"
+description: "This is an overview of the community addons released in week 40 for Flight Simulator 2020"
 tags:
 - Flight Simulator 2020
 - microsoft flight simulator
