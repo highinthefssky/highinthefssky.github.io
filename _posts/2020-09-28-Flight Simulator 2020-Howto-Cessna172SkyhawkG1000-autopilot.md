@@ -28,17 +28,17 @@ In this how to we are going to look how we to use the autopilot in a Cessna 172 
 
 We will depart from Rotterdam The Hague Airport Runway 24 fly over the southern part of the Netherlands using the different autopilot options and will return to Rotterdam The Hague Airport where we will land using ILS on runway 6.
 
-0:00 title screen
-0:25 flight planning
-11:15 departing runway 24
-15:55 enable autopilot
-16:40 enable flight director
-16:55 enable nav mode
-18:15: hold altitude mode
-20:20 using the vertical speed mode
-29:55 using approach procedures
-54:05 enabled approach - first try
-1:05:00 enabled approach mode - second try
-1:09:26 landed at runway 06
+* 0:00 title screen
+* 0:25 flight planning
+* 11:15 departing runway 24
+* 15:55 enable autopilot
+* 16:40 enable flight director
+* 16:55 enable nav mode
+* 18:15: hold altitude mode
+* 20:20 using the vertical speed mode
+* 29:55 using approach procedures
+* 54:05 enabled approach - first try
+* 1:05:00 enabled approach mode - second try
+* 1:09:26 landed at runway 06
 
 {% include youtubePlayer.html id=page.youtubeId %}
