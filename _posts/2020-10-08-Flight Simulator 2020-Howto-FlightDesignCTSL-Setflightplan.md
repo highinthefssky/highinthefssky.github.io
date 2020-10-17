@@ -18,9 +18,9 @@ tags:
 - Aspen-Pitkin Co/Sardy Field Airport
 - Flying W Ranch Airport
 category: tutorials
-permalink: /MSFS2020-Howto-FlightDesignCTSL-Setlightplan/
+permalink: /MSFS2020-Howto-FlightDesignCTSL-Setflightplan/
 youtubeId: lchvODKGUhI
-image: /assets/images/tutorials/MSFS2020-Howto-FlightDesignCTSL-Setlightplan.jpg
+image: /assets/images/tutorials/MSFS2020-Howto-FlightDesignCTSL-Setflightplan.jpg
 ---
 In this how to we are going to look how we can configure our flight plan manually in our navigation system from our Flight Design CTSL. 
 
