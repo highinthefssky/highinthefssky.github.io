@@ -18,9 +18,9 @@ tags:
 - Cub Crafter X Cub,Narita International Airport
 - Shimofusa Airport
 category: tutorials
-permalink: /MSFS2020-Howto-CubCrafterXCub-Setlightplan/
+permalink: /MSFS2020-Howto-CubCrafterXCub-Setflightplan/
 youtubeId: b3Ox8oWeb5Y
-image: /assets/images/tutorials/MSFS2020-Howto-CubCrafterXCub-Setlightplan.jpg
+image: /assets/images/tutorials/MSFS2020-Howto-CubCrafterXCub-Setflightplan.jpg
 ---
 In this how to we are going to look how we can configure our flight plan manually in our navigation system from our Cub Crafter X Cub. 
 

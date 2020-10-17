@@ -19,9 +19,9 @@ tags:
 - how to set a flight plan in a Bonanza G36
 - Textron Bonanza G36
 category: tutorials
-permalink: /MSFS2020-Howto-TextronBonanzaG36-Setlightplan/
+permalink: /MSFS2020-Howto-TextronBonanzaG36-Setflightplan/
 youtubeId: 461Ck_-Wtig
-image: /assets/images/tutorials/MSFS2020-Howto-TextronBonanzaG36-Setlightplan.jpg
+image: /assets/images/tutorials/MSFS2020-Howto-TextronBonanzaG36-Setflightplan.jpg
 ---
 In this how to we are going to look how we can configure our flight plan manually in our navigation system from our Textron Bonanza G36. 
 
