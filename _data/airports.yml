@@ -2205,3 +2205,641 @@
    author: WombiiActual 
    source: flightsim.to 
    date: 2020-10-10
+
+-  name: Frankfurt am Main Intl 
+   icao: EDDF 
+   city: Frankfurt 
+   country: Germany 
+   region: EMEA 
+   url: https://flightsim.to/file/1601/frankfurt-am-main-intl-eddf# 
+   skyvector: https://skyvector.com/airport/EDDF/Frankfurt-Main-Airport 
+   author: desnses 
+   source: flightsim.to 
+   date: 2020-10-11
+
+
+-  name: Wipperfuerth Airfield 
+   icao: EDKN  
+   city: Wipperfuerth 
+   country: Germany 
+   region: EMEA 
+   url: https://flightsim.to/file/1598/edkn-wipperfuerth-airfield# 
+   skyvector: https://skyvector.com/airport/EDKN/Wipperfurth-Neye-Airport 
+   author: ulimcologne 
+   source: flightsim.to 
+   date: 2020-10-11
+
+
+-  name: Lea County Regional Airport 
+   icao: KHOB 
+   city: Hobbs 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/1593/khob-lea-county-regional-airport# 
+   skyvector: https://skyvector.com/airport/HOB/Lea-County-Regional-Airport 
+   author: David Bright 
+   source: flightsim.to 
+   date: 2020-10-11
+
+
+-  name: Bernay 
+   icao: LFPD 
+   city: Bernay 
+   country: France 
+   region: EMEA 
+   url: https://flightsim.to/file/1590/lfpd-bernay# 
+   skyvector: https://skyvector.com/airport/LFPD/Bernay-St-Martin-Airport 
+   author: Totof33120 
+   source: flightsim.to 
+   date: 2020-10-11
+
+
+-  name: Matkó Airport 
+   icao:  
+   city: Matko 
+   country: Hungary 
+   region: EMEA 
+   url: https://flightsim.to/file/1585/lhmp-matko-airport# 
+   skyvector:  
+   author: matemate 
+   source: flightsim.to 
+   date: 2020-10-11
+
+
+-  name: Etrepagny 
+   icao: LFFY 
+   city: Etrepagny 
+   country: France 
+   region: EMEA 
+   url: https://flightsim.to/file/1584/etrepagny-lffy# 
+   skyvector: https://skyvector.com/airport/LFFY/Etrepagny-Airport 
+   author: ScenaReal 
+   source: flightsim.to 
+   date: 2020-10-11
+
+
+-  name: Aerodromo de Chascomus 
+   icao:  
+   city: Chascomús 
+   country: Argentina 
+   region: AMER 
+   url: https://flightsim.to/file/1581/sadi-aerodromo-de-chascomus# 
+   skyvector:  
+   author: t4ka78 ( exportado de ChascomusX de Guillermo Posadas ) 
+   source: flightsim.to 
+   date: 2020-10-11
+
+
+-  name: Brno Tuřany Airport 
+   icao: LKTB  
+   city: Brno Tuřany 
+   country: Czech Republic 
+   region: EMEA 
+   url: https://flightsim.to/file/1580/lktb-brno-turany-airport# 
+   skyvector: https://skyvector.com/airport/LKTB/Brno-Turany-Airport 
+   author: FlyTo 
+   source: flightsim.to 
+   date: 2020-10-11
+
+
+-  name: Lelystad 
+   icao: EHLE 
+   city: Lelystad 
+   country: Netherlands 
+   region: EMEA 
+   url: https://flightsim.to/file/1578/ehle-lelystad# 
+   skyvector: https://skyvector.com/airport/EHLE/Lelystad-Airport 
+   author: neutrino 
+   source: flightsim.to 
+   date: 2020-10-11
+
+
+-  name: Aeroclube SSSC - Santa Cruz do Sul - RS 
+   icao: SSSC 
+   city: Santa Cruz do Sul 
+   country: Brazil 
+   region: AMER 
+   url: https://flightsim.to/file/1571/aeroclube-sssc-santa-cruz-do-sul-rs# 
+   skyvector: https://skyvector.com/airport/SSSC/Santa-Cruz-Do-Sul-Airport 
+   author: Carlos Renato Machado Kuhn 
+   source: flightsim.to 
+   date: 2020-10-11
+
+
+-  name: Alicante Terminal 
+   icao: LEAL 
+   city: Alicante 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/1569/alicante-terminal-leal-gmaps-3d-alpha# 
+   skyvector: https://skyvector.com/airport/LEAL/Alicante-Elche-Airport 
+   author: andres291 
+   source: flightsim.to 
+   date: 2020-10-11
+
+
+-  name: Montréal–Trudeau Intl 
+   icao: CYUL 
+   city: Montreal 
+   country: Canada 
+   region: EMEA 
+   url: https://flightsim.to/file/1556/montreal-trudeau-intl-cyul# 
+   skyvector: https://skyvector.com/airport/CYUL/Montreal-Pierre-Elliott-Trudeau-International-Airport
+   author: desnses 
+   source: flightsim.to 
+   date: 2020-10-11
+
+
+-  name: Douglas Lake Airport 
+   icao: CAL3 
+   city: Douglas Lake 
+   country: Canada 
+   region: EMEA 
+   url: https://flightsim.to/file/1670/douglas-lake-airport-cal3# 
+   skyvector: https://skyvector.com/airport/CAL3/Douglas-Lake-Airport 
+   author: Deepfield 
+   source: flightsim.to 
+   date: 2020-10-12
+
+
+-  name: Hope Airport 
+   icao: CYHE 
+   city:  
+   country: Canada 
+   region: EMEA 
+   url: https://flightsim.to/file/1669/hope-airport-cyhe# 
+   skyvector: https://skyvector.com/airport/CYHE/Hope-Airport 
+   author: Deepfield 
+   source: flightsim.to 
+   date: 2020-10-12
+
+
+-  name: Likely Aerodrome 
+   icao: CAX5 
+   city:  
+   country: Canada 
+   region: EMEA 
+   url: https://flightsim.to/file/1668/likely-aerodrome-cax5# 
+   skyvector: https://skyvector.com/airport/CAX5/Likely-Airport 
+   author: Deepfield 
+   source: flightsim.to 
+   date: 2020-10-12
+
+
+-  name: Stuart Island Airpark - [7WA5] 
+   icao: 7WA5 
+   city: Stuart Island 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/1667/stuart-island-airpark-7wa5# 
+   skyvector: https://skyvector.com/airport/7WA5/Stuart-Island-Airpark-Airport 
+   author: Deepfield 
+   source: flightsim.to 
+   date: 2020-10-12
+
+
+-  name: Fort St. James (Perison) Airport - [CYJM] 
+   icao: CYJM 
+   city: Fort St. James 
+   country: Canada 
+   region: EMEA 
+   url: https://flightsim.to/file/1666/fort-st-james-perison-airport-cyjm# 
+   skyvector: https://skyvector.com/airport/CYJM/Fort-St-James-Perison-Airport 
+   author: Deepfield 
+   source: flightsim.to 
+   date: 2020-10-12
+
+
+-  name: Bamfield Aerodrome - [YBF] 
+   icao: YBG 
+   city: Bamfield 
+   country: Canada 
+   region: EMEA 
+   url: https://flightsim.to/file/1665/bamfield-aerodrome-yfb# 
+   skyvector: https://skyvector.com/airport/CYBG/Bagotville-Airport 
+   author: Deepfield 
+   source: flightsim.to 
+   date: 2020-10-12
+
+
+-  name: Tekapo Airport NZTL 
+   icao:  
+   city: Lake Tekapo 
+   country: New Zealand 
+   region: APAC 
+   url: https://flightsim.to/file/1657/lake-tekapo-airport-nzlt-new-zealand-v1-0# 
+   skyvector:  
+   author: Sergio Del Rosso 
+   source: flightsim.to 
+   date: 2020-10-12
+
+
+-  name: Castelo Branco Municipal Aerodrome 
+   icao:  
+   city: Catelo Branco 
+   country: Portugal 
+   region: EMEA
+   url: https://flightsim.to/file/1649/lpcb-castelo-branco-municipal-aerodrome-portugal# 
+   skyvector:  
+   author: cptfred 
+   source: flightsim.to 
+   date: 2020-10-12
+
+
+-  name: Aeroklub Krakowski Pobiednik Wielki 
+   icao: EPKP 
+   city: Krakow 
+   country: Poland 
+   region: EMEA 
+   url: https://flightsim.to/file/1647/epkp-aeroklub-krakowski-pobiednik-wielki# 
+   skyvector: https://skyvector.com/airport/EPKP/Pobiednik-Wielki-Airport 
+   author: AkaiSpace 
+   source: flightsim.to 
+   date: 2020-10-12
+
+
+-  name: RAAF Point Cook 
+   icao: YMPC 
+   city: Point Cook 
+   country: Australia 
+   region: APAC 
+   url: https://flightsim.to/file/1633/ympc-raaf-point-cook# 
+   skyvector: https://skyvector.com/airport/YMPC/Point-Cook-Airport 
+   author: HubDubs 
+   source: flightsim.to 
+   date: 2020-10-12
+
+
+-  name: Toronto Pearson Intl 
+   icao: CYYZ 
+   city: Toronto 
+   country: Canada 
+   region: EMEA 
+   url: https://flightsim.to/file/1614/toronto-pearson-intl-cyyz# 
+   skyvector: https://skyvector.com/airport/CYYZ/Toronto-Lester-B-Pearson-International-Airport
+   author: desnses 
+   source: flightsim.to 
+   date: 2020-10-12
+
+
+-  name: Montreal/Saint-Hubert 
+   icao: CYHY 
+   city: Monteal 
+   country: Canada 
+   region: EMEA 
+   url: https://flightsim.to/file/1612/montreal-saint-hubert-cyhu-canadian-space-agency# 
+   skyvector: https://skyvector.com/airport/CYHY/Hay-River-Merlyn-Carter-Airport-Airport 
+   author: desnses 
+   source: flightsim.to 
+   date: 2020-10-12
+
+
+-  name: Berlin Brandenburg Intl  
+   icao: EDDB 
+   city: Berlin 
+   country: Germany 
+   region: EMEA 
+   url: https://flightsim.to/file/1727/berlin-brandenburg-intl-eddb# 
+   skyvector: https://skyvector.com/airport/EDDB/Berlin-Brandenburg-Airport 
+   author: desnses 
+   source: flightsim.to 
+   date: 2020-10-13
+
+
+-  name: Point Roberts Airpark 
+   icao: 1RL 
+   city: Point Roberts 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/1723/point-roberts-airpark-1rl# 
+   skyvector: https://skyvector.com/airport/1RL/Point-Roberts-Airpark-Airport 
+   author: Deepfield 
+   source: flightsim.to 
+   date: 2020-10-13
+
+
+-  name: Valley Regional Airport 
+   icao: CAJ3 
+   city: Valley Regional Airport (CAJ3) 
+   country: Canada 
+   region: EMEA 
+   url: https://flightsim.to/file/1720/creston-valley-regional-airport# 
+   skyvector: https://skyvector.com/airport/CAJ3/Creston-Airport 
+   author: Piter449 
+   source: flightsim.to 
+   date: 2020-10-13
+
+
+-  name: Rørvik Airport Ryum 
+   icao: ENRM 
+   city: Airport 
+   country: Norway 
+   region: EMEA 
+   url: https://flightsim.to/file/1775/enrm-rorvik-airport-ryum# 
+   skyvector: https://skyvector.com/airport/ENRM/Rorvik-Ryum-Airport 
+   author: eddrik84 
+   source: flightsim.to 
+   date: 2020-10-14
+
+
+-  name: Hannover Intl 
+   icao: EDDV 
+   city: Hannover 
+   country: Canada 
+   region: EMEA 
+   url: https://flightsim.to/file/1754/hannover-intl-eddv# 
+   skyvector: https://skyvector.com/airport/EDDV/Hannover-Airport 
+   author: desnses 
+   source: flightsim.to 
+   date: 2020-10-14
+
+
+-  name: Kooralbyn Airport QLD 
+   icao:  
+   city: Kooralbyn 
+   country: Australia 
+   region: APAC 
+   url: https://flightsim.to/file/1753/ykbn-kooralbyn-airport-qld# 
+   skyvector:  
+   author: Milosanx 
+   source: flightsim.to 
+   date: 2020-10-14
+
+
+-  name: Floyd Bennett Memorial Airport 
+   icao: KGFL 
+   city: Glens Falls 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/1747/kgfl-floyd-bennett-memorial-airport-glens-falls-ny#
+   skyvector: https://skyvector.com/airport/GFL/Floyd-Bennett-Memorial-Airport 
+   author: JDiPierro 
+   source: flightsim.to 
+   date: 2020-10-14
+
+
+-  name: Le VERNET GLOS-LA-FERRIERE 
+   icao:  
+   city: Le Vernet 
+   country: France 
+   region: EMEA 
+   url: https://flightsim.to/file/1744/lf6161-le-vernet-glos-la-ferriere# 
+   skyvector:  
+   author: Totof33120 
+   source: flightsim.to 
+   date: 2020-10-14
+
+
+-  name: Ottawa Macdonald–Cartier Intl 
+   icao: CYOW 
+   city: Ottawa 
+   country: Canada 
+   region: EMEA 
+   url: https://flightsim.to/file/1741/ottawa-macdonald-cartier-intl-cyow# 
+   skyvector: https://skyvector.com/airport/CYOW/Ottawa-Macdonald-Cartier-International-Airport
+   author: desnses 
+   source: flightsim.to 
+   date: 2020-10-14
+
+
+-  name: Floyd Bennett Memorial Airport 
+   icao: KGFL 
+   city: Glens Falls 
+   country: United States 
+   region: AMER 
+   url: >
+      https://flightsim.to/file/1747/kgfl-floyd-bennett-memorial-airport-glens-falls-n
+      y#
+   
+   skyvector: https://skyvector.com/airport/GFL/Floyd-Bennett-Memorial-Airport 
+   author: JDiPierro 
+   source: flightsim.to 
+   date: 2020-10-14
+
+
+-  name: Airport (PAGK), Alaska 
+   icao: PAGK 
+   city: Gulkana 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/1828/gulkana-airport-pagk-alaska# 
+   skyvector: https://skyvector.com/airport/GKN/Gulkana-Airport 
+   author: DADGAMETIME 
+   source: flightsim.to 
+   date: 2020-10-15
+
+
+-  name: Muchowiec EPKM. 1.1.0 
+   icao: EPKM 
+   city: Kotowice 
+   country: Poland 
+   region: EMEA 
+   url: https://flightsim.to/file/1827/katowice-muchowiec-epkm-1-1-0# 
+   skyvector: https://skyvector.com/airport/EPKM/Katowice-Muchowiec-Airport 
+   author: ChrisMaver 
+   source: flightsim.to 
+   date: 2020-10-15
+
+
+-  name: Aeroporto de Caldas de Cipó 
+   icao: SNIO 
+   city: Caldas de Cipó  
+   country: Brazil 
+   region: AMER 
+   url: https://flightsim.to/file/1779/snio-aeroporto-de-caldas-de-cipo-ba# 
+   skyvector: https://skyvector.com/airport/SNIO/Cipo-Airport 
+   author: leandrocsousa 
+   source: flightsim.to 
+   date: 2020-10-15
+
+
+-  name: Aeroporto de Jequitinhonha 
+   icao: SNJQ 
+   city: Itaobim 
+   country: Brazil 
+   region: AMER 
+   url: https://flightsim.to/file/1778/snjq-aeroporto-de-jequitinhonha-mg# 
+   skyvector: https://skyvector.com/airport/SNJQ/Jequitinhonha-Airport 
+   author: leandrocsousa 
+   source: flightsim.to 
+   date: 2020-10-15
+
+
+-  name: Hohenems, Dornbirn 
+   icao: LOIH 
+   city: Dornbirn 
+   country: Austria 
+   region: EMEA 
+   url: https://flightsim.to/file/1866/loih-hohenems-dornbirn# 
+   skyvector: https://skyvector.com/airport/LOIH/Hohenems-Dornbirn-Airport 
+   author: Mikea.at 
+   source: flightsim.to 
+   date: 2020-10-16
+
+
+-  name: Cambridge Tower 
+   icao:  
+   city: Cambridge 
+   country: United Kingdom 
+   region: EMEA 
+   url: https://flightsim.to/file/1862/egsc-cambridge-tower# 
+   skyvector:  
+   author: keyser187 
+   source: flightsim.to 
+   date: 2020-10-16
+
+
+-  name: Notre Dame de la Salette LF3826 (LFPS) 
+   icao:  
+   city: Notre Dame 
+   country: France 
+   region: EMEA 
+   url: https://flightsim.to/file/1851/altisurface-notre-dame-de-la-salette-lf3826-lfps# 
+   skyvector:  
+   author: GibSim 
+   source: flightsim.to 
+   date: 2020-10-16
+
+
+-  name: Airport (EINN) 
+   icao: EINN 
+   city: Shannon 
+   country: Ireland 
+   region: EMEA 
+   url: https://flightsim.to/file/1847/shannon-airport-einn# 
+   skyvector: https://skyvector.com/airport/EINN/Shannon-Airport 
+   author: poxbottle 
+   source: flightsim.to 
+   date: 2020-10-16
+
+
+-  name: GCLP airport Gran Canaria 
+   icao: GCLP 
+   city: Las Palmas 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/1842/luces-aeropuerto-gran-canaria# 
+   skyvector: https://skyvector.com/airport/GCLP/Gran-Canaria-Airport 
+   author: AlexGCLP1977 
+   source: flightsim.to 
+   date: 2020-10-16
+
+
+-  name: Héliport du centre hospitalier de Verneuil sur Avre 
+   icao:  
+   city: Verneuil sur Avre 
+   country: France 
+   region: EMEA 
+   url: https://flightsim.to/file/1936/fr-0152-heliport-du-centre-hospitalier-de-verneuil-sur-avre#
+   skyvector:  
+   author: Totof33120 
+   source: flightsim.to 
+   date: 2020-10-17
+
+
+-  name: Aeropuerot Internacional de Carrasco
+   icao: SUMU 
+   city: Montevideo 
+   country: Uruguay 
+   region: AMER
+   url: https://flightsim.to/file/1935/aeropuerot-internacional-de-carrasco-sumu-montevideo-uruguay#
+   skyvector: https://skyvector.com/airport/SUMU/Montevideo-Carrasco-L-Berisso-Airport 
+   author: unTopo 
+   source: flightsim.to 
+   date: 2020-10-17
+
+
+-  name: ULM Bonneville le louvet 
+   icao:  
+   city: Bonneville 
+   country: France 
+   region: EMEA 
+   url: https://flightsim.to/file/1934/lf1422-ulm-bonneville-le-louvet# 
+   skyvector:  
+   author: Totof33120 
+   source: flightsim.to 
+   date: 2020-10-17
+
+
+-  name: Base ULM BERVILLE 
+   icao:  
+   city: Ulm 
+   country: France 
+   region: EMEA 
+   url: https://flightsim.to/file/1932/lf2722-base-ulm-berville# 
+   skyvector:  
+   author: Totof33120 
+   source: flightsim.to 
+   date: 2020-10-17
+
+
+-  name: Kiel-Holtenau 
+   icao: EDHK 
+   city: Kiel 
+   country: Germany 
+   region: EMEA 
+   url: https://flightsim.to/file/1920/edhk-kiel-holtenau# 
+   skyvector: https://skyvector.com/airport/EDHK/Kiel-Holtenau-Airport 
+   author: MrMo 
+   source: flightsim.to 
+   date: 2020-10-17
+
+
+-  name: Calcinate del Pesce 
+   icao: LILC 
+   city: Varese 
+   country: Italy 
+   region: EMEA 
+   url: https://flightsim.to/file/1954/lilc-calcinate-del-pesce# 
+   skyvector: https://skyvector.com/airport/LILC/Calcinate-Del-Pesce-Airport 
+   author: Jazz82 
+   source: flightsim.to 
+   date: 2020-10-18
+
+
+-  name: Żar Airport Aerial Photos & General Improvements 
+   icao: EPZR 
+   city: Międzybrodzie Żywieckie 
+   country: Poland 
+   region: EMEA 
+   url: https://flightsim.to/file/1948/epzr-zar-airport-aerial-photos-general-improvements#
+   skyvector: https://skyvector.com/airport/EPZR/Zar-Airport 
+   author: Mateusz 
+   source: flightsim.to 
+   date: 2020-10-18
+
+
+-  name: Bergen Airport 
+   icao: ENBR 
+   city: Bergen 
+   country: Norway 
+   region: EMEA 
+   url: https://flightsim.to/file/1946/enbr-bergen-airport-flesland# 
+   skyvector: https://skyvector.com/airport/ENBR/Bergen-Flesland-Airport 
+   author: WombiiActual 
+   source: flightsim.to 
+   date: 2020-10-18
+
+
+-  name: Doncaster Airport v0.4 
+   icao: EGCN 
+   city: Doncaster 
+   country: United Kingdom 
+   region: EMEA 
+   url: https://flightsim.to/file/1945/egcn-doncaster-airport-v0-4# 
+   skyvector: https://skyvector.com/airport/EGCN/Doncaster-Sheffield-Airport 
+   author: rmt1982 
+   source: flightsim.to 
+   date: 2020-10-18
+
+
+-  name: Helsinki-Vantaa Intl 
+   icao: EFHK 
+   city: Helsinki 
+   country: Finland 
+   region: EMEA 
+   url: https://flightsim.to/file/1944/helsinki-vantaa-intl-efhk# 
+   skyvector: https://skyvector.com/airport/EFHK/Helsinki-Vantaa-Airport 
+   author: desnses 
+   source: flightsim.to 
+   date: 2020-10-18
