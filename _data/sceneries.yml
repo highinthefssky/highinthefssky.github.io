@@ -345,7 +345,7 @@
 - name: Moncton Downtown
   city: Moncton
   country: Canada
-  region: APAC
+  region: AMER
   url: https://reddit.com/r/FS2020Creation/comments/im4phf/anyone_here_been_to_the_maritimes_downtown_moncton/
   author: Snyperwulf
   source: reddit
@@ -5435,7 +5435,7 @@
 -  name: Samuel De Champlain bridge, Montreal 
    city: Montreal 
    country: Canada 
-   region: EMEA 
+   region: AMER 
    url: https://flightsim.to/file/1295/samuel-de-champlain-bridge-montreal 
    author: MostlyRandom 
    source: flightsim.to 
@@ -6189,7 +6189,7 @@
 -  name: Laval Towers + Louis-Bisson bridge lightning 
    city: Montreal 
    country: Canada 
-   region: EMEA 
+   region: AMER 
    url: https://flightsim.to/file/1610/laval-towers-louis-bisson-bridge-lighning# 
    author: desnses 
    source: flightsim.to  
@@ -6199,7 +6199,7 @@
 -  name: Biosphere environmental museum 
    city: Montreal 
    country: Canada 
-   region: EMEA 
+   region: AMER 
    url: https://flightsim.to/file/1738/biosphere-environmental-museum-montreal# 
    author: MostlyRandom 
    source: flightsim.to  
@@ -6934,3 +6934,987 @@
    author: Thalixte 
    source: flightsim.to  
    date: 2020-10-18
+
+
+
+-  name: Estadio de la Cerámica (Villarreal Club de Fútbol) 
+   city: Villareal 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/2282/estadio-de-la-ceramica-villarreal-club-de-futbol 
+   author: miguelx 
+   source: flightsim.to
+   date: 2020-10-25
+
+
+-  name: Pack de Châteaux Belge , Belgium castle pack 
+   city:  
+   country: Belgium 
+   region: EMEA 
+   url: https://flightsim.to/file/2279/chateaux-belge-belgium-castle 
+   author: legofun1974 
+   source: flightsim.to
+   date: 2020-10-25
+
+
+-  name: Old Watertower 
+   city: Kalmar 
+   country: Sweden 
+   region: EMEA 
+   url: https://flightsim.to/file/2277/kalmar-old-watertower 
+   author: DrClaes 
+   source: flightsim.to
+   date: 2020-10-24
+
+
+-  name: Nelson Mandela Bridge(Johannesburg CBD) 
+   city: Johannesburg 
+   country: South Africa 
+   region: EMEA 
+   url: https://flightsim.to/file/2275/nelson-mandela-bridge-johannesburg-cbd 
+   author: JLR29 
+   source: flightsim.to
+   date: 2020-10-24
+
+
+-  name: Sheffield Meadowhall & Arena 
+   city: Sheffield 
+   country: United Kingdom 
+   region: EMEA 
+   url: https://flightsim.to/file/2273/sheffield-meadowhall-arena 
+   author: Coretsk 
+   source: flightsim.to
+   date: 2020-10-24
+
+
+-  name: TV and Radio transmitters of Czech Republic  
+   city:  
+   country: Czech Republic 
+   region: EMEA 
+   url: https://flightsim.to/file/2269/tv-and-radio-transmitters-of-czech-republic 
+   author: Vigomat 
+   source: flightsim.to
+   date: 2020-10-24
+
+
+-  name: Marina Baie des Anges  
+   city: Baie des Anges 
+   country: France 
+   region: EMEA 
+   url: https://flightsim.to/file/2265/marina-baie-des-anges 
+   author: eriktu 
+   source: flightsim.to
+   date: 2020-10-24
+
+
+-  name: Gallarate City 
+   city: Gallarate 
+   country: Italy 
+   region: EMEA 
+   url: https://flightsim.to/file/2257/gallarate-city-italy 
+   author: helluin75 
+   source: flightsim.to
+   date: 2020-10-24
+
+
+-  name: Estadio San Mamés (Athletic Club de Bilbao) Spain 
+   city: Bilbao 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/2248/estadio-san-mames-athletic-club-de-bilbao 
+   author: miguelx 
+   source: flightsim.to
+   date: 2020-10-24
+
+
+-  name: Arenas 
+   city:  
+   country: France 
+   region: EMEA 
+   url: https://flightsim.to/file/2241/eriktu-scenery-arenas 
+   author: eriktu 
+   source: flightsim.to
+   date: 2020-10-24
+
+
+-  name: Cap 3000 
+   city:  
+   country: France 
+   region: EMEA 
+   url: https://flightsim.to/file/2240/eriktu-scenery-cap3000 
+   author: eriktu 
+   source: flightsim.to
+   date: 2020-10-24
+
+
+-  name: Hungary Variety Pack V0.1 
+   city:  
+   country: Hungary 
+   region: EMEA 
+   url: https://flightsim.to/file/2235/hungary-variety-pack-v0-1 
+   author: matemate 
+   source: flightsim.to
+   date: 2020-10-24
+
+
+-  name: Midland 
+   city: Midland 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2230/michiganderflyer-midland 
+   author: Michiganderflyer 
+   source: flightsim.to
+   date: 2020-10-24
+
+
+-  name: HallRoad 
+   city: Sterling 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2227/michiganderflyer-hallroad 
+   author: Michiganderflyer 
+   source: flightsim.to
+   date: 2020-10-23
+
+
+-  name: San Sebastián 
+   city: San Sebastián 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/2226/san-sebastian 
+   author: carllevx 
+   source: flightsim.to
+   date: 2020-10-23
+
+
+-  name: Cedar Point 
+   city: Sandusky 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2224/michiganderflyer-cedarpoint 
+   author: Michiganderflyer 
+   source: flightsim.to
+   date: 2020-10-23
+
+
+-  name: Gornergrat 
+   city: Matterhorn 
+   country: Switzerland 
+   region: EMEA 
+   url: https://flightsim.to/file/2221/gornergrat 
+   author: musician262 
+   source: flightsim.to
+   date: 2020-10-23
+
+
+-  name: Mackinac Bridge 
+   city: Penisulas 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2220/michiganderflyer-bigmac 
+   author: Michiganderflyer 
+   source: flightsim.to
+   date: 2020-10-23
+
+
+-  name: Johannesburg CBD Pack1 
+   city: Johannesburg 
+   country: South Africa 
+   region: EMEA 
+   url: https://flightsim.to/file/2215/johannesburg-cbd-pack1 
+   author: JLR29 
+   source: flightsim.to
+   date: 2020-10-23
+
+
+-  name: Bomba Patch (Rio de Janeiro) 1.0 
+   city: Rio de Janeiro 
+   country: Brazil 
+   region: AMER 
+   url: https://flightsim.to/file/2213/bomba-patch-rio-de-janeiro-1-0 
+   author: subcomandante 
+   source: flightsim.to
+   date: 2020-10-23
+
+
+-  name: EDDK Enhanced Aerial Image 
+   city: Bonn 
+   country: Germany 
+   region: EMEA 
+   url: https://flightsim.to/file/2209/eddk-enhanced-aerial-image 
+   author: rofler 
+   source: flightsim.to
+   date: 2020-10-23
+
+
+-  name: Sanibel Lighthouse, Sanibel Island, Florida 
+   city: Sanibel 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2207/sanibel-lighthouse-sanibel-island-florida 
+   author: Tankminder (Tom G) 
+   source: flightsim.to
+   date: 2020-10-23
+
+
+-  name: Tulcea 
+   city: Tulcea 
+   country: Romania 
+   region: EMEA 
+   url: https://flightsim.to/file/2206/tulcea-romania 
+   author: dinamogabry 
+   source: flightsim.to
+   date: 2020-10-23
+
+
+-  name: Castello Monteriggioni 
+   city: Castello Moastello 
+   country: Italy 
+   region: EMEA 
+   url: https://flightsim.to/file/2204/castello-monteriggioni 
+   author: calos93 
+   source: flightsim.to
+   date: 2020-10-23
+
+
+-  name: Coventry UK landmarks 
+   city: Conventry 
+   country: United Kingdom 
+   region: EMEA 
+   url: https://flightsim.to/file/2203/coventry-uk-landmarks 
+   author: FlyingTheston 
+   source: flightsim.to
+   date: 2020-10-23
+
+
+-  name: Ramsgate 
+   city: Kent 
+   country: United Kingdom 
+   region: EMEA 
+   url: https://flightsim.to/file/2197/ramsgate 
+   author: Olmecslayer 
+   source: flightsim.to
+   date: 2020-10-23
+
+
+-  name: Project Coastline 
+   city:  
+   country: Italy 
+   region: EMEA 
+   url: https://flightsim.to/file/2196/project-coastline 
+   author: StefanoEte 
+   source: flightsim.to
+   date: 2020-10-23
+
+
+-  name: Illa de Arousa (Pontevedra) 
+   city: Pontevedra 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/2190/illa-de-arousa-pontevedra-spain 
+   author: carllevx 
+   source: flightsim.to
+   date: 2020-10-22
+
+
+-  name: Troy 
+   city: Troy 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2189/michiganderflyer-troy 
+   author: Michiganderflyer 
+   source: flightsim.to
+   date: 2020-10-22
+
+
+-  name: Estadio Martínez Valero (Elche Club de Fútbol) Spain 
+   city: Fútbol 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/2187/martinez-valero-elche-c-f 
+   author: miguelx 
+   source: flightsim.to
+   date: 2020-10-22
+
+
+-  name: Fortaleza del Cerro y Estadio Olímpico 
+   city: Montevideo 
+   country: Uruguay 
+   region: AMER 
+   url: https://flightsim.to/file/2184/fortaleza-del-cerro-y-estadio-olimpico-montevideo-uruguay
+   author: unTopo 
+   source: flightsim.to
+   date: 2020-10-22
+
+
+-  name: W.K. Kellogg 
+   city: Oklahoma 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2183/michiganderflyer-battlecrk 
+   author: Michiganderflyer 
+   source: flightsim.to
+   date: 2020-10-22
+
+
+-  name: Bern 
+   city: Bern 
+   country: Switzerland 
+   region: EMEA 
+   url: https://flightsim.to/file/2181/bern-switzerland 
+   author: marktaylor 
+   source: flightsim.to
+   date: 2020-10-22
+
+
+-  name: Port of Calais and town 
+   city: Calais 
+   country: France 
+   region: EMEA 
+   url: https://flightsim.to/file/2178/port-of-calais-and-town 
+   author: Olmecslayer 
+   source: flightsim.to
+   date: 2020-10-22
+
+
+-  name: Cap-Rouge trestle bridge, Quebec 
+   city: Quebec 
+   country: Canada 
+   region: AMER
+   url: https://flightsim.to/file/2175/cap-rouge-trestle-bridge-quebec 
+   author: MostlyRandom 
+   source: flightsim.to
+   date: 2020-10-22
+
+
+-  name: Kingsmead Cricket Stadium(Durban) 
+   city: Durban 
+   country: South Africa 
+   region: EMEA 
+   url: https://flightsim.to/file/2170/kingsmead-cricket-stadium-durban 
+   author: JLR29 
+   source: flightsim.to
+   date: 2020-10-22
+
+
+-  name: Estadio Nacional de Costa Rica 
+   city: La Sabana  
+   country: Costa Rica 
+   region: AMER 
+   url: https://flightsim.to/file/2167/estadio-nacional-de-costa-rica 
+   author: ARKA506 
+   source: flightsim.to
+   date: 2020-10-22
+
+
+-  name: Johannesburg Towers 
+   city: Johannesburg 
+   country: South Africa 
+   region: EMEA 
+   url: https://flightsim.to/file/2157/johannesburg-towers 
+   author: JLR29 
+   source: flightsim.to
+   date: 2020-10-22
+
+
+-  name: Herlev Hospital 
+   city: Herlev 
+   country: Denmark 
+   region: EMEA 
+   url: https://flightsim.to/file/2155/herlev-hospital 
+   author: chansen 
+   source: flightsim.to
+   date: 2020-10-22
+
+
+-  name: Manchester (UK) photogrammetry scenery (SOUTH P2) 
+   city: Manchester 
+   country: United Kingdom 
+   region: EMEA 
+   url: https://flightsim.to/file/2152/manchester-uk-photogrammetry-scenery-south-p2 
+   author: Mucka1 
+   source: flightsim.to
+   date: 2020-10-22
+
+
+-  name: Manchester (UK) photogrammetry scenery (part 1) 
+   city: Manchester 
+   country: United Kingdom 
+   region: EMEA 
+   url: https://flightsim.to/file/2151/manchester-uk-photogrammetry-scenery 
+   author: Mucka1 
+   source: flightsim.to
+   date: 2020-10-22
+
+
+-  name: Estadio Monumental Luis Tróccoli - Club Atlético Cerro 
+   city: Montevideo 
+   country: Uruguay 
+   region: AMER 
+   url: https://flightsim.to/file/2150/estadio-monumental-luis-troccoli-club-atletico-cerro-montevideo-uruguay
+   author: unTopo 
+   source: flightsim.to
+   date: 2020-10-22
+
+
+-  name: Bay City Electric Light and Power  
+   city: Bay City 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2139/michiganderflyer-baypower 
+   author: Michiganderflyer 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: B.C. Cobb coal plant 
+   city: Muskegon 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2138/michiganderflyer-muskegonpower 
+   author: Michiganderflyer 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Aldán(Cangas do Morrazo) 
+   city: Cangas do Morrazo Cangas 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/2136/aldan-cangas-do-morrazo 
+   author: carllevx 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Blackpool version 1 
+   city: Blackpool 
+   country: United Kingdom 
+   region: EMEA 
+   url: https://flightsim.to/file/2135/blackpool-version-1 
+   author: marktaylor 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Skyguide Radar 
+   city: Lägern 
+   country: Switzerland 
+   region: EMEA 
+   url: https://flightsim.to/file/2134/skyguide-radar-lagern-switzerland 
+   author: nils8107 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Nice 
+   city: Nice 
+   country: France 
+   region: EMEA 
+   url: https://flightsim.to/file/2133/nice 
+   author: Thalixte 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Newcastle South incl Angel of the North  
+   city: Newcastle 
+   country: United Kingdom 
+   region: EMEA 
+   url: https://flightsim.to/file/2130/newcastle-south-incl-angel-of-the-north 
+   author: marktaylor 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Betanzos 
+   city: Betanzos 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/2129/betanzos 
+   author: oscarastro 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Ria do Burgo (A Coruna) 
+   city: A Coruña 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/2128/ria-do-burgo-a-coruna 
+   author: oscarastro 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Meira (Moaña) 
+   city: Meira 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/2126/meira-moana-spain 
+   author: carllevx 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Mount Clemens 
+   city: Mount  Clemens 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2125/michiganderflyer-mtclemens 
+   author: Michiganderflyer 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Pontiac 
+   city: Pontiac 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2123/michiganderflyer-pontiac 
+   author: Michiganderflyer 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Ypsilanti 
+   city: Ypsilanti 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2122/michiganderflyer-ypsilanti 
+   author: Michiganderflyer 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Sault Locks 
+   city: Upper Peninsula 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2121/michiganderflyer-thelocks 
+   author: Michiganderflyer 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Klapperkop & Reservoirs(Pretoria) 
+   city: Pretoria 
+   country: South Africa 
+   region: EMEA 
+   url: https://flightsim.to/file/2119/klapperkop-reservoirs-pretoria 
+   author: JLR29 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Old Town "Altstadt" Heidelberg 
+   city: Heidelberg 
+   country: Germany 
+   region: EMEA 
+   url: https://flightsim.to/file/2113/old-town-altstadt-heidelberg 
+   author: multispeed 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Lukas Moripe Stadium(Atteridgeville) 
+   city: Atteridgeville 
+   country: South Africa 
+   region: EMEA 
+   url: https://flightsim.to/file/2111/lukas-moripe-stadium-atteridgeville 
+   author: JLR29 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Port of Rotterdam 
+   city: Rotterdam 
+   country: Netherlands 
+   region: EMEA 
+   url: https://flightsim.to/file/2110/port-of-rotterdam 
+   author: Tribalowski 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Centurion Buildings 1 
+   city: Sentrum 
+   country: South Africa 
+   region: EMEA 
+   url: https://flightsim.to/file/2108/centurion-buildings-1 
+   author: JLR29 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Ikebukuro, Toshima City, Tokyo Japan 
+   city: Tokyo 
+   country: Japan 
+   region: APAC 
+   url: https://flightsim.to/file/2105/ikebukuro-toshima-city-tokyo-japan 
+   author: FreakyD 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Absecon Lighthouse, Atlantic City, NJ 
+   city: Atlantic City 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2102/absecon-lighthouse-atlantic-city-nj 
+   author: Tankminder (Tom G) 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Port of Antwerp 
+   city: Antwerp 
+   country: Belgium 
+   region: EMEA 
+   url: https://flightsim.to/file/2094/port-of-antwerp 
+   author: Olmecslayer 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Vitrolles RADAR DOME which dominates Marseille-Marignane airport (LFML) 
+   city: Mareseille 
+   country: France 
+   region: EMEA 
+   url: >
+      https://flightsim.to/file/2091/vitrolles-radar-dome-which-dominates-marseille-ma
+      rignane-airport-lfml
+   
+   author: lionhellll 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: A Coruna City 
+   city: Coruna 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/2089/a-coruna-city 
+   author: oscarastro 
+   source: flightsim.to
+   date: 2020-10-21
+
+
+-  name: Linz, Austria - Photogrammetry 
+   city: Austria 
+   country: Austria 
+   region: EMEA 
+   url: https://flightsim.to/file/2086/linz-austria-photogrammetry 
+   author: Troglodytus 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Karaiskaki stadium - Piraeus (Olympiakos FC) 
+   city: Piraeus 
+   country: Greece 
+   region: EMEA 
+   url: https://flightsim.to/file/2085/karaiskaki-stadium-piraeus-olympiakos-fc 
+   author: makgreek 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Vilanova de Arousa 
+   city: Vollanova de Arousa 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/2082/vilanova-de-arousa 
+   author: carllevx 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Cambados 
+   city: Cambados 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/2072/cambados-spain 
+   author: carllevx 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Bochum Stadium (VfL Bochum) Germany 
+   city: Bochum 
+   country: Germany 
+   region: EMEA 
+   url: https://flightsim.to/file/2071/bochum-stadium-vfl-bochum-germany 
+   author: gewa2001 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Port of Hamburg 
+   city: Hamburg 
+   country: Germany 
+   region: EMEA 
+   url: https://flightsim.to/file/2069/port-of-hamburg 
+   author: Tribalowski 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Barnegat Lighthouse, Barnegat Light, New Jersey  
+   city: New Jersey 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2068/barnegat-lighthouse-barnegat-light-new-jersey 
+   author: Tankminder (Tom G) 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Cape May Lighthouse, Cape May New Jersey 
+   city: New Jersey 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2067/cape-may-lighthouse-cape-may-new-jersey 
+   author: Tankminder (Tom G) 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Viareggio 
+   city: Viareggio 
+   country: Italy 
+   region: EMEA 
+   url: https://flightsim.to/file/2063/italy-viareggio 
+   author: IlParaCapo 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Montevideo,city landmarks 2 
+   city: Montevideo 
+   country: Uruguay 
+   region: AMER 
+   url: https://flightsim.to/file/2060/montevideo-city-landmarks-2 
+   author: santymetal23 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Durban Buildings Pack 2 
+   city: Durban 
+   country: South Africa 
+   region: EMEA 
+   url: https://flightsim.to/file/2059/durban-buildings-pack-2 
+   author: JLR29 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Durban Station 
+   city: Durban 
+   country: South Africa 
+   region: EMEA 
+   url: https://flightsim.to/file/2057/durban-station 
+   author: JLR29 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Montevideo,city landmarks1 
+   city: Montevideo 
+   country: Uruguay 
+   region: AMER 
+   url: https://flightsim.to/file/2055/montevideo-city-landmarks1 
+   author: santymetal23 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Palacio Legislativo 
+   city: Montevideo 
+   country: Uruguay 
+   region: AMER 
+   url: https://flightsim.to/file/2052/palacio-legislativo-montevideo-uruguay 
+   author: unTopo 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Montevideo, landmarks buceo 
+   city: Montevideo 
+   country: Uruguay 
+   region: AMER 
+   url: https://flightsim.to/file/2049/montevideo-landmarks-buceo 
+   author: santymetal23 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Derriford Hospital. 
+   city: Derriford 
+   country: United Kingdom 
+   region: EMEA 
+   url: https://flightsim.to/file/2048/derriford-hospital 
+   author: Tackleberry1978 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Michiganderflyer-AutoTour 
+   city: Detroit 
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2043/michiganderflyer-autotour 
+   author: Michiganderflyer 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Heidelberg Castle 
+   city: Heidelberg 
+   country: Germany 
+   region: EMEA 
+   url: https://flightsim.to/file/2042/heidelberg-castle 
+   author: multispeed 
+   source: flightsim.to
+   date: 2020-10-20
+
+
+-  name: Plymouth Hoe 
+   city: Plymouth Hoe 
+   country: United Kingdom 
+   region: EMEA 
+   url: https://flightsim.to/file/2040/plymouth-hoe 
+   author: Tackleberry1978 
+   source: flightsim.to
+   date: 2020-10-19
+
+
+-  name: Aarhus 
+   city: Aarhus 
+   country: Denmark 
+   region: EMEA 
+   url: https://flightsim.to/file/2038/arhus-denmark 
+   author: gnom1539 
+   source: flightsim.to
+   date: 2020-10-19
+
+
+-  name: Central termica de barcena ubicada en ponferrada, en la provincia de leon (España)
+   city:  
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/2037/central-termica-de-barcena-ubicada-en-ponferrada-en-la-provincia-de-leon-espana
+   author: roberweb 
+   source: flightsim.to
+   date: 2020-10-19
+
+
+-  name: VFRPack2 South-West Poland  
+   city:  
+   country: Poland 
+   region: EMEA 
+   url: https://flightsim.to/file/2036/vfrpack2-south-west-poland 
+   author: Tolo303sq 
+   source: flightsim.to
+   date: 2020-10-19
+
+
+-  name: Michiganderflyer-Bluewater 
+   city:  
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2034/michiganderflyer-bluewater 
+   author: Michiganderflyer 
+   source: flightsim.to
+   date: 2020-10-19
+
+
+-  name: Michiganderfler-Fermi2 
+   city:  
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2033/michiganderfler-fermi2 
+   author: Michiganderflyer 
+   source: flightsim.to
+   date: 2020-10-19
+
+
+-  name: Cangas do Morrazo 
+   city: Cangas do Morrazo 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/2029/cangas-do-morrazo-spain 
+   author: carllevx 
+   source: flightsim.to
+   date: 2020-10-19
+
+
+-  name: Mersey Gateway 
+   city: Runcorn 
+   country: United Kingdom 
+   region: EMEA 
+   url: https://flightsim.to/file/2021/mersey-gateway 
+   author: skell300 
+   source: flightsim.to
+   date: 2020-10-19
+
+
+-  name: EGGP approach 
+   city: Liverpool 
+   country: United Kingdom 
+   region: EMEA 
+   url: https://flightsim.to/file/2020/eggp-approach 
+   author: skell300 
+   source: flightsim.to
+   date: 2020-10-19
+
+
+-  name: Port Aventura World 
+   city: Salou 
+   country: Spain 
+   region: EMEA 
+   url: https://flightsim.to/file/2015/port-aventura-world 
+   author: DroidG 
+   source: flightsim.to
+   date: 2020-10-19
+
+
+-  name: Belém 
+   city: Belém 
+   country: Brazil 
+   region: AMER 
+   url: https://flightsim.to/file/2013/belem-pa-brazil-1-0 
+   author: pedrohpaiva 
+   source: flightsim.to
+   date: 2020-10-19
+
+
+-  name: Mega Porto Alegre 
+   city: Porto Alegre 
+   country: Brazil 
+   region: AMER 
+   url: https://flightsim.to/file/2011/mega-porto-alegre 
+   author: Lipe - Vinicius - Lee 
+   source: flightsim.to
+   date: 2020-10-19
+
+
+-  name: Devils tower close encounters 
+   city:  
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2006/devils-tower-close-encounters 
+   author: Noshadez 
+   source: flightsim.to
+   date: 2020-10-19
+
+
+-  name: Grand canyon skywalk 
+   city:  
+   country: United States 
+   region: AMER 
+   url: https://flightsim.to/file/2005/grand-canyon-skywalk 
+   author: Noshadez 
+   source: flightsim.to
+   date: 2020-10-19
