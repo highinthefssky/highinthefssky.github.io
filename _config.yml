@@ -36,7 +36,7 @@ target-blank:
     rel: nofollow
 
 # define links for header
-header_page_refs: ['addons', 'categories', 'about']
+header_page_refs: ['categories', 'about']
 
 # disable showing future posts
 future: false
