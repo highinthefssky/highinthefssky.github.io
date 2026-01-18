@@ -23,7 +23,7 @@ async function fetchVideos() {
 
     // Get uploads playlist ID
     const channelResponse = await fetch(
-      `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&forUsername=${YOUTUBE_CHANNEL_ID}&key=${YOUTUBE_API_KEY}`
+      `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${YOUTUBE_CHANNEL_ID}&key=${YOUTUBE_API_KEY}`
     );
 
     if (!channelResponse.ok) {
