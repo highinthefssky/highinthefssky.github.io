@@ -135,7 +135,20 @@ async function fetchVideos() {
     }
 
     const videos = videosData.items
-      .filter((item) => item.id && item.snippet) // Only process videos with required data
+      .filter((item) => {
+        if (!item.id || !item.snippet) {
+          console.log(`⚠️ Skipping video: missing id or snippet`);
+          return false;
+        }
+
+        const duration = parseDuration(item.contentDetails?.duration || 'PT0S');
+        if (duration <= 0) {
+          console.log(`⚠️ Skipping video ${item.id}: invalid duration (${item.contentDetails?.duration || 'unknown'} → ${duration}s)`);
+          return false;
+        }
+
+        return true;
+      })
       .map((item) => {
         console.log(`🔄 Processing video: ${item.id}`);
 
@@ -163,7 +176,7 @@ async function fetchVideos() {
     const endTime = Date.now();
     const duration = (endTime - startTime) / 1000;
 
-    console.log(`\n🎉 Successfully processed ${videos.length} videos (${videosData.items.length - videos.length} skipped due to missing data)`);
+    console.log(`\n🎉 Successfully processed ${videos.length} videos (${videosData.items.length - videos.length} skipped due to missing/invalid data)`);
     console.log(`⏱️ Total execution time: ${duration.toFixed(2)} seconds`);
     console.log(`📊 Videos saved to: ${VIDEOS_DIR}`);
 
@@ -180,8 +193,8 @@ function parseDuration(duration) {
   // PT1H2M3S -> seconds
   const match = duration.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
   if (!match) {
-    console.log(`⚠️ Could not parse duration: ${duration}, defaulting to 0`);
-    return 0;
+    console.log(`⚠️ Could not parse duration: ${duration}, defaulting to 1 second`);
+    return 1; // Return minimum 1 second instead of 0
   }
 
   const hours = parseInt(match[1] || '0');
@@ -189,8 +202,11 @@ function parseDuration(duration) {
   const seconds = parseInt(match[3] || '0');
   const totalSeconds = hours * 3600 + minutes * 60 + seconds;
 
-  console.log(`✅ Parsed duration: ${duration} → ${totalSeconds} seconds`);
-  return totalSeconds;
+  // Ensure minimum duration of 1 second
+  const finalDuration = Math.max(totalSeconds, 1);
+
+  console.log(`✅ Parsed duration: ${duration} → ${finalDuration} seconds`);
+  return finalDuration;
 }
 
 console.log('\n🎬 Starting video fetch execution...');
