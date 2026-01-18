@@ -17,6 +17,13 @@ if (!YOUTUBE_API_KEY || !YOUTUBE_CHANNEL_ID) {
   process.exit(1);
 }
 
+// Validate channel ID format (should start with UC and be 24 characters)
+if (!YOUTUBE_CHANNEL_ID.startsWith('UC') || YOUTUBE_CHANNEL_ID.length !== 24) {
+  console.error(`Error: YOUTUBE_CHANNEL_ID should be a valid channel ID starting with 'UC' (got: ${YOUTUBE_CHANNEL_ID})`);
+  console.error('Channel IDs look like: UC1234567890abcdef...');
+  process.exit(1);
+}
+
 async function fetchVideos() {
   try {
     console.log('Fetching videos from YouTube API...');
@@ -27,10 +34,18 @@ async function fetchVideos() {
     );
 
     if (!channelResponse.ok) {
-      throw new Error(`YouTube API error: ${channelResponse.statusText}`);
+      const errorText = await channelResponse.text();
+      console.error('YouTube API error response:', errorText);
+      throw new Error(`YouTube API error: ${channelResponse.status} ${channelResponse.statusText}`);
     }
 
     const channelData = await channelResponse.json();
+    
+    if (!channelData.items || channelData.items.length === 0) {
+      console.error('Channel not found or API response invalid:', JSON.stringify(channelData, null, 2));
+      throw new Error(`Channel with ID "${YOUTUBE_CHANNEL_ID}" not found or API key invalid`);
+    }
+    
     const uploadsPlaylistId = channelData.items[0].contentDetails.relatedPlaylists.uploads;
 
     // Get videos from playlist
