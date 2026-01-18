@@ -10,9 +10,3 @@ collections:
   series:
     output: true
     permalink: /series/:slug/
-
-markdown: kramdown
-
-plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
