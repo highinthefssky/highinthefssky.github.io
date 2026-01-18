@@ -96,29 +96,31 @@ async function fetchVideos() {
       console.log(`Created videos directory: ${VIDEOS_DIR}`);
     }
 
-    const videos = videosData.items.map((item) => {
-      const duration = parseDuration(item.contentDetails.duration);
-      const filename = `${item.id}.json`;
-      const filePath = path.join(VIDEOS_DIR, filename);
+    const videos = videosData.items
+      .filter((item) => item.id && item.snippet) // Only process videos with required data
+      .map((item) => {
+        const duration = parseDuration(item.contentDetails?.duration || 'PT0S');
+        const filename = `${item.id}.json`;
+        const filePath = path.join(VIDEOS_DIR, filename);
 
-      const videoData = {
-        videoId: item.id,
-        title: item.snippet.title,
-        description: item.snippet.description,
-        thumbnail: item.snippet.thumbnails.medium.url,
-        publishedAt: new Date(item.snippet.publishedAt).toISOString(),
-        duration: duration,
-        tags: item.snippet.tags || [],
-        featured: false,
-      };
+        const videoData = {
+          videoId: item.id,
+          title: item.snippet?.title || 'Untitled Video',
+          description: item.snippet?.description || '',
+          thumbnail: item.snippet?.thumbnails?.medium?.url || item.snippet?.thumbnails?.default?.url || '',
+          publishedAt: item.snippet?.publishedAt ? new Date(item.snippet.publishedAt).toISOString() : new Date().toISOString(),
+          duration: duration,
+          tags: item.snippet?.tags || [],
+          featured: false,
+        };
 
       fs.writeFileSync(filePath, JSON.stringify(videoData, null, 2));
-      console.log(`✓ Saved: ${filename}`);
+      console.log(`✓ Saved: ${filename} - "${videoData.title}"`);
 
       return videoData;
     });
 
-    console.log(`\n✓ Successfully fetched and saved ${videos.length} videos`);
+    console.log(`\n✓ Successfully processed ${videos.length} videos (${videosData.items.length - videos.length} skipped due to missing data)`);
   } catch (error) {
     console.error('Error fetching videos:', error.message);
     process.exit(1);
