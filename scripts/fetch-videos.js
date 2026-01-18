@@ -46,8 +46,14 @@ async function fetchVideos() {
       throw new Error(`Channel with ID "${YOUTUBE_CHANNEL_ID}" not found or API key invalid`);
     }
     
-    console.log(`Found channel: ${channelData.items[0].snippet.title}`);
-    const uploadsPlaylistId = channelData.items[0].contentDetails.relatedPlaylists.uploads;
+    console.log(`Found channel: ${channelData.items[0].snippet?.title || 'Unknown Channel'}`);
+    const uploadsPlaylistId = channelData.items[0].contentDetails?.relatedPlaylists?.uploads;
+    
+    if (!uploadsPlaylistId) {
+      console.error('Channel does not have an uploads playlist');
+      throw new Error(`Channel "${YOUTUBE_CHANNEL_ID}" does not have an uploads playlist`);
+    }
+    
     console.log(`Uploads playlist ID: ${uploadsPlaylistId}`);
 
     // Get videos from playlist
