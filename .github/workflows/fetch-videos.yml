@@ -34,17 +34,30 @@ jobs:
       - name: Check for changes
         id: check-changes
         run: |
-          if git diff --quiet src/content/videos/; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
+          echo "🔍 Checking for video file changes..."
+          echo "📁 Videos directory contents:"
+          ls -la src/content/videos/ || echo "Directory not found or empty"
+
+          # Check if there are any new or modified files in the videos directory
+          if git status --porcelain src/content/videos/ | grep -q .; then
+            echo "📝 Found changes in videos directory"
+            git status --porcelain src/content/videos/
             echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "📭 No changes in videos directory"
+            echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Commit changes
         if: steps.check-changes.outputs.changed == 'true'
         run: |
+          echo "💾 Committing video changes..."
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          echo "📋 Files to be committed:"
           git add src/content/videos/
+          git status --porcelain
           git commit -m "chore: update videos from YouTube API"
+          echo "🚀 Pushing changes..."
           git push
+          echo "✅ Changes committed and pushed successfully"
