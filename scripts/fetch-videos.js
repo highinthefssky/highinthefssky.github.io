@@ -46,7 +46,9 @@ async function fetchVideos() {
       throw new Error(`Channel with ID "${YOUTUBE_CHANNEL_ID}" not found or API key invalid`);
     }
     
+    console.log(`Found channel: ${channelData.items[0].snippet.title}`);
     const uploadsPlaylistId = channelData.items[0].contentDetails.relatedPlaylists.uploads;
+    console.log(`Uploads playlist ID: ${uploadsPlaylistId}`);
 
     // Get videos from playlist
     const playlistResponse = await fetch(
@@ -54,10 +56,19 @@ async function fetchVideos() {
     );
 
     if (!playlistResponse.ok) {
-      throw new Error(`YouTube API error: ${playlistResponse.statusText}`);
+      const errorText = await playlistResponse.text();
+      console.error('Playlist API error response:', errorText);
+      throw new Error(`YouTube API playlist error: ${playlistResponse.status} ${playlistResponse.statusText}`);
     }
 
     const playlistData = await playlistResponse.json();
+    
+    if (!playlistData.items || playlistData.items.length === 0) {
+      console.log('No videos found in uploads playlist');
+      return; // Exit gracefully if no videos
+    }
+    
+    console.log(`Found ${playlistData.items.length} videos in playlist`);
 
     // Fetch detailed info for each video
     const videoIds = playlistData.items.map((item) => item.contentDetails.videoId);
@@ -70,11 +81,19 @@ async function fetchVideos() {
     }
 
     const videosData = await videosResponse.json();
+    
+    if (!videosData.items || videosData.items.length === 0) {
+      console.log('No video details retrieved from YouTube API');
+      return; // Exit gracefully if no video details
+    }
+    
+    console.log(`Processing ${videosData.items.length} video details`);
 
     // Transform and save videos
     // Ensure video directory exists
     if (!fs.existsSync(VIDEOS_DIR)) {
       fs.mkdirSync(VIDEOS_DIR, { recursive: true });
+      console.log(`Created videos directory: ${VIDEOS_DIR}`);
     }
 
     const videos = videosData.items.map((item) => {
