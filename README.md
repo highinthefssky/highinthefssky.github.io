@@ -1,257 +1,224 @@
-# High in the Sky - YouTube Video & Community Hub
+# The Cayman Blog theme
 
-A beautiful, performant static site built with Astro for showcasing YouTube videos and community posts. Features a carousel, full-text search, RSS feed, and responsive design.
+[![Build Status](https://travis-ci.org/lorepirri/cayman-blog.svg?branch=master)](https://travis-ci.org/lorepirri/cayman-blog) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-cayman-blog.svg)](https://badge.fury.io/rb/jekyll-theme-cayman-blog)
 
-## 🌟 Features
+*Cayman Blog is a Jekyll theme for GitHub Pages. It is based on the nice [Cayman theme](https://pages-themes.github.io/cayman/), with blogging features added. You can [preview the theme to see what it looks like](http://lorepirri.github.io/cayman-blog), or even [use it today](#usage).*
 
-- **Video Showcase**: Display YouTube videos with automatic thumbnail and metadata fetching
-- **Featured Carousel**: Eye-catching carousel of featured videos on the homepage
-- **Community Posts**: Markdown-based blog for community updates and discussions
-- **Full-Text Search**: Fast client-side search across video titles and descriptions
-- **Tag Filtering**: Filter content by tags for better discoverability
-- **RSS Feed**: Subscribe to latest videos and posts via RSS
-- **Activity Feed**: Timeline view of latest videos and posts
-- **Responsive Design**: Mobile-first, works beautifully on all devices
-- **Dark Mode Ready**: Tailwind CSS configuration ready for theme customization
-- **Fast & Static**: Built on Astro for sub-2s load times
-- **GitHub Pages Ready**: Automatic deployment via GitHub Actions
+<img src="https://raw.githubusercontent.com/lorepirri/cayman-blog/master/thumbnail.png" alt="Thumbnail of cayman-blog" style="max-width:30%; border: 1px solid grey;"/> <img src="https://raw.githubusercontent.com/lorepirri/cayman-blog/master/thumbnail-mobile.gif" alt="Thumbnail of cayman-blog for mobile" style="max-width:30%;"/>
 
-## 🚀 Quick Start
+## Install
 
-### Prerequisites
+Cayman Blog Theme has been developed as a Jekyll theme gem for easier use. It is also 100% compatible with GitHub Pages — just with a more involved installation process according to whether you’re _running Jekyll v3.3+ and self-hosting_, or if you’re *hosting with GitHub Pages*.
 
-- Node.js 18 or higher
-- npm or yarn
-- GitHub repository
+## Self hosting
 
-### Installation
+If you’re running Jekyll v3.3+ and **self-hosting** you can quickly install the theme as Ruby gem:
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/highinthefssky.github.io.git
-cd highinthefssky.github.io
+1. Add this line to your Jekyll site’s Gemfile:
 
-# Install dependencies
-npm install
+    ```
+    gem "jekyll-theme-cayman-blog"
+    ```
 
-# Create environment variables
-cp .env.local.example .env.local
+2. Add this line to your Jekyll site’s _config.yml file:
+
+    ```
+    theme: jekyll-theme-cayman-blog
+    ```
+
+3. Then run Bundler to install the theme gem and dependencies:
+
+    ```
+    script/bootstrap
+    ```
+
+## Hosting with GitHub Pages
+
+If you’re *hosting your blog with GitHub Pages* you’ll have to consider this:
+
+:warning: As stated in the official [Jekyll documentation](https://jekyllrb.com/docs/themes/#installing-a-theme):
+
+> If you’re publishing your Jekyll site on [GitHub Pages](https://pages.github.com/), note that GitHub Pages supports only some gem-based themes. See [Supported Themes](https://pages.github.com/themes/) in GitHub’s documentation to see which themes are supported.
+
+Therefore, this theme, as well as many others, can not be installed in the same way as the ones officially supported by GitHub Pages (e.g. Cayman, Minima), a bit more effort has to be put on.
+
+The easiest way I found to install _Cayman Blog Theme_, is [installing the theme gem](gem-install), and then [converting the gem-based theme to regular theme](https://jekyllrb.com/docs/themes/#converting-gem-based-themes-to-regular-themes).
+
+Alternatively, for new projects, one could fork the whole theme, and keep only the interesting files.
+
+
+### Gem Install
+
+This method is preferred for existing _Jekyll blogs_, as well as newly created ones. Notice that the files `index.md`, `about.md`, `contact.md` will be overwritten (only `index.md` is really needed, the other two are just placeholders).
+
+1. Install the theme gem: ` $ gem install jekyll-theme-cayman-blog`
+3. Run `$ gem env gemdir` to know where the gem was installed
+4. Open the folder shown in the output
+5. Open the folder `gems`
+5. Open the theme folder (e.g. `jekyll-theme-cayman-blog-0.0.5`)
+6. Copy all the files into your newly created or existing blog folder    
+7. Leave empty `theme` your site's `_config.yml`:
+
+    ```yml
+    theme:
+    ```
+6. Modify `_config.yml`, `about.md`, `contact.md` for your project
+7. [Customize the theme](customizing)
+
+### Install as a Fork
+
+1. [Fork the repo](https://github.com/lorepirri/cayman-blog)
+2. Clone down the repo with `$ git clone git@github.com:username/reponame.git`
+3. Delete the `screenshot.png` and `screenshot-mobile.png` files
+3. Empty the `_posts` folder
+4. Install bundler and gems with `$ script/bootstrap`
+5. Run Jekyll with `$ bundle exec jekyll serve`
+6. Modify `_config.yml`, `about.md`, `contact.md`, and `now.md` for your project
+7. [Customize the theme](customizing)
+
+## Customizing
+
+### Configuration variables
+
+Cayman Blog will respect the following variables, if set in your site's `_config.yml`:
+
+```yml
+title: [The title of your site]
+description: [A short description of your site's purpose]
 ```
 
-### Configuration
+Additionally, you may choose to set the following optional variables:
 
-Add your YouTube credentials to `.env.local`:
-
-```env
-YOUTUBE_API_KEY=your_youtube_api_key
-YOUTUBE_CHANNEL_ID=your_channel_id
+```yml
+show_downloads: ["true" or "false" to indicate whether to provide a download URL]
+google_analytics: [Your Google Analytics tracking ID]
 ```
 
-### Development
+### RSS feeds
 
-```bash
-# Start dev server with hot reload
-npm run dev
+To enable RSS feeds and also make visible an RSS feeds button in the footer, the [Jekyll Feed plugin](https://github.com/jekyll/jekyll-feed) must be installed.
 
-# Build for production
-npm run build
+Add this line to your site's Gemfile:
 
-# Preview production build locally
-npm run preview
+```ruby
+gem 'jekyll-feed'
 ```
 
-Visit `http://localhost:3000` to see your site.
+And then add this line to your site's `_config.yml`:
 
-## 📁 Project Structure
-
-```
-.
-├── src/
-│   ├── components/           # Reusable UI components
-│   │   ├── Navigation.astro
-│   │   ├── Carousel.astro
-│   │   ├── VideoCard.astro
-│   │   └── PostCard.astro
-│   ├── content/              # Content collections
-│   │   ├── config.ts         # Content schemas
-│   │   ├── videos/           # Video data (JSON)
-│   │   └── posts/            # Community posts (Markdown)
-│   ├── layouts/
-│   │   └── BaseLayout.astro  # Main layout wrapper
-│   ├── pages/                # Route pages (auto-generated)
-│   │   ├── index.astro       # Homepage
-│   │   ├── videos.astro      # Videos page
-│   │   ├── search.astro      # Search page
-│   │   ├── posts.astro       # Community posts list
-│   │   ├── posts/[slug].astro # Individual post page
-│   │   ├── feed.astro        # Activity feed
-│   │   └── feed.xml.ts       # RSS feed endpoint
-│   ├── styles/
-│   │   └── global.css        # Global Tailwind styles
-│   └── utils/
-│       └── searchVideos.ts   # Search utilities
-├── scripts/
-│   └── fetch-videos.js       # YouTube API integration
-├── .github/
-│   └── workflows/
-│       ├── deploy.yml        # GitHub Pages deployment
-│       └── fetch-videos.yml  # Daily video sync
-├── astro.config.mjs          # Astro configuration
-├── tailwind.config.js        # Tailwind CSS configuration
-└── package.json
+```yml
+plugins:
+  - jekyll-feed
 ```
 
-## 📝 Adding Content
+:warning: If you are using Jekyll < 3.5.0 use the `gems` key instead of `plugins`.
 
-### Videos
+For more information about configuring this plugin, see the official [Jekyll Feed plugin](https://github.com/jekyll/jekyll-feed) page.
 
-Videos are automatically fetched from YouTube via GitHub Actions daily. To add a video manually:
+### SEO tags
 
-```json
-// src/content/videos/videoId.json
-{
-  "videoId": "dQw4w9WgXcQ",
-  "title": "Video Title",
-  "description": "Video description",
-  "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg",
-  "publishedAt": "2024-01-15",
-  "duration": 180,
-  "tags": ["tutorial", "javascript"],
-  "featured": true
-}
+Cayman Blog includes simple SEO tags from [jekyll-social-metatags](https://github.com/lorepirri/jekyll-social-metatags). Have a look at the page for its usage.
+
+The usage is compatible with the plugin [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag), which provides a battle-tested template of crowdsourced best-practices.
+
+To switch to a better SEO tags however, one should install [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag):
+
+1. Add this line to your site's Gemfile:
+
+    ```ruby
+    gem 'jekyll-seo-tag'
+    ```
+
+2. And then add this line to your site's `_config.yml`:
+
+    ```yml
+    plugins:
+      - jekyll-seo-tag
+    ```
+
+3. Replace with the following, the `<!-- jekyll-seo-tag -->` comment in your site's `default.html`:
+
+      ```liquid
+      {% seo %}
+      ```
+
+For more information about configuring this plugin, see the official [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag) page.
+
+
+### Stylesheet
+
+If you'd like to add your own custom styles:
+
+1. Create a file called `/assets/css/style.scss` in your site
+2. Add the following content to the top of the file, exactly as shown:
+    ```scss
+    ---
+    ---
+
+    @import "{{ site.theme }}";
+    ```
+3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
+
+*Note: If you'd like to change the theme's Sass variables, you must set new values before the `@import` line in your stylesheet.*
+
+### Layouts
+
+If you'd like to change the theme's HTML layout:
+
+1. [Copy the original template](https://github.com/lorepirri/cayman-blog/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
+2. Create a file called `/_layouts/default.html` in your site
+3. Paste the default layout content copied in the first step
+4. Customize the layout as you'd like
+
+### Sass variables
+
+If you'd like to change the theme's [Sass variables](https://github.com/lorepirri/cayman-blog/blob/master/_sass/variables.scss), set new values before the `@import` line in your stylesheet:
+
+```scss
+$section-headings-color: #0086b3;
+
+@import "{{ site.theme }}";
 ```
 
-### Community Posts
+### Overriding GitHub-generated URLs
 
-Create Markdown files in `src/content/posts/`:
+Templates often rely on URLs supplied by GitHub such as links to your repository or links to download your project. If you'd like to override one or more default URLs:
 
-```markdown
----
-title: "Post Title"
-description: "Short summary"
-publishedAt: 2024-01-15
-tags: ["announcement", "update"]
-draft: false
----
+1. Look at [the template source](https://github.com/lorepirri/cayman-blog/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
+2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
+    ```yml
+    github:
+      zip_url: http://example.com/download.zip
+      another_url: another value
+    ```
+3. When your site is built, Jekyll will use the URL you specified, rather than the default one provided by GitHub.
 
-# Post content using Markdown...
-```
+*Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+For more information, see [the Jekyll variables documentation](https://jekyllrb.com/docs/variables/).
 
-## 🔧 Configuration
+## Roadmap
 
-### YouTube API
+See the [open issues](https://github.com/lorepirri/cayman-blog/issues) for a list of proposed features (and known issues).
 
-1. Create a project in [Google Cloud Console](https://console.cloud.google.com/)
-2. Enable YouTube Data API v3
-3. Create an API key
-4. Add to `.env.local` as `YOUTUBE_API_KEY`
+## Project philosophy
 
-### GitHub Secrets
+The Cayman Blog theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
 
-For automated video fetching, set secrets in repository settings:
+## Contributing
 
-- `YOUTUBE_API_KEY`: Your YouTube API key
-- `YOUTUBE_CHANNEL_ID`: Your channel ID
+Interested in contributing to Cayman Blog? We'd love your help. Cayman Blog is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
 
-### Tailwind CSS
+### Previewing the theme locally
 
-Customize colors and theme in `tailwind.config.js`:
+If you'd like to preview the theme locally (for example, in the process of proposing a change):
 
-```javascript
-theme: {
-  extend: {
-    colors: {
-      primary: 'hsl(213, 94%, 47%)',
-      secondary: '#764ba2',
-    },
-  },
-}
-```
+1. Clone down the theme's repository (`git clone https://github.com/lorepirri/cayman-blog`)
+2. `cd` into the theme's directory
+3. Run `script/bootstrap` to install the necessary dependencies
+4. Run `bundle exec jekyll serve` to start the preview server
+5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
 
-## 📊 Performance
+### Running tests
 
-- **PageSpeed Insights**: 90+ score
-- **Homepage Load Time**: < 2s
-- **Search Response**: < 200ms
-- **Build Time**: < 2s
-- **Static Output**: No server required
-
-## 🌐 Deployment
-
-### GitHub Pages
-
-Push to `main` branch to automatically deploy:
-
-1. GitHub Actions runs tests
-2. Builds static site
-3. Deploys to GitHub Pages
-4. Accessible at `yourusername.github.io`
-
-### Custom Domain
-
-1. Add `CNAME` file to repo root with your domain
-2. Configure DNS to point to GitHub Pages
-3. Enable HTTPS in repository settings
-
-## 🎨 Customization
-
-### Colors
-
-Edit `tailwind.config.js` and `src/styles/global.css` for custom color schemes.
-
-### Fonts
-
-Update `@import` statements in `src/styles/global.css` for different fonts.
-
-### Layout
-
-Modify components in `src/components/` to change page layouts.
-
-## 🤝 Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding videos and posts.
-
-## 📜 License
-
-This project is licensed under the MIT License - see LICENSE file for details.
-
-## 🆘 Troubleshooting
-
-### Build Fails
-
-- Clear `node_modules/` and `dist/`: `rm -rf node_modules dist && npm install`
-- Check Node.js version: `node --version` (should be 18+)
-
-### Videos Not Showing
-
-- Verify YouTube API key in `.env.local`
-- Check Channel ID is correct
-- Run `node scripts/fetch-videos.js` to manually test API
-
-### Search Not Working
-
-- Check browser console for errors
-- Clear browser cache
-- Verify videos have `tags` property
-
-## 📞 Support
-
-For issues or questions:
-- Check [CONTRIBUTING.md](CONTRIBUTING.md)
-- Open a GitHub issue
-- Review quickstart documentation for detailed setup
-
-## 🙏 Acknowledgments
-
-Built with:
-
-- [Astro](https://astro.build/) - Static site generator
-- [Tailwind CSS](https://tailwindcss.com/) - Utility CSS framework
-- [YouTube Data API](https://developers.google.com/youtube/v3) - Video data
-- [GitHub Pages](https://pages.github.com/) - Free hosting
-
----
-
-Made with ❤️ for content creators
+The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` once before the test script will work.
