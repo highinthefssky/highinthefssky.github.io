@@ -1,42 +1,18 @@
-title: High in the flight sim sky
-description: "Information related to Flight Simulator 2020: tutorials, latest info, sight seeing and more."
-show_downloads: false
+title: "High in the Flight Sim Sky"
+description: "Microsoft Flight Simulator 2020/2024 videos, tutorials, and adventures."
+baseurl: ""
+url: "https://highintheflightsimsky.nl"
 
-#baseurl: "/cayman-blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
-url: "https://highintheflightsimsky.nl" # change this to the base hostname & protocol for your site
+collections:
+  videos:
+    output: true
+    permalink: /videos/:slug/
+  series:
+    output: true
+    permalink: /series/:slug/
 
-
-google_analytics: UA-177201520-1
-
-# cayman-blog date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-cayman-blog:
-  date_format: "%b %-d, %Y"
-
-theme: # leave it empty
-
-# social
-author: Johan Veldhuis
-image: /thumbnail-jumbo.png
-twitter:
-  username: highinthefssky
+markdown: kramdown
 
 plugins:
-  - jekyll-target-blank
   - jekyll-sitemap
-  - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-paginate
-
-# define number of articles per page
-paginate: 5
-
-# ensure target-blank is not followed
-target-blank:
-    rel: nofollow
-
-# define links for header
-header_page_refs: ['categories', 'about']
-
-# disable showing future posts
-future: false
