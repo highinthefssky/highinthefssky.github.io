@@ -1,0 +1,229 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { title, description, publishedAt, tags } = post.data;
+const { Content } = await post.render();
+
+// Format date helper
+function formatDate(date: Date): string {
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+  }).format(date);
+}
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="post-page">
+    <div class="post-header">
+      <h1 class="post-title">{title}</h1>
+      <div class="post-meta">
+        <time datetime={publishedAt.toISOString()}>
+          {formatDate(publishedAt)}
+        </time>
+        {tags.length > 0 && (
+          <div class="post-tags">
+            {tags.map((tag) => (
+              <a href={`/posts?tag=${tag}`} class="tag">
+                {tag}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+
+    <div class="post-content">
+      <Content />
+    </div>
+
+    <footer class="post-footer">
+      <a href="/posts" class="back-link">← Back to all posts</a>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .post-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .post-header {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 1.5rem;
+  }
+
+  .post-title {
+    font-size: 2.5rem;
+    margin: 0 0 1rem;
+    color: #1f2937;
+    line-height: 1.2;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    color: #6b7280;
+    font-size: 0.95rem;
+  }
+
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .tag:hover {
+    background: hsl(213, 94%, 47%);
+    color: white;
+  }
+
+  .post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #374151;
+    margin-bottom: 2rem;
+  }
+
+  /* Markdown content styling */
+  :global(.post-content h2) {
+    font-size: 1.875rem;
+    margin: 1.5rem 0 0.5rem;
+    color: #1f2937;
+  }
+
+  :global(.post-content h3) {
+    font-size: 1.5rem;
+    margin: 1.25rem 0 0.5rem;
+    color: #1f2937;
+  }
+
+  :global(.post-content p) {
+    margin-bottom: 1rem;
+  }
+
+  :global(.post-content ul),
+  :global(.post-content ol) {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  :global(.post-content li) {
+    margin-bottom: 0.5rem;
+  }
+
+  :global(.post-content blockquote) {
+    border-left: 4px solid hsl(213, 94%, 47%);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: #6b7280;
+    font-style: italic;
+  }
+
+  :global(.post-content code) {
+    background: #f3f4f6;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+    font-size: 0.9em;
+  }
+
+  :global(.post-content pre) {
+    background: #1f2937;
+    color: #e5e7eb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+
+  :global(.post-content pre code) {
+    background: none;
+    padding: 0;
+    color: inherit;
+  }
+
+  :global(.post-content img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  :global(.post-content table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+
+  :global(.post-content th),
+  :global(.post-content td) {
+    border: 1px solid #d1d5db;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  :global(.post-content th) {
+    background: #f3f4f6;
+    font-weight: 600;
+  }
+
+  .post-footer {
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .back-link {
+    color: hsl(213, 94%, 47%);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .back-link:hover {
+    color: #764ba2;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .post-page {
+      padding: 1rem;
+    }
+
+    .post-title {
+      font-size: 1.875rem;
+    }
+
+    .post-content {
+      font-size: 1rem;
+    }
+  }
+</style>

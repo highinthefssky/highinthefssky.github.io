@@ -1,0 +1,154 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+
+const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+const sortedPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.data.publishedAt).getTime() -
+    new Date(a.data.publishedAt).getTime()
+);
+
+const allTags = Array.from(
+  new Set(allPosts.flatMap((post) => post.data.tags))
+);
+---
+
+<BaseLayout title="Community Posts" description="Read community posts and join the discussion">
+  <div class="posts-page">
+    <div class="posts-header">
+      <h1>Community Posts</h1>
+      <p>
+        Explore {allPosts.length} community posts
+      </p>
+    </div>
+
+    {allTags.length > 0 && (
+      <div class="filters">
+        <div class="filter-group">
+          <label for="tag-filter">Filter by tag:</label>
+          <select id="tag-filter" class="tag-select">
+            <option value="">All Tags</option>
+            {allTags.map((tag) => (
+              <option value={tag}>{tag}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+    )}
+
+    <div class="posts-list" id="posts-list">
+      {sortedPosts.map((post) => (
+        <PostCard post={post} />
+      ))}
+    </div>
+
+    {sortedPosts.length === 0 && (
+      <div class="empty-state">
+        <p>No posts found. Check back soon for community updates!</p>
+      </div>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .posts-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .posts-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .posts-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+  }
+
+  .posts-header p {
+    font-size: 1.125rem;
+    color: #6b7280;
+  }
+
+  .filters {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .filter-group label {
+    font-weight: 500;
+    color: #374151;
+  }
+
+  .tag-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+
+  .tag-select:hover {
+    border-color: #9ca3af;
+  }
+
+  .tag-select:focus {
+    outline: none;
+    border-color: hsl(213, 94%, 47%);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+
+  .posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #6b7280;
+  }
+
+  @media (max-width: 768px) {
+    .posts-page {
+      padding: 1rem;
+    }
+
+    .posts-header h1 {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+<script>
+  const tagSelect = document.getElementById('tag-filter');
+  const postsList = document.getElementById('posts-list');
+  const postCards = postsList?.querySelectorAll('[data-tags]');
+
+  tagSelect?.addEventListener('change', (e) => {
+    const selectedTag = (e.target as HTMLSelectElement).value;
+
+    postCards?.forEach((card) => {
+      const tags = card.getAttribute('data-tags')?.split(',') || [];
+      const matches =
+        !selectedTag || tags.includes(selectedTag.toLowerCase());
+      (card as HTMLElement).style.display = matches ? '' : 'none';
+    });
+  });
+</script>

@@ -1,0 +1,198 @@
+---
+import Navigation from '../components/Navigation.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'High in the Sky', description = 'YouTube Videos & Community Posts' } = Astro.props;
+const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the Sky`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:url" content={Astro.url.href} />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/og-image.png" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={Astro.url.href} />
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Feed" href="/feed.xml" />
+    
+    <!-- Preload fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Generator -->
+    <meta name="generator" content={Astro.generator} />
+    
+    <title>{siteTitle}</title>
+  </head>
+  <body>
+    <Navigation />
+    
+    <main>
+      <slot />
+    </main>
+    
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>High in the Sky</h3>
+            <p>A YouTube video hub with community posts and search.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/videos">Videos</a></li>
+              <li><a href="/search">Search</a></li>
+              <li><a href="/posts">Community</a></li>
+              <li><a href="/feed">Feed</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/feed.xml">RSS Feed</a></li>
+              <li><a href="/sitemap.xml">Sitemap</a></li>
+              <li><a href="https://github.com/yourusername/highinthefssky.github.io">GitHub</a></li>
+              <li><a href="https://www.youtube.com/">YouTube Channel</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 High in the Sky. All rights reserved.</p>
+          <p><a href="/privacy">Privacy</a> | <a href="/terms">Terms</a></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  :global(body) {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  main {
+    min-height: calc(100vh - 200px);
+  }
+
+  .footer {
+    background: #1f2937;
+    color: #f3f4f6;
+    border-top: 1px solid #374151;
+    padding: 3rem 1rem;
+    margin-top: 4rem;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-section h3,
+  .footer-section h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .footer-section p {
+    color: #9ca3af;
+    line-height: 1.6;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-section li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-section a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-section a:hover {
+    color: #f3f4f6;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 2rem;
+    text-align: center;
+    color: #9ca3af;
+  }
+
+  .footer-bottom p {
+    margin: 0.5rem 0;
+  }
+
+  .footer-bottom a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-bottom a:hover {
+    color: #f3f4f6;
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      padding: 2rem 1rem;
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,217 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import VideoCard from '../components/VideoCard.astro';
+import PostCard from '../components/PostCard.astro';
+
+const videos = await getCollection('videos');
+const posts = await getCollection('posts', ({ data }) => !data.draft);
+
+// Get recent items (videos and posts)
+const allItems = [
+  ...videos.map((v) => ({
+    type: 'video',
+    item: v,
+    date: v.data.publishedAt,
+  })),
+  ...posts.map((p) => ({
+    type: 'post',
+    item: p,
+    date: p.data.publishedAt,
+  })),
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+const recentItems = allItems.slice(0, 10);
+---
+
+<BaseLayout
+  title="Activity Feed"
+  description="Latest videos and community posts"
+>
+  <div class="feed-page">
+    <div class="feed-header">
+      <h1>Activity Feed</h1>
+      <p>Latest videos and community posts</p>
+      <div class="feed-links">
+        <a href="/feed.xml" class="feed-link" target="_blank">
+          <span class="feed-icon">📡</span> Subscribe to RSS
+        </a>
+      </div>
+    </div>
+
+    <div class="feed-container">
+      {recentItems.length > 0 ? (
+        <div class="feed-timeline">
+          {recentItems.map((itemWrapper, index) => (
+            <div class="feed-item">
+              <div class="feed-marker">
+                <span class={`marker ${itemWrapper.type}`}>
+                  {itemWrapper.type === 'video' ? '🎥' : '📝'}
+                </span>
+              </div>
+
+              <div class="feed-content">
+                {itemWrapper.type === 'video' ? (
+                  <VideoCard video={itemWrapper.item} />
+                ) : (
+                  <PostCard post={itemWrapper.item} />
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="empty-state">
+          <p>No content yet. Check back soon!</p>
+        </div>
+      )}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .feed-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .feed-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .feed-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+  }
+
+  .feed-header p {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+  }
+
+  .feed-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .feed-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fbbf24;
+    color: #1f2937;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .feed-link:hover {
+    background: #f59e0b;
+    transform: translateY(-2px);
+  }
+
+  .feed-icon {
+    font-size: 1.2rem;
+  }
+
+  .feed-container {
+    position: relative;
+  }
+
+  .feed-timeline {
+    position: relative;
+    padding: 0;
+  }
+
+  .feed-timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      hsl(213, 94%, 47%),
+      #e5e7eb
+    );
+  }
+
+  .feed-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  .feed-marker {
+    flex-shrink: 0;
+    width: 64px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 0.5rem;
+    z-index: 1;
+  }
+
+  .marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid hsl(213, 94%, 47%);
+    font-size: 1.5rem;
+  }
+
+  .marker.post {
+    border-color: #f59e0b;
+  }
+
+  .feed-content {
+    flex: 1;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: #6b7280;
+  }
+
+  @media (max-width: 768px) {
+    .feed-page {
+      padding: 1rem;
+    }
+
+    .feed-header h1 {
+      font-size: 2rem;
+    }
+
+    .feed-timeline::before {
+      left: 18px;
+    }
+
+    .feed-item {
+      gap: 1rem;
+    }
+
+    .feed-marker {
+      width: 50px;
+    }
+
+    .marker {
+      width: 40px;
+      height: 40px;
+      font-size: 1.25rem;
+    }
+  }
+</style>
