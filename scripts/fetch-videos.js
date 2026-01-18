@@ -173,10 +173,31 @@ async function fetchVideos() {
         return videoData;
       });
 
+    // Sort videos by published date (newest first) and mark the latest as featured
+    if (videos.length > 0) {
+      console.log('\n⭐ Marking latest video as featured...');
+
+      // Sort by published date descending (newest first)
+      videos.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+
+      // Mark the first video (most recent) as featured
+      const latestVideo = videos[0];
+      latestVideo.featured = true;
+
+      // Re-save the featured video file
+      const featuredFilePath = path.join(VIDEOS_DIR, `${latestVideo.videoId}.json`);
+      fs.writeFileSync(featuredFilePath, JSON.stringify(latestVideo, null, 2));
+
+      console.log(`🌟 Featured video: "${latestVideo.title}" (${latestVideo.videoId})`);
+    }
+
     const endTime = Date.now();
     const duration = (endTime - startTime) / 1000;
 
     console.log(`\n🎉 Successfully processed ${videos.length} videos (${videosData.items.length - videos.length} skipped due to missing/invalid data)`);
+    if (videos.length > 0) {
+      console.log(`🌟 Latest video marked as featured: "${videos[0].title}"`);
+    }
     console.log(`⏱️ Total execution time: ${duration.toFixed(2)} seconds`);
     console.log(`📊 Videos saved to: ${VIDEOS_DIR}`);
 
