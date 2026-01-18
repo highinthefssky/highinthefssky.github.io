@@ -1,2 +1,0 @@
-#baseurl: "/cayman-blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
-url: "http://localhost" # change this to the base hostname & protocol for your site
