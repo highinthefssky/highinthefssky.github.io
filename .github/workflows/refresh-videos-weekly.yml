@@ -1,13 +1,13 @@
-name: Fetch Latest Videos
+name: Refresh Videos Weekly
 
 on:
   schedule:
-    # Run daily at 00:00 UTC
-    - cron: '0 0 * * *'
+    # Run weekly on Monday at 03:00 UTC
+    - cron: '0 3 * * 1'
   workflow_dispatch:
 
 jobs:
-  fetch-videos:
+  refresh-videos:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -25,11 +25,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Fetch videos from YouTube API
+      - name: Refresh videos from YouTube API (full refresh)
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           YOUTUBE_CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
-          REFRESH_EXISTING: "false"
+          REFRESH_EXISTING: "true"
         run: node scripts/fetch-videos.js
 
       - name: Check for changes
@@ -39,7 +39,6 @@ jobs:
           echo "📁 Videos directory contents:"
           ls -la src/content/videos/ || echo "Directory not found or empty"
 
-          # Check if there are any new or modified files in the videos directory
           if git status --porcelain src/content/videos/ | grep -q .; then
             echo "📝 Found changes in videos directory"
             git status --porcelain src/content/videos/
@@ -58,7 +57,7 @@ jobs:
           echo "📋 Files to be committed:"
           git add src/content/videos/
           git status --porcelain
-          git commit -m "chore: update videos from YouTube API"
+          git commit -m "chore: weekly refresh videos from YouTube API"
           echo "🚀 Pushing changes..."
           git push
           echo "✅ Changes committed and pushed successfully"

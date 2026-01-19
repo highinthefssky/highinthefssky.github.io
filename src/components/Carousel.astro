@@ -25,6 +25,9 @@ const latestVideos = videos
                   srcset={`${video.data.thumbnailMedium} 320w, ${video.data.thumbnail} 1280w`}
                   sizes="(max-width: 768px) 100vw, 1280px"
                   alt={video.data.title}
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  decoding="async"
+                  fetchpriority={index === 0 ? 'high' : 'auto'}
                   class="slide-image"
                 />
                 <div class="slide-overlay">
