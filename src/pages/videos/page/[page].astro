@@ -14,6 +14,20 @@ export async function getStaticPaths() {
   const pageSize = 9;
   const totalPages = Math.ceil(sortedVideos.length / pageSize);
 
+  function buildPageWindow(current, total, windowSize = 10) {
+    const pages = [];
+    const half = Math.floor(windowSize / 2);
+    let start = Math.max(1, current - half);
+    let end = Math.min(total, start + windowSize - 1);
+    if (end - start + 1 < windowSize) {
+      start = Math.max(1, end - windowSize + 1);
+    }
+    for (let p = start; p <= end; p++) {
+      pages.push(p);
+    }
+    return pages;
+  }
+
   const paths = Array.from({ length: totalPages }, (_, i) => {
     const page = i + 1;
     const start = i * pageSize;
@@ -22,14 +36,14 @@ export async function getStaticPaths() {
 
     return {
       params: { page: String(page) },
-      props: { page, totalPages, videos: pageVideos },
+      props: { page, totalPages, videos: pageVideos, pageWindow: buildPageWindow(page, totalPages, 10) },
     };
   });
 
   return paths;
 }
 
-const { page, totalPages, videos } = Astro.props;
+const { page, totalPages, videos, pageWindow } = Astro.props;
 ---
 
 <BaseLayout title={`Videos - Page ${page}`} description="Browse all videos">
@@ -65,8 +79,12 @@ const { page, totalPages, videos } = Astro.props;
       )}
 
       <div class="page-numbers">
-        {Array.from({ length: totalPages }, (_, i) => {
-          const p = i + 1;
+        {pageWindow[0] > 1 && (
+          <a class="page-link" href="/videos">1</a>
+        )}
+        {pageWindow[0] > 2 && <span class="ellipsis">…</span>}
+
+        {pageWindow.map((p) => {
           const href = p === 1 ? '/videos' : `/videos/page/${p}`;
           return (
             <a class={`page-link ${p === page ? 'active' : ''}`} href={href}>
@@ -74,6 +92,11 @@ const { page, totalPages, videos } = Astro.props;
             </a>
           );
         })}
+
+        {pageWindow[pageWindow.length - 1] < totalPages - 1 && <span class="ellipsis">…</span>}
+        {pageWindow[pageWindow.length - 1] < totalPages && (
+          <a class="page-link" href={`/videos/page/${totalPages}`}>{totalPages}</a>
+        )}
       </div>
 
       {page < totalPages && (
@@ -100,12 +123,12 @@ const { page, totalPages, videos } = Astro.props;
   .videos-header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    color: #1f2937;
+    color: #e6efff;
   }
 
   .videos-header p {
     font-size: 1.125rem;
-    color: #6b7280;
+    color: #9fb6d5;
   }
 
   .videos-grid {
@@ -138,15 +161,15 @@ const { page, totalPages, videos } = Astro.props;
     padding: 0.5rem 0.75rem;
     border-radius: 0.375rem;
     text-decoration: none;
-    border: 1px solid #e5e7eb;
-    color: #374151;
+    border: 1px solid #4a5f7f;
+    color: #b0c4de;
     transition: all 0.2s ease;
-    background: white;
+    background: transparent;
   }
 
   .page-link:hover {
-    border-color: #cbd5e1;
-    color: #111827;
+    border-color: #7dd3fc;
+    color: #e6efff;
   }
 
   .page-link.active {
@@ -154,6 +177,11 @@ const { page, totalPages, videos } = Astro.props;
     border-color: #c7d2fe;
     color: #3730a3;
     font-weight: 600;
+  }
+
+  .ellipsis {
+    color: #9ca3af;
+    padding: 0 0.25rem;
   }
 
   @media (max-width: 768px) {

@@ -47,7 +47,7 @@ async function fetchVideos() {
 
     // Get uploads playlist ID
     console.log('\n📡 Step 1: Fetching channel information...');
-    const channelUrl = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${YOUTUBE_CHANNEL_ID}&key=${YOUTUBE_API_KEY}`;
+    const channelUrl = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails,statistics&id=${YOUTUBE_CHANNEL_ID}&key=${YOUTUBE_API_KEY}`;
     console.log(`🌐 Channel API URL: ${channelUrl.replace(YOUTUBE_API_KEY, '***API_KEY***')}`);
 
     const channelResponse = await fetch(channelUrl);
@@ -68,6 +68,15 @@ async function fetchVideos() {
     }
 
     console.log(`✅ Found channel: ${channelData.items[0].snippet?.title || 'Unknown Channel'}`);
+    
+    // Extract and save subscriber count
+    const subscriberCount = parseInt(channelData.items[0].statistics?.subscriberCount || 0);
+    console.log(`👥 Channel subscribers: ${subscriberCount.toLocaleString()}`);
+    
+    const statsFile = path.join(__dirname, '../src/content/stats.json');
+    const stats = { youtubeSubscribers: subscriberCount, updatedAt: new Date().toISOString() };
+    fs.writeFileSync(statsFile, JSON.stringify(stats, null, 2));
+    console.log(`✅ Saved stats to ${statsFile}`);
     const uploadsPlaylistId = channelData.items[0].contentDetails?.relatedPlaylists?.uploads;
 
     if (!uploadsPlaylistId) {
