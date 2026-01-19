@@ -1,0 +1,26 @@
+{
+  "videoId": "VKa6pKcBuO8",
+  "title": "Flight Simulator 2020 - How to - Fixing missing ground services",
+  "description": "In this how to we are going to look at how to fix the issue where you cannot use any of the ground services. This is reflected in MSFS via multiple ways. In some cases the list of available ground services is completely empty in other cases when you for example call for a pushback tug the ATC will tell you there is no tug available. And if your a fan of the toolbar pushback addon most buttons are not working. Based on some research I found the cause of the issues which are community addons with the AirportServices tag. In this video I will show you how you can fix it and to make it easier to identify the addon possibly causing the issue I created a script which I will demo in this video.\n\nIf you also want to use the script after viewing the video, you can find it on the site below:\nhttps://github.com/highinthefssky/Get-AirportServices/blob/main/Get-AirportServices.ps1\n\n🔔 If you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP 🔔 \n\nTutorials playlist: https://bit.ly/32nmUHH\nWebsite: https://highintheflightsimsky.nl\n\n#FlightSimulator2020 #FlightSim #FS2020",
+  "thumbnail": "https://i.ytimg.com/vi/VKa6pKcBuO8/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/VKa6pKcBuO8/mqdefault.jpg",
+  "publishedAt": "2021-08-24T18:45:30.000Z",
+  "duration": 700,
+  "tags": [
+    "Flight Simulator 2020",
+    "microsoft flight simulator",
+    "flight simulator",
+    "microsoft flight simulator 2020",
+    "msfs 2020",
+    "tutorials",
+    "flight training",
+    "flight sim 2020",
+    "Missing ground services in MSFS 2020",
+    "Missing airport services in MSFS 2020",
+    "Fixing missing ground services",
+    "Fixing missing ground services in MSFS 2020",
+    "Fixing missing airport services in MSFS 2020",
+    "Fixing missing airport services"
+  ],
+  "featured": false
+}

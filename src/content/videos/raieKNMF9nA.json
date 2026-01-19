@@ -1,0 +1,25 @@
+{
+  "videoId": "raieKNMF9nA",
+  "title": "Flight Simulator 2020  - How to - Find SID's and STARs using Little Navmap",
+  "description": "In this how to we are going to look at how you can find SID's and STAR's using Little Navmap. Keep in mind you need to have version 2.6.13 or above of Little Navmap installed to have this ability. Prior to this version Little Navmap was using the NaviGraph database for this purpose which was not 100% accurate when planning flights for MSFS 2020.\n\nLittle Navmap can be downloaded from this site: https://www.littlenavmap.org/\n\nThe aircraft performance files referred to in the video can be downloaded from this site:\nhttps://www.littlenavmap.org/downloads/Aircraft%20Performance/MSFS/\n\n🔔 If you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP 🔔 \n\nTutorials playlist: https://bit.ly/32nmUHH\nWebsite: https://highintheflightsimsky.nl\n\n#FlightSimulator2020 #FlightSim #FS2020",
+  "thumbnail": "https://i.ytimg.com/vi/raieKNMF9nA/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/raieKNMF9nA/mqdefault.jpg",
+  "publishedAt": "2021-07-05T17:45:01.000Z",
+  "duration": 503,
+  "tags": [
+    "Flight Simulator 2020",
+    "flight plan",
+    "microsoft flight simulator",
+    "flight simulator",
+    "microsoft flight simulator 2020",
+    "msfs 2020",
+    "tutorials",
+    "flight sim 2020",
+    "How to update the scenery library in Little Navmap",
+    "Finding SID's with Little Navmap for MSFS 2020",
+    "Finding STAR's with Little Navmap for MSFS 2020",
+    "Finding SID's and STAR's with Little Navmap for MSFS 2020",
+    "Little Navmap 2.6.13"
+  ],
+  "featured": false
+}

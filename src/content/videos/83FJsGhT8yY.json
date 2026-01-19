@@ -1,0 +1,20 @@
+{
+  "videoId": "83FJsGhT8yY",
+  "title": "Uncovering Secret Updates In Flight Simulator 2020 Sim Update 15 Beta Build 3",
+  "description": "In this short we will have a look at some hidden updates in Sim Update 15 beta build 3 which are not described in the release notes. \nSince this is a short the cmdlet user to figure this out might be hard to read that is why the cmdlet is also listed below:\n\nget-childitem |  where {([datetime]::now.Date -eq $_.LastWriteTime.Date)}\n\n🔔 If you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP 🔔 \n\nTutorials playlist: https://bit.ly/3l6fRdL\nWebsite: https://highintheflightsimsky.nl\n\n#FlightSimulator2020 #FlightSim #FS2020 #Shorts",
+  "thumbnail": "https://i.ytimg.com/vi/83FJsGhT8yY/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/83FJsGhT8yY/mqdefault.jpg",
+  "publishedAt": "2024-02-29T17:15:00.000Z",
+  "duration": 55,
+  "tags": [
+    "Clipchamp",
+    "Online video editor",
+    "microsoft flight simulator",
+    "microsoft flight simulator 2020",
+    "msfs 2020",
+    "sim update 15",
+    "hidden updates",
+    "secret updates"
+  ],
+  "featured": false
+}

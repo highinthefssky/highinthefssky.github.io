@@ -1,0 +1,25 @@
+{
+  "videoId": "LXz_es58bjA",
+  "title": "Flight Simulator 2020 - MSFS Update - New AIRAC update  and some additional surprises",
+  "description": "In this video, we're going to delve into the update released earlier today. According to the release notes, it will upgrade the AIRAC cycle to 2408. This is beneficial as some third-party flight planner tools have also updated a bit earlier than Asobo.\n\nFurthermore, a comprehensive list of airports has been updated through submissions via the World Hub tool. The update encompasses airports globally, from small local ones to major international hubs.\n\nAs usual, we will employ some PowerShell techniques to verify the changes at the directory and file level after the update installation.\n\n🔔 If you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP 🔔 \n\nTutorials playlist: https://bit.ly/32nmUHH\nWebsite: https://highintheflightsimsky.nl\n\n#FlightSimulator2020 #FlightSim #FS2020",
+  "thumbnail": "https://i.ytimg.com/vi/LXz_es58bjA/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/LXz_es58bjA/mqdefault.jpg",
+  "publishedAt": "2024-08-08T19:53:18.000Z",
+  "duration": 503,
+  "tags": [
+    "Flight Simulator 2020",
+    "microsoft flight simulator",
+    "flight simulator",
+    "microsoft flight simulator 2020",
+    "msfs 2020",
+    "flight sim 2020",
+    "airac",
+    "airac update",
+    "worldhub",
+    "worldhub airports",
+    "ai traffic",
+    "airac 2408",
+    "airac cycle 2408"
+  ],
+  "featured": false
+}

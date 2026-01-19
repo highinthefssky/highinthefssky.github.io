@@ -1,0 +1,25 @@
+{
+  "videoId": "8yfphtD8B6M",
+  "title": "Flight Simulator 2020 - How to - Pipistrel Virus SW121 - Approach mode",
+  "description": "In this how to we are going to look how to use the approach mode which is part of the autopilot in a Pipistrel Virus SW 121.\nThe Pipistrel Virus SW 121 has a Garmin GNS 430 system with 2 additional displays attached to it which will give you some nice options to configure the flight plan but also to keep track of your current location.\n\nI will depart from Rotterdam-The Hague Airport\n(EHRD) runway 24. After flying away from the airport I will show you how the Garmin system will react if you add the airport to the flight plan and which messages are changing on the Garmin system. After this we will program the approach: Runway 24 ILS via transition ROT and use the GPS functionality of the autopilot to continue our flight. During the flight I will program the NAV to use the frequency for our ILS approach and when close enough to the airport I will enable the approach mode so you can see it in action.\n\n0:00 title screen\n0:10 departing from runway 24 EHRD\n1:42 explanation of Garmin GNS 430\n2:45 configure and enable the autopilot\n4:54 program the flight plan\n9:05 program the NAV frequencies\n19:18 Garmin GNS 430 changes to TERM\n19:38 Configure the approach and transition\n29:37 Reconfigure the auto pilot\n37:55 Arriving at the STAR starting point\n48:52 Preparing to switch on the APR mode\n55:19 Land at runway 24 EHRD\n\nAs mentioned in the video I used some additional mod's to make the scenery around Rotterdam even look nicer:\n\nRotterdam City:\nhttps://flightsim.to/file/3670/rotterdam-city\n\nPort of Rotterdam:\nhttps://flightsim.to/file/2110/port-of-rotterdam\n\nFeyenoord Stadium de Kuip\nhttps://flightsim.to/file/155/feyenoord-stadium-de-kuip-rotterdam\n\nBrienenoord bridge:\nhttps://flightsim.to/file/328/rotterdam-brienenoord-bridge\n\nRotterdam Harbour - Radio Tower Waalhaven & PetroChemie Pipes\nhttps://flightsim.to/file/771/rotterdam-harbour-radio-tower-waalhaven-petrochemie-pipes\n\nHollandse IJsselkering:\nhttps://flightsim.to/file/1005/hollandse-ijsselkering\n🔔 If you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP 🔔 \n\nTutorials playlist: https://bit.ly/32nmUHH\nWebsite: https://highintheflightsimsky.nl\n\n#FlightSimulator2020 #FlightSim #FS2020",
+  "thumbnail": "https://i.ytimg.com/vi/8yfphtD8B6M/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/8yfphtD8B6M/mqdefault.jpg",
+  "publishedAt": "2021-04-26T14:05:50.000Z",
+  "duration": 3370,
+  "tags": [
+    "Flight Simulator 2020",
+    "microsoft flight simulator",
+    "flight simulator",
+    "microsoft flight simulator 2020",
+    "msfs 2020",
+    "tutorials",
+    "flight training",
+    "flight sim 2020",
+    "Pipistrel Virus SW121",
+    "how to use the approach mode in a Pipistrel Virus SW121",
+    "Pipistel Virus SW121 autopilot",
+    "how to make a landing using ILS in a Pipistrel Virus SW121",
+    "how to use the functionalities of a Garmin GNS 430 in MSFS 2020"
+  ],
+  "featured": false
+}

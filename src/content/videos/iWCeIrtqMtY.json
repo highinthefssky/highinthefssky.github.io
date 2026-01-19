@@ -1,0 +1,21 @@
+{
+  "videoId": "iWCeIrtqMtY",
+  "title": "Flight Simulator 2020 - Addon spotlight - Aerosoft DHC 6 Twin Otter - version 1010",
+  "description": "In this video we will have a look at the changes in the latest version of the Twin Otter which has been recently released. The list of items is shown below and in the video we will have a look at several of them\n\nAdded: GPWS Inhibit switch\nFixed: Torque link on -300 Cargo 4-Blade nose gear\nFixed: Changed Elevator and aileron simvars to those that work in multiplayer\nAdded: Wing lights\nFixed: Control lock variable reversed for multiplayer compatibility\nFixed: Rework and volume balancing of external sounds\nFixed: Rework and volume balancing of internal sounds\nFixed: Autopilot losing altitude in ALT HOLD mode\nFixed: Autopilot losing altitude in GS HOLD mode\nFixed: Elevator and rudder trim knob animations now react to control input. Sounds added\nFixed: Exterior view engine instruments\nFixed: Missing performance data in aircraft selection window\nFixed: Toned down wind sound at rear door when aircraft is not moving and wind is not storm strength\nFixed: Boost pump annunciator condition\nFixed: Volts indicator now shows 0V when generators are off\nFixed: CDI Needles jumping from side to side while flying a FROM radial\nFixed: Missing needle arrow in copilot HSI\nFixed: NAV/HDG flags over heading bug and needle in both HSIs\nFixed: Separated GNS530/430, Autopilot, Transponder and ADF from Copilot dimmer\nFixed: Propeller De-Ice now works for both propellers\nFixed: Intake Anti-Ice now works for both engines\nFixed: Increased volume of GPWS glide slope callouts\nFixed: HSI knob not turning\nFixed: Gaps in the ceiling near front cabin wall\n\n🔔 If you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP 🔔 \n\nTutorials playlist: https://bit.ly/32nmUHH\nWebsite: https://highintheflightsimsky.nl\n\n#FlightSimulator2020 #FlightSim #FS2020",
+  "thumbnail": "https://i.ytimg.com/vi/iWCeIrtqMtY/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/iWCeIrtqMtY/mqdefault.jpg",
+  "publishedAt": "2022-01-25T20:11:53.000Z",
+  "duration": 382,
+  "tags": [
+    "Flight Simulator 2020",
+    "microsoft flight simulator",
+    "flight simulator",
+    "microsoft flight simulator 2020",
+    "msfs 2020",
+    "flight sim 2020",
+    "Aerosoft DHC-6 Twin Otter MSFS available",
+    "Aerosoft DHC-6 Twin Otter MSFS updated",
+    "Twin Otter from Aerosoft receives an update"
+  ],
+  "featured": false
+}

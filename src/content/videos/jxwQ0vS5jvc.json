@@ -1,0 +1,32 @@
+{
+  "videoId": "jxwQ0vS5jvc",
+  "title": "Flight Simulator 2020 - ATR 42-600/72-600 - Using VNAV for decent and APP mode for landing",
+  "description": "In this video, we will explore how to utilize VNAV for reducing altitude during a descent and subsequently switch to APP mode for executing an ILS landing. Before engaging these modes, we will review the necessary setups and demonstrate how to access the ILS approach card with a Navigraph subscription. Upon reaching the appropriate point, we will activate VNAV to follow the VNAV path for descent, and on final approach, we will use the APP mode to complete the ILS landing.\n\n0:00 intro\n0:10 setting up the prerequisites and reviewing the approach\n2:44 using VNAV to decent\n4:42 activating heading mode and setting up ILS frequency\n5:07 activating the APP mode\n\n🔔 If you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP 🔔 \n\nTutorials playlist: https://bit.ly/32nmUHH\nWebsite: https://highintheflightsimsky.nl\n\n#FlightSimulator2020 #FlightSim #FS2020",
+  "thumbnail": "https://i.ytimg.com/vi/jxwQ0vS5jvc/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/jxwQ0vS5jvc/mqdefault.jpg",
+  "publishedAt": "2024-07-31T19:14:17.000Z",
+  "duration": 667,
+  "tags": [
+    "Flight Simulator 2020",
+    "flight plan",
+    "microsoft flight simulator",
+    "flight simulator",
+    "microsoft flight simulator 2020",
+    "msfs 2020",
+    "tutorials",
+    "flight training",
+    "flight sim 2020",
+    "atr autopilot",
+    "using the autopilot in the atr",
+    "lnav",
+    "VNAV",
+    "app",
+    "app mode",
+    "lnav mode",
+    "vnav mode",
+    "altitude contraints",
+    "speed contraints",
+    "navigraph"
+  ],
+  "featured": false
+}

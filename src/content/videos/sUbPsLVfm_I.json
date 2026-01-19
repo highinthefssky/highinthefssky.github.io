@@ -1,0 +1,25 @@
+{
+  "videoId": "sUbPsLVfm_I",
+  "title": "Flight Simulator 2020 - How to - Fix broken landing challenges",
+  "description": "In this how to I will show you how you can troubleshoot issues with landing challenges which are not working anymore. In my case I was hitting the issue with the strong wind landing challenges in Gibraltar and Funchal (at least I thought they were only affected ;-)). The error I received was that content or at least an item of the content was missing.\nIn this video I will show you step by step how I approached the issue and eventually found the root cause.\n\n🔔 If you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP 🔔 \n\nTutorials playlist: https://bit.ly/32nmUHH\nWebsite: https://highintheflightsimsky.nl\n\n#FlightSimulator2020 #FlightSim #FS2020",
+  "thumbnail": "https://i.ytimg.com/vi/sUbPsLVfm_I/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/sUbPsLVfm_I/mqdefault.jpg",
+  "publishedAt": "2021-01-10T18:16:51.000Z",
+  "duration": 880,
+  "tags": [
+    "Flight Simulator 2020",
+    "flight plan",
+    "microsoft flight simulator",
+    "flight simulator",
+    "microsoft flight simulator 2020",
+    "tutorials",
+    "flight sim 2020",
+    "flight planning",
+    "Flight Simulator 2020 landing challenges not working",
+    "Flight Simulator 2020 landing challenges broken",
+    "Flight Simulator 2020 fs-base-propdefs",
+    "MSFS 2020 landing challenges broken",
+    "fs-base-propdefs"
+  ],
+  "featured": false
+}
