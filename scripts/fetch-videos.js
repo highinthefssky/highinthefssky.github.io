@@ -166,6 +166,7 @@ async function fetchVideos() {
           title: item.snippet?.title || 'Untitled Video',
           description: item.snippet?.description || '',
           thumbnail: item.snippet?.thumbnails?.maxresdefault?.url || item.snippet?.thumbnails?.standard?.url || item.snippet?.thumbnails?.high?.url || item.snippet?.thumbnails?.medium?.url || item.snippet?.thumbnails?.default?.url || '',
+          thumbnailMedium: item.snippet?.thumbnails?.medium?.url || item.snippet?.thumbnails?.default?.url || '',
           publishedAt: item.snippet?.publishedAt ? new Date(item.snippet.publishedAt).toISOString() : new Date().toISOString(),
           duration: duration,
           tags: item.snippet?.tags || [],
