@@ -67,16 +67,10 @@ async function fetchVideos() {
       throw new Error(`Channel with ID "${YOUTUBE_CHANNEL_ID}" not found or API key invalid`);
     }
 
-    console.log(`✅ Found channel: ${channelData.items[0].snippet?.title || 'Unknown Channel'}`);
-    
     // Extract and save subscriber count
     const subscriberCount = parseInt(channelData.items[0].statistics?.subscriberCount || 0);
     console.log(`👥 Channel subscribers: ${subscriberCount.toLocaleString()}`);
     
-    const statsFile = path.join(__dirname, '../src/content/stats.json');
-    const stats = { youtubeSubscribers: subscriberCount, updatedAt: new Date().toISOString() };
-    fs.writeFileSync(statsFile, JSON.stringify(stats, null, 2));
-    console.log(`✅ Saved stats to ${statsFile}`);
     const uploadsPlaylistId = channelData.items[0].contentDetails?.relatedPlaylists?.uploads;
 
     if (!uploadsPlaylistId) {
@@ -140,6 +134,12 @@ async function fetchVideos() {
     if (idsToFetch.length === 0) {
       console.log('✅ No new videos to import. Skipping details fetch.');
     }
+
+    // Save stats including total video count
+    const statsFile = path.join(__dirname, '../src/content/stats.json');
+    const stats = { youtubeSubscribers: subscriberCount, totalVideos: videoIds.length, updatedAt: new Date().toISOString() };
+    fs.writeFileSync(statsFile, JSON.stringify(stats, null, 2));
+    console.log(`✅ Saved stats to ${statsFile} (totalVideos: ${videoIds.length})`);
 
     // Helper: chunk IDs into batches of 50 (API limit)
     function chunkArray(arr, size) {

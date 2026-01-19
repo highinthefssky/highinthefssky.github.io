@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Disallow: 
 
-Sitemap: https://highinthefssky.github.io/sitemap.xml
+Sitemap: https://highintheflightsimsky.nl/sitemap.xml
 
 # Crawl delay (in seconds)
 Crawl-delay: 1
