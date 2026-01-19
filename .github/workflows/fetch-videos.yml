@@ -35,30 +35,30 @@ jobs:
       - name: Check for changes
         id: check-changes
         run: |
-          echo "🔍 Checking for video file changes..."
+          echo "🔍 Checking for changes in videos and stats..."
           echo "📁 Videos directory contents:"
           ls -la src/content/videos/ || echo "Directory not found or empty"
 
-          # Check if there are any new or modified files in the videos directory
-          if git status --porcelain src/content/videos/ | grep -q .; then
-            echo "📝 Found changes in videos directory"
-            git status --porcelain src/content/videos/
+          # Check if there are any new or modified files in the videos directory or stats.json
+          if git status --porcelain src/content/videos/ src/content/stats.json | grep -q .; then
+            echo "📝 Found changes in videos directory or stats"
+            git status --porcelain src/content/videos/ src/content/stats.json
             echo "changed=true" >> $GITHUB_OUTPUT
           else
-            echo "📭 No changes in videos directory"
+            echo "📭 No changes in videos directory or stats"
             echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Commit changes
         if: steps.check-changes.outputs.changed == 'true'
         run: |
-          echo "💾 Committing video changes..."
+          echo "💾 Committing changes..."
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           echo "📋 Files to be committed:"
-          git add src/content/videos/
+          git add src/content/videos/ src/content/stats.json
           git status --porcelain
-          git commit -m "chore: update videos from YouTube API"
+          git commit -m "chore: update videos and channel stats from YouTube API"
           echo "🚀 Pushing changes..."
           git push
           echo "✅ Changes committed and pushed successfully"
