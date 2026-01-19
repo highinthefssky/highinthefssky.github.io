@@ -30,9 +30,15 @@ function formatDate(date: Date): string {
 }
 ---
 
-<a href={`https://www.youtube.com/watch?v=${videoId}`} target="_blank" rel="noopener noreferrer" class="video-card">
+<a
+  href={`https://www.youtube.com/watch?v=${videoId}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="video-card"
+  data-tags={tags.join(',').toLowerCase()}
+>
   <div class="card-image-container">
-    <img src={thumbnail} alt={title} class="card-image" />
+    <img src={thumbnail} alt={title} class="card-image" loading="lazy" decoding="async" />
     <div class="duration-badge">{formatDuration(duration)}</div>
   </div>
 
@@ -170,4 +176,4 @@ function formatDate(date: Date): string {
   }
 </style>
 
-<div data-tags={tags.join(',').toLowerCase()}></div>
+

@@ -1,55 +1,83 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import VideoCard from '../components/VideoCard.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import VideoCard from '../../../components/VideoCard.astro';
 
-const allVideos = await getCollection('videos');
-const sortedVideos = allVideos.sort(
-  (a, b) =>
-    new Date(b.data.publishedAt).getTime() -
-    new Date(a.data.publishedAt).getTime()
-);
+export async function getStaticPaths() {
+  const allVideos = await getCollection('videos');
+  const sortedVideos = allVideos.sort(
+    (a, b) =>
+      new Date(b.data.publishedAt).getTime() -
+      new Date(a.data.publishedAt).getTime()
+  );
 
-const pageSize = 9;
-const totalPages = Math.ceil(sortedVideos.length / pageSize);
-const firstPageVideos = sortedVideos.slice(0, pageSize);
+  const pageSize = 9;
+  const totalPages = Math.ceil(sortedVideos.length / pageSize);
+
+  const paths = Array.from({ length: totalPages }, (_, i) => {
+    const page = i + 1;
+    const start = i * pageSize;
+    const end = start + pageSize;
+    const pageVideos = sortedVideos.slice(start, end);
+
+    return {
+      params: { page: String(page) },
+      props: { page, totalPages, videos: pageVideos },
+    };
+  });
+
+  return paths;
+}
+
+const { page, totalPages, videos } = Astro.props;
 ---
 
-<BaseLayout title="Videos" description="Browse all videos">
+<BaseLayout title={`Videos - Page ${page}`} description="Browse all videos">
   <div class="videos-page">
     <div class="videos-header">
       <h1>All Videos</h1>
       <p>
-        Explore all {allVideos.length} videos from the channel
+        Page {page} of {totalPages}
       </p>
     </div>
 
-    <div class="videos-grid" id="videos-grid">
-      {firstPageVideos.map((video) => (
+    <div class="videos-grid">
+      {videos.map((video) => (
         <VideoCard video={video} />
       ))}
     </div>
 
-    {sortedVideos.length === 0 && (
+    {videos.length === 0 && (
       <div class="empty-state">
         <p>No videos found. Check back soon!</p>
       </div>
     )}
 
     <nav class="pagination" aria-label="Pagination">
+      {page > 1 && (
+        <a
+          class="page-link prev"
+          href={page - 1 === 1 ? '/videos' : `/videos/page/${page - 1}`}
+          rel="prev"
+        >
+          Previous
+        </a>
+      )}
+
       <div class="page-numbers">
         {Array.from({ length: totalPages }, (_, i) => {
           const p = i + 1;
           const href = p === 1 ? '/videos' : `/videos/page/${p}`;
           return (
-            <a class={`page-link ${p === 1 ? 'active' : ''}`} href={href}>
+            <a class={`page-link ${p === page ? 'active' : ''}`} href={href}>
               {p}
             </a>
           );
         })}
       </div>
-      {totalPages > 1 && (
-        <a class="page-link next" href={`/videos/page/2`} rel="next">
+
+      {page < totalPages && (
+        <a class="page-link next" href={`/videos/page/${page + 1}`} rel="next">
           Next
         </a>
       )}
@@ -78,44 +106,6 @@ const firstPageVideos = sortedVideos.slice(0, pageSize);
   .videos-header p {
     font-size: 1.125rem;
     color: #6b7280;
-  }
-
-  .filters {
-    margin-bottom: 2rem;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .filter-group {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .filter-group label {
-    font-weight: 500;
-    color: #374151;
-  }
-
-  .tag-select {
-    padding: 0.5rem 1rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.375rem;
-    font-size: 1rem;
-    background-color: white;
-    cursor: pointer;
-    transition: border-color 0.3s ease;
-  }
-
-  .tag-select:hover {
-    border-color: #9ca3af;
-  }
-
-  .tag-select:focus {
-    outline: none;
-    border-color: hsl(213, 94%, 47%);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
   }
 
   .videos-grid {
@@ -181,5 +171,3 @@ const firstPageVideos = sortedVideos.slice(0, pageSize);
     }
   }
 </style>
-
-<!-- Tag filtering script removed due to pagination; consider a dedicated search page. -->

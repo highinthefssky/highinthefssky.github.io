@@ -77,56 +77,97 @@ async function fetchVideos() {
 
     console.log(`📋 Uploads playlist ID: ${uploadsPlaylistId}`);
 
-    // Get videos from playlist
-    console.log('\n📡 Step 2: Fetching playlist videos...');
-    const playlistUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=${uploadsPlaylistId}&maxResults=50&key=${YOUTUBE_API_KEY}`;
-    console.log(`🌐 Playlist API URL: ${playlistUrl.replace(YOUTUBE_API_KEY, '***API_KEY***')}`);
-
-    const playlistResponse = await fetch(playlistUrl);
-    console.log(`📊 Playlist API response status: ${playlistResponse.status} ${playlistResponse.statusText}`);
-
-    if (!playlistResponse.ok) {
-      const errorText = await playlistResponse.text();
-      console.error('❌ Playlist API error response:', errorText);
-      throw new Error(`YouTube API playlist error: ${playlistResponse.status} ${playlistResponse.statusText}`);
+    // Get videos from playlist (paginate all pages)
+    console.log('\n📡 Step 2: Fetching ALL playlist videos (paginated)...');
+    async function fetchAllPlaylistItems(playlistId) {
+      let pageToken = '';
+      const allItems = [];
+      let page = 1;
+      while (true) {
+        const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=${playlistId}&maxResults=50${pageToken ? `&pageToken=${pageToken}` : ''}&key=${YOUTUBE_API_KEY}`;
+        console.log(`🌐 Playlist API URL (page ${page}): ${url.replace(YOUTUBE_API_KEY, '***API_KEY***')}`);
+        const res = await fetch(url);
+        console.log(`📊 Playlist API response status (page ${page}): ${res.status} ${res.statusText}`);
+        if (!res.ok) {
+          const errorText = await res.text();
+          console.error('❌ Playlist API error response:', errorText);
+          throw new Error(`YouTube API playlist error: ${res.status} ${res.statusText}`);
+        }
+        const data = await res.json();
+        const items = data.items || [];
+        console.log(`📦 Received ${items.length} items on page ${page}`);
+        allItems.push(...items);
+        if (!data.nextPageToken) {
+          break;
+        }
+        pageToken = data.nextPageToken;
+        page += 1;
+      }
+      return allItems;
     }
 
-    const playlistData = await playlistResponse.json();
-    console.log('📦 Playlist API response received');
-
-    if (!playlistData.items || playlistData.items.length === 0) {
+    const playlistItems = await fetchAllPlaylistItems(uploadsPlaylistId);
+    if (!playlistItems || playlistItems.length === 0) {
       console.log('⚠️ No videos found in uploads playlist');
       return; // Exit gracefully if no videos
     }
+    console.log(`📹 Found ${playlistItems.length} total videos in playlist (all pages)`);
 
-    console.log(`📹 Found ${playlistData.items.length} videos in playlist`);
+    // Determine delta: which video IDs are new (not yet saved)
+    const videoIds = playlistItems.map((item) => item.contentDetails.videoId).filter(Boolean);
+    const existingIds = fs.existsSync(VIDEOS_DIR)
+      ? new Set(
+          fs
+            .readdirSync(VIDEOS_DIR)
+            .filter((f) => f.endsWith('.json'))
+            .map((f) => path.parse(f).name)
+        )
+      : new Set();
 
-    // Fetch detailed info for each video
-    console.log('\n📡 Step 3: Fetching detailed video information...');
-    const videoIds = playlistData.items.map((item) => item.contentDetails.videoId);
-    console.log(`🎬 Processing ${videoIds.length} video IDs: ${videoIds.slice(0, 5).join(', ')}${videoIds.length > 5 ? '...' : ''}`);
+    const refreshExisting = (process.env.REFRESH_EXISTING || '').toLowerCase() === 'true';
+    const idsToFetch = refreshExisting ? videoIds : videoIds.filter((id) => !existingIds.has(id));
+    console.log(`🧮 Existing files: ${existingIds.size} | New to fetch: ${idsToFetch.length}${refreshExisting ? ' (refreshing all)' : ''}`);
 
-    const videosUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${videoIds.join(',')}&key=${YOUTUBE_API_KEY}`;
-    console.log(`🌐 Videos API URL: ${videosUrl.replace(YOUTUBE_API_KEY, '***API_KEY***')}`);
-
-    const videosResponse = await fetch(videosUrl);
-    console.log(`📊 Videos API response status: ${videosResponse.status} ${videosResponse.statusText}`);
-
-    if (!videosResponse.ok) {
-      const errorText = await videosResponse.text();
-      console.error('❌ Videos API error response:', errorText);
-      throw new Error(`YouTube API videos error: ${videosResponse.status} ${videosResponse.statusText}`);
+    if (idsToFetch.length === 0) {
+      console.log('✅ No new videos to import. Skipping details fetch.');
     }
 
-    const videosData = await videosResponse.json();
-    console.log('📦 Videos API response received');
+    // Helper: chunk IDs into batches of 50 (API limit)
+    function chunkArray(arr, size) {
+      const chunks = [];
+      for (let i = 0; i < arr.length; i += size) {
+        chunks.push(arr.slice(i, i + size));
+      }
+      return chunks;
+    }
 
-    if (!videosData.items || videosData.items.length === 0) {
+    // Fetch detailed info for each video (in batches)
+    console.log('\n📡 Step 3: Fetching detailed video information in batches...');
+    const idBatches = chunkArray(idsToFetch, 50);
+    const detailedItems = [];
+    for (let i = 0; i < idBatches.length; i++) {
+      const batch = idBatches[i];
+      const batchUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${batch.join(',')}&key=${YOUTUBE_API_KEY}`;
+      console.log(`🌐 Videos API URL (batch ${i + 1}/${idBatches.length}): ${batchUrl.replace(YOUTUBE_API_KEY, '***API_KEY***')}`);
+      const res = await fetch(batchUrl);
+      console.log(`📊 Videos API response status (batch ${i + 1}): ${res.status} ${res.statusText}`);
+      if (!res.ok) {
+        const errorText = await res.text();
+        console.error('❌ Videos API error response:', errorText);
+        throw new Error(`YouTube API videos error: ${res.status} ${res.statusText}`);
+      }
+      const data = await res.json();
+      const items = data.items || [];
+      console.log(`📦 Received ${items.length} details in batch ${i + 1}`);
+      detailedItems.push(...items);
+    }
+
+    if (idsToFetch.length > 0 && detailedItems.length === 0) {
       console.log('⚠️ No video details retrieved from YouTube API');
       return; // Exit gracefully if no video details
     }
 
-    console.log(`🎯 Processing ${videosData.items.length} video details`);
+    console.log(`🎯 Processing ${detailedItems.length} video details (new/refresh)`);
 
     // Transform and save videos
     console.log('\n💾 Step 4: Saving video files...');
@@ -139,7 +180,7 @@ async function fetchVideos() {
       console.log(`📁 Videos directory exists: ${VIDEOS_DIR}`);
     }
 
-    const videos = videosData.items
+    const videos = (idsToFetch.length === 0 ? [] : detailedItems)
       .filter((item) => {
         if (!item.id || !item.snippet) {
           console.log(`⚠️ Skipping video: missing id or snippet`);
@@ -179,31 +220,16 @@ async function fetchVideos() {
         return videoData;
       });
 
-    // Sort videos by published date (newest first) and mark the latest as featured
-    if (videos.length > 0) {
-      console.log('\n⭐ Marking latest video as featured...');
-
-      // Sort by published date descending (newest first)
-      videos.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
-
-      // Mark the first video (most recent) as featured
-      const latestVideo = videos[0];
-      latestVideo.featured = true;
-
-      // Re-save the featured video file
-      const featuredFilePath = path.join(VIDEOS_DIR, `${latestVideo.videoId}.json`);
-      fs.writeFileSync(featuredFilePath, JSON.stringify(latestVideo, null, 2));
-
-      console.log(`🌟 Featured video: "${latestVideo.title}" (${latestVideo.videoId})`);
-    }
+    // Delta import summary
+    const addedCount = videos.length;
+    const totalIds = videoIds.length;
+    const skippedCount = refreshExisting ? 0 : (totalIds - idsToFetch.length);
 
     const endTime = Date.now();
     const duration = (endTime - startTime) / 1000;
 
-    console.log(`\n🎉 Successfully processed ${videos.length} videos (${videosData.items.length - videos.length} skipped due to missing/invalid data)`);
-    if (videos.length > 0) {
-      console.log(`🌟 Latest video marked as featured: "${videos[0].title}"`);
-    }
+    console.log(`\n🎉 Successfully processed ${addedCount} new/updated videos`);
+    console.log(`🧾 Summary: total IDs=${totalIds}, toFetch=${idsToFetch.length}, skipped=${skippedCount}${refreshExisting ? ' (full refresh)' : ''}`);
     console.log(`⏱️ Total execution time: ${duration.toFixed(2)} seconds`);
     console.log(`📊 Videos saved to: ${VIDEOS_DIR}`);
 
