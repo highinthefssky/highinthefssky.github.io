@@ -2,8 +2,10 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import VideoCard from '../components/VideoCard.astro';
+import stats from '../content/stats.json';
 
 const allVideos = await getCollection('videos');
+const totalVideos = stats.totalVideos ?? allVideos.length;
 const sortedVideos = allVideos.sort(
   (a, b) =>
     new Date(b.data.publishedAt).getTime() -
@@ -20,7 +22,7 @@ const allTags = Array.from(
     <div class="videos-header">
       <h1>Video Library</h1>
       <p>
-        Explore {allVideos.length} videos from the channel
+        Explore {totalVideos} videos from the channel
       </p>
     </div>
 
@@ -29,7 +31,7 @@ const allTags = Array.from(
         <input
           type="text"
           id="search-input"
-          placeholder="Search by title or description..."
+          placeholder="Search videos (e.g. title:landing, description:IFR, navigation tutorial)"
           class="search-input"
           autocomplete="off"
         />
@@ -65,8 +67,8 @@ const allTags = Array.from(
       </div>
 
       <div class="controls-footer">
-        <span id="result-count" class="result-count">
-          {allVideos.length} videos
+        <span id="result-count" class="result-count" data-total-videos={totalVideos}>
+          {totalVideos} videos
         </span>
         <button id="clear-btn" class="btn-clear" type="button">
           Clear all filters
@@ -379,6 +381,7 @@ const allTags = Array.from(
   const clearBtn = document.getElementById('clear-btn');
   const resetBtn = document.getElementById('reset-btn');
   const selectedTagsContainer = document.getElementById('selected-tags') as HTMLDivElement;
+  const totalVideos = Number(resultCount?.getAttribute('data-total-videos') || '0');
 
   let activeTags = new Set<string>();
 
@@ -391,6 +394,19 @@ const allTags = Array.from(
 
   function normalizeString(str: string): string {
     return str.toLowerCase().trim();
+  }
+
+  function parseSearchQuery(raw: string): { term: string; field: 'all' | 'title' | 'description' } {
+    const trimmed = raw.trim();
+    if (!trimmed) return { term: '', field: 'all' };
+    const lower = trimmed.toLowerCase();
+    if (lower.startsWith('title:')) {
+      return { term: trimmed.slice('title:'.length).trim(), field: 'title' };
+    }
+    if (lower.startsWith('description:')) {
+      return { term: trimmed.slice('description:'.length).trim(), field: 'description' };
+    }
+    return { term: trimmed, field: 'all' };
   }
 
   function updateSelectedTagsDisplay() {
@@ -412,38 +428,48 @@ const allTags = Array.from(
 
   function updateDisplay() {
     let visibleCount = 0;
+    const { term, field } = parseSearchQuery(searchInput.value || '');
+    const searchTerm = normalizeString(term);
 
     videoCards.forEach((card) => {
-      const tags = (card.getAttribute('data-tags') || '')
+      const cardEl = card as HTMLElement;
+      const tags = (cardEl.getAttribute('data-tags') || '')
         .split(',')
         .filter((t) => t)
         .map(normalizeString);
-      const title = (card.parentElement?.querySelector('.card-title')?.textContent || '')
-        .toLowerCase();
+      const title = normalizeString(cardEl.querySelector('.card-title')?.textContent || '');
+      const description = normalizeString(cardEl.querySelector('.card-content')?.textContent || '');
 
-      const searchTerm = normalizeString(searchInput.value);
       const matchesSearch =
         !searchTerm ||
-        title.includes(searchTerm) ||
-        (card.parentElement?.querySelector('.card-content')?.textContent || '')
-          .toLowerCase()
-          .includes(searchTerm);
+        (field === 'title' && title.includes(searchTerm)) ||
+        (field === 'description' && description.includes(searchTerm)) ||
+        (field === 'all' && (title.includes(searchTerm) || description.includes(searchTerm)));
 
       const matchesTags =
         activeTags.size === 0 ||
         Array.from(activeTags).some((tag) => tags.includes(normalizeString(tag)));
 
       const shouldShow = matchesSearch && matchesTags;
-      (card as HTMLElement).parentElement!.style.display = shouldShow ? '' : 'none';
+      cardEl.style.display = shouldShow ? '' : 'none';
 
       if (shouldShow) visibleCount++;
     });
 
+    const hasFilters = activeTags.size > 0 || !!searchInput.value.trim();
+
+    if (!hasFilters) {
+      // Reset to full set and show the authoritative count from stats
+      videoCards.forEach((card) => {
+        (card as HTMLElement).style.display = '';
+      });
+      visibleCount = totalVideos;
+    }
+
     resultCount!.textContent = `${visibleCount} ${visibleCount === 1 ? 'video' : 'videos'}`;
     emptyState!.style.display = visibleCount === 0 ? 'block' : 'none';
     videosGrid!.style.display = visibleCount === 0 ? 'none' : 'grid';
-
-    clearBtn!.disabled = activeTags.size === 0 && !searchInput.value;
+    clearBtn!.disabled = !hasFilters;
   }
 
   // Tag search filter
@@ -456,6 +482,14 @@ const allTags = Array.from(
   });
 
   searchInput?.addEventListener('input', updateDisplay);
+
+  // Allow Enter to trigger search without submitting anything
+  searchInput?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      updateDisplay();
+    }
+  });
 
   tagButtons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -500,4 +534,5 @@ const allTags = Array.from(
 
   // Initialize
   updateSelectedTagsDisplay();
+  updateDisplay();
 </script>
