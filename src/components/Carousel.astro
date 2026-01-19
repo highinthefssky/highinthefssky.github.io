@@ -7,15 +7,17 @@ interface Props {
 }
 
 const { videos, autoplay = true } = Astro.props;
-const featuredVideos = videos.filter((v) => v.data.featured).slice(0, 5);
+const latestVideos = videos
+  .sort((a, b) => new Date(b.data.publishedAt) - new Date(a.data.publishedAt))
+  .slice(0, 3);
 ---
 
 <div class="carousel-container">
   <div class="carousel" data-autoplay={autoplay}>
     {
-      featuredVideos.length > 0 ? (
+      latestVideos.length > 0 ? (
         <div class="carousel-slides">
-          {featuredVideos.map((video, index) => (
+          {latestVideos.map((video, index) => (
             <div class="carousel-slide" data-index={index}>
               <a href={`/videos/${video.id}`} class="slide-link">
                 <img
@@ -41,18 +43,18 @@ const featuredVideos = videos.filter((v) => v.data.featured).slice(0, 5);
         </div>
       ) : (
         <div class="carousel-empty">
-          <p>No featured videos yet</p>
+          <p>No videos available yet</p>
         </div>
       )
     }
 
-    {featuredVideos.length > 1 && (
+    {latestVideos.length > 1 && (
       <div class="carousel-controls">
         <button class="carousel-btn carousel-prev" aria-label="Previous slide">
           &#10094;
         </button>
         <div class="carousel-dots">
-          {featuredVideos.map((_, index) => (
+          {latestVideos.map((_, index) => (
             <button
               class={`carousel-dot ${index === 0 ? 'active' : ''}`}
               data-slide={index}
