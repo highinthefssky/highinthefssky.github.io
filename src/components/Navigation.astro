@@ -9,29 +9,54 @@
     </a>
     <ul class="navbar-menu">
       <li>
-        <a href="/" class="navbar-link">Home</a>
+        <a href="/" class="navbar-link" data-link="/">Home</a>
       </li>
       <li>
-        <a href="/videos" class="navbar-link">Videos</a>
+        <a href="/videos" class="navbar-link" data-link="/videos">Videos</a>
       </li>
       <li>
-        <a href="/posts" class="navbar-link">Community</a>
+        <a href="/posts" class="navbar-link" data-link="/posts">Community</a>
       </li>
       <li>
-        <a href="/feed" class="navbar-link">Feed</a>
+        <a href="/feed" class="navbar-link" data-link="/feed">Feed</a>
       </li>
     </ul>
   </div>
 </nav>
 
+<script>
+  function updateActiveLink() {
+    const currentPath = window.location.pathname;
+    const links = document.querySelectorAll('.navbar-link');
+    
+    links.forEach((link) => {
+      const linkPath = link.getAttribute('data-link');
+      link.classList.remove('active');
+      
+      if (linkPath === '/' && currentPath === '/') {
+        link.classList.add('active');
+      } else if (linkPath !== '/' && currentPath.startsWith(linkPath)) {
+        link.classList.add('active');
+      }
+    });
+  }
+  
+  // Update on page load
+  updateActiveLink();
+  
+  // Update on navigation
+  window.addEventListener('popstate', updateActiveLink);
+</script>
+
 <style>
   .navbar {
-    background: #f3f4f6;
-    border-bottom: 2px solid #d1d5db;
+    background: rgba(11, 30, 51, 0.9);
+    border-bottom: 1px solid rgba(125, 211, 252, 0.18);
     position: sticky;
     top: 0;
     z-index: 50;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
   }
 
   .navbar-container {
@@ -46,13 +71,14 @@
   .navbar-logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: hsl(213, 94%, 47%);
+    color: #e6efff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
   }
 
   .navbar-logo:hover {
-    color: #764ba2;
+    color: #7dd3fc;
+    transform: translateY(-1px);
   }
 
   .navbar-menu {
@@ -64,15 +90,26 @@
   }
 
   .navbar-link {
-    color: #1f2937;
+    color: #c8d6ed;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease;
     display: inline-block;
+    padding: 0.35rem 0.5rem;
+    border-radius: 0.5rem;
   }
 
   .navbar-link:hover {
-    color: hsl(213, 94%, 47%);
+    color: #7dd3fc;
+    transform: translateY(-1px);
+    background: rgba(125, 211, 252, 0.08);
+    text-shadow: 0 0 10px rgba(125, 211, 252, 0.6), 0 0 20px rgba(14, 165, 233, 0.4);
+  }
+
+  .navbar-link.active {
+    color: #7dd3fc;
+    background: rgba(125, 211, 252, 0.12);
+    text-shadow: 0 0 8px rgba(125, 211, 252, 0.5);
   }
 
   @media (max-width: 768px) {
