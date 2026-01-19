@@ -77,7 +77,6 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
             <ul>
               <li><a href="/">Home</a></li>
               <li><a href="/videos">Videos</a></li>
-              <li><a href="/search">Search</a></li>
               <li><a href="/posts">Community</a></li>
               <li><a href="/feed">Feed</a></li>
             </ul>
@@ -88,7 +87,7 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
               <li><a href="/feed.xml">RSS Feed</a></li>
               <li><a href="/sitemap.xml">Sitemap</a></li>
               <li><a href="https://github.com/yourusername/highintheflightsimsky.nl">GitHub</a></li>
-              <li><a href="https://www.youtube.com/">YouTube Channel</a></li>
+              <li><a href="https://bit.ly/34eNWDP" target="_blank" rel="noopener noreferrer" class="youtube-link"><span class="youtube-icon">▶</span> YouTube Channel</a></li>
             </ul>
           </div>
         </div>
@@ -121,11 +120,13 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
   }
 
   .footer {
-    background: #1f2937;
-    color: #f3f4f6;
-    border-top: 1px solid #374151;
+    background: rgba(11, 30, 51, 0.8);
+    backdrop-filter: blur(10px);
+    color: #e5e7eb;
+    border-top: 1px solid rgba(125, 211, 252, 0.15);
     padding: 3rem 1rem;
     margin-top: 4rem;
+    box-shadow: inset 0 1px 0 rgba(125, 211, 252, 0.1);
   }
 
   .footer-container {
@@ -138,6 +139,8 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(125, 211, 252, 0.2);
   }
 
   .footer-section h3,
@@ -163,13 +166,24 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
   }
 
   .footer-section a {
-    color: #9ca3af;
+    color: #c8d6ed;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
   }
 
   .footer-section a:hover {
-    color: #f3f4f6;
+    color: #7dd3fc;
+    text-shadow: 0 0 8px rgba(125, 211, 252, 0.4);
+  }
+
+  .youtube-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .youtube-icon {
+    font-size: 0.9rem;
   }
 
   .footer-bottom {
