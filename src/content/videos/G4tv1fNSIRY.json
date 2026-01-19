@@ -1,0 +1,22 @@
+{
+  "videoId": "G4tv1fNSIRY",
+  "title": "Flight Simulator 2020 - How to - Building Bushtalk client manually",
+  "description": "In this how to we are going to look at how you can manually build the Bushtalk client which can be used in combination with the http://bushtalkradio.com/. This addon creates another dimension to your bush trips due to the fact it will give an explanation about the POI's you are close by. Currently not all POI's have been added to the map but based on a Reddit discussion it looks like this functionality will be added soon.\n\nTo build the client manually you need to have Python installed which you can download from the site below:\nhttps://www.python.org/downloads/\n\nIn addition to this you need to have the source files from the Bushtalk client:\nhttps://github.com/BushtalkRadio/BushtalkClient\n\nOnce both are downloaded and Python is installed follow the steps below:\n\n- open a command prompt\n- go to the folder which contains the extracted content of the Bush talk client\n- install the PySimpleGUI module by running the following command: \n  pip install PySimpleGUI\n- install the SimConnect module by running the following command: \n  pip install SimConnect\n- install the requests module by running the following command: \n  pip install requests\n- start the Bushtalk client by running the following command: \n  python BushtalkClient.py\n\n🔔 If you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP 🔔 \n\nTutorials playlist: https://bit.ly/32nmUHH\nWebsite: https://highintheflightsimsky.nl\n\n#FlightSimulator2020 #FlightSim #FS2020",
+  "thumbnail": "https://i.ytimg.com/vi/G4tv1fNSIRY/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/G4tv1fNSIRY/mqdefault.jpg",
+  "publishedAt": "2020-12-29T19:15:02.000Z",
+  "duration": 434,
+  "tags": [
+    "Flight Simulator 2020",
+    "microsoft flight simulator",
+    "flight simulator",
+    "microsoft flight simulator 2020",
+    "msfs 2020",
+    "How to build the bushtalk client manually",
+    "How to build to the bushtalkradio client manually",
+    "bushtalkradio.com",
+    "How to install the bushtalkradio.com client",
+    "bushtalk client seen as virus"
+  ],
+  "featured": false
+}

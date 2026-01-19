@@ -1,0 +1,31 @@
+{
+  "videoId": "nAe6jDi8RDo",
+  "title": "I tested MSFS 2024's Scenery Quality: Streamed vs Downloaded. The difference is ... 👀",
+  "description": "I've always wondered what really gives the best visual quality in Microsoft Flight Simulator 2024. Do you need to pre-download massive offline packs, or is streaming content from the cloud the way to go? I decided to run multiple tests to find the definitive answer.\n\nFor this experiment, I took to the skies over two very different, highly-detailed locations: the dense urban jungle of New York City and the dramatic terrain of Gibraltar. I flew the exact same flight paths multiple times, comparing downloaded and streamed content side-by-side, with and without photogrammetry and caching.\n\n🧪 Test Overview\n🗽 New York City (NYC)\n\n1️⃣ Streamed 📡 | ❌ Photogrammetry | 🔁 Cached vs Non-Cached\n2️⃣ Downloaded 💾 | ❌ Photogrammetry | 🔁 Cached vs Non-Cached\n3️⃣ Streamed vs Downloaded 🔄 | ❌ Photogrammetry | ✅ Cached \n4️⃣ Streamed 📡 | ✅ Photogrammetry 🗺️ | 🔁 Cached vs Non-Cached \n5️⃣ Downloaded 💾 | ✅ Photogrammetry 🗺️ | 🔁 Cached vs Non-Cached \n6️⃣ Streamed vs Downloaded 🔄 | ✅ Photogrammetry 🗺️ | ❌ Cached\n\n🏰 Gibraltar\n7️⃣ Streamed 📡 | ❌ Photogrammetry | 🔁 Cached vs Non-Cached \n8️⃣ Downloaded 💾 | ❌ Photogrammetry | 🔁 Cached vs Non-Cached \n9️⃣ Streamed vs Downloaded 🔄 | ✅ Photogrammetry 🗺️ | ❌ Cached\n\n📝Quick breakdown of the terms: \n\n💾Downloaded: Data is already on your PC, which should decrease the data required to be downloaded and theoretically might improve the quality since a lower dependency on the internet.\n\n☁️Streamed: Data is pulled from Microsoft's servers as you fly, saving space but potentially introducing performance and quality issues if your internet connection is slow or inconsistent.\n\n🗂️ Cached: MSFS allows users to create a manual cache or use a rolling cache to store scenery data locally. This helps reduce stutters and loading times in frequently visited areas, especially useful if you have limited bandwidth or a inconsistent internet connection.\n\n🚫 Non-Cached: When caching is disabled, MSFS streams all scenery data live from Bing Maps and Azure servers. This saves disk space but can lead to performance issues if your internet connection isn’t stable or fast enough.\n\n🌍 Photogrammetry: MSFS uses photogrammetry to render real-world cities in high detail using aerial imagery and 3D mapping. While visually stunning, it’s bandwidth-heavy and can cause melted buildings or pop-ins if your connection or system resources are lacking\n\nThe results might depending on your system specifications and internet connection. Watch to the end to see which one came out on top! 📈\n\n🖥️System specs\nAMD Ryzen 9 7900X3D\n64GB Memory DDR5 6000MHz\nGigabyte RTX 4090 Gaming OC\nSamsung SSD 900 Pro 2TB\n\nNo overclocking configured\n\n🌍Internet speed\n1GB up/down fiber\n\nHonestly, the results were not what I expected. If you're chasing the most realistic and immersive scenery possible in MSFS 2024, this is a must-watch.\n\n👇 Did these results surprise you too? Let me know your own experiences in the comments below! And if this video helped you out, a like and subscribe would be amazing!\n\nDo you have a preferred method? Let me know in the comments\n\n📖 Chapters\n0:00 - intro\n0:29 - intro video\n0:51 - how I performed the tests\n01:27 - NYC | streamed content | no photogrammetry | cached vs non- cached\n04:13 - NYC | downloaded content | no photogrammetry | cached vs non- cached\n07:07 - NYC | streamed vs downloaded | no photogrammetry | cached\n08:34 - NYC | streamed content | photogrammetry | cached vs non- cached\n10:01 - NYC | downloaded content | photogrammetry | cached vs non- cached\n11:14 - NYC | streamed vs downloaded | photogrammetry | non-cached\n12:32 - Gibraltar | streamed content | no photogrammetry | cached vs non- cached\n15:27 - Gibraltar | downloaded content | no photogrammetry | cached vs non- cached\n17:54 - Gibraltar | streamed vs downloaded | photogrammetry | non-cached \n19:16 - conclusion\n20:18 - outro video\n\n🔔 Subscribe\n Help support the channel by hitting the Like button 👍 and Subscribe for more MSFS news, previews, and tutorials! See you in the skies!: https://bit.ly/34eNWDP\n\n🔗Other related links\nTutorials playlist: https://bit.ly/3l6fRdL\nWebsite: https://highintheflightsimsky.nl\n\n#FlightSimulator2024 #FlightSim #FS2024",
+  "thumbnail": "https://i.ytimg.com/vi/nAe6jDi8RDo/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/nAe6jDi8RDo/mqdefault.jpg",
+  "publishedAt": "2025-09-14T14:07:53.000Z",
+  "duration": 1246,
+  "tags": [
+    "MSFS 2024",
+    "I tested MSFS 2024",
+    "MSFS 2024 review",
+    "MSFS 2024 test",
+    "Microsoft Flight Simulator 2024",
+    "MSFS downloaded vs streamed",
+    "MSFS scenery quality",
+    "MSFS photogrammetry test",
+    "MSFS surprising results",
+    "MSFS visual comparison",
+    "MSFS 2024 graphics",
+    "New York City MSFS",
+    "Gibraltar Airport MSFS",
+    "MSFS 2024 best settings",
+    "flight simulator experiment",
+    "MSFS 2024 offline mode",
+    "MSFS streaming scenery",
+    "flight sim graphics test",
+    "MSFS 2024 realistic scenery"
+  ],
+  "featured": false
+}

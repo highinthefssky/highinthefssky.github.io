@@ -1,0 +1,19 @@
+{
+  "videoId": "fjrQ8UTaEDU",
+  "title": "Flight Simulator 2020 - How to - A32nx - Ensure managed heading mode continues to work after the SID",
+  "description": "In this video we will have a look what is causing the auto pilot to switch off the managed heading mode after you passed the last waypoint of a Standard Instrumental Departure route. We will start recording just after we bypassed the last waypoint of the SID and explain why it switches of the managed heading mode but also how to enable it again.\n\nIf you would like to give the addon a try yourself visit the site below to download it:\nhttps://flybywiresim.com/\n\n🔔 If you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP 🔔 \n\nAddon spotlight playlist: https://bit.ly/32nmUHH\nWebsite: https://highintheflightsimsky.nl\n\n#FlightSimulator2020 #FlightSim #FS2020",
+  "thumbnail": "https://i.ytimg.com/vi/fjrQ8UTaEDU/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/fjrQ8UTaEDU/mqdefault.jpg",
+  "publishedAt": "2022-03-15T19:17:13.000Z",
+  "duration": 209,
+  "tags": [
+    "Flight Simulator 2020",
+    "microsoft flight simulator",
+    "flight simulator",
+    "microsoft flight simulator 2020",
+    "msfs 2020",
+    "A32nx switches managed heading mode off",
+    "Managed heading mode switched off"
+  ],
+  "featured": false
+}

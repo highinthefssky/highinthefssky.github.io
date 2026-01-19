@@ -1,0 +1,25 @@
+{
+  "videoId": "f8kp_PvfqBg",
+  "title": "Flight Simulator 2020 - How to - Airbus A320 V2- Using Simbrief integration",
+  "description": "In this video we will look at how to use the Simbrief integration in the A320 V2 which became available with the release of Sim Update 15. We start with looking at the EFB and continue using the values calculated by the EFB to populate the MCDU.\n\n00:00 intro\n00:10 setting up the EFB\n00:48 finding your Simbrief ID and selecting the correct aircraft frame\n02:09 continue setting up the EFB and using the functionality\n02:48 setting up the MCDU\n03:49 finding the flight number and cost index (CI)\n05:07 calculating the take-off speed\n07:11 setting up the take-off speed in the MCDU\n08:58 where to find the A320 V2 manual\n\n🔔 If you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP 🔔 \n\nHow to spotlight playlist: https://bit.ly/49LlxEU\nWebsite: https://highintheflightsimsky.nl\n\n#FlightSimulator2020 #FlightSim #FS2020 #dornier #vtol",
+  "thumbnail": "https://i.ytimg.com/vi/f8kp_PvfqBg/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/f8kp_PvfqBg/mqdefault.jpg",
+  "publishedAt": "2024-05-27T17:31:06.000Z",
+  "duration": 741,
+  "tags": [
+    "Flight Simulator 2020",
+    "microsoft flight simulator",
+    "flight simulator",
+    "microsoft flight simulator 2020",
+    "msfs 2020",
+    "tutorial",
+    "a320 v2",
+    "take-off speed",
+    "cost index",
+    "simbrief",
+    "v2",
+    "v1",
+    "a320 simbrief"
+  ],
+  "featured": false
+}

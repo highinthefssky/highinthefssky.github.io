@@ -1,0 +1,30 @@
+{
+  "videoId": "w3EN8rnW918",
+  "title": "MSFS 2024 Sim Update 3 ✈️ | Build 11 Bug Fixes & Regression Patch Breakdown!",
+  "description": "Hey pilots! 🧑‍✈️ Buckle up as we cruise through the latest Sim Update 3 for Microsoft Flight Simulator 2024, spotlighting Build 1.5.15.0. While it’s a smaller update, it brings essential bug fixes and regression patches that are sure to smooth out your flying experience. 🛠️\nWe’ll cover every fix in the release notes, including improvements to cockpit placement, towplane spawning, and some quirky regressions like that wild drone mode activation. Plus, SDK developers get a small win with WASM tweaks!\n\n🚀 Highlights from the Update:\n📏Cockpit size & placement now save properly\n🪝Towplane reliably spawns\n🚫Rare waypoint altitude crash eliminated\n🪟 Popout windows working again\n🛸 Drone mode bug squashed\n✈️ PC-24 passenger door walkaround fix\n🔒Locked presets now show a popup\n🖥️ SDK: WASM system reload bug fixed\n\nEven modest updates like this one help keep the skies smooth and the experience immersive. Got thoughts on this patch or issues that still linger? Drop a comment and join the conversation! 👇\n\n📖 Chapters\n00:00 - intro\n00:09 - intro video\n00:32 - review release notes - including important fixes\n02:59 - outro - speculations about final version\n03:30 - outro video\n\n💬 Did this update fix your CTDs? Let us know your experience in the comments below!\n\n👍 If you found this video helpful, please give it a like and subscribe for more MSFS 2024 updates and tips\n\n🔗 Access the full release notes: https://forums.flightsimulator.com/t/sim-update-3-beta-1-5-15-0-release-notes-july-9th-2025/729049\n\n🔗Other related links\nTutorials playlist: https://bit.ly/3l6fRdL\nWebsite: https://highintheflightsimsky.nl\n\n#MSFS2024 #FlightSimulator #Update #beta #flightsimulator2024",
+  "thumbnail": "https://i.ytimg.com/vi/w3EN8rnW918/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/w3EN8rnW918/mqdefault.jpg",
+  "publishedAt": "2025-07-09T20:30:23.000Z",
+  "duration": 222,
+  "tags": [
+    "Microsoft Flight Simulator 2024",
+    "MSFS 2024",
+    "Sim Update 3",
+    "Build 1.5.15.0",
+    "flight simulator patch",
+    "MSFS bug fixes",
+    "regression fixes",
+    "drone mode bug",
+    "PC-24 walkaround",
+    "popout windows MSFS",
+    "towplane spawn fix",
+    "vcockpit placement bug",
+    "MSFS controls preset popup",
+    "WASM SDK update",
+    "MSFS release notes July 2025",
+    "MSFS update recap",
+    "flight sim update analysis",
+    "Microsoft flight sim fixes"
+  ],
+  "featured": false
+}

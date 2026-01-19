@@ -1,0 +1,28 @@
+{
+  "videoId": "qalPg_rYHrI",
+  "title": "Flight Simulator 2020 - How to - Final approach Working Title CJ4",
+  "description": "In this how to we are going to look at how to fix the issue in which we experienced in last how to when using the Working Title CJ4 mod. The issue can happen if you configure the approach and you already bypassed the waypoint which is the starting point of the approach route. This will result in the aircraft to turn around and fly back to the previous waypoint, or in some cases the autopilot is completely lost and goes crazy.\n\nWe just got or instructions from ATC which runway and intersection we should use so enjoy this video.\n\nKudo's to Parry Lagler for providing the instructions on how to fix this issue. \n\nWorking Title CJ4 can be downloaded from this site: https://github.com/Working-Title-MSFS-Mods/fspackages\n\nThe V abbreviations can be found on the site below:\nhttps://en.wikipedia.org/wiki/V_speeds\n\n🔔 If you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP 🔔 \n\nTutorials playlist: https://bit.ly/32nmUHH\nWebsite: https://highintheflightsimsky.nl\n\n#FlightSimulator2020 #FlightSim #FS2020",
+  "thumbnail": "https://i.ytimg.com/vi/qalPg_rYHrI/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/qalPg_rYHrI/mqdefault.jpg",
+  "publishedAt": "2021-01-16T19:15:02.000Z",
+  "duration": 1339,
+  "tags": [
+    "Flight Simulator 2020",
+    "flight plan",
+    "microsoft flight simulator",
+    "flight simulator",
+    "microsoft flight simulator 2020",
+    "msfs 2020",
+    "tutorials",
+    "flight sim 2020",
+    "Working Title CJ4",
+    "How to program a FMS in a CJ4",
+    "How to program a FMS in a CJ4 in MSFS2020",
+    "Programming the FMS in a CJ4",
+    "Working Title CJ4 programming the FMS",
+    "How to program the FMS with the Working Title CJ4",
+    "How to program the FMS in a CJ4 for the approach",
+    "MSFS2020 flight plan messed up due to approach"
+  ],
+  "featured": false
+}
