@@ -40,6 +40,11 @@ async function fetchVideos() {
   try {
     console.log('\n🚀 Starting video fetch process...');
 
+    // Get public IP for debugging
+    const publicIpResponse = await fetch('https://api.ipify.org?format=json').catch(() => null);
+    const publicIpData = publicIpResponse ? await publicIpResponse.json() : { ip: 'Unknown' };
+    console.log(`📍 Public IP: ${publicIpData.ip}`);
+
     // Get uploads playlist ID
     console.log('\n📡 Step 1: Fetching channel information...');
     const channelUrl = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${YOUTUBE_CHANNEL_ID}&key=${YOUTUBE_API_KEY}`;
@@ -160,7 +165,7 @@ async function fetchVideos() {
           videoId: item.id,
           title: item.snippet?.title || 'Untitled Video',
           description: item.snippet?.description || '',
-          thumbnail: item.snippet?.thumbnails?.medium?.url || item.snippet?.thumbnails?.default?.url || '',
+          thumbnail: item.snippet?.thumbnails?.maxresdefault?.url || item.snippet?.thumbnails?.standard?.url || item.snippet?.thumbnails?.high?.url || item.snippet?.thumbnails?.medium?.url || item.snippet?.thumbnails?.default?.url || '',
           publishedAt: item.snippet?.publishedAt ? new Date(item.snippet.publishedAt).toISOString() : new Date().toISOString(),
           duration: duration,
           tags: item.snippet?.tags || [],
