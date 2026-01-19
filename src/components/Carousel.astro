@@ -21,7 +21,9 @@ const latestVideos = videos
             <div class="carousel-slide" data-index={index}>
               <a href={`/videos/${video.id}`} class="slide-link">
                 <img
-                  src={video.data.thumbnail}
+                  src={video.data.thumbnailMedium}
+                  srcset={`${video.data.thumbnailMedium} 320w, ${video.data.thumbnail} 1280w`}
+                  sizes="(max-width: 768px) 100vw, 1280px"
                   alt={video.data.title}
                   class="slide-image"
                 />
