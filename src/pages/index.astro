@@ -13,12 +13,12 @@ const latestPost = allPosts
       new Date(a.data.publishedAt).getTime()
   )[0];
 const publishedPosts = allPosts.filter((post) => !post.data.draft);
-const totalVideos = allVideos.length;
 const totalPosts = publishedPosts.length;
 
 // Import stats (automatically updated by fetch-videos.js)
 import stats from '../content/stats.json';
 const youtubeSubscribers = stats.youtubeSubscribers;
+const totalVideos = stats.totalVideos;
 
 function formatSubscriberCount(count: number): string {
   if (count >= 1000000) {
