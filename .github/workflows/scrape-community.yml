@@ -1,0 +1,78 @@
+name: Scrape YouTube Community
+
+on:
+  # Run on schedule (every 6 hours)
+  schedule:
+    - cron: '0 */6 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      channel_url:
+        description: 'YouTube channel community URL (optional)'
+        required: false
+        default: ''
+
+  # Run on push to main (optional, for testing)
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/scrape-community.py'
+      - '.github/workflows/scrape-community.yml'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scraper
+        id: scrape
+        env:
+          CHANNEL_URL: ${{ github.event.inputs.channel_url }}
+        run: python scripts/scrape-community.py
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git status --porcelain | grep -qE "data/posts.json|src/content/posts/.*\.md"; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/posts.json
+          git add -A src/content/posts/ || true
+          git commit -m "Update community posts - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          git push
+
+      - name: Summary
+        run: |
+          echo "## Scrape Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -f data/posts.json ]; then
+            POST_COUNT=$(python -c "import json; print(len(json.load(open('data/posts.json'))))")
+            echo "✅ Total posts in database: **$POST_COUNT**" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ No posts file found" >> $GITHUB_STEP_SUMMARY
+          fi

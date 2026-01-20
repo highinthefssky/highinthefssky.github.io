@@ -1,0 +1,3 @@
+# Python dependencies for the YouTube Community scraper
+# Pin to a stable range to avoid breaking changes
+requests>=2.31,<3.0
