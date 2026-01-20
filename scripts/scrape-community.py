@@ -91,7 +91,12 @@ def normalize_image_url(url: str) -> str:
     """Remove YouTube fcrop parameters so we get the full image."""
     if not url:
         return url
-    return re.sub(r"=s\d+-c-fcrop64=[^?\s]+", "=s1280", url)
+    match = re.search(r"(=s\d+)(-c-fcrop64=[^?\s]+)", url)
+    if match:
+        prefix = url[: match.start(1)]
+        suffix = url[match.end(2) :]
+        return f"{prefix}=s1280{suffix}"
+    return url
 
 
 def extract_ytInitialData(html: str) -> Optional[dict]:
