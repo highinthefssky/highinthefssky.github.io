@@ -396,6 +396,9 @@ def write_markdown_posts(posts: list, posts_dir: str = POSTS_MD_DIR) -> int:
 
         title = _title_from_text(text)
         description = _description_from_text(text)
+        # YAML-safe quoting: escape double quotes in values
+        def yaml_quote(s: str) -> str:
+            return '"' + s.replace('"', '\\"') + '"'
         base_slug = f"community-{post_id}"
         content_slug = _slugify(title, base_slug)
         filename = f"{content_slug}.md"
@@ -404,8 +407,8 @@ def write_markdown_posts(posts: list, posts_dir: str = POSTS_MD_DIR) -> int:
         # Frontmatter for Astro content schema
         frontmatter = [
             "---",
-            f"title: \"{title}\"",
-            f"description: \"{description}\"",
+            f"title: {yaml_quote(title)}",
+            f"description: {yaml_quote(description)}",
             f"publishedAt: {pub_date}",
             "tags: [\"community\", \"youtube\"]",
             "draft: false",
