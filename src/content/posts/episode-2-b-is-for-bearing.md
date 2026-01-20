@@ -26,4 +26,4 @@ Original post: https://www.youtube.com/post/UgkxY6mXh7V0oBNPLEdh23B5uQPqKIMrLiAK
 Likes: 1 | Comments: 0
 
 Images:
-![](https://yt3.ggpht.com/feUbsf5vpYZ3o7xSFvDoZ_hGafIZMZtCcj3tEZLYLpOKkAoyb4-0Xm_CdqICVRHBhkuHRnzqDfQ-7A=s720-c-fcrop64=1,38000000c7ffffff-nd-v1-rwa)
+![](https://yt3.ggpht.com/feUbsf5vpYZ3o7xSFvDoZ_hGafIZMZtCcj3tEZLYLpOKkAoyb4-0Xm_CdqICVRHBhkuHRnzqDfQ-7A=s1280)
