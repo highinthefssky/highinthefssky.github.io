@@ -33,4 +33,4 @@ Original post: https://www.youtube.com/post/UgkxbTOeqF7ndEXeIKw2ZR4b8LsMYBj60rqu
 Likes: 1 | Comments: 0
 
 Images:
-![](https://yt3.ggpht.com/vYHc9hL9Dw2VQbEBY6nqa2QlB_7SsDDfxHV6mnN3JtcG19ME5WHS7kQq0glotml94t0154wyNSN5bw=s720-c-fcrop64=1,38000000c7ffffff-rw-nd-v1)
+![](https://yt3.ggpht.com/vYHc9hL9Dw2VQbEBY6nqa2QlB_7SsDDfxHV6mnN3JtcG19ME5WHS7kQq0glotml94t0154wyNSN5bw=s1280)

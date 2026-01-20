@@ -32,4 +32,4 @@ Original post: https://www.youtube.com/post/UgkxhM9kr13r2_farHcVFfMEHaLCNvhUSxlL
 Likes: 1 | Comments: 0
 
 Images:
-![](https://yt3.ggpht.com/Q0IMTogUhMRVoiQi9IcLAqjgbJiLh05N8MovD5rpxIBqEVifDcFp8gdLT8psz9Ee3S1UeoOyCkXy3w=s1024-c-fcrop64=1,00000000ffffffff-rw-nd-v1)
+![](https://yt3.ggpht.com/Q0IMTogUhMRVoiQi9IcLAqjgbJiLh05N8MovD5rpxIBqEVifDcFp8gdLT8psz9Ee3S1UeoOyCkXy3w=s1280)

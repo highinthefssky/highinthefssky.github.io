@@ -87,6 +87,13 @@ def parse_relative_time(relative_time: str) -> Optional[str]:
     return None
 
 
+def normalize_image_url(url: str) -> str:
+    """Remove YouTube fcrop parameters so we get the full image."""
+    if not url:
+        return url
+    return re.sub(r"=s\d+-c-fcrop64=[^?\s]+", "=s1280", url)
+
+
 def extract_ytInitialData(html: str) -> Optional[dict]:
     """Extract the ytInitialData JSON object from YouTube page HTML."""
     # YouTube embeds all page data in a JS variable called 'ytInitialData'
@@ -200,7 +207,7 @@ def extract_post_data(post_renderer: dict) -> Optional[dict]:
             thumbnails = img_renderer.get('image', {}).get('thumbnails', [])
             if thumbnails:
                 # Get highest resolution
-                images.append(thumbnails[-1].get('url', ''))
+                images.append(normalize_image_url(thumbnails[-1].get('url', '')))
         
         # Multiple images
         if 'postMultiImageRenderer' in backstage_attachment:
@@ -208,7 +215,7 @@ def extract_post_data(post_renderer: dict) -> Optional[dict]:
             for img in multi_img.get('images', []):
                 thumbnails = img.get('backstageImageRenderer', {}).get('image', {}).get('thumbnails', [])
                 if thumbnails:
-                    images.append(thumbnails[-1].get('url', ''))
+                    images.append(normalize_image_url(thumbnails[-1].get('url', '')))
         
         # Video attachment
         video_id = None
@@ -428,7 +435,8 @@ def write_markdown_posts(posts: list, posts_dir: str = POSTS_MD_DIR) -> int:
         if images:
             body_lines.append("Images:")
             for img in images:
-                body_lines.append(f"![]({img})")
+                img_clean = normalize_image_url(img)
+                body_lines.append(f"![]({img_clean})")
             body_lines.append("")
 
         content = "\n".join(frontmatter + body_lines)

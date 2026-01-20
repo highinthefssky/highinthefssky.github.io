@@ -12,4 +12,4 @@ Original post: https://www.youtube.com/post/UgkxADtYVHMQ_vP8jpu9OKPcKbHrF1bkOe3N
 Likes: 1 | Comments: 0
 
 Images:
-![](https://yt3.ggpht.com/v5BAMbLzkCeCRG4s-4OrFW_7CTm39x7uRuxOIhIziVQEct1MKryOwNUKY2UHO-ygdnpr_tVFCQQpHg=s1440-c-fcrop64=1,4a6b0000b594ffff-rw-nd-v1)
+![](https://yt3.ggpht.com/v5BAMbLzkCeCRG4s-4OrFW_7CTm39x7uRuxOIhIziVQEct1MKryOwNUKY2UHO-ygdnpr_tVFCQQpHg=s1280)
