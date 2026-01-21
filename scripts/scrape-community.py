@@ -23,7 +23,8 @@ POSTS_MD_DIR = os.path.join("src", "content", "posts")
 
 def get_channel_url() -> str:
     """Get channel URL from environment variable or use default."""
-    return os.environ.get("CHANNEL_URL", DEFAULT_CHANNEL_URL)
+    url = os.environ.get("CHANNEL_URL", "").strip()
+    return url if url else DEFAULT_CHANNEL_URL
 
 
 def parse_relative_time(relative_time: str) -> Optional[str]:
