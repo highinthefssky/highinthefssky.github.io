@@ -1,7 +1,7 @@
 ---
 title: "Flying the Junkers JU-52 and preparing for a new how to"
 description: "Flying the Junkers JU-52 and preparing for a new how to"
-publishedAt: 2022-01-22
+publishedAt: 2022-01-23
 tags: ["community", "youtube"]
 draft: false
 ---
