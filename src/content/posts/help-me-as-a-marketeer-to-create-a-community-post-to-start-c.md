@@ -1,7 +1,7 @@
 ---
 title: "help me as a marketeer to create a community post to start creating some excitem"
 description: "help me as a marketeer to create a community post to start creating some excitement the online check in which has been opened. The aircraft which will take of h"
-publishedAt: 2025-01-21
+publishedAt: 2025-01-22
 tags: ["community", "youtube"]
 draft: false
 ---
