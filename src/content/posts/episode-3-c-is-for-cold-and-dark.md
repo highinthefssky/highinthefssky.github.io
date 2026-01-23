@@ -8,8 +8,8 @@ draft: false
 
 Episode 3: "C" is for Cold and Dark! ❄️
 
-
-
+
+
 We’re keeping the momentum going! We’ve covered Ailerons and Bearings, and now it’s time to tackle the letter C.
 
 
@@ -30,7 +30,7 @@ What we’re covering:
 Two letters down, 23 to go. Let's get to work! 🔥
 
 Original post: https://www.youtube.com/post/UgkxbTOeqF7ndEXeIKw2ZR4b8LsMYBj60rqu
-Likes: 1 | Comments: 0
+Likes: 2 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/vYHc9hL9Dw2VQbEBY6nqa2QlB_7SsDDfxHV6mnN3JtcG19ME5WHS7kQq0glotml94t0154wyNSN5bw=s1280)
