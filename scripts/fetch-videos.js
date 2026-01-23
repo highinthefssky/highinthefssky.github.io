@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { GoogleAuth } from 'google-auth-library';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -12,16 +13,24 @@ console.log('🔍 Starting YouTube video fetch script...');
 console.log(`📁 Script location: ${__filename}`);
 console.log(`📂 Working directory: ${process.cwd()}`);
 
-const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
 const YOUTUBE_CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
 const VIDEOS_DIR = path.join(__dirname, '../src/content/videos');
 
+// Check if using OIDC (GOOGLE_APPLICATION_CREDENTIALS) or legacy API key
+const useOIDC = !!process.env.GOOGLE_APPLICATION_CREDENTIALS;
+const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
+
 console.log(`🎯 Target directory: ${VIDEOS_DIR}`);
-console.log(`🔑 API Key present: ${YOUTUBE_API_KEY ? 'Yes' : 'No'}`);
+console.log(`🔐 Authentication mode: ${useOIDC ? 'Google Cloud OIDC' : 'API Key'}`);
 console.log(`📺 Channel ID: ${YOUTUBE_CHANNEL_ID || 'Not set'}`);
 
-if (!YOUTUBE_API_KEY || !YOUTUBE_CHANNEL_ID) {
-  console.error('❌ Error: YOUTUBE_API_KEY and YOUTUBE_CHANNEL_ID environment variables are required');
+if (!YOUTUBE_CHANNEL_ID) {
+  console.error('❌ Error: YOUTUBE_CHANNEL_ID environment variable is required');
+  process.exit(1);
+}
+
+if (!useOIDC && !YOUTUBE_API_KEY) {
+  console.error('❌ Error: Either GOOGLE_APPLICATION_CREDENTIALS (OIDC) or YOUTUBE_API_KEY is required');
   process.exit(1);
 }
 
@@ -35,10 +44,41 @@ if (!YOUTUBE_CHANNEL_ID.startsWith('UC') || YOUTUBE_CHANNEL_ID.length !== 24) {
 console.log('✅ Environment validation passed');
 console.log(`🔍 Channel ID format valid: ${YOUTUBE_CHANNEL_ID}`);
 
+// Helper function to make authenticated YouTube API requests
+async function youtubeApiFetch(url, accessToken) {
+  const headers = {};
+  let finalUrl = url;
+  
+  if (useOIDC && accessToken) {
+    headers['Authorization'] = `Bearer ${accessToken}`;
+  } else if (YOUTUBE_API_KEY) {
+    finalUrl = `${url}${url.includes('?') ? '&' : '?'}key=${YOUTUBE_API_KEY}`;
+  }
+  
+  return fetch(finalUrl, { headers });
+}
+
+// Get access token for OIDC authentication
+async function getAccessToken() {
+  if (!useOIDC) return null;
+  
+  console.log('🔐 Obtaining Google Cloud access token via OIDC...');
+  const auth = new GoogleAuth({
+    scopes: ['https://www.googleapis.com/auth/youtube.readonly']
+  });
+  const client = await auth.getClient();
+  const tokenResponse = await client.getAccessToken();
+  console.log('✅ Access token obtained successfully');
+  return tokenResponse.token;
+}
+
 async function fetchVideos() {
   const startTime = Date.now();
   try {
     console.log('\n🚀 Starting video fetch process...');
+
+    // Get access token if using OIDC
+    const accessToken = await getAccessToken();
 
     // Get public IP for debugging
     const publicIpResponse = await fetch('https://api.ipify.org?format=json').catch(() => null);
@@ -47,10 +87,10 @@ async function fetchVideos() {
 
     // Get uploads playlist ID
     console.log('\n📡 Step 1: Fetching channel information...');
-    const channelUrl = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails,statistics&id=${YOUTUBE_CHANNEL_ID}&key=${YOUTUBE_API_KEY}`;
-    console.log(`🌐 Channel API URL: ${channelUrl.replace(YOUTUBE_API_KEY, '***API_KEY***')}`);
+    const channelUrl = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails,statistics&id=${YOUTUBE_CHANNEL_ID}`;
+    console.log(`🌐 Channel API URL: ${channelUrl}`);
 
-    const channelResponse = await fetch(channelUrl);
+    const channelResponse = await youtubeApiFetch(channelUrl, accessToken);
     console.log(`📊 Channel API response status: ${channelResponse.status} ${channelResponse.statusText}`);
 
     if (!channelResponse.ok) {
@@ -87,9 +127,9 @@ async function fetchVideos() {
       const allItems = [];
       let page = 1;
       while (true) {
-        const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=${playlistId}&maxResults=50${pageToken ? `&pageToken=${pageToken}` : ''}&key=${YOUTUBE_API_KEY}`;
-        console.log(`🌐 Playlist API URL (page ${page}): ${url.replace(YOUTUBE_API_KEY, '***API_KEY***')}`);
-        const res = await fetch(url);
+        const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=${playlistId}&maxResults=50${pageToken ? `&pageToken=${pageToken}` : ''}`;
+        console.log(`🌐 Playlist API URL (page ${page}): ${url}`);
+        const res = await youtubeApiFetch(url, accessToken);
         console.log(`📊 Playlist API response status (page ${page}): ${res.status} ${res.statusText}`);
         if (!res.ok) {
           const errorText = await res.text();
@@ -156,9 +196,9 @@ async function fetchVideos() {
     const detailedItems = [];
     for (let i = 0; i < idBatches.length; i++) {
       const batch = idBatches[i];
-      const batchUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${batch.join(',')}&key=${YOUTUBE_API_KEY}`;
-      console.log(`🌐 Videos API URL (batch ${i + 1}/${idBatches.length}): ${batchUrl.replace(YOUTUBE_API_KEY, '***API_KEY***')}`);
-      const res = await fetch(batchUrl);
+      const batchUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${batch.join(',')}`;
+      console.log(`🌐 Videos API URL (batch ${i + 1}/${idBatches.length}): ${batchUrl}`);
+      const res = await youtubeApiFetch(batchUrl, accessToken);
       console.log(`📊 Videos API response status (batch ${i + 1}): ${res.status} ${res.statusText}`);
       if (!res.ok) {
         const errorText = await res.text();
