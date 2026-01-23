@@ -41,11 +41,93 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Get existing post IDs before scrape
+        id: before-scrape
+        run: |
+          if [ -f data/posts.json ]; then
+            echo "existing_ids=$(python -c "import json; print(','.join([p['id'] for p in json.load(open('data/posts.json'))]))")" >> $GITHUB_OUTPUT
+          else
+            echo "existing_ids=" >> $GITHUB_OUTPUT
+          fi
+
       - name: Run scraper
         id: scrape
         env:
           CHANNEL_URL: ${{ github.event.inputs.channel_url }}
         run: python scripts/scrape-community.py
+
+      - name: Post new content to Discord
+        if: ${{ secrets.DISCORD_WEBHOOK_URL != '' }}
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          EXISTING_IDS: ${{ steps.before-scrape.outputs.existing_ids }}
+        run: |
+          python -c "
+          import json
+          import os
+          import requests
+          import time
+
+          webhook_url = os.environ.get('DISCORD_WEBHOOK_URL', '')
+          if not webhook_url:
+              print('No Discord webhook URL configured, skipping')
+              exit(0)
+
+          existing_ids = set(os.environ.get('EXISTING_IDS', '').split(','))
+          existing_ids.discard('')  # Remove empty string if present
+
+          # Load current posts
+          if not os.path.exists('data/posts.json'):
+              print('No posts.json found')
+              exit(0)
+
+          with open('data/posts.json', 'r') as f:
+              posts = json.load(f)
+
+          # Find new posts (not in existing_ids)
+          new_posts = [p for p in posts if p['id'] not in existing_ids]
+
+          if not new_posts:
+              print('No new posts to send to Discord')
+              exit(0)
+
+          print(f'Found {len(new_posts)} new post(s) to send to Discord')
+
+          # Post each new post to Discord (oldest first)
+          for post in reversed(new_posts):
+              text = post.get('text', '')[:1900]  # Discord limit is 2000 chars
+              post_url = post.get('url', '')
+              images = post.get('images', [])
+
+              # Build embed
+              embed = {
+                  'title': 'New Community Post',
+                  'description': text,
+                  'url': post_url,
+                  'color': 16711680,  # Red color
+                  'footer': {'text': 'High in the Flight Sim Sky'}
+              }
+
+              # Add image if available
+              if images:
+                  embed['image'] = {'url': images[0]}
+
+              payload = {
+                  'embeds': [embed]
+              }
+
+              try:
+                  response = requests.post(webhook_url, json=payload)
+                  if response.status_code == 204:
+                      print(f'✅ Posted to Discord: {post[\"id\"]}')
+                  else:
+                      print(f'❌ Failed to post {post[\"id\"]}: {response.status_code} {response.text}')
+              except Exception as e:
+                  print(f'❌ Error posting {post[\"id\"]}: {e}')
+
+              # Rate limit: wait 1 second between posts
+              time.sleep(1)
+          "
 
       - name: Check for changes
         id: changes
