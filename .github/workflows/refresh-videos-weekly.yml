@@ -11,15 +11,23 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      id-token: write  # Required for OIDC authentication
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Authenticate to Google Cloud
+        id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '22'
           cache: 'npm'
 
       - name: Install dependencies
@@ -27,7 +35,7 @@ jobs:
 
       - name: Refresh videos from YouTube API (full refresh)
         env:
-          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ steps.auth.outputs.credentials_file_path }}
           YOUTUBE_CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
           REFRESH_EXISTING: "true"
         run: node scripts/fetch-videos.js
