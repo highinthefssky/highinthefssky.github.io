@@ -1,7 +1,7 @@
 ---
 title: "🛫 Final Call Announcement: Destination MSFS 2024! 🌍"
 description: "🛫 Final Call Announcement: Destination MSFS 2024! 🌍 Attention, Flight Sim Enthusiasts!  This is your flight attendant speaking. We are now making the final boar"
-publishedAt: 2025-01-23
+publishedAt: 2025-01-24
 tags: ["community", "youtube"]
 draft: false
 ---
