@@ -69,3 +69,12 @@ jobs:
           echo "🚀 Pushing changes..."
           git push
           echo "✅ Changes committed and pushed successfully"
+
+      - name: Trigger deploy
+        if: steps.check-changes.outputs.changed == 'true'
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/dispatches \
+            -d '{"event_type":"content-updated"}'
