@@ -1,13 +1,13 @@
 ---
 title: "Community Update"
 description: "YouTube community post"
-publishedAt: 2023-01-24
+publishedAt: 2022-01-25
 tags: ["community", "youtube"]
 draft: false
 ---
 
-Original post: https://www.youtube.com/post/UgkxmWs-LwS5HHb2m5i_LjVahJAZqEFh0vpA
-Likes: 2 | Comments: 3
+Original post: https://www.youtube.com/post/UgzBC9JwmgBf4Tv2yRB4AaABCQ
+Likes: 4 | Comments: 1
 
 Images:
-![](https://yt3.ggpht.com/-f4DzKd737n3yS0H1epWILf-A8NwYJ3gRTFTuaFvwJZ2j56ggQz12nf57xk7dGtaIIwuQ5gpqAts8A=s1280)
+![](https://yt3.ggpht.com/nCd8r_ZgOkA6YvFKHUnDzOnEEHmFt-CZXGDgNLg2Brkdn2EhaXnB8zzM6xp8qIfY9H4Jw34At4ASygw=s1280)
