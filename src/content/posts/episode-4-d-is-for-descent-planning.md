@@ -28,7 +28,7 @@ What we’re covering:
 Three letters down, 22 to go. Let's get to work! 🔥
 
 Original post: https://www.youtube.com/post/Ugkxokw0Gts_wehZfU3BGiX-llCDvRoS_i6g
-Likes: 0 | Comments: 0
+Likes: 1 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/vuidH3hONdIKpys0QypXZdMLyOxCHq1TuO-Q5YjhcuanOax-DskcY8YVtc5gNWmrdSagRZDiJeX2YA=s1280)
