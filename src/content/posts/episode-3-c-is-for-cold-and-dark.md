@@ -1,7 +1,7 @@
 ---
 title: "Episode 3: \"C\" is for Cold and Dark! ❄️"
 description: "Episode 3: \"C\" is for Cold and Dark! ❄️    We’re keeping the momentum going! We’ve covered Ailerons and Bearings, and now it’s time to tackle the letter C."
-publishedAt: 2026-01-20
+publishedAt: 2026-01-19
 tags: ["community", "youtube"]
 draft: false
 ---
