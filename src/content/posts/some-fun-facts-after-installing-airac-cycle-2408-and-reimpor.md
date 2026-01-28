@@ -1,7 +1,7 @@
 ---
 title: "Some fun facts after installing AIRAC cycle 2408 and reimporting it in LittleNav"
 description: "Some fun facts after installing AIRAC cycle 2408 and reimporting it in LittleNavMap:  - 41330 airports (might include some community add-ons) - 4900 VOR  - 4215"
-publishedAt: 2025-01-23
+publishedAt: 2025-01-25
 tags: ["community", "youtube"]
 draft: false
 ---
