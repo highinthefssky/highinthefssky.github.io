@@ -1,5 +1,6 @@
 ---
 import Navigation from '../components/Navigation.astro';
+import LiveBanner from '../components/LiveBanner.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -59,6 +60,7 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
     <title>{siteTitle}</title>
   </head>
   <body>
+    <LiveBanner />
     <Navigation />
     
     <main>
