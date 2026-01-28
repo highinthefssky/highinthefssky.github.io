@@ -6,6 +6,7 @@ A beautiful, performant static site built with Astro for showcasing YouTube vide
 
 - **Video Showcase**: Display YouTube videos with automatic thumbnail and metadata fetching
 - **Featured Carousel**: Eye-catching carousel of featured videos on the homepage
+- **🔴 Live Stream Detection**: Automatic "LIVE NOW" banner when streaming on YouTube
 - **Community Posts**: Markdown-based blog for community updates and discussions
 - **Full-Text Search**: Fast client-side search across video titles and descriptions
 - **Tag Filtering**: Filter content by tags for better discoverability
@@ -45,7 +46,12 @@ Add your YouTube credentials to `.env.local`:
 ```env
 YOUTUBE_API_KEY=your_youtube_api_key
 YOUTUBE_CHANNEL_ID=your_channel_id
+
+# For live stream detection (via Cloudflare Worker)
+PUBLIC_LIVE_STATUS_URL=https://highinthesky-live-status.your-subdomain.workers.dev
 ```
+
+See [workers/live-status/README.md](workers/live-status/README.md) for Cloudflare Worker setup instructions.
 
 ### Development
 

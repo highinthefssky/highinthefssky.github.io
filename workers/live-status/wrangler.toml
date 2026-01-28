@@ -1,0 +1,15 @@
+name = "highinthesky-live-status"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Environment variables are set in the Cloudflare Dashboard
+# Do NOT add secrets here - use `wrangler secret put` or the dashboard
+
+[vars]
+ALLOWED_ORIGIN = "https://highintheflightsimsky.nl"
+# Set to "true" only for development - allows localhost CORS
+ALLOW_LOCALHOST = "false"
+
+# The following secrets must be set via Cloudflare Dashboard or wrangler CLI:
+# - YOUTUBE_API_KEY
+# - YOUTUBE_CHANNEL_ID
