@@ -19,7 +19,7 @@ const latestVideos = videos
         <div class="carousel-slides">
           {latestVideos.map((video, index) => (
             <div class="carousel-slide" data-index={index}>
-              <a href={`/videos/${video.id}`} class="slide-link">
+              <a href={`https://www.youtube.com/watch?v=${video.data.videoId}`} target="_blank" rel="noopener noreferrer" class="slide-link">
                 <img
                   src={video.data.thumbnailMedium}
                   srcset={`${video.data.thumbnailMedium} 320w, ${video.data.thumbnail} 1280w`}
