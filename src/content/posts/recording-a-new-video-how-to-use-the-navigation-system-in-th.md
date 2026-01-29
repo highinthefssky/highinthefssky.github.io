@@ -1,7 +1,7 @@
 ---
 title: "Recording a new video how to use the navigation system in the Beechcraft 17 Stag"
 description: "Recording a new video how to use the navigation system in the Beechcraft 17 Staggerwing"
-publishedAt: 2023-01-29
+publishedAt: 2023-01-30
 tags: ["community", "youtube"]
 draft: false
 ---

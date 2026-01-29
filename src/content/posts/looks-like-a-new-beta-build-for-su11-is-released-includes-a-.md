@@ -1,7 +1,7 @@
 ---
 title: "Looks like a new beta build for SU11 is released includes a new update screen, a"
 description: "Looks like a new beta build for SU11 is released includes a new update screen, at least I haven't seen it before"
-publishedAt: 2023-01-29
+publishedAt: 2023-01-30
 tags: ["community", "youtube"]
 draft: false
 ---
