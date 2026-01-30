@@ -1,95 +1,5 @@
 [
   {
-    "id": "UgkxAB6tQr5hFCLOMfhZ2JO2X1INnHtTtUAm",
-    "text": "Looks like a new beta build for SU11 is released includes a new update screen, at least I haven't seen it before",
-    "published_relative": "3 years ago",
-    "published_date": "2023-01-31",
-    "url": "https://www.youtube.com/post/UgkxAB6tQr5hFCLOMfhZ2JO2X1INnHtTtUAm",
-    "likes": "1",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/xTImckBomZ7rGwXAyVL-l-0zkG9fv_v0DBfqP99jj5dyZr-BU6hl-Aktid9Jc34SeE6cMptxdXJPLw=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.465538Z"
-  },
-  {
-    "id": "UgkxSz8VIvYn7NQWW-YxFK66W5KD41jL7u9g",
-    "text": "Recording a new video how to use the navigation system in the Beechcraft 17 Staggerwing",
-    "published_relative": "3 years ago (edited)",
-    "published_date": "2023-01-31",
-    "url": "https://www.youtube.com/post/UgkxSz8VIvYn7NQWW-YxFK66W5KD41jL7u9g",
-    "likes": "3",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/p02KrRkiMHqxDK1ad5zYUZN4RONt9UGKSQY019jqxkryRbOGQn4_b5U_FroLgukRGJVsFWNsxYvKrA=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.465519Z"
-  },
-  {
-    "id": "UgkxADtYVHMQ_vP8jpu9OKPcKbHrF1bkOe3N",
-    "text": "Keep an eye on the channel: addon spotlight - top 5 busiest airport - Finland will be available soon",
-    "published_relative": "3 years ago",
-    "published_date": "2023-01-31",
-    "url": "https://www.youtube.com/post/UgkxADtYVHMQ_vP8jpu9OKPcKbHrF1bkOe3N",
-    "likes": "1",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/v5BAMbLzkCeCRG4s-4OrFW_7CTm39x7uRuxOIhIziVQEct1MKryOwNUKY2UHO-ygdnpr_tVFCQQpHg=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.465502Z"
-  },
-  {
-    "id": "UgkxgukDXpn9ui1A0qmUhGjtxE4gcMT_cYIu",
-    "text": "Preview of loading screen of Reno Air Races: pre-release testing screen",
-    "published_relative": "4 years ago",
-    "published_date": "2022-01-31",
-    "url": "https://www.youtube.com/post/UgkxgukDXpn9ui1A0qmUhGjtxE4gcMT_cYIu",
-    "likes": "2",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/0unhRsqu_nzBLcDLFfCNyU6fg7L5OcGvmTZcomQnJVvhSiuFBH74foTC1xMXbkAC_R_Jhcze8P-SuBA=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.465485Z"
-  },
-  {
-    "id": "UgkxoR9Kxmy7M90ebCv7dwVc_RBAPieTY_M8",
-    "text": "Can somebody tell the other pilot not to turn on the taxi way ;-)",
-    "published_relative": "3 years ago",
-    "published_date": "2023-01-31",
-    "url": "https://www.youtube.com/post/UgkxoR9Kxmy7M90ebCv7dwVc_RBAPieTY_M8",
-    "likes": "1",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/mtrHg7c_xwrNBIR17KIJ7Tk8iW3jtbdWzQBNDqRwoRXoDNvcCmbLNIEpVZsMVfRApgfJ8W30Wa88RQ=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.465465Z"
-  },
-  {
-    "id": "UgkxkyGBV8mX-sB1kyYbHgaEqTlvyCoKpCkw",
-    "text": "Traffic jam on the taxi way",
-    "published_relative": "3 years ago",
-    "published_date": "2023-01-31",
-    "url": "https://www.youtube.com/post/UgkxkyGBV8mX-sB1kyYbHgaEqTlvyCoKpCkw",
-    "likes": "5",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/yVErbPMmJUSatek2IzEQFA67NeVkXfk_66hkYYsOJmV75A4k82QTLn84wLNX2qXhMbyHu6whvv-vGQ=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.465446Z"
-  },
-  {
     "id": "Ugwd6r5Cfq5u9Gg34PN4AaABCQ",
     "text": "Flying the Junkers JU-52 and preparing for a new how to",
     "published_relative": "4 years ago",
@@ -102,35 +12,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.465422Z"
-  },
-  {
-    "id": "UgkxbTOeqF7ndEXeIKw2ZR4b8LsMYBj60rqu",
-    "text": "Episode 3: \"C\" is for Cold and Dark! ❄️\n\n\r\n\r\nWe’re keeping the momentum going! We’ve covered Ailerons and Bearings, and now it’s time to tackle the letter C.\n\n\nStarting an aircraft properly is about more than just pressing a button. Today, we are using the massive Canadair CL-415 to demonstrate the full \"Cold and Dark\" procedure.\n\nWe are going beyond the default checklist (which misses some critical steps!) to show you how to bring this beast to life, from the frozen exterior to the warm hum of the engines.\n\nWatch it here at 17:00 UTC+1 tomorrow.\n\nWhat we’re covering:\n\n- What does it mean and how can you start cold and dark\n- External walkaround (Removing Covers)\n- CL-415 cockpit prep (Dark to Light)\n- Engine start procedure (The \"Warm\" Up)\n- Plus: A special surprise at the very end! 🎁\n\nTwo letters down, 23 to go. Let's get to work! 🔥",
-    "published_relative": "10 days ago",
-    "published_date": "2026-01-20",
-    "url": "https://www.youtube.com/post/UgkxbTOeqF7ndEXeIKw2ZR4b8LsMYBj60rqu",
-    "likes": "2",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/vYHc9hL9Dw2VQbEBY6nqa2QlB_7SsDDfxHV6mnN3JtcG19ME5WHS7kQq0glotml94t0154wyNSN5bw=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.465382Z"
-  },
-  {
-    "id": "UgkxvYWXhOr8aIgAu6A9SlE4y7ldrGoHbCG3",
-    "text": "Don’t Fly Blind! Master TBM 930 weather radar & VNAV drops TODAY at 17:00 (UTC+1)! ⛈️📡\n\nWe are stepping into the \"High-Altitude Office\" today to master the systems that turn the TBM 930 into a true all-weather machine. If you’ve ever felt overwhelmed by a sudden ATC diversion or wondered if you’re actually reading your weather radar correctly, this episode is your new flight manual.\n\nWhat we’re mastering today:\n\n- GWX 70 Radar: How to \"slice\" through storms and manage Tilt/Gain so you never fly into a cell by mistake.\n\n- Mid-Air Amendments: The \"Direct-To\" bezel trick for handling ATC diversions like a seasoned pro.\n\n- VNAV & TOD: No more guessing your descent. We’re setting up the G3000 to capture that perfect 3-degree path automatically.\n\nPlus: Stick around for the \"Nice to Know\" segment where we look at how the TBM 930 actually beat a record held by the legendary Chuck Yeager.\n\n🕒 Global Release Times: 16:00 (UTC+0 / GMT) 17:00 (UTC+1 / Amsterdam) 11:00 (UTC-5 / New York) 08:00 (UTC-8 / Los Angeles)\n\nStop being a passenger—start being a manager. See you in the clouds! ✈️⛈️",
-    "published_relative": "7 days ago (edited)",
-    "published_date": "2026-01-23",
-    "url": "https://www.youtube.com/post/UgkxvYWXhOr8aIgAu6A9SlE4y7ldrGoHbCG3",
-    "likes": "0",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.465359Z"
+    "scraped_at": "2026-01-30T13:05:29.970645Z"
   },
   {
     "id": "UgkxuxyibDZxJK5YDK2LGPiSu90Uy2lGw9Wz",
@@ -145,7 +27,125 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.465340Z"
+    "scraped_at": "2026-01-30T13:05:29.970627Z"
+  },
+  {
+    "id": "UgkxSz8VIvYn7NQWW-YxFK66W5KD41jL7u9g",
+    "text": "Recording a new video how to use the navigation system in the Beechcraft 17 Staggerwing",
+    "published_relative": "3 years ago (edited)",
+    "published_date": "2023-01-31",
+    "url": "https://www.youtube.com/post/UgkxSz8VIvYn7NQWW-YxFK66W5KD41jL7u9g",
+    "likes": "3",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/p02KrRkiMHqxDK1ad5zYUZN4RONt9UGKSQY019jqxkryRbOGQn4_b5U_FroLgukRGJVsFWNsxYvKrA=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-01-30T13:05:29.970611Z"
+  },
+  {
+    "id": "UgkxAB6tQr5hFCLOMfhZ2JO2X1INnHtTtUAm",
+    "text": "Looks like a new beta build for SU11 is released includes a new update screen, at least I haven't seen it before",
+    "published_relative": "3 years ago",
+    "published_date": "2023-01-31",
+    "url": "https://www.youtube.com/post/UgkxAB6tQr5hFCLOMfhZ2JO2X1INnHtTtUAm",
+    "likes": "1",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/xTImckBomZ7rGwXAyVL-l-0zkG9fv_v0DBfqP99jj5dyZr-BU6hl-Aktid9Jc34SeE6cMptxdXJPLw=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-01-30T13:05:29.970594Z"
+  },
+  {
+    "id": "UgkxADtYVHMQ_vP8jpu9OKPcKbHrF1bkOe3N",
+    "text": "Keep an eye on the channel: addon spotlight - top 5 busiest airport - Finland will be available soon",
+    "published_relative": "3 years ago",
+    "published_date": "2023-01-31",
+    "url": "https://www.youtube.com/post/UgkxADtYVHMQ_vP8jpu9OKPcKbHrF1bkOe3N",
+    "likes": "1",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/v5BAMbLzkCeCRG4s-4OrFW_7CTm39x7uRuxOIhIziVQEct1MKryOwNUKY2UHO-ygdnpr_tVFCQQpHg=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-01-30T13:05:29.970578Z"
+  },
+  {
+    "id": "UgkxgukDXpn9ui1A0qmUhGjtxE4gcMT_cYIu",
+    "text": "Preview of loading screen of Reno Air Races: pre-release testing screen",
+    "published_relative": "4 years ago",
+    "published_date": "2022-01-31",
+    "url": "https://www.youtube.com/post/UgkxgukDXpn9ui1A0qmUhGjtxE4gcMT_cYIu",
+    "likes": "2",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/0unhRsqu_nzBLcDLFfCNyU6fg7L5OcGvmTZcomQnJVvhSiuFBH74foTC1xMXbkAC_R_Jhcze8P-SuBA=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-01-30T13:05:29.970561Z"
+  },
+  {
+    "id": "UgkxoR9Kxmy7M90ebCv7dwVc_RBAPieTY_M8",
+    "text": "Can somebody tell the other pilot not to turn on the taxi way ;-)",
+    "published_relative": "3 years ago",
+    "published_date": "2023-01-31",
+    "url": "https://www.youtube.com/post/UgkxoR9Kxmy7M90ebCv7dwVc_RBAPieTY_M8",
+    "likes": "1",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/mtrHg7c_xwrNBIR17KIJ7Tk8iW3jtbdWzQBNDqRwoRXoDNvcCmbLNIEpVZsMVfRApgfJ8W30Wa88RQ=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-01-30T13:05:29.970542Z"
+  },
+  {
+    "id": "UgkxbTOeqF7ndEXeIKw2ZR4b8LsMYBj60rqu",
+    "text": "Episode 3: \"C\" is for Cold and Dark! ❄️\n\n\r\n\r\nWe’re keeping the momentum going! We’ve covered Ailerons and Bearings, and now it’s time to tackle the letter C.\n\n\nStarting an aircraft properly is about more than just pressing a button. Today, we are using the massive Canadair CL-415 to demonstrate the full \"Cold and Dark\" procedure.\n\nWe are going beyond the default checklist (which misses some critical steps!) to show you how to bring this beast to life, from the frozen exterior to the warm hum of the engines.\n\nWatch it here at 17:00 UTC+1 tomorrow.\n\nWhat we’re covering:\n\n- What does it mean and how can you start cold and dark\n- External walkaround (Removing Covers)\n- CL-415 cockpit prep (Dark to Light)\n- Engine start procedure (The \"Warm\" Up)\n- Plus: A special surprise at the very end! 🎁\n\nTwo letters down, 23 to go. Let's get to work! 🔥",
+    "published_relative": "10 days ago",
+    "published_date": "2026-01-20",
+    "url": "https://www.youtube.com/post/UgkxbTOeqF7ndEXeIKw2ZR4b8LsMYBj60rqu",
+    "likes": "2",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/vYHc9hL9Dw2VQbEBY6nqa2QlB_7SsDDfxHV6mnN3JtcG19ME5WHS7kQq0glotml94t0154wyNSN5bw=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-01-30T13:05:29.970524Z"
+  },
+  {
+    "id": "UgkxvYWXhOr8aIgAu6A9SlE4y7ldrGoHbCG3",
+    "text": "Don’t Fly Blind! Master TBM 930 weather radar & VNAV drops TODAY at 17:00 (UTC+1)! ⛈️📡\n\nWe are stepping into the \"High-Altitude Office\" today to master the systems that turn the TBM 930 into a true all-weather machine. If you’ve ever felt overwhelmed by a sudden ATC diversion or wondered if you’re actually reading your weather radar correctly, this episode is your new flight manual.\n\nWhat we’re mastering today:\n\n- GWX 70 Radar: How to \"slice\" through storms and manage Tilt/Gain so you never fly into a cell by mistake.\n\n- Mid-Air Amendments: The \"Direct-To\" bezel trick for handling ATC diversions like a seasoned pro.\n\n- VNAV & TOD: No more guessing your descent. We’re setting up the G3000 to capture that perfect 3-degree path automatically.\n\nPlus: Stick around for the \"Nice to Know\" segment where we look at how the TBM 930 actually beat a record held by the legendary Chuck Yeager.\n\n🕒 Global Release Times: 16:00 (UTC+0 / GMT) 17:00 (UTC+1 / Amsterdam) 11:00 (UTC-5 / New York) 08:00 (UTC-8 / Los Angeles)\n\nStop being a passenger—start being a manager. See you in the clouds! ✈️⛈️",
+    "published_relative": "8 days ago (edited)",
+    "published_date": "2026-01-22",
+    "url": "https://www.youtube.com/post/UgkxvYWXhOr8aIgAu6A9SlE4y7ldrGoHbCG3",
+    "likes": "0",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-01-30T13:05:29.970500Z"
+  },
+  {
+    "id": "UgkxkyGBV8mX-sB1kyYbHgaEqTlvyCoKpCkw",
+    "text": "Traffic jam on the taxi way",
+    "published_relative": "3 years ago",
+    "published_date": "2023-01-31",
+    "url": "https://www.youtube.com/post/UgkxkyGBV8mX-sB1kyYbHgaEqTlvyCoKpCkw",
+    "likes": "5",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/yVErbPMmJUSatek2IzEQFA67NeVkXfk_66hkYYsOJmV75A4k82QTLn84wLNX2qXhMbyHu6whvv-vGQ=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-01-30T13:05:29.970481Z"
   },
   {
     "id": "Ugkxokw0Gts_wehZfU3BGiX-llCDvRoS_i6g",
@@ -160,7 +160,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.465320Z"
+    "scraped_at": "2026-01-30T13:05:29.970458Z"
   },
   {
     "id": "UgzBC9JwmgBf4Tv2yRB4AaABCQ",
@@ -175,7 +175,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.465296Z"
+    "scraped_at": "2026-01-30T13:05:29.970437Z"
   },
   {
     "id": "UgkxCJ97KU12_blTP_PpgLlk_zkXgt9qZ7Qb",
@@ -190,12 +190,12 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.465274Z"
+    "scraped_at": "2026-01-30T13:05:29.970410Z"
   },
   {
     "id": "UgkxmiK5VMGg4eh6jSK2I5RfWb6jexvt3X4j",
     "text": "Stop floating the TBM 930! The series finale drops TODAY at 17:00 (CET)! 🛬🔥\n\nWe’re wrapping up six weeks in the left seat with the episode that ties everything together. If you’ve ever crossed the fence at 95 knots and watched the runway disappear under you… this one is your wake‑up call. Today we’re breaking down the real‑world techniques that turn the TBM from “slippery rocket” into “precision tool.”\n\nWhat we’re dialing in today:\n\n- Energy Management: How to tame the TBM’s speed and hit the IAF at the right numbers.\n\n- Short‑Field Mastery: The Beta Range trick that stops this aircraft like it hit a wall.\n\n- PT6 Shutdown: The turbine‑cooling flow that every real TBM pilot swears by.\n\n- Plus: A final “Nice to Know” about the TBM’s secret pilot door — and why owners demanded it.\n\n🕒 Global Release Times:  \n16:00 (UTC+0 / GMT)\n17:00 (UTC+1 / Amsterdam)\n11:00 (UTC‑5 / New York)\n08:00 (UTC‑8 / Los Angeles)\n\nStrap in — this landing is yours. See you at 17:00 CET. ✈️🔥",
-    "published_relative": "17 hours ago",
+    "published_relative": "23 hours ago",
     "published_date": "2026-01-29",
     "url": "https://www.youtube.com/post/UgkxmiK5VMGg4eh6jSK2I5RfWb6jexvt3X4j",
     "likes": "0",
@@ -203,7 +203,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.465252Z"
+    "scraped_at": "2026-01-30T13:05:29.970389Z"
   },
   {
     "id": "UgkxmWs-LwS5HHb2m5i_LjVahJAZqEFh0vpA",
@@ -218,7 +218,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.465228Z"
+    "scraped_at": "2026-01-30T13:05:29.970365Z"
   },
   {
     "id": "UgkxUXeq2uxruVJhYqqORZEC_1fFKTWBdLmY",
@@ -231,7 +231,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-01-30T06:56:18.464956Z"
+    "scraped_at": "2026-01-30T13:05:29.970099Z"
   },
   {
     "id": "UgkxKQWVABcMdFNhG1lPuI1tWc64smRuLFYO",
