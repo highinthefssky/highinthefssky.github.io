@@ -1,7 +1,7 @@
 ---
 title: "SHOW ME YOUR OFFICE! 🖥️✈️"
 description: "SHOW ME YOUR OFFICE! 🖥️✈️  \"We spend hundreds of hours in these virtual skies, but I want to see where the magic happens on the ground!  With MSFS 2024 being so"
-publishedAt: 2026-01-23
+publishedAt: 2026-01-24
 tags: ["community", "youtube"]
 draft: false
 ---
