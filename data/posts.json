@@ -1,50 +1,5 @@
 [
   {
-    "id": "Ugwd6r5Cfq5u9Gg34PN4AaABCQ",
-    "text": "Flying the Junkers JU-52 and preparing for a new how to",
-    "published_relative": "4 years ago",
-    "published_date": "2022-02-04",
-    "url": "https://www.youtube.com/post/Ugwd6r5Cfq5u9Gg34PN4AaABCQ",
-    "likes": "9",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/piP9XZa6iKo_TFOcHmX-nYCqKd-127aIZ3roXrnMJzbFNrkwMy42y4DzZi-EmCCzRXFW43dMKpz8=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484921Z"
-  },
-  {
-    "id": "UgkxkyGBV8mX-sB1kyYbHgaEqTlvyCoKpCkw",
-    "text": "Traffic jam on the taxi way",
-    "published_relative": "3 years ago",
-    "published_date": "2023-02-04",
-    "url": "https://www.youtube.com/post/UgkxkyGBV8mX-sB1kyYbHgaEqTlvyCoKpCkw",
-    "likes": "5",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/yVErbPMmJUSatek2IzEQFA67NeVkXfk_66hkYYsOJmV75A4k82QTLn84wLNX2qXhMbyHu6whvv-vGQ=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484904Z"
-  },
-  {
-    "id": "UgkxuxyibDZxJK5YDK2LGPiSu90Uy2lGw9Wz",
-    "text": "One of the airports from the busiest airports in Finland from high in the sky",
-    "published_relative": "3 years ago",
-    "published_date": "2023-02-04",
-    "url": "https://www.youtube.com/post/UgkxuxyibDZxJK5YDK2LGPiSu90Uy2lGw9Wz",
-    "likes": "5",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/EyXyYvAJ_96wZc70VfYwyDPhsd5joHZ1oeyu-MbDErKXG330TAqJGMN8Wi86ec2zX4wVEQvvh364Uwo=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484886Z"
-  },
-  {
     "id": "UgkxAB6tQr5hFCLOMfhZ2JO2X1INnHtTtUAm",
     "text": "Looks like a new beta build for SU11 is released includes a new update screen, at least I haven't seen it before",
     "published_relative": "3 years ago",
@@ -57,7 +12,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484871Z"
+    "scraped_at": "2026-02-03T06:58:10.433047Z"
   },
   {
     "id": "UgkxADtYVHMQ_vP8jpu9OKPcKbHrF1bkOe3N",
@@ -72,7 +27,37 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484855Z"
+    "scraped_at": "2026-02-03T06:58:10.433028Z"
+  },
+  {
+    "id": "UgkxuxyibDZxJK5YDK2LGPiSu90Uy2lGw9Wz",
+    "text": "One of the airports from the busiest airports in Finland from high in the sky",
+    "published_relative": "3 years ago",
+    "published_date": "2023-02-04",
+    "url": "https://www.youtube.com/post/UgkxuxyibDZxJK5YDK2LGPiSu90Uy2lGw9Wz",
+    "likes": "5",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/EyXyYvAJ_96wZc70VfYwyDPhsd5joHZ1oeyu-MbDErKXG330TAqJGMN8Wi86ec2zX4wVEQvvh364Uwo=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-02-03T06:58:10.433012Z"
+  },
+  {
+    "id": "Ugwd6r5Cfq5u9Gg34PN4AaABCQ",
+    "text": "Flying the Junkers JU-52 and preparing for a new how to",
+    "published_relative": "4 years ago",
+    "published_date": "2022-02-04",
+    "url": "https://www.youtube.com/post/Ugwd6r5Cfq5u9Gg34PN4AaABCQ",
+    "likes": "9",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/piP9XZa6iKo_TFOcHmX-nYCqKd-127aIZ3roXrnMJzbFNrkwMy42y4DzZi-EmCCzRXFW43dMKpz8=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-02-03T06:58:10.432996Z"
   },
   {
     "id": "UgkxSz8VIvYn7NQWW-YxFK66W5KD41jL7u9g",
@@ -87,7 +72,22 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484839Z"
+    "scraped_at": "2026-02-03T06:58:10.432978Z"
+  },
+  {
+    "id": "UgkxkyGBV8mX-sB1kyYbHgaEqTlvyCoKpCkw",
+    "text": "Traffic jam on the taxi way",
+    "published_relative": "3 years ago",
+    "published_date": "2023-02-04",
+    "url": "https://www.youtube.com/post/UgkxkyGBV8mX-sB1kyYbHgaEqTlvyCoKpCkw",
+    "likes": "5",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/yVErbPMmJUSatek2IzEQFA67NeVkXfk_66hkYYsOJmV75A4k82QTLn84wLNX2qXhMbyHu6whvv-vGQ=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-02-03T06:58:10.432959Z"
   },
   {
     "id": "Ugkxokw0Gts_wehZfU3BGiX-llCDvRoS_i6g",
@@ -102,35 +102,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484820Z"
-  },
-  {
-    "id": "UgkxgukDXpn9ui1A0qmUhGjtxE4gcMT_cYIu",
-    "text": "Preview of loading screen of Reno Air Races: pre-release testing screen",
-    "published_relative": "4 years ago",
-    "published_date": "2022-02-04",
-    "url": "https://www.youtube.com/post/UgkxgukDXpn9ui1A0qmUhGjtxE4gcMT_cYIu",
-    "likes": "2",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/0unhRsqu_nzBLcDLFfCNyU6fg7L5OcGvmTZcomQnJVvhSiuFBH74foTC1xMXbkAC_R_Jhcze8P-SuBA=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484804Z"
-  },
-  {
-    "id": "UgkxvYWXhOr8aIgAu6A9SlE4y7ldrGoHbCG3",
-    "text": "Don’t Fly Blind! Master TBM 930 weather radar & VNAV drops TODAY at 17:00 (UTC+1)! ⛈️📡\n\nWe are stepping into the \"High-Altitude Office\" today to master the systems that turn the TBM 930 into a true all-weather machine. If you’ve ever felt overwhelmed by a sudden ATC diversion or wondered if you’re actually reading your weather radar correctly, this episode is your new flight manual.\n\nWhat we’re mastering today:\n\n- GWX 70 Radar: How to \"slice\" through storms and manage Tilt/Gain so you never fly into a cell by mistake.\n\n- Mid-Air Amendments: The \"Direct-To\" bezel trick for handling ATC diversions like a seasoned pro.\n\n- VNAV & TOD: No more guessing your descent. We’re setting up the G3000 to capture that perfect 3-degree path automatically.\n\nPlus: Stick around for the \"Nice to Know\" segment where we look at how the TBM 930 actually beat a record held by the legendary Chuck Yeager.\n\n🕒 Global Release Times: 16:00 (UTC+0 / GMT) 17:00 (UTC+1 / Amsterdam) 11:00 (UTC-5 / New York) 08:00 (UTC-8 / Los Angeles)\n\nStop being a passenger—start being a manager. See you in the clouds! ✈️⛈️",
-    "published_relative": "11 days ago (edited)",
-    "published_date": "2026-01-23",
-    "url": "https://www.youtube.com/post/UgkxvYWXhOr8aIgAu6A9SlE4y7ldrGoHbCG3",
-    "likes": "0",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484781Z"
+    "scraped_at": "2026-02-03T06:58:10.432924Z"
   },
   {
     "id": "UgkxoR9Kxmy7M90ebCv7dwVc_RBAPieTY_M8",
@@ -145,7 +117,35 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484760Z"
+    "scraped_at": "2026-02-03T06:58:10.432906Z"
+  },
+  {
+    "id": "UgkxvYWXhOr8aIgAu6A9SlE4y7ldrGoHbCG3",
+    "text": "Don’t Fly Blind! Master TBM 930 weather radar & VNAV drops TODAY at 17:00 (UTC+1)! ⛈️📡\n\nWe are stepping into the \"High-Altitude Office\" today to master the systems that turn the TBM 930 into a true all-weather machine. If you’ve ever felt overwhelmed by a sudden ATC diversion or wondered if you’re actually reading your weather radar correctly, this episode is your new flight manual.\n\nWhat we’re mastering today:\n\n- GWX 70 Radar: How to \"slice\" through storms and manage Tilt/Gain so you never fly into a cell by mistake.\n\n- Mid-Air Amendments: The \"Direct-To\" bezel trick for handling ATC diversions like a seasoned pro.\n\n- VNAV & TOD: No more guessing your descent. We’re setting up the G3000 to capture that perfect 3-degree path automatically.\n\nPlus: Stick around for the \"Nice to Know\" segment where we look at how the TBM 930 actually beat a record held by the legendary Chuck Yeager.\n\n🕒 Global Release Times: 16:00 (UTC+0 / GMT) 17:00 (UTC+1 / Amsterdam) 11:00 (UTC-5 / New York) 08:00 (UTC-8 / Los Angeles)\n\nStop being a passenger—start being a manager. See you in the clouds! ✈️⛈️",
+    "published_relative": "11 days ago (edited)",
+    "published_date": "2026-01-23",
+    "url": "https://www.youtube.com/post/UgkxvYWXhOr8aIgAu6A9SlE4y7ldrGoHbCG3",
+    "likes": "0",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-02-03T06:58:10.432883Z"
+  },
+  {
+    "id": "UgkxgukDXpn9ui1A0qmUhGjtxE4gcMT_cYIu",
+    "text": "Preview of loading screen of Reno Air Races: pre-release testing screen",
+    "published_relative": "4 years ago",
+    "published_date": "2022-02-04",
+    "url": "https://www.youtube.com/post/UgkxgukDXpn9ui1A0qmUhGjtxE4gcMT_cYIu",
+    "likes": "2",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/0unhRsqu_nzBLcDLFfCNyU6fg7L5OcGvmTZcomQnJVvhSiuFBH74foTC1xMXbkAC_R_Jhcze8P-SuBA=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-02-03T06:58:10.432863Z"
   },
   {
     "id": "UgkxUXeq2uxruVJhYqqORZEC_1fFKTWBdLmY",
@@ -158,7 +158,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484720Z"
+    "scraped_at": "2026-02-03T06:58:10.432841Z"
   },
   {
     "id": "UgkxmiK5VMGg4eh6jSK2I5RfWb6jexvt3X4j",
@@ -171,7 +171,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484706Z"
+    "scraped_at": "2026-02-03T06:58:10.432825Z"
   },
   {
     "id": "UgzBC9JwmgBf4Tv2yRB4AaABCQ",
@@ -186,12 +186,12 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484688Z"
+    "scraped_at": "2026-02-03T06:58:10.432802Z"
   },
   {
     "id": "UgkxGCT7NyMQV-Iukghtd9lUxxECBp1TzrgU",
     "text": "Episode 5: \"E\" is for EFB — and this one CHANGES EVERYTHING. 📲🔥\n\nThe MSFS Alphabet just hit a major milestone. Forget “press fly” and hope for the best — in Microsoft Flight Simulator 2024, your entire flight begins before you even touch the cockpit. The new integrated Electronic Flight Bag is the brain of your operation… and if you’re flying the FlyByWire A32NX, you get TWO of them. Two tablets. Two workflows. Unlimited power.\n\nThis episode goes way deeper than a normal walkthrough. We’re cracking open every menu, every setting, every abbreviation — and showing how it all ties into real-world flying. And when we hit the Flight Planner? Buckle up. That’s where MSFS 2024 truly comes alive.\n\nThen we jump into the FBW A32NX EFB — a tablet so good it feels like cheating. SimBrief integration, advanced performance tools, Navigraph charts, failures, presets… it’s a full airline ops suite sitting right next to your throttle.\n\nThis is the episode that transforms how you plan, fly, and manage every single flight.\n\nPremieres tomorrow at 17:00 UTC+1. Don’t miss it.\n\nWhat’s inside:\n\n🛫 MSFS 2024 Default EFB\n\n- A full tour of the new interface\n- Global settings that actually matter\n- Pilot Book & Aircraft Apps decoded\n- A massive Flight Planner deep dive\n- The best community & 3rd‑party EFB add‑ins\n\n✈️ FlyByWire A32NX EFB\n\n- Customization & layout mastery\n- Dispatch workflow with SimBrief\n- Payload, fuel, and ground ops done right\n- Performance calculations: TORA, V‑speeds, and more\n- Navigraph charts, failures, checklists, presets, quick toggles\n\nTwo EFBs. One episode. Zero excuses not to level up. Let’s go. 🚀",
-    "published_relative": "10 hours ago",
+    "published_relative": "14 hours ago",
     "published_date": "2026-02-02",
     "url": "https://www.youtube.com/post/UgkxGCT7NyMQV-Iukghtd9lUxxECBp1TzrgU",
     "likes": "2",
@@ -201,7 +201,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484667Z"
+    "scraped_at": "2026-02-03T06:58:10.432781Z"
   },
   {
     "id": "UgkxmWs-LwS5HHb2m5i_LjVahJAZqEFh0vpA",
@@ -216,7 +216,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484640Z"
+    "scraped_at": "2026-02-03T06:58:10.432755Z"
   },
   {
     "id": "UgkxCJ97KU12_blTP_PpgLlk_zkXgt9qZ7Qb",
@@ -231,7 +231,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-02-03T02:34:14.484456Z"
+    "scraped_at": "2026-02-03T06:58:10.432570Z"
   },
   {
     "id": "UgkxbTOeqF7ndEXeIKw2ZR4b8LsMYBj60rqu",
