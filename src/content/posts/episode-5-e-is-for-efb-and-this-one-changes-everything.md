@@ -1,7 +1,7 @@
 ---
 title: "Episode 5: \"E\" is for EFB — and this one CHANGES EVERYTHING"
 description: "Episode 5: \"E\" is for EFB — and this one CHANGES EVERYTHING. 📲🔥  The MSFS Alphabet just hit a major milestone. Forget “press fly” and hope for the best — in Mic"
-publishedAt: 2026-02-02
+publishedAt: 2026-02-03
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -39,7 +39,7 @@ What’s inside:
 Two EFBs. One episode. Zero excuses not to level up. Let’s go. 🚀
 
 Original post: https://www.youtube.com/post/UgkxGCT7NyMQV-Iukghtd9lUxxECBp1TzrgU
-Likes: 3 | Comments: 0
+Likes: 5 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/_36GYJ8flyFpTjwqT50RmfdPG9LX9PtjNFZY799FOpDq043-yT97TqLYjPXeKJcbXppYsm_T6j4RBw=s1280)
