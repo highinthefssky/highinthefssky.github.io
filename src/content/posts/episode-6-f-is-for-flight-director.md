@@ -24,7 +24,7 @@ What we’re covering:
 Six letters down, nineteen to go. Let’s keep climbing! ✈️🔥
 
 Original post: https://www.youtube.com/post/Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T
-Likes: 0 | Comments: 0
+Likes: 1 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/P_kphVDnsrTPOvnjhy17Xej5yBTLDcaamQOSY4Mi4No3XkSYkU0NPVvUlx2mXdvoWAukq5rANWwdqg=s1280)
