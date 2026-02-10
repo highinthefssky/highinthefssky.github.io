@@ -1,7 +1,7 @@
 ---
 title: "Preview of loading screen of Reno Air Races: pre-release testing screen"
 description: "Preview of loading screen of Reno Air Races: pre-release testing screen"
-publishedAt: 2022-02-10
+publishedAt: 2022-02-11
 tags: ["community", "youtube"]
 draft: false
 ---
