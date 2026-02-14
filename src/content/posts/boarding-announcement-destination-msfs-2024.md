@@ -1,7 +1,7 @@
 ---
 title: "🛫 Boarding Announcement: Destination MSFS 2024! 🌍"
 description: "🛫 Boarding Announcement: Destination MSFS 2024! 🌍  Attention, Flight Sim Enthusiasts!  The time has come to fasten your seatbelts and prepare for takeoff! 🛫 Our"
-publishedAt: 2025-01-24
+publishedAt: 2025-02-14
 tags: ["community", "youtube"]
 draft: false
 ---
