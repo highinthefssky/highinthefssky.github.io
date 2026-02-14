@@ -1,7 +1,7 @@
 ---
 title: "✈️ Episode 5: \"E\" is for EFB! ✈️"
 description: "✈️ Episode 5: \"E\" is for EFB! ✈️  In Microsoft Flight Simulator 2024, the simulation doesn't start when the engines roar, it starts in the palm of your hand. Ne"
-publishedAt: 2026-01-28
+publishedAt: 2026-01-29
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -40,7 +40,7 @@ Blue skies and happy flying! ✈️📱
 Four letters down, 22 to go. Let's get to work! 🔥
 
 Original post: https://www.youtube.com/post/UgkxCJ97KU12_blTP_PpgLlk_zkXgt9qZ7Qb
-Likes: 1 | Comments: 0
+Likes: 6 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/TfdDgGY4iOMTlnNuwGcjW_zbOJgZ7JD-Yg5tbXs4I5sJmvGqfzB1bAxzsdStjz0D4XR_BXs9pddgxA=s1280)
