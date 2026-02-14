@@ -67,7 +67,8 @@ jobs:
           git add src/content/videos/ src/content/stats.json
           git status --porcelain
           git commit -m "chore: update videos and channel stats from YouTube API"
-          echo "🚀 Pushing changes..."
+          echo "🚀 Pulling remote changes and pushing..."
+          git pull --rebase
           git push
           echo "✅ Changes committed and pushed successfully"
 

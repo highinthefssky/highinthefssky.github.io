@@ -145,6 +145,7 @@ jobs:
           git add data/posts.json
           git add -A src/content/posts/ || true
           git commit -m "Update community posts - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          git pull --rebase
           git push
 
       - name: Trigger deploy
