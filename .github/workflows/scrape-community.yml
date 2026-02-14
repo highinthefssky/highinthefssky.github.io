@@ -41,15 +41,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Get existing post IDs before scrape
-        id: before-scrape
-        run: |
-          if [ -f data/posts.json ]; then
-            echo "existing_ids=$(python -c "import json; print(','.join([p['id'] for p in json.load(open('data/posts.json'))]))")" >> $GITHUB_OUTPUT
-          else
-            echo "existing_ids=" >> $GITHUB_OUTPUT
-          fi
-
       - name: Run scraper
         id: scrape
         env:
@@ -59,7 +50,6 @@ jobs:
       - name: Post new content to Discord
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          EXISTING_IDS: ${{ steps.before-scrape.outputs.existing_ids }}
         run: |
           python -c "
           import json
@@ -72,8 +62,15 @@ jobs:
               print('No Discord webhook URL configured, skipping')
               exit(0)
 
-          existing_ids = set(os.environ.get('EXISTING_IDS', '').split(','))
-          existing_ids.discard('')  # Remove empty string if present
+          # Load historical posted IDs (tracks ALL posts ever sent to Discord)
+          posted_ids_file = 'data/discord-posted-ids.json'
+          if os.path.exists(posted_ids_file):
+              with open(posted_ids_file, 'r') as f:
+                  posted_ids = set(json.load(f))
+          else:
+              posted_ids = set()
+
+          print(f'Loaded {len(posted_ids)} previously posted IDs')
 
           # Load current posts
           if not os.path.exists('data/posts.json'):
@@ -83,14 +80,17 @@ jobs:
           with open('data/posts.json', 'r') as f:
               posts = json.load(f)
 
-          # Find new posts (not in existing_ids)
-          new_posts = [p for p in posts if p['id'] not in existing_ids]
+          # Find new posts (not in posted_ids - historical tracking)
+          new_posts = [p for p in posts if p['id'] not in posted_ids]
 
           if not new_posts:
               print('No new posts to send to Discord')
               exit(0)
 
           print(f'Found {len(new_posts)} new post(s) to send to Discord')
+
+          # Track successfully posted IDs
+          newly_posted_ids = []
 
           # Post each new post to Discord (oldest first)
           for post in reversed(new_posts):
@@ -119,6 +119,7 @@ jobs:
                   response = requests.post(webhook_url, json=payload)
                   if response.status_code == 204:
                       print(f'✅ Posted to Discord: {post[\"id\"]}')
+                      newly_posted_ids.append(post['id'])
                   else:
                       print(f'❌ Failed to post {post[\"id\"]}: {response.status_code} {response.text}')
               except Exception as e:
@@ -126,12 +127,19 @@ jobs:
 
               # Rate limit: wait 1 second between posts
               time.sleep(1)
+
+          # Update the posted IDs file with newly posted IDs
+          if newly_posted_ids:
+              posted_ids.update(newly_posted_ids)
+              with open(posted_ids_file, 'w') as f:
+                  json.dump(sorted(list(posted_ids)), f, indent=2)
+              print(f'Updated {posted_ids_file} with {len(newly_posted_ids)} new ID(s)')
           "
 
       - name: Check for changes
         id: changes
         run: |
-          if git status --porcelain | grep -qE "data/posts.json|src/content/posts/.*\.md"; then
+          if git status --porcelain | grep -qE "data/posts.json|data/discord-posted-ids.json|src/content/posts/.*\.md"; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
@@ -143,6 +151,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add data/posts.json
+          git add data/discord-posted-ids.json || true
           git add -A src/content/posts/ || true
           git commit -m "Update community posts - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           git push
