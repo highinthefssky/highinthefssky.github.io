@@ -27,7 +27,7 @@ Trust me — you don’t want to miss this one.
 ⏳ Goes live today at 17:00 UTC — don’t miss it.
 
 Original post: https://www.youtube.com/post/UgkxLCSthpnIOWlGxxTdcrmcm0wzaqgER68Y
-Likes: 0 | Comments: 0
+Likes: 2 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/FpZRVP-rnYq8Rx49jewU8Ee_vpanowhTmspR8rEQdv8D2oBzq1xCYY80cjgvXTVggG_ME0CTJs307LI=s1280)
