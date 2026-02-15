@@ -1,12 +1,13 @@
 # High in the Sky - YouTube Video & Community Hub
 
-A beautiful, performant static site built with Astro for showcasing YouTube videos and community posts. Features a carousel, full-text search, RSS feed, and responsive design.
+A beautiful, performant static site built with Astro for showcasing YouTube videos, controller configurations, and community posts. Features a carousel, full-text search, RSS feed, and responsive design.
 
 ## 🌟 Features
 
 - **Video Showcase**: Display YouTube videos with automatic thumbnail and metadata fetching
 - **Featured Carousel**: Eye-catching carousel of featured videos on the homepage
 - **🔴 Live Stream Detection**: Automatic "LIVE NOW" banner when streaming on YouTube
+- **🎮 Controller Configs**: Downloadable MSFS 2024 controller configuration files
 - **Community Posts**: Markdown-based blog for community updates and discussions
 - **Full-Text Search**: Fast client-side search across video titles and descriptions
 - **Tag Filtering**: Filter content by tags for better discoverability
@@ -59,6 +60,11 @@ See [workers/live-status/README.md](workers/live-status/README.md) for Cloudflar
 # Start dev server with hot reload
 npm run dev
 
+# Fetch content from external sources
+npm run fetch-videos        # Fetch YouTube videos
+npm run fetch-controllers   # Fetch controller configs
+npm run fetch-all           # Fetch everything
+
 # Build for production
 npm run build
 
@@ -77,16 +83,19 @@ Visit `http://localhost:3000` to see your site.
 │   │   ├── Navigation.astro
 │   │   ├── Carousel.astro
 │   │   ├── VideoCard.astro
+│   │   ├── ConfigCard.astro
 │   │   └── PostCard.astro
 │   ├── content/              # Content collections
 │   │   ├── config.ts         # Content schemas
 │   │   ├── videos/           # Video data (JSON)
+│   │   ├── controllers/      # Controller configs (JSON)
 │   │   └── posts/            # Community posts (Markdown)
 │   ├── layouts/
 │   │   └── BaseLayout.astro  # Main layout wrapper
 │   ├── pages/                # Route pages (auto-generated)
 │   │   ├── index.astro       # Homepage
 │   │   ├── videos.astro      # Videos page
+│   │   ├── controllers.astro # Controller configs page
 │   │   ├── search.astro      # Search page
 │   │   ├── posts.astro       # Community posts list
 │   │   ├── posts/[slug].astro # Individual post page
@@ -97,7 +106,8 @@ Visit `http://localhost:3000` to see your site.
 │   └── utils/
 │       └── searchVideos.ts   # Search utilities
 ├── scripts/
-│   └── fetch-videos.js       # YouTube API integration
+│   ├── fetch-videos.js       # YouTube API integration
+│   └── fetch-controllers.js  # GitHub controller config sync
 ├── .github/
 │   └── workflows/
 │       ├── deploy.yml        # GitHub Pages deployment
@@ -111,7 +121,13 @@ Visit `http://localhost:3000` to see your site.
 
 ### Videos
 
-Videos are automatically fetched from YouTube via GitHub Actions daily. To add a video manually:
+Videos are automatically fetched from YouTube via GitHub Actions daily. To manually fetch videos:
+
+```bash
+npm run fetch-videos
+```
+
+To add a video manually:
 
 ```json
 // src/content/videos/videoId.json
@@ -126,6 +142,34 @@ Videos are automatically fetched from YouTube via GitHub Actions daily. To add a
   "featured": true
 }
 ```
+
+### Controller Configurations
+
+Controller configs are **automatically synced weekly** from the [msfs-2024-controls-settings](https://github.com/highinthefssky/msfs-2024-controls-settings) repository via GitHub Actions.
+
+#### Manual Sync
+
+To fetch the latest configs manually:
+
+```bash
+npm run fetch-controllers
+```
+
+The script automatically:
+- Fetches XML files from the GitHub repository
+- Parses filenames to extract controller, aircraft, and settings type
+- Generates searchable tags
+- Creates JSON metadata files in `src/content/controllers/`
+
+#### Automated Sync
+
+The GitHub Actions workflow (`.github/workflows/fetch-controllers.yml`):
+- Runs every Monday at 00:00 UTC
+- Can be triggered manually from Actions tab
+- Auto-commits and deploys when configs change
+- Supports webhook triggers from the source repository
+
+Controller config files are downloaded directly from GitHub when users click the download button.
 
 ### Community Posts
 
@@ -156,10 +200,18 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ### GitHub Secrets
 
-For automated video fetching, set secrets in repository settings:
+For automated content fetching, set secrets in repository settings:
 
+**Required for Videos:**
 - `YOUTUBE_API_KEY`: Your YouTube API key
 - `YOUTUBE_CHANNEL_ID`: Your channel ID
+- `GCP_WORKLOAD_IDENTITY_PROVIDER`: Google Cloud workload identity provider (for OIDC)
+- `GCP_SERVICE_ACCOUNT`: Google Cloud service account email
+
+**Controllers (No Secrets Required):**
+- Controller configs fetch from public GitHub API
+- No authentication needed
+- Optional: Add webhook for instant updates when msfs-2024-controls-settings changes
 
 ### Tailwind CSS
 

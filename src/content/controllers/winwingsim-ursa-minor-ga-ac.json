@@ -1,0 +1,13 @@
+{
+  "filename": "WinWingSim - Ursa Minor - GA - AC.xml",
+  "controller": "WinWingSim",
+  "settingsType": "AC",
+  "description": "AC for WinWingSim - Ursa Minor - GA",
+  "aircraft": "Ursa Minor - GA",
+  "downloadUrl": "https://raw.githubusercontent.com/highinthefssky/msfs-2024-controls-settings/main/profiles/WinWingSim%20-%20Ursa%20Minor%20-%20GA%20-%20AC.xml",
+  "tags": [
+    "WinWingSim",
+    "Ursa Minor",
+    "General Aviation"
+  ]
+}

@@ -6,7 +6,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "fetch-videos": "node scripts/fetch-videos.js",
+    "fetch-controllers": "node scripts/fetch-controllers.js",
+    "fetch-all": "npm run fetch-videos && npm run fetch-controllers"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.15",

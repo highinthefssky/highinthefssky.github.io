@@ -1,0 +1,16 @@
+{
+  "filename": "VelocityOne Flight (Quad) - TBM930 - airplanes controls.xml",
+  "controller": "VelocityOne Flight (Quad)",
+  "settingsType": "airplanes controls",
+  "description": "airplanes controls for VelocityOne Flight (Quad) - TBM930",
+  "aircraft": "TBM930",
+  "downloadUrl": "https://raw.githubusercontent.com/highinthefssky/msfs-2024-controls-settings/main/profiles/VelocityOne%20Flight%20(Quad)%20-%20TBM930%20-%20airplanes%20controls.xml",
+  "tags": [
+    "VelocityOne",
+    "Turtle Beach",
+    "Throttle Quadrant",
+    "Airplane Controls",
+    "TBM930",
+    "Turboprop"
+  ]
+}

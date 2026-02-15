@@ -47,6 +47,7 @@ const subscriberDisplay = formatSubscriberCount(youtubeSubscribers);
         </p>
         <div class="hero-cta">
           <a href="/videos" class="btn btn-primary">Browse Video Library</a>
+          <a href="/controllers" class="btn btn-secondary">Controller Configs</a>
           <a href="/posts" class="btn btn-secondary">Community Posts</a>
         </div>
       </div>
@@ -99,6 +100,10 @@ const subscriberDisplay = formatSubscriberCount(youtubeSubscribers);
             <span class="stat-value">{totalPosts}</span>
           </div>
           <div class="stat">
+            <span class="stat-label">Controller Configs</span>
+            <span class="stat-value">{stats.totalControllers ?? 0}</span>
+          </div>
+          <div class="stat">
             <span class="stat-label">Latest Sync</span>
             <span class="stat-value">
               {new Date(stats.updatedAt).toLocaleDateString('en-US', {
@@ -113,6 +118,7 @@ const subscriberDisplay = formatSubscriberCount(youtubeSubscribers);
           <h3>Quick Navigation</h3>
           <div class="link-grid">
             <a href="/videos" class="quick-link">All Videos</a>
+            <a href="/controllers" class="quick-link">Controllers</a>
             <a href="/posts" class="quick-link">Community</a>
             <a href="/feed" class="quick-link">Feed</a>
           </div>

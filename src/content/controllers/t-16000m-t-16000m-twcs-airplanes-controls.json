@@ -1,0 +1,13 @@
+{
+  "filename": "T.16000M - T.16000M + TWCS - airplanes controls.xml",
+  "controller": "T.16000M",
+  "settingsType": "airplanes controls",
+  "description": "airplanes controls for T.16000M - T.16000M + TWCS",
+  "aircraft": "T.16000M + TWCS",
+  "downloadUrl": "https://raw.githubusercontent.com/highinthefssky/msfs-2024-controls-settings/main/profiles/T.16000M - T.16000M + TWCS - airplanes controls.xml",
+  "tags": [
+    "T.16000M",
+    "Thrustmaster",
+    "Airplane Controls"
+  ]
+}

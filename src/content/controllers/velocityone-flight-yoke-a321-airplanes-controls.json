@@ -1,0 +1,15 @@
+{
+  "filename": "VelocityOne Flight (Yoke) - A321 - airplanes controls.xml",
+  "controller": "VelocityOne Flight (Yoke)",
+  "settingsType": "airplanes controls",
+  "description": "airplanes controls for VelocityOne Flight (Yoke) - A321",
+  "aircraft": "A321",
+  "downloadUrl": "https://raw.githubusercontent.com/highinthefssky/msfs-2024-controls-settings/main/profiles/VelocityOne%20Flight%20(Yoke)%20-%20A321%20-%20airplanes%20controls.xml",
+  "tags": [
+    "VelocityOne",
+    "Turtle Beach",
+    "Yoke",
+    "Airplane Controls",
+    "Airliner"
+  ]
+}
