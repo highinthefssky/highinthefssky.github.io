@@ -1,0 +1,14 @@
+{
+  "filename": "TWCS - Throttle - T.16000M + TWCS - general controls.xml",
+  "controller": "TWCS",
+  "settingsType": "general controls",
+  "description": "general controls for TWCS - Throttle - T.16000M + TWCS",
+  "aircraft": "Throttle - T.16000M + TWCS",
+  "downloadUrl": "https://raw.githubusercontent.com/highinthefssky/msfs-2024-controls-settings/main/profiles/TWCS - Throttle - T.16000M + TWCS - general controls.xml",
+  "tags": [
+    "TWCS",
+    "Throttle",
+    "Thrustmaster",
+    "General Controls"
+  ]
+}

@@ -15,6 +15,9 @@
         <a href="/videos" class="navbar-link" data-link="/videos">Videos</a>
       </li>
       <li>
+        <a href="/controllers" class="navbar-link" data-link="/controllers">Controllers</a>
+      </li>
+      <li>
         <a href="/posts" class="navbar-link" data-link="/posts">Community</a>
       </li>
       <li>
@@ -35,7 +38,7 @@
       
       if (linkPath === '/' && currentPath === '/') {
         link.classList.add('active');
-      } else if (linkPath !== '/' && currentPath.startsWith(linkPath)) {
+      } else if (linkPath && linkPath !== '/' && currentPath.startsWith(linkPath)) {
         link.classList.add('active');
       }
     });

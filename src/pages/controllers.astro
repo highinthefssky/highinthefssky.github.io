@@ -1,0 +1,650 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ConfigCard from '../components/ConfigCard.astro';
+import stats from '../content/stats.json';
+
+const allConfigs = await getCollection('controllers');
+const totalControllers = stats.totalControllers ?? allConfigs.length;
+const sortedConfigs = allConfigs.sort((a, b) =>
+  a.data.controller.localeCompare(b.data.controller)
+);
+
+const allTags = Array.from(
+  new Set(allConfigs.flatMap((config) => config.data.tags))
+).sort();
+
+const allControllers = Array.from(
+  new Set(allConfigs.map((config) => config.data.controller))
+).sort();
+---
+
+<BaseLayout title="Controller Configs" description="Download MSFS 2024 controller configurations">
+  <div class="controllers-page">
+    <div class="controllers-header">
+      <h1>🎮 Controller Configurations</h1>
+      <p>
+        Download ready-to-use control profiles for {totalControllers} different controller setups
+      </p>
+      <div class="header-info">
+        <a 
+          href="https://github.com/highinthefssky/msfs-2024-controls-settings" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="github-link"
+        >
+          📦 View on GitHub
+        </a>
+        <span class="separator">•</span>
+        <span class="info-text">Compatible with MSFS 2024</span>
+      </div>
+    </div>
+
+    <div class="search-controls">
+      <div class="search-box">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search configs (e.g. controller:VelocityOne, aircraft:A321, TBM930)"
+          class="search-input"
+          autocomplete="off"
+        />
+        <span class="search-icon">🔍</span>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-header">
+          <h3>Filter by Controller</h3>
+          <button id="toggle-controllers" class="toggle-btn" type="button">▼</button>
+        </div>
+        <div class="filter-container" id="controller-container" style="display: none;">
+          <div class="filter-list" id="controllers-list">
+            {allControllers.map((controller) => (
+              <button
+                class="filter-btn controller-filter"
+                data-controller={controller}
+                type="button"
+              >
+                {controller}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-header">
+          <h3>Filter by Tags</h3>
+          <button id="toggle-tags" class="toggle-btn" type="button">▼</button>
+        </div>
+        <div class="filter-container" id="tag-container" style="display: none;">
+          <input
+            type="text"
+            id="tag-search"
+            placeholder="Search tags..."
+            class="tag-search-input"
+            autocomplete="off"
+          />
+          <div class="filter-list" id="tags-list">
+            {allTags.map((tag) => (
+              <button
+                class="filter-btn tag-filter"
+                data-tag={tag}
+                type="button"
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="selected-filters" id="selected-filters"></div>
+
+      <div class="controls-footer">
+        <span id="result-count" class="result-count" data-total-configs={totalControllers}>
+          {totalControllers} configurations
+        </span>
+        <button id="clear-btn" class="btn-clear" type="button">
+          Clear all filters
+        </button>
+      </div>
+    </div>
+
+    <div class="search-results">
+      <div class="configs-grid" id="configs-grid">
+        {sortedConfigs.map((config) => (
+          <ConfigCard config={config} />
+        ))}
+      </div>
+
+      <div class="empty-state" id="empty-state" style="display: none;">
+        <p>No controller configurations found matching your search.</p>
+        <button id="reset-btn" class="btn-reset">Reset filters</button>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .controllers-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .controllers-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .controllers-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #e6efff;
+  }
+
+  .controllers-header p {
+    font-size: 1.125rem;
+    color: #9fb6d5;
+    margin-bottom: 1rem;
+  }
+
+  .header-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 0.9375rem;
+  }
+
+  .github-link {
+    color: #7dd3fc;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .github-link:hover {
+    color: #38bdf8;
+  }
+
+  .separator {
+    color: #64748b;
+  }
+
+  .info-text {
+    color: #9fb6d5;
+  }
+
+  .search-controls {
+    background: #0f1b2e;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+    border: 1px solid #2d3f55;
+  }
+
+  .search-box {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 1rem;
+    padding-right: 2.5rem;
+    font-size: 1rem;
+    border: 2px solid #3d5170;
+    border-radius: 0.5rem;
+    background: #1a2a3f;
+    color: #e5e7eb;
+    transition: all 0.3s ease;
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: #7dd3fc;
+    box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.1);
+  }
+
+  .search-input::placeholder {
+    color: #6b8cb3;
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+    pointer-events: none;
+  }
+
+  .filter-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .filter-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #cbd5e1;
+    margin: 0;
+  }
+
+  .toggle-btn {
+    background: transparent;
+    border: none;
+    color: #7dd3fc;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: 0.25rem;
+  }
+
+  .toggle-btn.open {
+    transform: rotate(180deg);
+  }
+
+  .filter-container {
+    margin-top: 1rem;
+  }
+
+  .tag-search-input {
+    width: 100%;
+    padding: 0.625rem;
+    font-size: 0.875rem;
+    border: 2px solid #3d5170;
+    border-radius: 0.375rem;
+    background: #1a2a3f;
+    color: #e5e7eb;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .tag-search-input:focus {
+    outline: none;
+    border-color: #7dd3fc;
+    box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.1);
+  }
+
+  .tag-search-input::placeholder {
+    color: #6b8cb3;
+  }
+
+  .filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 0.5rem 0;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid #3d5170;
+    background: #1a2a3f;
+    color: #c8d6ed;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .filter-btn:hover {
+    border-color: #7dd3fc;
+    color: #7dd3fc;
+  }
+
+  .filter-btn.active {
+    background: #7dd3fc;
+    border-color: #7dd3fc;
+    color: #0f1b2e;
+    font-weight: 600;
+  }
+
+  .selected-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    margin-bottom: 1.5rem;
+    min-height: 2rem;
+  }
+
+  .controls-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #2d3f55;
+  }
+
+  .result-count {
+    color: #9fb6d5;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .btn-clear {
+    background: transparent;
+    border: 2px solid #3d5170;
+    color: #c8d6ed;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-clear:hover:not(:disabled) {
+    border-color: #7dd3fc;
+    color: #e6efff;
+  }
+
+  .btn-clear:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .search-results {
+    min-height: 400px;
+  }
+
+  .configs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: #9fb6d5;
+  }
+
+  .empty-state p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-reset {
+    background: hsl(213, 94%, 47%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-reset:hover {
+    background: hsl(213, 94%, 37%);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .controllers-page {
+      padding: 1rem;
+    }
+
+    .controllers-header h1 {
+      font-size: 2rem;
+    }
+
+    .search-controls {
+      padding: 1.5rem;
+    }
+
+    .controls-footer {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .configs-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+  }
+</style>
+
+<script>
+  const searchInput = document.getElementById('search-input') as HTMLInputElement;
+  const tagSearchInput = document.getElementById('tag-search') as HTMLInputElement;
+  const toggleControllersBtn = document.getElementById('toggle-controllers') as HTMLButtonElement;
+  const toggleTagsBtn = document.getElementById('toggle-tags') as HTMLButtonElement;
+  const controllerContainer = document.getElementById('controller-container') as HTMLDivElement;
+  const tagContainer = document.getElementById('tag-container') as HTMLDivElement;
+  const controllerButtons = document.querySelectorAll('.controller-filter');
+  const tagButtons = document.querySelectorAll('.tag-filter');
+  const configsGrid = document.getElementById('configs-grid');
+  const emptyState = document.getElementById('empty-state');
+  const configCards = document.querySelectorAll('.config-card');
+  const resultCount = document.getElementById('result-count');
+  const clearBtn = document.getElementById('clear-btn') as HTMLButtonElement;
+  const resetBtn = document.getElementById('reset-btn');
+  const selectedFiltersContainer = document.getElementById('selected-filters') as HTMLDivElement;
+  const totalConfigs = Number(resultCount?.getAttribute('data-total-configs') || '0');
+
+  let activeControllers = new Set<string>();
+  let activeTags = new Set<string>();
+
+  // Toggle filter visibility
+  toggleControllersBtn?.addEventListener('click', () => {
+    const isOpen = controllerContainer.style.display !== 'none';
+    controllerContainer.style.display = isOpen ? 'none' : 'block';
+    toggleControllersBtn.classList.toggle('open');
+  });
+
+  toggleTagsBtn?.addEventListener('click', () => {
+    const isOpen = tagContainer.style.display !== 'none';
+    tagContainer.style.display = isOpen ? 'none' : 'block';
+    toggleTagsBtn.classList.toggle('open');
+  });
+
+  function normalizeString(str: string): string {
+    return str.toLowerCase().trim();
+  }
+
+  function parseSearchQuery(raw: string): { term: string; field: 'all' | 'controller' | 'aircraft' } {
+    const trimmed = raw.trim();
+    if (!trimmed) return { term: '', field: 'all' };
+    const lower = trimmed.toLowerCase();
+    if (lower.startsWith('controller:')) {
+      return { term: trimmed.slice('controller:'.length).trim(), field: 'controller' };
+    }
+    if (lower.startsWith('aircraft:')) {
+      return { term: trimmed.slice('aircraft:'.length).trim(), field: 'aircraft' };
+    }
+    return { term: trimmed, field: 'all' };
+  }
+
+  function updateSelectedFiltersDisplay() {
+    selectedFiltersContainer.innerHTML = '';
+    
+    activeControllers.forEach((controller) => {
+      const filterBtn = document.createElement('button');
+      filterBtn.className = 'filter-btn active';
+      filterBtn.textContent = `${controller} ✕`;
+      filterBtn.type = 'button';
+      filterBtn.addEventListener('click', () => {
+        activeControllers.delete(controller);
+        document.querySelector(`[data-controller="${controller}"]`)?.classList.remove('active');
+        updateSelectedFiltersDisplay();
+        updateDisplay();
+      });
+      selectedFiltersContainer.appendChild(filterBtn);
+    });
+
+    activeTags.forEach((tag) => {
+      const filterBtn = document.createElement('button');
+      filterBtn.className = 'filter-btn active';
+      filterBtn.textContent = `${tag} ✕`;
+      filterBtn.type = 'button';
+      filterBtn.addEventListener('click', () => {
+        activeTags.delete(tag);
+        document.querySelector(`[data-tag="${tag}"]`)?.classList.remove('active');
+        updateSelectedFiltersDisplay();
+        updateDisplay();
+      });
+      selectedFiltersContainer.appendChild(filterBtn);
+    });
+  }
+
+  function updateDisplay() {
+    let visibleCount = 0;
+    const { term, field } = parseSearchQuery(searchInput.value || '');
+    const searchTerm = normalizeString(term);
+
+    configCards.forEach((card) => {
+      const cardEl = card as HTMLElement;
+      const tags = (cardEl.getAttribute('data-tags') || '')
+        .split(',')
+        .filter((t) => t)
+        .map(normalizeString);
+      const controller = normalizeString(cardEl.getAttribute('data-controller') || '');
+      const settings = normalizeString(cardEl.getAttribute('data-settings') || '');
+      const description = normalizeString(cardEl.querySelector('.config-description')?.textContent || '');
+      const aircraft = normalizeString(cardEl.querySelector('.aircraft-badge')?.textContent || '');
+
+      const matchesSearch =
+        !searchTerm ||
+        (field === 'controller' && controller.includes(searchTerm)) ||
+        (field === 'aircraft' && aircraft.includes(searchTerm)) ||
+        (field === 'all' && (
+          controller.includes(searchTerm) || 
+          description.includes(searchTerm) || 
+          aircraft.includes(searchTerm) ||
+          settings.includes(searchTerm)
+        ));
+
+      const matchesControllers =
+        activeControllers.size === 0 ||
+        Array.from(activeControllers).some((c) => controller.includes(normalizeString(c)));
+
+      const matchesTags =
+        activeTags.size === 0 ||
+        Array.from(activeTags).some((tag) => tags.includes(normalizeString(tag)));
+
+      const shouldShow = matchesSearch && matchesControllers && matchesTags;
+      cardEl.style.display = shouldShow ? '' : 'none';
+
+      if (shouldShow) visibleCount++;
+    });
+
+    const hasFilters = activeControllers.size > 0 || activeTags.size > 0 || !!searchInput.value.trim();
+
+    if (!hasFilters) {
+      configCards.forEach((card) => {
+        (card as HTMLElement).style.display = '';
+      });
+      visibleCount = totalConfigs;
+    }
+
+    resultCount!.textContent = `${visibleCount} ${visibleCount === 1 ? 'configuration' : 'configurations'}`;
+    emptyState!.style.display = visibleCount === 0 ? 'block' : 'none';
+    configsGrid!.style.display = visibleCount === 0 ? 'none' : 'grid';
+    clearBtn!.disabled = !hasFilters;
+  }
+
+  // Tag search filter
+  tagSearchInput?.addEventListener('input', (e) => {
+    const searchTerm = normalizeString((e.target as HTMLInputElement).value);
+    tagButtons.forEach((btn) => {
+      const tagText = normalizeString(btn.getAttribute('data-tag') || '');
+      (btn as HTMLElement).style.display = !searchTerm || tagText.includes(searchTerm) ? '' : 'none';
+    });
+  });
+
+  searchInput?.addEventListener('input', updateDisplay);
+
+  searchInput?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      updateDisplay();
+    }
+  });
+
+  // Controller filter buttons
+  controllerButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const controller = button.getAttribute('data-controller');
+      if (controller) {
+        if (activeControllers.has(controller)) {
+          activeControllers.delete(controller);
+          button.classList.remove('active');
+        } else {
+          activeControllers.add(controller);
+          button.classList.add('active');
+        }
+        updateSelectedFiltersDisplay();
+        updateDisplay();
+      }
+    });
+  });
+
+  // Tag filter buttons
+  tagButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const tag = button.getAttribute('data-tag');
+      if (tag) {
+        if (activeTags.has(tag)) {
+          activeTags.delete(tag);
+          button.classList.remove('active');
+        } else {
+          activeTags.add(tag);
+          button.classList.add('active');
+        }
+        updateSelectedFiltersDisplay();
+        updateDisplay();
+      }
+    });
+  });
+
+  clearBtn?.addEventListener('click', () => {
+    searchInput.value = '';
+    tagSearchInput.value = '';
+    activeControllers.clear();
+    activeTags.clear();
+    controllerButtons.forEach((btn) => {
+      btn.classList.remove('active');
+    });
+    tagButtons.forEach((btn) => {
+      btn.classList.remove('active');
+      (btn as HTMLElement).style.display = '';
+    });
+    updateSelectedFiltersDisplay();
+    updateDisplay();
+  });
+
+  resetBtn?.addEventListener('click', () => {
+    searchInput.value = '';
+    tagSearchInput.value = '';
+    activeControllers.clear();
+    activeTags.clear();
+    controllerButtons.forEach((btn) => {
+      btn.classList.remove('active');
+    });
+    tagButtons.forEach((btn) => {
+      btn.classList.remove('active');
+      (btn as HTMLElement).style.display = '';
+    });
+    updateSelectedFiltersDisplay();
+    updateDisplay();
+  });
+
+  // Initialize
+  updateSelectedFiltersDisplay();
+  updateDisplay();
+</script>

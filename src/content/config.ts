@@ -27,8 +27,23 @@ const postCollection = defineCollection({
   }),
 });
 
+// Controller config collection schema
+const controllerCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    filename: z.string().describe('Original filename from repository'),
+    controller: z.string().describe('Controller device name'),
+    settingsType: z.string().describe('Type: Airplanes controls or General controls'),
+    description: z.string().describe('Short description of the config'),
+    aircraft: z.string().optional().describe('Specific aircraft or engine config (e.g., A321, TBM930, 2 engines)'),
+    downloadUrl: z.string().url().describe('GitHub raw URL to download XML file'),
+    tags: z.array(z.string()).describe('Searchable tags for filtering'),
+  }),
+});
+
 // Export collections
 export const collections = {
   videos: videoCollection,
   posts: postCollection,
+  controllers: controllerCollection,
 };

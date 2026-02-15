@@ -1,0 +1,72 @@
+name: Fetch Controller Configs
+
+on:
+  schedule:
+    # Run weekly on Mondays at 00:00 UTC (configs change less frequently than videos)
+    - cron: '0 0 * * 1'
+  workflow_dispatch: # Allow manual trigger
+  repository_dispatch:
+    types: [controllers-updated] # Trigger from msfs-2024-controls-settings repo
+
+jobs:
+  fetch-controllers:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch controller configs from GitHub
+        run: node scripts/fetch-controllers.js
+
+      - name: Check for changes
+        id: check-changes
+        run: |
+          echo "🔍 Checking for changes in controllers and stats..."
+          echo "📁 Controllers directory contents:"
+          ls -la src/content/controllers/ || echo "Directory not found or empty"
+
+          # Check if there are any new or modified files in the controllers directory or stats.json
+          if git status --porcelain src/content/controllers/ src/content/stats.json | grep -q .; then
+            echo "📝 Found changes in controllers directory or stats"
+            git status --porcelain src/content/controllers/ src/content/stats.json
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "📭 No changes in controllers directory or stats"
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit changes
+        if: steps.check-changes.outputs.changed == 'true'
+        run: |
+          echo "💾 Committing changes..."
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          echo "📋 Files to be committed:"
+          git add src/content/controllers/ src/content/stats.json
+          git status --porcelain
+          git commit -m "chore: update controller configs from msfs-2024-controls-settings"
+          echo "🚀 Pulling remote changes and pushing..."
+          git pull --rebase
+          git push
+          echo "✅ Changes committed and pushed successfully"
+
+      - name: Trigger deploy
+        if: steps.check-changes.outputs.changed == 'true'
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/dispatches \
+            -d '{"event_type":"content-updated"}'
