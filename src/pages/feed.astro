@@ -3,21 +3,30 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import VideoCard from '../components/VideoCard.astro';
 import PostCard from '../components/PostCard.astro';
+import ConfigCard from '../components/ConfigCard.astro';
+import controllerDates from '../../data/controller-dates.json';
 
+const dates = controllerDates as Record<string, string>;
 const videos = await getCollection('videos');
 const posts = await getCollection('posts', ({ data }) => !data.draft);
+const controllers = await getCollection('controllers');
 
-// Get recent items (videos and posts)
+// Get recent items (videos, posts, and controllers)
 const allItems = [
   ...videos.map((v) => ({
-    type: 'video',
+    type: 'video' as const,
     item: v,
     date: v.data.publishedAt,
   })),
   ...posts.map((p) => ({
-    type: 'post',
+    type: 'post' as const,
     item: p,
     date: p.data.publishedAt,
+  })),
+  ...controllers.map((c) => ({
+    type: 'controller' as const,
+    item: c,
+    date: new Date(dates[c.id] || new Date().toISOString()),
   })),
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
@@ -31,7 +40,7 @@ const recentItems = allItems.slice(0, 10);
   <div class="feed-page">
     <div class="feed-header">
       <h1>Activity Feed</h1>
-      <p>Latest videos and community posts</p>
+      <p>Latest videos, community posts, and controller configs</p>
       <div class="feed-links">
         <a href="/feed.xml" class="feed-link" target="_blank" rel="noopener noreferrer">
           <span class="feed-icon">📡</span> Subscribe to RSS
@@ -42,17 +51,19 @@ const recentItems = allItems.slice(0, 10);
     <div class="feed-container">
       {recentItems.length > 0 ? (
         <div class="feed-timeline">
-          {recentItems.map((itemWrapper, index) => (
+          {recentItems.map((itemWrapper) => (
             <div class="feed-item">
               <div class="feed-marker">
                 <span class={`marker ${itemWrapper.type}`}>
-                  {itemWrapper.type === 'video' ? '🎥' : '📝'}
+                  {itemWrapper.type === 'video' ? '🎥' : itemWrapper.type === 'controller' ? '🎮' : '📝'}
                 </span>
               </div>
 
               <div class="feed-content">
                 {itemWrapper.type === 'video' ? (
                   <VideoCard video={itemWrapper.item} />
+                ) : itemWrapper.type === 'controller' ? (
+                  <ConfigCard config={itemWrapper.item} />
                 ) : (
                   <PostCard post={itemWrapper.item} />
                 )}

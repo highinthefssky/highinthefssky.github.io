@@ -15,6 +15,7 @@ const GITHUB_REPO = 'msfs-2024-controls-settings';
 const GITHUB_BRANCH = 'main';
 const CONTROLLERS_DIR = path.join(__dirname, '../src/content/controllers');
 const STATS_FILE = path.join(__dirname, '../src/content/stats.json');
+const DATES_FILE = path.join(__dirname, '../data/controller-dates.json');
 
 // Create controllers directory if it doesn't exist
 if (!fs.existsSync(CONTROLLERS_DIR)) {
@@ -142,6 +143,12 @@ async function fetchControllers() {
     
     console.log(`🎮 Processing ${xmlFiles.length} controller config files...`);
     
+    // Load existing dates tracking file
+    let controllerDates = {};
+    if (fs.existsSync(DATES_FILE)) {
+      controllerDates = JSON.parse(fs.readFileSync(DATES_FILE, 'utf-8'));
+    }
+
     let successCount = 0;
     let skipCount = 0;
     
@@ -169,6 +176,12 @@ async function fetchControllers() {
         tags,
       };
       
+      // Track first-seen date for new controllers
+      if (!controllerDates[slug]) {
+        controllerDates[slug] = new Date().toISOString();
+        console.log(`  🆕 New controller: ${slug}`);
+      }
+
       // Write to JSON file
       const outputPath = path.join(CONTROLLERS_DIR, `${slug}.json`);
       fs.writeFileSync(outputPath, JSON.stringify(config, null, 2));
@@ -181,6 +194,10 @@ async function fetchControllers() {
     console.log(`   ✅ ${successCount} configs processed`);
     console.log(`   ⚠️  ${skipCount} files skipped`);
     
+    // Write updated dates tracking file
+    fs.writeFileSync(DATES_FILE, JSON.stringify(controllerDates, null, 2) + '\n');
+    console.log(`\n📅 Updated controller dates tracking file (${Object.keys(controllerDates).length} entries)`);
+
     // Update stats.json
     updateStats(successCount);
     
