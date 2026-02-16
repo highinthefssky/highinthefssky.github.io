@@ -63,11 +63,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           echo "📋 Files to be committed:"
-          git add src/content/videos/
+          git add src/content/videos/ src/content/stats.json
           git status --porcelain
           git commit -m "chore: weekly refresh videos from YouTube API"
           echo "🚀 Pulling remote changes and pushing..."
+          git stash --include-untracked
           git pull --rebase
+          git stash pop || true
           git push
           echo "✅ Changes committed and pushed successfully"
 
