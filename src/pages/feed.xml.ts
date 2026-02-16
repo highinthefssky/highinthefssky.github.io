@@ -1,9 +1,12 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
+import controllerDates from '../../data/controller-dates.json';
 
 export async function GET(context) {
+  const dates = controllerDates as Record<string, string>;
   const videos = await getCollection('videos');
   const posts = await getCollection('posts', ({ data }) => !data.draft);
+  const controllers = await getCollection('controllers');
 
   // Combine and sort all content by date
   const allContent = [
@@ -20,6 +23,13 @@ export async function GET(context) {
       link: `/posts/${post.slug}`,
       pubDate: post.data.publishedAt,
       categories: post.data.tags,
+    })),
+    ...controllers.map((config) => ({
+      title: `Controller Config: ${config.data.controller} - ${config.data.settingsType}`,
+      description: config.data.description,
+      link: `/controllers`,
+      pubDate: new Date(dates[config.id] || new Date().toISOString()),
+      categories: config.data.tags,
     })),
   ].sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 
