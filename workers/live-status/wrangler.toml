@@ -10,6 +10,13 @@ ALLOWED_ORIGIN = "https://highintheflightsimsky.nl"
 # Set to "true" only for development - allows localhost CORS
 ALLOW_LOCALHOST = "false"
 
+# KV namespace for caching live status (reduces YouTube API quota usage)
+# Create via: wrangler kv namespace create "LIVE_STATUS_CACHE"
+# Then replace the id below with the one returned by the command.
+[[kv_namespaces]]
+binding = "LIVE_STATUS_CACHE"
+id = "3762f5f3b6fc4c7d923f5dc93ef6ba2e"
+
 # The following secrets must be set via Cloudflare Dashboard or wrangler CLI:
 # - YOUTUBE_API_KEY
 # - YOUTUBE_CHANNEL_ID

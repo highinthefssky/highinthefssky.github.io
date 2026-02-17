@@ -10,6 +10,16 @@
  * - ALLOWED_ORIGIN: Your website origin (e.g., https://highintheflightsimsky.nl)
  */
 
+// Cache key for KV storage
+const CACHE_KEY = 'live-status';
+// Cache TTL in seconds — only 1 YouTube API call per this interval,
+// regardless of how many visitors hit the worker.
+// At 100 quota units per search.list call and 10,000 daily quota:
+//   max safe calls = 10,000 / 100 = 100/day → ~every 15 minutes.
+//   Using 5 minutes (288 calls/day max → well within limit even with
+//   other API usage from fetch-videos workflows).
+const CACHE_TTL_SECONDS = 300; // 5 minutes
+
 export default {
   async fetch(request, env, ctx) {
     // Handle CORS preflight
@@ -38,7 +48,7 @@ export default {
     }
 
     try {
-      const liveStatus = await checkLiveStatus(env);
+      const liveStatus = await getCachedLiveStatus(env, ctx);
       
       return new Response(JSON.stringify(liveStatus), {
         status: 200,
@@ -47,8 +57,8 @@ export default {
           'Access-Control-Allow-Origin': origin || allowedOrigin,
           'Access-Control-Allow-Methods': 'GET, OPTIONS',
           'Access-Control-Max-Age': '86400',
-          // Cache for 30 seconds to reduce API calls
-          'Cache-Control': 'public, max-age=30',
+          // Client-side cache matches KV TTL
+          'Cache-Control': `public, max-age=${CACHE_TTL_SECONDS}`,
         },
       });
     } catch (error) {
@@ -67,6 +77,34 @@ export default {
     }
   },
 };
+
+/**
+ * Get live status from KV cache, falling back to a fresh YouTube API call.
+ * This ensures at most 1 API call per CACHE_TTL_SECONDS, regardless of traffic.
+ */
+async function getCachedLiveStatus(env, ctx) {
+  // Try reading from KV cache first
+  if (env.LIVE_STATUS_CACHE) {
+    const cached = await env.LIVE_STATUS_CACHE.get(CACHE_KEY, { type: 'json' });
+    if (cached !== null) {
+      return cached;
+    }
+  }
+
+  // Cache miss — call YouTube API
+  const liveStatus = await checkLiveStatus(env);
+
+  // Store the result in KV with TTL so it auto-expires
+  if (env.LIVE_STATUS_CACHE) {
+    ctx.waitUntil(
+      env.LIVE_STATUS_CACHE.put(CACHE_KEY, JSON.stringify(liveStatus), {
+        expirationTtl: CACHE_TTL_SECONDS,
+      })
+    );
+  }
+
+  return liveStatus;
+}
 
 async function checkLiveStatus(env) {
   const { YOUTUBE_API_KEY, YOUTUBE_CHANNEL_ID } = env;

@@ -35,7 +35,7 @@ const liveStatusUrl = import.meta.env.PUBLIC_LIVE_STATUS_URL || '';
     private titleEl: HTMLElement | null;
     private closeBtn: HTMLElement | null;
     private liveStatusUrl: string;
-    private checkInterval: number = 60000; // Check every 60 seconds
+    private checkInterval: number = 300000; // Check every 5 minutes (matches server cache TTL)
     private intervalId: number | null = null;
 
     constructor() {
