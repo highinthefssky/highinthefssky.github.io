@@ -1,7 +1,7 @@
 ---
 title: "Episode 7: “G” is for GO‑AROUND — The Maneuver of Champions"
 description: "Episode 7: “G” is for GO‑AROUND — The Maneuver of Champions. 🔥✈️  The best pilots aren’t the ones who \"stick\" every landing; they’re the ones who know when to s"
-publishedAt: 2026-02-16
+publishedAt: 2026-02-17
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -30,7 +30,7 @@ We’ll execute a full Go-Around from 200ft, showing you exactly how to manage P
 Seven letters down, nineteen to go. Let’s keep climbing! ✈️🔥
 
 Original post: https://www.youtube.com/post/Ugkx0qMtNPkCBvzjXPMoUfqYVStQTeN6cTnm
-Likes: 1 | Comments: 0
+Likes: 2 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/WRTQ5PWzS_Wm4b_FKokSLnKf9pkJFosrGoToOj-LYAMfJQCSUucHbsHLxFTmLXPm_ARBEPq3xb7xxjw=s1280)
