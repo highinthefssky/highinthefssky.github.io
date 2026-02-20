@@ -1,15 +1,21 @@
 ---
 import Navigation from '../components/Navigation.astro';
 import LiveBanner from '../components/LiveBanner.astro';
+import BackToTop from '../components/BackToTop.astro';
 import '../styles/global.css';
 
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  ogType?: 'website' | 'article';
 }
 
-const { title = 'High in the Sky', description = 'YouTube Videos & Community Posts' } = Astro.props;
+const { title = 'High in the Sky', description = 'YouTube Videos & Community Posts', image, ogType = 'website' } = Astro.props;
 const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the Sky`;
+const ogImage = image
+  ? (image.startsWith('http') ? image : new URL(image, Astro.site).href)
+  : new URL('/og-image.png', Astro.site).href;
 ---
 
 <!doctype html>
@@ -24,17 +30,18 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={siteTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image" content={ogImage} />
     <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:site_name" content="High in the Sky" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={siteTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="/og-image.png" />
+    <meta name="twitter:image" content={ogImage} />
     
     <!-- Canonical URL -->
     <link rel="canonical" href={Astro.url.href} />
@@ -56,6 +63,16 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
     
     <!-- Generator -->
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- Anti-flash: apply saved theme before paint -->
+    <script is:inline>
+      (function() {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'light' || (!saved && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+          document.documentElement.classList.add('light');
+        }
+      })();
+    </script>
     
     <title>{siteTitle}</title>
   </head>
@@ -99,6 +116,7 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
         </div>
       </div>
     </footer>
+    <BackToTop />
   </body>
 </html>
 
@@ -111,10 +129,11 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
     margin: 0;
     padding: 0;
     font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background: radial-gradient(circle at 20% 20%, rgba(20, 60, 120, 0.25), transparent 35%),
-      radial-gradient(circle at 80% 0%, rgba(71, 85, 105, 0.18), transparent 30%),
-      linear-gradient(135deg, #0b1e33 0%, #0f172a 55%, #09111f 100%);
-    color: #e5e7eb;
+    background: radial-gradient(circle at 20% 20%, var(--bg-radial1), transparent 35%),
+      radial-gradient(circle at 80% 0%, var(--bg-radial2), transparent 30%),
+      linear-gradient(135deg, var(--bg-body-from) 0%, var(--bg-body-via) 55%, var(--bg-body-to) 100%);
+    color: var(--text-primary);
+    transition: background 0.3s ease, color 0.3s ease;
   }
 
   main {
@@ -122,13 +141,14 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
   }
 
   .footer {
-    background: rgba(11, 30, 51, 0.8);
+    background: var(--bg-elevated);
     backdrop-filter: blur(10px);
-    color: #e5e7eb;
-    border-top: 1px solid rgba(125, 211, 252, 0.15);
+    color: var(--text-primary);
+    border-top: 1px solid var(--footer-border);
     padding: 3rem 1rem;
     margin-top: 4rem;
-    box-shadow: inset 0 1px 0 rgba(125, 211, 252, 0.1);
+    box-shadow: inset 0 1px 0 var(--footer-border);
+    transition: background 0.3s ease, border-color 0.3s ease;
   }
 
   .footer-container {
@@ -142,7 +162,7 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
     gap: 2rem;
     margin-bottom: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(125, 211, 252, 0.2);
+    border-top: 1px solid var(--footer-border);
   }
 
   .footer-section h3,
@@ -153,7 +173,7 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
   }
 
   .footer-section p {
-    color: #9ca3af;
+    color: var(--text-secondary);
     line-height: 1.6;
   }
 
@@ -168,13 +188,13 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
   }
 
   .footer-section a {
-    color: #c8d6ed;
+    color: var(--footer-link);
     text-decoration: none;
     transition: color 0.2s ease, text-shadow 0.2s ease;
   }
 
   .footer-section a:hover {
-    color: #7dd3fc;
+    color: var(--accent);
     text-shadow: 0 0 8px rgba(125, 211, 252, 0.4);
   }
 
@@ -189,10 +209,10 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
   }
 
   .footer-bottom {
-    border-top: 1px solid #374151;
+    border-top: 1px solid var(--footer-bottom-border);
     padding-top: 2rem;
     text-align: center;
-    color: #9ca3af;
+    color: var(--footer-muted);
   }
 
   .footer-bottom p {
@@ -200,13 +220,13 @@ const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the 
   }
 
   .footer-bottom a {
-    color: #9ca3af;
+    color: var(--footer-muted);
     text-decoration: none;
     transition: color 0.3s ease;
   }
 
   .footer-bottom a:hover {
-    color: #f3f4f6;
+    color: var(--text-primary);
   }
 
   @media (max-width: 768px) {

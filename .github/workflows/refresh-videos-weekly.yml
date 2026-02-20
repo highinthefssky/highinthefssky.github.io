@@ -40,6 +40,9 @@ jobs:
           REFRESH_EXISTING: "true"
         run: node scripts/fetch-videos.js
 
+      - name: Update playlists
+        run: node scripts/update-playlists.js
+
       - name: Check for changes
         id: check-changes
         run: |
@@ -47,12 +50,12 @@ jobs:
           echo "📁 Videos directory contents:"
           ls -la src/content/videos/ || echo "Directory not found or empty"
 
-          if git status --porcelain src/content/videos/ | grep -q .; then
-            echo "📝 Found changes in videos directory"
-            git status --porcelain src/content/videos/
+          if git status --porcelain src/content/videos/ src/content/stats.json src/content/playlists/ | grep -q .; then
+            echo "📝 Found changes in videos, stats, or playlists"
+            git status --porcelain src/content/videos/ src/content/stats.json src/content/playlists/
             echo "changed=true" >> $GITHUB_OUTPUT
           else
-            echo "📭 No changes in videos directory"
+            echo "📭 No changes in videos, stats, or playlists"
             echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
@@ -63,9 +66,9 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           echo "📋 Files to be committed:"
-          git add src/content/videos/ src/content/stats.json
+          git add src/content/videos/ src/content/stats.json src/content/playlists/
           git status --porcelain
-          git commit -m "chore: weekly refresh videos from YouTube API"
+          git commit -m "chore: weekly refresh videos and playlists from YouTube API"
           echo "🚀 Pulling remote changes and pushing..."
           git stash --include-untracked
           git pull --rebase

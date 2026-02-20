@@ -36,6 +36,18 @@ function getSettingsTypeClass(settingsType: string): string {
       <h3 class="controller-name">{controller}</h3>
       {aircraft && <span class="aircraft-badge">{aircraft}</span>}
     </div>
+    <button
+      class="fav-btn"
+      data-fav-type="config"
+      data-fav-id={filename}
+      title="Save to favorites"
+      aria-label="Save to favorites"
+      type="button"
+    >
+      <svg class="fav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+      </svg>
+    </button>
   </div>
 
   <div class="card-body">
@@ -98,6 +110,44 @@ function getSettingsTypeClass(settingsType: string): string {
     padding: 1.25rem;
     background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
     border-bottom: 1px solid #e5e7eb;
+    position: relative;
+  }
+
+  .fav-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.08);
+    border: none;
+    border-radius: 50%;
+    width: 1.75rem;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #64748b;
+    opacity: 0;
+    transition: opacity 0.2s, background 0.2s, transform 0.15s;
+  }
+
+  .config-card:hover .fav-btn {
+    opacity: 1;
+  }
+
+  .fav-btn:hover {
+    background: rgba(0, 0, 0, 0.15);
+    transform: scale(1.1);
+  }
+
+  .fav-btn.saved {
+    opacity: 1;
+    color: #facc15;
+  }
+
+  .fav-btn.saved .fav-icon {
+    fill: #facc15;
   }
 
   .controller-icon {
@@ -253,3 +303,41 @@ function getSettingsTypeClass(settingsType: string): string {
     }
   }
 </style>
+
+<script>
+  function initConfigFavorites() {
+    document.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest('.fav-btn[data-fav-type="config"]');
+      if (!btn) return;
+      e.preventDefault();
+      e.stopPropagation();
+
+      const id = btn.getAttribute('data-fav-id');
+      if (!id) return;
+
+      const favs: string[] = JSON.parse(localStorage.getItem('fav-configs') || '[]');
+      const idx = favs.indexOf(id);
+      if (idx === -1) {
+        favs.push(id);
+        btn.classList.add('saved');
+        btn.setAttribute('title', 'Remove from favorites');
+      } else {
+        favs.splice(idx, 1);
+        btn.classList.remove('saved');
+        btn.setAttribute('title', 'Save to favorites');
+      }
+      localStorage.setItem('fav-configs', JSON.stringify(favs));
+      window.dispatchEvent(new CustomEvent('favorites-changed'));
+    });
+
+    const favs: string[] = JSON.parse(localStorage.getItem('fav-configs') || '[]');
+    document.querySelectorAll('.fav-btn[data-fav-type="config"]').forEach((btn) => {
+      const id = btn.getAttribute('data-fav-id');
+      if (id && favs.includes(id)) {
+        btn.classList.add('saved');
+        btn.setAttribute('title', 'Remove from favorites');
+      }
+    });
+  }
+  initConfigFavorites();
+</script>

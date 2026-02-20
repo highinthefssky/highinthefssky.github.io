@@ -1,17 +1,36 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: { post },
-  }));
+  return posts.map((post) => {
+    const related = posts
+      .filter((p) => p.slug !== post.slug && !p.data.draft)
+      .map((p) => ({
+        post: p,
+        score: p.data.tags.filter((t) => post.data.tags.includes(t)).length,
+      }))
+      .filter((r) => r.score > 0)
+      .sort(
+        (a, b) =>
+          b.score - a.score ||
+          new Date(b.post.data.publishedAt).getTime() -
+            new Date(a.post.data.publishedAt).getTime()
+      )
+      .slice(0, 3)
+      .map((r) => r.post);
+
+    return {
+      params: { slug: post.slug },
+      props: { post, relatedPosts: related },
+    };
+  });
 }
 
-const { post } = Astro.props;
-const { title, description, publishedAt, tags } = post.data;
+const { post, relatedPosts } = Astro.props;
+const { title, description, publishedAt, tags, image } = post.data;
 const { Content } = await post.render();
 
 // Format date helper
@@ -26,7 +45,7 @@ function formatDate(date: Date): string {
 }
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} ogType="article" image={image}>
   <article class="post-page">
     <div class="post-header">
       <h1 class="post-title">{title}</h1>
@@ -50,6 +69,17 @@ function formatDate(date: Date): string {
       <Content />
     </div>
 
+    {relatedPosts.length > 0 && (
+      <section class="related-section">
+        <h2 class="related-heading">Related Posts</h2>
+        <div class="related-grid">
+          {relatedPosts.map((related) => (
+            <PostCard post={related} />
+          ))}
+        </div>
+      </section>
+    )}
+
     <footer class="post-footer">
       <a href="/posts" class="back-link">← Back to all posts</a>
     </footer>
@@ -61,24 +91,24 @@ function formatDate(date: Date): string {
     max-width: 900px;
     margin: 0 auto;
     padding: 2.5rem 1.25rem;
-    background: rgba(11, 30, 51, 0.7);
-    border: 1px solid rgba(125, 211, 252, 0.18);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-accent);
     border-radius: 1.25rem;
     backdrop-filter: blur(10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-    color: #e6efff;
+    box-shadow: var(--shadow-card);
+    color: var(--text-heading);
   }
 
   .post-header {
     margin-bottom: 2rem;
-    border-bottom: 1px solid rgba(125, 211, 252, 0.2);
+    border-bottom: 1px solid var(--border-accent);
     padding-bottom: 1.25rem;
   }
 
   .post-title {
     font-size: 2.5rem;
     margin: 0 0 1rem;
-    color: #e6efff;
+    color: var(--text-heading);
     line-height: 1.2;
   }
 
@@ -87,7 +117,7 @@ function formatDate(date: Date): string {
     align-items: center;
     gap: 1.5rem;
     flex-wrap: wrap;
-    color: #9fb6d5;
+    color: var(--text-muted);
     font-size: 0.95rem;
   }
 
@@ -98,26 +128,26 @@ function formatDate(date: Date): string {
   }
 
   .tag {
-    background: rgba(255, 255, 255, 0.05);
-    color: #e6efff;
+    background: var(--tag-bg);
+    color: var(--tag-text);
     padding: 0.3rem 0.9rem;
     border-radius: 9999px;
     font-size: 0.875rem;
     text-decoration: none;
-    border: 1px solid rgba(125, 211, 252, 0.25);
+    border: 1px solid var(--border-accent);
     transition: all 0.25s ease;
   }
 
   .tag:hover {
-    background: rgba(125, 211, 252, 0.12);
-    color: #7dd3fc;
-    border-color: rgba(125, 211, 252, 0.6);
+    background: rgba(14, 165, 233, 0.1);
+    color: var(--accent);
+    border-color: var(--accent);
   }
 
   .post-content {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #cbd5e1;
+    color: var(--text-muted);
     margin-bottom: 2rem;
   }
 
@@ -125,13 +155,13 @@ function formatDate(date: Date): string {
   :global(.post-content h2) {
     font-size: 1.875rem;
     margin: 1.5rem 0 0.5rem;
-    color: #e6efff;
+    color: var(--text-heading);
   }
 
   :global(.post-content h3) {
     font-size: 1.5rem;
     margin: 1.25rem 0 0.5rem;
-    color: #e6efff;
+    color: var(--text-heading);
   }
 
   :global(.post-content p) {
@@ -149,33 +179,33 @@ function formatDate(date: Date): string {
   }
 
   :global(.post-content blockquote) {
-    border-left: 4px solid rgba(125, 211, 252, 0.6);
+    border-left: 4px solid var(--accent);
     padding-left: 1rem;
     margin: 1rem 0;
-    color: #9fb6d5;
+    color: var(--text-muted);
     font-style: italic;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--tag-bg);
     border-radius: 0.5rem;
     padding: 1rem;
   }
 
   :global(.post-content code) {
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--tag-bg);
     padding: 0.2rem 0.4rem;
     border-radius: 0.25rem;
     font-family: 'JetBrains Mono', 'Monaco', 'Menlo', 'Courier New', monospace;
     font-size: 0.9em;
-    color: #7dd3fc;
+    color: var(--accent);
   }
 
   :global(.post-content pre) {
-    background: rgba(11, 30, 51, 0.8);
-    color: #e6efff;
+    background: var(--bg-panel);
+    color: var(--text-heading);
     padding: 1rem;
     border-radius: 0.75rem;
     overflow-x: auto;
     margin: 1rem 0;
-    border: 1px solid rgba(125, 211, 252, 0.2);
+    border: 1px solid var(--border-accent);
   }
 
   :global(.post-content pre code) {
@@ -195,35 +225,55 @@ function formatDate(date: Date): string {
     width: 100%;
     border-collapse: collapse;
     margin: 1rem 0;
-    color: #cbd5e1;
+    color: var(--text-muted);
   }
 
   :global(.post-content th),
   :global(.post-content td) {
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-subtle);
     padding: 0.75rem;
     text-align: left;
   }
 
   :global(.post-content th) {
-    background: rgba(255, 255, 255, 0.06);
+    background: var(--tag-bg);
     font-weight: 600;
+  }
+
+  .related-section {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-accent);
+  }
+
+  .related-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin: 0 0 1.25rem;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .post-footer {
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(125, 211, 252, 0.2);
+    border-top: 1px solid var(--border-accent);
+    margin-top: 2rem;
   }
 
   .back-link {
-    color: #7dd3fc;
+    color: var(--accent);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
   }
 
   .back-link:hover {
-    color: #38bdf8;
+    color: var(--accent-hover);
     text-decoration: underline;
   }
 

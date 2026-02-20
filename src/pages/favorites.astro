@@ -1,0 +1,296 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import VideoCard from '../components/VideoCard.astro';
+import ConfigCard from '../components/ConfigCard.astro';
+
+const allVideos = await getCollection('videos');
+const sortedVideos = allVideos.sort(
+  (a, b) =>
+    new Date(b.data.publishedAt).getTime() -
+    new Date(a.data.publishedAt).getTime()
+);
+
+const allConfigs = await getCollection('controllers');
+const sortedConfigs = allConfigs.sort((a, b) =>
+  a.data.controller.localeCompare(b.data.controller)
+);
+---
+
+<BaseLayout title="Favorites" description="Your saved videos and controller configurations">
+  <div class="favorites-page">
+    <div class="favorites-header">
+      <h1>Favorites</h1>
+      <p>Your saved videos and controller configs — stored in your browser.</p>
+    </div>
+
+    <div class="favorites-empty" id="favorites-empty" style="display: none;">
+      <div class="empty-icon">🔖</div>
+      <h2>No favorites yet</h2>
+      <p>Hover over any video or controller config card and click the bookmark icon to save it here.</p>
+      <div class="empty-links">
+        <a href="/videos" class="btn btn-primary">Browse Videos</a>
+        <a href="/controllers" class="btn btn-secondary">Browse Controllers</a>
+      </div>
+    </div>
+
+    <section class="favorites-section" id="fav-videos-section" style="display: none;">
+      <div class="section-header">
+        <h2>Saved Videos</h2>
+        <span class="section-count" id="fav-videos-count"></span>
+      </div>
+      <div class="favorites-grid" id="fav-videos-grid">
+        {sortedVideos.map((video) => (
+          <div class="fav-item" data-fav-video-id={video.data.videoId} style="display: none;">
+            <VideoCard video={video} />
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="favorites-section" id="fav-configs-section" style="display: none;">
+      <div class="section-header">
+        <h2>Saved Controller Configs</h2>
+        <span class="section-count" id="fav-configs-count"></span>
+      </div>
+      <div class="favorites-grid" id="fav-configs-grid">
+        {sortedConfigs.map((config) => (
+          <div class="fav-item" data-fav-config-id={config.data.filename} style="display: none;">
+            <ConfigCard config={config} />
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <div class="favorites-actions" id="favorites-actions" style="display: none;">
+      <button class="btn-clear-favs" id="clear-all-favs" type="button">
+        Clear All Favorites
+      </button>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .favorites-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .favorites-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .favorites-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-heading);
+  }
+
+  .favorites-header p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+  }
+
+  /* Empty state */
+  .favorites-empty {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .empty-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .favorites-empty h2 {
+    color: var(--text-heading);
+    font-size: 1.5rem;
+    margin: 0 0 0.75rem;
+  }
+
+  .favorites-empty p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 420px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+  }
+
+  .empty-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary {
+    background: hsl(213, 94%, 47%);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: hsl(213, 94%, 37%);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: var(--bg-panel);
+    color: var(--text-heading);
+    border: 1px solid var(--border-default);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  /* Sections */
+  .favorites-section {
+    margin-bottom: 3rem;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-default);
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+    color: var(--text-heading);
+    margin: 0;
+  }
+
+  .section-count {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    background: var(--bg-panel);
+    padding: 0.25rem 0.625rem;
+    border-radius: 9999px;
+    font-weight: 600;
+  }
+
+  .favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Clear button */
+  .favorites-actions {
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .btn-clear-favs {
+    background: transparent;
+    border: 1px solid var(--border-input);
+    color: var(--text-muted);
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-clear-favs:hover {
+    border-color: #ef4444;
+    color: #ef4444;
+  }
+
+  @media (max-width: 768px) {
+    .favorites-page {
+      padding: 1rem;
+    }
+
+    .favorites-header h1 {
+      font-size: 2rem;
+    }
+
+    .favorites-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+  }
+</style>
+
+<script>
+  function renderFavorites() {
+    const favVideos: string[] = JSON.parse(localStorage.getItem('fav-videos') || '[]');
+    const favConfigs: string[] = JSON.parse(localStorage.getItem('fav-configs') || '[]');
+
+    const hasAny = favVideos.length > 0 || favConfigs.length > 0;
+    const emptyEl = document.getElementById('favorites-empty');
+    const actionsEl = document.getElementById('favorites-actions');
+    const videoSection = document.getElementById('fav-videos-section');
+    const configSection = document.getElementById('fav-configs-section');
+    const videosCount = document.getElementById('fav-videos-count');
+    const configsCount = document.getElementById('fav-configs-count');
+
+    // Show/hide empty state
+    if (emptyEl) emptyEl.style.display = hasAny ? 'none' : 'block';
+    if (actionsEl) actionsEl.style.display = hasAny ? 'block' : 'none';
+
+    // Videos
+    let videoVisible = 0;
+    document.querySelectorAll('[data-fav-video-id]').forEach((el) => {
+      const id = el.getAttribute('data-fav-video-id');
+      const show = id && favVideos.includes(id);
+      (el as HTMLElement).style.display = show ? '' : 'none';
+      if (show) videoVisible++;
+    });
+    if (videoSection) videoSection.style.display = videoVisible > 0 ? '' : 'none';
+    if (videosCount) videosCount.textContent = `${videoVisible}`;
+
+    // Configs
+    let configVisible = 0;
+    document.querySelectorAll('[data-fav-config-id]').forEach((el) => {
+      const id = el.getAttribute('data-fav-config-id');
+      const show = id && favConfigs.includes(id);
+      (el as HTMLElement).style.display = show ? '' : 'none';
+      if (show) configVisible++;
+    });
+    if (configSection) configSection.style.display = configVisible > 0 ? '' : 'none';
+    if (configsCount) configsCount.textContent = `${configVisible}`;
+  }
+
+  // Clear all
+  document.getElementById('clear-all-favs')?.addEventListener('click', () => {
+    if (!confirm('Remove all favorites?')) return;
+    localStorage.removeItem('fav-videos');
+    localStorage.removeItem('fav-configs');
+    renderFavorites();
+    // Update bookmark buttons to un-saved state
+    document.querySelectorAll('.fav-btn.saved').forEach((btn) => {
+      btn.classList.remove('saved');
+      btn.setAttribute('title', 'Save to favorites');
+    });
+    window.dispatchEvent(new CustomEvent('favorites-changed'));
+  });
+
+  // Re-render when favorites change (from card toggles)
+  window.addEventListener('favorites-changed', renderFavorites);
+
+  // Initial render
+  renderFavorites();
+</script>
