@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ConfigCard from '../components/ConfigCard.astro';
+import KeyboardShortcuts from '../components/KeyboardShortcuts.astro';
 import stats from '../content/stats.json';
 
 const allConfigs = await getCollection('controllers');
@@ -49,6 +50,7 @@ const allControllers = Array.from(
           class="search-input"
           autocomplete="off"
         />
+        <kbd class="search-kbd-hint" title="Press / to focus">/</kbd>
         <span class="search-icon">🔍</span>
       </div>
 
@@ -124,6 +126,12 @@ const allControllers = Array.from(
       </div>
     </div>
   </div>
+  <KeyboardShortcuts shortcuts={[
+    { key: '/', label: 'Focus search' },
+    { key: 'Esc', label: 'Clear all filters' },
+    { key: 'c', label: 'Toggle controller filters' },
+    { key: 't', label: 'Toggle tag filters' },
+  ]} />
 </BaseLayout>
 
 <style>
@@ -141,12 +149,12 @@ const allControllers = Array.from(
   .controllers-header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    color: #e6efff;
+    color: var(--text-heading);
   }
 
   .controllers-header p {
     font-size: 1.125rem;
-    color: #9fb6d5;
+    color: var(--text-muted);
     margin-bottom: 1rem;
   }
 
@@ -159,7 +167,7 @@ const allControllers = Array.from(
   }
 
   .github-link {
-    color: #7dd3fc;
+    color: var(--accent);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s ease;
@@ -174,15 +182,15 @@ const allControllers = Array.from(
   }
 
   .info-text {
-    color: #9fb6d5;
+    color: var(--text-muted);
   }
 
   .search-controls {
-    background: #0f1b2e;
+    background: var(--bg-panel);
     padding: 2rem;
     border-radius: 0.75rem;
     margin-bottom: 2rem;
-    border: 1px solid #2d3f55;
+    border: 1px solid var(--border-default);
   }
 
   .search-box {
@@ -195,21 +203,21 @@ const allControllers = Array.from(
     padding: 1rem;
     padding-right: 2.5rem;
     font-size: 1rem;
-    border: 2px solid #3d5170;
+    border: 2px solid var(--border-input);
     border-radius: 0.5rem;
-    background: #1a2a3f;
-    color: #e5e7eb;
+    background: var(--bg-input);
+    color: var(--text-primary);
     transition: all 0.3s ease;
   }
 
   .search-input:focus {
     outline: none;
-    border-color: #7dd3fc;
-    box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.1);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.12);
   }
 
   .search-input::placeholder {
-    color: #6b8cb3;
+    color: var(--text-input-placeholder);
   }
 
   .search-icon {
@@ -219,6 +227,32 @@ const allControllers = Array.from(
     transform: translateY(-50%);
     font-size: 1.25rem;
     pointer-events: none;
+  }
+
+  .search-kbd-hint {
+    position: absolute;
+    right: 2.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    background: var(--bg-surface);
+    color: var(--text-muted);
+    border: 1px solid var(--border-default);
+    pointer-events: none;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+  }
+
+  .search-input:focus ~ .search-kbd-hint {
+    opacity: 0;
   }
 
   .filter-section {
@@ -235,14 +269,14 @@ const allControllers = Array.from(
   .filter-header h3 {
     font-size: 1rem;
     font-weight: 600;
-    color: #cbd5e1;
+    color: var(--text-muted);
     margin: 0;
   }
 
   .toggle-btn {
     background: transparent;
     border: none;
-    color: #7dd3fc;
+    color: var(--accent);
     font-size: 1rem;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -261,22 +295,22 @@ const allControllers = Array.from(
     width: 100%;
     padding: 0.625rem;
     font-size: 0.875rem;
-    border: 2px solid #3d5170;
+    border: 2px solid var(--border-input);
     border-radius: 0.375rem;
-    background: #1a2a3f;
-    color: #e5e7eb;
+    background: var(--bg-input);
+    color: var(--text-primary);
     margin-bottom: 1rem;
     transition: all 0.3s ease;
   }
 
   .tag-search-input:focus {
     outline: none;
-    border-color: #7dd3fc;
-    box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.1);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.12);
   }
 
   .tag-search-input::placeholder {
-    color: #6b8cb3;
+    color: var(--text-input-placeholder);
   }
 
   .filter-list {
@@ -290,9 +324,9 @@ const allControllers = Array.from(
 
   .filter-btn {
     padding: 0.5rem 1rem;
-    border: 2px solid #3d5170;
-    background: #1a2a3f;
-    color: #c8d6ed;
+    border: 2px solid var(--border-input);
+    background: var(--bg-input);
+    color: var(--text-secondary);
     border-radius: 0.5rem;
     font-size: 0.875rem;
     font-weight: 500;
@@ -301,13 +335,13 @@ const allControllers = Array.from(
   }
 
   .filter-btn:hover {
-    border-color: #7dd3fc;
-    color: #7dd3fc;
+    border-color: var(--accent);
+    color: var(--accent);
   }
 
   .filter-btn.active {
     background: #7dd3fc;
-    border-color: #7dd3fc;
+    border-color: var(--accent);
     color: #0f1b2e;
     font-weight: 600;
   }
@@ -325,19 +359,19 @@ const allControllers = Array.from(
     justify-content: space-between;
     align-items: center;
     padding-top: 1rem;
-    border-top: 1px solid #2d3f55;
+    border-top: 1px solid var(--border-default);
   }
 
   .result-count {
-    color: #9fb6d5;
+    color: var(--text-muted);
     font-weight: 600;
     font-size: 1rem;
   }
 
   .btn-clear {
     background: transparent;
-    border: 2px solid #3d5170;
-    color: #c8d6ed;
+    border: 2px solid var(--border-input);
+    color: var(--text-secondary);
     padding: 0.625rem 1.25rem;
     border-radius: 0.5rem;
     font-size: 0.9375rem;
@@ -347,8 +381,8 @@ const allControllers = Array.from(
   }
 
   .btn-clear:hover:not(:disabled) {
-    border-color: #7dd3fc;
-    color: #e6efff;
+    border-color: var(--accent);
+    color: var(--text-heading);
   }
 
   .btn-clear:disabled {
@@ -369,7 +403,7 @@ const allControllers = Array.from(
   .empty-state {
     text-align: center;
     padding: 4rem 1rem;
-    color: #9fb6d5;
+    color: var(--text-muted);
   }
 
   .empty-state p {
@@ -642,6 +676,46 @@ const allControllers = Array.from(
     });
     updateSelectedFiltersDisplay();
     updateDisplay();
+  });
+
+  // ── Keyboard shortcuts ──
+  document.addEventListener('keydown', (e) => {
+    const tag = (e.target as HTMLElement).tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') {
+      if (e.key === 'Escape') {
+        (e.target as HTMLElement).blur();
+      }
+      return;
+    }
+
+    // Don't fire shortcuts when the help overlay is open
+    if (document.getElementById('kbd-help')?.classList.contains('open')) return;
+
+    if (e.key === '/') {
+      e.preventDefault();
+      searchInput?.focus();
+    } else if (e.key === 'Escape') {
+      e.preventDefault();
+      searchInput.value = '';
+      tagSearchInput.value = '';
+      activeControllers.clear();
+      activeTags.clear();
+      controllerButtons.forEach((btn) => {
+        btn.classList.remove('active');
+      });
+      tagButtons.forEach((btn) => {
+        btn.classList.remove('active');
+        (btn as HTMLElement).style.display = '';
+      });
+      updateSelectedFiltersDisplay();
+      updateDisplay();
+    } else if (e.key === 'c') {
+      e.preventDefault();
+      toggleControllersBtn?.click();
+    } else if (e.key === 't') {
+      e.preventDefault();
+      toggleTagsBtn?.click();
+    }
   });
 
   // Initialize

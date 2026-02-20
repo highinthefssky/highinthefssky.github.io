@@ -259,6 +259,7 @@ async function fetchVideos() {
           thumbnailMedium: item.snippet?.thumbnails?.medium?.url || item.snippet?.thumbnails?.default?.url || '',
           publishedAt: item.snippet?.publishedAt ? new Date(item.snippet.publishedAt).toISOString() : new Date().toISOString(),
           duration: duration,
+          viewCount: parseInt(item.statistics?.viewCount || '0', 10),
           tags: item.snippet?.tags || [],
           featured: false,
         };

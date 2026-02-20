@@ -1,5 +1,5 @@
 ---
-// Navigation component with links to main pages
+import ThemeToggle from './ThemeToggle.astro';
 ---
 
 <nav class="navbar">
@@ -7,12 +7,16 @@
     <a href="/" class="navbar-logo">
       High in the Sky
     </a>
+    <div class="navbar-right">
     <ul class="navbar-menu">
       <li>
         <a href="/" class="navbar-link" data-link="/">Home</a>
       </li>
       <li>
         <a href="/videos" class="navbar-link" data-link="/videos">Videos</a>
+      </li>
+      <li>
+        <a href="/playlists" class="navbar-link" data-link="/playlists">Playlists</a>
       </li>
       <li>
         <a href="/controllers" class="navbar-link" data-link="/controllers">Controllers</a>
@@ -23,7 +27,15 @@
       <li>
         <a href="/feed" class="navbar-link" data-link="/feed">Feed</a>
       </li>
+      <li>
+        <a href="/favorites" class="navbar-link navbar-link-fav" data-link="/favorites" title="Favorites">
+          <svg class="fav-nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+          <span class="fav-nav-count" id="fav-nav-count" style="display: none;">0</span>
+        </a>
+      </li>
     </ul>
+    <ThemeToggle />
+    </div>
   </div>
 </nav>
 
@@ -49,17 +61,37 @@
   
   // Update on navigation
   window.addEventListener('popstate', updateActiveLink);
+
+  // Favorites count badge + filled icon
+  function updateFavCount() {
+    const vids = JSON.parse(localStorage.getItem('fav-videos') || '[]').length;
+    const cfgs = JSON.parse(localStorage.getItem('fav-configs') || '[]').length;
+    const total = vids + cfgs;
+    const badge = document.getElementById('fav-nav-count');
+    const favLink = document.querySelector('.navbar-link-fav');
+    if (badge) {
+      badge.textContent = String(total);
+      badge.style.display = total > 0 ? '' : 'none';
+    }
+    if (favLink) {
+      favLink.classList.toggle('has-favorites', total > 0);
+    }
+  }
+  updateFavCount();
+  window.addEventListener('favorites-changed', updateFavCount);
+  window.addEventListener('storage', updateFavCount);
 </script>
 
 <style>
   .navbar {
-    background: rgba(11, 30, 51, 0.9);
-    border-bottom: 1px solid rgba(125, 211, 252, 0.18);
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border-accent);
     position: sticky;
     top: 0;
     z-index: 50;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(12px);
+    transition: background 0.3s ease, border-color 0.3s ease;
   }
 
   .navbar-container {
@@ -74,13 +106,13 @@
   .navbar-logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #e6efff;
+    color: var(--text-heading);
     text-decoration: none;
     transition: color 0.2s ease, transform 0.2s ease;
   }
 
   .navbar-logo:hover {
-    color: #7dd3fc;
+    color: var(--accent);
     transform: translateY(-1px);
   }
 
@@ -92,33 +124,88 @@
     padding: 0;
   }
 
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
   .navbar-link {
-    color: #c8d6ed;
+    color: var(--text-secondary);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease, background 0.2s ease;
     display: inline-block;
     padding: 0.35rem 0.5rem;
     border-radius: 0.5rem;
   }
 
   .navbar-link:hover {
-    color: #7dd3fc;
+    color: var(--accent);
     transform: translateY(-1px);
     background: rgba(125, 211, 252, 0.08);
-    text-shadow: 0 0 10px rgba(125, 211, 252, 0.6), 0 0 20px rgba(14, 165, 233, 0.4);
   }
 
   .navbar-link.active {
-    color: #7dd3fc;
+    color: var(--accent);
     background: rgba(125, 211, 252, 0.12);
-    text-shadow: 0 0 8px rgba(125, 211, 252, 0.5);
+  }
+
+  .navbar-link-fav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-input, #3d5170);
+    background: var(--bg-input, #1a2a3f);
+    color: var(--accent, #7dd3fc);
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    position: relative;
+  }
+
+  .navbar-link-fav:hover {
+    border-color: var(--accent, #7dd3fc);
+    background: var(--bg-input, #1a2a3f);
+    transform: translateY(-1px);
+  }
+
+  .fav-nav-icon {
+    flex-shrink: 0;
+  }
+
+  .fav-nav-count {
+    position: absolute;
+    top: -0.35rem;
+    right: -0.35rem;
+    font-size: 0.625rem;
+    font-weight: 700;
+    background: hsl(213, 94%, 47%);
+    color: white;
+    min-width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    border-radius: 9999px;
+    padding: 0 0.25rem;
+  }
+
+  .navbar-link-fav.has-favorites .fav-nav-icon {
+    fill: var(--accent, #7dd3fc);
   }
 
   @media (max-width: 768px) {
     .navbar-container {
       flex-direction: column;
       gap: 1rem;
+    }
+
+    .navbar-right {
+      flex-direction: column;
+      gap: 0.75rem;
     }
 
     .navbar-menu {

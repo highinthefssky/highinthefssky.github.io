@@ -40,6 +40,9 @@ jobs:
           REFRESH_EXISTING: "false"
         run: node scripts/fetch-videos.js
 
+      - name: Update playlists
+        run: node scripts/update-playlists.js
+
       - name: Check for changes
         id: check-changes
         run: |
@@ -48,12 +51,12 @@ jobs:
           ls -la src/content/videos/ || echo "Directory not found or empty"
 
           # Check if there are any new or modified files in the videos directory or stats.json
-          if git status --porcelain src/content/videos/ src/content/stats.json | grep -q .; then
-            echo "📝 Found changes in videos directory or stats"
-            git status --porcelain src/content/videos/ src/content/stats.json
+          if git status --porcelain src/content/videos/ src/content/stats.json src/content/playlists/ | grep -q .; then
+            echo "📝 Found changes in videos, stats, or playlists"
+            git status --porcelain src/content/videos/ src/content/stats.json src/content/playlists/
             echo "changed=true" >> $GITHUB_OUTPUT
           else
-            echo "📭 No changes in videos directory or stats"
+            echo "📭 No changes in videos, stats, or playlists"
             echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
@@ -64,9 +67,9 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           echo "📋 Files to be committed:"
-          git add src/content/videos/ src/content/stats.json
+          git add src/content/videos/ src/content/stats.json src/content/playlists/
           git status --porcelain
-          git commit -m "chore: update videos and channel stats from YouTube API"
+          git commit -m "chore: update videos, channel stats, and playlists from YouTube API"
           echo "🚀 Pulling remote changes and pushing..."
           git pull --rebase
           git push

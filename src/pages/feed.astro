@@ -95,12 +95,12 @@ const recentItems = allItems.slice(0, 10);
   .feed-header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    color: #e6efff;
+    color: var(--text-heading);
   }
 
   .feed-header p {
     font-size: 1.125rem;
-    color: #9fb6d5;
+    color: var(--text-muted);
     margin-bottom: 1.5rem;
   }
 
@@ -151,7 +151,7 @@ const recentItems = allItems.slice(0, 10);
     background: linear-gradient(
       to bottom,
       hsl(213, 94%, 47%),
-      #e5e7eb
+      var(--border-default)
     );
   }
 
@@ -195,7 +195,7 @@ const recentItems = allItems.slice(0, 10);
   .empty-state {
     text-align: center;
     padding: 4rem 1rem;
-    color: #6b7280;
+    color: var(--text-secondary);
   }
 
   @media (max-width: 768px) {

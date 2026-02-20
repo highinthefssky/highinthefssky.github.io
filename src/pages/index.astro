@@ -31,11 +31,18 @@ function formatSubscriberCount(count: number): string {
 
 const subscriberDisplay = formatSubscriberCount(youtubeSubscribers);
 
+// Use the latest video thumbnail as OG image for homepage
+const sortedVideos = [...allVideos].sort(
+  (a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime()
+);
+const heroImage = sortedVideos[0]?.data.thumbnail;
+
 ---
 
 <BaseLayout
   title="Home"
   description="Watch videos and join the community"
+  image={heroImage}
 >
   <div class="home-page">
     <section class="hero">
@@ -143,7 +150,7 @@ const subscriberDisplay = formatSubscriberCount(youtubeSubscribers);
 <style>
   .home-page {
     min-height: 100vh;
-    color: #e5e7eb;
+    color: var(--text-primary);
   }
 
   .hero {
@@ -172,7 +179,7 @@ const subscriberDisplay = formatSubscriberCount(youtubeSubscribers);
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-size: 0.85rem;
-    color: #7dd3fc;
+    color: var(--accent);
     margin-bottom: 0.75rem;
   }
 
@@ -186,7 +193,7 @@ const subscriberDisplay = formatSubscriberCount(youtubeSubscribers);
   .hero-subtitle {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: #cbd5e1;
+    color: var(--text-muted);
   }
 
   .hero-cta {
@@ -232,24 +239,24 @@ const subscriberDisplay = formatSubscriberCount(youtubeSubscribers);
   }
 
   .btn-secondary {
-    background: rgba(255, 255, 255, 0.05);
-    color: #e5e7eb;
-    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--text-primary);
+    border-color: var(--border-default);
   }
 
   .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.08);
     transform: translateY(-2px);
   }
 
   .btn-ghost {
     background: transparent;
-    color: #7dd3fc;
-    border-color: rgba(125, 211, 252, 0.4);
+    color: var(--accent);
+    border-color: var(--border-accent);
   }
 
   .btn-ghost:hover {
-    background: rgba(125, 211, 252, 0.08);
+    background: rgba(14, 165, 233, 0.08);
     transform: translateY(-2px);
   }
 
@@ -263,12 +270,12 @@ const subscriberDisplay = formatSubscriberCount(youtubeSubscribers);
   }
 
   .tile {
-    background: rgba(15, 23, 42, 0.7);
+    background: var(--bg-surface);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-subtle);
     border-radius: 1rem;
     padding: 1.25rem;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-card);
   }
 
   .tile-wide {
@@ -303,43 +310,43 @@ const subscriberDisplay = formatSubscriberCount(youtubeSubscribers);
   .section-header h2 {
     margin: 0;
     font-size: 1.5rem;
-    color: #e5e7eb;
+    color: var(--text-primary);
   }
 
   .section-header p {
-    color: #94a3b8;
+    color: var(--text-secondary);
     margin: 0;
   }
 
   .view-all {
-    color: #7dd3fc;
+    color: var(--accent);
     font-weight: 600;
   }
 
   .post-content h3 {
     margin: 0 0 0.4rem 0;
     font-size: 1.3rem;
-    color: #e5e7eb;
+    color: var(--text-primary);
   }
 
   .post-content h3 a {
-    color: #7dd3fc;
+    color: var(--accent);
   }
 
   .post-meta {
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-size: 0.9rem;
     margin: 0 0 0.75rem 0;
   }
 
   .post-excerpt {
-    color: #cbd5e1;
+    color: var(--text-muted);
     line-height: 1.6;
     margin-bottom: 0.75rem;
   }
 
   .read-more {
-    color: #38bdf8;
+    color: var(--accent);
     font-weight: 600;
   }
 
@@ -351,7 +358,7 @@ const subscriberDisplay = formatSubscriberCount(youtubeSubscribers);
   }
 
   .tile-post-link:hover {
-    border-color: #7dd3fc;
+    border-color: var(--accent);
     box-shadow: 0 10px 30px rgba(125, 211, 252, 0.15);
     transform: translateY(-2px);
   }
@@ -370,24 +377,24 @@ const subscriberDisplay = formatSubscriberCount(youtubeSubscribers);
     align-items: baseline;
     padding: 0.75rem 0.85rem;
     border-radius: 0.75rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(128, 128, 128, 0.08);
+    border: 1px solid var(--border-subtle);
   }
 
   .stat-label {
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-size: 0.95rem;
   }
 
   .stat-value {
     font-size: 1.35rem;
     font-weight: 700;
-    color: #e5e7eb;
+    color: var(--text-primary);
   }
 
   .tile-links h3 {
     margin: 0 0 0.5rem 0;
-    color: #e5e7eb;
+    color: var(--text-primary);
   }
 
   .link-grid {
@@ -400,26 +407,26 @@ const subscriberDisplay = formatSubscriberCount(youtubeSubscribers);
     display: block;
     padding: 0.75rem 1rem;
     border-radius: 0.75rem;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: #e5e7eb;
+    background: rgba(128, 128, 128, 0.08);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
     text-decoration: none;
     transition: all 0.2s ease;
   }
 
   .quick-link:hover {
-    border-color: rgba(56, 189, 248, 0.6);
-    color: #7dd3fc;
+    border-color: var(--accent);
+    color: var(--accent);
   }
 
   .tile-cta p {
-    color: #cbd5e1;
+    color: var(--text-muted);
     margin: 0 0 1rem 0;
   }
 
   .cta-subtext {
     font-size: 0.95rem;
-    color: #94a3b8;
+    color: var(--text-secondary);
   }
 
   @media (max-width: 1024px) {
