@@ -1,0 +1,28 @@
+{
+  "videoId": "tEDqiZekvCY",
+  "title": "Finally! FIX Your WINWING Ursa Minor Setup | MSFS 2024",
+  "description": "Finally! A WINWING Ursa Minor setup guide that actually works for MSFS 2024. Stop fighting buggy profiles and fix your controls manually for the A320 and Cessna 172. The official SimAppPro profiles can be buggy, but in this video, I’m showing you the secret to a rock-solid configuration that won't wipe out your settings.\n\nWe go beyond the basics. While most tutorials just tell you to download a profile and hope for the best, we dive into the manual configuration required for both General Aviation and Airliners. You'll learn the crucial difference between General Controls (GC) and Airplane Controls (AC) in MSFS 2024 and why the software often struggles to push both simultaneously.\n\nIn this comprehensive tutorial, we cover:\n- Firmware Safety: How to correctly update both the Base and the Grip to version 1.00.\n- The SimAppPro Secret: How to navigate the \"Key Binding\" cloud and tips to handle software bugs.\n- The Manual Fix: Step-by-step mapping for the Z-axis (Rudder), X/Y Axis, and the Throttle Slider.\n- Airliner Mapping: Setting up Airbus A320 Reverse Thrust and Autopilot master switches.\n- Vibration Mode: How to enable the dynamic haptic feedback before you launch the sim.\n\nTIMESTAMP CHAPTERS:\n00:00 - The Ursa Minor setup challenge\n00:52 - SimAppPro overview: updating the firmware, test and joystick profiles\n09:40 - SimAppPro tips & tricks\n12:15 - General aviation - aircrafts - creating the profiles manually\n30:55 - Airbus A320 - creating the profiles manually\n45:57 - SimAppPro - configure dynamic vibration\n46:57 - SimAppPro - exporting profiles\n49:43 - MSFS 2024 - exporting profiles\n50:24 - End\n\n🔔 Subscribe\nIf you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP\n\n🔗 Other related links\n📥 Download my custom profiles: https://highintheflightsimsky.nl/controllers/\nTutorials playlist: https://bit.ly/3l6fRdL\n\nWebsite: https://highintheflightsimsky.nl\nJoin our Discord: https://discord.gg/J3tZyhceUM\n\n#winctrl #winwingsim #msfs2024 #msfs2020",
+  "thumbnail": "https://i.ytimg.com/vi/tEDqiZekvCY/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/tEDqiZekvCY/mqdefault.jpg",
+  "publishedAt": "2026-02-21T09:01:11.000Z",
+  "duration": 3045,
+  "viewCount": 53,
+  "tags": [
+    "WINWING Ursa Minor",
+    "MSFS 2024 controls",
+    "SimAppPro tutorial",
+    "Ursa Minor firmware fix",
+    "Microsoft Flight Simulator 2024 joystick",
+    "WINWING setup guide",
+    "flight sim calibration 2026",
+    "Ursa Minor A320 setup",
+    "Ursa Minor Cessna 172",
+    "joystick profiles MSFS 2024",
+    "WINWING Ursa Minor 32",
+    "flight sim haptics",
+    "SimAppPro bugs",
+    "MSFS 2024 keybindings",
+    "Ursa Minor manual config."
+  ],
+  "featured": false
+}
