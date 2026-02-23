@@ -1,7 +1,7 @@
 ---
 title: "🛫 Did You Know? 🛫"
 description: "🛫 Did You Know? 🛫   Did you know that Microsoft Flight Simulator 2024 now includes a Career Mode where you can pursue various aviation careers, from Medevac to"
-publishedAt: 2025-02-22
+publishedAt: 2025-02-23
 tags: ["community", "youtube"]
 draft: false
 ---
