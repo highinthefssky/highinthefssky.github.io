@@ -23,7 +23,7 @@ What are YOU most excited to see tested in this new build? Let us know in the co
 #MSFS2024 #SimUpdate5 #FlightSimulator #LiveStream #BetaTest #Aviation #Gaming #Community
 
 Original post: https://www.youtube.com/post/UgkxHApMmPG4vs2eXaoBpJnJHNGb7a8G3C4P
-Likes: 0 | Comments: 0
+Likes: 1 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/WZvmC0X1s26Woy46Ojq8E8LgVn-a_P6hx-paQtWfO28r04TihXRLps10olFL2BAwHV2gOjJ_v3beYg=s1280)
