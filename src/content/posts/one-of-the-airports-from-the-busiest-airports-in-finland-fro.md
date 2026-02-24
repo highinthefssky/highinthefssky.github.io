@@ -1,7 +1,7 @@
 ---
 title: "One of the airports from the busiest airports in Finland from high in the sky"
 description: "One of the airports from the busiest airports in Finland from high in the sky"
-publishedAt: 2022-02-22
+publishedAt: 2022-02-25
 tags: ["community", "youtube"]
 draft: false
 ---
