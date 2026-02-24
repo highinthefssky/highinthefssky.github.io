@@ -19,6 +19,9 @@ import ThemeToggle from './ThemeToggle.astro';
         <a href="/playlists" class="navbar-link" data-link="/playlists">Playlists</a>
       </li>
       <li>
+        <a href="/tracks" class="navbar-link" data-link="/tracks">Tracks <span class="beta-badge">Beta</span></a>
+      </li>
+      <li>
         <a href="/controllers" class="navbar-link" data-link="/controllers">Controllers</a>
       </li>
       <li>
@@ -138,6 +141,21 @@ import ThemeToggle from './ThemeToggle.astro';
     display: inline-block;
     padding: 0.35rem 0.5rem;
     border-radius: 0.5rem;
+  }
+
+  .beta-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.35rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 9999px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #0b1e33;
+    background: var(--accent);
+    vertical-align: middle;
   }
 
   .navbar-link:hover {

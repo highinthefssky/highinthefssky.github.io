@@ -1,0 +1,52 @@
+{
+  "slug": "ifr-pilot-progression",
+  "title": "IFR Pilot Progression (4 Weeks)",
+  "description": "A structured month-long path to build cockpit setup discipline, descent planning, EFB workflow, and practical TBM IFR systems handling.",
+  "level": "beginner",
+  "lessons": [
+    {
+      "week": 1,
+      "title": "Cold & Dark Foundations",
+      "objective": "Set up your cockpit correctly and build reliable startup discipline.",
+      "videoId": "fdYyTnh5WFk",
+      "playlistSlug": "msfs-how-to-guides",
+      "postSlug": "episode-3-c-is-for-cold-and-dark",
+      "controllerId": "t-16000m-msfs-custom-airplanes-controls",
+      "aircraft": "custom",
+      "goal": "setup"
+    },
+    {
+      "week": 2,
+      "title": "Descent Planning Basics",
+      "objective": "Learn 3:1 descent planning and speed/energy management before approach.",
+      "videoId": "VCCAnKLWZG4",
+      "playlistSlug": "msfs-a-to-z",
+      "postSlug": "episode-4-d-is-for-descent-planning",
+      "controllerId": "velocityone-flight-yoke-a321-general-controls",
+      "aircraft": "airliner",
+      "goal": "navigation"
+    },
+    {
+      "week": 3,
+      "title": "EFB Workflow and Flight Prep",
+      "objective": "Use EFB tools for planning, performance setup, and better cockpit flow.",
+      "videoId": "k4RLAoBikec",
+      "playlistSlug": "msfs-a-to-z",
+      "postSlug": "episode-5-e-is-for-efb",
+      "controllerId": "velocityone-quad-a321-general-controls",
+      "aircraft": "airliner",
+      "goal": "airliner-ops"
+    },
+    {
+      "week": 4,
+      "title": "TBM Weather Radar + VNAV",
+      "objective": "Apply IFR workflow in a fast turboprop with radar and TOD management.",
+      "videoId": "BY-KcTjK6M4",
+      "playlistSlug": "getting-started-tbm-930",
+      "postSlug": "dont-fly-blind-master-tbm-930-weather-radar-vnav-drops-today",
+      "controllerId": "velocityone-flight-quad-tbm930-airplanes-controls",
+      "aircraft": "turboprop",
+      "goal": "navigation"
+    }
+  ]
+}

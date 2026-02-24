@@ -63,10 +63,35 @@ const playlistCollection = defineCollection({
   }),
 });
 
+// Learning tracks collection schema
+const trackCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    slug: z.string().describe('URL-friendly slug'),
+    title: z.string().describe('Track title'),
+    description: z.string().describe('Short overview of the learning track'),
+    level: z.enum(['beginner', 'intermediate', 'advanced']).describe('Target learner level'),
+    lessons: z.array(
+      z.object({
+        week: z.number().int().positive().describe('Week number in the track'),
+        title: z.string().describe('Lesson title'),
+        objective: z.string().describe('What the learner will achieve this week'),
+        videoId: z.string().describe('Primary curated lesson video ID'),
+        playlistSlug: z.string().describe('Referenced playlist slug'),
+        postSlug: z.string().describe('Referenced community post slug'),
+        controllerId: z.string().describe('Referenced controller config entry id (without .json)'),
+        aircraft: z.enum(['airliner', 'general', 'turboprop', 'multi-engine', 'custom']).optional(),
+        goal: z.enum(['setup', 'airliner-ops', 'navigation', 'landing', 'sightseeing']).optional(),
+      })
+    ).min(1).describe('Ordered multi-week lessons'),
+  }),
+});
+
 // Export collections
 export const collections = {
   videos: videoCollection,
   posts: postCollection,
   controllers: controllerCollection,
   playlists: playlistCollection,
+  tracks: trackCollection,
 };

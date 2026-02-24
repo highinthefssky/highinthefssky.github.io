@@ -1,0 +1,450 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const tracks = await getCollection('tracks');
+  const playlists = await getCollection('playlists');
+  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  const controllers = await getCollection('controllers');
+  const videos = await getCollection('videos');
+
+  const playlistBySlug = new Map(playlists.map((playlist) => [playlist.data.slug, playlist]));
+  const postBySlug = new Map(posts.map((post) => [post.slug, post]));
+  const controllerById = new Map(controllers.map((controller) => [controller.id, controller]));
+  const videoById = new Map(videos.map((video) => [video.data.videoId, video]));
+
+  return tracks.map((track) => {
+    const lessons = track.data.lessons
+      .sort((a, b) => a.week - b.week)
+      .map((lesson) => {
+        const playlist = playlistBySlug.get(lesson.playlistSlug) || null;
+        const post = postBySlug.get(lesson.postSlug) || null;
+        const controller = controllerById.get(lesson.controllerId) || null;
+        const video = videoById.get(lesson.videoId) || null;
+
+        const wizardParams = new URLSearchParams();
+        if (controller) {
+          wizardParams.set('controller', controller.data.controller);
+        }
+        if (lesson.aircraft) wizardParams.set('aircraft', lesson.aircraft);
+        if (lesson.goal) wizardParams.set('goal', lesson.goal);
+
+        const wizardLink = wizardParams.toString() ? `/controllers/wizard?${wizardParams.toString()}` : '/controllers/wizard';
+
+        return {
+          ...lesson,
+          playlist,
+          post,
+          controller,
+          video,
+          wizardLink,
+        };
+      });
+
+    return {
+      params: { slug: track.data.slug },
+      props: {
+        track: track.data,
+        lessons,
+      },
+    };
+  });
+}
+
+const { track, lessons } = Astro.props;
+
+function levelLabel(level: string): string {
+  if (level === 'beginner') return 'Beginner';
+  if (level === 'intermediate') return 'Intermediate';
+  return 'Advanced';
+}
+---
+
+<BaseLayout title={track.title} description={track.description}>
+  <div class="track-detail-page" data-track-slug={track.slug}>
+    <header class="track-detail-header">
+      <a href="/tracks" class="back-link">← Back to tracks</a>
+      <h1>{track.title} <span class="beta-badge">Beta</span></h1>
+      <p>{track.description}</p>
+      <div class="track-summary">
+        <span>{levelLabel(track.level)}</span>
+        <span>{lessons.length} lessons</span>
+      </div>
+
+      <div class="track-progress" id="track-progress">
+        <p class="track-progress-text" id="track-progress-text">0/{lessons.length} lessons completed</p>
+        <div class="track-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax={lessons.length} aria-valuenow="0">
+          <span id="track-progress-fill" class="track-progress-fill"></span>
+        </div>
+        <div class="track-progress-actions">
+          <button id="track-reset-progress" class="track-reset-btn" type="button">Reset progress</button>
+          <span class="track-progress-note">Progress is stored only in your browser on this device.</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="lesson-list">
+      {lessons.map((lesson) => (
+        <article class="lesson-card" data-lesson-id={`${lesson.week}-${lesson.videoId}`}>
+          <label class="lesson-check">
+            <input type="checkbox" class="lesson-checkbox" data-lesson-id={`${lesson.week}-${lesson.videoId}`} />
+            <span>Completed</span>
+          </label>
+          <div class="lesson-week">Week {lesson.week}</div>
+          <h2>{lesson.title}</h2>
+          <p class="lesson-objective">{lesson.objective}</p>
+
+          <div class="lesson-links">
+            {lesson.video ? (
+              <a href={`/videos/${lesson.video.data.videoId}`} class="lesson-link lesson-link-video">▶ Lesson video: {lesson.video.data.title}</a>
+            ) : (
+              <span class="lesson-link disabled">▶ Lesson video unavailable</span>
+            )}
+
+            {lesson.playlist ? (
+              <a href={`/playlists/${lesson.playlistSlug}`} class="lesson-link">🎬 Playlist: {lesson.playlist.data.title}</a>
+            ) : (
+              <span class="lesson-link disabled">🎬 Playlist unavailable</span>
+            )}
+
+            {lesson.post ? (
+              <a href={`/posts/${lesson.postSlug}`} class="lesson-link">📝 Community post</a>
+            ) : (
+              <span class="lesson-link disabled">📝 Post unavailable</span>
+            )}
+
+            {lesson.controller ? (
+              <a href={lesson.wizardLink} class="lesson-link lesson-link-primary">🎮 Controller preset in Wizard</a>
+            ) : (
+              <span class="lesson-link disabled">🎮 Controller preset unavailable</span>
+            )}
+          </div>
+        </article>
+      ))}
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .track-detail-page {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+  }
+
+  .track-detail-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .track-detail-header h1 {
+    margin: 0.6rem 0 0.5rem;
+    font-size: 2.2rem;
+    color: var(--text-heading);
+  }
+
+  .beta-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+    padding: 0.15rem 0.55rem;
+    border-radius: 9999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #0b1e33;
+    background: var(--accent);
+    vertical-align: middle;
+  }
+
+  .track-detail-header p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .track-summary {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.85rem;
+    flex-wrap: wrap;
+  }
+
+  .track-summary span {
+    display: inline-flex;
+    border: 1px solid var(--border-default);
+    border-radius: 999px;
+    padding: 0.2rem 0.7rem;
+    color: var(--text-muted);
+    background: var(--bg-input);
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+
+  .track-progress {
+    margin-top: 0.85rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: 0.75rem;
+    padding: 0.8rem;
+  }
+
+  .track-progress-text {
+    margin: 0;
+    color: var(--text-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .track-progress-bar {
+    margin-top: 0.5rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    background: var(--bg-input);
+    border: 1px solid var(--border-default);
+    overflow: hidden;
+  }
+
+  .track-progress-fill {
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #38bdf8 0%, #0ea5e9 100%);
+    transition: width 0.2s ease;
+  }
+
+  .track-progress-actions {
+    margin-top: 0.55rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .track-reset-btn {
+    border: 1px solid var(--border-input);
+    background: var(--bg-input);
+    color: var(--text-primary);
+    border-radius: 0.45rem;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .track-reset-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .track-progress-note {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+
+  .lesson-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .lesson-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-accent);
+    border-radius: 0.85rem;
+    padding: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .lesson-card.completed {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.25) inset;
+  }
+
+  .lesson-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+
+  .lesson-checkbox {
+    width: 1rem;
+    height: 1rem;
+    accent-color: hsl(213, 94%, 47%);
+  }
+
+  .lesson-week {
+    display: inline-flex;
+    border-radius: 999px;
+    padding: 0.2rem 0.65rem;
+    background: rgba(125, 211, 252, 0.18);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .lesson-card h2 {
+    margin: 0;
+    color: var(--text-heading);
+    font-size: 1.2rem;
+  }
+
+  .lesson-objective {
+    margin: 0.55rem 0 0;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .lesson-links {
+    display: grid;
+    gap: 0.45rem;
+    margin-top: 0.85rem;
+  }
+
+  .lesson-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid var(--border-default);
+    border-radius: 0.55rem;
+    padding: 0.5rem 0.75rem;
+    color: var(--text-primary);
+    background: var(--bg-input);
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+
+  .lesson-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .lesson-link-primary {
+    color: white;
+    background: hsl(213, 94%, 47%);
+    border-color: hsl(213, 94%, 47%);
+  }
+
+  .lesson-link-video {
+    border-color: rgba(125, 211, 252, 0.45);
+    background: rgba(125, 211, 252, 0.12);
+    color: var(--text-heading);
+  }
+
+  .lesson-link-video:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .lesson-link-primary:hover {
+    color: white;
+    background: hsl(213, 94%, 37%);
+    border-color: hsl(213, 94%, 37%);
+  }
+
+  .lesson-link.disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  @media (max-width: 640px) {
+    .track-progress-actions {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+
+<script>
+  const trackRoot = document.querySelector<HTMLElement>('.track-detail-page');
+  const progressText = document.getElementById('track-progress-text');
+  const progressFill = document.getElementById('track-progress-fill');
+  const progressBar = document.querySelector<HTMLElement>('.track-progress-bar');
+  const resetButton = document.getElementById('track-reset-progress');
+  const checkboxes = Array.from(document.querySelectorAll<HTMLInputElement>('.lesson-checkbox'));
+  const lessonCards = Array.from(document.querySelectorAll<HTMLElement>('.lesson-card'));
+
+  if (trackRoot && progressText && progressFill && progressBar && checkboxes.length > 0) {
+    const progressTextEl = progressText;
+    const progressFillEl = progressFill;
+    const progressBarEl = progressBar;
+    const trackSlug = trackRoot.getAttribute('data-track-slug') || 'unknown-track';
+    const storageKey = `track-progress:${trackSlug}`;
+
+    function getSavedIds(): string[] {
+      try {
+        const raw = localStorage.getItem(storageKey);
+        if (!raw) return [];
+        const parsed = JSON.parse(raw);
+        return Array.isArray(parsed.completedLessons) ? parsed.completedLessons : [];
+      } catch {
+        return [];
+      }
+    }
+
+    function saveIds(ids: string[]): void {
+      localStorage.setItem(storageKey, JSON.stringify({
+        completedLessons: ids,
+        updatedAt: new Date().toISOString(),
+      }));
+    }
+
+    function renderProgress() {
+      const savedIds = getSavedIds();
+      let completedCount = 0;
+
+      checkboxes.forEach((checkbox) => {
+        const lessonId = checkbox.getAttribute('data-lesson-id') || '';
+        const isCompleted = savedIds.includes(lessonId);
+        checkbox.checked = isCompleted;
+
+        const card = lessonCards.find((item) => item.getAttribute('data-lesson-id') === lessonId);
+        if (card) card.classList.toggle('completed', isCompleted);
+
+        if (isCompleted) completedCount += 1;
+      });
+
+      const total = checkboxes.length;
+      const percent = total > 0 ? Math.round((completedCount / total) * 100) : 0;
+      progressTextEl.textContent = `${completedCount}/${total} lessons completed`;
+      progressFillEl.style.width = `${percent}%`;
+      progressBarEl.setAttribute('aria-valuenow', String(completedCount));
+    }
+
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener('change', () => {
+        const current = new Set(getSavedIds());
+        const lessonId = checkbox.getAttribute('data-lesson-id') || '';
+
+        if (checkbox.checked) {
+          current.add(lessonId);
+        } else {
+          current.delete(lessonId);
+        }
+
+        saveIds(Array.from(current));
+        renderProgress();
+      });
+    });
+
+    resetButton?.addEventListener('click', () => {
+      localStorage.removeItem(storageKey);
+      renderProgress();
+    });
+
+    renderProgress();
+  }
+</script>

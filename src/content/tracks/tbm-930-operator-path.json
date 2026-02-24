@@ -1,0 +1,52 @@
+{
+  "slug": "tbm-930-operator-path",
+  "title": "TBM 930 Operator Path (4 Weeks)",
+  "description": "A structured TBM 930 progression from startup and power management to weather-aware IFR operations and precision landing control.",
+  "level": "intermediate",
+  "lessons": [
+    {
+      "week": 1,
+      "title": "Cold & Dark to Taxi",
+      "objective": "Build a reliable startup and pre-taxi flow in the TBM 930 with correct cockpit preparation.",
+      "videoId": "sTrHfcCJRMo",
+      "playlistSlug": "getting-started-tbm-930",
+      "postSlug": "the-tbm-930-rocket-drops-today-at-1700-utc1",
+      "controllerId": "velocityone-flight-quad-tbm930-airplanes-controls",
+      "aircraft": "turboprop",
+      "goal": "setup"
+    },
+    {
+      "week": 2,
+      "title": "Takeoff + Climb Energy Management",
+      "objective": "Control torque, climb profile, and automation usage to keep the aircraft stable and efficient.",
+      "videoId": "47r3uv3fwV0",
+      "playlistSlug": "getting-started-tbm-930",
+      "postSlug": "the-tbm-930-rocket-drops-today-at-1700-utc1",
+      "controllerId": "t-16000m-msfs-custom-airplanes-controls",
+      "aircraft": "turboprop",
+      "goal": "navigation"
+    },
+    {
+      "week": 3,
+      "title": "Weather Radar + VNAV Control",
+      "objective": "Use radar tilt/gain and VNAV planning to stay ahead of weather and descent constraints.",
+      "videoId": "BY-KcTjK6M4",
+      "playlistSlug": "getting-started-tbm-930",
+      "postSlug": "dont-fly-blind-master-tbm-930-weather-radar-vnav-drops-today",
+      "controllerId": "velocityone-flight-quad-tbm930-airplanes-controls",
+      "aircraft": "turboprop",
+      "goal": "navigation"
+    },
+    {
+      "week": 4,
+      "title": "Approach + Short-Field Precision",
+      "objective": "Refine approach speed control, touchdown timing, and rollout braking for consistent landings.",
+      "videoId": "MCbT-90kDl8",
+      "playlistSlug": "getting-started-tbm-930",
+      "postSlug": "stop-floating-the-tbm-930-the-series-finale-drops-today-at-1",
+      "controllerId": "velocityone-flight-quad-tbm930-airplanes-controls",
+      "aircraft": "turboprop",
+      "goal": "landing"
+    }
+  ]
+}
