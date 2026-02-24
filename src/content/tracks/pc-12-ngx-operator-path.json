@@ -1,0 +1,41 @@
+{
+  "slug": "pc-12-ngx-operator-path",
+  "title": "PC-12 NGX Operator Path (3 Weeks)",
+  "description": "A focused operator track for the Pilatus PC-12 NGX covering systems orientation, startup discipline, and practical IFR workflow.",
+  "level": "intermediate",
+  "lessons": [
+    {
+      "week": 1,
+      "title": "Airframe + PT6 Systems Orientation",
+      "objective": "Understand the PC-12 NGX platform, PT6 engine fundamentals, and cockpit layout before engine start.",
+      "videoId": "Fxh-uV-nQJE",
+      "playlistSlug": "getting-started-pc-12-ngx",
+      "postSlug": "new-pc12-ngx-episode-drops-later-tonight",
+      "controllerId": "t-16000m-t-16000m-twcs-airplanes-controls",
+      "aircraft": "turboprop",
+      "goal": "setup"
+    },
+    {
+      "week": 2,
+      "title": "Primus Apex + Startup Workflow",
+      "objective": "Go from cold & dark to a stable pre-taxi state with repeatable flows and avionics setup.",
+      "videoId": "EGYpmUKzb3g",
+      "playlistSlug": "getting-started-pc-12-ngx",
+      "postSlug": "episode-3-c-is-for-cold-and-dark",
+      "controllerId": "velocityone-flight-quad-custom-msfs-airplanes-controls",
+      "aircraft": "turboprop",
+      "goal": "setup"
+    },
+    {
+      "week": 3,
+      "title": "IFR Planning + Departure Execution",
+      "objective": "Apply route setup, automation prep, and departure management in a practical IFR mission.",
+      "videoId": "xKk2oGIYOZ0",
+      "playlistSlug": "getting-started-pc-12-ngx",
+      "postSlug": "episode-5-e-is-for-efb",
+      "controllerId": "velocityone-flight-quad-custom-msfs-2-engines-airplanes-controls",
+      "aircraft": "turboprop",
+      "goal": "navigation"
+    }
+  ]
+}

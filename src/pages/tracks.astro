@@ -1,0 +1,138 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const tracks = await getCollection('tracks');
+const sortedTracks = [...tracks].sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+function levelLabel(level: string): string {
+  if (level === 'beginner') return 'Beginner';
+  if (level === 'intermediate') return 'Intermediate';
+  return 'Advanced';
+}
+---
+
+<BaseLayout title="Learning Tracks" description="Curated multi-week tracks combining playlists, posts, and controller presets">
+  <div class="tracks-page">
+    <header class="tracks-header">
+      <h1>Learning Tracks <span class="beta-badge">Beta</span></h1>
+      <p>Curated multi-week paths that combine playlist content, community posts, and controller presets per lesson.</p>
+    </header>
+
+    <section class="tracks-grid">
+      {sortedTracks.map((track) => (
+        <a href={`/tracks/${track.data.slug}`} class="track-card">
+          <div class="track-meta">
+            <span class="track-level">{levelLabel(track.data.level)}</span>
+            <span class="track-weeks">{track.data.lessons.length} weeks</span>
+          </div>
+          <h2>{track.data.title}</h2>
+          <p>{track.data.description}</p>
+          <span class="track-cta">Open track →</span>
+        </a>
+      ))}
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .tracks-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+  }
+
+  .tracks-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .tracks-header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-heading);
+  }
+
+  .beta-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+    padding: 0.15rem 0.55rem;
+    border-radius: 9999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #0b1e33;
+    background: var(--accent);
+    vertical-align: middle;
+  }
+
+  .tracks-header p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+  }
+
+  .track-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-accent);
+    border-radius: 0.85rem;
+    padding: 1rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .track-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+  }
+
+  .track-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .track-level,
+  .track-weeks {
+    font-size: 0.78rem;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 0.2rem 0.65rem;
+    border: 1px solid var(--border-default);
+    color: var(--text-muted);
+    background: var(--bg-input);
+  }
+
+  .track-card h2 {
+    margin: 0;
+    color: var(--text-heading);
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+
+  .track-card p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .track-cta {
+    margin-top: auto;
+    color: var(--accent);
+    font-weight: 700;
+  }
+</style>

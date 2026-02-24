@@ -1,0 +1,41 @@
+{
+  "slug": "turboprop-onboarding",
+  "title": "Turboprop Onboarding (3 Weeks)",
+  "description": "A practical track for pilots moving into complex turboprops, from systems familiarization to operational procedures.",
+  "level": "intermediate",
+  "lessons": [
+    {
+      "week": 1,
+      "title": "PC-12 NGX Cockpit Orientation",
+      "objective": "Understand avionics layout, major systems, and cockpit flow from cold start.",
+      "videoId": "Fxh-uV-nQJE",
+      "playlistSlug": "getting-started-pc-12-ngx",
+      "postSlug": "new-pc12-ngx-episode-drops-later-tonight",
+      "controllerId": "t-16000m-t-16000m-twcs-airplanes-controls",
+      "aircraft": "turboprop",
+      "goal": "setup"
+    },
+    {
+      "week": 2,
+      "title": "YS-11 Startup and Handling",
+      "objective": "Practice startup discipline and early handling characteristics in a classic turboprop.",
+      "videoId": "6DHOYKahHRw",
+      "playlistSlug": "getting-started-ys-11",
+      "postSlug": "episode-3-c-is-for-cold-and-dark",
+      "controllerId": "twcs-throttle-t-16000m-twcs-airplanes-controls",
+      "aircraft": "turboprop",
+      "goal": "navigation"
+    },
+    {
+      "week": 3,
+      "title": "TBM IFR Systems Application",
+      "objective": "Consolidate weather radar and VNAV techniques in real workflow scenarios.",
+      "videoId": "BY-KcTjK6M4",
+      "playlistSlug": "getting-started-tbm-930",
+      "postSlug": "dont-fly-blind-master-tbm-930-weather-radar-vnav-drops-today",
+      "controllerId": "velocityone-flight-quad-tbm930-airplanes-controls",
+      "aircraft": "turboprop",
+      "goal": "navigation"
+    }
+  ]
+}
