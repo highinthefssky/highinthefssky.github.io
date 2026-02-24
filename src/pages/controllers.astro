@@ -6,7 +6,7 @@ import KeyboardShortcuts from '../components/KeyboardShortcuts.astro';
 import stats from '../content/stats.json';
 
 const allConfigs = await getCollection('controllers');
-const totalControllers = stats.totalControllers ?? allConfigs.length;
+const totalControllers = (stats as { totalControllers?: number }).totalControllers ?? allConfigs.length;
 const sortedConfigs = allConfigs.sort((a, b) =>
   a.data.controller.localeCompare(b.data.controller)
 );
@@ -37,7 +37,19 @@ const allControllers = Array.from(
           📦 View on GitHub
         </a>
         <span class="separator">•</span>
+        <a href="/controllers/wizard" class="github-link">🧭 Match Wizard</a>
+        <span class="separator">•</span>
         <span class="info-text">Compatible with MSFS 2024</span>
+      </div>
+
+      <div class="wizard-entry">
+        <h2>Need help picking the right setup?</h2>
+        <p>Use the 3-step Controller Match Wizard to get your best config and related training videos.</p>
+        <div class="wizard-entry-links">
+          <a href="/controllers/wizard" class="wizard-btn wizard-btn-primary">Open Match Wizard</a>
+          <a href="/controllers/wizard?aircraft=airliner&goal=airliner-ops" class="wizard-btn">Airliner preset</a>
+          <a href="/controllers/wizard?aircraft=general&goal=navigation" class="wizard-btn">GA + IFR preset</a>
+        </div>
       </div>
     </div>
 
@@ -183,6 +195,66 @@ const allControllers = Array.from(
 
   .info-text {
     color: var(--text-muted);
+  }
+
+  .wizard-entry {
+    margin-top: 1.25rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: 0.75rem;
+    padding: 1rem;
+  }
+
+  .wizard-entry h2 {
+    margin: 0 0 0.35rem;
+    font-size: 1.2rem;
+    color: var(--text-heading);
+  }
+
+  .wizard-entry p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+
+  .wizard-entry-links {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.85rem;
+  }
+
+  .wizard-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0.6rem 0.9rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-input);
+    background: var(--bg-input);
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+
+  .wizard-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .wizard-btn-primary {
+    background: hsl(213, 94%, 47%);
+    color: white;
+    border-color: hsl(213, 94%, 47%);
+  }
+
+  .wizard-btn-primary:hover {
+    background: hsl(213, 94%, 37%);
+    border-color: hsl(213, 94%, 37%);
+    color: white;
   }
 
   .search-controls {
@@ -438,6 +510,14 @@ const allControllers = Array.from(
 
     .search-controls {
       padding: 1.5rem;
+    }
+
+    .wizard-entry-links {
+      align-items: stretch;
+    }
+
+    .wizard-btn {
+      width: 100%;
     }
 
     .controls-footer {
