@@ -19,6 +19,7 @@ const totalPosts = publishedPosts.length;
 import stats from '../content/stats.json';
 const youtubeSubscribers = stats.youtubeSubscribers;
 const totalVideos = stats.totalVideos;
+const totalControllers = (stats as { totalControllers?: number }).totalControllers ?? 0;
 
 function formatSubscriberCount(count: number): string {
   if (count >= 1000000) {
@@ -108,7 +109,7 @@ const heroImage = sortedVideos[0]?.data.thumbnail;
           </div>
           <div class="stat">
             <span class="stat-label">Controller Configs</span>
-            <span class="stat-value">{stats.totalControllers ?? 0}</span>
+            <span class="stat-value">{totalControllers}</span>
           </div>
           <div class="stat">
             <span class="stat-label">Latest Sync</span>
@@ -126,8 +127,19 @@ const heroImage = sortedVideos[0]?.data.thumbnail;
           <div class="link-grid">
             <a href="/videos" class="quick-link">All Videos</a>
             <a href="/controllers" class="quick-link">Controllers</a>
+            <a href="/controllers/wizard" class="quick-link">Match Wizard</a>
             <a href="/posts" class="quick-link">Community</a>
             <a href="/feed" class="quick-link">Feed</a>
+          </div>
+        </div>
+
+        <div class="tile tile-wizard">
+          <h3>Find Your Best Setup</h3>
+          <p>Use the 3-step Controller Match Wizard to get the best config and related training videos.</p>
+          <div class="wizard-links">
+            <a href="/controllers/wizard" class="btn btn-primary">Open Wizard</a>
+            <a href="/controllers/wizard?aircraft=airliner&goal=airliner-ops" class="btn btn-ghost">Airliner Flow</a>
+            <a href="/controllers/wizard?aircraft=general&goal=navigation" class="btn btn-ghost">GA + IFR Flow</a>
           </div>
         </div>
 
@@ -288,6 +300,7 @@ const heroImage = sortedVideos[0]?.data.thumbnail;
 
   .tile-post,
   .tile-links,
+  .tile-wizard,
   .tile-stats,
   .tile-cta {
     display: flex;
@@ -422,6 +435,23 @@ const heroImage = sortedVideos[0]?.data.thumbnail;
   .tile-cta p {
     color: var(--text-muted);
     margin: 0 0 1rem 0;
+  }
+
+  .tile-wizard p {
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .wizard-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .wizard-links .btn {
+    padding: 0.65rem 1rem;
+    font-size: 0.92rem;
   }
 
   .cta-subtext {

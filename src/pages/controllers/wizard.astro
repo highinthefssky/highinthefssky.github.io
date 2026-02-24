@@ -1,0 +1,698 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const allConfigs = await getCollection('controllers');
+const allVideos = await getCollection('videos');
+
+const uniqueControllers = Array.from(
+  new Set(allConfigs.map((config) => config.data.controller))
+).sort((a, b) => a.localeCompare(b));
+
+const configsForWizard = allConfigs.map((config) => ({
+  filename: config.data.filename,
+  controller: config.data.controller,
+  settingsType: config.data.settingsType,
+  aircraft: config.data.aircraft || '',
+  tags: config.data.tags,
+  description: config.data.description,
+  downloadUrl: config.data.downloadUrl,
+}));
+
+const videosForWizard = [...allVideos]
+  .sort(
+    (a, b) =>
+      new Date(b.data.publishedAt).getTime() -
+      new Date(a.data.publishedAt).getTime()
+  )
+  .slice(0, 700)
+  .map((video) => ({
+    videoId: video.data.videoId,
+    title: video.data.title,
+    description: video.data.description.slice(0, 500),
+    thumbnail: video.data.thumbnail,
+    publishedAt: new Date(video.data.publishedAt).toISOString(),
+    tags: video.data.tags,
+  }));
+---
+
+<BaseLayout
+  title="Controller Match Wizard"
+  description="Find the best controller config and related videos in 3 quick steps"
+>
+  <div class="wizard-page">
+    <header class="wizard-header">
+      <h1>Controller Match Wizard</h1>
+      <p>Choose your controller, aircraft type, and learning goal to get your best config + videos.</p>
+      <div class="header-links">
+        <a href="/controllers" class="btn btn-secondary">Browse all configs</a>
+        <a href="/videos" class="btn btn-secondary">Browse all videos</a>
+      </div>
+    </header>
+
+    <section class="wizard-panel" aria-label="Wizard steps">
+      <div class="step-grid">
+        <div class="step-card">
+          <span class="step-number">1</span>
+          <h2>Controller</h2>
+          <p>Select your hardware profile</p>
+          <select id="wizard-controller" class="wizard-select">
+            <option value="">Choose controller...</option>
+            {uniqueControllers.map((controller) => (
+              <option value={controller}>{controller}</option>
+            ))}
+          </select>
+        </div>
+
+        <div class="step-card" id="step-aircraft" aria-disabled="true">
+          <span class="step-number">2</span>
+          <h2>Aircraft Type</h2>
+          <p>Choose your flying profile</p>
+          <div class="chip-grid" id="aircraft-chips">
+            <button type="button" class="choice-chip" data-value="airliner" disabled>Airliner</button>
+            <button type="button" class="choice-chip" data-value="general" disabled>General Aviation</button>
+            <button type="button" class="choice-chip" data-value="turboprop" disabled>Turboprop</button>
+            <button type="button" class="choice-chip" data-value="multi-engine" disabled>Multi-engine</button>
+            <button type="button" class="choice-chip" data-value="custom" disabled>Custom / Generic</button>
+          </div>
+        </div>
+
+        <div class="step-card" id="step-goal" aria-disabled="true">
+          <span class="step-number">3</span>
+          <h2>Goal</h2>
+          <p>What do you want to improve?</p>
+          <div class="chip-grid" id="goal-chips">
+            <button type="button" class="choice-chip" data-value="setup" disabled>Quick setup</button>
+            <button type="button" class="choice-chip" data-value="airliner-ops" disabled>Airliner ops</button>
+            <button type="button" class="choice-chip" data-value="navigation" disabled>Navigation / IFR</button>
+            <button type="button" class="choice-chip" data-value="landing" disabled>Takeoff & landing</button>
+            <button type="button" class="choice-chip" data-value="sightseeing" disabled>VFR sightseeing</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="wizard-actions">
+        <button id="wizard-run" class="btn btn-primary" type="button" disabled>Find my best matches</button>
+        <button id="wizard-reset" class="btn btn-ghost" type="button">Reset</button>
+      </div>
+    </section>
+
+    <section class="results-panel" id="wizard-results" style="display: none;" aria-live="polite">
+      <div class="results-summary" id="results-summary"></div>
+
+      <div class="results-columns">
+        <div class="results-column">
+          <h3>Top Controller Configs</h3>
+          <div id="config-results" class="results-list"></div>
+        </div>
+
+        <div class="results-column">
+          <h3>Related Videos</h3>
+          <div id="video-results" class="results-list"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<script define:vars={{ configsForWizard, videosForWizard }}>
+  const controllerSelect = document.getElementById('wizard-controller');
+  const aircraftStep = document.getElementById('step-aircraft');
+  const goalStep = document.getElementById('step-goal');
+  const aircraftChips = Array.from(document.querySelectorAll('#aircraft-chips .choice-chip'));
+  const goalChips = Array.from(document.querySelectorAll('#goal-chips .choice-chip'));
+  const runBtn = document.getElementById('wizard-run');
+  const resetBtn = document.getElementById('wizard-reset');
+  const resultsPanel = document.getElementById('wizard-results');
+  const resultsSummary = document.getElementById('results-summary');
+  const configResults = document.getElementById('config-results');
+  const videoResults = document.getElementById('video-results');
+
+  const state = {
+    controller: '',
+    aircraftType: '',
+    goal: '',
+  };
+
+  const aircraftRules = {
+    'airliner': ['airliner', 'a320', 'a321', 'a330', 'a350', 'a380', 'boeing', 'airbus', 'jetliner'],
+    'general': ['ga', 'general aviation', 'cessna', 'piper', 'beech', 'bonanza', 'comanche'],
+    'turboprop': ['turboprop', 'tbm', 'king air', 'pc-12', 'pc12', 'atr', 'dash', 'q400'],
+    'multi-engine': ['2 engines', '4 engines', 'multi', 'twin engine', 'four engine'],
+    'custom': ['custom', 'generic', 'msfs custom'],
+  };
+
+  const goalRules = {
+    'setup': ['setup', 'install', 'configuration', 'controls', 'bindings', 'calibration', 'throttle issue', 'workaround'],
+    'airliner-ops': ['airliner', 'a320', 'a321', 'boeing', 'fms', 'mcdu', 'cold and dark', 'liner'],
+    'navigation': ['ifr', 'vor', 'ndb', 'lnav', 'rnav', 'ils', 'sid', 'star', 'navigraph', 'flight plan', 'autopilot'],
+    'landing': ['landing', 'takeoff', 'flare', 'approach', 'touchdown', 'taxi', 'crosswind'],
+    'sightseeing': ['sightseeing', 'poi', 'landmark', 'bush trip', 'world update', 'scenery', 'vfr'],
+  };
+
+  function norm(text) {
+    return String(text || '').toLowerCase();
+  }
+
+  function tokenizeController(controllerName) {
+    const value = norm(controllerName)
+      .replace(/[()]/g, ' ')
+      .replace(/\+/g, ' ')
+      .replace(/[^a-z0-9.\s-]/g, ' ');
+
+    return value
+      .split(/\s+/)
+      .filter((token) => token.length > 2 && token !== 'flight' && token !== 'controls');
+  }
+
+  function classifyConfigAircraft(config) {
+    const haystack = [config.aircraft, config.settingsType, ...(config.tags || []), config.description]
+      .map(norm)
+      .join(' ');
+
+    return Object.entries(aircraftRules)
+      .filter(([, keywords]) => keywords.some((keyword) => haystack.includes(keyword)))
+      .map(([type]) => type);
+  }
+
+  function scoreConfig(config, selected) {
+    const controllerMatch = norm(config.controller) === norm(selected.controller) ? 10 : 0;
+    const aircraftMatches = classifyConfigAircraft(config);
+    const aircraftMatch = aircraftMatches.includes(selected.aircraftType) ? 6 : 0;
+
+    const goalKeywords = goalRules[selected.goal] || [];
+    const configText = [config.settingsType, config.aircraft, ...(config.tags || []), config.description]
+      .map(norm)
+      .join(' ');
+    const goalMatchCount = goalKeywords.filter((keyword) => configText.includes(keyword)).length;
+    const goalMatch = goalMatchCount > 0 ? Math.min(5, goalMatchCount + 1) : 0;
+
+    return controllerMatch + aircraftMatch + goalMatch;
+  }
+
+  function scoreVideo(video, selected) {
+    const text = [video.title, video.description, ...(video.tags || [])].map(norm).join(' ');
+
+    const controllerTokens = tokenizeController(selected.controller);
+    const controllerScore = controllerTokens.some((token) => text.includes(token)) ? 3 : 0;
+
+    const aircraftKeywords = aircraftRules[selected.aircraftType] || [];
+    const aircraftHits = aircraftKeywords.filter((keyword) => text.includes(keyword)).length;
+    const aircraftScore = aircraftHits > 0 ? Math.min(6, aircraftHits + 1) : 0;
+
+    const goalKeywords = goalRules[selected.goal] || [];
+    const goalHits = goalKeywords.filter((keyword) => text.includes(keyword)).length;
+    const goalScore = goalHits > 0 ? Math.min(7, goalHits + 2) : 0;
+
+    return controllerScore + aircraftScore + goalScore;
+  }
+
+  function formatDate(iso) {
+    return new Date(iso).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    });
+  }
+
+  function escapeHtml(text) {
+    return String(text)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+  }
+
+  function setChipSelection(chips, value, stateKey) {
+    chips.forEach((chip) => {
+      const isActive = chip.dataset.value === value;
+      chip.classList.toggle('active', isActive);
+      chip.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+    state[stateKey] = value;
+    updateRunState();
+  }
+
+  function enableStep(stepElement, chips) {
+    stepElement?.setAttribute('aria-disabled', 'false');
+    chips.forEach((chip) => chip.removeAttribute('disabled'));
+  }
+
+  function resetStep(stepElement, chips, stateKey) {
+    stepElement?.setAttribute('aria-disabled', 'true');
+    chips.forEach((chip) => {
+      chip.setAttribute('disabled', 'true');
+      chip.classList.remove('active');
+      chip.setAttribute('aria-pressed', 'false');
+    });
+    state[stateKey] = '';
+  }
+
+  function updateRunState() {
+    const ready = Boolean(state.controller && state.aircraftType && state.goal);
+    runBtn?.toggleAttribute('disabled', !ready);
+  }
+
+  function renderResults() {
+    const configMatches = configsForWizard
+      .map((config) => ({ config, score: scoreConfig(config, state) }))
+      .filter((entry) => entry.score > 0)
+      .sort((a, b) => b.score - a.score || a.config.controller.localeCompare(b.config.controller))
+      .slice(0, 6);
+
+    const videoMatches = videosForWizard
+      .map((video) => ({ video, score: scoreVideo(video, state) }))
+      .filter((entry) => entry.score > 0)
+      .sort(
+        (a, b) =>
+          b.score - a.score ||
+          new Date(b.video.publishedAt).getTime() - new Date(a.video.publishedAt).getTime()
+      )
+      .slice(0, 8);
+
+    resultsSummary.innerHTML = `
+      <strong>Best matches for:</strong>
+      <span>${escapeHtml(state.controller)}</span>
+      <span>•</span>
+      <span>${escapeHtml(state.aircraftType)}</span>
+      <span>•</span>
+      <span>${escapeHtml(state.goal)}</span>
+    `;
+
+    configResults.innerHTML = configMatches.length
+      ? configMatches
+          .map(({ config, score }) => `
+            <article class="result-card">
+              <div class="result-topline">
+                <span class="result-score">Score ${score}</span>
+                <span class="result-type">Config</span>
+              </div>
+              <h4>${escapeHtml(config.controller)}</h4>
+              <p>${escapeHtml(config.settingsType)}${config.aircraft ? ` • ${escapeHtml(config.aircraft)}` : ''}</p>
+              <div class="result-actions">
+                <a href="${config.downloadUrl}" target="_blank" rel="noopener noreferrer" class="result-link">Download XML</a>
+                <a href="/controllers" class="result-link ghost">View details</a>
+              </div>
+            </article>
+          `)
+          .join('')
+      : '<p class="empty-note">No strong config matches yet. Try a different aircraft type or goal.</p>';
+
+    videoResults.innerHTML = videoMatches.length
+      ? videoMatches
+          .map(({ video, score }) => `
+            <article class="result-card video-card">
+              <img src="${video.thumbnail}" alt="${escapeHtml(video.title)}" loading="lazy" decoding="async" />
+              <div>
+                <div class="result-topline">
+                  <span class="result-score">Score ${score}</span>
+                  <span class="result-type">Video</span>
+                </div>
+                <h4>${escapeHtml(video.title)}</h4>
+                <p>${formatDate(video.publishedAt)}</p>
+                <div class="result-actions">
+                  <a href="/videos/${video.videoId}" class="result-link">Watch details</a>
+                </div>
+              </div>
+            </article>
+          `)
+          .join('')
+      : '<p class="empty-note">No closely related videos found. Try selecting another goal.</p>';
+
+    resultsPanel.style.display = 'block';
+    resultsPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  controllerSelect?.addEventListener('change', (event) => {
+    const value = event.target.value;
+    state.controller = value;
+
+    if (value) {
+      enableStep(aircraftStep, aircraftChips);
+    } else {
+      resetStep(aircraftStep, aircraftChips, 'aircraftType');
+      resetStep(goalStep, goalChips, 'goal');
+    }
+
+    updateRunState();
+  });
+
+  aircraftChips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      setChipSelection(aircraftChips, chip.dataset.value || '', 'aircraftType');
+      enableStep(goalStep, goalChips);
+    });
+  });
+
+  goalChips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      setChipSelection(goalChips, chip.dataset.value || '', 'goal');
+    });
+  });
+
+  runBtn?.addEventListener('click', renderResults);
+
+  resetBtn?.addEventListener('click', () => {
+    state.controller = '';
+    state.aircraftType = '';
+    state.goal = '';
+
+    if (controllerSelect) controllerSelect.value = '';
+
+    resetStep(aircraftStep, aircraftChips, 'aircraftType');
+    resetStep(goalStep, goalChips, 'goal');
+
+    resultsPanel.style.display = 'none';
+    configResults.innerHTML = '';
+    videoResults.innerHTML = '';
+    resultsSummary.innerHTML = '';
+
+    updateRunState();
+  });
+
+  function applyUrlPrefill() {
+    const params = new URLSearchParams(window.location.search);
+    const controllerParam = params.get('controller');
+    const aircraftParam = params.get('aircraft');
+    const goalParam = params.get('goal');
+
+    if (controllerParam && controllerSelect) {
+      const options = Array.from(controllerSelect.options).map((option) => option.value);
+      const exactMatch = options.find((value) => value.toLowerCase() === controllerParam.toLowerCase());
+      const partialMatch = options.find((value) => value.toLowerCase().includes(controllerParam.toLowerCase()));
+      const selectedController = exactMatch || partialMatch;
+
+      if (selectedController) {
+        controllerSelect.value = selectedController;
+        state.controller = selectedController;
+        enableStep(aircraftStep, aircraftChips);
+      }
+    }
+
+    if (aircraftParam && state.controller) {
+      const aircraftValue = aircraftParam.toLowerCase();
+      const hasAircraft = aircraftChips.some((chip) => chip.dataset.value === aircraftValue);
+      if (hasAircraft) {
+        setChipSelection(aircraftChips, aircraftValue, 'aircraftType');
+        enableStep(goalStep, goalChips);
+      }
+    }
+
+    if (goalParam && state.aircraftType) {
+      const goalValue = goalParam.toLowerCase();
+      const hasGoal = goalChips.some((chip) => chip.dataset.value === goalValue);
+      if (hasGoal) {
+        setChipSelection(goalChips, goalValue, 'goal');
+      }
+    }
+
+    if (state.controller && state.aircraftType && state.goal) {
+      renderResults();
+    } else {
+      updateRunState();
+    }
+  }
+
+  applyUrlPrefill();
+</script>
+
+<style>
+  .wizard-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+  }
+
+  .wizard-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .wizard-header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-heading);
+  }
+
+  .wizard-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .header-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .wizard-panel {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-default);
+    border-radius: 0.9rem;
+    padding: 1.5rem;
+  }
+
+  .step-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .step-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-accent);
+    border-radius: 0.75rem;
+    padding: 1rem;
+  }
+
+  .step-card[aria-disabled='true'] {
+    opacity: 0.65;
+  }
+
+  .step-number {
+    display: inline-flex;
+    width: 1.75rem;
+    height: 1.75rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #10233d;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .step-card h2 {
+    margin: 0 0 0.35rem;
+    font-size: 1.1rem;
+    color: var(--text-heading);
+  }
+
+  .step-card p {
+    margin: 0 0 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .wizard-select {
+    width: 100%;
+    border: 1px solid var(--border-input);
+    border-radius: 0.5rem;
+    background: var(--bg-input);
+    color: var(--text-primary);
+    padding: 0.65rem 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .chip-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .choice-chip {
+    border: 1px solid var(--border-input);
+    background: var(--bg-input);
+    color: var(--text-secondary);
+    border-radius: 999px;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+
+  .choice-chip:disabled {
+    cursor: not-allowed;
+  }
+
+  .choice-chip:not(:disabled):hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-1px);
+  }
+
+  .choice-chip.active {
+    border-color: var(--accent);
+    background: rgba(125, 211, 252, 0.15);
+    color: var(--text-heading);
+  }
+
+  .wizard-actions {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+    color: #0b1e33;
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .btn-secondary,
+  .btn-ghost {
+    background: var(--bg-input);
+    color: var(--text-primary);
+    border-color: var(--border-input);
+  }
+
+  .results-panel {
+    margin-top: 1.5rem;
+    background: var(--bg-panel);
+    border: 1px solid var(--border-default);
+    border-radius: 0.9rem;
+    padding: 1.5rem;
+  }
+
+  .results-summary {
+    color: var(--text-heading);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .results-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .results-column h3 {
+    margin: 0 0 0.75rem;
+    color: var(--text-heading);
+    font-size: 1.15rem;
+  }
+
+  .results-list {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .result-card {
+    border: 1px solid var(--border-accent);
+    border-radius: 0.7rem;
+    background: var(--bg-surface);
+    padding: 0.8rem;
+  }
+
+  .result-card h4 {
+    margin: 0.35rem 0;
+    color: var(--text-heading);
+    font-size: 0.98rem;
+    line-height: 1.35;
+  }
+
+  .result-card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+  }
+
+  .result-topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .result-score {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.78rem;
+  }
+
+  .result-type {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+  }
+
+  .result-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.65rem;
+    flex-wrap: wrap;
+  }
+
+  .result-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .result-link.ghost {
+    color: var(--text-muted);
+  }
+
+  .video-card {
+    display: grid;
+    grid-template-columns: 124px 1fr;
+    gap: 0.75rem;
+    align-items: start;
+  }
+
+  .video-card img {
+    width: 124px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 0.45rem;
+  }
+
+  .empty-note {
+    color: var(--text-muted);
+    margin: 0;
+    padding: 0.75rem;
+    border: 1px dashed var(--border-input);
+    border-radius: 0.65rem;
+  }
+
+  @media (max-width: 960px) {
+    .step-grid,
+    .results-columns {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
