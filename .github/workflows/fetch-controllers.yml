@@ -28,6 +28,8 @@ jobs:
         run: npm install
 
       - name: Fetch controller configs from GitHub
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/fetch-controllers.js
 
       - name: Check for changes
