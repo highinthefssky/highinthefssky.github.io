@@ -13,6 +13,7 @@ console.log('🎮 Starting controller config fetch script...');
 const GITHUB_OWNER = 'highinthefssky';
 const GITHUB_REPO = 'msfs-2024-controls-settings';
 const GITHUB_BRANCH = 'main';
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
 const CONTROLLERS_DIR = path.join(__dirname, '../src/content/controllers');
 const STATS_FILE = path.join(__dirname, '../src/content/stats.json');
 const DATES_FILE = path.join(__dirname, '../data/controller-dates.json');
@@ -122,14 +123,32 @@ async function fetchControllers() {
     
     // Fetch the profiles directory listing
     const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/profiles?ref=${GITHUB_BRANCH}`;
-    const response = await fetch(apiUrl, {
-      headers: {
-        'Accept': 'application/vnd.github.v3+json',
-        'User-Agent': 'highinthefssky-website'
-      }
-    });
+    const headers = {
+      'Accept': 'application/vnd.github.v3+json',
+      'User-Agent': 'highinthefssky-website',
+    };
+
+    if (GITHUB_TOKEN) {
+      headers.Authorization = `Bearer ${GITHUB_TOKEN}`;
+      console.log('🔐 Using authenticated GitHub API requests');
+    } else {
+      console.log('ℹ️ No GitHub token found (using unauthenticated API requests)');
+    }
+
+    const response = await fetch(apiUrl, { headers });
     
     if (!response.ok) {
+      const remaining = response.headers.get('x-ratelimit-remaining');
+      const resetAt = response.headers.get('x-ratelimit-reset');
+      const resetDate = resetAt ? new Date(Number(resetAt) * 1000).toISOString() : 'unknown';
+
+      if (response.status === 403 && remaining === '0') {
+        throw new Error(
+          `GitHub API rate limit exceeded. Remaining: ${remaining}, resets at: ${resetDate}. ` +
+          `Set GITHUB_TOKEN in CI/local environment to increase limits.`
+        );
+      }
+
       throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
     }
     
