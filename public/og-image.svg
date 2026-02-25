@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">High in the FlightSim Sky</title>
+  <desc id="desc">Flight simulator videos, community posts, playlists, and controller configs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1e33" />
+      <stop offset="60%" stop-color="#0f2740" />
+      <stop offset="100%" stop-color="#153652" />
+    </linearGradient>
+    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientTransform="translate(260 150) rotate(8) scale(360 220)" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientTransform="translate(980 70) rotate(-16) scale(320 180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#glow1)" />
+  <rect width="1200" height="630" fill="url(#glow2)" />
+
+  <g fill="none" stroke="#7dd3fc" stroke-opacity="0.35" stroke-width="2">
+    <path d="M70 460 C260 430 400 470 610 430 C790 395 940 420 1130 390" />
+    <path d="M90 500 C280 470 420 510 640 470 C815 438 970 460 1140 430" />
+  </g>
+
+  <g>
+    <text x="90" y="150" fill="#7dd3fc" font-family="'Space Grotesk', 'Segoe UI', Arial, sans-serif" font-size="36" letter-spacing="5" text-transform="uppercase">Microsoft Flight Simulator</text>
+    <text x="90" y="270" fill="#ffffff" font-family="'Space Grotesk', 'Segoe UI', Arial, sans-serif" font-size="88" font-weight="700">High in the FlightSim Sky</text>
+    <text x="90" y="345" fill="#cbd5e1" font-family="'Space Grotesk', 'Segoe UI', Arial, sans-serif" font-size="38">Videos · Community · Playlists · Controllers</text>
+  </g>
+
+  <g transform="translate(930 470)">
+    <rect x="0" y="0" width="200" height="72" rx="14" fill="#0ea5e9" fill-opacity="0.18" stroke="#7dd3fc" stroke-opacity="0.45" />
+    <text x="26" y="47" fill="#e2e8f0" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, monospace" font-size="24" font-weight="700">highintheflightsimsky.nl</text>
+  </g>
+</svg>

@@ -34,7 +34,7 @@ export async function GET(context) {
   ].sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 
   return rss({
-    title: 'High in the Sky Channel',
+    title: 'High in the FlightSim Sky Channel',
     description:
       'Watch videos and join the community. Explore the latest videos and community posts.',
     site: context.site || 'https://yourdomain.com',

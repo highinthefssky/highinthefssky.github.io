@@ -34,9 +34,34 @@ function formatDuration(seconds) {
 const firstVideo = videos[0];
 const metaDescription = playlist.description.slice(0, 160);
 const ogImage = playlist.thumbnail || firstVideo?.data.thumbnail || '';
+const pageUrl = new URL(`/playlists/${playlist.slug}/`, Astro.site).href;
+const breadcrumbStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: new URL('/', Astro.site).href,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Playlists',
+      item: new URL('/playlists/', Astro.site).href,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: playlist.title,
+      item: pageUrl,
+    },
+  ],
+};
 ---
 
-<BaseLayout title={playlist.title + ' — Playlist'} description={metaDescription} image={ogImage}>
+<BaseLayout title={playlist.title + ' — Playlist'} description={metaDescription} image={ogImage} imageAlt={`${playlist.title} playlist cover image`} structuredData={breadcrumbStructuredData}>
   <div class="playlist-page">
     <!-- Mobile header -->
     <div class="playlist-mobile-header">

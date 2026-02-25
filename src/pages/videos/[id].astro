@@ -71,6 +71,18 @@ function formatViewCount(count) {
   return count + ' views';
 }
 
+function toIsoDuration(totalSeconds) {
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  const hoursPart = hours > 0 ? `${hours}H` : '';
+  const minutesPart = minutes > 0 ? `${minutes}M` : '';
+  const secondsPart = seconds > 0 || (hours === 0 && minutes === 0) ? `${seconds}S` : '';
+
+  return `PT${hoursPart}${minutesPart}${secondsPart}`;
+}
+
 const embedUrl = 'https://www.youtube-nocookie.com/embed/' + videoId;
 const youtubeUrl = 'https://www.youtube.com/watch?v=' + videoId;
 
@@ -80,9 +92,51 @@ const descriptionParagraphs = video.data.description
   .filter((p) => p.length > 0);
 
 const metaDescription = video.data.description.replaceAll('\n', ' ').slice(0, 160);
+const pageUrl = new URL(`/videos/${video.id}/`, Astro.site).href;
+const videoStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: title,
+  description: metaDescription,
+  thumbnailUrl: [thumbnail],
+  uploadDate: new Date(publishedAt).toISOString(),
+  duration: toIsoDuration(duration),
+  embedUrl,
+  contentUrl: youtubeUrl,
+  url: pageUrl,
+  publisher: {
+    '@type': 'Organization',
+    name: 'High in the FlightSim Sky',
+    url: new URL('/', Astro.site).href,
+  },
+};
+const breadcrumbStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: new URL('/', Astro.site).href,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Videos',
+      item: new URL('/videos/', Astro.site).href,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: title,
+      item: pageUrl,
+    },
+  ],
+};
 ---
 
-<BaseLayout title={title} description={metaDescription} ogType="article" image={thumbnail}>
+<BaseLayout title={title} description={metaDescription} ogType="article" image={thumbnail} imageAlt={`${title} video thumbnail`} structuredData={[videoStructuredData, breadcrumbStructuredData]}>
   <article class="video-detail">
     <div class="player-wrapper">
       <iframe
