@@ -53,6 +53,31 @@ export async function getStaticPaths() {
 }
 
 const { track, lessons } = Astro.props;
+const pageUrl = new URL(`/tracks/${track.slug}/`, Astro.site).href;
+const breadcrumbStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: new URL('/', Astro.site).href,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Learning Tracks',
+      item: new URL('/tracks/', Astro.site).href,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: track.title,
+      item: pageUrl,
+    },
+  ],
+};
 
 function levelLabel(level: string): string {
   if (level === 'beginner') return 'Beginner';
@@ -61,7 +86,7 @@ function levelLabel(level: string): string {
 }
 ---
 
-<BaseLayout title={track.title} description={track.description}>
+<BaseLayout title={track.title} description={track.description} structuredData={breadcrumbStructuredData}>
   <div class="track-detail-page" data-track-slug={track.slug}>
     <header class="track-detail-header">
       <a href="/tracks" class="back-link">← Back to tracks</a>

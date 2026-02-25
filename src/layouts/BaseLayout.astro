@@ -8,14 +8,46 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
+  imageAlt?: string;
   ogType?: 'website' | 'article';
+  canonical?: string;
+  noindex?: boolean;
+  structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
 }
 
-const { title = 'High in the Sky', description = 'YouTube Videos & Community Posts', image, ogType = 'website' } = Astro.props;
-const siteTitle = title === 'High in the Sky' ? title : `${title} | High in the Sky`;
+const { title = 'High in the FlightSim Sky', description = 'YouTube Videos & Community Posts', image, imageAlt, ogType = 'website', canonical, noindex = false, structuredData } = Astro.props;
+const siteTitle = title === 'High in the FlightSim Sky' ? title : `${title} | High in the FlightSim Sky`;
 const ogImage = image
   ? (image.startsWith('http') ? image : new URL(image, Astro.site).href)
-  : new URL('/og-image.png', Astro.site).href;
+  : new URL('/og-image.svg', Astro.site).href;
+const socialImageAlt = imageAlt || `${siteTitle} preview image`;
+const canonicalUrl = canonical
+  ? new URL(canonical, Astro.site).href
+  : new URL(Astro.url.pathname, Astro.site).href;
+const robotsValue = noindex ? 'noindex, nofollow' : 'index, follow';
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'High in the FlightSim Sky',
+  url: new URL('/', Astro.site).href,
+};
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'High in the FlightSim Sky',
+  url: new URL('/', Astro.site).href,
+  sameAs: ['https://bit.ly/34eNWDP'],
+};
+
+const schemas = [
+  websiteSchema,
+  organizationSchema,
+  ...(structuredData
+    ? (Array.isArray(structuredData) ? structuredData : [structuredData])
+    : []),
+];
 ---
 
 <!doctype html>
@@ -25,6 +57,7 @@ const ogImage = image
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="robots" content={robotsValue} />
     <meta name="theme-color" content="#0b1e33" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -34,21 +67,27 @@ const ogImage = image
     <meta property="og:title" content={siteTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:url" content={Astro.url.href} />
-    <meta property="og:site_name" content="High in the Sky" />
+    <meta property="og:image:alt" content={socialImageAlt} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="High in the FlightSim Sky" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={siteTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={socialImageAlt} />
     
     <!-- Canonical URL -->
-    <link rel="canonical" href={Astro.url.href} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    {schemas.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
     
     <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="Feed" href="/feed.xml" />
@@ -88,7 +127,7 @@ const ogImage = image
       <div class="footer-container">
         <div class="footer-content">
           <div class="footer-section">
-            <h3>High in the Sky</h3>
+            <h3>High in the FlightSim Sky</h3>
             <p>A YouTube video hub with community posts and search.</p>
           </div>
           <div class="footer-section">
@@ -111,7 +150,7 @@ const ogImage = image
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 High in the Sky. All rights reserved.</p>
+          <p>&copy; 2024 High in the FlightSim Sky. All rights reserved.</p>
           <p><a href="/privacy">Privacy</a> | <a href="/terms">Terms</a></p>
         </div>
       </div>
