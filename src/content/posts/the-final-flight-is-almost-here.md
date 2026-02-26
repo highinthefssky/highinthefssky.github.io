@@ -25,7 +25,7 @@ Once you've watched the finale, head to the pinned comment on the video to cast 
 See you on the flight deck in a couple of hours!
 
 Original post: https://www.youtube.com/post/Ugkx2PjK6-XnqFTtTYUbj8PS_05OZCGRrgnA
-Likes: 0 | Comments: 0
+Likes: 1 | Comments: 1
 
 Images:
 ![](https://yt3.ggpht.com/9JorMfkTDcyAFpW9tM8zmCADP5xDWQAmvi6aLKGVEVjhyylgT4bVmft4tWZLPLtgd5JcJhH_RX4o4Q=s1280)
