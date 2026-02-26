@@ -44,7 +44,7 @@ When visibility disappears, ILS turns chaos into math 📊
 Master needle tracking, and low‑vis approaches become calm, repeatable, and safe ✅
 
 Original post: https://www.youtube.com/post/UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv
-Likes: 0 | Comments: 0
+Likes: 1 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/PWxU0oP2t_Q7JQp4LPt-M-xk_bOcMfVDXgx3WdMO_L3KQ5957Nsz-0VNgQO2kKOKJnL_-S2-ge2kJg=s1280)
