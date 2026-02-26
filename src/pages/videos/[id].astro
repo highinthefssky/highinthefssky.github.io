@@ -209,7 +209,7 @@ const breadcrumbStructuredData = {
       {tags.length > 0 && (
         <div class="video-tags">
           {tags.map((tag) => (
-            <a href={'/videos?tag=' + encodeURIComponent(tag)} class="tag">
+            <a href={'/videos#tag=' + encodeURIComponent(tag)} class="tag">
               {tag}
             </a>
           ))}
