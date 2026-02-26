@@ -143,14 +143,50 @@ const allTags = Array.from(
   const postsList = document.getElementById('posts-list');
   const postCards = postsList?.querySelectorAll('[data-tags]');
 
-  tagSelect?.addEventListener('change', (e) => {
-    const selectedTag = (e.target as HTMLSelectElement).value;
+  function normalizeString(value: string): string {
+    return value.toLowerCase().trim();
+  }
 
+  function getInitialTagFromUrl(): string {
+    const params = new URLSearchParams(window.location.search);
+    const queryTag = params.get('tag')?.trim();
+    if (queryTag) return queryTag;
+
+    if (window.location.hash.startsWith('#tag=')) {
+      const hashTag = window.location.hash.slice('#tag='.length).trim();
+      if (hashTag) return decodeURIComponent(hashTag);
+    }
+
+    return '';
+  }
+
+  function updatePostDisplay(selectedTag: string) {
     postCards?.forEach((card) => {
       const tags = card.getAttribute('data-tags')?.split(',') || [];
-      const matches =
-        !selectedTag || tags.includes(selectedTag.toLowerCase());
+      const matches = !selectedTag || tags.includes(selectedTag.toLowerCase());
       (card as HTMLElement).style.display = matches ? '' : 'none';
     });
+  }
+
+  tagSelect?.addEventListener('change', (e) => {
+    const selectedTag = (e.target as HTMLSelectElement).value;
+    updatePostDisplay(selectedTag);
   });
+
+  const initialTag = getInitialTagFromUrl();
+  if (initialTag && tagSelect instanceof HTMLSelectElement) {
+    const matchingOption = Array.from(tagSelect.options).find(
+      (option) => normalizeString(option.value) === normalizeString(initialTag)
+    );
+
+    if (matchingOption) {
+      tagSelect.value = matchingOption.value;
+      updatePostDisplay(matchingOption.value);
+      history.replaceState(
+        null,
+        '',
+        `${window.location.pathname}#tag=${encodeURIComponent(matchingOption.value)}`
+      );
+    }
+  }
 </script>

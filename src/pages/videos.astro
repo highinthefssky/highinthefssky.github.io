@@ -457,6 +457,19 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
   let visibleLimit = PAGE_SIZE;
   let activeTags = new Set<string>();
 
+  function getInitialTagFromUrl(): string {
+    const params = new URLSearchParams(window.location.search);
+    const queryTag = params.get('tag')?.trim();
+    if (queryTag) return queryTag;
+
+    if (window.location.hash.startsWith('#tag=')) {
+      const hashTag = window.location.hash.slice('#tag='.length).trim();
+      if (hashTag) return decodeURIComponent(hashTag);
+    }
+
+    return '';
+  }
+
   // Toggle tag filter visibility
   toggleBtn?.addEventListener('click', () => {
     const isOpen = tagContainer.style.display !== 'none';
@@ -666,6 +679,27 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
   });
 
   // Initialize
+  const initialTag = getInitialTagFromUrl();
+  if (initialTag) {
+    const matchingTagButton = Array.from(tagButtons).find((button) =>
+      normalizeString(button.getAttribute('data-tag') || '') ===
+      normalizeString(initialTag)
+    ) as HTMLElement | undefined;
+
+    if (matchingTagButton) {
+      const canonicalTag = matchingTagButton.getAttribute('data-tag') || initialTag;
+      activeTags.add(canonicalTag);
+      matchingTagButton.classList.add('active');
+      tagContainer.style.display = 'block';
+      toggleBtn?.classList.add('open');
+      history.replaceState(
+        null,
+        '',
+        `${window.location.pathname}#tag=${encodeURIComponent(canonicalTag)}`
+      );
+    }
+  }
+
   updateSelectedTagsDisplay();
   updateDisplay();
 </script>

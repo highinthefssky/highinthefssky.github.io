@@ -112,6 +112,23 @@ const schemas = [
         }
       })();
     </script>
+
+    <script is:inline>
+      (function() {
+        const pathname = window.location.pathname.replace(/\/+$/, '') || '/';
+        if (pathname !== '/videos' && pathname !== '/posts') return;
+
+        const params = new URLSearchParams(window.location.search);
+        const tag = params.get('tag')?.trim();
+        if (!tag) return;
+
+        history.replaceState(
+          null,
+          '',
+          `${window.location.pathname}#tag=${encodeURIComponent(tag)}`
+        );
+      })();
+    </script>
     
     <title>{siteTitle}</title>
   </head>

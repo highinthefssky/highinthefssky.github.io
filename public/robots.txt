@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: 
+Disallow: /*?tag=
+Disallow: /*?*tag=
 
 Sitemap: https://highintheflightsimsky.nl/sitemap.xml
 
