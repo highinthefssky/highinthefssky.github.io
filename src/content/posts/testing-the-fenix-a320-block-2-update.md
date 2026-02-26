@@ -1,7 +1,7 @@
 ---
 title: "Testing the Fenix A320 Block 2 update"
 description: "Testing the Fenix A320 Block 2 update"
-publishedAt: 2025-02-23
+publishedAt: 2025-02-26
 tags: ["community", "youtube"]
 draft: false
 ---
