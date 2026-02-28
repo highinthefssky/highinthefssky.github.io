@@ -39,10 +39,10 @@ jobs:
           echo "📁 Controllers directory contents:"
           ls -la src/content/controllers/ || echo "Directory not found or empty"
 
-          # Check if there are any new or modified files in the controllers directory or stats.json
-          if git status --porcelain src/content/controllers/ src/content/stats.json | grep -q .; then
+          # Check if there are any new or modified files in the controllers directory, stats.json, or controller-dates.json
+          if git status --porcelain src/content/controllers/ src/content/stats.json data/controller-dates.json | grep -q .; then
             echo "📝 Found changes in controllers directory or stats"
-            git status --porcelain src/content/controllers/ src/content/stats.json
+            git status --porcelain src/content/controllers/ src/content/stats.json data/controller-dates.json
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "📭 No changes in controllers directory or stats"
@@ -56,7 +56,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           echo "📋 Files to be committed:"
-          git add src/content/controllers/ src/content/stats.json
+          git add src/content/controllers/ src/content/stats.json data/controller-dates.json
           git status --porcelain
           git commit -m "chore: update controller configs from msfs-2024-controls-settings"
           echo "🚀 Pulling remote changes and pushing..."
