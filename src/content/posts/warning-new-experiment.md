@@ -1,7 +1,7 @@
 ---
 title: "🚨 WARNING NEW EXPERIMENT 🚨"
 description: "🚨 WARNING NEW EXPERIMENT 🚨  🚨 MSFS 2024 Beta DISASTER?! 🚨  Did the Sim Update 2 beta just crash land on social media? 💥 The internet is EXPLODING with reactions"
-publishedAt: 2025-05-03
+publishedAt: 2025-04-04
 tags: ["community", "youtube"]
 draft: false
 ---
