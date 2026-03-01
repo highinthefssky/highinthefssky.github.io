@@ -1,0 +1,28 @@
+{
+  "videoId": "WG29ZrHcWaI",
+  "title": "Secret URSA MINOR 32 Setup for A320 | MSFS 2024 Update",
+  "description": "Is your WinWing URSA MINOR 32 Throttle reverse thrust not working in MSFS 2024? If your throttles are jumping to 100% or your detents aren't alignment properly, you aren't alone. In this comprehensive guide, I show you exactly how to fix the \"max reverse\" bug and calibrate your throttle for the Fenix A320 and Asobo/iniBuilds A320 V2.\n\nThe secret lies in the SimApp Pro (WinCTRL) software. We dive deep into the essential \"Single Stroke vs Double Shaft\" settings that most pilots miss. Setting this correctly ensures a linear 0-100% axis that Microsoft Flight Simulator can actually understand, preventing those frustrating \"touch and go\" throttle spikes during landing.\n\nIn this video, we cover:\n\n- SimApp Pro Configuration: Why \"Single Stroke\" is mandatory for Airbus pilots.\n- Pre-Flight Calibration: Calibrating your axes (flaps, spoilers, and throttles) before the sim even starts.\n- MSFS Axis Mapping: Setting up the 0-100% axis for the iniBuilds A320 V2.\n- Fenix A320 MCDU Setup: How to use the Fenix calibration tool to sync your physical URSA MINOR detents with the virtual cockpit.\n- Troubleshooting: Why you should avoid dual-mapping throttles on multiple WinWing devices.\n\nStop fighting your hardware and start enjoying the realism of the URSA MINOR 32 Throttle Metal. I’ve even included my personal MSFS control profile below to save you the hassle of manual mapping!\n\n📥 DOWNLOAD MY MSFS CONTROL PROFILE:\nhttps://github.com/highinthefssky/msfs-2024-controls-settings or\nhttps://highintheflightsimsky.nl\n\n🛠️ HARDWARE USED:\nWinWing URSA MINOR 32 Throttle Metal\nWinWing URSA MINOR 32 PAC Metal Extension\n\n📖 Chapters: \n00:00 Reverse Thrust Not Working? (The Fix)\n00:21 Calibrating the throttle using SimAppPro\n02:20 Asobo/Inibuilds A320 V2: Mapping controls + calibrating the sliders\n10:10 Fenix A320 V2: Mapping controls + calibrating the sliders\n14:29 Recap\n\nIf this helped you get back in the skies, please hit the LIKE button and SUBSCRIBE for more MSFS 2024 hardware tutorials! ✈️\n\n🔔 Subscribe\nIf you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP\n\n🔗 Other related links\nTutorials: https://bit.ly/3l6fRdL\nWebsite: https://highintheflightsimsky.nl\nJoin our Discord: https://discord.gg/J3tZyhceUM",
+  "thumbnail": "https://i.ytimg.com/vi/WG29ZrHcWaI/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/WG29ZrHcWaI/mqdefault.jpg",
+  "publishedAt": "2026-02-28T21:18:32.000Z",
+  "duration": 892,
+  "viewCount": 23,
+  "tags": [
+    "MSFS 2024",
+    "WinWing URSA MINOR 32",
+    "URSA MINOR Throttle",
+    "A320 Reverse Thrust Fix",
+    "Fenix A320 Calibration",
+    "SimApp Pro Guide",
+    "WinCTRL Setup",
+    "MSFS A320 V2",
+    "Throttle Detents Fix",
+    "Flight Sim Hardware",
+    "WinWing A320 Profile",
+    "Airbus Throttle Calibration",
+    "MSFS 2024 Tutorials",
+    "Flight Simulator Gear Setup",
+    "URSA MINOR 32 Metal Review."
+  ],
+  "featured": false
+}
