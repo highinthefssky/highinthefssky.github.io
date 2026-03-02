@@ -1,7 +1,7 @@
 ---
 title: "Can somebody tell the other pilot not to turn on the taxi way ;-)"
 description: "Can somebody tell the other pilot not to turn on the taxi way ;-)"
-publishedAt: 2023-03-02
+publishedAt: 2023-03-03
 tags: ["community", "youtube"]
 draft: false
 ---
