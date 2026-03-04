@@ -1,7 +1,7 @@
 ---
 title: "✈️It's a beautiful day the ☀️sun☀️is shining✈️"
 description: "✈️It's a beautiful day the ☀️sun☀️is shining✈️"
-publishedAt: 2025-03-02
+publishedAt: 2024-03-04
 tags: ["community", "youtube"]
 draft: false
 ---
