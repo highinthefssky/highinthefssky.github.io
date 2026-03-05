@@ -30,7 +30,7 @@ Poll: Which era of the Saab 340 are you most excited to fly?
 #MSFS2024 #Saab340 #FlightSim #Aviation #HighInTheFlightSimSky #ComingSoon
 
 Original post: https://www.youtube.com/post/UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA
-Likes: 0 | Comments: 0
+Likes: 2 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/IX3j9rwpksYlTAVmHhN2jy82hsHFtytdmWadVp1RLKSTN1hU3sdWAreuJoHFbvSiQrcb2WX0x4J5MYo=s1280)
