@@ -1,7 +1,7 @@
 ---
 title: "Community Update"
 description: "YouTube community post"
-publishedAt: 2022-03-05
+publishedAt: 2022-03-06
 tags: ["community", "youtube"]
 draft: false
 ---
