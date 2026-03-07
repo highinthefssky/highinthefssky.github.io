@@ -1,7 +1,7 @@
 ---
 title: "Fenix A320 Block 2 update: GSX integration added, keep an eye on the channel for"
 description: "Fenix A320 Block 2 update: GSX integration added, keep an eye on the channel for some videos coming soon"
-publishedAt: 2025-03-01
+publishedAt: 2024-03-07
 tags: ["community", "youtube"]
 draft: false
 ---
