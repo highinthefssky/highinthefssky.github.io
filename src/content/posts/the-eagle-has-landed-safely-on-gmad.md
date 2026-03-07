@@ -1,7 +1,7 @@
 ---
 title: "The eagle has landed safely on GMAD"
 description: "The eagle has landed safely on GMAD"
-publishedAt: 2025-03-05
+publishedAt: 2025-03-07
 tags: ["community", "youtube"]
 draft: false
 ---
