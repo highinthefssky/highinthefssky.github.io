@@ -2,8 +2,8 @@ name: Refresh Videos Weekly
 
 on:
   schedule:
-    # Run weekly on Monday at 03:00 UTC
-    - cron: '0 3 * * 1'
+    # Run on the first Monday of each month at 10:00 UTC (after quota reset, avoids daily overlap)
+    - cron: '0 10 1-7 * 1'
   workflow_dispatch:
 
 jobs:

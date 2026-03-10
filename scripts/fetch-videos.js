@@ -72,10 +72,39 @@ async function getAccessToken() {
   return tokenResponse.token;
 }
 
+// Helper: handle YouTube API errors with a soft exit for quota exceeded
+async function handleApiError(response, context) {
+  let parsed = null;
+  const errorText = await response.text();
+  try { parsed = JSON.parse(errorText); } catch {}
+  const isQuotaExceeded = parsed?.error?.errors?.some((e) => e.reason === 'quotaExceeded');
+  if (isQuotaExceeded) {
+    console.warn(`⚠️ YouTube API quota exceeded (${context}). Quota resets at midnight Pacific Time (≈08:00 UTC).`);
+    console.warn('⚠️ Skipping fetch — will retry on next scheduled run.');
+    process.exit(0); // soft exit — don't fail the workflow on quota exhaustion
+  }
+  console.error(`❌ ${context} error response:`, errorText);
+  throw new Error(`YouTube API error: ${response.status} ${response.statusText}`);
+}
+
 async function fetchVideos() {
   const startTime = Date.now();
   try {
     console.log('\n🚀 Starting video fetch process...');
+
+    const refreshExisting = (process.env.REFRESH_EXISTING || '').toLowerCase() === 'true';
+    console.log(`🔄 Refresh mode: ${refreshExisting ? 'full refresh' : 'delta (new only)'}`);
+
+    // Pre-load existing video IDs so delta-mode pagination can exit early
+    const existingIds = fs.existsSync(VIDEOS_DIR)
+      ? new Set(
+          fs
+            .readdirSync(VIDEOS_DIR)
+            .filter((f) => f.endsWith('.json'))
+            .map((f) => path.parse(f).name)
+        )
+      : new Set();
+    console.log(`📁 Found ${existingIds.size} existing video files`);
 
     // Get access token if using OIDC
     const accessToken = await getAccessToken();
@@ -85,43 +114,59 @@ async function fetchVideos() {
     const publicIpData = publicIpResponse ? await publicIpResponse.json() : { ip: 'Unknown' };
     console.log(`📍 Public IP: ${publicIpData.ip}`);
 
-    // Get uploads playlist ID
-    console.log('\n📡 Step 1: Fetching channel information...');
-    const channelUrl = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails,statistics&id=${YOUTUBE_CHANNEL_ID}`;
-    console.log(`🌐 Channel API URL: ${channelUrl}`);
-
-    const channelResponse = await youtubeApiFetch(channelUrl, accessToken);
-    console.log(`📊 Channel API response status: ${channelResponse.status} ${channelResponse.statusText}`);
-
-    if (!channelResponse.ok) {
-      const errorText = await channelResponse.text();
-      console.error('❌ Channel API error response:', errorText);
-      throw new Error(`YouTube API error: ${channelResponse.status} ${channelResponse.statusText}`);
+    // Read cached stats to restore fields not managed by this script (e.g. totalControllers)
+    const statsFile = path.join(__dirname, '../src/content/stats.json');
+    let cachedStats = {};
+    if (fs.existsSync(statsFile)) {
+      try {
+        cachedStats = JSON.parse(fs.readFileSync(statsFile, 'utf8'));
+      } catch (e) {
+        console.warn(`⚠️ Could not read cached stats: ${e.message}`);
+      }
     }
 
-    const channelData = await channelResponse.json();
-    console.log('📦 Channel API response received');
+    // Step 1: Get uploads playlist ID — use cached value in delta mode to save one quota unit
+    let uploadsPlaylistId = cachedStats.uploadsPlaylistId || null;
+    let subscriberCount = cachedStats.youtubeSubscribers || 0;
 
-    if (!channelData.items || channelData.items.length === 0) {
-      console.error('❌ Channel not found or API response invalid:', JSON.stringify(channelData, null, 2));
-      throw new Error(`Channel with ID "${YOUTUBE_CHANNEL_ID}" not found or API key invalid`);
+    if (!uploadsPlaylistId || refreshExisting) {
+      console.log('\n📡 Step 1: Fetching channel information...');
+      const channelUrl = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails,statistics&id=${YOUTUBE_CHANNEL_ID}`;
+      console.log(`🌐 Channel API URL: ${channelUrl}`);
+
+      const channelResponse = await youtubeApiFetch(channelUrl, accessToken);
+      console.log(`📊 Channel API response status: ${channelResponse.status} ${channelResponse.statusText}`);
+
+      if (!channelResponse.ok) {
+        await handleApiError(channelResponse, 'Channel API');
+      }
+
+      const channelData = await channelResponse.json();
+      console.log('📦 Channel API response received');
+
+      if (!channelData.items || channelData.items.length === 0) {
+        console.error('❌ Channel not found or API response invalid:', JSON.stringify(channelData, null, 2));
+        throw new Error(`Channel with ID "${YOUTUBE_CHANNEL_ID}" not found or API key invalid`);
+      }
+
+      subscriberCount = parseInt(channelData.items[0].statistics?.subscriberCount || 0);
+      console.log(`👥 Channel subscribers: ${subscriberCount.toLocaleString()}`);
+
+      uploadsPlaylistId = channelData.items[0].contentDetails?.relatedPlaylists?.uploads;
+
+      if (!uploadsPlaylistId) {
+        console.error('❌ Channel does not have an uploads playlist');
+        throw new Error(`Channel "${YOUTUBE_CHANNEL_ID}" does not have an uploads playlist`);
+      }
+      console.log(`📋 Uploads playlist ID: ${uploadsPlaylistId}`);
+    } else {
+      console.log(`\n📋 Step 1: Using cached uploads playlist ID (skipping channels API call)`);
+      console.log(`  playlist ID: ${uploadsPlaylistId}`);
+      console.log(`  subscribers: ${subscriberCount.toLocaleString()} (cached)`);
     }
 
-    // Extract and save subscriber count
-    const subscriberCount = parseInt(channelData.items[0].statistics?.subscriberCount || 0);
-    console.log(`👥 Channel subscribers: ${subscriberCount.toLocaleString()}`);
-    
-    const uploadsPlaylistId = channelData.items[0].contentDetails?.relatedPlaylists?.uploads;
-
-    if (!uploadsPlaylistId) {
-      console.error('❌ Channel does not have an uploads playlist');
-      throw new Error(`Channel "${YOUTUBE_CHANNEL_ID}" does not have an uploads playlist`);
-    }
-
-    console.log(`📋 Uploads playlist ID: ${uploadsPlaylistId}`);
-
-    // Get videos from playlist (paginate all pages)
-    console.log('\n📡 Step 2: Fetching ALL playlist videos (paginated)...');
+    // Step 2: Get videos from playlist (paginated, with early-exit for delta mode)
+    console.log('\n📡 Step 2: Fetching playlist videos (paginated)...');
     async function fetchAllPlaylistItems(playlistId) {
       let pageToken = '';
       const allItems = [];
@@ -132,14 +177,26 @@ async function fetchVideos() {
         const res = await youtubeApiFetch(url, accessToken);
         console.log(`📊 Playlist API response status (page ${page}): ${res.status} ${res.statusText}`);
         if (!res.ok) {
-          const errorText = await res.text();
-          console.error('❌ Playlist API error response:', errorText);
-          throw new Error(`YouTube API playlist error: ${res.status} ${res.statusText}`);
+          await handleApiError(res, `Playlist API page ${page}`);
         }
         const data = await res.json();
         const items = data.items || [];
         console.log(`📦 Received ${items.length} items on page ${page}`);
         allItems.push(...items);
+
+        // Early-exit for delta mode: YouTube returns items newest-first, so once all items on a
+        // page are already known there is no new content on any subsequent page.
+        if (!refreshExisting && items.length > 0) {
+          const newOnPage = items.filter((item) => {
+            const id = item.contentDetails?.videoId;
+            return id && !existingIds.has(id);
+          });
+          if (newOnPage.length === 0) {
+            console.log(`🚫 All ${items.length} items on page ${page} already exist — stopping pagination early (saved quota)`);
+            break;
+          }
+        }
+
         if (!data.nextPageToken) {
           break;
         }
@@ -158,16 +215,6 @@ async function fetchVideos() {
 
     // Determine delta: which video IDs are new (not yet saved)
     const videoIds = playlistItems.map((item) => item.contentDetails.videoId).filter(Boolean);
-    const existingIds = fs.existsSync(VIDEOS_DIR)
-      ? new Set(
-          fs
-            .readdirSync(VIDEOS_DIR)
-            .filter((f) => f.endsWith('.json'))
-            .map((f) => path.parse(f).name)
-        )
-      : new Set();
-
-    const refreshExisting = (process.env.REFRESH_EXISTING || '').toLowerCase() === 'true';
     const idsToFetch = refreshExisting ? videoIds : videoIds.filter((id) => !existingIds.has(id));
     console.log(`🧮 Existing files: ${existingIds.size} | New to fetch: ${idsToFetch.length}${refreshExisting ? ' (refreshing all)' : ''}`);
 
@@ -175,11 +222,18 @@ async function fetchVideos() {
       console.log('✅ No new videos to import. Skipping details fetch.');
     }
 
-    // Save stats including total video count
-    const statsFile = path.join(__dirname, '../src/content/stats.json');
-    const stats = { youtubeSubscribers: subscriberCount, totalVideos: videoIds.length, updatedAt: new Date().toISOString() };
+    // Save stats — merge with existing file to preserve fields from other scripts (e.g. totalControllers).
+    // totalVideos is only reliable after a full-refresh paginate; in delta mode keep the cached count.
+    const totalVideosForStats = refreshExisting ? videoIds.length : (cachedStats.totalVideos || videoIds.length);
+    const stats = {
+      ...cachedStats,
+      youtubeSubscribers: subscriberCount,
+      totalVideos: totalVideosForStats,
+      uploadsPlaylistId: uploadsPlaylistId,
+      updatedAt: new Date().toISOString(),
+    };
     fs.writeFileSync(statsFile, JSON.stringify(stats, null, 2));
-    console.log(`✅ Saved stats to ${statsFile} (totalVideos: ${videoIds.length})`);
+    console.log(`✅ Saved stats to ${statsFile} (totalVideos: ${totalVideosForStats})`);
 
     // Helper: chunk IDs into batches of 50 (API limit)
     function chunkArray(arr, size) {
@@ -201,9 +255,7 @@ async function fetchVideos() {
       const res = await youtubeApiFetch(batchUrl, accessToken);
       console.log(`📊 Videos API response status (batch ${i + 1}): ${res.status} ${res.statusText}`);
       if (!res.ok) {
-        const errorText = await res.text();
-        console.error('❌ Videos API error response:', errorText);
-        throw new Error(`YouTube API videos error: ${res.status} ${res.statusText}`);
+        await handleApiError(res, `Videos API batch ${i + 1}`);
       }
       const data = await res.json();
       const items = data.items || [];
@@ -279,7 +331,7 @@ async function fetchVideos() {
     const duration = (endTime - startTime) / 1000;
 
     console.log(`\n🎉 Successfully processed ${addedCount} new/updated videos`);
-    console.log(`🧾 Summary: total IDs=${totalIds}, toFetch=${idsToFetch.length}, skipped=${skippedCount}${refreshExisting ? ' (full refresh)' : ''}`);
+    console.log(`🧾 Summary: paged IDs=${totalIds}, toFetch=${idsToFetch.length}, skipped=${skippedCount}${refreshExisting ? ' (full refresh)' : ' (delta)'}`);
     console.log(`⏱️ Total execution time: ${duration.toFixed(2)} seconds`);
     console.log(`📊 Videos saved to: ${VIDEOS_DIR}`);
 
