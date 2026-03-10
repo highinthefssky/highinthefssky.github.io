@@ -1,7 +1,7 @@
 ---
 title: "Waving goodbye to Portugal, next stop Morocco"
 description: "Waving goodbye to Portugal, next stop Morocco"
-publishedAt: 2025-03-09
+publishedAt: 2025-03-10
 tags: ["community", "youtube"]
 draft: false
 ---
