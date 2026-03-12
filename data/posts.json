@@ -10,7 +10,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-12T02:32:18.175544Z"
+    "scraped_at": "2026-03-12T07:02:03.896691Z"
   },
   {
     "id": "Ugkx8Fx6n6-4XvD8F4VjzcrybMgvhAJc0TvF",
@@ -23,7 +23,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-12T02:32:18.175517Z"
+    "scraped_at": "2026-03-12T07:02:03.896664Z"
   },
   {
     "id": "UgkxmiK5VMGg4eh6jSK2I5RfWb6jexvt3X4j",
@@ -36,7 +36,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-12T02:32:18.175503Z"
+    "scraped_at": "2026-03-12T07:02:03.896650Z"
   },
   {
     "id": "UgkxMvdtTuS7W5_vNsN_HGod0QGqKyrWv5HS",
@@ -51,7 +51,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-12T02:32:18.175487Z"
+    "scraped_at": "2026-03-12T07:02:03.896636Z"
   },
   {
     "id": "UgkxQdtJXKkZGXh4a2xAiZAUfs8MXB7nnuAq",
@@ -64,7 +64,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-12T02:32:18.175471Z"
+    "scraped_at": "2026-03-12T07:02:03.896621Z"
   },
   {
     "id": "UgkxS27arD8NPP81fUl5jxCZUm2rPyfm8fmO",
@@ -79,7 +79,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-12T02:32:18.175458Z"
+    "scraped_at": "2026-03-12T07:02:03.896608Z"
   },
   {
     "id": "Ugkx06R89nL6evWknm0n0JUt8IrSLHn95pkq",
@@ -94,7 +94,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-12T02:32:18.175443Z"
+    "scraped_at": "2026-03-12T07:02:03.896579Z"
   },
   {
     "id": "UgkxNWwwP1pDEvdOhloNuwRrg8jr0oFJQ-ol",
@@ -109,7 +109,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-12T02:32:18.175412Z"
+    "scraped_at": "2026-03-12T07:02:03.896562Z"
   },
   {
     "id": "Ugkx2PjK6-XnqFTtTYUbj8PS_05OZCGRrgnA",
@@ -124,7 +124,33 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-12T02:32:18.175395Z"
+    "scraped_at": "2026-03-12T07:02:03.896546Z"
+  },
+  {
+    "id": "UgkxUXeq2uxruVJhYqqORZEC_1fFKTWBdLmY",
+    "text": "SHOW ME YOUR OFFICE! 🖥️✈️\n\n\"We spend hundreds of hours in these virtual skies, but I want to see where the magic happens on the ground!\n\nWith MSFS 2024 being so much more optimized for multi-thread CPUs, I’ve seen some of you upgrading to the latest RTX 50-series or the new VR headsets.\n\nDrop a photo of your flight sim setup in the comments! (Or describe it if you can't post images).\n\nAre you a VR enthusiast? 🥽\nMultiple monitor legend? 🖥️🖥️🖥️\nOr a simple laptop-and-joystick warrior? 💻",
+    "published_relative": "1 month ago",
+    "published_date": "2026-02-10",
+    "url": "https://www.youtube.com/post/UgkxUXeq2uxruVJhYqqORZEC_1fFKTWBdLmY",
+    "likes": "0",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-03-12T07:02:03.896511Z"
+  },
+  {
+    "id": "Ugkx2ste_g1sDI0Z-_3WSGTiS9HIxIeQttn3",
+    "text": "📊 We Need Your Input! 📊 \n\nHey, Flight Sim Enthusiasts! As we plan our next video, I want to hear from YOU! What topics are you most interested in? Please take a moment to reply to this thread with the video topics you would like to see. Your feedback is invaluable! 🗳️✨",
+    "published_relative": "1 year ago",
+    "published_date": "2025-03-12",
+    "url": "https://www.youtube.com/post/Ugkx2ste_g1sDI0Z-_3WSGTiS9HIxIeQttn3",
+    "likes": "0",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-03-12T07:02:03.896465Z"
   },
   {
     "id": "UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
@@ -139,33 +165,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-12T02:32:18.175357Z"
-  },
-  {
-    "id": "UgkxUXeq2uxruVJhYqqORZEC_1fFKTWBdLmY",
-    "text": "SHOW ME YOUR OFFICE! 🖥️✈️\n\n\"We spend hundreds of hours in these virtual skies, but I want to see where the magic happens on the ground!\n\nWith MSFS 2024 being so much more optimized for multi-thread CPUs, I’ve seen some of you upgrading to the latest RTX 50-series or the new VR headsets.\n\nDrop a photo of your flight sim setup in the comments! (Or describe it if you can't post images).\n\nAre you a VR enthusiast? 🥽\nMultiple monitor legend? 🖥️🖥️🖥️\nOr a simple laptop-and-joystick warrior? 💻",
-    "published_relative": "1 month ago",
-    "published_date": "2026-02-10",
-    "url": "https://www.youtube.com/post/UgkxUXeq2uxruVJhYqqORZEC_1fFKTWBdLmY",
-    "likes": "0",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-03-12T02:32:18.175259Z"
-  },
-  {
-    "id": "Ugkx2ste_g1sDI0Z-_3WSGTiS9HIxIeQttn3",
-    "text": "📊 We Need Your Input! 📊 \n\nHey, Flight Sim Enthusiasts! As we plan our next video, I want to hear from YOU! What topics are you most interested in? Please take a moment to reply to this thread with the video topics you would like to see. Your feedback is invaluable! 🗳️✨",
-    "published_relative": "1 year ago",
-    "published_date": "2025-03-12",
-    "url": "https://www.youtube.com/post/Ugkx2ste_g1sDI0Z-_3WSGTiS9HIxIeQttn3",
-    "likes": "0",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-03-12T02:32:18.175238Z"
+    "scraped_at": "2026-03-12T07:02:03.896301Z"
   },
   {
     "id": "UgzBC9JwmgBf4Tv2yRB4AaABCQ",
