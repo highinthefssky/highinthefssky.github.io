@@ -1,0 +1,29 @@
+{
+  "videoId": "GIKhP6gNPMg",
+  "title": "Aerosoft A340-600 WinCtrl Throttle Setup - Control All 4 Engines",
+  "description": "Is your WinWing URSA MINOR 32 Throttle not working with the Aerosoft A340-600 in MSFS 2024? If you are struggling to map 4 engines to your 2 levers or your detents aren't aligning properly, you aren't alone. In this quick guide, I show you exactly how to fix the \"4-engine mapping\" issue and calibrate your throttle for the newly released Aerosoft A340-600.\n\nWe dive deep into the essential profile duplication and axis settings that most pilots miss. Setting this correctly ensures a linear axis that Microsoft Flight Simulator can actually understand, preventing those frustrating throttle spikes or reversed flaps during departure.\n\nIn this video, we cover:\n\nEFB Joystick Settings: Why you MUST turn off when using it with the WinCTRL throttle\nMSFS 2024 Axis Mapping: Setting up Engine 1-2 and 3-4 on a dual-lever throttle.\nA340 Detent Calibration: How to use the Aerosoft tablet to sync your physical detents (CL, MCT, TOGA).\nTroubleshooting: Fixing the inverted flap axis and saving your calibration values correctly.\n\nStop fighting your hardware and start enjoying the realism of the URSA MINOR 32 Throttle Metal. I’ve even included my personal MSFS 2024 control profile below to save you the hassle of manual mapping!\n\n📥 DOWNLOAD MY MSFS CONTROL PROFILE:\nhttps://github.com/highinthefssky/msfs-2024-controls-settings or\nhttps://highintheflightsimsky.nl\n\n🛠️ HARDWARE USED:\nWinWing URSA MINOR 32 Throttle Metal\nWinWing URSA MINOR 32 PAC Metal Extension\n\n📖 Chapters: \n00:00 - Aerosoft A340-600 & WinWing/WinCtrl Intro\n00:24 - Required EFB joystick settings\n00:44 - Creating the 4-Engine Control Profile\n04:24 - Calibrating the throttles\n06:40 Recap & final thoughts\n\nIf this helped you get back in the skies, please hit the LIKE button and SUBSCRIBE for more MSFS 2024 hardware tutorials! ✈️\n\n🔔 Subscribe\nIf you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP\n\n🔗 Other related links\nTutorials: https://bit.ly/3l6fRdL\nWebsite: https://highintheflightsimsky.nl",
+  "thumbnail": "https://i.ytimg.com/vi/GIKhP6gNPMg/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/GIKhP6gNPMg/mqdefault.jpg",
+  "publishedAt": "2026-03-12T23:00:19.000Z",
+  "duration": 350,
+  "viewCount": 139,
+  "tags": [
+    "MSFS 2024",
+    "Aerosoft A340-600",
+    "WinWing URSA MINOR",
+    "WinCtrl",
+    "A340-600 Throttle Setup",
+    "Flight Sim Tutorial",
+    "Airbus A340 Calibration",
+    "Winwing MSFS 2024",
+    "4 Engine Throttle Mapping",
+    "Aerosoft A340 Release",
+    "High in the Flight Sim Sky",
+    "A340 Detents",
+    "MSFS Airbus Setup",
+    "Winwing Control Profile",
+    "Flight Simulator 2024",
+    "A340-600 Aerosoft Tutorial"
+  ],
+  "featured": false
+}
