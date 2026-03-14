@@ -35,7 +35,7 @@ See you all at 20:00 CET! Don't forget to set your reminders! 👇
 https://youtube.com/live/Abqo_nLgAWo
 
 Original post: https://www.youtube.com/post/Ugkx3F1Gj310_U0d0GSCTwh8JyZ0uFWTKlB1
-Likes: 2 | Comments: 0
+Likes: 3 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/KBpu-381BvBhoErCwusSU3N-1bGKiiYlK2GS7EOT4Vto8d8_3F1z1KjI58rMpc3TkGObbtRQ8RZ5fw=s1280)
