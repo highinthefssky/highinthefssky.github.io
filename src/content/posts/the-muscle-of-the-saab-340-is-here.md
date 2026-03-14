@@ -1,7 +1,7 @@
 ---
 title: "The \"Muscle\" of the Saab 340 is here"
 description: "The \"Muscle\" of the Saab 340 is here. 🇸🇪✈️  At 17:00 CET, Part 2 of our Saab 340 Masterclass goes live! Today, we’re moving past the airframe and diving deep in"
-publishedAt: 2026-03-13
+publishedAt: 2026-03-12
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -24,7 +24,7 @@ Question for the ramp: Do you prefer the quiet "Active Noise Control" of the 340
 Watch here at 17:00 CET: https://youtu.be/UwVWiujfxW0
 
 Original post: https://www.youtube.com/post/UgkxKAlu6Uo2trkM19QEs1kt7Y0FnbD42ySH
-Likes: 0 | Comments: 0
+Likes: 1 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/vNGEBh8-uFpPvsV3SwSkGnIg7baqEKVU4syRYWUVHs1PsCbRBR3qD_HuOF8lYkceaYBbh1PeTpaVyvk=s1280)
