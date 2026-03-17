@@ -1,7 +1,7 @@
 ---
 title: "🛫 Boarding Announcement: Destination MSFS 2024! 🌍"
-description: "🛫 Boarding Announcement: Destination MSFS 2024! 🌍 Attention, Flight Sim Enthusiasts!  This is your flight attendant speaking. We are pleased to announce that ca"
-publishedAt: 2025-03-15
+description: "🛫 Boarding Announcement: Destination MSFS 2024! 🌍 Attention, Flight Sim Enthusiasts!  The time has come to fasten your seatbelts and prepare for takeoff! 🛫 Our"
+publishedAt: 2025-03-16
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -9,7 +9,7 @@ draft: false
 🛫 Boarding Announcement: Destination MSFS 2024! 🌍
 Attention, Flight Sim Enthusiasts!
 
-This is your flight attendant speaking. We are pleased to announce that cargo and baggage loading has now started for our flight to the incredible world of Microsoft Flight Simulator 2024. Please ensure your virtual luggage is ready for loading and get ready for an unforgettable flight experience.
+The time has come to fasten your seatbelts and prepare for takeoff! 🛫 Our aircraft, bound for the incredible world of Microsoft Flight Simulator 2024, is ready for boarding. This is your captain speaking, inviting you to join us on this thrilling journey to the skies.
 
 🗓️ Departure Date: November 19th 🕒 Boarding Time: 17:00 CET / 08:00 PST / 11:00 EST
 
@@ -29,8 +29,8 @@ Don't miss out on this epic journey! Spread the word, invite your friends, and l
 
 See you on board!
 
-Original post: https://www.youtube.com/post/UgkxkEMXmGGmHMzU1u8Q7NMdkqAbw0AxKlgl
+Original post: https://www.youtube.com/post/UgkxHT21jtv_FPMjJ7S8f48-BM4G9eW6YnHQ
 Likes: 0 | Comments: 0
 
 Images:
-![](https://yt3.ggpht.com/WHnlNlHXkT1i-PlgH0QycmiHGH8rLjRAnkd2IjVdpSM_fu-JcbcnwgKnDfUfYROXMYIIK_mVupWlng=s1280)
+![](https://yt3.ggpht.com/pBITxrLfEBGYPJyc69KMxxTZJ28xi-b6MQdCuMKfOEANu-J2TRdJDI-ObhWWwaHGt28ujOUD7BV0tA=s1280)
