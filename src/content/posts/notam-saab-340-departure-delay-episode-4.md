@@ -34,7 +34,7 @@ Pilot’s Note: "A delayed video is eventually good, but a rushed video is forev
 We appreciate your patience while we cycle the breakers and get this bird back in the air. Stay tuned, keep your airspeeds up, and we’ll see you in the cockpit very soon!
 
 Original post: https://www.youtube.com/post/UgkxVgvjZwI4Dz7WiOwqej2K1G93EzdeQt3E
-Likes: 0 | Comments: 0
+Likes: 2 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/V6DhwlthXxNRBuKIGxMA-4RaQ7oDuXVfM8IxAcjne4pFt1AwBfFfxN7imVfexN9guZdp5ON-7cG0vg=s1280)
