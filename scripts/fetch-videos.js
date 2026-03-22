@@ -93,7 +93,10 @@ async function fetchVideos() {
     console.log('\n🚀 Starting video fetch process...');
 
     const refreshExisting = (process.env.REFRESH_EXISTING || '').toLowerCase() === 'true';
+    const forceSync = (process.env.FORCE_SYNC || '').toLowerCase() === 'true';
+    const minSyncIntervalHours = Number(process.env.MIN_SYNC_INTERVAL_HOURS || 20);
     console.log(`🔄 Refresh mode: ${refreshExisting ? 'full refresh' : 'delta (new only)'}`);
+    console.log(`⏱️ Minimum sync interval: ${minSyncIntervalHours} hour(s)${forceSync ? ' (force override enabled)' : ''}`);
 
     // Pre-load existing video IDs so delta-mode pagination can exit early
     const existingIds = fs.existsSync(VIDEOS_DIR)
@@ -106,14 +109,6 @@ async function fetchVideos() {
       : new Set();
     console.log(`📁 Found ${existingIds.size} existing video files`);
 
-    // Get access token if using OIDC
-    const accessToken = await getAccessToken();
-
-    // Get public IP for debugging
-    const publicIpResponse = await fetch('https://api.ipify.org?format=json').catch(() => null);
-    const publicIpData = publicIpResponse ? await publicIpResponse.json() : { ip: 'Unknown' };
-    console.log(`📍 Public IP: ${publicIpData.ip}`);
-
     // Read cached stats to restore fields not managed by this script (e.g. totalControllers)
     const statsFile = path.join(__dirname, '../src/content/stats.json');
     let cachedStats = {};
@@ -124,6 +119,30 @@ async function fetchVideos() {
         console.warn(`⚠️ Could not read cached stats: ${e.message}`);
       }
     }
+
+    // Guard against repeated manual retries consuming quota in the same window.
+    if (!refreshExisting && !forceSync && Number.isFinite(minSyncIntervalHours) && minSyncIntervalHours > 0 && cachedStats.updatedAt) {
+      const lastUpdatedAtMs = Date.parse(cachedStats.updatedAt);
+      if (!Number.isNaN(lastUpdatedAtMs)) {
+        const elapsedMs = Date.now() - lastUpdatedAtMs;
+        const minIntervalMs = minSyncIntervalHours * 60 * 60 * 1000;
+        if (elapsedMs < minIntervalMs) {
+          const remainingMs = minIntervalMs - elapsedMs;
+          const remainingMinutes = Math.ceil(remainingMs / (60 * 1000));
+          console.log(`🛑 Last sync was too recent (${cachedStats.updatedAt}). Skipping API calls to protect quota.`);
+          console.log(`⏳ Try again in ~${remainingMinutes} minute(s), or set FORCE_SYNC=true to override.`);
+          return;
+        }
+      }
+    }
+
+    // Get access token if using OIDC
+    const accessToken = await getAccessToken();
+
+    // Get public IP for debugging
+    const publicIpResponse = await fetch('https://api.ipify.org?format=json').catch(() => null);
+    const publicIpData = publicIpResponse ? await publicIpResponse.json() : { ip: 'Unknown' };
+    console.log(`📍 Public IP: ${publicIpData.ip}`);
 
     // Step 1: Get uploads playlist ID — use cached value in delta mode to save one quota unit
     let uploadsPlaylistId = cachedStats.uploadsPlaylistId || null;
