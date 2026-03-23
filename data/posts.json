@@ -10,7 +10,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-23T02:40:08.911655Z"
+    "scraped_at": "2026-03-23T07:17:16.472006Z"
   },
   {
     "id": "UgkxKQWVABcMdFNhG1lPuI1tWc64smRuLFYO",
@@ -23,20 +23,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-23T02:40:08.911627Z"
-  },
-  {
-    "id": "Ugkx8Fx6n6-4XvD8F4VjzcrybMgvhAJc0TvF",
-    "text": "✈️ LIVE: Friday the 13th — MSFS 2024 SU5 Beta first look!\n\nHey pilots! 👨‍✈️👩‍✈️\n\nIs it a lucky day or a cursed one? This Friday the 13th, we’re diving headfirst into the very first beta release of Sim Update 5 (SU5) for MSFS 2024. The timing is perfect—let's see if this update is a treat or if the bugs are still haunting us.\n\n🔍 The SU_05 \"Hit List\"\nWe’ll be stress-testing the specific fixes and improvements labeled for this update in the bug tracker. Here is our primary flight plan for the stream:\n\n- FPS & VRAM Performance: Investigating the ongoing VRAM bug and performance degradation (In Progress – SU_04 & SU_05).\n- Navigation & POIs: Hunting for the missing city and town names.\n- The \"Broccoli\" Problem: A deep dive into whether photogrammetry trees are still ruining the low-altitude experience.\n- View-Change Stutters: Does switching cameras still cause a hitch? We're putting it to the test.\n- Cessna C408 SkyCourier: Checking the condition levers to see if they are finally bindable for throttle quadrant users.\n\n🎥 What’s on the Agenda?\n- Live stress tests in high-density areas (London/NYC).\n- Direct comparisons between SU4 performance and the SU5 Beta.\n- Aircraft-specific bug checks (focusing on the C408).\n- Open Q&A: I’ll be taking your \"Does [X] work now?\" requests live!\n\n⏰ When we go wheels up\nJoin us this Friday, February 13th at:\n\n- 19:00 CET (Central Europe)\n- 18:00Z (UTC / Zulu)\n- 1:00 PM EST (New York)\n- 10:00 AM PST (Los Angeles)\n\nWhere: https://www.youtube.com/channel/UCyyc...\n\nIf you want to see if your top-voted issues are finally being addressed, or if you just want to hang out and talk aviation, don't miss this one.\n\nSee you in the skies! Bring your questions, your theories, and maybe a lucky charm. 🍀",
-    "published_relative": "1 month ago",
-    "published_date": "2026-02-21",
-    "url": "https://www.youtube.com/post/Ugkx8Fx6n6-4XvD8F4VjzcrybMgvhAJc0TvF",
-    "likes": "0",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-03-23T02:40:08.911612Z"
+    "scraped_at": "2026-03-23T07:17:16.471993Z"
   },
   {
     "id": "UgkxmiK5VMGg4eh6jSK2I5RfWb6jexvt3X4j",
@@ -49,7 +36,20 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-23T02:40:08.911597Z"
+    "scraped_at": "2026-03-23T07:17:16.471978Z"
+  },
+  {
+    "id": "Ugkx8Fx6n6-4XvD8F4VjzcrybMgvhAJc0TvF",
+    "text": "✈️ LIVE: Friday the 13th — MSFS 2024 SU5 Beta first look!\n\nHey pilots! 👨‍✈️👩‍✈️\n\nIs it a lucky day or a cursed one? This Friday the 13th, we’re diving headfirst into the very first beta release of Sim Update 5 (SU5) for MSFS 2024. The timing is perfect—let's see if this update is a treat or if the bugs are still haunting us.\n\n🔍 The SU_05 \"Hit List\"\nWe’ll be stress-testing the specific fixes and improvements labeled for this update in the bug tracker. Here is our primary flight plan for the stream:\n\n- FPS & VRAM Performance: Investigating the ongoing VRAM bug and performance degradation (In Progress – SU_04 & SU_05).\n- Navigation & POIs: Hunting for the missing city and town names.\n- The \"Broccoli\" Problem: A deep dive into whether photogrammetry trees are still ruining the low-altitude experience.\n- View-Change Stutters: Does switching cameras still cause a hitch? We're putting it to the test.\n- Cessna C408 SkyCourier: Checking the condition levers to see if they are finally bindable for throttle quadrant users.\n\n🎥 What’s on the Agenda?\n- Live stress tests in high-density areas (London/NYC).\n- Direct comparisons between SU4 performance and the SU5 Beta.\n- Aircraft-specific bug checks (focusing on the C408).\n- Open Q&A: I’ll be taking your \"Does [X] work now?\" requests live!\n\n⏰ When we go wheels up\nJoin us this Friday, February 13th at:\n\n- 19:00 CET (Central Europe)\n- 18:00Z (UTC / Zulu)\n- 1:00 PM EST (New York)\n- 10:00 AM PST (Los Angeles)\n\nWhere: https://www.youtube.com/channel/UCyyc...\n\nIf you want to see if your top-voted issues are finally being addressed, or if you just want to hang out and talk aviation, don't miss this one.\n\nSee you in the skies! Bring your questions, your theories, and maybe a lucky charm. 🍀",
+    "published_relative": "1 month ago",
+    "published_date": "2026-02-21",
+    "url": "https://www.youtube.com/post/Ugkx8Fx6n6-4XvD8F4VjzcrybMgvhAJc0TvF",
+    "likes": "0",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-03-23T07:17:16.471963Z"
   },
   {
     "id": "UgkxMvdtTuS7W5_vNsN_HGod0QGqKyrWv5HS",
@@ -64,7 +64,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-23T02:40:08.911581Z"
+    "scraped_at": "2026-03-23T07:17:16.471936Z"
   },
   {
     "id": "UgkxKAlu6Uo2trkM19QEs1kt7Y0FnbD42ySH",
@@ -79,7 +79,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-23T02:40:08.911548Z"
+    "scraped_at": "2026-03-23T07:17:16.471904Z"
   },
   {
     "id": "UgkxNWwwP1pDEvdOhloNuwRrg8jr0oFJQ-ol",
@@ -94,7 +94,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-23T02:40:08.911530Z"
+    "scraped_at": "2026-03-23T07:17:16.471890Z"
   },
   {
     "id": "UgkxQdtJXKkZGXh4a2xAiZAUfs8MXB7nnuAq",
@@ -107,7 +107,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-23T02:40:08.911511Z"
+    "scraped_at": "2026-03-23T07:17:16.471874Z"
   },
   {
     "id": "Ugkx3F1Gj310_U0d0GSCTwh8JyZ0uFWTKlB1",
@@ -122,7 +122,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-23T02:40:08.911493Z"
+    "scraped_at": "2026-03-23T07:17:16.471860Z"
   },
   {
     "id": "UgkxUXeq2uxruVJhYqqORZEC_1fFKTWBdLmY",
@@ -135,7 +135,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-23T02:40:08.911402Z"
+    "scraped_at": "2026-03-23T07:17:16.471797Z"
   },
   {
     "id": "Ugkx2ste_g1sDI0Z-_3WSGTiS9HIxIeQttn3",
@@ -148,7 +148,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-23T02:40:08.911379Z"
+    "scraped_at": "2026-03-23T07:17:16.471778Z"
   },
   {
     "id": "UgkxVgvjZwI4Dz7WiOwqej2K1G93EzdeQt3E",
@@ -163,7 +163,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-03-23T02:40:08.911180Z"
+    "scraped_at": "2026-03-23T07:17:16.471637Z"
   },
   {
     "id": "UgkxkqD_wr7zfYCtlx1RbzUE-aVhx3xKsZII",
