@@ -1,7 +1,7 @@
 ---
 title: "The TBM 930 \"Rocket\" drops TODAY at 17:00 (UTC+1)! 🛫"
 description: "The TBM 930 \"Rocket\" drops TODAY at 17:00 (UTC+1)! 🛫  We’re moving from the taxiway to the flight levels in today's episode. If you’ve ever struggled to keep th"
-publishedAt: 2026-01-23
+publishedAt: 2026-01-24
 tags: ["community", "youtube"]
 draft: false
 ---
