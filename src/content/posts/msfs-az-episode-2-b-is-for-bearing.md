@@ -1,7 +1,7 @@
 ---
 title: "✈️ MSFS A‑Z Episode 2: B is for Bearing! ✈️"
 description: "✈️ MSFS A‑Z Episode 2: B is for Bearing! ✈️  Our alphabetical journey through Microsoft Flight Simulator continues! Next week, we’re diving into one of the most"
-publishedAt: 2026-01-13
+publishedAt: 2026-01-24
 tags: ["community", "youtube"]
 draft: false
 ---
