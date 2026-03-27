@@ -1,7 +1,7 @@
 ---
 title: "🛫 Boarding has started: Destination MSFS 2024! 🌍"
 description: "🛫 Boarding has started: Destination MSFS 2024! 🌍  Attention, Flight Sim Enthusiasts!  This is your flight attendant speaking. We are pleased to announce that bo"
-publishedAt: 2025-03-26
+publishedAt: 2025-03-27
 tags: ["community", "youtube"]
 draft: false
 ---
