@@ -1,7 +1,7 @@
 ---
 title: "Stop floating the TBM 930! The series finale drops TODAY at 17:00 (CET)! 🛬🔥"
 description: "Stop floating the TBM 930! The series finale drops TODAY at 17:00 (CET)! 🛬🔥  We’re wrapping up six weeks in the left seat with the episode that ties everything"
-publishedAt: 2026-02-25
+publishedAt: 2026-02-26
 tags: ["community", "youtube"]
 draft: false
 ---
