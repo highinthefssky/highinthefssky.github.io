@@ -1,7 +1,7 @@
 ---
 title: "Flying parallel to the Portuguese coastline on my way to GMAD using the A320 V2"
 description: "Flying parallel to the Portuguese coastline on my way to GMAD using the A320 V2 with Easyjet livery"
-publishedAt: 2025-03-25
+publishedAt: 2025-03-30
 tags: ["community", "youtube"]
 draft: false
 ---
