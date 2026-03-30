@@ -1,7 +1,7 @@
 ---
 title: "🌟 Fun Fact Friday! 🌟"
 description: "🌟 Fun Fact Friday! 🌟   Did you know that MSFS 2024 now features enhanced physics with over 10,000 rigid-body surfaces? This means even more realistic flight dyn"
-publishedAt: 2025-03-29
+publishedAt: 2025-03-30
 tags: ["community", "youtube"]
 draft: false
 ---
