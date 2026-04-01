@@ -1,7 +1,7 @@
 ---
 title: "The Wheel of Fate has landed on"
 description: "The Wheel of Fate has landed on... VANCOUVER! 🎡✨  Tonight, we’re taking the Guimbal Cabri G2 for a spin through one of the most beautiful cities in the world. E"
-publishedAt: 2026-02-28
+publishedAt: 2026-03-02
 tags: ["community", "youtube"]
 draft: false
 ---
