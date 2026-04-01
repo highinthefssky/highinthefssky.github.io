@@ -1,7 +1,7 @@
 ---
 title: "✈️ LIVE: Friday the 13th — MSFS 2024 SU5 Beta first look!"
 description: "✈️ LIVE: Friday the 13th — MSFS 2024 SU5 Beta first look!  Hey pilots! 👨‍✈️👩‍✈️  Is it a lucky day or a cursed one? This Friday the 13th, we’re diving headfirst"
-publishedAt: 2026-03-01
+publishedAt: 2026-03-02
 tags: ["community", "youtube"]
 draft: false
 ---
