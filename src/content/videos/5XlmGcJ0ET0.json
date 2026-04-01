@@ -1,0 +1,33 @@
+{
+  "videoId": "5XlmGcJ0ET0",
+  "title": "STOP Guessing! Finally Master the A320 MCDU (D.I.F.S.R.I.P.)",
+  "description": "The A320 MCDU in Microsoft Flight Simulator 2024 is the missing link between \"guessing\" your way through a flight and operating the aircraft like a real-world airline pilot. In this MSFS 2024 A‑Z episode, you’ll learn why your flight plan gets \"discontinuities,\" how the amber and blue data fields actually work, and why the \"D.I.F.S.R.I.P.\" workflow is the industry secret to a perfect setup every time.\n\nMost simmers rely on a simple SimBrief import—but aviation computers don’t work that way. We break down the \"Anatomy of the Box\" and data entry logic, then demo how to program the course in MSFS 2024 (and MSFS 2020) using both the scratchpad and the FlyByWire EFB so you can fly your Airbus with real precision.\n\n✅ If this helped you master the MCDU, hit Like, Subscribe, and drop a comment: Which \"N\" topic should we cover next for the MSFS A‑Z series?\n\n🕒 Chapters\n0:00 - Introduction: M is for MCDU\n0:36 - The anatomy: key, colors and logic\n2:37 - Walkthrough MCDU: the D.I.F.S.R.I.P. workflow\n2:46 - D: Data\n6:43 - I: Init\n15:21 - F: Flight plan\n29:28 - S: Secondary flight plan\n30:31 - R: RAD NAV\n31:17 - I: Init B\n34:49 - P: Perf\n38:34 - The \"discontinuity\"\n41:12 - Other pages\n41:23 - Progress\n42:22 - Fuel prediction\n42:48 - ATC COMM\n44:55 - MCDU Menu\n45:57 - Airport\n46:29 - Recap and what to expect next?\n\n🔗 Resources & links\nIf you like this video please consider subscribing to my channel:\n👉 Subscribe: https://bit.ly/34eNWDP\n\nMSFS Tutorials Playlist:\n👉 MSFS Tutorials Playlist: https://bit.ly/3l6fRdL\n\n✈️ About This Series\nThe MSFS Alphabet is designed to help you become a better virtual pilot, one letter at a time. From Ailerons to Zero‑Fuel Weight, we break down the aviation concepts, physics, and systems every flight simmer should understand.",
+  "thumbnail": "https://i.ytimg.com/vi/5XlmGcJ0ET0/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/5XlmGcJ0ET0/mqdefault.jpg",
+  "publishedAt": "2026-03-31T15:00:08.000Z",
+  "duration": 2833,
+  "viewCount": 100,
+  "tags": [
+    "MSFS 2024",
+    "A320 MCDU",
+    "Microsoft Flight Simulator",
+    "FlyByWire",
+    "MCDU Secret",
+    "Airbus Tutorial",
+    "Flight Sim Tips",
+    "A320 Workflow",
+    "DIFSRIP",
+    "MSFS 2024 A320",
+    "Flight Planning",
+    "Pilot Guide",
+    "MCDU Mastery",
+    "FMC Tutorial",
+    "Airbus A320",
+    "Pro Simmer",
+    "MSFS A-Z",
+    "MFD",
+    "Flight Simulation",
+    "microsoft flight simulator"
+  ],
+  "featured": false
+}
