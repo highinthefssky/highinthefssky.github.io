@@ -30,4 +30,4 @@ Check your sub-feeds and notifications for the updated ATIS. We appreciate your 
 STAY VIGILANT. SEE YOU ON THE FLIGHT DECK LATER TODAY.
 
 Original post: https://www.youtube.com/post/Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX
-Likes: 1 | Comments: 0
+Likes: 2 | Comments: 0
