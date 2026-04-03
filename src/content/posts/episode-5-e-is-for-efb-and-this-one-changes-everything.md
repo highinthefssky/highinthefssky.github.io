@@ -1,7 +1,7 @@
 ---
 title: "Episode 5: \"E\" is for EFB — and this one CHANGES EVERYTHING"
 description: "Episode 5: \"E\" is for EFB — and this one CHANGES EVERYTHING. 📲🔥  The MSFS Alphabet just hit a major milestone. Forget “press fly” and hope for the best — in Mic"
-publishedAt: 2026-02-26
+publishedAt: 2026-02-02
 tags: ["community", "youtube"]
 draft: false
 ---
