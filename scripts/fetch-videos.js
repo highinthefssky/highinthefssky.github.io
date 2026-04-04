@@ -120,9 +120,12 @@ async function fetchVideos() {
 
     console.log(`📋 Uploads playlist ID: ${uploadsPlaylistId}`);
 
-    // Get videos from playlist (paginate all pages)
-    console.log('\n📡 Step 2: Fetching ALL playlist videos (paginated)...');
-    async function fetchAllPlaylistItems(playlistId) {
+    // Get videos from playlist
+    // In daily mode (non-refresh), only fetch the first 2 pages (100 most recent)
+    // since new uploads always appear at the top. Full pagination only for refresh.
+    const maxPages = refreshExisting ? Infinity : 2;
+    console.log(`\n📡 Step 2: Fetching playlist videos${refreshExisting ? ' (all pages)' : ' (last 2 pages)'}...`);
+    async function fetchAllPlaylistItems(playlistId, maxPages) {
       let pageToken = '';
       const allItems = [];
       let page = 1;
@@ -140,7 +143,10 @@ async function fetchVideos() {
         const items = data.items || [];
         console.log(`📦 Received ${items.length} items on page ${page}`);
         allItems.push(...items);
-        if (!data.nextPageToken) {
+        if (!data.nextPageToken || page >= maxPages) {
+          if (page >= maxPages && data.nextPageToken) {
+            console.log(`📄 Reached page limit (${maxPages}), stopping pagination`);
+          }
           break;
         }
         pageToken = data.nextPageToken;
@@ -149,7 +155,7 @@ async function fetchVideos() {
       return allItems;
     }
 
-    const playlistItems = await fetchAllPlaylistItems(uploadsPlaylistId);
+    const playlistItems = await fetchAllPlaylistItems(uploadsPlaylistId, maxPages);
     if (!playlistItems || playlistItems.length === 0) {
       console.log('⚠️ No videos found in uploads playlist');
       return; // Exit gracefully if no videos
@@ -175,11 +181,14 @@ async function fetchVideos() {
       console.log('✅ No new videos to import. Skipping details fetch.');
     }
 
-    // Save stats including total video count
+    // Save stats — use channel statistics.videoCount for the total (accurate even
+    // when we only paginated 2 pages), fall back to local file count.
+    const channelVideoCount = parseInt(channelData.items[0].statistics?.videoCount || 0);
+    const totalVideos = refreshExisting ? videoIds.length : (channelVideoCount || existingIds.size + idsToFetch.length);
     const statsFile = path.join(__dirname, '../src/content/stats.json');
-    const stats = { youtubeSubscribers: subscriberCount, totalVideos: videoIds.length, updatedAt: new Date().toISOString() };
+    const stats = { youtubeSubscribers: subscriberCount, totalVideos: totalVideos, updatedAt: new Date().toISOString() };
     fs.writeFileSync(statsFile, JSON.stringify(stats, null, 2));
-    console.log(`✅ Saved stats to ${statsFile} (totalVideos: ${videoIds.length})`);
+    console.log(`✅ Saved stats to ${statsFile} (totalVideos: ${totalVideos})`);
 
     // Helper: chunk IDs into batches of 50 (API limit)
     function chunkArray(arr, size) {

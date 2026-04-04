@@ -1,23 +1,19 @@
 /**
- * Cloudflare Worker: YouTube Live Status Proxy
+ * Cloudflare Worker: YouTube Live Status Checker
  * 
- * This worker securely proxies requests to the YouTube API,
- * keeping the API key hidden from the client.
+ * Checks if a YouTube channel is currently live by fetching the
+ * channel's /live page — uses ZERO YouTube API quota.
  * 
  * Environment Variables Required (set in Cloudflare Dashboard):
- * - YOUTUBE_API_KEY: Your YouTube Data API v3 key
  * - YOUTUBE_CHANNEL_ID: Your YouTube channel ID (starts with UC)
  * - ALLOWED_ORIGIN: Your website origin (e.g., https://highintheflightsimsky.nl)
  */
 
 // Cache key for KV storage
 const CACHE_KEY = 'live-status';
-// Cache TTL in seconds — only 1 YouTube API call per this interval,
-// regardless of how many visitors hit the worker.
-// At 100 quota units per search.list call and 10,000 daily quota:
-//   max safe calls = 10,000 / 100 = 100/day → ~every 15 minutes.
-//   Using 5 minutes (288 calls/day max → well within limit even with
-//   other API usage from fetch-videos workflows).
+// Cache TTL in seconds — limits how often we fetch the YouTube page.
+// Since this no longer costs API quota, 5 minutes is a comfortable interval
+// that balances responsiveness with polite scraping.
 const CACHE_TTL_SECONDS = 300; // 5 minutes
 
 export default {
@@ -79,8 +75,8 @@ export default {
 };
 
 /**
- * Get live status from KV cache, falling back to a fresh YouTube API call.
- * This ensures at most 1 API call per CACHE_TTL_SECONDS, regardless of traffic.
+ * Get live status from KV cache, falling back to a fresh check.
+ * This ensures at most 1 page fetch per CACHE_TTL_SECONDS, regardless of traffic.
  */
 async function getCachedLiveStatus(env, ctx) {
   // Try reading from KV cache first
@@ -91,7 +87,7 @@ async function getCachedLiveStatus(env, ctx) {
     }
   }
 
-  // Cache miss — call YouTube API
+  // Cache miss — check YouTube channel live page
   const liveStatus = await checkLiveStatus(env);
 
   // Store the result in KV with TTL so it auto-expires
@@ -106,41 +102,99 @@ async function getCachedLiveStatus(env, ctx) {
   return liveStatus;
 }
 
+/**
+ * Check if the channel is live by fetching the YouTube channel's /live page.
+ * 
+ * When a channel is streaming, youtube.com/channel/CHANNEL_ID/live serves a
+ * page containing the live video's metadata in embedded JSON (ytInitialPlayerResponse).
+ * When not live, the page either redirects to the channel's featured tab or
+ * shows the most recent VOD.
+ * 
+ * This approach uses ZERO YouTube Data API quota.
+ */
 async function checkLiveStatus(env) {
-  const { YOUTUBE_API_KEY, YOUTUBE_CHANNEL_ID } = env;
+  const { YOUTUBE_CHANNEL_ID } = env;
 
-  if (!YOUTUBE_API_KEY || !YOUTUBE_CHANNEL_ID) {
-    throw new Error('Missing environment variables');
+  if (!YOUTUBE_CHANNEL_ID) {
+    throw new Error('Missing YOUTUBE_CHANNEL_ID environment variable');
   }
 
-  const searchUrl = new URL('https://www.googleapis.com/youtube/v3/search');
-  searchUrl.searchParams.set('part', 'snippet');
-  searchUrl.searchParams.set('channelId', YOUTUBE_CHANNEL_ID);
-  searchUrl.searchParams.set('eventType', 'live');
-  searchUrl.searchParams.set('type', 'video');
-  searchUrl.searchParams.set('key', YOUTUBE_API_KEY);
-  searchUrl.searchParams.set('maxResults', '1');
+  const liveUrl = `https://www.youtube.com/channel/${YOUTUBE_CHANNEL_ID}/live`;
 
-  const response = await fetch(searchUrl.toString());
+  const response = await fetch(liveUrl, {
+    headers: {
+      // Request English to ensure consistent parsing of status text
+      'Accept-Language': 'en-US,en;q=0.9',
+      'User-Agent': 'Mozilla/5.0 (compatible; LiveStatusBot/1.0)',
+    },
+    redirect: 'follow',
+  });
 
   if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`YouTube API error: ${response.status} - ${errorText}`);
+    throw new Error(`YouTube page fetch error: ${response.status}`);
   }
 
-  const data = await response.json();
+  const html = await response.text();
 
-  if (data.items && data.items.length > 0) {
-    const liveVideo = data.items[0];
-    return {
-      isLive: true,
-      videoId: liveVideo.id.videoId,
-      title: liveVideo.snippet.title,
-      thumbnail: liveVideo.snippet.thumbnails?.medium?.url || null,
-    };
+  // Check for live indicators in the page's embedded JSON data.
+  // YouTube embeds a ytInitialPlayerResponse object that contains
+  // playability status and live streaming details.
+  const isLive = html.includes('"isLive":true') || 
+                 html.includes('"isLiveContent":true');
+
+  // If not live, also verify there's no "LIVE_STREAM_OFFLINE" indicator
+  // which appears when a stream just ended
+  if (!isLive || html.includes('"LIVE_STREAM_OFFLINE"')) {
+    // Double-check: also exclude premieres and ended streams
+    if (!isLive) {
+      return { isLive: false };
+    }
+    // isLiveContent can be true for ended streams; confirm with broadcastActiveStatus
+    if (!html.includes('"isLive":true')) {
+      return { isLive: false };
+    }
   }
 
-  return { isLive: false };
+  // Extract video ID from the canonical URL or og:url meta tag
+  // Pattern: /watch?v=VIDEO_ID
+  const videoIdMatch = html.match(/"videoId":\s*"([a-zA-Z0-9_-]{11})"/);
+  const videoId = videoIdMatch ? videoIdMatch[1] : null;
+
+  if (!videoId) {
+    // Page says live but we can't find a video ID — treat as not live
+    return { isLive: false };
+  }
+
+  // Extract the stream title from og:title meta tag
+  const titleMatch = html.match(/<meta\s+(?:name|property)="og:title"\s+content="([^"]*)"/) ||
+                     html.match(/<meta\s+content="([^"]*)"\s+(?:name|property)="og:title"/);
+  const title = titleMatch ? decodeHTMLEntities(titleMatch[1]) : 'Live now!';
+
+  // Extract thumbnail
+  const thumbMatch = html.match(/<meta\s+(?:name|property)="og:image"\s+content="([^"]*)"/) ||
+                     html.match(/<meta\s+content="([^"]*)"\s+(?:name|property)="og:image"/);
+  const thumbnail = thumbMatch ? thumbMatch[1] : null;
+
+  return {
+    isLive: true,
+    videoId,
+    title,
+    thumbnail,
+  };
+}
+
+/**
+ * Decode basic HTML entities in extracted text.
+ */
+function decodeHTMLEntities(text) {
+  return text
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&#x27;/g, "'")
+    .replace(/&#x2F;/g, '/');
 }
 
 function handleCORS(env) {
