@@ -1,9 +1,9 @@
-name: Refresh Videos Weekly
+name: Refresh Videos Monthly
 
 on:
   schedule:
-    # Run weekly on Monday at 03:00 UTC
-    - cron: '0 3 * * 1'
+    # Run monthly on the 1st at 03:00 UTC
+    - cron: '0 3 1 * *'
   workflow_dispatch:
 
 jobs:
@@ -68,7 +68,7 @@ jobs:
           echo "📋 Files to be committed:"
           git add src/content/videos/ src/content/stats.json src/content/playlists/
           git status --porcelain
-          git commit -m "chore: weekly refresh videos and playlists from YouTube API"
+          git commit -m "chore: monthly refresh videos and playlists from YouTube API"
           echo "🚀 Pulling remote changes and pushing..."
           git stash --include-untracked
           git pull --rebase

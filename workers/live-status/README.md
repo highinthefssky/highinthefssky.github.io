@@ -1,10 +1,14 @@
 # YouTube Live Status Worker
 
-A Cloudflare Worker that securely proxies requests to check if the YouTube channel is currently live streaming.
+A Cloudflare Worker that checks if the YouTube channel is currently live streaming by fetching the channel's `/live` page.
 
 ## Why a Worker?
 
-This keeps your YouTube API key secret. Instead of exposing the key in the browser, the website calls this worker, which then calls YouTube with the secret key.
+Browsers cannot reliably fetch YouTube pages due to CORS restrictions. This worker acts as a proxy that:
+- Fetches the channel's `/live` page server-side
+- Parses the live status, video ID, and title from the page HTML
+- Caches the result in Cloudflare KV (5-minute TTL) to avoid excessive requests
+- **Uses ZERO YouTube Data API quota** — no API key needed
 
 ## Setup Instructions
 
@@ -31,19 +35,18 @@ wrangler deploy
 
 ### 4. Add Secrets
 
-After deploying, add your YouTube credentials as secrets:
+After deploying, add your YouTube channel ID as a secret:
 
 ```bash
-wrangler secret put YOUTUBE_API_KEY
-# Paste your API key when prompted
-
 wrangler secret put YOUTUBE_CHANNEL_ID
 # Paste your channel ID (starts with UC) when prompted
 ```
 
-Alternatively, add them in the Cloudflare Dashboard:
+Alternatively, add it in the Cloudflare Dashboard:
 1. Go to Workers & Pages → highinthesky-live-status → Settings → Variables
-2. Add `YOUTUBE_API_KEY` and `YOUTUBE_CHANNEL_ID` as encrypted secrets
+2. Add `YOUTUBE_CHANNEL_ID` as an encrypted secret
+
+> **Note:** `YOUTUBE_API_KEY` is no longer required. If you previously set it, you can safely remove it.
 
 ### 5. Get Your Worker URL
 

@@ -17,6 +17,9 @@ ALLOW_LOCALHOST = "false"
 binding = "LIVE_STATUS_CACHE"
 id = "3762f5f3b6fc4c7d923f5dc93ef6ba2e"
 
-# The following secrets must be set via Cloudflare Dashboard or wrangler CLI:
-# - YOUTUBE_API_KEY
+# The following secret must be set via Cloudflare Dashboard or wrangler CLI:
 # - YOUTUBE_CHANNEL_ID
+#
+# Note: YOUTUBE_API_KEY is NO LONGER required for this worker.
+# Live detection now uses the channel's /live page (zero API quota).
+# If you previously set YOUTUBE_API_KEY as a secret, you can safely remove it.
