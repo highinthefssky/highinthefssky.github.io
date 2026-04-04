@@ -1,0 +1,14 @@
+{
+  "filename": "WinWingSim - UrsaMinor Throttle - Airliner - Airplanes controls.xml",
+  "controller": "WinWingSim",
+  "settingsType": "Airplanes controls",
+  "description": "Airplanes controls for WinWingSim - UrsaMinor Throttle - Airliner",
+  "aircraft": "UrsaMinor Throttle - Airliner",
+  "downloadUrl": "https://raw.githubusercontent.com/highinthefssky/msfs-2024-controls-settings/main/profiles/WinWingSim%20-%20UrsaMinor%20Throttle%20-%20Airliner%20-%20Airplanes%20controls.xml",
+  "tags": [
+    "WinWingSim",
+    "Ursa Minor",
+    "Airplane Controls",
+    "Airliner"
+  ]
+}

@@ -1,7 +1,7 @@
 ---
 title: "🛫 Upcoming Live Stream: Mastering Flight Planning in MSFS 2024! 🛫"
 description: "🛫 Upcoming Live Stream: Mastering Flight Planning in MSFS 2024! 🛫  Attention, Flight Sim Enthusiasts! 🌍✈️  I am excited to announce our next live stream, where"
-publishedAt: 2025-02-28
+publishedAt: 2025-03-02
 tags: ["community", "youtube"]
 draft: false
 ---

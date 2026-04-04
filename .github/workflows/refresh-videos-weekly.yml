@@ -2,9 +2,13 @@ name: Refresh Videos Monthly
 
 on:
   schedule:
-    # Run monthly on the 1st at 03:00 UTC
-    - cron: '0 3 1 * *'
+    # Run on the first Monday of each month at 10:00 UTC (after quota reset, avoids daily overlap)
+    - cron: '0 10 1-7 * 1'
   workflow_dispatch:
+
+concurrency:
+  group: youtube-fetch-videos
+  cancel-in-progress: false
 
 jobs:
   refresh-videos:
@@ -38,6 +42,8 @@ jobs:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ steps.auth.outputs.credentials_file_path }}
           YOUTUBE_CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
           REFRESH_EXISTING: "true"
+          FORCE_SYNC: "true"
+          MIN_SYNC_INTERVAL_HOURS: "0"
         run: node scripts/fetch-videos.js
 
       - name: Update playlists
