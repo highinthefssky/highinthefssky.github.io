@@ -2,8 +2,8 @@ name: Fetch Controller Configs
 
 on:
   schedule:
-    # Run weekly on Mondays at 00:00 UTC (configs change less frequently than videos)
-    - cron: '0 0 * * 1'
+    # Run weekly on Mondays at 11:00 UTC (staggered after quota reset and video fetch)
+    - cron: '0 11 * * 1'
   workflow_dispatch: # Allow manual trigger
   repository_dispatch:
     types: [controllers-updated] # Trigger from msfs-2024-controls-settings repo
