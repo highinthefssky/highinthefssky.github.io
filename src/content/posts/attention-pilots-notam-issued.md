@@ -1,7 +1,7 @@
 ---
 title: "ATTENTION PILOTS: NOTAM ISSUED"
 description: "ATTENTION PILOTS: NOTAM ISSUED ---------------------------------------------------------------------------------------------------------------------------------"
-publishedAt: 2026-04-03
+publishedAt: 2026-04-02
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -30,4 +30,4 @@ Check your sub-feeds and notifications for the updated ATIS. We appreciate your 
 STAY VIGILANT. SEE YOU ON THE FLIGHT DECK LATER TODAY.
 
 Original post: https://www.youtube.com/post/Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX
-Likes: 2 | Comments: 0
+Likes: 3 | Comments: 0
