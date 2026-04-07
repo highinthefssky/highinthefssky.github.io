@@ -1,7 +1,7 @@
 ---
 title: "🔴 INCOMING TRANSMISSION FROM HAWKINS"
 description: "🔴 INCOMING TRANSMISSION FROM HAWKINS... 🔴  krrrssshhh... Do you copy? The signal is faint, but the readings are off the charts. A gate has opened, and it’s blee"
-publishedAt: 2026-01-02
+publishedAt: 2026-01-07
 tags: ["community", "youtube"]
 draft: false
 ---
