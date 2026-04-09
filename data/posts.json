@@ -1,18 +1,5 @@
 [
   {
-    "id": "Ugkx0IVqBCaPcqZumvyUjCQiowaT-Qu2vf_T",
-    "text": "Question: You’re climbing through 18,000 feet. If you forget to hit the 'Standard' button on your altimeter, what happens to your Flight Level? ✈️⛰️",
-    "published_relative": "2 months ago",
-    "published_date": "2026-02-08",
-    "url": "https://www.youtube.com/post/Ugkx0IVqBCaPcqZumvyUjCQiowaT-Qu2vf_T",
-    "likes": "0",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-04-09T07:43:48.875427Z"
-  },
-  {
     "id": "UgkxkkPPfHs8NG_Q7_br-ZATx2gDiQs1eccT",
     "text": "With the 2026 Winter Olympics officially underway in Milan and Cortina, which airport is the most \"challenging\" choice for landing your team’s charter flight closest to the mountain events?",
     "published_relative": "1 month ago",
@@ -23,7 +10,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-04-09T07:43:48.875413Z"
+    "scraped_at": "2026-04-09T13:51:18.574858Z"
   },
   {
     "id": "UgkxQdtJXKkZGXh4a2xAiZAUfs8MXB7nnuAq",
@@ -36,7 +23,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-04-09T07:43:48.875292Z"
+    "scraped_at": "2026-04-09T13:51:18.574747Z"
   },
   {
     "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
@@ -49,7 +36,20 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-04-09T07:43:48.875205Z"
+    "scraped_at": "2026-04-09T13:51:18.574424Z"
+  },
+  {
+    "id": "Ugkx0IVqBCaPcqZumvyUjCQiowaT-Qu2vf_T",
+    "text": "Question: You’re climbing through 18,000 feet. If you forget to hit the 'Standard' button on your altimeter, what happens to your Flight Level? ✈️⛰️",
+    "published_relative": "2 months ago",
+    "published_date": "2026-02-08",
+    "url": "https://www.youtube.com/post/Ugkx0IVqBCaPcqZumvyUjCQiowaT-Qu2vf_T",
+    "likes": "0",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-04-09T07:43:48.875427Z"
   },
   {
     "id": "Ugkx6DRVUz60Zaddkr1VK_vGwaaXM-JS423Y",
