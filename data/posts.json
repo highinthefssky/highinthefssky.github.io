@@ -1,16 +1,33 @@
 [
   {
-    "id": "UgkxUXeq2uxruVJhYqqORZEC_1fFKTWBdLmY",
-    "text": "SHOW ME YOUR OFFICE! 🖥️✈️\n\n\"We spend hundreds of hours in these virtual skies, but I want to see where the magic happens on the ground!\n\nWith MSFS 2024 being so much more optimized for multi-thread CPUs, I’ve seen some of you upgrading to the latest RTX 50-series or the new VR headsets.\n\nDrop a photo of your flight sim setup in the comments! (Or describe it if you can't post images).\n\nAre you a VR enthusiast? 🥽\nMultiple monitor legend? 🖥️🖥️🖥️\nOr a simple laptop-and-joystick warrior? 💻",
+    "id": "Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
+    "text": "Episode 6: \"F\" is for Flight Director! 🎯\n\nThe Alphabet Challenge marches on — and today we’re tackling one of the most misunderstood tools in the cockpit.\n\nEver felt like the airplane was whispering instructions you couldn’t quite decode? That’s the Flight Director: the “ghost in the cockpit” guiding you toward professional, razor‑sharp flying. Whether you’re hand‑flying a SID in the 737 or following a GPS track in the G1000, mastering the FD is the key to flying with intention instead of reaction.\n\nTomorrow at 17:00 UTC+1, we’re pulling back the curtain on those magenta bars and showing you how to turn them into your best friend in the sky.\n\nWhat we’re covering:\n\n- The Logic Behind the Bars: What the FD is actually telling you.\n- FD vs Autopilot: Why one thinks and the other acts.\n- Aircraft Differences: V‑bars in the G1000, crosshairs in the 737, magenta magic in the A320.\n- Common Mistakes: How to stop “chasing the ghost” and start flying proactively.\n\nSix letters down, nineteen to go. Let’s keep climbing! ✈️🔥",
     "published_relative": "2 months ago",
     "published_date": "2026-02-13",
-    "url": "https://www.youtube.com/post/UgkxUXeq2uxruVJhYqqORZEC_1fFKTWBdLmY",
-    "likes": "0",
+    "url": "https://www.youtube.com/post/Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
+    "likes": "1",
     "comments": "0",
-    "images": null,
+    "images": [
+      "https://yt3.ggpht.com/P_kphVDnsrTPOvnjhy17Xej5yBTLDcaamQOSY4Mi4No3XkSYkU0NPVvUlx2mXdvoWAukq5rANWwdqg=s1280"
+    ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-04-14T13:54:25.064458Z"
+    "scraped_at": "2026-04-14T19:22:51.548322Z"
+  },
+  {
+    "id": "UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
+    "text": "🇸🇪🇺🇸 Incoming: The Saab 340 Mastery Series begins today!\n\nThe wait is almost over. Today at 17:00 (CET), we officially launch our deep-dive series into the Saab 340 for Microsoft Flight Simulator 2024.\n\nThis aircraft is a masterpiece of regional aviation, but it isn't your average turboprop. It’s a machine born from a unique partnership between Saab and Fairchild, utilizing military engineering techniques usually reserved for fighter jets.\n\nIn today’s series premiere, we’re covering:\n\n- The Transatlantic Alliance: Why this partnership was a gamble that defined the regional market .\n- Military DNA: How techniques from the JAS 39 Gripen, like rivetless diffusion bonding, changed everything .\n- The First Flight: Reliving the 1983 certification journey of the SF340 .The \"Frozen Controls\" \n- Fix: We troubleshoot the infamous Gust Lock so you can actually get off the ramp! \n\nIf you want to transition from a novice to a proficient operator of this Swedish-American hybrid, this is your starting point.Set your reminders for 17:00 CET!\n\nPoll: Which era of the Saab 340 are you most excited to fly?\n\n✈️ The 1980s \"SF340\" Golden Age\n🏔️ Modern-day regional hops (Loganair/REX)\n📦 Cargo & Freighter operationsSee you at the premiere!\n\n#MSFS2024 #Saab340 #FlightSim #Aviation #HighInTheFlightSimSky #ComingSoon",
+    "published_relative": "1 month ago",
+    "published_date": "2026-03-15",
+    "url": "https://www.youtube.com/post/UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
+    "likes": "3",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/IX3j9rwpksYlTAVmHhN2jy82hsHFtytdmWadVp1RLKSTN1hU3sdWAreuJoHFbvSiQrcb2WX0x4J5MYo=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-04-14T19:22:51.548285Z"
   },
   {
     "id": "UgkxVgvjZwI4Dz7WiOwqej2K1G93EzdeQt3E",
@@ -25,20 +42,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-04-14T13:54:25.064353Z"
-  },
-  {
-    "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
-    "text": "ATTENTION PILOTS: NOTAM ISSUED\n----------------------------------------------------------------------------------------------------------------------------------------\nNOTAM ID: SAAB-VIRTUAL-0340\nLOCATION: High in the flightsim sky Flight Operations\nEFFECTIVE: IMMEDIATELY\nSUBJECT: GROUND DELAY - SAAB 340 \"GETTING STARTED\" SERIES EP. 6\n\nSCHEDULE UPDATE:\nExpected Departure Clearance (EDC) for the Cold and Dark / Autopilot Tutorial has been pushed back by several hours due to unscheduled maintenance in the rendering bay. All systems are currently being cycled to ensure a smooth delivery.\n\nFLIGHT PLAN OVERVIEW:\nOnce wheels are up later today, this sortie will cover:\n\n- Pre-Flight: Comprehensive \"Cold and Dark\" procedures.\n- Walkthrough: Extended guided tour and technical explanation of the cockpit layout.\n- Departure: Standard takeoff procedures and climb-out.\n- Automation: In-depth guide to mastering Autopilot functionality for stable cruise operations.\n\nREMARKS:\nCheck your sub-feeds and notifications for the updated ATIS. We appreciate your patience while we clear these technical squawks.\n\nSTAY VIGILANT. SEE YOU ON THE FLIGHT DECK LATER TODAY.",
-    "published_relative": "11 days ago",
-    "published_date": "2026-04-03",
-    "url": "https://www.youtube.com/post/Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
-    "likes": "3",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-04-14T13:54:25.063929Z"
+    "scraped_at": "2026-04-14T19:22:51.548194Z"
   },
   {
     "id": "UgkxQdtJXKkZGXh4a2xAiZAUfs8MXB7nnuAq",
@@ -51,22 +55,33 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-04-14T13:54:25.063858Z"
+    "scraped_at": "2026-04-14T19:22:51.548124Z"
   },
   {
-    "id": "Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
-    "text": "Episode 6: \"F\" is for Flight Director! 🎯\n\nThe Alphabet Challenge marches on — and today we’re tackling one of the most misunderstood tools in the cockpit.\n\nEver felt like the airplane was whispering instructions you couldn’t quite decode? That’s the Flight Director: the “ghost in the cockpit” guiding you toward professional, razor‑sharp flying. Whether you’re hand‑flying a SID in the 737 or following a GPS track in the G1000, mastering the FD is the key to flying with intention instead of reaction.\n\nTomorrow at 17:00 UTC+1, we’re pulling back the curtain on those magenta bars and showing you how to turn them into your best friend in the sky.\n\nWhat we’re covering:\n\n- The Logic Behind the Bars: What the FD is actually telling you.\n- FD vs Autopilot: Why one thinks and the other acts.\n- Aircraft Differences: V‑bars in the G1000, crosshairs in the 737, magenta magic in the A320.\n- Common Mistakes: How to stop “chasing the ghost” and start flying proactively.\n\nSix letters down, nineteen to go. Let’s keep climbing! ✈️🔥",
-    "published_relative": "2 months ago",
-    "published_date": "2026-02-13",
-    "url": "https://www.youtube.com/post/Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
-    "likes": "1",
+    "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
+    "text": "ATTENTION PILOTS: NOTAM ISSUED\n----------------------------------------------------------------------------------------------------------------------------------------\nNOTAM ID: SAAB-VIRTUAL-0340\nLOCATION: High in the flightsim sky Flight Operations\nEFFECTIVE: IMMEDIATELY\nSUBJECT: GROUND DELAY - SAAB 340 \"GETTING STARTED\" SERIES EP. 6\n\nSCHEDULE UPDATE:\nExpected Departure Clearance (EDC) for the Cold and Dark / Autopilot Tutorial has been pushed back by several hours due to unscheduled maintenance in the rendering bay. All systems are currently being cycled to ensure a smooth delivery.\n\nFLIGHT PLAN OVERVIEW:\nOnce wheels are up later today, this sortie will cover:\n\n- Pre-Flight: Comprehensive \"Cold and Dark\" procedures.\n- Walkthrough: Extended guided tour and technical explanation of the cockpit layout.\n- Departure: Standard takeoff procedures and climb-out.\n- Automation: In-depth guide to mastering Autopilot functionality for stable cruise operations.\n\nREMARKS:\nCheck your sub-feeds and notifications for the updated ATIS. We appreciate your patience while we clear these technical squawks.\n\nSTAY VIGILANT. SEE YOU ON THE FLIGHT DECK LATER TODAY.",
+    "published_relative": "12 days ago",
+    "published_date": "2026-04-02",
+    "url": "https://www.youtube.com/post/Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
+    "likes": "3",
     "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/P_kphVDnsrTPOvnjhy17Xej5yBTLDcaamQOSY4Mi4No3XkSYkU0NPVvUlx2mXdvoWAukq5rANWwdqg=s1280"
-    ],
+    "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-04-14T07:53:49.054886Z"
+    "scraped_at": "2026-04-14T19:22:51.548099Z"
+  },
+  {
+    "id": "UgkxUXeq2uxruVJhYqqORZEC_1fFKTWBdLmY",
+    "text": "SHOW ME YOUR OFFICE! 🖥️✈️\n\n\"We spend hundreds of hours in these virtual skies, but I want to see where the magic happens on the ground!\n\nWith MSFS 2024 being so much more optimized for multi-thread CPUs, I’ve seen some of you upgrading to the latest RTX 50-series or the new VR headsets.\n\nDrop a photo of your flight sim setup in the comments! (Or describe it if you can't post images).\n\nAre you a VR enthusiast? 🥽\nMultiple monitor legend? 🖥️🖥️🖥️\nOr a simple laptop-and-joystick warrior? 💻",
+    "published_relative": "2 months ago",
+    "published_date": "2026-02-13",
+    "url": "https://www.youtube.com/post/UgkxUXeq2uxruVJhYqqORZEC_1fFKTWBdLmY",
+    "likes": "0",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-04-14T19:22:51.548066Z"
   },
   {
     "id": "UgkxNWwwP1pDEvdOhloNuwRrg8jr0oFJQ-ol",
@@ -155,21 +170,6 @@
     "video_id": null,
     "poll": null,
     "scraped_at": "2026-04-13T13:49:01.782148Z"
-  },
-  {
-    "id": "UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
-    "text": "🇸🇪🇺🇸 Incoming: The Saab 340 Mastery Series begins today!\n\nThe wait is almost over. Today at 17:00 (CET), we officially launch our deep-dive series into the Saab 340 for Microsoft Flight Simulator 2024.\n\nThis aircraft is a masterpiece of regional aviation, but it isn't your average turboprop. It’s a machine born from a unique partnership between Saab and Fairchild, utilizing military engineering techniques usually reserved for fighter jets.\n\nIn today’s series premiere, we’re covering:\n\n- The Transatlantic Alliance: Why this partnership was a gamble that defined the regional market .\n- Military DNA: How techniques from the JAS 39 Gripen, like rivetless diffusion bonding, changed everything .\n- The First Flight: Reliving the 1983 certification journey of the SF340 .The \"Frozen Controls\" \n- Fix: We troubleshoot the infamous Gust Lock so you can actually get off the ramp! \n\nIf you want to transition from a novice to a proficient operator of this Swedish-American hybrid, this is your starting point.Set your reminders for 17:00 CET!\n\nPoll: Which era of the Saab 340 are you most excited to fly?\n\n✈️ The 1980s \"SF340\" Golden Age\n🏔️ Modern-day regional hops (Loganair/REX)\n📦 Cargo & Freighter operationsSee you at the premiere!\n\n#MSFS2024 #Saab340 #FlightSim #Aviation #HighInTheFlightSimSky #ComingSoon",
-    "published_relative": "1 month ago",
-    "published_date": "2026-03-14",
-    "url": "https://www.youtube.com/post/UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
-    "likes": "3",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/IX3j9rwpksYlTAVmHhN2jy82hsHFtytdmWadVp1RLKSTN1hU3sdWAreuJoHFbvSiQrcb2WX0x4J5MYo=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-04-13T13:49:01.782075Z"
   },
   {
     "id": "Ugkx2PjK6-XnqFTtTYUbj8PS_05OZCGRrgnA",
