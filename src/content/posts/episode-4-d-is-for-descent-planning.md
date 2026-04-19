@@ -1,7 +1,7 @@
 ---
 title: "Episode 4: \"D\" is for descent planning! 📉"
 description: "Episode 4: \"D\" is for descent planning! 📉  The alphabet challenge continues! We’ve mastered Cold and Dark starts, and now we’re moving on to the letter D.  Ever"
-publishedAt: 2026-02-10
+publishedAt: 2026-02-18
 tags: ["community", "youtube"]
 draft: false
 ---
