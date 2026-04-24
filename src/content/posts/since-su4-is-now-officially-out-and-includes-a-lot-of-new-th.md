@@ -1,7 +1,7 @@
 ---
 title: "Since SU4 is now officially out and includes a lot of new things including the R"
 description: "Since SU4 is now officially out and includes a lot of new things including the Red Bull Air Race and the Boom XB-1 I think it is a good occasion to also restart"
-publishedAt: 2025-12-24
+publishedAt: 2025-12-25
 tags: ["community", "youtube"]
 draft: false
 ---
