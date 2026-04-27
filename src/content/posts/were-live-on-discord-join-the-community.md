@@ -1,7 +1,7 @@
 ---
 title: "🎉 We’re Live on Discord! Join the Community! 🚀"
 description: "🎉 We’re Live on Discord! Join the Community! 🚀  Hey everyone! I’ve just launched a Discord channel to bring our amazing community even closer together. Whether"
-publishedAt: 2025-08-29
+publishedAt: 2025-08-30
 tags: ["community", "youtube"]
 draft: false
 ---
