@@ -1,0 +1,24 @@
+{
+  "videoId": "fvyn5-lf7UQ",
+  "title": "RIP FSLTL: The End of Free Live Traffic (Do THIS Instead)",
+  "description": "The MSFS world just changed forever. As of April 30th, 2026, the FSLTL live traffic data feed has officially gone dark. If you’ve noticed your airports looking like ghost towns, you aren't alone—the FSLTL shutdown means we need new ways to get realistic AI traffic in MSFS 2024.  \n\nIn this comprehensive 2026 AI Traffic Guide, I’m breaking down the 5 best alternatives to FSLTL to ensure your Microsoft Flight Simulator 2024 experience remains as immersive as possible. We aren't just looking at \"replacements\"; we’re looking at significant upgrades in flight sim realism and AI traffic injection.\n\nWhy FSLTL changed and what it means for you:\n\n- While the FSLTL models remain the gold standard for VATSIM and IVAO users, the loss of the free FlightRadar24 API means \"set it and forget it\" live traffic needs a new home. We dive deep into:\n- The \"Old Reliable\": Why AIG (Alpha India Group) is still the best free MSFS traffic option if you have the storage space for the AIG AI Manager.\n- The Pro Setup: How PSXT + RealTraffic provides the most accurate gate-to-gate realism using real-time raw data.\n- The New Era: How BeyondATC and SayIntentions.AI are revolutionizing AI ATC and traffic flow to prevent \"go-arounds\" and SimConnect stutters.\n- Xbox & Casual: Looking at BravoAirspace ATG for a plug-and-play solution.\n\n📖 Chapters\n00:00 - The End of FSLTL: What Happened?\n00:36 - Don't Delete Your Models! (VATSIM Use)\n01:20 - AIG: The Best Free Replacement?\n02:19 - Step-by-Step: Installing AIG in 2026\n16:38 - Testing AIG: Performance & FPS Check\n21:29 - PSXT: The \"Real-World\" Pro Choice\n23:03 - Setting Up PSXT + Real Traffic\n27:57 - Stress Test: Busy Airport Realism\n32:46 - BravoAirspace: The Easiest Xbox Solution\n34:22 - BeyondATC: Next-Gen Traffic Flow\n35:54 - SayIntentions.AI: The Future of VFR Traffic\n37:02 - CRITICAL: Fix MSFS Stutters & Object Limits\n38:31 - Final Verdict: Which One Should You Buy?\n\nOptimization is Key:\nBeyond just installing new software, I’m showing you the exact MSFS 2024 configuration changes needed to avoid performance issues. If you've been experiencing \"stutters\" on short final, the tips at 37:02 are specifically for you.\n\n💬 Which traffic solution are you switching to? Let me know in the comments if you're sticking with freeware or moving to a subscription-based data model!\n\n🔔 Subscribe\nIf you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP\n\n🔗 Other related links\nAIG Manager: https://www.alpha-india.net/\nPSXT / RealTraffic: https://www.lekseecon.n\nBeyondATC: https://www.beyondatc.net/\nSayIntentions.AI: https://www.sayintentions.ai/\nATG airline traffic global: https://bravoairspace.net/\nMarketplace Updates Playlist: https://bit.ly/3l6fRdL\nWebsite: https://highintheflightsimsky.nl",
+  "thumbnail": "https://i.ytimg.com/vi/fvyn5-lf7UQ/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/fvyn5-lf7UQ/mqdefault.jpg",
+  "publishedAt": "2026-04-27T20:00:36.000Z",
+  "duration": 2398,
+  "viewCount": 1227,
+  "tags": [
+    "FSLTL Shutdown",
+    "Microsoft Flight Simulator 2024",
+    "BeyondATC vs FSLTL",
+    "AIG vs PSXT",
+    "MSFS Realism Mod",
+    "Best AI Traffic MSFS",
+    "Flight Sim News 2026.",
+    "life traffic",
+    "microsoft flight simulator",
+    "msfs addons",
+    "msfs"
+  ],
+  "featured": false
+}
