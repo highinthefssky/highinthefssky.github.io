@@ -1,7 +1,7 @@
 ---
 title: "✈️ MSFS A‑Z Episode 3: C is for Cold and Dark! ✈️"
 description: "✈️ MSFS A‑Z Episode 3: C is for Cold and Dark! ✈️  Our alphabetical journey through Microsoft Flight Simulator 2024 continues! Next week, we’re tackling the ult"
-publishedAt: 2026-02-01
+publishedAt: 2026-02-02
 tags: ["community", "youtube"]
 draft: false
 ---
