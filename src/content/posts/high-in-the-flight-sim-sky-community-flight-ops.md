@@ -1,7 +1,7 @@
 ---
 title: "🛫 High in the Flight Sim Sky — Community Flight Ops"
 description: "🛫 High in the Flight Sim Sky — Community Flight Ops Tomorrow we’re going full‑send into the unknown.   At 16:00 CET, the Discord bot will spool up, run its syst"
-publishedAt: 2026-03-03
+publishedAt: 2026-03-04
 tags: ["community", "youtube"]
 draft: false
 ---
