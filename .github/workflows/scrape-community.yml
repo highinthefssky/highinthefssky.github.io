@@ -13,10 +13,10 @@ on:
         required: false
         default: ''
 
-  # Run on push to main (optional, for testing)
+  # Run on push to master (optional, for testing)
   push:
     branches:
-      - main
+      - master
     paths:
       - 'scripts/scrape-community.py'
       - '.github/workflows/scrape-community.yml'
