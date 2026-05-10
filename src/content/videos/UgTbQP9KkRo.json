@@ -1,0 +1,28 @@
+{
+  "videoId": "UgTbQP9KkRo",
+  "title": "The injector era is over. My new MSFS 2024 traffic setup (FSLTL + AIG)",
+  "description": "The \"Great FSLTL Shutdown\" is officially here, and for many, the sim now feels empty. But while the FSLTL injector has moved to static-only traffic, your model libraries are still the best in the business.\n\nIn this video, I’m showing you why I’ve officially retired the external injector and how I’ve \"hijacked\" the native Microsoft Flight Simulator 2024 engine to do the work instead. By combining the FSLTL and AIG model libraries with MSFS 2024’s built-in FlightAware data, you can get moving, real-world airline traffic with 4K liveries and zero performance-heavy background apps.\n\nThe FSLTL Shutdown: Why the old way is gone and why that’s okay.\n- Native data: How MSFS 2024 uses FlightAware (and the truth about the delay).\n- The setup: Installing AIG AI Manager and FSLTL Base Models.\n- The folder trick: How to prioritize high-quality models (PMDG, FSLTL, AIG).\n- Real-Time comparison: Paris Charles de Gaulle (LFPG) test (FlightRadar24 vs. In-Sim).\n\n🕒 Chapters\n00:00 - Intro\n00:35 - The data truth: MSFS 2020 vs MSFS 2024\n01:25 - The setup: download and install AIG AI Manager and FSLTL\n02:09 - Installing models: FSLTL\n03:25 - Installing models: AIG\n06:46 - Marker 3\n10:18 - Marker 4\n11:21 - Marker 5\n12:08 - Marker 9\n13:25 - The Sync Struggle: How the data gap looks in-game\n22:49 - Marker 10\n23:39 - Which one would you chose? Realtime traffic vs delayed traffic FSLTL vs AIG\n\n🔗Links Mentioned:\nAIG AI Manager: https://www.alpha-india.net/software/\nFSLTL Models: https://fslivetrafficliveries.com/\nAIG models (Github): https://github.com/Samueleonard/AIG-ModelMatching-For-MSFS2024\nFSLTL models (Github): https://github.com/FSLiveTrafficLiveries/base/tree/main/fsltl-traffic-base\n\nAre you sticking with a hybrid setup like this, or moving to a payware injector? Let me know in the comments!\n\n🔔 If you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP 🔔 \n\nTutorials playlist: https://bit.ly/32nmUHH\nWebsite: https://highintheflightsimsky.nl\n\n#MSFS2024 #FSLTL #AIG #FlightSimulator #Aviation #MSFSTraffic #FlightAware",
+  "thumbnail": "https://i.ytimg.com/vi/UgTbQP9KkRo/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/UgTbQP9KkRo/mqdefault.jpg",
+  "publishedAt": "2026-05-09T20:00:13.000Z",
+  "duration": 1449,
+  "viewCount": 3218,
+  "tags": [
+    "msfs 2024 traffic",
+    "fsltl shutdown",
+    "fsltl alternative 2026",
+    "msfs 2024 live traffic fix",
+    "aig ai manager msfs 2024",
+    "msfs model matching guide",
+    "microsoft flight simulator 2024 realism",
+    "fsltl vs aig 2024",
+    "flightaware msfs 2024",
+    "how to fix generic planes msfs",
+    "msfs community folder trick",
+    "msfs traffic settings ultra",
+    "london heathrow msfs 2024",
+    "flybywire fsltl",
+    "real time online traffic msfs"
+  ],
+  "featured": false
+}
