@@ -1,11 +1,13 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import YouTubeBrandFeature from './YouTubeBrandFeature.astro';
 
 interface Props {
   video: CollectionEntry<'videos'>;
+  showBrandFeature?: boolean;
 }
 
-const { video } = Astro.props;
+const { video, showBrandFeature = true } = Astro.props;
 const { videoId, title, thumbnail, tags, duration, publishedAt, viewCount } = video.data;
 
 // Format duration helper
@@ -70,6 +72,7 @@ function formatViewCount(count: number): string {
     <div class="card-meta">
       <span class="publish-date">{formatDate(publishedAt)}</span>
       {viewCount > 0 && <span class="view-count">{formatViewCount(viewCount)}</span>}
+      {showBrandFeature && <YouTubeBrandFeature className="source-brand" />}
     </div>
 
     {tags.length > 0 && (
@@ -214,6 +217,10 @@ function formatViewCount(count: number): string {
 
   .view-count::before {
     content: '·';
+  }
+
+  .source-brand {
+    margin-left: 0.15rem;
   }
 
   .card-tags {

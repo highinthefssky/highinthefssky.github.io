@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import VideoCard from '../../components/VideoCard.astro';
+import YouTubeBrandFeature from '../../components/YouTubeBrandFeature.astro';
 
 export async function getStaticPaths() {
   const videos = await getCollection('videos');
@@ -177,6 +178,7 @@ const breadcrumbStructuredData = {
             <span class="meta-views">{formatViewCount(viewCount)}</span>
           </Fragment>
         )}
+        <YouTubeBrandFeature className="brand-feature" />
       </div>
 
       <div class="video-actions">
@@ -184,12 +186,9 @@ const breadcrumbStructuredData = {
           href={youtubeUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="btn btn-youtube"
+          class="btn btn-external"
         >
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5l6-3.5-6-3.5v7z" />
-          </svg>
-          Watch on YouTube
+          Open on YouTube
         </a>
         <button
           class="btn btn-fav detail-fav-btn"
@@ -320,6 +319,10 @@ const breadcrumbStructuredData = {
     margin-bottom: 1rem;
   }
 
+  .brand-feature {
+    margin-left: 0.15rem;
+  }
+
   .meta-sep {
     opacity: 0.5;
   }
@@ -346,13 +349,15 @@ const breadcrumbStructuredData = {
     font-family: inherit;
   }
 
-  .btn-youtube {
-    background: #ff0000;
-    color: #fff;
+  .btn-external {
+    background: var(--bg-input);
+    color: var(--text-heading);
+    border: 1px solid var(--border-accent);
   }
 
-  .btn-youtube:hover {
-    background: #cc0000;
+  .btn-external:hover {
+    border-color: var(--accent);
+    color: var(--accent);
     transform: translateY(-1px);
   }
 

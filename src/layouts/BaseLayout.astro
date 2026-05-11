@@ -15,7 +15,7 @@ interface Props {
   structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
 }
 
-const { title = 'High in the FlightSim Sky', description = 'YouTube Videos & Community Posts', image, imageAlt, ogType = 'website', canonical, noindex = false, structuredData } = Astro.props;
+const { title = 'High in the FlightSim Sky', description = 'Flight simulator videos, community posts, and curated learning resources', image, imageAlt, ogType = 'website', canonical, noindex = false, structuredData } = Astro.props;
 const siteTitle = title === 'High in the FlightSim Sky' ? title : `${title} | High in the FlightSim Sky`;
 const ogImage = image
   ? (image.startsWith('http') ? image : new URL(image, Astro.site).href)
@@ -145,7 +145,7 @@ const schemas = [
         <div class="footer-content">
           <div class="footer-section">
             <h3>High in the FlightSim Sky</h3>
-            <p>A YouTube video hub with community posts and search.</p>
+            <p>A flight sim video archive with community posts and search.</p>
           </div>
           <div class="footer-section">
             <h4>Navigation</h4>
@@ -163,7 +163,7 @@ const schemas = [
               <li><a href="/feed.xml">RSS Feed</a></li>
               <li><a href="/sitemap.xml">Sitemap</a></li>
               <li><a href="https://github.com/highinthefssky/highinthefssky.github.io">GitHub</a></li>
-              <li><a href="https://bit.ly/34eNWDP" target="_blank" rel="noopener noreferrer" class="youtube-link"><span class="youtube-icon">▶</span> YouTube Channel</a></li>
+              <li><a href="https://bit.ly/34eNWDP" target="_blank" rel="noopener noreferrer">YouTube Channel</a></li>
             </ul>
           </div>
         </div>
@@ -253,16 +253,6 @@ const schemas = [
   .footer-section a:hover {
     color: var(--accent);
     text-shadow: 0 0 8px rgba(125, 211, 252, 0.4);
-  }
-
-  .youtube-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-
-  .youtube-icon {
-    font-size: 0.9rem;
   }
 
   .footer-bottom {

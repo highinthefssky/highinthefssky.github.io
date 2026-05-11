@@ -1,0 +1,74 @@
+---
+interface Props {
+  className?: string;
+  href?: string;
+  label?: string;
+  size?: 'sm' | 'md' | 'lg';
+}
+
+const {
+  className = '',
+  href = 'https://bit.ly/34eNWDP',
+  label = 'Developed with YouTube',
+  size = 'md',
+} = Astro.props;
+
+const darkLogo = 'https://developers.google.com/static/youtube/images/developed-with-youtube-sentence-case-dark.png';
+const lightLogo = 'https://developers.google.com/static/youtube/images/developed-with-youtube-sentence-case-light.png';
+---
+
+<a
+  class={`yt-brand-feature yt-brand-feature--${size} ${className}`.trim()}
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={label}
+  title={label}
+>
+  <img class="logo-dark" src={darkLogo} alt={label} loading="lazy" decoding="async" />
+  <img class="logo-light" src={lightLogo} alt={label} loading="lazy" decoding="async" />
+</a>
+
+<style>
+  .yt-brand-feature {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    padding: 0.15rem;
+  }
+
+  .yt-brand-feature img {
+    width: auto;
+    height: 18px;
+    display: block;
+  }
+
+  .yt-brand-feature--sm img {
+    height: 16px;
+  }
+
+  .yt-brand-feature--lg img {
+    height: 24px;
+  }
+
+  .logo-light {
+    display: none;
+  }
+
+  :global(html.light) .yt-brand-feature .logo-dark {
+    display: block;
+  }
+
+  :global(html.light) .yt-brand-feature .logo-light {
+    display: none;
+  }
+
+  :global(html:not(.light)) .yt-brand-feature .logo-dark {
+    display: none;
+  }
+
+  :global(html:not(.light)) .yt-brand-feature .logo-light {
+    display: block;
+  }
+</style>

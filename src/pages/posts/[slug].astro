@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
+import YouTubeBrandFeature from '../../components/YouTubeBrandFeature.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -31,6 +32,7 @@ export async function getStaticPaths() {
 
 const { post, relatedPosts } = Astro.props;
 const { title, description, publishedAt, tags, image } = post.data;
+const isYoutubeSource = tags.some((tag) => tag.toLowerCase() === 'youtube');
 const { Content } = await post.render();
 const pageUrl = new URL(`/posts/${post.slug}/`, Astro.site).href;
 const postStructuredData = {
@@ -98,6 +100,7 @@ function formatDate(date: Date): string {
         <time datetime={publishedAt.toISOString()}>
           {formatDate(publishedAt)}
         </time>
+        {isYoutubeSource && <YouTubeBrandFeature className="brand-feature" />}
         {tags.length > 0 && (
           <div class="post-tags">
             {tags.map((tag) => (
@@ -164,6 +167,10 @@ function formatDate(date: Date): string {
     flex-wrap: wrap;
     color: var(--text-muted);
     font-size: 0.95rem;
+  }
+
+  .brand-feature {
+    margin-top: -0.05rem;
   }
 
   .post-tags {

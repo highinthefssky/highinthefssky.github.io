@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import YouTubeBrandFeature from '../components/YouTubeBrandFeature.astro';
 
 const allPlaylists = await getCollection('playlists');
 const allVideos = await getCollection('videos');
@@ -53,6 +54,7 @@ function formatTotalDuration(seconds) {
     <div class="playlists-header">
       <h1>Playlists</h1>
       <p>Curated video series to watch in order</p>
+      <YouTubeBrandFeature className="brand-feature" size="lg" />
     </div>
 
     {playlists.length === 0 && (
@@ -112,6 +114,10 @@ function formatTotalDuration(seconds) {
     color: var(--text-muted);
   }
 
+  .brand-feature {
+    margin-top: 0.65rem;
+  }
+
   .empty-state {
     text-align: center;
     padding: 4rem 1rem;
@@ -160,6 +166,13 @@ function formatTotalDuration(seconds) {
 
   .playlist-card:hover .card-thumb img {
     transform: scale(1.05);
+  }
+
+  .card-source-brand {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 2;
   }
 
   .card-count-badge {
