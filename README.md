@@ -50,6 +50,10 @@ YOUTUBE_CHANNEL_ID=your_channel_id
 
 # For live stream detection (via Cloudflare Worker)
 PUBLIC_LIVE_STATUS_URL=https://highinthesky-live-status.your-subdomain.workers.dev
+
+# Optional: hosted contact form (Google Forms example)
+PUBLIC_CONTACT_FORM_EMBED_URL=https://docs.google.com/forms/d/e/your-form-id/viewform?embedded=true
+PUBLIC_CONTACT_FORM_PUBLIC_URL=https://docs.google.com/forms/d/e/your-form-id/viewform
 ```
 
 See [workers/live-status/README.md](workers/live-status/README.md) for Cloudflare Worker setup instructions.
@@ -76,7 +80,7 @@ Visit `http://localhost:3000` to see your site.
 
 ## 📁 Project Structure
 
-```
+```text
 .
 ├── src/
 │   ├── components/           # Reusable UI components

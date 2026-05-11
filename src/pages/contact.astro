@@ -1,0 +1,283 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const defaultGoogleFormBaseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdKRHQ33Or6fm3jwIdzbgkKuGkBQBbIVtnlKsK1Ibx9u2XgmQ/viewform';
+const formEmbedUrl = import.meta.env.PUBLIC_CONTACT_FORM_EMBED_URL?.trim() || `${defaultGoogleFormBaseUrl}?embedded=true`;
+const formPublicUrl = import.meta.env.PUBLIC_CONTACT_FORM_PUBLIC_URL?.trim() || defaultGoogleFormBaseUrl;
+const hasHostedForm = formEmbedUrl.length > 0;
+const hasPublicFormLink = formPublicUrl.length > 0;
+---
+
+<BaseLayout
+  title="Contact"
+  description="Send a message to High in the FlightSim Sky"
+>
+  <div class="contact-page">
+    <section class="contact-hero">
+      <h1>Contact</h1>
+      <p>
+        Questions, collaboration ideas, feedback, or controller profile requests are welcome.
+      </p>
+    </section>
+
+    <section class="contact-grid">
+      <article class="contact-card">
+        <h2>Send a Message</h2>
+        <p class="card-intro">
+          Use the hosted form below and include enough context so I can help quickly.
+        </p>
+
+        {hasHostedForm && formPublicUrl && (
+          <p class="mobile-form-tip">
+            On mobile, if the embedded form feels cramped, <a href={formPublicUrl} target="_blank" rel="noopener noreferrer">open it in full screen</a>.
+          </p>
+        )}
+
+        {hasHostedForm ? (
+          <div class="embed-wrapper" role="region" aria-label="Contact form">
+            <iframe
+              src={formEmbedUrl}
+              title="Contact form"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="clipboard-write"
+            ></iframe>
+          </div>
+        ) : hasPublicFormLink ? (
+          <div class="public-form-cta">
+            <p>
+              Open the contact form in a new tab and submit your message there.
+            </p>
+            <a href={formPublicUrl} target="_blank" rel="noopener noreferrer" class="open-form-button">
+              Open Contact Form
+            </a>
+          </div>
+        ) : (
+          <div class="form-disabled">
+            <p>
+              Hosted contact form is not active yet. Add
+              <code>PUBLIC_CONTACT_FORM_EMBED_URL</code>
+              in your environment to enable it.
+            </p>
+            <p>
+              Works well with Tally or Google Forms embed links.
+            </p>
+          </div>
+        )}
+
+        {hasHostedForm && formPublicUrl && (
+          <p class="open-form-link">
+            Prefer full screen? <a href={formPublicUrl} target="_blank" rel="noopener noreferrer">Open the contact form in a new tab</a>.
+          </p>
+        )}
+      </article>
+
+      <aside class="contact-card contact-alt">
+        <h2>Other Ways to Reach Out</h2>
+        <ul>
+          <li>
+            <a href="https://discord.gg/J3tZyhceUM" target="_blank" rel="noopener noreferrer">Discord Community</a>
+          </li>
+          <li>
+            <a href="https://github.com/highinthefssky/highinthefssky.github.io/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a>
+          </li>
+          <li>
+            <a href="https://bit.ly/34eNWDP" target="_blank" rel="noopener noreferrer">YouTube Channel</a>
+          </li>
+        </ul>
+
+        <p class="privacy-note">
+          Please avoid sharing passwords, API keys, or payment information through contact forms.
+        </p>
+      </aside>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .contact-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .contact-hero {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+    color: var(--text-heading);
+  }
+
+  .contact-hero p {
+    color: var(--text-muted);
+    max-width: 70ch;
+    line-height: 1.7;
+  }
+
+  .contact-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .contact-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.16);
+  }
+
+  .contact-card h2 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    color: var(--text-heading);
+  }
+
+  .card-intro {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .embed-wrapper {
+    --form-embed-height: 1069px;
+    border: 1px solid var(--border-input);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: var(--bg-input);
+    min-height: var(--form-embed-height);
+  }
+
+  .embed-wrapper iframe {
+    border: 0;
+    width: 100%;
+    height: var(--form-embed-height);
+    background: transparent;
+  }
+
+  .form-disabled {
+    border: 1px dashed var(--border-default);
+    border-radius: 0.6rem;
+    padding: 1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  .form-disabled code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+  }
+
+  .public-form-cta {
+    border: 1px solid var(--border-input);
+    border-radius: 0.75rem;
+    background: var(--bg-input);
+    padding: 1rem;
+  }
+
+  .public-form-cta p {
+    margin-top: 0;
+    margin-bottom: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  .open-form-button {
+    display: inline-block;
+    border: none;
+    border-radius: 0.6rem;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0b1e33;
+    text-decoration: none;
+    background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .open-form-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 28px rgba(56, 189, 248, 0.28);
+  }
+
+  .open-form-link {
+    color: var(--text-muted);
+    margin-top: 0.85rem;
+    line-height: 1.7;
+  }
+
+  .open-form-link a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .open-form-link a:hover {
+    text-decoration: underline;
+  }
+
+  .mobile-form-tip {
+    display: none;
+    margin-top: -0.35rem;
+    margin-bottom: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  .mobile-form-tip a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .mobile-form-tip a:hover {
+    text-decoration: underline;
+  }
+
+  .contact-alt ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-alt li {
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-alt a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .contact-alt a:hover {
+    text-decoration: underline;
+  }
+
+  .privacy-note {
+    color: var(--text-muted);
+    margin-top: 1.25rem;
+    border-top: 1px solid var(--border-default);
+    padding-top: 1rem;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .embed-wrapper {
+      --form-embed-height: 1220px;
+    }
+
+    .mobile-form-tip {
+      display: block;
+    }
+  }
+</style>
