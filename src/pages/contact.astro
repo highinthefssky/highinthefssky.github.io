@@ -74,6 +74,10 @@ const hasPublicFormLink = formPublicUrl.length > 0;
 
       <aside class="contact-card contact-alt">
         <h2>Other Ways to Reach Out</h2>
+        <p class="contact-note">
+          For privacy policy questions or YouTube API compliance questions,
+          please use the contact form on this page.
+        </p>
         <ul>
           <li>
             <a href="https://discord.gg/J3tZyhceUM" target="_blank" rel="noopener noreferrer">Discord Community</a>
@@ -243,6 +247,12 @@ const hasPublicFormLink = formPublicUrl.length > 0;
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+
+  .contact-note {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1rem;
   }
 
   .contact-alt li {
