@@ -17,19 +17,57 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         disclosure of personal data when you use our Service and the choices
         you have associated with that data.
       </p>
+      <p>
+        This website uses YouTube API Services and embedded YouTube players to
+        display channel videos, playlists, and related content.
+      </p>
     </section>
 
     <section>
-      <h2>Data Collection</h2>
+      <h2>YouTube API Services Disclosure</h2>
+      <p>
+        In addition to our own privacy procedures, we utilize YouTube API
+        Services. Users can learn more about how Google manages data by
+        visiting the <a href="https://www.google.com/policies/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.
+      </p>
+      <p>
+        By using this website, you may interact with YouTube content and
+        services that are governed by the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener noreferrer">YouTube Terms of Service</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Data Collection and Processing</h2>
       <p>
         Our website is a static site hosted on GitHub Pages. We do not collect
         personal information directly. However:
       </p>
       <ul>
         <li>
-          <strong>YouTube Data:</strong> We display videos from YouTube using
-          the YouTube API. Please review YouTube's privacy policy for how they
-          handle your data.
+          <strong>YouTube content metadata:</strong> We use YouTube API Services
+          to retrieve and display public channel information such as video
+          titles, video IDs, descriptions, thumbnails, publication dates, view
+          counts, playlists, and live-status information.
+        </li>
+        <li>
+          <strong>How we use that data:</strong> We use this information only to
+          build and display the public pages of this website, including video
+          archives, playlists, embeds, search, and related content discovery.
+        </li>
+        <li>
+          <strong>How we share that data:</strong> We do not sell or share
+          YouTube API data with external parties for independent marketing or
+          analytics purposes. The content is displayed on this public website,
+          hosted on GitHub Pages, and embedded video playback is provided by
+          YouTube.
+        </li>
+        <li>
+          <strong>User data from YouTube interactions:</strong> We do not
+          collect or store personal information from visitors through YouTube
+          API Services. However, when you load pages containing embedded
+          YouTube players or YouTube-linked content, Google or YouTube may
+          receive technical data such as your IP address, browser information,
+          and interaction data as part of normal service operation.
         </li>
         <li>
           <strong>GitHub Pages:</strong> Hosting is provided by GitHub. Review
@@ -38,11 +76,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <li>
           <strong>Third-party Analytics:</strong> If implemented, we use
           analytics services to understand usage patterns.
-        </li>
-        <li>
-          <strong>Learning Track Progress:</strong> If you use Learning Tracks,
-          we store lesson completion state in your browser's local storage on
-          your device only. This data is not sent to our servers.
         </li>
         <li>
           <strong>Contact Form:</strong> If enabled, form submissions are
@@ -54,12 +87,40 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
 
     <section>
-      <h2>Cookies</h2>
+      <h2>Cookies and Local Storage</h2>
       <p>
-        Our website does not use cookies to collect personal information. Your
-        browser may store cookies for site preferences, but we do not set
-        tracking cookies.
+        Our website does not set any cookies. We do not use tracking cookies.
+        Embedded YouTube players and other external services may set their own
+        cookies subject to their own policies.
       </p>
+      <p>
+        We use your browser's built-in <strong>localStorage</strong> and
+        <strong>sessionStorage</strong> to save preferences on your device only.
+        This data is never transmitted to our servers. Specifically:
+      </p>
+      <ul>
+        <li>
+          <strong>Theme preference</strong> (<code>theme</code>): Stores your
+          light/dark mode choice so it persists across visits.
+        </li>
+        <li>
+          <strong>Favourite videos</strong> (<code>fav-videos</code>) and
+          <strong>favourite controller configs</strong> (<code>fav-configs</code>):
+          Stores the IDs of items you have bookmarked on the Favourites page.
+          This data stays on your device and is cleared if you clear your
+          browser data or use the "Clear all favourites" button on that page.
+        </li>
+        <li>
+          <strong>Learning Track progress</strong>: Stores lesson completion
+          state per track so your progress is remembered between visits.
+        </li>
+        <li>
+          <strong>Live banner dismissal</strong>: Uses sessionStorage to
+          remember that you have dismissed the live stream notification banner
+          for the current browser session. This clears automatically when you
+          close the tab.
+        </li>
+      </ul>
     </section>
 
     <section>
@@ -90,13 +151,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <section>
       <h2>Contact Us</h2>
       <p>
-        If you have questions about this Privacy Policy, please use our
-        <a href="/contact">Contact page</a> or open an issue on our GitHub
-        repository.
+        If you have questions about this Privacy Policy, our use of YouTube API
+        Services, or your data, please use our <a href="/contact">Contact page</a>.
+      </p>
+      <p>
+        You can also open an issue on our GitHub repository if your request is
+        appropriate for a public discussion.
       </p>
     </section>
 
-    <p><strong>Last Modified:</strong> February 2026</p>
+    <p><strong>Last Modified:</strong> May 2026</p>
   </div>
 </BaseLayout>
 
@@ -128,6 +192,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .policy-page p {
     color: var(--text-muted);
     margin-bottom: 1rem;
+  }
+
+  .policy-page a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .policy-page a:hover {
+    text-decoration: underline;
   }
 
   .policy-page ul {
