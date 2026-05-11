@@ -1,12 +1,15 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import YouTubeBrandFeature from './YouTubeBrandFeature.astro';
 
 interface Props {
   post: CollectionEntry<'posts'>;
+  showBrandFeature?: boolean;
 }
 
-const { post } = Astro.props;
+const { post, showBrandFeature = true } = Astro.props;
 const { title, description, tags, publishedAt } = post.data;
+const isYoutubeSource = tags.some((tag) => tag.toLowerCase() === 'youtube');
 
 // Format date helper
 function formatDate(date: Date): string {
@@ -39,6 +42,8 @@ function getPreview(content: string, maxLength = 180): string {
   </div>
 
   <p class="card-description">{description}</p>
+
+  {showBrandFeature && isYoutubeSource && <YouTubeBrandFeature className="source-brand" />}
 
   <div class="card-footer">
     {tags.length > 0 && (
@@ -98,6 +103,10 @@ function getPreview(content: string, maxLength = 180): string {
     color: #4b5563;
     margin: 0 0 1rem;
     line-height: 1.6;
+  }
+
+  .source-brand {
+    margin: -0.35rem 0 0.8rem;
   }
 
   .card-footer {

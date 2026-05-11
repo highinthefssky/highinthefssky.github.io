@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import YouTubeBrandFeature from './YouTubeBrandFeature.astro';
 
 interface Props {
   videos: CollectionEntry<'videos'>[];
@@ -30,6 +31,7 @@ const latestVideos = videos
                   fetchpriority={index === 0 ? 'high' : 'auto'}
                   class="slide-image"
                 />
+                <YouTubeBrandFeature className="slide-brand" />
                 <div class="slide-overlay">
                   <h3 class="slide-title">{video.data.title}</h3>
                   <button class="play-button">
@@ -130,6 +132,22 @@ const latestVideos = videos
     object-fit: cover;
   }
 
+  .slide-brand {
+    position: absolute;
+    top: 0.55rem;
+    left: 0.55rem;
+    z-index: 3;
+    padding: 0.35rem 0.5rem;
+    border-radius: 999px;
+    background: #0b1e33;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+  }
+
+  :global(html.light) .slide-brand {
+    background: #ffffff;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+  }
+
   .slide-overlay {
     position: absolute;
     top: 0;
@@ -152,7 +170,8 @@ const latestVideos = videos
   }
 
   .slide-link:hover .slide-overlay,
-  .slide-link:focus .slide-overlay {
+  .slide-link:focus .slide-overlay,
+  .slide-link:focus-visible .slide-overlay {
     opacity: 1;
   }
 

@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import VideoCard from '../components/VideoCard.astro';
 import KeyboardShortcuts from '../components/KeyboardShortcuts.astro';
+import YouTubeBrandFeature from '../components/YouTubeBrandFeature.astro';
 import stats from '../content/stats.json';
 
 const allVideos = await getCollection('videos');
@@ -28,6 +29,7 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
       <p>
         Explore {totalVideos} videos from the channel
       </p>
+      <YouTubeBrandFeature className="brand-feature" size="lg" />
     </div>
 
     <div class="search-controls">
@@ -84,7 +86,7 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
     <div class="search-results">
       <div class="videos-grid" id="videos-grid">
         {sortedVideos.map((video) => (
-          <VideoCard video={video} />
+          <VideoCard video={video} showBrandFeature={false} />
         ))}
       </div>
 
@@ -128,6 +130,10 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
   .videos-header p {
     font-size: 1.125rem;
     color: var(--text-muted);
+  }
+
+  .brand-feature {
+    margin-top: 0.65rem;
   }
 
   .search-controls {

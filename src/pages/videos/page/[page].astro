@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import VideoCard from '../../../components/VideoCard.astro';
+import YouTubeBrandFeature from '../../../components/YouTubeBrandFeature.astro';
 
 export async function getStaticPaths() {
   const allVideos = await getCollection('videos');
@@ -53,11 +54,12 @@ const { page, totalPages, videos, pageWindow } = Astro.props;
       <p>
         Page {page} of {totalPages}
       </p>
+      <YouTubeBrandFeature className="brand-feature" size="lg" />
     </div>
 
     <div class="videos-grid">
       {videos.map((video) => (
-        <VideoCard video={video} />
+        <VideoCard video={video} showBrandFeature={false} />
       ))}
     </div>
 
@@ -129,6 +131,10 @@ const { page, totalPages, videos, pageWindow } = Astro.props;
   .videos-header p {
     font-size: 1.125rem;
     color: var(--text-muted);
+  }
+
+  .brand-feature {
+    margin-top: 0.65rem;
   }
 
   .videos-grid {
