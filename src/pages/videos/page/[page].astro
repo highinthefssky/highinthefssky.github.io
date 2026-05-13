@@ -47,7 +47,7 @@ export async function getStaticPaths() {
 const { page, totalPages, videos, pageWindow } = Astro.props;
 ---
 
-<BaseLayout title={`Videos - Page ${page}`} description="Browse all videos">
+<BaseLayout title={`Videos - Page ${page}`} description={`Browse page ${page} of the Microsoft Flight Simulator video library with searchable tutorials, flight recordings, and practical sim guidance.`}>
   <div class="videos-page">
     <div class="videos-header">
       <h1>All Videos</h1>
