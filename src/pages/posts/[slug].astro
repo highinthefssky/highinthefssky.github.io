@@ -34,6 +34,27 @@ const { post, relatedPosts } = Astro.props;
 const { title, description, publishedAt, tags, image } = post.data;
 const isYoutubeSource = tags.some((tag) => tag.toLowerCase() === 'youtube');
 const { Content } = await post.render();
+
+function normalizeMetaDescription(baseDescription: string, postTitle: string, postTags: string[]): string {
+  const clean = baseDescription.trim().replace(/\s+/g, ' ');
+  const fallback = `${postTitle} on High in the FlightSim Sky: Microsoft Flight Simulator updates, tips, and community discussion.`;
+  const source = clean || fallback;
+
+  let candidate = source;
+  if (candidate.length < 140) {
+    const tagSnippet = postTags.length > 0 ? ` Topics: ${postTags.slice(0, 3).join(', ')}.` : '';
+    candidate = `${candidate} Read this Microsoft Flight Simulator community post for practical insights and channel updates.${tagSnippet}`;
+  }
+
+  if (candidate.length > 160) {
+    return `${candidate.slice(0, 157).trimEnd()}...`;
+  }
+
+  return candidate;
+}
+
+const metaDescription = normalizeMetaDescription(description, title, tags);
+
 const pageUrl = new URL(`/posts/${post.slug}/`, Astro.site).href;
 const postStructuredData = {
   '@context': 'https://schema.org',
@@ -92,7 +113,7 @@ function formatDate(date: Date): string {
 }
 ---
 
-<BaseLayout title={title} description={description} ogType="article" image={image} imageAlt={`${title} post cover image`} structuredData={[postStructuredData, breadcrumbStructuredData]}>
+<BaseLayout title={title} description={metaDescription} ogType="article" image={image} imageAlt={`${title} post cover image`} structuredData={[postStructuredData, breadcrumbStructuredData]}>
   <article class="post-page">
     <div class="post-header">
       <h1 class="post-title">{title}</h1>
