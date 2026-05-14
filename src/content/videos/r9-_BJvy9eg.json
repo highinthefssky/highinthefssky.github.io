@@ -1,0 +1,33 @@
+{
+  "videoId": "r9-_BJvy9eg",
+  "title": "MSFS 2020: How to get real live traffic & liveries (No Injectors Needed!)",
+  "description": "We’ve all seen it: you load into a major hub like Heathrow or JFK, only to be greeted by a \"ghost town\" of generic, pointy-nosed white planes. It kills the immersion instantly. While external injectors work, they eat up your CPU and are a pain to launch every flight.\n\nIn this video, I show you how to \"hijack\" the MSFS 2020 engine to get 100% free, branded traffic using the \"Priority Folder\" trick. By providing the sim with high-quality models from FSLTL and AIG, we let the sim do the heavy lifting itself using native FlightAware data. No extra programs to run, just pure immersion.\n\nIn this video:\n- Why default MSFS data is actually good (but the models are bad).\n- How to install FSLTL and AIG models correctly.\n- The \"Secret Sauce\": Using the priority folder trick to force the sim to use the best liveries.\n- Side-by-side performance tests: loading times.\n- Live verification at London Heathrow (EGLL).\n\n🕒 Chapters\nChapters:\n0:00 - Intro\n0:53 - The context: Why default traffic \"almost\" works\n1:27 - The setup: \"The Big Two\"\n2:08 - FSLTL: Installing the models\n4:13 - AIG: Installing the models\n8:43 - Performance testing: Starting MSFS - default vs FSLTL vs AIG\n11:34 - Performance testing: Spawning into EGLL - default vs FSLTL vs AIG\n13:17 - The \"secret sauce\": The folder trick\n14:44 - MSFS 2020: Sim Configuration\n15:51 - The Proof: Comparison & delay test\n22:33 - The shortcut: Github is your friend\n\n📂 Default MSFS 2020 Community Folder Locations:\nNote: You may need to enable \"Show Hidden Files\" in Windows to see the AppData folder.\n\nMicrosoft Store / Game Pass:\nC:\\Users\\YourUserName\\AppData\\Local\\Packages\\Microsoft.FlightSimulator_8wekyb3d8bbwe\\LocalCache\\Packages\\Community\n\nSteam:\nC:\\Users\\YourUserName\\AppData\\Roaming\\Microsoft Flight Simulator\\Packages\\Community\n\n🖥️ My PC Specs:\nCPU: AMD Ryzen 9 7900X3D (12-Core)\nGPU: NVIDIA GeForce RTX 4090 (24GB VRAM)\nRAM: 64GB DDR5 @ 6000 MT/s\nStorage: Samsung SSD 990 PRO 2TB (NVMe)\n\n\n🔗Links Mentioned:\nAIG AI Manager: https://www.alpha-india.net/software/\nFSLTL Models: https://fslivetrafficliveries.com/\nAIG models (Github): https://github.com/Samueleonard/AIG-ModelMatching-For-MSFS2024\nFSLTL models (Github): https://github.com/FSLiveTrafficLiveries/base/tree/main/fsltl-traffic-base\n\nAre you sticking with a hybrid setup like this, or moving to a payware injector? Let me know in the comments!\n\n🔔 If you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP 🔔 \n\nTutorials playlist: https://bit.ly/32nmUHH\nWebsite: https://highintheflightsimsky.nl\n\n#MSFS2020 #FSLTL #AIG #FlightSimulator #Aviation #MSFSTraffic #FlightAware",
+  "thumbnail": "https://i.ytimg.com/vi/r9-_BJvy9eg/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/r9-_BJvy9eg/mqdefault.jpg",
+  "publishedAt": "2026-05-14T08:01:00.000Z",
+  "duration": 1402,
+  "viewCount": 172,
+  "tags": [
+    "MSFS 2020",
+    "Microsoft Flight Simulator 2020",
+    "MSFS 2020 AI Traffic",
+    "FSLTL",
+    "AIG AI Manager",
+    "MSFS real liveries",
+    "MSFS traffic fix",
+    "MSFS performance guide",
+    "MSFS 2020 tutorial",
+    "no injector traffic",
+    "flight simulator real traffic",
+    "FSLTL vs AIG",
+    "MSFS priority folder",
+    "MSFS 2020 live traffic",
+    "EGLL real traffic",
+    "MSFS free liveries",
+    "MSFS 2020 settings",
+    "aviation realism",
+    "MSFS 2020 FPS fix",
+    "MSFS branded traffic"
+  ],
+  "featured": false
+}
