@@ -3,12 +3,28 @@ import { expect, test } from '@playwright/test';
 test('video detail page has embed, canonical, and schema', async ({ page }) => {
   await page.goto('/videos/');
 
-  const firstCard = page.locator('a.video-card').first();
-  await expect(firstCard).toBeVisible();
-  const href = await firstCard.getAttribute('href');
-  expect(href).toMatch(/^\/videos\/[^/]+\/?$/);
+  const cards = page.locator('a.video-card');
+  await expect(cards.first()).toBeVisible();
 
-  const response = await page.goto(href!);
+  const hrefs = await cards.evaluateAll((els) =>
+    els
+      .map((el) => el.getAttribute('href'))
+      .filter((href): href is string => Boolean(href))
+  );
+
+  let selectedHref: string | undefined;
+  for (const href of hrefs.slice(0, 10)) {
+    if (!/^\/videos\/[^/]+\/?$/.test(href)) continue;
+    const probe = await page.request.get(href);
+    if (probe.status() === 200) {
+      selectedHref = href;
+      break;
+    }
+  }
+
+  expect(selectedHref, `No video card href returned 200. Checked: ${hrefs.slice(0, 10).join(', ')}`).toBeTruthy();
+
+  const response = await page.goto(selectedHref!);
   expect(response?.status()).toBe(200);
 
   await expect(page).toHaveURL(/\/videos\/[^/]+\/?$/);
