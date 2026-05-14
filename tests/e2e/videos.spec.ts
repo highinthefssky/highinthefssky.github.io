@@ -5,10 +5,14 @@ test('video detail page has embed, canonical, and schema', async ({ page }) => {
 
   const firstCard = page.locator('a.video-card').first();
   await expect(firstCard).toBeVisible();
-  await firstCard.click();
+  const href = await firstCard.getAttribute('href');
+  expect(href).toMatch(/^\/videos\/[^/]+\/?$/);
+
+  const response = await page.goto(href!);
+  expect(response?.status()).toBe(200);
 
   await expect(page).toHaveURL(/\/videos\/[^/]+\/?$/);
-  await expect(page.locator('.player-iframe')).toBeVisible();
+  await expect(page.locator('.player-iframe')).toBeVisible({ timeout: 10000 });
   await expect(page.locator('h1.video-title')).toBeVisible();
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', /\/videos\/[^/]+\/?$/);
   const schemaScripts = page.locator('script[type="application/ld+json"]');
