@@ -17,8 +17,8 @@ All phases of the High in the Sky website have been successfully implemented. Th
 - [x] Deploy to GitHub Pages
 
 ### Technology Stack
-- **Framework**: Astro 4.x (Static Site Generator)
-- **Styling**: Tailwind CSS with custom components
+- **Framework**: Astro 6.x (Static Site Generator)
+- **Styling**: Tailwind CSS v4 via Vite plugin (`@tailwindcss/vite`) with CSS variables
 - **Data**: Astro Content Collections with Zod validation
 - **Search**: Client-side filtering (sub-200ms)
 - **Deployment**: GitHub Pages + GitHub Actions
@@ -30,7 +30,7 @@ All phases of the High in the Sky website have been successfully implemented. Th
 
 ### ✅ Phase 1: Setup (T001-T010)
 - Astro project initialization
-- Tailwind CSS integration
+- Tailwind CSS v4 setup via Vite plugin
 - TypeScript configuration
 - Global styles and utilities
 - GitHub Pages deployment workflow
@@ -119,7 +119,6 @@ highinthefssky.github.io/
 │   │   ├── VideoCard.astro         # Video card component
 │   │   └── PostCard.astro          # Post card component
 │   ├── content/
-│   │   ├── config.ts               # Collection schemas (Zod)
 │   │   ├── videos/                 # Video JSON files
 │   │   │   └── example.json
 │   │   └── posts/                  # Community posts (Markdown)
@@ -138,16 +137,16 @@ highinthefssky.github.io/
 │   │   ├── privacy.astro           # Privacy policy
 │   │   └── terms.astro             # Terms of service
 │   ├── styles/
-│   │   └── global.css              # Tailwind directives
+│   │   └── global.css              # Tailwind v4 import + global styles
 │   └── utils/
 │       └── searchVideos.ts         # Search utilities
+├── src/content.config.ts           # Astro 6 collection schemas and loaders
 ├── scripts/
 │   └── fetch-videos.js             # YouTube API client
 ├── public/
 │   ├── robots.txt                  # Search engine config
 │   └── favicon.svg
 ├── astro.config.mjs                # Astro configuration
-├── tailwind.config.js              # Tailwind configuration
 ├── tsconfig.json                   # TypeScript configuration
 ├── .env.local                      # Environment variables (local)
 ├── package.json                    # Dependencies
@@ -257,17 +256,7 @@ Add to repository Settings → Secrets:
 ## 🎨 Customization
 
 ### Colors
-Edit `tailwind.config.js`:
-```javascript
-theme: {
-  extend: {
-    colors: {
-      primary: 'hsl(213, 94%, 47%)',
-      secondary: '#764ba2',
-    },
-  },
-}
-```
+Edit CSS variables in `src/styles/global.css`.
 
 ### Fonts
 Update `src/styles/global.css`:

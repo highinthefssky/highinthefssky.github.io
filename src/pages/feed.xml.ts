@@ -20,7 +20,7 @@ export async function GET(context) {
     ...posts.map((post) => ({
       title: `Post: ${post.data.title}`,
       description: post.data.description,
-      link: `/posts/${post.slug}`,
+      link: `/posts/${post.slug ?? post.id.replace(/\.mdx?$/, '')}`,
       pubDate: post.data.publishedAt,
       categories: post.data.tags,
     })),

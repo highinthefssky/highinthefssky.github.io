@@ -16,16 +16,18 @@
     "fetch-all": "npm run fetch-videos && npm run fetch-controllers"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.15",
-    "astro": "^5.18.1",
+    "@astrojs/rss": "^4.0.18",
+    "astro": "^6.3.2",
     "google-auth-library": "^9.14.0",
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "^6.0.2",
+    "@tailwindcss/vite": "^4.1.8",
     "@playwright/test": "^1.60.0",
-    "autoprefixer": "^10.4.23",
-    "postcss": "^8.5.14",
-    "tailwindcss": "^3.4.19"
+    "tailwindcss": "^4.1.8"
+  },
+  "overrides": {
+    "fast-xml-parser": "5.8.0",
+    "yaml": "2.9.0"
   }
 }
