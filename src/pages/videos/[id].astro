@@ -38,9 +38,9 @@ export async function getStaticPaths() {
 }
 
 const { video, relatedVideos, videoPlaylists } = Astro.props;
-const { videoId, title, thumbnail, description, publishedAt, duration, viewCount, tags } = video.data;
+const { videoId, title, thumbnail, publishedAt, duration, viewCount, tags } = video.data;
 
-function formatDuration(seconds) {
+function formatDuration(seconds: number) {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
   const secs = seconds % 60;
@@ -50,7 +50,7 @@ function formatDuration(seconds) {
   return minutes + ':' + String(secs).padStart(2, '0');
 }
 
-function formatDate(date) {
+function formatDate(date: Date) {
   return new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
     month: 'long',
@@ -58,7 +58,7 @@ function formatDate(date) {
   }).format(date);
 }
 
-function formatViewCount(count) {
+function formatViewCount(count: number) {
   if (count >= 1000000) {
     var val = (count / 1000000).toFixed(1);
     if (val.endsWith('.0')) val = val.slice(0, -2);
@@ -72,7 +72,7 @@ function formatViewCount(count) {
   return count + ' views';
 }
 
-function toIsoDuration(totalSeconds) {
+function toIsoDuration(totalSeconds: number) {
   const hours = Math.floor(totalSeconds / 3600);
   const minutes = Math.floor((totalSeconds % 3600) / 60);
   const seconds = totalSeconds % 60;
@@ -84,7 +84,7 @@ function toIsoDuration(totalSeconds) {
   return `PT${hoursPart}${minutesPart}${secondsPart}`;
 }
 
-const embedUrl = 'https://www.youtube-nocookie.com/embed/' + videoId;
+const embedUrl = 'https://www.youtube.com/embed/' + videoId;
 const youtubeUrl = 'https://www.youtube.com/watch?v=' + videoId;
 
 const descriptionParagraphs = video.data.description
@@ -103,8 +103,12 @@ const videoStructuredData = {
   uploadDate: new Date(publishedAt).toISOString(),
   duration: toIsoDuration(duration),
   embedUrl,
-  contentUrl: youtubeUrl,
   url: pageUrl,
+  mainEntityOfPage: pageUrl,
+  potentialAction: {
+    '@type': 'WatchAction',
+    target: [pageUrl],
+  },
   publisher: {
     '@type': 'Organization',
     name: 'High in the FlightSim Sky',
@@ -145,7 +149,6 @@ const breadcrumbStructuredData = {
         title={title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
-        loading="lazy"
         class="player-iframe"
       ></iframe>
     </div>
@@ -237,6 +240,55 @@ const breadcrumbStructuredData = {
       <a href="/videos" class="back-link">&larr; Back to all videos</a>
     </footer>
   </article>
+
+  <script is:inline>
+    (function() {
+      var btn = document.querySelector('.detail-fav-btn');
+      if (!btn) return;
+
+      var videoId = btn.getAttribute('data-fav-id');
+      if (!videoId) return;
+
+      var STORAGE_KEY = 'fav-videos';
+
+      function getFavs() {
+        try {
+          return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function updateUI() {
+        var favs = getFavs();
+        var isSaved = favs.indexOf(videoId) > -1;
+        if (isSaved) {
+          btn.classList.add('saved');
+        } else {
+          btn.classList.remove('saved');
+        }
+        var label = btn.querySelector('.fav-label');
+        if (label) label.textContent = isSaved ? 'Saved' : 'Save';
+      }
+
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var favs = getFavs();
+        var idx = favs.indexOf(videoId);
+        if (idx > -1) {
+          favs.splice(idx, 1);
+        } else {
+          favs.push(videoId);
+        }
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(favs));
+        updateUI();
+        window.dispatchEvent(new Event('favs-changed'));
+      });
+
+      updateUI();
+    })();
+  </script>
 </BaseLayout>
 
 <style>
@@ -486,52 +538,3 @@ const breadcrumbStructuredData = {
     }
   }
 </style>
-
-<script is:inline>
-  (function() {
-    var btn = document.querySelector('.detail-fav-btn');
-    if (!btn) return;
-
-    var videoId = btn.getAttribute('data-fav-id');
-    if (!videoId) return;
-
-    var STORAGE_KEY = 'fav-videos';
-
-    function getFavs() {
-      try {
-        return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-      } catch (e) {
-        return [];
-      }
-    }
-
-    function updateUI() {
-      var favs = getFavs();
-      var isSaved = favs.indexOf(videoId) > -1;
-      if (isSaved) {
-        btn.classList.add('saved');
-      } else {
-        btn.classList.remove('saved');
-      }
-      var label = btn.querySelector('.fav-label');
-      if (label) label.textContent = isSaved ? 'Saved' : 'Save';
-    }
-
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var favs = getFavs();
-      var idx = favs.indexOf(videoId);
-      if (idx > -1) {
-        favs.splice(idx, 1);
-      } else {
-        favs.push(videoId);
-      }
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(favs));
-      updateUI();
-      window.dispatchEvent(new Event('favs-changed'));
-    });
-
-    updateUI();
-  })();
-</script>
