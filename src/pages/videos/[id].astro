@@ -211,7 +211,7 @@ const breadcrumbStructuredData = {
       {tags.length > 0 && (
         <div class="video-tags">
           {tags.map((tag) => (
-            <a href={'/videos#tag=' + encodeURIComponent(tag)} class="tag">
+            <a href={'/videos/#tag=' + encodeURIComponent(tag)} class="tag">
               {tag}
             </a>
           ))}
@@ -237,7 +237,7 @@ const breadcrumbStructuredData = {
     )}
 
     <footer class="video-footer">
-      <a href="/videos" class="back-link">&larr; Back to all videos</a>
+      <a href="/videos/" class="back-link">&larr; Back to all videos</a>
     </footer>
   </article>
 

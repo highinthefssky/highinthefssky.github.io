@@ -6,6 +6,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "test:e2e": "playwright test",
+    "test:e2e:smoke": "playwright test --grep @smoke",
+    "test:e2e:full": "playwright test",
+    "test:e2e:headed": "playwright test --headed",
     "astro": "astro",
     "fetch-videos": "node scripts/fetch-videos.js",
     "fetch-controllers": "node scripts/fetch-controllers.js",
@@ -19,6 +23,7 @@
   },
   "devDependencies": {
     "@astrojs/tailwind": "^6.0.2",
+    "@playwright/test": "^1.60.0",
     "autoprefixer": "^10.4.23",
     "postcss": "^8.5.14",
     "tailwindcss": "^3.4.19"
