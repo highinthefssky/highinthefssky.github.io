@@ -122,7 +122,7 @@ function levelLabel(level: string): string {
 
           <div class="lesson-links">
             {lesson.video ? (
-              <a href={`/videos/${lesson.video.data.videoId}`} class="lesson-link lesson-link-video">▶ Lesson video: {lesson.video.data.title}</a>
+              <a href={`/videos/${lesson.video.data.videoId}/`} class="lesson-link lesson-link-video">▶ Lesson video: {lesson.video.data.title}</a>
             ) : (
               <span class="lesson-link disabled">▶ Lesson video unavailable</span>
             )}

@@ -20,7 +20,7 @@ const latestVideos = videos
         <div class="carousel-slides">
           {latestVideos.map((video, index) => (
             <div class="carousel-slide" data-index={index}>
-              <a href={`/videos/${video.data.videoId}`} class="slide-link">
+              <a href={`/videos/${video.data.videoId}/`} class="slide-link">
                 <img
                   src={video.data.thumbnailMedium}
                   srcset={`${video.data.thumbnailMedium} 320w, ${video.data.thumbnail} 1280w`}
