@@ -8,6 +8,7 @@ interface Props {
 }
 
 const { video, showBrandFeature = true } = Astro.props;
+const { id } = video;
 const { videoId, title, thumbnail, tags, duration, publishedAt, viewCount } = video.data;
 
 // Format duration helper
@@ -44,7 +45,7 @@ function formatViewCount(count: number): string {
 ---
 
 <a
-  href={`/videos/${videoId}/`}
+  href={`/videos/${id}/`}
   class="video-card"
   data-tags={tags.join(',').toLowerCase()}
   data-video-id={videoId}
