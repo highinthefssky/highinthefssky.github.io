@@ -16,13 +16,8 @@
     "fetch-all": "npm run fetch-videos && npm run fetch-controllers"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@astrojs/rss": "^4.0.18",
     "astro": "^6.3.2",
-=======
-    "@astrojs/rss": "^4.0.15",
-    "astro": "^6.1.10",
->>>>>>> ac00093f6193e3c22d1fcf97fffa74845ae8d850
     "google-auth-library": "^9.14.0",
     "zod": "^3.25.76"
   },
