@@ -14,7 +14,7 @@ A beautiful, performant static site built with Astro for showcasing YouTube vide
 - **RSS Feed**: Subscribe to latest videos and posts via RSS
 - **Activity Feed**: Timeline view of latest videos and posts
 - **Responsive Design**: Mobile-first, works beautifully on all devices
-- **Dark Mode Ready**: Tailwind CSS configuration ready for theme customization
+- **Dark Mode Ready**: Tailwind CSS v4 styles with CSS-variable driven theming
 - **Fast & Static**: Built on Astro for sub-2s load times
 - **GitHub Pages Ready**: Automatic deployment via GitHub Actions
 
@@ -22,7 +22,7 @@ A beautiful, performant static site built with Astro for showcasing YouTube vide
 
 ### Prerequisites
 
-- Node.js 18 or higher
+- Node.js 20 or higher
 - npm or yarn
 - GitHub repository
 
@@ -90,7 +90,6 @@ Visit `http://localhost:3000` to see your site.
 │   │   ├── ConfigCard.astro
 │   │   └── PostCard.astro
 │   ├── content/              # Content collections
-│   │   ├── config.ts         # Content schemas
 │   │   ├── videos/           # Video data (JSON)
 │   │   ├── controllers/      # Controller configs (JSON)
 │   │   └── posts/            # Community posts (Markdown)
@@ -106,7 +105,7 @@ Visit `http://localhost:3000` to see your site.
 │   │   ├── feed.astro        # Activity feed
 │   │   └── feed.xml.ts       # RSS feed endpoint
 │   ├── styles/
-│   │   └── global.css        # Global Tailwind styles
+│   │   └── global.css        # Global styles + Tailwind v4 import
 │   └── utils/
 │       └── searchVideos.ts   # Search utilities
 ├── scripts/
@@ -116,8 +115,8 @@ Visit `http://localhost:3000` to see your site.
 │   └── workflows/
 │       ├── deploy.yml        # GitHub Pages deployment
 │       └── fetch-videos.yml  # Daily video sync
+├── src/content.config.ts     # Astro 6 content collection definitions
 ├── astro.config.mjs          # Astro configuration
-├── tailwind.config.js        # Tailwind CSS configuration
 └── package.json
 ```
 
@@ -217,20 +216,17 @@ For automated content fetching, set secrets in repository settings:
 - No authentication needed
 - Optional: Add webhook for instant updates when msfs-2024-controls-settings changes
 
-### Tailwind CSS
+### Tailwind CSS (v4 + Vite Plugin)
 
-Customize colors and theme in `tailwind.config.js`:
+This project uses Tailwind CSS v4 through the Vite plugin (`@tailwindcss/vite`) configured in `astro.config.mjs`.
 
-```javascript
-theme: {
-  extend: {
-    colors: {
-      primary: 'hsl(213, 94%, 47%)',
-      secondary: '#764ba2',
-    },
-  },
-}
+Tailwind is enabled from `src/styles/global.css` using:
+
+```css
+@import "tailwindcss";
 ```
+
+Theme and color customization is primarily done through CSS variables in `src/styles/global.css`.
 
 ## 📊 Performance
 
@@ -261,7 +257,7 @@ Push to `main` branch to automatically deploy:
 
 ### Colors
 
-Edit `tailwind.config.js` and `src/styles/global.css` for custom color schemes.
+Edit CSS variables in `src/styles/global.css` for custom color schemes.
 
 ### Fonts
 
@@ -283,8 +279,8 @@ This project is licensed under the MIT License - see LICENSE file for details.
 
 ### Build Fails
 
-- Clear `node_modules/` and `dist/`: `rm -rf node_modules dist && npm install`
-- Check Node.js version: `node --version` (should be 18+)
+- Clear `node_modules/` and `dist/`, then reinstall dependencies.
+- Check Node.js version: `node --version` (should be 20+)
 
 ### Videos Not Showing
 
@@ -310,7 +306,7 @@ For issues or questions:
 Built with:
 
 - [Astro](https://astro.build/) - Static site generator
-- [Tailwind CSS](https://tailwindcss.com/) - Utility CSS framework
+- [Tailwind CSS](https://tailwindcss.com/) - Utility CSS framework (v4 via Vite plugin)
 - [YouTube Data API](https://developers.google.com/youtube/v3) - Video data
 - [GitHub Pages](https://pages.github.com/) - Free hosting
 

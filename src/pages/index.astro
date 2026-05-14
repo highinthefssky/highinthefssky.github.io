@@ -12,6 +12,7 @@ const latestPost = allPosts
       new Date(b.data.publishedAt).getTime() -
       new Date(a.data.publishedAt).getTime()
   )[0];
+const latestPostSlug = latestPost ? (latestPost.slug ?? latestPost.id.replace(/\.mdx?$/, '')) : null;
 const publishedPosts = allPosts.filter((post) => !post.data.draft);
 const totalPosts = publishedPosts.length;
 
@@ -78,7 +79,7 @@ const heroImage = sortedVideos[0]?.data.thumbnail;
               <h2>Featured Community Post</h2>
               <a href="/posts" class="view-all">View all</a>
             </div>
-            <a href={`/posts/${latestPost.slug}`} class="post-content">
+            <a href={`/posts/${latestPostSlug}`} class="post-content">
               <h3>
                 {latestPost.data.title}
               </h3>

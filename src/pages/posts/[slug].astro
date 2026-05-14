@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
 import YouTubeBrandFeature from '../../components/YouTubeBrandFeature.astro';
@@ -7,8 +7,9 @@ import YouTubeBrandFeature from '../../components/YouTubeBrandFeature.astro';
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
   return posts.map((post) => {
+    const postSlug = post.slug ?? post.id.replace(/\.mdx?$/, '');
     const related = posts
-      .filter((p) => p.slug !== post.slug && !p.data.draft)
+      .filter((p) => (p.slug ?? p.id.replace(/\.mdx?$/, '')) !== postSlug && !p.data.draft)
       .map((p) => ({
         post: p,
         score: p.data.tags.filter((t) => post.data.tags.includes(t)).length,
@@ -24,7 +25,7 @@ export async function getStaticPaths() {
       .map((r) => r.post);
 
     return {
-      params: { slug: post.slug },
+      params: { slug: postSlug },
       props: { post, relatedPosts: related },
     };
   });
@@ -33,7 +34,7 @@ export async function getStaticPaths() {
 const { post, relatedPosts } = Astro.props;
 const { title, description, publishedAt, tags, image } = post.data;
 const isYoutubeSource = tags.some((tag) => tag.toLowerCase() === 'youtube');
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 function normalizeMetaDescription(baseDescription: string, postTitle: string, postTags: string[]): string {
   const clean = baseDescription.trim().replace(/\s+/g, ' ');
@@ -55,7 +56,8 @@ function normalizeMetaDescription(baseDescription: string, postTitle: string, po
 
 const metaDescription = normalizeMetaDescription(description, title, tags);
 
-const pageUrl = new URL(`/posts/${post.slug}/`, Astro.site).href;
+const postSlug = post.slug ?? post.id.replace(/\.mdx?$/, '');
+const pageUrl = new URL(`/posts/${postSlug}/`, Astro.site).href;
 const postStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',

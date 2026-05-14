@@ -1,8 +1,9 @@
+import { glob } from 'astro/loaders';
 import { defineCollection, z } from 'astro:content';
 
 // Video collection schema
 const videoCollection = defineCollection({
-  type: 'data',
+  loader: glob({ base: './src/content/videos', pattern: '**/*.json' }),
   schema: z.object({
     videoId: z.string().describe('YouTube video ID'),
     title: z.string().describe('Video title'),
@@ -18,7 +19,7 @@ const videoCollection = defineCollection({
 
 // Post collection schema
 const postCollection = defineCollection({
-  type: 'content',
+  loader: glob({ base: './src/content/posts', pattern: '**/*.{md,mdx}' }),
   schema: z.object({
     title: z.string().describe('Post title'),
     description: z.string().describe('Post summary'),
@@ -31,7 +32,7 @@ const postCollection = defineCollection({
 
 // Controller config collection schema
 const controllerCollection = defineCollection({
-  type: 'data',
+  loader: glob({ base: './src/content/controllers', pattern: '**/*.json' }),
   schema: z.object({
     filename: z.string().describe('Original filename from repository'),
     controller: z.string().describe('Controller device name'),
@@ -45,7 +46,7 @@ const controllerCollection = defineCollection({
 
 // Playlist collection schema
 const playlistCollection = defineCollection({
-  type: 'data',
+  loader: glob({ base: './src/content/playlists', pattern: '**/*.json' }),
   schema: z.object({
     slug: z.string().describe('URL-friendly slug'),
     title: z.string().describe('Playlist title'),
@@ -65,7 +66,7 @@ const playlistCollection = defineCollection({
 
 // Learning tracks collection schema
 const trackCollection = defineCollection({
-  type: 'data',
+  loader: glob({ base: './src/content/tracks', pattern: '**/*.json' }),
   schema: z.object({
     slug: z.string().describe('URL-friendly slug'),
     title: z.string().describe('Track title'),

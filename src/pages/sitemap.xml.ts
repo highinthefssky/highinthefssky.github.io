@@ -37,7 +37,7 @@ export async function GET() {
   const postPages = posts
     .filter((post) => !post.data.draft)
     .map((post) => ({
-      loc: `/posts/${post.slug}/`,
+      loc: `/posts/${post.slug ?? post.id.replace(/\.mdx?$/, '')}/`,
       changefreq: 'monthly',
       priority: '0.7',
     }));
