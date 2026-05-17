@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import YouTubeBrandFeature from '../../components/YouTubeBrandFeature.astro';
 
 const allConfigs = await getCollection('controllers');
 const allVideos = await getCollection('videos');
@@ -46,7 +45,6 @@ const videosForWizard = [...allVideos]
     <header class="wizard-header">
       <h1>Controller Match Wizard</h1>
       <p>Choose your controller, aircraft type, and learning goal to get your best config + videos.</p>
-      <YouTubeBrandFeature className="brand-feature" />
       <div class="header-links">
         <a href="/controllers" class="btn btn-secondary">Browse all configs</a>
         <a href="/videos/" class="btn btn-secondary">Browse all videos</a>
@@ -306,7 +304,9 @@ const videosForWizard = [...allVideos]
       : '<p class="empty-note">No strong config matches yet. Try a different aircraft type or goal.</p>';
 
     videoResults.innerHTML = videoMatches.length
-      ? videoMatches
+      ? `<a class="result-brand-feature" href="https://bit.ly/34eNWDP" target="_blank" rel="noopener noreferrer" aria-label="Developed with YouTube" title="Developed with YouTube">
+                  <img src="${ytBrandDark}" alt="Developed with YouTube" loading="lazy" decoding="async" />
+                </a>` + videoMatches
           .map(({ video, score }) => `
             <article class="result-card video-card">
               <img src="${video.thumbnail}" alt="${escapeHtml(video.title)}" loading="lazy" decoding="async" />
@@ -317,10 +317,6 @@ const videosForWizard = [...allVideos]
                 </div>
                 <h4>${escapeHtml(video.title)}</h4>
                 <p>${formatDate(video.publishedAt)}</p>
-                <a class="result-brand-feature" href="https://bit.ly/34eNWDP" target="_blank" rel="noopener noreferrer" aria-label="Developed with YouTube" title="Developed with YouTube">
-                  <img class="logo-dark" src="${ytBrandDark}" alt="Developed with YouTube" loading="lazy" decoding="async" />
-                  <img class="logo-light" src="${ytBrandLight}" alt="Developed with YouTube" loading="lazy" decoding="async" />
-                </a>
                 <div class="result-actions">
                   <a href="/videos/${video.videoId}/" class="result-link">Watch details</a>
                 </div>
@@ -646,27 +642,15 @@ const videosForWizard = [...allVideos]
   }
 
   .result-brand-feature {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
     text-decoration: none;
   }
 
   .result-brand-feature img {
     width: auto;
     height: 16px;
-    display: block;
-  }
-
-  .result-brand-feature .logo-light {
-    display: none;
-  }
-
-  :global(html.light) .result-brand-feature .logo-dark {
-    display: none;
-  }
-
-  :global(html.light) .result-brand-feature .logo-light {
     display: block;
   }
 

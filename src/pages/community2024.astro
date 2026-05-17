@@ -1,0 +1,307 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const compatibilityData = [
+  {
+    vendor: 'FlyByWire Simulations',
+    community2024Support: '✅ Full support',
+    manualMigration: '✅ Available',
+    remark: ''
+  },
+  {
+    vendor: 'Fenix Simulation',
+    community2024Support: '❌ Full support',
+    manualMigration: '⚠️ Available',
+    remark: 'Manual migration will break update process'
+  },
+  {
+    vendor: 'PMDG',
+    community2024Support: '✅ Full support',
+    manualMigration: '✅ Available',
+    remark: ''
+  },
+  {
+    vendor: 'Aerosoft',
+    community2024Support: '❌ Full support',
+    manualMigration: '⚠️ Available',
+    remark: 'Manual migration will break update process'
+  },
+  {
+    vendor: 'IniBuilds',
+    community2024Support: '✅ Full support',
+    manualMigration: '✅ Available',
+    remark: ''
+  },
+  {
+    vendor: 'Navigraph',
+    community2024Support: '❌ Full support',
+    manualMigration: '⚠️ Available',
+    remark: 'Manual migration will break update process'
+  },
+  {
+    vendor: 'AIG',
+    community2024Support: '❌ Full support',
+    manualMigration: '⚠️ Available',
+    remark: 'Manual migration will break update process'
+  },
+  {
+    vendor: 'FSDreamTeam',
+    community2024Support: '❌ Full support',
+    manualMigration: '⚠️ Available',
+    remark: 'Manual migration will break update process'
+  },     
+];
+---
+
+<BaseLayout 
+  title="Community2024 Folder Support" 
+  description="Check community2024 folder support for MSFS addon developers and installers. Find information about manual migration options and vendor support status."
+>
+  <div class="compatibility-page">
+    <div class="compatibility-header">
+      <h1>📁 Community2024 Folder Support</h1>
+      <p>
+        MSFS addon installer compatibility status
+      </p>
+    </div>
+
+    <div class="compatibility-info">
+      <p>
+        This page shows which addon developers and installers support the new <code>community2024</code> folder structure in Microsoft Flight Simulator 2024. The table below indicates current support status and available migration paths for moving existing addons to the new folder.
+      </p>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="compatibility-table">
+        <thead>
+          <tr>
+            <th>Vendor</th>
+            <th>Community2024 Folder Support</th>
+            <th>Manual Migration Support</th>
+            <th>Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          {compatibilityData.sort((a, b) => a.vendor.localeCompare(b.vendor)).map((row) => (
+            <tr>
+              <td class="vendor-cell">{row.vendor}</td>
+              <td class="status-cell">{row.community2024Support}</td>
+              <td class="status-cell">{row.manualMigration}</td>
+              <td class="remark-cell">{row.remark}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="compatibility-notes">
+      <h2>Legend</h2>
+      <ul>
+        <li><strong>✅ Full support</strong> - The installer or addon fully supports the community2024 folder</li>
+        <li><strong>🔄 Partial support</strong> - Some installers or packages support the community2024 folder</li>
+        <li><strong>❓ Testing</strong> - Compatibility is being tested or not yet confirmed</li>
+        <li><strong>❌ No support</strong> - The installer or addon does not currently support community2024 folder</li>
+      </ul>
+      
+      <p style="margin-top: 1.5rem; color: var(--text-muted); font-size: 0.875rem;">
+        <strong>Note:</strong> This information is based on vendor statements and community reports. Compatibility status can change with software updates. Always check with your addon developer for the latest information.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .compatibility-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .compatibility-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .compatibility-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-heading);
+  }
+
+  .compatibility-header p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+  }
+
+  .compatibility-info {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: 0.5rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .compatibility-info code {
+    background: var(--bg-input);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-default);
+    border-radius: 0.5rem;
+    background: var(--bg-surface);
+  }
+
+  .compatibility-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+
+  .compatibility-table thead {
+    background: var(--bg-elevated);
+    border-bottom: 2px solid var(--border-accent);
+  }
+
+  .compatibility-table th {
+    padding: 1rem;
+    text-align: left;
+    color: var(--text-heading);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .compatibility-table tbody tr {
+    border-bottom: 1px solid var(--border-default);
+    transition: background-color var(--transition-default);
+  }
+
+  .compatibility-table tbody tr:hover {
+    background-color: var(--bg-elevated);
+  }
+
+  .compatibility-table tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .compatibility-table td {
+    padding: 1rem;
+    color: var(--text-secondary);
+  }
+
+  .vendor-cell {
+    font-weight: 600;
+    color: var(--text-heading);
+    min-width: 150px;
+  }
+
+  .status-cell {
+    text-align: center;
+    min-width: 120px;
+    color: var(--accent-solid);
+    font-weight: 500;
+  }
+
+  .remark-cell {
+    color: var(--text-muted);
+    max-width: 250px;
+    font-size: 0.875rem;
+  }
+
+  .compatibility-notes {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+  }
+
+  .compatibility-notes h2 {
+    font-size: 1.25rem;
+    color: var(--text-heading);
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+
+  .compatibility-notes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .compatibility-notes li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .compatibility-notes strong {
+    color: var(--text-heading);
+  }
+
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .compatibility-page {
+      padding: 1rem;
+    }
+
+    .compatibility-header h1 {
+      font-size: 1.75rem;
+    }
+
+    .compatibility-table {
+      font-size: 0.85rem;
+    }
+
+    .compatibility-table th,
+    .compatibility-table td {
+      padding: 0.75rem 0.5rem;
+    }
+
+    .vendor-cell {
+      min-width: 100px;
+    }
+
+    .status-cell {
+      min-width: 90px;
+    }
+
+    .remark-cell {
+      max-width: 150px;
+      font-size: 0.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .compatibility-header h1 {
+      font-size: 1.5rem;
+    }
+
+    .table-wrapper {
+      border-radius: 0.25rem;
+    }
+
+    .compatibility-table {
+      font-size: 0.75rem;
+    }
+
+    .compatibility-table th,
+    .compatibility-table td {
+      padding: 0.5rem 0.25rem;
+    }
+
+    .vendor-cell {
+      min-width: 80px;
+    }
+
+    .remark-cell {
+      display: none;
+    }
+  }
+</style>
