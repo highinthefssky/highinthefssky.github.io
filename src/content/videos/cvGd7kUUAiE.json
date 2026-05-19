@@ -1,0 +1,32 @@
+{
+  "videoId": "cvGd7kUUAiE",
+  "title": "Your MSFS 2024 add-ons are fighting for priority (here's why).",
+  "description": "Are your MSFS 2024 add-ons fighting for priority? In this video, we break down exactly why your custom airplanes, free sceneries, or background traffic utilities are breaking or causing infinite loading screens, and why your MSFS 2024 add-ons are fighting for priority inside the new simulator folder structure.\n\nWith the latest MSFS 2024 community folder split, Asobo quietly implemented a massive architectural shift behind the scenes. Right next door to your classic folder sits an identical-looking neighbor: the Community 2024 folder. If your third-party installers don't respect the hard-coded ranking rules of the MSFS 2024 virtual file system (VFS), your local files are literally going to war with each other. \n\nIn this MSFS 2024 community folder guide, we open up the simulator's brain to reveal the strict 5-step execution sequence it runs every single time you press play—from checking your userconfig.opt configuration file to the alphabetical override trick (Z-to-A ranking) used by advanced freeware mods to force custom file layers.\n\nWe also put eight of the biggest third-party developers to a hands-on compatibility test. By manually cutting and pasting files into the new native structure, we expose exactly what breaks, who relies on complex SimLinks or Junction points, and whose automated background updates will completely fracture if you move them.\n\n🕒 Chapters\n00:00 - intro\n01:08 - The evidence: Why the change?\n02:24 - The Secret Rulebook: VFS Mounting Priority\n03:41 - The Crime Scene Walkthrough: The 5-Step Loading Sequence\n06:29 - Navigating the crime scene: Managing paths\n08:05 - The Folder Illusion: Shortcuts, Symlinks, and Junctions\n09:27 - The developer compatibility test: The verdicts\n15:35 - The live experiment: Force migration test\n19:17 - Case closed: 3 rules of thumb + bonus\n\n👉 Check out our complete third-party installer compatibility matrix and text summary on our website: https://highintheflightsimsky.nl\n\nHow has your local mod library handled the new dual-folder structure? Have you run into any broken installers or disappearing liveries? Drop your evidence and troubleshooting steps in the comments below!\n\nIf this breakdown helped clarify your file directory confusion, give it a like and subscribe for more deep-dive technical MSFS asset guides.\n\n🔗 Resources & links\n👉 Subscribe: https://bit.ly/34eNWDP\n👉 MSFS Tutorials Playlist: https://bit.ly/3l6fRdL\n\n#MSFS2024 #Community #msfs",
+  "thumbnail": "https://i.ytimg.com/vi/cvGd7kUUAiE/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/cvGd7kUUAiE/mqdefault.jpg",
+  "publishedAt": "2026-05-18T20:00:32.000Z",
+  "duration": 1236,
+  "viewCount": 247,
+  "tags": [
+    "msfs 2024 addons",
+    "msfs 2024 community folder",
+    "msfs 2024 virtual file system",
+    "msfs 2024 vfs priority",
+    "msfs 2024 folder split",
+    "pmdg msfs 2024",
+    "fenix msfs 2024",
+    "gsx pro msfs 2024",
+    "flybywire msfs 2024",
+    "inibuilds msfs 2024",
+    "aig traffic msfs 2024",
+    "navigraph msfs 2024",
+    "userconfig opt msfs 2024",
+    "msfs 2024 infinite loading",
+    "msfs 2024 symlinks",
+    "high in the flightsim sky",
+    "MSFS 2024 community folder split",
+    "MSFS 2024 virtual file system",
+    "userconfig.opt"
+  ],
+  "featured": false
+}
