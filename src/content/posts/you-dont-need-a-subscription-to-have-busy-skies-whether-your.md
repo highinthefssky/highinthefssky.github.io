@@ -1,7 +1,7 @@
 ---
 title: "You don't need a subscription to have busy skies! 💸 Whether you're sticking with"
 description: "You don't need a subscription to have busy skies! 💸 Whether you're sticking with the new FSLTL Static mode or finally braving that AIG install, there are still"
-publishedAt: 2026-05-05
+publishedAt: 2026-05-07
 tags: ["community", "youtube"]
 draft: false
 ---
