@@ -1,0 +1,29 @@
+{
+  "videoId": "G_gOPajWiaI",
+  "title": "MSFS Live Traffic Is BACK! FSLTL x Navigraph Setup Guide",
+  "description": "The virtual skies are no longer empty! After FlightRadar24 changed its API terms and left our flight simulator worlds feeling like ghost towns, a massive official solution has arrived. Navigraph and FlightRadar24 have officially teamed up to bring legitimate, high-fidelity, real-world live traffic back to Microsoft Flight Simulator—integrated directly into a brand new version of FSLTL (v2.0+).\n\nIf you are an active Navigraph Unlimited subscriber, this game-changing live traffic data feed is completely bundled into your existing subscription at absolutely no extra cost.\n\nHowever, you have to set this up correctly! In this video, we go step-by-step through the FlyByWire installer, look at the brand-new web interface configuration layout, and fix the essential in-game MSFS traffic settings. If you don't tweak one specific setting inside the simulator, you'll end up with duplicate, glitching aircraft colliding on your taxiways.\n\nWe wrap up with a live demonstration at a bustling Amsterdam Airport Schiphol (EHAM) to see the injector in action, checking out injected KLM cargo 747s, Air China, Qatar, and more.\n\nWhat do you think about this new subscription integration for live traffic data? Let me know your thoughts in the comments below!\n\n📖 Chapters\n00:00 - Empty Skies & The FSLTL Dilemma\n00:36 - A Powerful Partnership: Navigraph x FlightRadar24\n01:32 - Updating the FSLTL Injector via FlyByWire\n02:45 - Web Interface Configuration for Success\n07:30 - Injector in Action: Live Traffic at Schiphol (EHAM)\n\n🔔 Subscribe\nIf you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP\n\nIf this guide helped you bring your skies back to life, drop a like and subscribe to the channel for more high-fidelity flight simulation content, tutorials, and deep dives!",
+  "thumbnail": "https://i.ytimg.com/vi/G_gOPajWiaI/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/G_gOPajWiaI/mqdefault.jpg",
+  "publishedAt": "2026-05-26T18:30:06.000Z",
+  "duration": 554,
+  "viewCount": 6407,
+  "tags": [
+    "msfs 2024 live traffic",
+    "fsltl navigraph setup",
+    "msfs fsltl update",
+    "microsoft flight simulator live traffic",
+    "fsltl traffic injector tutorial",
+    "navigraph flightradar24 traffic",
+    "msfs 2024 performance traffic",
+    "fsltl version 2.0",
+    "flybywire installer fsltl",
+    "amsterdam schiphol eham ai traffic",
+    "how to fix ai traffic msfs 2024",
+    "navigraph unlimited subscription value",
+    "msfs settings optimization traffic",
+    "ai traffic injector flight simulator",
+    "real world traffic msfs",
+    "fsltl configuration guide"
+  ],
+  "featured": false
+}
