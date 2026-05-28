@@ -1,7 +1,7 @@
 ---
 title: "✈️ Ready to Stop Guessing on the Radios? \"U\" is for UNICOM!"
 description: "✈️ Ready to Stop Guessing on the Radios? \"U\" is for UNICOM! Ever dropped through the clouds on a perfect flight, only to find another aircraft sitting right on"
-publishedAt: 2026-05-27
+publishedAt: 2026-05-26
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -32,7 +32,7 @@ Let us know in the comments: Do you usually fly solo in GA aircraft, or do you b
 Clear skies, happy radios, and we'll see you in the sky! 🎙️🛫
 
 Original post: https://www.youtube.com/post/UgkxmXp9kg_FPWEPK-z0kvPoAWnSI4eU2_DX
-Likes: 1 | Comments: 0
+Likes: 2 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/MBoTr0yTI_M6OFtUVhOeIDnvy0eMIxXLq92fbLBT02ErNWhnP-QnODdaN1hJ3vVsM5oDxjajJIHGag=s1280)
