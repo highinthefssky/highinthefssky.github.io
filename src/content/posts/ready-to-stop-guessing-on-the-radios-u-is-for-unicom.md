@@ -32,7 +32,7 @@ Let us know in the comments: Do you usually fly solo in GA aircraft, or do you b
 Clear skies, happy radios, and we'll see you in the sky! 🎙️🛫
 
 Original post: https://www.youtube.com/post/UgkxmXp9kg_FPWEPK-z0kvPoAWnSI4eU2_DX
-Likes: 3 | Comments: 0
+Likes: 4 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/MBoTr0yTI_M6OFtUVhOeIDnvy0eMIxXLq92fbLBT02ErNWhnP-QnODdaN1hJ3vVsM5oDxjajJIHGag=s1280)
