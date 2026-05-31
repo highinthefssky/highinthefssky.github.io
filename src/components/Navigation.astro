@@ -31,6 +31,7 @@ import ThemeToggle from './ThemeToggle.astro';
         <div class="dropdown-menu" id="tools-dropdown">
           <a href="/controllers" class="dropdown-item" data-link="/controllers">🎮 Controllers</a>
           <a href="/community2024" class="dropdown-item" data-link="/community2024">📁 Community2024</a>
+          <a href="/tools/community-folder-troubleshooter" class="dropdown-item" data-link="/tools/community-folder-troubleshooter">🧰 Community Folder Troubleshooter <span class="beta-badge">Beta</span></a>
         </div>
       </li>
       <li>
@@ -103,7 +104,8 @@ import ThemeToggle from './ThemeToggle.astro';
 
     // Close dropdown when clicking outside
     document.addEventListener('click', (e) => {
-      if (!e.target.closest('.navbar-dropdown')) {
+      const target = e.target;
+      if (!(target instanceof Element) || !target.closest('.navbar-dropdown')) {
         dropdownMenu.classList.remove('active');
       }
     });
