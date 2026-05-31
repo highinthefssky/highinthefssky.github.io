@@ -1,0 +1,1042 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { communityFolderSamples } from '../../data/community-folder-samples';
+import { buildCommunityScanReport } from '../../lib/community-folder';
+
+const initialReport = buildCommunityScanReport([]);
+---
+
+<BaseLayout
+  title="Community Folder Troubleshooter"
+  description="Scan Community folder packages, spot likely conflicts, and get plain-language troubleshooting guidance."
+>
+  <section class="troubleshooter-page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Primary troubleshooting tool</p>
+        <h1>Community Folder Troubleshooter <span class="beta-badge">Beta</span></h1>
+        <p class="hero-copy">
+          Add your packages, scan for likely conflicts, and get clear next steps to isolate issues in plain language.
+        </p>
+      </div>
+
+      <div class="hero-stats" id="scan-stats">
+        <div>
+          <strong id="stat-packages">{initialReport.packageCount}</strong>
+          <span>packages</span>
+        </div>
+        <div>
+          <strong id="stat-conflicts">{initialReport.conflictCount}</strong>
+          <span>conflicts</span>
+        </div>
+        <div>
+          <strong id="stat-warnings">{initialReport.warningCount}</strong>
+          <span>warnings</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid">
+      <article class="panel add-panel">
+        <details class="add-disclosure">
+          <summary>
+            <span class="add-summary-title">Add package manually</span>
+            <span class="add-summary-hint">Use this if you can't scan your folder.</span>
+          </summary>
+          <form id="package-form" class="package-form">
+            <div class="form-row">
+              <label>
+                <span>Package name</span>
+                <input name="name" type="text" placeholder="A320 Livery Pack" required />
+              </label>
+              <label>
+                <span>Folder</span>
+                <input name="folder" type="text" placeholder="Community/your-package" required />
+              </label>
+            </div>
+            <label>
+              <span>Files <small>(one per line)</small></span>
+              <textarea
+                name="files"
+                rows="4"
+                placeholder="SimObjects/Airplanes/Asobo_A320_NEO/TEXTURE/ALBD.PNG.DDS&#10;Sound/custom.wav"
+                required
+              ></textarea>
+            </label>
+            <label>
+              <span>Notes <small>(optional)</small></span>
+              <input name="notes" type="text" placeholder="Troubleshooting notes" />
+            </label>
+            <button type="submit">Add package</button>
+          </form>
+        </details>
+      </article>
+
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Installed Packages</h2>
+          <div class="panel-actions">
+            <button type="button" id="toggle-examples-btn" class="scan-btn ghost">Show examples</button>
+            <button type="button" id="scan-folder-btn" class="scan-btn">Scan local folder</button>
+          </div>
+        </div>
+        <p class="scan-hint" id="scan-hint">Select your Community folder to auto-import packages. Requires Chrome or Edge.</p>
+        <details class="privacy-note">
+          <summary>How your files are handled</summary>
+          <ul>
+            <li>The scan runs entirely in your browser — no files leave your machine.</li>
+            <li>This site is a static page on GitHub Pages with no backend, so there is nothing to upload to.</li>
+            <li>Only file <em>names and paths</em> are read (plus <code>manifest.json</code> for the friendly title). File contents are never opened.</li>
+            <li>Results are cached in this browser's <code>localStorage</code> for the next visit. Clear the site's data to remove them.</li>
+            <li>The folder permission only lasts for this browser tab — closing the tab revokes access.</li>
+          </ul>
+        </details>
+        <div id="package-list" class="package-list"></div>
+      </article>
+
+      <article class="panel">
+        <h2>Scan Results</h2>
+        <div id="result-list" class="result-list"></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Troubleshooting Steps</h2>
+      <ol class="steps">
+        <li>Disable the package with the red warning first and test the sim again.</li>
+        <li>If the problem remains, move the full Community folder aside and add packages back in small batches.</li>
+        <li>Check the same file path across packages. Duplicate aircraft, livery, and UI files are the most common cause.</li>
+        <li>Look for nested Community folders or archive leftovers that should not be in the folder.</li>
+      </ol>
+    </section>
+
+    <script id="package-data" type="application/json" set:html={JSON.stringify(communityFolderSamples)} />
+  </section>
+</BaseLayout>
+
+<script>
+  import { buildCommunityScanReport } from '../../lib/community-folder';
+
+  interface PackageFormData {
+    name: string;
+    folder: string;
+    files: string;
+    notes: string;
+  }
+
+  interface PackageEntry {
+    id: string;
+    name: string;
+    folder: string;
+    files: string[];
+    notes?: string;
+  }
+
+  const STORAGE_KEY = 'community-folder-troubleshooter-packages';
+  const SCAN_STORAGE_KEY = 'community-folder-troubleshooter-scanned';
+  const EXAMPLES_STORAGE_KEY = 'community-folder-troubleshooter-show-examples';
+  const packageDataEl = document.getElementById('package-data');
+  const packageForm = document.getElementById('package-form') as HTMLFormElement | null;
+  const packageListEl = document.getElementById('package-list');
+  const resultListEl = document.getElementById('result-list');
+  const packageCountEl = document.getElementById('stat-packages');
+  const conflictCountEl = document.getElementById('stat-conflicts');
+  const warningCountEl = document.getElementById('stat-warnings');
+  let packages: PackageEntry[] = [];
+  let showExamples: boolean = window.localStorage.getItem(EXAMPLES_STORAGE_KEY) === 'true';
+
+  function escapeHtml(value: string): string {
+    return value
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#039;');
+  }
+
+  function loadPackages(): PackageEntry[] {
+    const storedPackages = window.localStorage.getItem(STORAGE_KEY);
+    const storedScanned = window.localStorage.getItem(SCAN_STORAGE_KEY);
+
+    let custom: PackageEntry[] = [];
+    let scanned: PackageEntry[] = [];
+
+    if (storedPackages) {
+      try { custom = JSON.parse(storedPackages) as PackageEntry[]; } catch { /* ignore */ }
+    }
+    if (storedScanned) {
+      try { scanned = JSON.parse(storedScanned) as PackageEntry[]; } catch { /* ignore */ }
+    }
+
+    const examples = showExamples
+      ? (JSON.parse(packageDataEl?.textContent || '[]') as PackageEntry[])
+      : [];
+
+    return [...examples, ...scanned, ...custom];
+  }
+
+  function savePackages(packages: PackageEntry[]): void {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(packages));
+  }
+
+  function saveScannedPackages(scanned: PackageEntry[]): void {
+    window.localStorage.setItem(SCAN_STORAGE_KEY, JSON.stringify(scanned));
+  }
+
+  async function collectFiles(
+    dirHandle: FileSystemDirectoryHandle,
+    basePath: string,
+    files: string[],
+    limit: number,
+    depth: number = 0
+  ): Promise<void> {
+    if (depth > 2 || files.length >= limit) return;
+    for await (const [name, handle] of (dirHandle as any).entries()) {
+      if (files.length >= limit) return;
+      const fullPath = `${basePath}/${name}`;
+      if (handle.kind === 'file') {
+        files.push(fullPath);
+      } else if (handle.kind === 'directory') {
+        await collectFiles(handle as FileSystemDirectoryHandle, fullPath, files, limit, depth + 1);
+      }
+    }
+  }
+
+  async function scanLocalFolder(): Promise<void> {
+    if (!('showDirectoryPicker' in window)) {
+      alert('Folder scanning requires Chrome or Edge. Your current browser does not support this feature.');
+      return;
+    }
+
+    const scanBtn = document.getElementById('scan-folder-btn') as HTMLButtonElement | null;
+    const scanHint = document.getElementById('scan-hint');
+    if (scanBtn) { scanBtn.textContent = 'Scanning…'; scanBtn.disabled = true; }
+    try {
+      let dirHandle: FileSystemDirectoryHandle = await (window as any).showDirectoryPicker({ mode: 'read' });
+      console.log('[Troubleshooter] Selected folder:', dirHandle.name);
+
+      // If user picked the parent (e.g., MSFS install root), auto-descend into Community subfolder.
+      try {
+        const maybeCommunity = await (dirHandle as any).getDirectoryHandle('Community');
+        if (maybeCommunity) {
+          console.log('[Troubleshooter] Auto-descending into Community subfolder.');
+          dirHandle = maybeCommunity;
+        }
+      } catch { /* no Community subfolder – use selected folder as-is */ }
+
+      const scannedPackages: PackageEntry[] = [];
+      let counter = 0;
+      let totalEntries = 0;
+      let dirEntries = 0;
+
+      for await (const [folderName, handle] of (dirHandle as any).entries()) {
+        totalEntries++;
+        if (handle.kind !== 'directory') continue;
+        dirEntries++;
+        console.log(`[Troubleshooter] Scanning package: ${folderName}`);
+
+        const pkgHandle = handle as FileSystemDirectoryHandle;
+        const files: string[] = [];
+        let title: string = folderName;
+
+        if (scanHint) {
+          scanHint.textContent = `Scanning… (${scannedPackages.length} packages found so far)`;
+        }
+
+        try {
+          const manifestHandle = await pkgHandle.getFileHandle('manifest.json');
+          const manifestFile = await (manifestHandle as any).getFile();
+          const manifestText = await manifestFile.text();
+          const manifest = JSON.parse(manifestText) as Record<string, unknown>;
+          if (typeof manifest.title === 'string' && manifest.title.length > 0) {
+            title = manifest.title;
+          }
+        } catch { /* no manifest or unreadable – use folder name */ }
+
+        await collectFiles(pkgHandle, folderName, files, 60);
+
+        scannedPackages.push({
+          id: `scan-${Date.now()}-${counter++}`,
+          name: title,
+          folder: `Community/${folderName}`,
+          files,
+          notes: 'Scanned from local drive',
+        });
+      }
+
+      saveScannedPackages(scannedPackages);
+      const customPackages = packages.filter((pkg) => pkg.id.startsWith('custom-'));
+      const examples = showExamples
+        ? (JSON.parse(packageDataEl?.textContent || '[]') as PackageEntry[])
+        : [];
+      packages = [...examples, ...scannedPackages, ...customPackages];
+      render(packages);
+
+      console.log(`[Troubleshooter] Scan complete. Entries: ${totalEntries}, folders: ${dirEntries}, packages added: ${scannedPackages.length}`);
+
+      if (scanHint) {
+        if (scannedPackages.length === 0) {
+          scanHint.textContent = `No subfolders found in "${dirHandle.name}" (${totalEntries} entries). Please pick your Community folder directly.`;
+        } else {
+          scanHint.textContent = `${scannedPackages.length} package${scannedPackages.length !== 1 ? 's' : ''} imported from "${dirHandle.name}".`;
+        }
+      }
+    } catch (err) {
+      if ((err as DOMException).name !== 'AbortError') {
+        console.error('Folder scan failed:', err);
+        if (scanHint) { scanHint.textContent = 'Scan failed. Please try again.'; }
+      } else {
+        if (scanHint) { scanHint.textContent = 'Select your Community folder to auto-import packages. Requires Chrome or Edge.'; }
+      }
+    } finally {
+      if (scanBtn) { scanBtn.textContent = 'Scan local folder'; scanBtn.disabled = false; }
+    }
+  }
+
+  function toPackageEntry(formData: PackageFormData): PackageEntry {
+    return {
+      id: `custom-${Date.now()}`,
+      name: formData.name.trim(),
+      folder: formData.folder.trim(),
+      files: formData.files
+        .split(/\r?\n/)
+        .map((line) => line.trim())
+        .filter(Boolean),
+      notes: formData.notes.trim() || undefined,
+    };
+  }
+
+  function render(currentPackages: PackageEntry[]): void {
+    const report = buildCommunityScanReport(currentPackages);
+
+    if (packageCountEl) {
+      packageCountEl.textContent = String(report.packageCount);
+    }
+
+    if (conflictCountEl) {
+      conflictCountEl.textContent = String(report.conflictCount);
+    }
+
+    if (warningCountEl) {
+      warningCountEl.textContent = String(report.warningCount);
+    }
+
+    if (packageListEl) {
+      packageListEl.innerHTML = report.packages
+        .map(
+          (pkg) => `
+            <article class="package-card">
+              <header>
+                <strong>${escapeHtml(pkg.name)}</strong>
+                <button type="button" data-remove-package="${escapeHtml(pkg.id)}">Remove</button>
+              </header>
+              <p>${escapeHtml(pkg.folder)}</p>
+              <details class="package-files">
+                <summary>${pkg.files.length} file${pkg.files.length !== 1 ? 's' : ''}</summary>
+                <div class="file-chips">
+                  ${pkg.files.map((file) => `<span>${escapeHtml(file)}</span>`).join('')}
+                </div>
+              </details>
+              ${pkg.notes ? `<p class="notes">${escapeHtml(pkg.notes)}</p>` : ''}
+            </article>
+          `
+        )
+        .join('');
+    }
+
+    if (resultListEl) {
+      resultListEl.innerHTML = report.issues.length > 0
+        ? report.issues
+            .map(
+              (issue) => `
+                <article class="issue issue-${issue.severity}">
+                  <header>
+                    <strong>${escapeHtml(issue.title)}</strong>
+                    <span>${escapeHtml(issue.severity)}</span>
+                  </header>
+                  <p>${escapeHtml(issue.detail)}</p>
+                  <p class="recommendation">Next: ${escapeHtml(issue.recommendation)}</p>
+                  ${issue.filePaths ? `
+                    <details class="issue-paths">
+                      <summary>${issue.filePaths.length} affected path${issue.filePaths.length !== 1 ? 's' : ''}</summary>
+                      <p class="paths">${issue.filePaths.map((file) => escapeHtml(file)).join('<br />')}</p>
+                    </details>` : ''}
+                </article>
+              `
+            )
+            .join('')
+        : '<p class="empty-state">No obvious package issues were found.</p>';
+    }
+
+    packageListEl?.querySelectorAll('[data-remove-package]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const id = button.getAttribute('data-remove-package');
+        if (!id) {
+          return;
+        }
+
+        packages = currentPackages.filter((pkg) => pkg.id !== id);
+        savePackages(packages.filter((pkg) => pkg.id.startsWith('custom-')));
+        render(packages);
+      });
+    });
+  }
+
+  if (packageForm) {
+    packages = loadPackages();
+    render(packages);
+
+    const examplesBtn = document.getElementById('toggle-examples-btn');
+    if (examplesBtn) {
+      const updateLabel = () => {
+        examplesBtn.textContent = showExamples ? 'Hide examples' : 'Show examples';
+        examplesBtn.classList.toggle('active', showExamples);
+      };
+      updateLabel();
+      examplesBtn.addEventListener('click', () => {
+        showExamples = !showExamples;
+        window.localStorage.setItem(EXAMPLES_STORAGE_KEY, String(showExamples));
+        updateLabel();
+        packages = loadPackages();
+        render(packages);
+      });
+    }
+
+    document.getElementById('scan-folder-btn')?.addEventListener('click', () => {
+      scanLocalFolder();
+    });
+
+    packageForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const formData = new FormData(packageForm);
+      const nextPackage = toPackageEntry({
+        name: String(formData.get('name') || ''),
+        folder: String(formData.get('folder') || ''),
+        files: String(formData.get('files') || ''),
+        notes: String(formData.get('notes') || ''),
+      });
+
+      if (nextPackage.name.length === 0 || nextPackage.folder.length === 0 || nextPackage.files.length === 0) {
+        return;
+      }
+
+      packages = [...packages, nextPackage];
+      savePackages(packages.filter((pkg) => pkg.id.startsWith('custom-')));
+      render(packages);
+      packageForm.reset();
+    });
+  }
+</script>
+
+<style>
+  .troubleshooter-page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .hero {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.6fr);
+    align-items: end;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.75rem;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 3vw, 3rem);
+    color: var(--text-heading);
+  }
+
+  h1 .beta-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #0b1e33;
+    background: var(--accent);
+    vertical-align: middle;
+  }
+
+  .hero-copy {
+    margin: 0.5rem 0 0;
+    color: var(--text-muted);
+    max-width: 70ch;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+
+  .hero-stats div {
+    border: 1px solid var(--border-default);
+    background: var(--bg-surface);
+    border-radius: 1rem;
+    padding: 0.85rem 1rem;
+    display: grid;
+    gap: 0.15rem;
+  }
+
+  .hero-stats strong {
+    font-size: 1.6rem;
+    color: var(--text-heading);
+  }
+
+  .hero-stats span {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: lowercase;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .add-panel {
+    grid-column: 1 / -1;
+    padding: 0.5rem 1rem;
+  }
+
+  .add-disclosure summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    user-select: none;
+  }
+
+  .add-disclosure summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .add-disclosure summary::before {
+    content: '＋';
+    color: var(--accent);
+    font-size: 1.1rem;
+    line-height: 1;
+    transition: transform 0.15s ease;
+  }
+
+  .add-disclosure[open] summary::before {
+    transform: rotate(45deg);
+  }
+
+  .add-summary-title {
+    color: var(--text-heading);
+    font-weight: 600;
+  }
+
+  .add-summary-hint {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+  }
+
+  .add-disclosure .package-form {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .package-form small {
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  .panel {
+    border: 1px solid var(--border-default);
+    background: var(--bg-surface);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: grid;
+    gap: 0.85rem;
+    min-width: 0;
+  }
+
+  .panel h2 {
+    margin: 0;
+    color: var(--text-heading);
+    font-size: 1.05rem;
+  }
+
+  .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .panel-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .scan-btn.ghost {
+    background: transparent;
+    color: var(--text-muted);
+  }
+
+  .scan-btn.ghost.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(125, 211, 252, 0.08);
+  }
+
+  .scan-btn {
+    border: 1px solid var(--border-default);
+    background: transparent;
+    color: var(--text-secondary);
+    border-radius: 9999px;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.82rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .scan-btn:hover:not(:disabled) {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .scan-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  .scan-hint {
+    margin: -0.4rem 0 0;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .privacy-note {
+    margin-top: -0.25rem;
+    border: 1px solid var(--border-default);
+    border-radius: 0.65rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(125, 211, 252, 0.04);
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+  }
+
+  .privacy-note summary {
+    cursor: pointer;
+    color: var(--accent);
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .privacy-note summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .privacy-note summary::before {
+    content: '▶';
+    font-size: 0.65rem;
+    transition: transform 0.15s ease;
+    display: inline-block;
+  }
+
+  .privacy-note[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .privacy-note ul {
+    margin: 0.6rem 0 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 0.35rem;
+    line-height: 1.45;
+  }
+
+  .privacy-note code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.05rem 0.3rem;
+    border-radius: 0.3rem;
+  }
+
+  .package-form {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .package-form label {
+    display: grid;
+    gap: 0.35rem;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+  }
+
+  .package-form input,
+  .package-form textarea {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-default);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-primary);
+    padding: 0.75rem 0.85rem;
+    font: inherit;
+  }
+
+  .package-form input:focus,
+  .package-form textarea:focus {
+    outline: 2px solid rgba(125, 211, 252, 0.35);
+    outline-offset: 2px;
+  }
+
+  .package-form button {
+    border: 0;
+    border-radius: 0.8rem;
+    background: var(--accent);
+    color: #0b1e33;
+    padding: 0.8rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .package-list,
+  .result-list {
+    display: grid;
+    gap: 0.75rem;
+    min-width: 0;
+  }
+
+  .package-card,
+  .issue {
+    border: 1px solid var(--border-default);
+    border-radius: 0.9rem;
+    padding: 0.85rem;
+    background: rgba(255, 255, 255, 0.03);
+    display: grid;
+    gap: 0.7rem;
+    overflow: hidden;
+  }
+
+  .package-card header,
+  .issue header {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .package-card header strong,
+  .issue header strong {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .package-card header button {
+    border: 1px solid var(--border-default);
+    background: transparent;
+    color: var(--text-secondary);
+    border-radius: 9999px;
+    padding: 0.3rem 0.65rem;
+    cursor: pointer;
+  }
+
+  .package-card p,
+  .issue p {
+    margin: 0;
+    color: var(--text-secondary);
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .file-chips {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    min-width: 0;
+  }
+
+  .file-chips span {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+    border-radius: 0.55rem;
+    background: rgba(125, 211, 252, 0.08);
+    border: 1px solid rgba(125, 211, 252, 0.18);
+    color: var(--accent);
+    font-size: 0.8rem;
+    line-height: 1.35;
+    padding: 0.35rem 0.55rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .issue header span {
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--border-default);
+  }
+
+  .issue-critical {
+    border-color: rgba(248, 113, 113, 0.4);
+  }
+
+  .issue-critical header span {
+    color: #fecaca;
+    background: rgba(248, 113, 113, 0.1);
+  }
+
+  .issue-warning {
+    border-color: rgba(250, 204, 21, 0.35);
+  }
+
+  .issue-warning header span {
+    color: #fef3c7;
+    background: rgba(250, 204, 21, 0.1);
+  }
+
+  .recommendation {
+    color: var(--text-heading);
+  }
+
+  .paths {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.84rem;
+    color: var(--accent);
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  /* Dynamic elements are injected via innerHTML, so they need global selectors. */
+  :global(.package-card),
+  :global(.issue) {
+    border: 1px solid var(--border-default);
+    border-radius: 0.9rem;
+    padding: 0.85rem;
+    background: rgba(255, 255, 255, 0.03);
+    display: grid;
+    gap: 0.7rem;
+    overflow: hidden;
+  }
+
+  :global(.package-card header),
+  :global(.issue header) {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  :global(.package-card header strong),
+  :global(.issue header strong) {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  :global(.package-card p),
+  :global(.issue p) {
+    margin: 0;
+    color: var(--text-secondary);
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  :global(.package-card header button) {
+    border: 1px solid var(--border-default);
+    background: transparent;
+    color: var(--text-secondary);
+    border-radius: 9999px;
+    padding: 0.3rem 0.65rem;
+    cursor: pointer;
+  }
+
+  :global(.file-chips) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    min-width: 0;
+  }
+
+  :global(.file-chips span) {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+    border-radius: 0.55rem;
+    background: rgba(125, 211, 252, 0.08);
+    border: 1px solid rgba(125, 211, 252, 0.18);
+    color: var(--accent);
+    font-size: 0.8rem;
+    line-height: 1.35;
+    padding: 0.35rem 0.55rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  :global(.issue header span) {
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--border-default);
+  }
+
+  :global(.issue-critical) {
+    border-color: rgba(248, 113, 113, 0.4);
+  }
+
+  :global(.issue-critical header span) {
+    color: #fecaca;
+    background: rgba(248, 113, 113, 0.1);
+  }
+
+  :global(.issue-warning) {
+    border-color: rgba(250, 204, 21, 0.35);
+  }
+
+  :global(.issue-warning header span) {
+    color: #fef3c7;
+    background: rgba(250, 204, 21, 0.1);
+  }
+
+  :global(.recommendation) {
+    color: var(--text-heading);
+  }
+
+  :global(.paths) {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.84rem;
+    color: var(--accent);
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  :global(.package-files),
+  :global(.issue-paths) {
+    border: 1px solid var(--border-default);
+    border-radius: 0.6rem;
+    padding: 0.45rem 0.65rem;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  :global(.package-files summary),
+  :global(.issue-paths summary) {
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    list-style: none;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  :global(.package-files summary::-webkit-details-marker),
+  :global(.issue-paths summary::-webkit-details-marker) {
+    display: none;
+  }
+
+  :global(.package-files summary::before),
+  :global(.issue-paths summary::before) {
+    content: '▶';
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    transition: transform 0.15s ease;
+    display: inline-block;
+  }
+
+  :global(.package-files[open] summary::before),
+  :global(.issue-paths[open] summary::before) {
+    transform: rotate(90deg);
+  }
+
+  :global(.package-files[open]),
+  :global(.issue-paths[open]) {
+    padding-bottom: 0.7rem;
+  }
+
+  :global(.package-files summary:hover),
+  :global(.issue-paths summary:hover) {
+    color: var(--accent);
+  }
+
+  :global(.package-files > .file-chips),
+  :global(.issue-paths > .paths) {
+    margin-top: 0.6rem;
+  }
+
+  .steps {
+    margin: 0;
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.65rem;
+    color: var(--text-secondary);
+  }
+
+  .empty-state {
+    margin: 0;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 1100px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .troubleshooter-page {
+      padding: 1.25rem 0.75rem 2rem;
+    }
+
+    .hero-stats {
+      grid-template-columns: 1fr;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
