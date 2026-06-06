@@ -12,37 +12,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-06-06T08:38:28.023420Z"
-  },
-  {
-    "id": "Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
-    "text": "Episode 6: \"F\" is for Flight Director! 🎯\n\nThe Alphabet Challenge marches on — and today we’re tackling one of the most misunderstood tools in the cockpit.\n\nEver felt like the airplane was whispering instructions you couldn’t quite decode? That’s the Flight Director: the “ghost in the cockpit” guiding you toward professional, razor‑sharp flying. Whether you’re hand‑flying a SID in the 737 or following a GPS track in the G1000, mastering the FD is the key to flying with intention instead of reaction.\n\nTomorrow at 17:00 UTC+1, we’re pulling back the curtain on those magenta bars and showing you how to turn them into your best friend in the sky.\n\nWhat we’re covering:\n\n- The Logic Behind the Bars: What the FD is actually telling you.\n- FD vs Autopilot: Why one thinks and the other acts.\n- Aircraft Differences: V‑bars in the G1000, crosshairs in the 737, magenta magic in the A320.\n- Common Mistakes: How to stop “chasing the ghost” and start flying proactively.\n\nSix letters down, nineteen to go. Let’s keep climbing! ✈️🔥",
-    "published_relative": "3 months ago",
-    "published_date": "2026-03-08",
-    "url": "https://www.youtube.com/post/Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
-    "likes": "1",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/P_kphVDnsrTPOvnjhy17Xej5yBTLDcaamQOSY4Mi4No3XkSYkU0NPVvUlx2mXdvoWAukq5rANWwdqg=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-06-06T08:38:28.023401Z"
-  },
-  {
-    "id": "UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
-    "text": "✈️ Episode 9: “I” is for ILS! ✈️\n\nEver wondered how pilots land when they can’t even see the nose of their own plane? Next Tuesday in our MSFS A‑Z series, we’re tackling one of the most important tools in real-world IFR flying: ILS - the Instrument Landing System.\n\nIt’s the gold standard of precision approaches. And in Microsoft Flight Simulator 2024, it’s also one of the most satisfying skills you can master because once you understand the needles, foggy days stop being scary and start being predictable.\n\n🗺️ What’s on the approach plate for next Tuesday the 3rd of March:\n\n\n📐 ILS, explained visually (no fluff):\nWe break down how ILS gives you two critical cues—horizontal and vertical—so you’re lined up and descending correctly 🎯⬇️\n\n📡 The two beams you must understand:\n➡️ Localizer (LOC): keeps you centered on the runway 🛣️\n⬇️ Glideslope (GS): guides your descent path (usually 3°) so you’re not too high… and not too low ⚖️\n\n🖥️ Cockpit view: reading the “needles” like a pro:\nYou’ll see the LOC and GS diamonds and learn the rule that makes it click instantly:\n\n👉 “Fly toward the needle.”\nNeedle above you? You’re low ⬆️\nNeedle left? You’re right ⬅️\nSimple. Powerful. 💡\n\n\n🛩️ MSFS 2024 Demo #1 — GA ILS (Cessna 172 G1000):\nTune NAV1, set CDI to LOC1, intercept at ~30°, hit APR, and watch the magic ✨\nFirst LOC capture, then GS, then a smooth, stable descent 🧘‍♂️\n\n✈️🤖 MSFS 2024 Demo #2 — Airliner Auto‑Land (Airbus A320neo):\nFrom selecting the ILS in the Flight Plan, pressing LS, engaging APPR, and finally capturing Cat III beams 📶\nWith AP1 + AP2 on, the A320 can fly itself all the way to the flare 😮🛬\n\n🧠 Why ILS changes everything:\nWhen visibility disappears, ILS turns chaos into math 📊\nMaster needle tracking, and low‑vis approaches become calm, repeatable, and safe ✅",
-    "published_relative": "3 months ago",
-    "published_date": "2026-03-08",
-    "url": "https://www.youtube.com/post/UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
-    "likes": "1",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/PWxU0oP2t_Q7JQp4LPt-M-xk_bOcMfVDXgx3WdMO_L3KQ5957Nsz-0VNgQO2kKOKJnL_-S2-ge2kJg=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-06-06T08:38:28.023364Z"
+    "scraped_at": "2026-06-06T13:52:02.819111Z"
   },
   {
     "id": "UgkxMvdtTuS7W5_vNsN_HGod0QGqKyrWv5HS",
@@ -57,7 +27,37 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-06-06T08:38:28.023300Z"
+    "scraped_at": "2026-06-06T13:52:02.819056Z"
+  },
+  {
+    "id": "Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
+    "text": "Episode 6: \"F\" is for Flight Director! 🎯\n\nThe Alphabet Challenge marches on — and today we’re tackling one of the most misunderstood tools in the cockpit.\n\nEver felt like the airplane was whispering instructions you couldn’t quite decode? That’s the Flight Director: the “ghost in the cockpit” guiding you toward professional, razor‑sharp flying. Whether you’re hand‑flying a SID in the 737 or following a GPS track in the G1000, mastering the FD is the key to flying with intention instead of reaction.\n\nTomorrow at 17:00 UTC+1, we’re pulling back the curtain on those magenta bars and showing you how to turn them into your best friend in the sky.\n\nWhat we’re covering:\n\n- The Logic Behind the Bars: What the FD is actually telling you.\n- FD vs Autopilot: Why one thinks and the other acts.\n- Aircraft Differences: V‑bars in the G1000, crosshairs in the 737, magenta magic in the A320.\n- Common Mistakes: How to stop “chasing the ghost” and start flying proactively.\n\nSix letters down, nineteen to go. Let’s keep climbing! ✈️🔥",
+    "published_relative": "3 months ago",
+    "published_date": "2026-03-08",
+    "url": "https://www.youtube.com/post/Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
+    "likes": "1",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/P_kphVDnsrTPOvnjhy17Xej5yBTLDcaamQOSY4Mi4No3XkSYkU0NPVvUlx2mXdvoWAukq5rANWwdqg=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-06-06T13:52:02.819037Z"
+  },
+  {
+    "id": "UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
+    "text": "✈️ Episode 9: “I” is for ILS! ✈️\n\nEver wondered how pilots land when they can’t even see the nose of their own plane? Next Tuesday in our MSFS A‑Z series, we’re tackling one of the most important tools in real-world IFR flying: ILS - the Instrument Landing System.\n\nIt’s the gold standard of precision approaches. And in Microsoft Flight Simulator 2024, it’s also one of the most satisfying skills you can master because once you understand the needles, foggy days stop being scary and start being predictable.\n\n🗺️ What’s on the approach plate for next Tuesday the 3rd of March:\n\n\n📐 ILS, explained visually (no fluff):\nWe break down how ILS gives you two critical cues—horizontal and vertical—so you’re lined up and descending correctly 🎯⬇️\n\n📡 The two beams you must understand:\n➡️ Localizer (LOC): keeps you centered on the runway 🛣️\n⬇️ Glideslope (GS): guides your descent path (usually 3°) so you’re not too high… and not too low ⚖️\n\n🖥️ Cockpit view: reading the “needles” like a pro:\nYou’ll see the LOC and GS diamonds and learn the rule that makes it click instantly:\n\n👉 “Fly toward the needle.”\nNeedle above you? You’re low ⬆️\nNeedle left? You’re right ⬅️\nSimple. Powerful. 💡\n\n\n🛩️ MSFS 2024 Demo #1 — GA ILS (Cessna 172 G1000):\nTune NAV1, set CDI to LOC1, intercept at ~30°, hit APR, and watch the magic ✨\nFirst LOC capture, then GS, then a smooth, stable descent 🧘‍♂️\n\n✈️🤖 MSFS 2024 Demo #2 — Airliner Auto‑Land (Airbus A320neo):\nFrom selecting the ILS in the Flight Plan, pressing LS, engaging APPR, and finally capturing Cat III beams 📶\nWith AP1 + AP2 on, the A320 can fly itself all the way to the flare 😮🛬\n\n🧠 Why ILS changes everything:\nWhen visibility disappears, ILS turns chaos into math 📊\nMaster needle tracking, and low‑vis approaches become calm, repeatable, and safe ✅",
+    "published_relative": "3 months ago",
+    "published_date": "2026-03-08",
+    "url": "https://www.youtube.com/post/UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
+    "likes": "1",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/PWxU0oP2t_Q7JQp4LPt-M-xk_bOcMfVDXgx3WdMO_L3KQ5957Nsz-0VNgQO2kKOKJnL_-S2-ge2kJg=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-06-06T13:52:02.818997Z"
   },
   {
     "id": "Ugkx0qMtNPkCBvzjXPMoUfqYVStQTeN6cTnm",
@@ -72,7 +72,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-06-06T08:38:28.023280Z"
+    "scraped_at": "2026-06-06T13:52:02.818958Z"
   },
   {
     "id": "UgkxmXp9kg_FPWEPK-z0kvPoAWnSI4eU2_DX",
@@ -87,7 +87,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-06-06T08:38:28.023253Z"
+    "scraped_at": "2026-06-06T13:52:02.818929Z"
   },
   {
     "id": "UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
