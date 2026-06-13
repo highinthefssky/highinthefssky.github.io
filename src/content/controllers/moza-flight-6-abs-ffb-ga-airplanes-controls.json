@@ -1,0 +1,12 @@
+{
+  "filename": "Moza Flight - 6 ABS FFB - GA - airplanes controls.xml",
+  "controller": "Moza Flight",
+  "settingsType": "airplanes controls",
+  "description": "airplanes controls for Moza Flight - 6 ABS FFB - GA",
+  "aircraft": "6 ABS FFB - GA",
+  "downloadUrl": "https://raw.githubusercontent.com/highinthefssky/msfs-2024-controls-settings/main/profiles/Moza%20Flight%20-%206%20ABS%20FFB%20-%20GA%20-%20airplanes%20controls.xml",
+  "tags": [
+    "Airplane Controls",
+    "General Aviation"
+  ]
+}
