@@ -160,6 +160,11 @@ async function checkLiveStatus(env) {
   const videoIdMatch = html.match(/"videoId":\s*"([a-zA-Z0-9_-]{11})"/);
   const videoId = videoIdMatch ? videoIdMatch[1] : null;
 
+  const scheduledStartTimeMatch = html.match(/"scheduledStartTime":\s*"([^"]+)"/) ||
+                                  html.match(/"startTimestamp":\s*"([^"]+)"/) ||
+                                  html.match(/<meta\s+(?:name|property)="video:release_date"\s+content="([^"]+)"/);
+  const scheduledStartTime = scheduledStartTimeMatch ? scheduledStartTimeMatch[1] : null;
+
   if (!videoId) {
     // Page says live but we can't find a video ID — treat as not live
     return { isLive: false };
@@ -180,6 +185,7 @@ async function checkLiveStatus(env) {
     videoId,
     title,
     thumbnail,
+    scheduledStartTime,
   };
 }
 

@@ -82,7 +82,8 @@ This runs the worker locally at `http://localhost:8787`.
   "isLive": true,
   "videoId": "abc123",
   "title": "Stream Title",
-  "thumbnail": "https://i.ytimg.com/..."
+  "thumbnail": "https://i.ytimg.com/...",
+  "scheduledStartTime": "2026-06-13T19:00:00Z"
 }
 ```
 
