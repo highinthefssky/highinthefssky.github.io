@@ -27,6 +27,7 @@ const liveStatusUrl = import.meta.env.PUBLIC_LIVE_STATUS_URL || '';
     isLive: boolean;
     videoId?: string;
     title?: string;
+    scheduledStartTime?: string;
   }
 
   class LiveBannerController {
@@ -49,6 +50,13 @@ const liveStatusUrl = import.meta.env.PUBLIC_LIVE_STATUS_URL || '';
     }
 
     private init(): void {
+      // Set up close button first so test mode previews can still be dismissed.
+      this.closeBtn?.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.hideBanner();
+        sessionStorage.setItem('liveBannerDismissed', 'true');
+      });
+
       // Test mode: add ?testlive=true to URL to preview the banner (localhost only)
       const urlParams = new URLSearchParams(window.location.search);
       const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
@@ -70,13 +78,6 @@ const liveStatusUrl = import.meta.env.PUBLIC_LIVE_STATUS_URL || '';
         return;
       }
 
-      // Set up close button
-      this.closeBtn?.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.hideBanner();
-        sessionStorage.setItem('liveBannerDismissed', 'true');
-      });
-
       // Initial check
       this.checkLiveStatus();
 
@@ -89,9 +90,10 @@ const liveStatusUrl = import.meta.env.PUBLIC_LIVE_STATUS_URL || '';
     private async checkLiveStatus(): Promise<void> {
       try {
         const data = await this.fetchLiveStatus();
+        const videoId = data.videoId;
         
-        if (data.isLive && data.videoId) {
-          this.showBanner(data.videoId, data.title || 'Live now!');
+        if (this.shouldShowBanner(data) && videoId) {
+          this.showBanner(videoId, data.title || 'Live now!');
         } else {
           this.hideBanner();
         }
@@ -109,6 +111,24 @@ const liveStatusUrl = import.meta.env.PUBLIC_LIVE_STATUS_URL || '';
       }
 
       return await response.json();
+    }
+
+    private shouldShowBanner(data: LiveStreamData): boolean {
+      if (!data.isLive || !data.videoId) {
+        return false;
+      }
+
+      if (!data.scheduledStartTime) {
+        return true;
+      }
+
+      const startTime = Date.parse(data.scheduledStartTime);
+
+      if (Number.isNaN(startTime)) {
+        return true;
+      }
+
+      return Date.now() >= startTime;
     }
 
     private showBanner(videoId: string, title: string): void {
