@@ -32,7 +32,7 @@ Set your alarms, grab a drink, and I'll see you live in the flight deck at 19:30
 #MSFS #CityUpdate15 #PiperM600 #FlightSimulator #Livestream
 
 Original post: https://www.youtube.com/post/UgkxTNz19tJEt-gjx7rb4fAQK5lkBABJLJLC
-Likes: 2 | Comments: 0
+Likes: 3 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/ApmN2j0KcJPFRx6oHYbeVO9QLJn4vwSqdd3BC4HRP0GQ8Zxyv8U1bT4z4Z33r8pNZzUbFYSaLA3xlro=s1280)
