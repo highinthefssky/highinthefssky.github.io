@@ -1,7 +1,7 @@
 ---
 title: "⚠️ NOTAM: Saab 340 Departure Delay – Episode 4"
 description: "⚠️ NOTAM: Saab 340 Departure Delay – Episode 4  To: All Virtual Aviators & Saab Enthusiasts  From: The Flight Deck  Subject: Ground Stop on Episode 4 – \"Beyond"
-publishedAt: 2026-04-17
+publishedAt: 2026-04-18
 tags: ["community", "youtube"]
 draft: false
 ---
