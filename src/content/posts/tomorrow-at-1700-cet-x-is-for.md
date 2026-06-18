@@ -23,7 +23,7 @@ We’ll also look at why the flying doesn't stop just because your tires hit the
 Fly safe, and see you tomorrow! 🧭
 
 Original post: https://www.youtube.com/post/UgkxFQqVaAqKk8gqbK8dWbUa8kgNhVaNfCek
-Likes: 3 | Comments: 0
+Likes: 4 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/-BERapUKAgE0tAR5xvE1DJn7FDJ2J-2BCoKd0ffXoOOla7VpNvnoxxidITJOLBfzQZJqA8BnF_IYRGM=s1280)
