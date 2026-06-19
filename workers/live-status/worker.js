@@ -136,21 +136,28 @@ async function checkLiveStatus(env) {
 
   const html = await response.text();
 
-  // Check for live indicators in the page's embedded JSON data.
-  // YouTube embeds a ytInitialPlayerResponse object that contains
-  // playability status and live streaming details.
-  const isLive = html.includes('"isLive":true') || 
-                 html.includes('"isLiveContent":true');
+  const scheduledStartTimeMatch = html.match(/"scheduledStartTime":\s*"([^"]+)"/) ||
+                                  html.match(/"startTimestamp":\s*"([^"]+)"/) ||
+                                  html.match(/<meta\s+(?:name|property)="video:release_date"\s+content="([^"]+)"/);
+  const scheduledStartTime = scheduledStartTimeMatch ? scheduledStartTimeMatch[1] : null;
 
-  // If not live, also verify there's no "LIVE_STREAM_OFFLINE" indicator
-  // which appears when a stream just ended
-  if (!isLive || html.includes('"LIVE_STREAM_OFFLINE"')) {
-    // Double-check: also exclude premieres and ended streams
-    if (!isLive) {
-      return { isLive: false };
-    }
-    // isLiveContent can be true for ended streams; confirm with broadcastActiveStatus
-    if (!html.includes('"isLive":true')) {
+  // Check for robust live indicators in the page's embedded JSON data.
+  // Relying on isLiveContent alone causes false positives for upcoming/ended streams.
+  const isLiveNow = html.includes('"isLive":true') || html.includes('"isLiveNow":true');
+  const isOfflineOrUpcoming =
+    html.includes('"LIVE_STREAM_OFFLINE"') ||
+    html.includes('"status":"LIVE_STREAM_OFFLINE"') ||
+    html.includes('"isUpcoming":true');
+
+  if (isOfflineOrUpcoming || !isLiveNow) {
+    return { isLive: false };
+  }
+
+  // Safety guard: if a valid scheduled start time is still in the future,
+  // treat the stream as not live even if other markers are stale/inconsistent.
+  if (scheduledStartTime) {
+    const scheduledStartMs = Date.parse(scheduledStartTime);
+    if (!Number.isNaN(scheduledStartMs) && Date.now() < scheduledStartMs) {
       return { isLive: false };
     }
   }
@@ -159,11 +166,6 @@ async function checkLiveStatus(env) {
   // Pattern: /watch?v=VIDEO_ID
   const videoIdMatch = html.match(/"videoId":\s*"([a-zA-Z0-9_-]{11})"/);
   const videoId = videoIdMatch ? videoIdMatch[1] : null;
-
-  const scheduledStartTimeMatch = html.match(/"scheduledStartTime":\s*"([^"]+)"/) ||
-                                  html.match(/"startTimestamp":\s*"([^"]+)"/) ||
-                                  html.match(/<meta\s+(?:name|property)="video:release_date"\s+content="([^"]+)"/);
-  const scheduledStartTime = scheduledStartTimeMatch ? scheduledStartTimeMatch[1] : null;
 
   if (!videoId) {
     // Page says live but we can't find a video ID — treat as not live

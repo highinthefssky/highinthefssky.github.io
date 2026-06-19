@@ -88,6 +88,20 @@ const trackCollection = defineCollection({
   }),
 });
 
+// Moza flight profile collection schema
+const mozaProfileCollection = defineCollection({
+  loader: glob({ base: './src/content/moza-profiles', pattern: '**/*.json' }),
+  schema: z.object({
+    filename: z.string().describe('Original filename from repository'),
+    device: z.string().describe('Moza device name (e.g. AB6)'),
+    aircraft: z.string().describe('Aircraft or aircraft type this profile is for'),
+    msfsVersion: z.string().describe('Target MSFS version (e.g. 2024)'),
+    description: z.string().describe('Short description of the profile'),
+    downloadUrl: z.string().url().describe('GitHub raw URL to download the .preset file'),
+    tags: z.array(z.string()).describe('Searchable tags for filtering'),
+  }),
+});
+
 // Export collections
 export const collections = {
   videos: videoCollection,
@@ -95,4 +109,5 @@ export const collections = {
   controllers: controllerCollection,
   playlists: playlistCollection,
   tracks: trackCollection,
+  mozaProfiles: mozaProfileCollection,
 };

@@ -51,6 +51,15 @@ const allControllers = Array.from(
           <a href="/controllers/wizard?aircraft=general&goal=navigation" class="wizard-btn">GA + IFR preset</a>
         </div>
       </div>
+
+      <div class="moza-entry">
+        <div class="moza-entry-icon">🕹️</div>
+        <div class="moza-entry-content">
+          <h2>Moza Cockpit users?</h2>
+          <p>Download import-ready <code>.preset</code> files for your Moza flight device.</p>
+        </div>
+        <a href="/controllers/moza" class="wizard-btn wizard-btn-moza">View Moza Profiles →</a>
+      </div>
     </div>
 
     <div class="search-controls">
@@ -254,6 +263,64 @@ const allControllers = Array.from(
   .wizard-btn-primary:hover {
     background: hsl(213, 94%, 37%);
     border-color: hsl(213, 94%, 37%);
+    color: white;
+  }
+
+  .moza-entry {
+    margin-top: 1rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .moza-entry-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  .moza-entry-content {
+    flex: 1;
+    min-width: 180px;
+    text-align: left;
+  }
+
+  .moza-entry-content h2 {
+    margin: 0 0 0.2rem;
+    font-size: 1.05rem;
+    color: var(--text-heading);
+  }
+
+  .moza-entry-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .moza-entry-content code {
+    font-family: 'JetBrains Mono', monospace;
+    background: var(--bg-panel);
+    border: 1px solid var(--border-default);
+    border-radius: 0.25rem;
+    padding: 0.05rem 0.3rem;
+    font-size: 0.85em;
+  }
+
+  .wizard-btn-moza {
+    background: hsl(262, 70%, 48%);
+    color: white;
+    border-color: hsl(262, 70%, 48%);
+    white-space: nowrap;
+  }
+
+  .wizard-btn-moza:hover {
+    background: hsl(262, 70%, 38%);
+    border-color: hsl(262, 70%, 38%);
     color: white;
   }
 

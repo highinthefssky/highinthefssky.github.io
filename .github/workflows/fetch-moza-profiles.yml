@@ -1,0 +1,73 @@
+name: Fetch Moza Flight Profiles
+
+on:
+  schedule:
+    # Run weekly on Mondays at 11:30 UTC (staggered after controllers fetch)
+    - cron: '30 11 * * 1'
+  workflow_dispatch: # Allow manual trigger
+  repository_dispatch:
+    types: [moza-profiles-updated] # Trigger from moza-flight-profiles repo
+
+jobs:
+  fetch-moza-profiles:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch Moza profiles from GitHub
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/fetch-moza-profiles.js
+
+      - name: Check for changes
+        id: check-changes
+        run: |
+          echo "🔍 Checking for changes in Moza profiles and stats..."
+          echo "📁 Moza profiles directory contents:"
+          ls -la src/content/moza-profiles/ || echo "Directory not found or empty"
+
+          if git status --porcelain src/content/moza-profiles/ src/content/stats.json data/moza-profile-dates.json | grep -q .; then
+            echo "📝 Found changes in moza-profiles directory or stats"
+            git status --porcelain src/content/moza-profiles/ src/content/stats.json data/moza-profile-dates.json
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "📭 No changes in moza-profiles directory or stats"
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit changes
+        if: steps.check-changes.outputs.changed == 'true'
+        run: |
+          echo "💾 Committing changes..."
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          echo "📋 Files to be committed:"
+          git add src/content/moza-profiles/ src/content/stats.json data/moza-profile-dates.json
+          git status --porcelain
+          git commit -m "chore: update Moza flight profiles from moza-flight-profiles"
+          echo "🚀 Pulling remote changes and pushing..."
+          git pull --rebase
+          git push
+          echo "✅ Changes committed and pushed successfully"
+
+      - name: Trigger deploy
+        if: steps.check-changes.outputs.changed == 'true'
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/dispatches \
+            -d '{"event_type":"content-updated"}'
