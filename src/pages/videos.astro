@@ -447,13 +447,13 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
   const tagSearchInput = document.getElementById('tag-search') as HTMLInputElement;
   const toggleBtn = document.getElementById('toggle-tags') as HTMLButtonElement;
   const tagContainer = document.getElementById('tag-container') as HTMLDivElement;
-  const tagButtons = document.querySelectorAll('.tag-filter');
-  const videosGrid = document.getElementById('videos-grid');
-  const emptyState = document.getElementById('empty-state');
-  const videoCards = document.querySelectorAll('[data-tags]');
-  const resultCount = document.getElementById('result-count');
-  const clearBtn = document.getElementById('clear-btn');
-  const resetBtn = document.getElementById('reset-btn');
+  const tagButtons = document.querySelectorAll<HTMLButtonElement>('.tag-filter');
+  const videosGrid = document.getElementById('videos-grid') as HTMLDivElement;
+  const emptyState = document.getElementById('empty-state') as HTMLDivElement;
+  const videoCards = document.querySelectorAll<HTMLElement>('[data-tags]');
+  const resultCount = document.getElementById('result-count') as HTMLElement;
+  const clearBtn = document.getElementById('clear-btn') as HTMLButtonElement;
+  const resetBtn = document.getElementById('reset-btn') as HTMLButtonElement;
   const selectedTagsContainer = document.getElementById('selected-tags') as HTMLDivElement;
   const loadMoreBtn = document.getElementById('load-more-btn') as HTMLButtonElement;
   const loadMoreContainer = document.getElementById('load-more-container') as HTMLDivElement;
@@ -524,8 +524,7 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
 
     // First pass: determine which cards match the current filters
     const matchingCards: HTMLElement[] = [];
-    videoCards.forEach((card) => {
-      const cardEl = card as HTMLElement;
+      videoCards.forEach((cardEl) => {
       const tags = (cardEl.getAttribute('data-tags') || '')
         .split(',')
         .filter((t) => t)
@@ -552,8 +551,7 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
 
     // Second pass: show matching cards up to visibleLimit, hide the rest
     let shown = 0;
-    videoCards.forEach((card) => {
-      const cardEl = card as HTMLElement;
+    videoCards.forEach((cardEl) => {
       const isMatch = matchingCards.includes(cardEl);
       if (isMatch && shown < visibleLimit) {
         cardEl.style.display = '';

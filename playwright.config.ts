@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import { env } from 'node:process';
 
 export default defineConfig({
   testDir: './tests/e2e',
@@ -12,7 +13,7 @@ export default defineConfig({
   webServer: {
     command: 'npm run build && npm run preview -- --host 127.0.0.1 --port 4321',
     url: 'http://127.0.0.1:4321',
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: !env.CI,
     timeout: 120000,
   },
   projects: [

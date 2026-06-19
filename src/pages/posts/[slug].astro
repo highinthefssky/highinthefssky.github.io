@@ -7,9 +7,9 @@ import YouTubeBrandFeature from '../../components/YouTubeBrandFeature.astro';
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
   return posts.map((post) => {
-    const postSlug = post.slug ?? post.id.replace(/\.mdx?$/, '');
+    const postSlug = post.id.replace(/\.mdx?$/, '');
     const related = posts
-      .filter((p) => (p.slug ?? p.id.replace(/\.mdx?$/, '')) !== postSlug && !p.data.draft)
+      .filter((p) => p.id.replace(/\.mdx?$/, '') !== postSlug && !p.data.draft)
       .map((p) => ({
         post: p,
         score: p.data.tags.filter((t) => post.data.tags.includes(t)).length,
@@ -56,7 +56,7 @@ function normalizeMetaDescription(baseDescription: string, postTitle: string, po
 
 const metaDescription = normalizeMetaDescription(description, title, tags);
 
-const postSlug = post.slug ?? post.id.replace(/\.mdx?$/, '');
+const postSlug = post.id.replace(/\.mdx?$/, '');
 const pageUrl = new URL(`/posts/${postSlug}/`, Astro.site).href;
 const postStructuredData = {
   '@context': 'https://schema.org',

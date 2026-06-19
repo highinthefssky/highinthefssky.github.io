@@ -12,7 +12,7 @@ const latestPost = allPosts
       new Date(b.data.publishedAt).getTime() -
       new Date(a.data.publishedAt).getTime()
   )[0];
-const latestPostSlug = latestPost ? (latestPost.slug ?? latestPost.id.replace(/\.mdx?$/, '')) : null;
+const latestPostSlug = latestPost ? latestPost.id.replace(/\.mdx?$/, '') : null;
 const publishedPosts = allPosts.filter((post) => !post.data.draft);
 const totalPosts = publishedPosts.length;
 
