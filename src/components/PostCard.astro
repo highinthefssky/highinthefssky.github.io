@@ -9,7 +9,7 @@ interface Props {
 
 const { post, showBrandFeature = true } = Astro.props;
 const { title, description, tags, publishedAt } = post.data;
-const postSlug = post.slug ?? post.id.replace(/\.mdx?$/, '');
+const postSlug = post.id.replace(/\.mdx?$/, '');
 const isYoutubeSource = tags.some((tag) => tag.toLowerCase() === 'youtube');
 
 // Format date helper
@@ -21,19 +21,6 @@ function formatDate(date: Date): string {
   }).format(date);
 }
 
-// Extract text preview from markdown content
-function getPreview(content: string, maxLength = 180): string {
-  // Remove frontmatter and markdown syntax
-  const text = content
-    .replace(/^---[\s\S]*?---/, '')
-    .replace(/[#*`[\]()_\-]/g, '')
-    .trim();
-
-  if (text.length > maxLength) {
-    return text.substring(0, maxLength).trim() + '...';
-  }
-  return text;
-}
 ---
 
 <a href={`/posts/${postSlug}`} class="post-card">

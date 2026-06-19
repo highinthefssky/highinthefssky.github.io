@@ -1,4 +1,5 @@
 ---
+import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import YouTubeBrandFeature from '../../components/YouTubeBrandFeature.astro';
@@ -7,11 +8,12 @@ export async function getStaticPaths() {
   const playlists = await getCollection('playlists');
   const allVideos = await getCollection('videos');
   const videoMap = new Map(allVideos.map((v) => [v.data.videoId, v]));
+  type VideoEntry = CollectionEntry<'videos'>;
 
   return playlists.map((pl) => {
     const resolvedVideos = pl.data.videos
       .map((id) => videoMap.get(id))
-      .filter(Boolean);
+      .filter((video): video is VideoEntry => Boolean(video));
 
     return {
       params: { slug: pl.data.slug },
@@ -22,7 +24,7 @@ export async function getStaticPaths() {
 
 const { playlist, videos } = Astro.props;
 
-function formatDuration(seconds) {
+function formatDuration(seconds: number): string {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
   const secs = seconds % 60;

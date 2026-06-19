@@ -9,7 +9,7 @@ interface Props {
 
 const { videos, autoplay = true } = Astro.props;
 const latestVideos = videos
-  .sort((a, b) => new Date(b.data.publishedAt) - new Date(a.data.publishedAt))
+  .sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime())
   .slice(0, 3);
 ---
 
@@ -22,8 +22,7 @@ const latestVideos = videos
             <div class="carousel-slide" data-index={index}>
               <a href={`/videos/${video.data.videoId}/`} class="slide-link">
                 <img
-                  src={video.data.thumbnailMedium}
-                  srcset={`${video.data.thumbnailMedium} 320w, ${video.data.thumbnail} 1280w`}
+                  src={video.data.thumbnail}
                   sizes="(max-width: 768px) 100vw, 1280px"
                   alt={video.data.title}
                   loading={index === 0 ? 'eager' : 'lazy'}

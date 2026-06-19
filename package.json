@@ -16,14 +16,17 @@
     "fetch-all": "npm run fetch-videos && npm run fetch-controllers"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.9",
     "@astrojs/rss": "^4.0.18",
     "astro": "^6.3.2",
     "google-auth-library": "^10.6.2",
+    "typescript": "^6.0.3",
     "zod": "^3.25.76"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "@tailwindcss/vite": "^4.1.8",
+    "@types/node": "^24.13.2",
     "tailwindcss": "^4.1.8"
   },
   "overrides": {

@@ -15,7 +15,7 @@ export async function getStaticPaths() {
   const pageSize = 9;
   const totalPages = Math.ceil(sortedVideos.length / pageSize);
 
-  function buildPageWindow(current, total, windowSize = 10) {
+  function buildPageWindow(current: number, total: number, windowSize = 10): number[] {
     const pages = [];
     const half = Math.floor(windowSize / 2);
     let start = Math.max(1, current - half);

@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   const videos = await getCollection('videos');
 
   const playlistBySlug = new Map(playlists.map((playlist) => [playlist.data.slug, playlist]));
-  const postBySlug = new Map(posts.map((post) => [post.slug ?? post.id.replace(/\.mdx?$/, ''), post]));
+  const postBySlug = new Map(posts.map((post) => [post.id.replace(/\.mdx?$/, ''), post]));
   const controllerById = new Map(controllers.map((controller) => [controller.id, controller]));
   const videoById = new Map(videos.map((video) => [video.data.videoId, video]));
 

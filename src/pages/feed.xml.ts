@@ -2,7 +2,11 @@ import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import controllerDates from '../../data/controller-dates.json';
 
-export async function GET(context) {
+type FeedContext = {
+  site?: URL | string;
+};
+
+export async function GET(context: FeedContext) {
   const dates = controllerDates as Record<string, string>;
   const videos = await getCollection('videos');
   const posts = await getCollection('posts', ({ data }) => !data.draft);
@@ -20,7 +24,7 @@ export async function GET(context) {
     ...posts.map((post) => ({
       title: `Post: ${post.data.title}`,
       description: post.data.description,
-      link: `/posts/${post.slug ?? post.id.replace(/\.mdx?$/, '')}`,
+      link: `/posts/${post.id.replace(/\.mdx?$/, '')}`,
       pubDate: post.data.publishedAt,
       categories: post.data.tags,
     })),
@@ -31,7 +35,7 @@ export async function GET(context) {
       pubDate: new Date(dates[config.id] || new Date().toISOString()),
       categories: config.data.tags,
     })),
-  ].sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+  ].sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
 
   return rss({
     title: 'High in the FlightSim Sky Channel',
