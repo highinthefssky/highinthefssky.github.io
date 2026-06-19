@@ -1,0 +1,801 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import stats from '../../content/stats.json';
+
+const allProfiles = await getCollection('mozaProfiles');
+const totalMozaProfiles =
+  (stats as { totalMozaProfiles?: number }).totalMozaProfiles ?? allProfiles.length;
+
+const sortedProfiles = [...allProfiles].sort((a, b) =>
+  a.data.aircraft.localeCompare(b.data.aircraft)
+);
+
+const allDevices = Array.from(new Set(allProfiles.map((p) => p.data.device))).sort();
+const allTags = Array.from(new Set(allProfiles.flatMap((p) => p.data.tags))).sort();
+const allVersions = Array.from(new Set(allProfiles.map((p) => p.data.msfsVersion))).sort();
+---
+
+<BaseLayout
+  title="Moza Flight Profiles"
+  description="Download ready-to-use Moza Cockpit preset profiles for Microsoft Flight Simulator. Filter by device, aircraft type, and MSFS version."
+>
+  <div class="moza-page">
+    <div class="moza-header">
+      <h1>🕹️ Moza Flight Profiles</h1>
+      <p>
+        Import-ready <code>.preset</code> files for Moza Cockpit — {totalMozaProfiles} profile{totalMozaProfiles !== 1 ? 's' : ''} available
+      </p>
+      <div class="header-info">
+        <a
+          href="https://github.com/highinthefssky/moza-flight-profiles"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="github-link"
+        >
+          📦 View on GitHub
+        </a>
+        <span class="separator">•</span>
+        <a href="/controllers" class="github-link">🎮 MSFS Controller Configs</a>
+        <span class="separator">•</span>
+        <span class="info-text">Compatible with Moza Cockpit</span>
+      </div>
+
+      <div class="how-to-use">
+        <h2>How to use these profiles</h2>
+        <p>
+          Open <strong>Moza Cockpit</strong>, go to <em>Device Settings → Import Profile</em>, and
+          select the downloaded <code>.preset</code> file for your device and aircraft.
+        </p>
+      </div>
+    </div>
+
+    <div class="search-controls">
+      <div class="search-box">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search profiles (e.g. A320, Cessna, AB6)"
+          class="search-input"
+          autocomplete="off"
+        />
+        <kbd class="search-kbd-hint" title="Press / to focus">/</kbd>
+        <span class="search-icon">🔍</span>
+      </div>
+
+      <div class="filter-row">
+        <div class="filter-section">
+          <div class="filter-header">
+            <h3>Device</h3>
+            <button id="toggle-devices" class="toggle-btn" type="button">▼</button>
+          </div>
+          <div class="filter-container" id="device-container" style="display: none;">
+            <div class="filter-list" id="devices-list">
+              {allDevices.map((device) => (
+                <button class="filter-btn device-filter" data-device={device} type="button">
+                  {device}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <div class="filter-header">
+            <h3>MSFS Version</h3>
+            <button id="toggle-versions" class="toggle-btn" type="button">▼</button>
+          </div>
+          <div class="filter-container" id="version-container" style="display: none;">
+            <div class="filter-list" id="versions-list">
+              {allVersions.map((version) => (
+                <button class="filter-btn version-filter" data-version={version} type="button">
+                  MSFS {version}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <div class="filter-header">
+            <h3>Tags</h3>
+            <button id="toggle-tags" class="toggle-btn" type="button">▼</button>
+          </div>
+          <div class="filter-container" id="tag-container" style="display: none;">
+            <div class="filter-list" id="tags-list">
+              {allTags.map((tag) => (
+                <button class="filter-btn tag-filter" data-tag={tag} type="button">
+                  {tag}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="selected-filters" id="selected-filters"></div>
+
+      <div class="controls-footer">
+        <span id="result-count" class="result-count" data-total={totalMozaProfiles}>
+          {totalMozaProfiles} profile{totalMozaProfiles !== 1 ? 's' : ''}
+        </span>
+        <button id="clear-btn" class="btn-clear" type="button">Clear all filters</button>
+      </div>
+    </div>
+
+    <div class="profiles-grid" id="profiles-grid">
+      {sortedProfiles.map((profile) => {
+        const { device, aircraft, msfsVersion, description, downloadUrl, tags, filename } = profile.data;
+        return (
+          <div
+            class="profile-card"
+            data-device={device.toLowerCase()}
+            data-version={msfsVersion}
+            data-tags={tags.join(',').toLowerCase()}
+            data-aircraft={aircraft.toLowerCase()}
+          >
+            <div class="card-header">
+              <div class="device-icon">🕹️</div>
+              <div class="header-content">
+                <h3 class="aircraft-name">{aircraft}</h3>
+                <span class="device-badge">{device}</span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <span class="version-badge">MSFS {msfsVersion}</span>
+              <p class="profile-description">{description}</p>
+              {tags.length > 0 && (
+                <div class="card-tags">
+                  {tags.slice(0, 4).map((tag: string) => (
+                    <span class="tag">{tag}</span>
+                  ))}
+                  {tags.length > 4 && <span class="tag-more">+{tags.length - 4}</span>}
+                </div>
+              )}
+            </div>
+
+            <div class="card-footer">
+              <a
+                href={downloadUrl}
+                download={filename}
+                class="download-btn"
+                rel="noopener noreferrer"
+              >
+                ⬇️ Download .preset
+              </a>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+    <div class="empty-state" id="empty-state" style="display: none;">
+      <p>No profiles found matching your search.</p>
+      <button id="reset-btn" class="btn-reset" type="button">Reset filters</button>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .moza-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .moza-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .moza-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-heading);
+  }
+
+  .moza-header > p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .moza-header code {
+    font-family: 'JetBrains Mono', monospace;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: 0.25rem;
+    padding: 0.1rem 0.35rem;
+    font-size: 0.9em;
+  }
+
+  .header-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 0.9375rem;
+  }
+
+  .github-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .github-link:hover {
+    color: #38bdf8;
+  }
+
+  .separator {
+    color: #64748b;
+  }
+
+  .info-text {
+    color: var(--text-muted);
+  }
+
+  .how-to-use {
+    margin-top: 1.25rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    text-align: left;
+  }
+
+  .how-to-use h2 {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+    color: var(--text-heading);
+  }
+
+  .how-to-use p {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+  }
+
+  /* Search & filters */
+  .search-controls {
+    background: var(--bg-panel);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-default);
+  }
+
+  .search-box {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 1rem;
+    padding-right: 2.5rem;
+    font-size: 1rem;
+    border: 2px solid var(--border-input);
+    border-radius: 0.5rem;
+    background: var(--bg-input);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.12);
+  }
+
+  .search-input::placeholder {
+    color: var(--text-input-placeholder);
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+    pointer-events: none;
+  }
+
+  .search-kbd-hint {
+    position: absolute;
+    right: 2.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    background: var(--bg-surface);
+    color: var(--text-muted);
+    border: 1px solid var(--border-default);
+    pointer-events: none;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+  }
+
+  .search-input:focus ~ .search-kbd-hint {
+    opacity: 0;
+  }
+
+  .filter-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-section {
+    min-width: 0;
+  }
+
+  .filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .filter-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--accent);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: 0.25rem;
+  }
+
+  .toggle-btn.open {
+    transform: rotate(180deg);
+  }
+
+  .filter-container {
+    margin-top: 0.5rem;
+  }
+
+  .filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.25rem 0;
+  }
+
+  .filter-btn {
+    padding: 0.4rem 0.85rem;
+    border: 2px solid var(--border-input);
+    background: var(--bg-input);
+    color: var(--text-secondary);
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .filter-btn.active {
+    background: #7dd3fc;
+    border-color: var(--accent);
+    color: #0f1b2e;
+    font-weight: 600;
+  }
+
+  .selected-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    margin-bottom: 1.5rem;
+    min-height: 2rem;
+  }
+
+  .controls-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-default);
+  }
+
+  .result-count {
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .btn-clear {
+    background: transparent;
+    border: 2px solid var(--border-input);
+    color: var(--text-secondary);
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-clear:hover:not(:disabled) {
+    border-color: var(--accent);
+    color: var(--text-heading);
+  }
+
+  .btn-clear:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* Profile cards */
+  .profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .profile-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .profile-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 16px rgba(14, 165, 233, 0.1);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .device-icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .header-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .aircraft-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin: 0 0 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .device-badge {
+    display: inline-block;
+    background: var(--bg-panel);
+    border: 1px solid var(--border-default);
+    border-radius: 0.375rem;
+    padding: 0.15rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .version-badge {
+    display: inline-block;
+    background: hsl(213, 94%, 15%);
+    border: 1px solid hsl(213, 94%, 35%);
+    color: hsl(213, 94%, 75%);
+    border-radius: 0.375rem;
+    padding: 0.15rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    align-self: flex-start;
+  }
+
+  .profile-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin-top: 0.25rem;
+  }
+
+  .tag {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-default);
+    border-radius: 0.375rem;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .tag-more {
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    padding: 0.2rem 0.25rem;
+  }
+
+  .card-footer {
+    margin-top: auto;
+  }
+
+  .download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.625rem 1rem;
+    background: hsl(213, 94%, 47%);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .download-btn:hover {
+    background: hsl(213, 94%, 37%);
+  }
+
+  /* Empty state */
+  .empty-state {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: var(--text-muted);
+  }
+
+  .empty-state p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-reset {
+    background: hsl(213, 94%, 47%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-reset:hover {
+    background: hsl(213, 94%, 37%);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .moza-page {
+      padding: 1rem;
+    }
+
+    .moza-header h1 {
+      font-size: 2rem;
+    }
+
+    .search-controls {
+      padding: 1.5rem;
+    }
+
+    .filter-row {
+      grid-template-columns: 1fr;
+    }
+
+    .profiles-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .controls-footer {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+  }
+</style>
+
+<script>
+  const searchInput = document.getElementById('search-input') as HTMLInputElement;
+  const toggleDevicesBtn = document.getElementById('toggle-devices') as HTMLButtonElement;
+  const toggleVersionsBtn = document.getElementById('toggle-versions') as HTMLButtonElement;
+  const toggleTagsBtn = document.getElementById('toggle-tags') as HTMLButtonElement;
+  const deviceContainer = document.getElementById('device-container') as HTMLDivElement;
+  const versionContainer = document.getElementById('version-container') as HTMLDivElement;
+  const tagContainer = document.getElementById('tag-container') as HTMLDivElement;
+  const deviceButtons = document.querySelectorAll('.device-filter');
+  const versionButtons = document.querySelectorAll('.version-filter');
+  const tagButtons = document.querySelectorAll('.tag-filter');
+  const profileCards = document.querySelectorAll('.profile-card') as NodeListOf<HTMLElement>;
+  const profilesGrid = document.getElementById('profiles-grid');
+  const emptyState = document.getElementById('empty-state') as HTMLElement;
+  const resultCount = document.getElementById('result-count') as HTMLElement;
+  const clearBtn = document.getElementById('clear-btn') as HTMLButtonElement;
+  const resetBtn = document.getElementById('reset-btn') as HTMLButtonElement;
+  const selectedFiltersContainer = document.getElementById('selected-filters') as HTMLDivElement;
+
+  let activeDevices = new Set<string>();
+  let activeVersions = new Set<string>();
+  let activeTags = new Set<string>();
+
+  // Toggle filter panels
+  function makeToggle(btn: HTMLButtonElement | null, container: HTMLDivElement | null) {
+    btn?.addEventListener('click', () => {
+      if (!container) return;
+      const open = container.style.display !== 'none';
+      container.style.display = open ? 'none' : 'block';
+      btn.classList.toggle('open');
+    });
+  }
+  makeToggle(toggleDevicesBtn, deviceContainer);
+  makeToggle(toggleVersionsBtn, versionContainer);
+  makeToggle(toggleTagsBtn, tagContainer);
+
+  // Filter helpers
+  function updateDisplay() {
+    const query = searchInput.value.toLowerCase().trim();
+    let visible = 0;
+
+    profileCards.forEach((card) => {
+      const aircraft = card.dataset.aircraft || '';
+      const device = card.dataset.device || '';
+      const version = card.dataset.version || '';
+      const tags = card.dataset.tags || '';
+
+      const matchesSearch =
+        !query || aircraft.includes(query) || device.includes(query) || tags.includes(query);
+      const matchesDevice =
+        activeDevices.size === 0 || activeDevices.has(device);
+      const matchesVersion =
+        activeVersions.size === 0 || activeVersions.has(version);
+      const matchesTag =
+        activeTags.size === 0 ||
+        [...activeTags].every((t) => tags.split(',').includes(t));
+
+      const show = matchesSearch && matchesDevice && matchesVersion && matchesTag;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    resultCount.textContent = `${visible} profile${visible !== 1 ? 's' : ''}`;
+    if (emptyState) emptyState.style.display = visible === 0 ? 'block' : 'none';
+    if (profilesGrid) profilesGrid.style.display = visible === 0 ? 'none' : 'grid';
+    clearBtn.disabled = activeDevices.size === 0 && activeVersions.size === 0 && activeTags.size === 0 && !query;
+    renderSelectedFilters();
+  }
+
+  function renderSelectedFilters() {
+    selectedFiltersContainer.innerHTML = '';
+
+    const addChip = (label: string, onRemove: () => void) => {
+      const btn = document.createElement('button');
+      btn.className = 'filter-btn active';
+      btn.textContent = `${label} ✕`;
+      btn.type = 'button';
+      btn.addEventListener('click', () => { onRemove(); updateDisplay(); });
+      selectedFiltersContainer.appendChild(btn);
+    };
+
+    activeDevices.forEach((d) =>
+      addChip(d, () => {
+        activeDevices.delete(d);
+        document.querySelector<HTMLButtonElement>(`[data-device="${d}"]`)?.classList.remove('active');
+      })
+    );
+    activeVersions.forEach((v) =>
+      addChip(`MSFS ${v}`, () => {
+        activeVersions.delete(v);
+        document.querySelector<HTMLButtonElement>(`[data-version="${v}"]`)?.classList.remove('active');
+      })
+    );
+    activeTags.forEach((t) =>
+      addChip(t, () => {
+        activeTags.delete(t);
+        document.querySelector<HTMLButtonElement>(`[data-tag="${t}"]`)?.classList.remove('active');
+      })
+    );
+  }
+
+  function clearAll() {
+    activeDevices.clear();
+    activeVersions.clear();
+    activeTags.clear();
+    searchInput.value = '';
+    deviceButtons.forEach((b) => b.classList.remove('active'));
+    versionButtons.forEach((b) => b.classList.remove('active'));
+    tagButtons.forEach((b) => b.classList.remove('active'));
+    updateDisplay();
+  }
+
+  // Wire up filter buttons
+  deviceButtons.forEach((btn) =>
+    btn.addEventListener('click', () => {
+      const d = (btn as HTMLButtonElement).dataset.device!;
+      if (activeDevices.has(d)) { activeDevices.delete(d); btn.classList.remove('active'); }
+      else { activeDevices.add(d); btn.classList.add('active'); }
+      updateDisplay();
+    })
+  );
+
+  versionButtons.forEach((btn) =>
+    btn.addEventListener('click', () => {
+      const v = (btn as HTMLButtonElement).dataset.version!;
+      if (activeVersions.has(v)) { activeVersions.delete(v); btn.classList.remove('active'); }
+      else { activeVersions.add(v); btn.classList.add('active'); }
+      updateDisplay();
+    })
+  );
+
+  tagButtons.forEach((btn) =>
+    btn.addEventListener('click', () => {
+      const t = (btn as HTMLButtonElement).dataset.tag!;
+      if (activeTags.has(t)) { activeTags.delete(t); btn.classList.remove('active'); }
+      else { activeTags.add(t); btn.classList.add('active'); }
+      updateDisplay();
+    })
+  );
+
+  searchInput.addEventListener('input', updateDisplay);
+  clearBtn.addEventListener('click', clearAll);
+  resetBtn?.addEventListener('click', clearAll);
+
+  // Keyboard shortcut: / to focus search
+  document.addEventListener('keydown', (e: KeyboardEvent) => {
+    if (e.key === '/' && document.activeElement !== searchInput) {
+      e.preventDefault();
+      searchInput.focus();
+    }
+    if (e.key === 'Escape') {
+      clearAll();
+    }
+  });
+
+  // Initial state
+  clearBtn.disabled = true;
+</script>
