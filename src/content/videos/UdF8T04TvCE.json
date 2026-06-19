@@ -1,0 +1,28 @@
+{
+  "videoId": "UdF8T04TvCE",
+  "title": "The absolute secret to Moza AB6/AB9 Force Feedback settings in MSFS 2024",
+  "description": "For years, experiencing true mechanical Force Feedback (FFB) in flight simulation meant either spending a fortune on high-end commercial gear or spending dozens of hours building a complex DIY rig. The brand-new Moza Flight AB6 bundle completely changes the landscape. Combining a full-metal, 6 Newton-meter peak torque dual-servo base with a carbon-fiber-reinforced flight stick, this system aims to bring genuine haptic control loading down to an accessible consumer price tier.\n\nIn this deep-dive hardware review, we bypass the marketing scripts to give you an honest, peer-to-peer assessment of what it is actually like to unbox, configure, and fly with the Moza AB6 system. We walk through the heavy-duty assembly, look at why the base needs to be clamped to your desk to counter the active motor forces, and detail structural workarounds for the current bugs inside the Moza Cockpit utility—including interface freezing during USB port scans and firmware updates. Crucially, we look at why you cannot skip manual axis calibration, walking step-by-step through configuring your Z-axis (yaw twist) and analog hat switches to avoid severe control errors in-sim.\n\nFinally, we load into Microsoft Flight Simulator 2024 to push the telemetry-driven outrunner motors to their limits:\n\nGeneral Aviation (Cessna 172 Skyhawk): Testing real-time engine vibrations, subtle ground-roll rumbles, and structural aerodynamic buffeting when deploying flaps using the Integrated FFB profile.\n\nMilitary Jet (Boeing F/A-18E Super Hornet): Pushing low-altitude mountain passes and high-G banks to evaluate dynamic stick centering and speed-dependent control stiffness.\n\nAir Race (Red Bull Extra 330): High-speed aerodynamic slicing to test low-deflection control authority and physical mechanical pushback.\n\nBecause the Moza AB6 does not ship with built-in default mapping profiles for MSFS 2024, I have exported my custom, flight-tested General Aviation XML control profiles directly to my repository below to save you hours of manual trial-and-error.\n\n📥 Download my custom MSFS 2024 Moza AB6 Control Profile: https://highintheflightsimsky.nl/controllers/\n\nIf this review helps you solve a calibration freeze or pick your next joystick upgrade, please hit that like button and subscribe for more technical flight simulation analysis. Drop your questions about the AB6 software or stick tension down in the comments below!\n\n📖 Chapters\n00:00 - Intro\n00:55 - Basic setting & power ceilings\n04:10 - Advanced physics & hand-off guardrails\n11:59 - Grip calibration & life telemetry buffets\n13:31 - Demo: Cessna 172 force feedback\n15:34 - Demo: Airbus A320 force feedback\n19:29 - Mapping curves\n21:21 - The profiles\n24:35 - Tips\n\n🔗 Links:\nhttps://eu.mozaracing.com/?ref=highintheflightsimsky\n\n🔔 Subscribe\nIf you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP\n\n#MSFS2024 #FlightSimulator #MozaFlight #ForceFeedback #AviationHardware #FlightSim",
+  "thumbnail": "https://i.ytimg.com/vi/UdF8T04TvCE/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/UdF8T04TvCE/mqdefault.jpg",
+  "publishedAt": "2026-06-18T21:09:54.000Z",
+  "duration": 1589,
+  "viewCount": 88,
+  "tags": [
+    "Moza AB6 settings",
+    "Moza Flight AB6 review",
+    "Moza AB9 settings MSFS",
+    "Moza Cockpit software setup",
+    "MSFS 2024 force feedback",
+    "Microsoft Flight Simulator 2024 FFB",
+    "force feedback flight stick calibration",
+    "Moza AB6 Cessna 172 profile",
+    "Moza AB6 Airbus A320 setup",
+    "direct drive flight simulation joystick",
+    "Moza Flight active control loading",
+    "Moza cockpit telemetry setup",
+    "flight simulator haptic feedback controls",
+    "Cessna vs Airbus FFB configuration",
+    "microsoft flight simulator"
+  ],
+  "featured": false
+}
