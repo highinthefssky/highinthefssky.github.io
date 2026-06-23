@@ -1,7 +1,7 @@
 ---
 title: "🔥 NEW PC‑12 NGX EPISODE DROPS LATER TONIGHT! 🔥"
 description: "🔥 NEW PC‑12 NGX EPISODE DROPS LATER TONIGHT! 🔥 MSFS 2024 pilots… get READY.   We’re going inside the beast. 🧨✈️ Tonight’s video is the FULL cockpit breakdown of"
-publishedAt: 2026-02-17
+publishedAt: 2026-02-23
 tags: ["community", "youtube"]
 draft: false
 ---
