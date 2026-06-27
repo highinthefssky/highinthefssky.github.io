@@ -1,7 +1,7 @@
 ---
 title: "The \"Muscle\" of the Saab 340 is here"
 description: "The \"Muscle\" of the Saab 340 is here. 🇸🇪✈️  At 17:00 CET, Part 2 of our Saab 340 Masterclass goes live! Today, we’re moving past the airframe and diving deep in"
-publishedAt: 2026-03-25
+publishedAt: 2026-03-29
 tags: ["community", "youtube"]
 draft: false
 ---
