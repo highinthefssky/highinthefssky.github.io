@@ -1,0 +1,33 @@
+{
+  "videoId": "qA9gz0ReAWI",
+  "title": "Stop scrambling your propeller: MOZA AB6 analog brake setup guide",
+  "description": "For years, experiencing true mechanical Force Feedback (FFB) in flight simulation meant either spending a fortune on high-end commercial gear or spending dozens of hours building a complex DIY rig. The brand-new Moza Flight AB6 bundle completely changes the landscape. Combining a full-metal, 6 Newton-meter peak torque dual-servo base with a carbon-fiber-reinforced flight stick, this system aims to bring genuine haptic control loading down to an accessible consumer price tier.\n\nIn this deep-dive hardware guide, we bypass the marketing scripts to look at a massive hardware problem with this fighter-style bundle and the ingenious secret weapon hidden right on the metal base that completely fixes it for both Flight Simulator 2020 and 2024. Because the bundled MHG grip lacks an analog handbrake lever, trying to taxi a taildragger using digital button binds is a recipe for a ground loop or a prop strike. We look closer at the AB6 base panel to leverage its built-in sliders as a mini button box, bringing smooth, fractional braking to your vintage warbirds and GA aircraft.\n\nWe walk step-by-step through the MOZA Cockpit utility to set your sliders to axis mode and calibrate them from 0 to 100%. Finally, we load into Microsoft Flight Simulator to clear out the default digital binds and map a perfectly graduated left and right differential braking profile that keeps your tail on the tarmac.\n\n📥 Download my custom MSFS Moza AB6 Control Profiles: https://highintheflightsimsky.nl/controllers/\n\nIf this configuration guide helps you tame your flight handling or save money on a standalone throttle quadrant, please hit that like button and subscribe for more technical flight simulation analysis. Drop your questions about the AB6 software or stick mapping curves down in the comments below!\n\n📖 Chapters\n00:00 - Intro\n01:07 - The MSFS ground handling nightmare\n01:46 - The setup: MOZA Cockpit into MSFS\n06:04 - Demo\n\n🔗 Links:\nhttps://eu.mozaracing.com/?ref=highintheflightsimsky\n\n🔔 Subscribe\nIf you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP\n\n#MSFS2024 #FlightSimulator #MozaFlight #ForceFeedback #AviationHardware #FlightSim",
+  "thumbnail": "https://i.ytimg.com/vi/qA9gz0ReAWI/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/qA9gz0ReAWI/mqdefault.jpg",
+  "publishedAt": "2026-06-25T21:35:10.000Z",
+  "duration": 433,
+  "viewCount": 116,
+  "tags": [
+    "MOZA AB6",
+    "MOZA Flight AB6",
+    "MSFS 2024 ground physics",
+    "MSFS brake axis setup",
+    "taildragger taxi tutorial",
+    "MOZA cockpit software calibration",
+    "flight simulator force feedback",
+    "how to map brakes MSFS",
+    "analog brake axis joystick",
+    "MOZA AB6 tutorial",
+    "taildragger ground loop fix",
+    "MOZA MHG grip",
+    "flight sim button box",
+    "vintage aircraft brakes MSFS",
+    "MSFS 2024 hardware setup",
+    "differential braking flight sim",
+    "MOZA AB6 sliders",
+    "microsoft flight simulator",
+    "moza ab6",
+    "msfs"
+  ],
+  "featured": false
+}

@@ -1,0 +1,32 @@
+{
+  "videoId": "voBZQ60Snso",
+  "title": "Y is for YANKEE: Why do identical approaches have different letters? | MSFS A-Z",
+  "description": "Whether you are loading a flight plan in a light Cessna 172 or prepping a heavy Boeing 737 MAX for arrival, opening your approach page can reveal a confusing sight: an RNAV Yankee and an RNAV Zulu to the exact same runway. They use the same GPS guidance and share the same final approach course, yet picking the wrong letter can completely disrupt your automated flight path. That confusion stops today.\n\nIn this video, we demystify the instrument approach suffix. We break down the strict aviation rules governing these letters, look at the hard-coded database limitations that force this design, and walk through live demonstrations of how to choose and program the right one in Microsoft Flight Simulator. Finally, we look at a terrifying real-world airliner incident where selecting the wrong approach suffix led to a runway overrun.\n\nIn this video, you’ll discover:\n\nThe Split-Alphabet Rule: Why aviation authorities use letters from Z to S for straight-in entries and A to E for circling-only procedures.\n\nARINC 424 Database Limits: How airborne navigation units are constrained by digital file naming conventions, requiring modifying letters.\n\nEquipment & Terrain Performance: The crucial differences between standard linear GPS approaches and specialized RNP AR curved legs that demand steep climb gradients.\n\nGarmin G1000 NXi Setup: Step-by-step programming in a General Aviation glass cockpit to load transitions and terminal fixes properly.\n\nAirliner FMS Execution: How to load and verify the Yankee or Zulu paths inside the Boeing 737 MAX without breaking your flight path geometry.\n\nThe Southwest 1919 Incident: A deep dive into how a late-stage FMS change at Chicago Midway caused cognitive tunneling and a dangerous runway overrun.\n\n🕒 Chapters\n00:00 - Start\n01:01 - The core logic: The split-alphabet rule\n02:09 - The 3 main reasons they exist\n04:23 - Programming demo: general aviation\n06:53 - Programming demo: Airliner\n09:14 - The real-world danger: Southwest Flight 1919\n10:57 - Suffix rules\n\nUnderstanding the subtle details on an instrument chart takes your virtual flying to the next level. Next time you drop into your flight deck, check the chart notes, verify your aircraft equipment limits, and choose your approach suffix like a professional.\n\nNext Week: The Letter Z!\nWe are steadily flying through the alphabet! Keep an eye on the community tab for the final poll as we head toward our very last aviation concept. Let me know in the comments below: Have you ever accidentally loaded the wrong approach suffix in your simulator?\n\n🔗 Resources & links\n👉 Subscribe: https://bit.ly/34eNWDP\n👉 MSFS Tutorials Playlist: https://bit.ly/3l6fRdL\n\n✈️ About This Series\nThe MSFS Alphabet is designed to help you become a better virtual pilot, one letter at a time. From Ailerons to Zero‑Fuel Weight, we break down the aviation concepts, physics, and systems every flight simmer should understand. #msfs2024 #FlightSimulator #AviationTutorial #RNAVApproach #YankeeVsZulu #FMSProgramming #Boeing737MAX #MSFSA-Z",
+  "thumbnail": "https://i.ytimg.com/vi/voBZQ60Snso/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/voBZQ60Snso/mqdefault.jpg",
+  "publishedAt": "2026-06-23T20:48:34.000Z",
+  "duration": 740,
+  "viewCount": 6028,
+  "tags": [
+    "msfs 2024",
+    "microsoft flight simulator",
+    "rnav approach tutorial",
+    "yankee vs zulu approach",
+    "approach suffixes explained",
+    "fms tutorial msfs",
+    "garmin g1000 nxi tutorial",
+    "boeing 737 max msfs",
+    "arinc 424 navigation",
+    "rnp ar approach",
+    "instrument approach procedures",
+    "flight simulator tutorial",
+    "southwest flight 1919",
+    "aviation safety",
+    "flight path optimization",
+    "msfs 2024 performance",
+    "how to read approach charts",
+    "glass cockpit programming",
+    "ifr flight planning msfs"
+  ],
+  "featured": false
+}

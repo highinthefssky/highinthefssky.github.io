@@ -1,7 +1,7 @@
 ---
 title: "Question: You’re climbing through 18,000 feet"
 description: "Question: You’re climbing through 18,000 feet. If you forget to hit the 'Standard' button on your altimeter, what happens to your Flight Level? ✈️⛰️"
-publishedAt: 2026-02-23
+publishedAt: 2026-03-01
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -9,4 +9,4 @@ draft: false
 Question: You’re climbing through 18,000 feet. If you forget to hit the 'Standard' button on your altimeter, what happens to your Flight Level? ✈️⛰️
 
 Original post: https://www.youtube.com/post/Ugkx0IVqBCaPcqZumvyUjCQiowaT-Qu2vf_T
-Likes: 2 | Comments: 0
+Likes: 3 | Comments: 0
