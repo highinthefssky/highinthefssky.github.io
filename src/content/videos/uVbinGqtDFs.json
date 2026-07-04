@@ -1,0 +1,33 @@
+{
+  "videoId": "uVbinGqtDFs",
+  "title": "Z is for ZERO FUEL WEIGHT: The critical calculation that saves your wings | MSFS A-Z",
+  "description": "Whether you are loading up a default airliner using the built-in world map or programming a high-fidelity flight plan for a long-haul route, there is a single weight configuration that can make or break your flight. If you have ever run into performance calculation errors on your MCDU, or wondered why your aircraft handles completely sluggishly on takeoff, the culprit is likely your Zero Fuel Weight (ZFW). Getting this wrong doesn't just mess up your flight computer—it risks structural failure. That confusion stops today.\n\nIn this grand finale of our Microsoft Flight Simulator A-Z series, we have reached our ultimate destination: the letter Z. We demystify exactly what Zero Fuel Weight is, look at the fascinating physics of wing bending relief that engineering teams use to keep commercial jets in the air, and walk through live demonstrations of how to configure it across multiple setups. Finally, we celebrate the conclusion of the series with a massive surprise announcement for the future of the channel.\n\nIn this video, you’ll discover:\n\n- The Core Physics of ZFW: Why the total weight of your airframe, passengers, and cargo matters before a single drop of fuel enters the tanks.\n- Wing Bending Relief Explained: How fuel stored inside hollow wings actively fights upward aerodynamic lift to protect the wing roots from snapping in rough turbulence.\n- Built-In Flight Planner Setup: How to utilize the native MSFS map tools to automatically calculate and balance payloads safely.\n- Stock A320neo Customization: Step-by-step slider adjustments and manual payload configurations using the default Electronic Flight Bag (EFB).\n- FlyByWire A32NX & SimBrief Integration: Advanced MCDU programming, importing operational flight plans (OFP), handling metric conversions, and managing ground services via GSX.\n\n🕒 Chapters\n00:00 - Intro\n01:06 - What is Zero Fuel Weight?\n02:10 - Why Do We Care? (Wing Bending Relief)\n03:24 - Demo 1: The Built-In Flight Planner\n07:01 - Demo 2: The Stock A320neo Sliders\n15:12 - Demo 3: The FlyByWire A32NX\n\nUnderstanding structural weight limitations separates casual simmers from real-world virtual pilots. Next time you drop into your flight deck, double-check your load sheet, verify your units, and configure your ZFW like a professional.\n\nThe Grand Finale!\nWe have officially conquered every single letter of the aviation alphabet! Thank you for flying along on this journey. Keep an eye on the community tab right now for a fresh poll as we launch straight into Cycle 2 of the series. Let me know in the comments below: Which airliner do you struggle to configure the weight for the most?\n\n🔗 Resources & links\n👉 FlyByWire A32NX Documentation: https://docs.flybywiresim.com/\n👉 Subscribe: https://bit.ly/34eNWDP\n👉 MSFS Tutorials Playlist: https://bit.ly/3l6fRdL\n\n✈️ About This Series\nThe MSFS Alphabet is designed to help you become a better virtual pilot, one letter at a time. From Ailerons to Zero‑Fuel Weight, we break down the aviation concepts, physics, and systems every flight simmer should understand. \n\n#msfs2024 #FlightSimulator #AviationTutorial #ZeroFuel Weight #ZFW #FlyByWire #A320neo #SimBrief #FMSProgramming #MCDUSetup #MSFSA-Z",
+  "thumbnail": "https://i.ytimg.com/vi/uVbinGqtDFs/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/uVbinGqtDFs/mqdefault.jpg",
+  "publishedAt": "2026-06-30T15:00:34.000Z",
+  "duration": 1575,
+  "viewCount": 57,
+  "tags": [
+    "Microsoft Flight Simulator",
+    "MSFS 2024",
+    "MSFS 2024 performance",
+    "Zero Fuel Weight",
+    "ZFW",
+    "what is zero fuel weight",
+    "Wing Bending Relief",
+    "flight simulator tutorial",
+    "FlyByWire A32NX",
+    "A320neo MSFS",
+    "SimBrief tutorial",
+    "MCDU setup",
+    "FMS weight and balance",
+    "GSX loading",
+    "aviation weight limits",
+    "MZFW",
+    "airliner flight planning",
+    "pilot tutorial MSFS",
+    "flight simulator physics",
+    "highintheflightsimsky"
+  ],
+  "featured": false
+}
