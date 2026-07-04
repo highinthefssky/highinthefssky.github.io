@@ -64,12 +64,24 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outcome == 'success' && steps.deployment.outputs.page_url || steps.deployment-retry.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+
+      - name: Wait before retrying deployment
+        if: steps.deployment.outcome == 'failure'
+        # GitHub Pages occasionally returns a transient "failed" status; waiting 60 s
+        # gives the infrastructure time to recover before a second attempt.
+        run: sleep 60
+
+      - name: Deploy to GitHub Pages (retry)
+        id: deployment-retry
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v5
 
   deploy-live-status-worker:
