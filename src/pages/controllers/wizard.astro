@@ -72,6 +72,7 @@ const videosForWizard = [...allVideos]
           <div class="chip-grid" id="aircraft-chips">
             <button type="button" class="choice-chip" data-value="airliner" disabled>Airliner</button>
             <button type="button" class="choice-chip" data-value="general" disabled>General Aviation</button>
+            <button type="button" class="choice-chip" data-value="fighter" disabled>Fighter</button>
             <button type="button" class="choice-chip" data-value="turboprop" disabled>Turboprop</button>
             <button type="button" class="choice-chip" data-value="multi-engine" disabled>Multi-engine</button>
             <button type="button" class="choice-chip" data-value="custom" disabled>Custom / Generic</button>
@@ -141,6 +142,7 @@ const videosForWizard = [...allVideos]
   const aircraftRules = {
     'airliner': ['airliner', 'a320', 'a321', 'a330', 'a350', 'a380', 'boeing', 'airbus', 'jetliner'],
     'general': ['ga', 'general aviation', 'cessna', 'piper', 'beech', 'bonanza', 'comanche'],
+    'fighter': ['fighter', 'military', 'combat', 'f-14', 'f-18', 'f18', 'f-16', 'f16', 'jet fighter'],
     'turboprop': ['turboprop', 'tbm', 'king air', 'pc-12', 'pc12', 'atr', 'dash', 'q400'],
     'multi-engine': ['2 engines', '4 engines', 'multi', 'twin engine', 'four engine'],
     'custom': ['custom', 'generic', 'msfs custom'],

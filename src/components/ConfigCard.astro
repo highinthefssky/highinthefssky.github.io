@@ -8,13 +8,14 @@ interface Props {
 const { config } = Astro.props;
 const { filename, controller, settingsType, description, aircraft, downloadUrl, tags } = config.data;
 
-function inferAircraftType(aircraft?: string, settingsType?: string, tags: string[] = []): 'airliner' | 'general' | 'turboprop' | 'multi-engine' | 'custom' | '' {
+function inferAircraftType(aircraft?: string, settingsType?: string, tags: string[] = []): 'airliner' | 'general' | 'fighter' | 'turboprop' | 'multi-engine' | 'custom' | '' {
   const haystack = [aircraft || '', settingsType || '', ...tags].join(' ').toLowerCase();
 
   const containsAny = (keywords: string[]) => keywords.some((keyword) => haystack.includes(keyword));
 
   if (containsAny(['2 engines', '4 engines', 'multi', 'twin engine', 'four engine'])) return 'multi-engine';
   if (containsAny(['turboprop', 'tbm', 'king air', 'pc-12', 'pc12', 'atr', 'dash', 'q400'])) return 'turboprop';
+  if (containsAny(['fighter', 'military', 'combat', 'f-14', 'f-18', 'f18', 'f-16', 'f16', 'jet fighter'])) return 'fighter';
   if (containsAny(['airliner', 'a320', 'a321', 'a330', 'a350', 'a380', 'boeing', 'airbus', 'liner'])) return 'airliner';
   if (containsAny(['ga', 'general aviation', 'cessna', 'piper', 'beech', 'bonanza'])) return 'general';
   if (containsAny(['custom', 'generic', 'msfs custom'])) return 'custom';
@@ -23,7 +24,7 @@ function inferAircraftType(aircraft?: string, settingsType?: string, tags: strin
 }
 
 function inferGoal(
-  inferredAircraft: 'airliner' | 'general' | 'turboprop' | 'multi-engine' | 'custom' | '',
+  inferredAircraft: 'airliner' | 'general' | 'fighter' | 'turboprop' | 'multi-engine' | 'custom' | '',
   settingsType?: string,
   tags: string[] = [],
   description?: string
@@ -34,6 +35,7 @@ function inferGoal(
   if (hasAny(['landing', 'takeoff', 'flare', 'approach', 'touchdown', 'crosswind'])) return 'landing';
   if (inferredAircraft === 'airliner') return 'airliner-ops';
   if (inferredAircraft === 'general' || inferredAircraft === 'turboprop') return 'navigation';
+  if (inferredAircraft === 'fighter') return 'navigation';
   if (inferredAircraft === 'custom') return 'setup';
   if (inferredAircraft === 'multi-engine') return 'navigation';
 
