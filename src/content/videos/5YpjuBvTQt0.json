@@ -1,0 +1,31 @@
+{
+  "videoId": "5YpjuBvTQt0",
+  "title": "Moza MTQ Throttle review: perfect all-rounder or too many compromises?",
+  "description": "If your flight sim habits are completely chaotic, finding a throttle quadrant that fits your changing styles without breaking the bank or taking up your entire desk has been next to impossible. One day you are managing managed guidance at flight level 380 in an airliner, and the next you are tearing through canyons at Mach 2 in an F/A-18 Hornet.\n\nEnter the  Moza MTQ Throttle Quadrant. Featuring four independent precision axes, 23 physical controls, and an interchangeable lever system for fighter, Airbus, and Boeing flight styles, this system aims to be the ultimate space-saving modular powerhouse for flight simulation.\n\nIn this deep-dive hardware review and technical setup tutorial, we put the Moza MTQ through its paces. We bypass the marketing scripts to look at how the modular swap works, highlight why a secure connection to the base is critical for button detection, and guide you step-by-step through the Moza Cockpit software to avoid calibration headaches and firmware update freezes.\n\nCrucially, we jump into Microsoft Flight Simulator 2024 to tackle two grueling test flights:\n\nCommercial Airliner (FlyByWire A320): Setting up reverse thrust axis control, configuring autopilot rotary bindings, and tuning the Airbus detent feel.\n\nFighter Jet (Boeing F/A-18 Hornet): Testing mechanical afterburner detents, configuring dual-engine tracking, and mapping combat hats under pressure.\n\nBecause the Moza MTQ requires careful separate profile creation in MSFS 2024 to prevent overwriting your main joystick layouts, I have exported my custom, flight-tested A320 and F/A-18 XML control profiles directly to my repository below to save you hours of manual trial-and-error.\n\n📥 Download My Custom MSFS 2024 Moza MTQ Control Profiles:\nhttps://highintheflightsimsky.nl/controllers/\n\nIf this review helps you solve a hardware binding issue or choose your next cockpit upgrade, please hit that like button and subscribe for more technical flight simulation analysis!\n\n📖 Chapters\n00:00 - Start\n01:12 - Hardware Review\n03:57 - Moza Cockpit\n08:58 - MSFS: creating the throttle profile\n15:17 - A320 test flight\n23:25 - Configuring MSFS profiles for fighters\n26:29 - FA18 Hornet test flight\n32:22 - Final Verdict & Wrap-Up\n\n🔗 Links:\nDownload Moza Cockpit Software: https://eu.mozaracing.com/?ref=highintheflightsimsky\n\n🔔 Subscribe\nIf you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP\n\n#MSFS2024 #FlightSimulator #MozaFlight #MozaMTQ #AviationHardware #FlightSim #AirbusA320 #FA18Hornet",
+  "thumbnail": "https://i.ytimg.com/vi/5YpjuBvTQt0/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/5YpjuBvTQt0/mqdefault.jpg",
+  "publishedAt": "2026-07-04T20:35:10.000Z",
+  "duration": 2094,
+  "viewCount": 28,
+  "tags": [
+    "Moza MTQ throttle",
+    "Moza MTQ review",
+    "Moza MTQ setup",
+    "Moza flight throttle quadrant",
+    "Microsoft Flight Simulator 2024",
+    "MSFS 2024 throttle setup",
+    "Moza cockpit software calibration",
+    "Moza MTQ calibration",
+    "FlyByWire A320 throttle configuration",
+    "FA18 Hornet MSFS 2024",
+    "modular flight sim throttle",
+    "flight simulator hardware review",
+    "best throttle quadrant 2026",
+    "Moza aviation controls",
+    "throttle profile binding guide",
+    "Airbus detent setup MSFS",
+    "afterburner detent calibration",
+    "moza throttle"
+  ],
+  "featured": false
+}
