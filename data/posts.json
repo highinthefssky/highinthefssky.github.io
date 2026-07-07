@@ -1,5 +1,20 @@
 [
   {
+    "id": "UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
+    "text": "✈️ Episode 9: “I” is for ILS! ✈️\n\nEver wondered how pilots land when they can’t even see the nose of their own plane? Next Tuesday in our MSFS A‑Z series, we’re tackling one of the most important tools in real-world IFR flying: ILS - the Instrument Landing System.\n\nIt’s the gold standard of precision approaches. And in Microsoft Flight Simulator 2024, it’s also one of the most satisfying skills you can master because once you understand the needles, foggy days stop being scary and start being predictable.\n\n🗺️ What’s on the approach plate for next Tuesday the 3rd of March:\n\n\n📐 ILS, explained visually (no fluff):\nWe break down how ILS gives you two critical cues—horizontal and vertical—so you’re lined up and descending correctly 🎯⬇️\n\n📡 The two beams you must understand:\n➡️ Localizer (LOC): keeps you centered on the runway 🛣️\n⬇️ Glideslope (GS): guides your descent path (usually 3°) so you’re not too high… and not too low ⚖️\n\n🖥️ Cockpit view: reading the “needles” like a pro:\nYou’ll see the LOC and GS diamonds and learn the rule that makes it click instantly:\n\n👉 “Fly toward the needle.”\nNeedle above you? You’re low ⬆️\nNeedle left? You’re right ⬅️\nSimple. Powerful. 💡\n\n\n🛩️ MSFS 2024 Demo #1 — GA ILS (Cessna 172 G1000):\nTune NAV1, set CDI to LOC1, intercept at ~30°, hit APR, and watch the magic ✨\nFirst LOC capture, then GS, then a smooth, stable descent 🧘‍♂️\n\n✈️🤖 MSFS 2024 Demo #2 — Airliner Auto‑Land (Airbus A320neo):\nFrom selecting the ILS in the Flight Plan, pressing LS, engaging APPR, and finally capturing Cat III beams 📶\nWith AP1 + AP2 on, the A320 can fly itself all the way to the flare 😮🛬\n\n🧠 Why ILS changes everything:\nWhen visibility disappears, ILS turns chaos into math 📊\nMaster needle tracking, and low‑vis approaches become calm, repeatable, and safe ✅",
+    "published_relative": "4 months ago",
+    "published_date": "2026-03-09",
+    "url": "https://www.youtube.com/post/UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
+    "likes": "1",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/PWxU0oP2t_Q7JQp4LPt-M-xk_bOcMfVDXgx3WdMO_L3KQ5957Nsz-0VNgQO2kKOKJnL_-S2-ge2kJg=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-07-07T09:48:59.237884Z"
+  },
+  {
     "id": "UgkxCJ97KU12_blTP_PpgLlk_zkXgt9qZ7Qb",
     "text": "✈️ Episode 5: \"E\" is for EFB! ✈️\n\nIn Microsoft Flight Simulator 2024, the simulation doesn't start when the engines roar, it starts in the palm of your hand. Next week, we’re diving deep into the \"brain\" of the modern cockpit: the Electronic Flight Bag (EFB).\n\nWhether you're exploring the brand-new integrated MSFS 2024 tablet or pushing the legendary FlyByWire A32nx to its limits, mastering these tools is the difference between being a passenger and being a PIC (Pilot in Command). We’re showing you how to bridge the gap between the World Map and the flight deck.\n\nWhat’s on the flight plan for next Tuesday:\n\n\n- The MSFS 2024 \"OS\": A deep dive into the new integrated EFB. We’ll cover the Route Tab, visual Weight & Balance (no more sliders!), and how to manage your Career Mode missions mid-flight.\n\n- FlyByWire flyPadOS 3: Why this remains the gold standard. We’ll walk through SimBrief integration, ground services, and the all-important Performance Calculator for those precise V-speeds.\n\n- The \"Dual-Tablet\" Strategy: Why you actually need both. Learn which tablet to use for ATC and global planning, and which one to use for aircraft-specific systems and Navigraph charts.\n\n- Pro-Tips for Efficiency: From mapping EFB hotkeys to your joystick to using SimBridge to pull your cockpit tablet onto your physical iPad or phone.\n\n📅 Release date: Tuesday, February 3rd 🕔 Time: 17:00 UTC+1\n\n\r\n\r\nSeries schedule: \r\n🔄 New MSFS A‑Z episode every Tuesday \r\n📢 Next topic revealed every Wednesday\n\nStop menu-diving and start flying. The EFB has transformed from a simple map into a full cockpit operating system—it's time to learn how to use it like a pro.\n\nDo you prefer the new integrated MSFS EFB, or are you a die-hard FlyByWire flyPad user? Let’s hear your cockpit setups in the comments!\n\nBlue skies and happy flying! ✈️📱\n\nFour letters down, 22 to go. Let's get to work! 🔥",
     "published_relative": "5 months ago",
@@ -12,7 +27,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-07T03:47:26.066787Z"
+    "scraped_at": "2026-07-07T09:48:59.237855Z"
   },
   {
     "id": "UgkxGCT7NyMQV-Iukghtd9lUxxECBp1TzrgU",
@@ -27,7 +42,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-07T03:47:26.066717Z"
+    "scraped_at": "2026-07-07T09:48:59.237835Z"
   },
   {
     "id": "Ugkx2PjK6-XnqFTtTYUbj8PS_05OZCGRrgnA",
@@ -42,7 +57,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-07T03:47:26.066672Z"
+    "scraped_at": "2026-07-07T09:48:59.237805Z"
   },
   {
     "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
@@ -57,22 +72,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-07T03:47:26.066433Z"
-  },
-  {
-    "id": "UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
-    "text": "✈️ Episode 9: “I” is for ILS! ✈️\n\nEver wondered how pilots land when they can’t even see the nose of their own plane? Next Tuesday in our MSFS A‑Z series, we’re tackling one of the most important tools in real-world IFR flying: ILS - the Instrument Landing System.\n\nIt’s the gold standard of precision approaches. And in Microsoft Flight Simulator 2024, it’s also one of the most satisfying skills you can master because once you understand the needles, foggy days stop being scary and start being predictable.\n\n🗺️ What’s on the approach plate for next Tuesday the 3rd of March:\n\n\n📐 ILS, explained visually (no fluff):\nWe break down how ILS gives you two critical cues—horizontal and vertical—so you’re lined up and descending correctly 🎯⬇️\n\n📡 The two beams you must understand:\n➡️ Localizer (LOC): keeps you centered on the runway 🛣️\n⬇️ Glideslope (GS): guides your descent path (usually 3°) so you’re not too high… and not too low ⚖️\n\n🖥️ Cockpit view: reading the “needles” like a pro:\nYou’ll see the LOC and GS diamonds and learn the rule that makes it click instantly:\n\n👉 “Fly toward the needle.”\nNeedle above you? You’re low ⬆️\nNeedle left? You’re right ⬅️\nSimple. Powerful. 💡\n\n\n🛩️ MSFS 2024 Demo #1 — GA ILS (Cessna 172 G1000):\nTune NAV1, set CDI to LOC1, intercept at ~30°, hit APR, and watch the magic ✨\nFirst LOC capture, then GS, then a smooth, stable descent 🧘‍♂️\n\n✈️🤖 MSFS 2024 Demo #2 — Airliner Auto‑Land (Airbus A320neo):\nFrom selecting the ILS in the Flight Plan, pressing LS, engaging APPR, and finally capturing Cat III beams 📶\nWith AP1 + AP2 on, the A320 can fly itself all the way to the flare 😮🛬\n\n🧠 Why ILS changes everything:\nWhen visibility disappears, ILS turns chaos into math 📊\nMaster needle tracking, and low‑vis approaches become calm, repeatable, and safe ✅",
-    "published_relative": "4 months ago",
-    "published_date": "2026-03-08",
-    "url": "https://www.youtube.com/post/UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
-    "likes": "1",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/PWxU0oP2t_Q7JQp4LPt-M-xk_bOcMfVDXgx3WdMO_L3KQ5957Nsz-0VNgQO2kKOKJnL_-S2-ge2kJg=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-07-06T20:02:31.217390Z"
+    "scraped_at": "2026-07-07T09:48:59.237543Z"
   },
   {
     "id": "UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
