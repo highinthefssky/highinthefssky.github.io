@@ -10,7 +10,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-18T07:57:39.612325Z"
+    "scraped_at": "2026-07-18T13:23:22.767703Z"
   },
   {
     "id": "Ugkx0qMtNPkCBvzjXPMoUfqYVStQTeN6cTnm",
@@ -25,7 +25,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-18T07:57:39.612307Z"
+    "scraped_at": "2026-07-18T13:23:22.767687Z"
   },
   {
     "id": "UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
@@ -40,7 +40,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-18T07:57:39.612289Z"
+    "scraped_at": "2026-07-18T13:23:22.767664Z"
   },
   {
     "id": "UgkxCJ97KU12_blTP_PpgLlk_zkXgt9qZ7Qb",
@@ -55,7 +55,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-18T07:57:39.612272Z"
+    "scraped_at": "2026-07-18T13:23:22.767646Z"
   },
   {
     "id": "UgkxmiK5VMGg4eh6jSK2I5RfWb6jexvt3X4j",
@@ -68,7 +68,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-18T07:57:39.612234Z"
+    "scraped_at": "2026-07-18T13:23:22.767627Z"
   },
   {
     "id": "UgkxkkPPfHs8NG_Q7_br-ZATx2gDiQs1eccT",
@@ -81,7 +81,20 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-18T07:57:39.612215Z"
+    "scraped_at": "2026-07-18T13:23:22.767594Z"
+  },
+  {
+    "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
+    "text": "ATTENTION PILOTS: NOTAM ISSUED\n----------------------------------------------------------------------------------------------------------------------------------------\nNOTAM ID: SAAB-VIRTUAL-0340\nLOCATION: High in the flightsim sky Flight Operations\nEFFECTIVE: IMMEDIATELY\nSUBJECT: GROUND DELAY - SAAB 340 \"GETTING STARTED\" SERIES EP. 6\n\nSCHEDULE UPDATE:\nExpected Departure Clearance (EDC) for the Cold and Dark / Autopilot Tutorial has been pushed back by several hours due to unscheduled maintenance in the rendering bay. All systems are currently being cycled to ensure a smooth delivery.\n\nFLIGHT PLAN OVERVIEW:\nOnce wheels are up later today, this sortie will cover:\n\n- Pre-Flight: Comprehensive \"Cold and Dark\" procedures.\n- Walkthrough: Extended guided tour and technical explanation of the cockpit layout.\n- Departure: Standard takeoff procedures and climb-out.\n- Automation: In-depth guide to mastering Autopilot functionality for stable cruise operations.\n\nREMARKS:\nCheck your sub-feeds and notifications for the updated ATIS. We appreciate your patience while we clear these technical squawks.\n\nSTAY VIGILANT. SEE YOU ON THE FLIGHT DECK LATER TODAY.",
+    "published_relative": "3 months ago",
+    "published_date": "2026-04-19",
+    "url": "https://www.youtube.com/post/Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
+    "likes": "3",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-07-18T13:23:22.767578Z"
   },
   {
     "id": "Ugkx2PjK6-XnqFTtTYUbj8PS_05OZCGRrgnA",
@@ -96,20 +109,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-18T07:57:39.612196Z"
-  },
-  {
-    "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
-    "text": "ATTENTION PILOTS: NOTAM ISSUED\n----------------------------------------------------------------------------------------------------------------------------------------\nNOTAM ID: SAAB-VIRTUAL-0340\nLOCATION: High in the flightsim sky Flight Operations\nEFFECTIVE: IMMEDIATELY\nSUBJECT: GROUND DELAY - SAAB 340 \"GETTING STARTED\" SERIES EP. 6\n\nSCHEDULE UPDATE:\nExpected Departure Clearance (EDC) for the Cold and Dark / Autopilot Tutorial has been pushed back by several hours due to unscheduled maintenance in the rendering bay. All systems are currently being cycled to ensure a smooth delivery.\n\nFLIGHT PLAN OVERVIEW:\nOnce wheels are up later today, this sortie will cover:\n\n- Pre-Flight: Comprehensive \"Cold and Dark\" procedures.\n- Walkthrough: Extended guided tour and technical explanation of the cockpit layout.\n- Departure: Standard takeoff procedures and climb-out.\n- Automation: In-depth guide to mastering Autopilot functionality for stable cruise operations.\n\nREMARKS:\nCheck your sub-feeds and notifications for the updated ATIS. We appreciate your patience while we clear these technical squawks.\n\nSTAY VIGILANT. SEE YOU ON THE FLIGHT DECK LATER TODAY.",
-    "published_relative": "3 months ago",
-    "published_date": "2026-04-19",
-    "url": "https://www.youtube.com/post/Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
-    "likes": "3",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-07-18T07:57:39.612038Z"
+    "scraped_at": "2026-07-18T13:23:22.767560Z"
   },
   {
     "id": "UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
