@@ -1,20 +1,5 @@
 [
   {
-    "id": "Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
-    "text": "Episode 6: \"F\" is for Flight Director! 🎯\n\nThe Alphabet Challenge marches on — and today we’re tackling one of the most misunderstood tools in the cockpit.\n\nEver felt like the airplane was whispering instructions you couldn’t quite decode? That’s the Flight Director: the “ghost in the cockpit” guiding you toward professional, razor‑sharp flying. Whether you’re hand‑flying a SID in the 737 or following a GPS track in the G1000, mastering the FD is the key to flying with intention instead of reaction.\n\nTomorrow at 17:00 UTC+1, we’re pulling back the curtain on those magenta bars and showing you how to turn them into your best friend in the sky.\n\nWhat we’re covering:\n\n- The Logic Behind the Bars: What the FD is actually telling you.\n- FD vs Autopilot: Why one thinks and the other acts.\n- Aircraft Differences: V‑bars in the G1000, crosshairs in the 737, magenta magic in the A320.\n- Common Mistakes: How to stop “chasing the ghost” and start flying proactively.\n\nSix letters down, nineteen to go. Let’s keep climbing! ✈️🔥",
-    "published_relative": "5 months ago",
-    "published_date": "2026-02-21",
-    "url": "https://www.youtube.com/post/Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
-    "likes": "1",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/P_kphVDnsrTPOvnjhy17Xej5yBTLDcaamQOSY4Mi4No3XkSYkU0NPVvUlx2mXdvoWAukq5rANWwdqg=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-07-21T14:00:48.466244Z"
-  },
-  {
     "id": "UgkxCJ97KU12_blTP_PpgLlk_zkXgt9qZ7Qb",
     "text": "✈️ Episode 5: \"E\" is for EFB! ✈️\n\nIn Microsoft Flight Simulator 2024, the simulation doesn't start when the engines roar, it starts in the palm of your hand. Next week, we’re diving deep into the \"brain\" of the modern cockpit: the Electronic Flight Bag (EFB).\n\nWhether you're exploring the brand-new integrated MSFS 2024 tablet or pushing the legendary FlyByWire A32nx to its limits, mastering these tools is the difference between being a passenger and being a PIC (Pilot in Command). We’re showing you how to bridge the gap between the World Map and the flight deck.\n\nWhat’s on the flight plan for next Tuesday:\n\n\n- The MSFS 2024 \"OS\": A deep dive into the new integrated EFB. We’ll cover the Route Tab, visual Weight & Balance (no more sliders!), and how to manage your Career Mode missions mid-flight.\n\n- FlyByWire flyPadOS 3: Why this remains the gold standard. We’ll walk through SimBrief integration, ground services, and the all-important Performance Calculator for those precise V-speeds.\n\n- The \"Dual-Tablet\" Strategy: Why you actually need both. Learn which tablet to use for ATC and global planning, and which one to use for aircraft-specific systems and Navigraph charts.\n\n- Pro-Tips for Efficiency: From mapping EFB hotkeys to your joystick to using SimBridge to pull your cockpit tablet onto your physical iPad or phone.\n\n📅 Release date: Tuesday, February 3rd 🕔 Time: 17:00 UTC+1\n\n\r\n\r\nSeries schedule: \r\n🔄 New MSFS A‑Z episode every Tuesday \r\n📢 Next topic revealed every Wednesday\n\nStop menu-diving and start flying. The EFB has transformed from a simple map into a full cockpit operating system—it's time to learn how to use it like a pro.\n\nDo you prefer the new integrated MSFS EFB, or are you a die-hard FlyByWire flyPad user? Let’s hear your cockpit setups in the comments!\n\nBlue skies and happy flying! ✈️📱\n\nFour letters down, 22 to go. Let's get to work! 🔥",
     "published_relative": "5 months ago",
@@ -27,7 +12,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-21T14:00:48.466229Z"
+    "scraped_at": "2026-07-21T19:36:10.473614Z"
   },
   {
     "id": "UgkxmiK5VMGg4eh6jSK2I5RfWb6jexvt3X4j",
@@ -40,7 +25,22 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-21T14:00:48.466214Z"
+    "scraped_at": "2026-07-21T19:36:10.473586Z"
+  },
+  {
+    "id": "Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
+    "text": "Episode 6: \"F\" is for Flight Director! 🎯\n\nThe Alphabet Challenge marches on — and today we’re tackling one of the most misunderstood tools in the cockpit.\n\nEver felt like the airplane was whispering instructions you couldn’t quite decode? That’s the Flight Director: the “ghost in the cockpit” guiding you toward professional, razor‑sharp flying. Whether you’re hand‑flying a SID in the 737 or following a GPS track in the G1000, mastering the FD is the key to flying with intention instead of reaction.\n\nTomorrow at 17:00 UTC+1, we’re pulling back the curtain on those magenta bars and showing you how to turn them into your best friend in the sky.\n\nWhat we’re covering:\n\n- The Logic Behind the Bars: What the FD is actually telling you.\n- FD vs Autopilot: Why one thinks and the other acts.\n- Aircraft Differences: V‑bars in the G1000, crosshairs in the 737, magenta magic in the A320.\n- Common Mistakes: How to stop “chasing the ghost” and start flying proactively.\n\nSix letters down, nineteen to go. Let’s keep climbing! ✈️🔥",
+    "published_relative": "5 months ago",
+    "published_date": "2026-02-21",
+    "url": "https://www.youtube.com/post/Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
+    "likes": "1",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/P_kphVDnsrTPOvnjhy17Xej5yBTLDcaamQOSY4Mi4No3XkSYkU0NPVvUlx2mXdvoWAukq5rANWwdqg=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-07-21T19:36:10.473567Z"
   },
   {
     "id": "UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
@@ -55,7 +55,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-21T14:00:48.466198Z"
+    "scraped_at": "2026-07-21T19:36:10.473548Z"
   },
   {
     "id": "UgkxkkPPfHs8NG_Q7_br-ZATx2gDiQs1eccT",
@@ -68,7 +68,20 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-21T14:00:48.466183Z"
+    "scraped_at": "2026-07-21T19:36:10.473529Z"
+  },
+  {
+    "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
+    "text": "ATTENTION PILOTS: NOTAM ISSUED\n----------------------------------------------------------------------------------------------------------------------------------------\nNOTAM ID: SAAB-VIRTUAL-0340\nLOCATION: High in the flightsim sky Flight Operations\nEFFECTIVE: IMMEDIATELY\nSUBJECT: GROUND DELAY - SAAB 340 \"GETTING STARTED\" SERIES EP. 6\n\nSCHEDULE UPDATE:\nExpected Departure Clearance (EDC) for the Cold and Dark / Autopilot Tutorial has been pushed back by several hours due to unscheduled maintenance in the rendering bay. All systems are currently being cycled to ensure a smooth delivery.\n\nFLIGHT PLAN OVERVIEW:\nOnce wheels are up later today, this sortie will cover:\n\n- Pre-Flight: Comprehensive \"Cold and Dark\" procedures.\n- Walkthrough: Extended guided tour and technical explanation of the cockpit layout.\n- Departure: Standard takeoff procedures and climb-out.\n- Automation: In-depth guide to mastering Autopilot functionality for stable cruise operations.\n\nREMARKS:\nCheck your sub-feeds and notifications for the updated ATIS. We appreciate your patience while we clear these technical squawks.\n\nSTAY VIGILANT. SEE YOU ON THE FLIGHT DECK LATER TODAY.",
+    "published_relative": "3 months ago",
+    "published_date": "2026-04-22",
+    "url": "https://www.youtube.com/post/Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
+    "likes": "3",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-07-21T19:36:10.473512Z"
   },
   {
     "id": "Ugkx0qMtNPkCBvzjXPMoUfqYVStQTeN6cTnm",
@@ -83,20 +96,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-21T14:00:48.466171Z"
-  },
-  {
-    "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
-    "text": "ATTENTION PILOTS: NOTAM ISSUED\n----------------------------------------------------------------------------------------------------------------------------------------\nNOTAM ID: SAAB-VIRTUAL-0340\nLOCATION: High in the flightsim sky Flight Operations\nEFFECTIVE: IMMEDIATELY\nSUBJECT: GROUND DELAY - SAAB 340 \"GETTING STARTED\" SERIES EP. 6\n\nSCHEDULE UPDATE:\nExpected Departure Clearance (EDC) for the Cold and Dark / Autopilot Tutorial has been pushed back by several hours due to unscheduled maintenance in the rendering bay. All systems are currently being cycled to ensure a smooth delivery.\n\nFLIGHT PLAN OVERVIEW:\nOnce wheels are up later today, this sortie will cover:\n\n- Pre-Flight: Comprehensive \"Cold and Dark\" procedures.\n- Walkthrough: Extended guided tour and technical explanation of the cockpit layout.\n- Departure: Standard takeoff procedures and climb-out.\n- Automation: In-depth guide to mastering Autopilot functionality for stable cruise operations.\n\nREMARKS:\nCheck your sub-feeds and notifications for the updated ATIS. We appreciate your patience while we clear these technical squawks.\n\nSTAY VIGILANT. SEE YOU ON THE FLIGHT DECK LATER TODAY.",
-    "published_relative": "3 months ago",
-    "published_date": "2026-04-22",
-    "url": "https://www.youtube.com/post/Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
-    "likes": "3",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-07-21T14:00:48.466137Z"
+    "scraped_at": "2026-07-21T19:36:10.473443Z"
   },
   {
     "id": "Ugkx2PjK6-XnqFTtTYUbj8PS_05OZCGRrgnA",
@@ -111,7 +111,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-21T14:00:48.466121Z"
+    "scraped_at": "2026-07-21T19:36:10.473417Z"
   },
   {
     "id": "UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
