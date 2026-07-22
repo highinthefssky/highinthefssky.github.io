@@ -31,7 +31,7 @@ Stop guessing where you can legally fly and level up your virtual pilot skills!
 04:43 - Demo: The Radio Call
 
 Original post: https://www.youtube.com/post/UgkxsDDGY3wiVy2G81vVXm53W0g0XQZsCi0n
-Likes: 0 | Comments: 0
+Likes: 1 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/VYICyHfKA_Y3wUdl5lCCicwrbE6NQjs-F2EMm_c8LQcX8RZI_ebH1q-ZMvC2XT7POZNcSe0NMERw=s1280)
