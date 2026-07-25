@@ -1,7 +1,7 @@
 ---
 title: "The Final Flight is almost here! 🏁✈️"
 description: "The Final Flight is almost here! 🏁✈️  We’ve spent the last few weeks mastering the Pilatus PC-12 NGX, from the high-altitude peaks of Courchevel to the complex"
-publishedAt: 2026-03-26
+publishedAt: 2026-03-27
 tags: ["community", "youtube"]
 draft: false
 ---
