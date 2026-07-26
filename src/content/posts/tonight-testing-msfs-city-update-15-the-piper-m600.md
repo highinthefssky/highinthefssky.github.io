@@ -1,7 +1,7 @@
 ---
 title: "🚨 TONIGHT: Testing MSFS City Update 15 & the Piper M600!"
 description: "🚨 TONIGHT: Testing MSFS City Update 15 & the Piper M600!  The pilot is \"incapacitated\" but the aircraft has everything under control! 🛩️🤖  Take a close look at"
-publishedAt: 2026-06-24
+publishedAt: 2026-06-26
 tags: ["community", "youtube"]
 draft: false
 ---
