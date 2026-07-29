@@ -1,20 +1,5 @@
 [
   {
-    "id": "UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
-    "text": "✈️ Episode 9: “I” is for ILS! ✈️\n\nEver wondered how pilots land when they can’t even see the nose of their own plane? Next Tuesday in our MSFS A‑Z series, we’re tackling one of the most important tools in real-world IFR flying: ILS - the Instrument Landing System.\n\nIt’s the gold standard of precision approaches. And in Microsoft Flight Simulator 2024, it’s also one of the most satisfying skills you can master because once you understand the needles, foggy days stop being scary and start being predictable.\n\n🗺️ What’s on the approach plate for next Tuesday the 3rd of March:\n\n\n📐 ILS, explained visually (no fluff):\nWe break down how ILS gives you two critical cues—horizontal and vertical—so you’re lined up and descending correctly 🎯⬇️\n\n📡 The two beams you must understand:\n➡️ Localizer (LOC): keeps you centered on the runway 🛣️\n⬇️ Glideslope (GS): guides your descent path (usually 3°) so you’re not too high… and not too low ⚖️\n\n🖥️ Cockpit view: reading the “needles” like a pro:\nYou’ll see the LOC and GS diamonds and learn the rule that makes it click instantly:\n\n👉 “Fly toward the needle.”\nNeedle above you? You’re low ⬆️\nNeedle left? You’re right ⬅️\nSimple. Powerful. 💡\n\n\n🛩️ MSFS 2024 Demo #1 — GA ILS (Cessna 172 G1000):\nTune NAV1, set CDI to LOC1, intercept at ~30°, hit APR, and watch the magic ✨\nFirst LOC capture, then GS, then a smooth, stable descent 🧘‍♂️\n\n✈️🤖 MSFS 2024 Demo #2 — Airliner Auto‑Land (Airbus A320neo):\nFrom selecting the ILS in the Flight Plan, pressing LS, engaging APPR, and finally capturing Cat III beams 📶\nWith AP1 + AP2 on, the A320 can fly itself all the way to the flare 😮🛬\n\n🧠 Why ILS changes everything:\nWhen visibility disappears, ILS turns chaos into math 📊\nMaster needle tracking, and low‑vis approaches become calm, repeatable, and safe ✅",
-    "published_relative": "5 months ago",
-    "published_date": "2026-03-01",
-    "url": "https://www.youtube.com/post/UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
-    "likes": "1",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/PWxU0oP2t_Q7JQp4LPt-M-xk_bOcMfVDXgx3WdMO_L3KQ5957Nsz-0VNgQO2kKOKJnL_-S2-ge2kJg=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-07-29T08:45:48.078555Z"
-  },
-  {
     "id": "Ugkx0qMtNPkCBvzjXPMoUfqYVStQTeN6cTnm",
     "text": "Episode 7: “G” is for GO‑AROUND — The Maneuver of Champions. 🔥✈️\n\nThe best pilots aren’t the ones who \"stick\" every landing; they’re the ones who know when to say NOPE, push the power forward, and live to fly another lap.\n\nIf you’ve ever forced a landing because you were \"already there,\" this episode is your wake-up call. We’re breaking down the physics and the \"Get Out of Jail Free\" card that every pro swears by.\n\nWhat’s on the Flight Plan:\n\n🧠 The Psychology: Why a Go-Around is a sign of discipline, not failure.\n\n🎯 The \"Gate\" System: Stabilized Approach criteria for IMC (1,000ft) vs VFR (500ft).\n\n🛩️ Cessna vs. Airbus: From manual pitch-up chaos to TO/GA automation magic.\n\n⚠️ The Nightmare: What happens when an engine fails during the climb-out?\n\nStep-By-Step Demo:\nWe’ll execute a full Go-Around from 200ft, showing you exactly how to manage Power → Pitch → Flaps → Gear without losing your cool.\n\n📅 Premieres tomorrow at 17:00 UTC+1.\n\nSeven letters down, nineteen to go. Let’s keep climbing! ✈️🔥",
     "published_relative": "5 months ago (edited)",
@@ -27,7 +12,20 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-29T08:45:48.078539Z"
+    "scraped_at": "2026-07-29T14:18:34.479847Z"
+  },
+  {
+    "id": "UgkxkkPPfHs8NG_Q7_br-ZATx2gDiQs1eccT",
+    "text": "With the 2026 Winter Olympics officially underway in Milan and Cortina, which airport is the most \"challenging\" choice for landing your team’s charter flight closest to the mountain events?",
+    "published_relative": "5 months ago",
+    "published_date": "2026-03-01",
+    "url": "https://www.youtube.com/post/UgkxkkPPfHs8NG_Q7_br-ZATx2gDiQs1eccT",
+    "likes": "0",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-07-29T14:18:34.479826Z"
   },
   {
     "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
@@ -40,7 +38,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-29T08:45:48.078509Z"
+    "scraped_at": "2026-07-29T14:18:34.479799Z"
   },
   {
     "id": "Ugkx2PjK6-XnqFTtTYUbj8PS_05OZCGRrgnA",
@@ -55,7 +53,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-29T08:45:48.078498Z"
+    "scraped_at": "2026-07-29T14:18:34.479786Z"
   },
   {
     "id": "UgkxsDDGY3wiVy2G81vVXm53W0g0XQZsCi0n",
@@ -70,7 +68,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-29T08:45:48.078411Z"
+    "scraped_at": "2026-07-29T14:18:34.479692Z"
   },
   {
     "id": "UgkxjdL_Be56SGPfhYH8QyuVfe1DR_1qNDFj",
@@ -85,20 +83,22 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-29T08:45:48.078374Z"
+    "scraped_at": "2026-07-29T14:18:34.479653Z"
   },
   {
-    "id": "UgkxkkPPfHs8NG_Q7_br-ZATx2gDiQs1eccT",
-    "text": "With the 2026 Winter Olympics officially underway in Milan and Cortina, which airport is the most \"challenging\" choice for landing your team’s charter flight closest to the mountain events?",
+    "id": "UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
+    "text": "✈️ Episode 9: “I” is for ILS! ✈️\n\nEver wondered how pilots land when they can’t even see the nose of their own plane? Next Tuesday in our MSFS A‑Z series, we’re tackling one of the most important tools in real-world IFR flying: ILS - the Instrument Landing System.\n\nIt’s the gold standard of precision approaches. And in Microsoft Flight Simulator 2024, it’s also one of the most satisfying skills you can master because once you understand the needles, foggy days stop being scary and start being predictable.\n\n🗺️ What’s on the approach plate for next Tuesday the 3rd of March:\n\n\n📐 ILS, explained visually (no fluff):\nWe break down how ILS gives you two critical cues—horizontal and vertical—so you’re lined up and descending correctly 🎯⬇️\n\n📡 The two beams you must understand:\n➡️ Localizer (LOC): keeps you centered on the runway 🛣️\n⬇️ Glideslope (GS): guides your descent path (usually 3°) so you’re not too high… and not too low ⚖️\n\n🖥️ Cockpit view: reading the “needles” like a pro:\nYou’ll see the LOC and GS diamonds and learn the rule that makes it click instantly:\n\n👉 “Fly toward the needle.”\nNeedle above you? You’re low ⬆️\nNeedle left? You’re right ⬅️\nSimple. Powerful. 💡\n\n\n🛩️ MSFS 2024 Demo #1 — GA ILS (Cessna 172 G1000):\nTune NAV1, set CDI to LOC1, intercept at ~30°, hit APR, and watch the magic ✨\nFirst LOC capture, then GS, then a smooth, stable descent 🧘‍♂️\n\n✈️🤖 MSFS 2024 Demo #2 — Airliner Auto‑Land (Airbus A320neo):\nFrom selecting the ILS in the Flight Plan, pressing LS, engaging APPR, and finally capturing Cat III beams 📶\nWith AP1 + AP2 on, the A320 can fly itself all the way to the flare 😮🛬\n\n🧠 Why ILS changes everything:\nWhen visibility disappears, ILS turns chaos into math 📊\nMaster needle tracking, and low‑vis approaches become calm, repeatable, and safe ✅",
     "published_relative": "5 months ago",
     "published_date": "2026-03-01",
-    "url": "https://www.youtube.com/post/UgkxkkPPfHs8NG_Q7_br-ZATx2gDiQs1eccT",
-    "likes": "0",
+    "url": "https://www.youtube.com/post/UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
+    "likes": "1",
     "comments": "0",
-    "images": null,
+    "images": [
+      "https://yt3.ggpht.com/PWxU0oP2t_Q7JQp4LPt-M-xk_bOcMfVDXgx3WdMO_L3KQ5957Nsz-0VNgQO2kKOKJnL_-S2-ge2kJg=s1280"
+    ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-07-29T02:54:49.698312Z"
+    "scraped_at": "2026-07-29T08:45:48.078555Z"
   },
   {
     "id": "Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
