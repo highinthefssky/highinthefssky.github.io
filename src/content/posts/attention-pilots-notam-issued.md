@@ -1,7 +1,7 @@
 ---
 title: "ATTENTION PILOTS: NOTAM ISSUED"
 description: "ATTENTION PILOTS: NOTAM ISSUED ---------------------------------------------------------------------------------------------------------------------------------"
-publishedAt: 2026-04-29
+publishedAt: 2026-04-30
 tags: ["community", "youtube"]
 draft: false
 ---
