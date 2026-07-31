@@ -20,7 +20,7 @@ VR isn’t always smooth sailing out of the box. In today’s episode, I cover t
 Drop a comment on the videos and let me know your thoughts, are you flying in VR yet, or are you holding out for monitors? Clear skies! 🌤️
 
 Original post: https://www.youtube.com/post/UgkxjdL_Be56SGPfhYH8QyuVfe1DR_1qNDFj
-Likes: 0 | Comments: 0
+Likes: 1 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/wi19QeG82O8WwRPLhForTCuMu1m1VtxPVxf35e6S5ceV5SHUUdYOHJgtXgoNyA7jR0XmgEyeuvtsfg=s1280)
