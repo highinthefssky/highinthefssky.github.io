@@ -1,18 +1,16 @@
 [
   {
-    "id": "UgkxVgvjZwI4Dz7WiOwqej2K1G93EzdeQt3E",
-    "text": "⚠️ NOTAM: Saab 340 Departure Delay – Episode 4\n\nTo: All Virtual Aviators & Saab Enthusiasts\n\nFrom: The Flight Deck\n\nSubject: Ground Stop on Episode 4 – \"Beyond the Engines\"\n\nAttention all crew, we’ve hit a bit of a snag during the pre-flight inspection for our next installment. While we were hoping to \"rotate\" into your feeds today, the tower has issued a temporary ground stop.\n\nIt turns out that managing the Saab 340 is a bit like the aircraft itself: rugged, reliable, but occasionally prone to a stubborn warning light that refuses to go out. We’re currently troubleshooting some technical \"gremlins\" in the editing suite to ensure your experience is smooth sailing (and not a gear-up landing).\n\nWhat’s Waiting at the Gate?\nDon’t unfasten your seatbelts just yet. \nEpisode 4: Beyond the Engines is going to be a deep dive into the guts of this Swedish masterpiece. We’ll be covering:\n\n- Hydraulics: Learning how to keep the pressure up so your gear actually goes down.\n- Electrics: Navigating the bus ties without blowing a fuse (literally or figuratively).\n- The Infamous Gust Lock: The #1 reason pilots try to taxi and end up looking like they’ve forgotten how to move their arms. We’ll show you how to unlock your controls before you embarrass yourself in front of Ground Control.\n\nRevised Flight Plan\nWe are currently \"holding short\" of the runway, but we expect to be Clear for Takeoff within the next 2 days.\n\nPilot’s Note: \"A delayed video is eventually good, but a rushed video is forever stuck in the hangar with a broken flap motor.\" - Management (probably).\n\nWe appreciate your patience while we cycle the breakers and get this bird back in the air. Stay tuned, keep your airspeeds up, and we’ll see you in the cockpit very soon!",
+    "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
+    "text": "ATTENTION PILOTS: NOTAM ISSUED\n----------------------------------------------------------------------------------------------------------------------------------------\nNOTAM ID: SAAB-VIRTUAL-0340\nLOCATION: High in the flightsim sky Flight Operations\nEFFECTIVE: IMMEDIATELY\nSUBJECT: GROUND DELAY - SAAB 340 \"GETTING STARTED\" SERIES EP. 6\n\nSCHEDULE UPDATE:\nExpected Departure Clearance (EDC) for the Cold and Dark / Autopilot Tutorial has been pushed back by several hours due to unscheduled maintenance in the rendering bay. All systems are currently being cycled to ensure a smooth delivery.\n\nFLIGHT PLAN OVERVIEW:\nOnce wheels are up later today, this sortie will cover:\n\n- Pre-Flight: Comprehensive \"Cold and Dark\" procedures.\n- Walkthrough: Extended guided tour and technical explanation of the cockpit layout.\n- Departure: Standard takeoff procedures and climb-out.\n- Automation: In-depth guide to mastering Autopilot functionality for stable cruise operations.\n\nREMARKS:\nCheck your sub-feeds and notifications for the updated ATIS. We appreciate your patience while we clear these technical squawks.\n\nSTAY VIGILANT. SEE YOU ON THE FLIGHT DECK LATER TODAY.",
     "published_relative": "4 months ago",
     "published_date": "2026-04-05",
-    "url": "https://www.youtube.com/post/UgkxVgvjZwI4Dz7WiOwqej2K1G93EzdeQt3E",
-    "likes": "4",
+    "url": "https://www.youtube.com/post/Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
+    "likes": "3",
     "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/V6DhwlthXxNRBuKIGxMA-4RaQ7oDuXVfM8IxAcjne4pFt1AwBfFfxN7imVfexN9guZdp5ON-7cG0vg=s1280"
-    ],
+    "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-03T14:46:45.621161Z"
+    "scraped_at": "2026-08-03T19:42:21.994658Z"
   },
   {
     "id": "UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
@@ -25,7 +23,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-03T14:46:45.621140Z"
+    "scraped_at": "2026-08-03T19:42:21.994648Z"
   },
   {
     "id": "Ugkx2PjK6-XnqFTtTYUbj8PS_05OZCGRrgnA",
@@ -40,7 +38,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-03T14:46:45.621126Z"
+    "scraped_at": "2026-08-03T19:42:21.994613Z"
   },
   {
     "id": "UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
@@ -55,22 +53,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-03T14:46:45.621110Z"
-  },
-  {
-    "id": "Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
-    "text": "Episode 6: \"F\" is for Flight Director! 🎯\n\nThe Alphabet Challenge marches on — and today we’re tackling one of the most misunderstood tools in the cockpit.\n\nEver felt like the airplane was whispering instructions you couldn’t quite decode? That’s the Flight Director: the “ghost in the cockpit” guiding you toward professional, razor‑sharp flying. Whether you’re hand‑flying a SID in the 737 or following a GPS track in the G1000, mastering the FD is the key to flying with intention instead of reaction.\n\nTomorrow at 17:00 UTC+1, we’re pulling back the curtain on those magenta bars and showing you how to turn them into your best friend in the sky.\n\nWhat we’re covering:\n\n- The Logic Behind the Bars: What the FD is actually telling you.\n- FD vs Autopilot: Why one thinks and the other acts.\n- Aircraft Differences: V‑bars in the G1000, crosshairs in the 737, magenta magic in the A320.\n- Common Mistakes: How to stop “chasing the ghost” and start flying proactively.\n\nSix letters down, nineteen to go. Let’s keep climbing! ✈️🔥",
-    "published_relative": "5 months ago",
-    "published_date": "2026-03-06",
-    "url": "https://www.youtube.com/post/Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
-    "likes": "1",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/P_kphVDnsrTPOvnjhy17Xej5yBTLDcaamQOSY4Mi4No3XkSYkU0NPVvUlx2mXdvoWAukq5rANWwdqg=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-08-03T14:46:45.621092Z"
+    "scraped_at": "2026-08-03T19:42:21.994600Z"
   },
   {
     "id": "Ugkx0qMtNPkCBvzjXPMoUfqYVStQTeN6cTnm",
@@ -85,7 +68,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-03T14:46:45.621075Z"
+    "scraped_at": "2026-08-03T19:42:21.994584Z"
   },
   {
     "id": "UgkxjdL_Be56SGPfhYH8QyuVfe1DR_1qNDFj",
@@ -100,22 +83,22 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-03T14:46:45.621057Z"
+    "scraped_at": "2026-08-03T19:42:21.994569Z"
   },
   {
-    "id": "UgkxsDDGY3wiVy2G81vVXm53W0g0XQZsCi0n",
-    "text": "Ever felt intimidated by the \"invisible walls\" in the sky? ✈️🧱\n\nYou're cruising along fine, and suddenly you're risking a license revocation—or ruining a VATSIM controller's day! If you've ever avoided ATC or online networks because airspace classes feel like a bowl of alphabet soup, this episode is your ultimate cheat code.\nIn the latest episode of Microsoft Flight Simulator A to Z, we're tackling C for Controlled Airspace!\nHere is what we break down:\n\n🔤 Classes A through G: Simple, real-world analogies to finally make them click.\n🛑 The Two-Way Rule vs. Explicit Clearance: Why talking to ATC works in Class C, but will get you a violation in Class B.\n🗺️ Map & EFB Navigation: Reading ceilings, floors, and invisible boundaries on the fly.\n🎙️ Live MSFS 2024 Radio Demo: Exactly what to say to request flight following and clear a Class C transition seamlessly.\nStop guessing where you can legally fly and level up your virtual pilot skills!\n\n🍿 Watch the new episode now: https://youtu.be/2n_A4bwnkYE\n\n🕒 Quick Chapters:\n00:00 - Intro\n01:03 - Class Delta\n01:38 - Class Charlie\n02:07 - Class Bravo\n02:39 - Class Alpha\n03:15 - Class Echo & Golf\n03:29 - Demo: Moving Map\n04:43 - Demo: The Radio Call",
-    "published_relative": "12 days ago",
-    "published_date": "2026-07-22",
-    "url": "https://www.youtube.com/post/UgkxsDDGY3wiVy2G81vVXm53W0g0XQZsCi0n",
-    "likes": "3",
+    "id": "UgkxVgvjZwI4Dz7WiOwqej2K1G93EzdeQt3E",
+    "text": "⚠️ NOTAM: Saab 340 Departure Delay – Episode 4\n\nTo: All Virtual Aviators & Saab Enthusiasts\n\nFrom: The Flight Deck\n\nSubject: Ground Stop on Episode 4 – \"Beyond the Engines\"\n\nAttention all crew, we’ve hit a bit of a snag during the pre-flight inspection for our next installment. While we were hoping to \"rotate\" into your feeds today, the tower has issued a temporary ground stop.\n\nIt turns out that managing the Saab 340 is a bit like the aircraft itself: rugged, reliable, but occasionally prone to a stubborn warning light that refuses to go out. We’re currently troubleshooting some technical \"gremlins\" in the editing suite to ensure your experience is smooth sailing (and not a gear-up landing).\n\nWhat’s Waiting at the Gate?\nDon’t unfasten your seatbelts just yet. \nEpisode 4: Beyond the Engines is going to be a deep dive into the guts of this Swedish masterpiece. We’ll be covering:\n\n- Hydraulics: Learning how to keep the pressure up so your gear actually goes down.\n- Electrics: Navigating the bus ties without blowing a fuse (literally or figuratively).\n- The Infamous Gust Lock: The #1 reason pilots try to taxi and end up looking like they’ve forgotten how to move their arms. We’ll show you how to unlock your controls before you embarrass yourself in front of Ground Control.\n\nRevised Flight Plan\nWe are currently \"holding short\" of the runway, but we expect to be Clear for Takeoff within the next 2 days.\n\nPilot’s Note: \"A delayed video is eventually good, but a rushed video is forever stuck in the hangar with a broken flap motor.\" - Management (probably).\n\nWe appreciate your patience while we cycle the breakers and get this bird back in the air. Stay tuned, keep your airspeeds up, and we’ll see you in the cockpit very soon!",
+    "published_relative": "4 months ago",
+    "published_date": "2026-04-05",
+    "url": "https://www.youtube.com/post/UgkxVgvjZwI4Dz7WiOwqej2K1G93EzdeQt3E",
+    "likes": "4",
     "comments": "0",
     "images": [
-      "https://yt3.ggpht.com/VYICyHfKA_Y3wUdl5lCCicwrbE6NQjs-F2EMm_c8LQcX8RZI_ebH1q-ZMvC2XT7POZNcSe0NMERw=s1280"
+      "https://yt3.ggpht.com/V6DhwlthXxNRBuKIGxMA-4RaQ7oDuXVfM8IxAcjne4pFt1AwBfFfxN7imVfexN9guZdp5ON-7cG0vg=s1280"
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-03T14:46:45.621009Z"
+    "scraped_at": "2026-08-03T19:42:21.994554Z"
   },
   {
     "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
@@ -130,26 +113,28 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-03T14:46:45.620950Z"
+    "scraped_at": "2026-08-03T19:42:21.994540Z"
   },
   {
-    "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
-    "text": "ATTENTION PILOTS: NOTAM ISSUED\n----------------------------------------------------------------------------------------------------------------------------------------\nNOTAM ID: SAAB-VIRTUAL-0340\nLOCATION: High in the flightsim sky Flight Operations\nEFFECTIVE: IMMEDIATELY\nSUBJECT: GROUND DELAY - SAAB 340 \"GETTING STARTED\" SERIES EP. 6\n\nSCHEDULE UPDATE:\nExpected Departure Clearance (EDC) for the Cold and Dark / Autopilot Tutorial has been pushed back by several hours due to unscheduled maintenance in the rendering bay. All systems are currently being cycled to ensure a smooth delivery.\n\nFLIGHT PLAN OVERVIEW:\nOnce wheels are up later today, this sortie will cover:\n\n- Pre-Flight: Comprehensive \"Cold and Dark\" procedures.\n- Walkthrough: Extended guided tour and technical explanation of the cockpit layout.\n- Departure: Standard takeoff procedures and climb-out.\n- Automation: In-depth guide to mastering Autopilot functionality for stable cruise operations.\n\nREMARKS:\nCheck your sub-feeds and notifications for the updated ATIS. We appreciate your patience while we clear these technical squawks.\n\nSTAY VIGILANT. SEE YOU ON THE FLIGHT DECK LATER TODAY.",
-    "published_relative": "4 months ago",
-    "published_date": "2026-04-05",
-    "url": "https://www.youtube.com/post/Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
+    "id": "UgkxsDDGY3wiVy2G81vVXm53W0g0XQZsCi0n",
+    "text": "Ever felt intimidated by the \"invisible walls\" in the sky? ✈️🧱\n\nYou're cruising along fine, and suddenly you're risking a license revocation—or ruining a VATSIM controller's day! If you've ever avoided ATC or online networks because airspace classes feel like a bowl of alphabet soup, this episode is your ultimate cheat code.\nIn the latest episode of Microsoft Flight Simulator A to Z, we're tackling C for Controlled Airspace!\nHere is what we break down:\n\n🔤 Classes A through G: Simple, real-world analogies to finally make them click.\n🛑 The Two-Way Rule vs. Explicit Clearance: Why talking to ATC works in Class C, but will get you a violation in Class B.\n🗺️ Map & EFB Navigation: Reading ceilings, floors, and invisible boundaries on the fly.\n🎙️ Live MSFS 2024 Radio Demo: Exactly what to say to request flight following and clear a Class C transition seamlessly.\nStop guessing where you can legally fly and level up your virtual pilot skills!\n\n🍿 Watch the new episode now: https://youtu.be/2n_A4bwnkYE\n\n🕒 Quick Chapters:\n00:00 - Intro\n01:03 - Class Delta\n01:38 - Class Charlie\n02:07 - Class Bravo\n02:39 - Class Alpha\n03:15 - Class Echo & Golf\n03:29 - Demo: Moving Map\n04:43 - Demo: The Radio Call",
+    "published_relative": "12 days ago",
+    "published_date": "2026-07-22",
+    "url": "https://www.youtube.com/post/UgkxsDDGY3wiVy2G81vVXm53W0g0XQZsCi0n",
     "likes": "3",
     "comments": "0",
-    "images": null,
+    "images": [
+      "https://yt3.ggpht.com/VYICyHfKA_Y3wUdl5lCCicwrbE6NQjs-F2EMm_c8LQcX8RZI_ebH1q-ZMvC2XT7POZNcSe0NMERw=s1280"
+    ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-03T03:21:43.753387Z"
+    "scraped_at": "2026-08-03T19:42:21.994524Z"
   },
   {
     "id": "UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
     "text": "✈️ Episode 9: “I” is for ILS! ✈️\n\nEver wondered how pilots land when they can’t even see the nose of their own plane? Next Tuesday in our MSFS A‑Z series, we’re tackling one of the most important tools in real-world IFR flying: ILS - the Instrument Landing System.\n\nIt’s the gold standard of precision approaches. And in Microsoft Flight Simulator 2024, it’s also one of the most satisfying skills you can master because once you understand the needles, foggy days stop being scary and start being predictable.\n\n🗺️ What’s on the approach plate for next Tuesday the 3rd of March:\n\n\n📐 ILS, explained visually (no fluff):\nWe break down how ILS gives you two critical cues—horizontal and vertical—so you’re lined up and descending correctly 🎯⬇️\n\n📡 The two beams you must understand:\n➡️ Localizer (LOC): keeps you centered on the runway 🛣️\n⬇️ Glideslope (GS): guides your descent path (usually 3°) so you’re not too high… and not too low ⚖️\n\n🖥️ Cockpit view: reading the “needles” like a pro:\nYou’ll see the LOC and GS diamonds and learn the rule that makes it click instantly:\n\n👉 “Fly toward the needle.”\nNeedle above you? You’re low ⬆️\nNeedle left? You’re right ⬅️\nSimple. Powerful. 💡\n\n\n🛩️ MSFS 2024 Demo #1 — GA ILS (Cessna 172 G1000):\nTune NAV1, set CDI to LOC1, intercept at ~30°, hit APR, and watch the magic ✨\nFirst LOC capture, then GS, then a smooth, stable descent 🧘‍♂️\n\n✈️🤖 MSFS 2024 Demo #2 — Airliner Auto‑Land (Airbus A320neo):\nFrom selecting the ILS in the Flight Plan, pressing LS, engaging APPR, and finally capturing Cat III beams 📶\nWith AP1 + AP2 on, the A320 can fly itself all the way to the flare 😮🛬\n\n🧠 Why ILS changes everything:\nWhen visibility disappears, ILS turns chaos into math 📊\nMaster needle tracking, and low‑vis approaches become calm, repeatable, and safe ✅",
     "published_relative": "5 months ago",
-    "published_date": "2026-03-05",
+    "published_date": "2026-03-06",
     "url": "https://www.youtube.com/post/UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
     "likes": "1",
     "comments": "0",
@@ -158,7 +143,22 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-02T03:20:00.065148Z"
+    "scraped_at": "2026-08-03T19:42:21.994471Z"
+  },
+  {
+    "id": "Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
+    "text": "Episode 6: \"F\" is for Flight Director! 🎯\n\nThe Alphabet Challenge marches on — and today we’re tackling one of the most misunderstood tools in the cockpit.\n\nEver felt like the airplane was whispering instructions you couldn’t quite decode? That’s the Flight Director: the “ghost in the cockpit” guiding you toward professional, razor‑sharp flying. Whether you’re hand‑flying a SID in the 737 or following a GPS track in the G1000, mastering the FD is the key to flying with intention instead of reaction.\n\nTomorrow at 17:00 UTC+1, we’re pulling back the curtain on those magenta bars and showing you how to turn them into your best friend in the sky.\n\nWhat we’re covering:\n\n- The Logic Behind the Bars: What the FD is actually telling you.\n- FD vs Autopilot: Why one thinks and the other acts.\n- Aircraft Differences: V‑bars in the G1000, crosshairs in the 737, magenta magic in the A320.\n- Common Mistakes: How to stop “chasing the ghost” and start flying proactively.\n\nSix letters down, nineteen to go. Let’s keep climbing! ✈️🔥",
+    "published_relative": "5 months ago",
+    "published_date": "2026-03-06",
+    "url": "https://www.youtube.com/post/Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
+    "likes": "1",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/P_kphVDnsrTPOvnjhy17Xej5yBTLDcaamQOSY4Mi4No3XkSYkU0NPVvUlx2mXdvoWAukq5rANWwdqg=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-08-03T19:42:21.994448Z"
   },
   {
     "id": "UgkxFQqVaAqKk8gqbK8dWbUa8kgNhVaNfCek",
