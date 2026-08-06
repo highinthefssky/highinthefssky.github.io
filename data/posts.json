@@ -1,24 +1,9 @@
 [
   {
-    "id": "Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
-    "text": "Episode 6: \"F\" is for Flight Director! 🎯\n\nThe Alphabet Challenge marches on — and today we’re tackling one of the most misunderstood tools in the cockpit.\n\nEver felt like the airplane was whispering instructions you couldn’t quite decode? That’s the Flight Director: the “ghost in the cockpit” guiding you toward professional, razor‑sharp flying. Whether you’re hand‑flying a SID in the 737 or following a GPS track in the G1000, mastering the FD is the key to flying with intention instead of reaction.\n\nTomorrow at 17:00 UTC+1, we’re pulling back the curtain on those magenta bars and showing you how to turn them into your best friend in the sky.\n\nWhat we’re covering:\n\n- The Logic Behind the Bars: What the FD is actually telling you.\n- FD vs Autopilot: Why one thinks and the other acts.\n- Aircraft Differences: V‑bars in the G1000, crosshairs in the 737, magenta magic in the A320.\n- Common Mistakes: How to stop “chasing the ghost” and start flying proactively.\n\nSix letters down, nineteen to go. Let’s keep climbing! ✈️🔥",
-    "published_relative": "5 months ago",
-    "published_date": "2026-03-08",
-    "url": "https://www.youtube.com/post/Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
-    "likes": "1",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/P_kphVDnsrTPOvnjhy17Xej5yBTLDcaamQOSY4Mi4No3XkSYkU0NPVvUlx2mXdvoWAukq5rANWwdqg=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-08-05T19:39:48.102242Z"
-  },
-  {
     "id": "UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
     "text": "✈️ Episode 9: “I” is for ILS! ✈️\n\nEver wondered how pilots land when they can’t even see the nose of their own plane? Next Tuesday in our MSFS A‑Z series, we’re tackling one of the most important tools in real-world IFR flying: ILS - the Instrument Landing System.\n\nIt’s the gold standard of precision approaches. And in Microsoft Flight Simulator 2024, it’s also one of the most satisfying skills you can master because once you understand the needles, foggy days stop being scary and start being predictable.\n\n🗺️ What’s on the approach plate for next Tuesday the 3rd of March:\n\n\n📐 ILS, explained visually (no fluff):\nWe break down how ILS gives you two critical cues—horizontal and vertical—so you’re lined up and descending correctly 🎯⬇️\n\n📡 The two beams you must understand:\n➡️ Localizer (LOC): keeps you centered on the runway 🛣️\n⬇️ Glideslope (GS): guides your descent path (usually 3°) so you’re not too high… and not too low ⚖️\n\n🖥️ Cockpit view: reading the “needles” like a pro:\nYou’ll see the LOC and GS diamonds and learn the rule that makes it click instantly:\n\n👉 “Fly toward the needle.”\nNeedle above you? You’re low ⬆️\nNeedle left? You’re right ⬅️\nSimple. Powerful. 💡\n\n\n🛩️ MSFS 2024 Demo #1 — GA ILS (Cessna 172 G1000):\nTune NAV1, set CDI to LOC1, intercept at ~30°, hit APR, and watch the magic ✨\nFirst LOC capture, then GS, then a smooth, stable descent 🧘‍♂️\n\n✈️🤖 MSFS 2024 Demo #2 — Airliner Auto‑Land (Airbus A320neo):\nFrom selecting the ILS in the Flight Plan, pressing LS, engaging APPR, and finally capturing Cat III beams 📶\nWith AP1 + AP2 on, the A320 can fly itself all the way to the flare 😮🛬\n\n🧠 Why ILS changes everything:\nWhen visibility disappears, ILS turns chaos into math 📊\nMaster needle tracking, and low‑vis approaches become calm, repeatable, and safe ✅",
     "published_relative": "5 months ago",
-    "published_date": "2026-03-08",
+    "published_date": "2026-03-09",
     "url": "https://www.youtube.com/post/UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
     "likes": "1",
     "comments": "0",
@@ -27,7 +12,123 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-05T19:39:48.102225Z"
+    "scraped_at": "2026-08-06T02:50:45.504657Z"
+  },
+  {
+    "id": "UgkxtwM4nhAIqt_HYgidk66K31VJpkTMwYoN",
+    "text": "In MSFS 2024, if you’re performing a Cold & Dark start in the new A320neo (v2) and your EFB won’t power on, what is the most likely \"sim-accurate\" reason?",
+    "published_relative": "5 months ago",
+    "published_date": "2026-03-09",
+    "url": "https://www.youtube.com/post/UgkxtwM4nhAIqt_HYgidk66K31VJpkTMwYoN",
+    "likes": "19",
+    "comments": "4",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-08-06T02:50:45.504643Z"
+  },
+  {
+    "id": "UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
+    "text": "🇸🇪🇺🇸 Incoming: The Saab 340 Mastery Series begins today!\n\nThe wait is almost over. Today at 17:00 (CET), we officially launch our deep-dive series into the Saab 340 for Microsoft Flight Simulator 2024.\n\nThis aircraft is a masterpiece of regional aviation, but it isn't your average turboprop. It’s a machine born from a unique partnership between Saab and Fairchild, utilizing military engineering techniques usually reserved for fighter jets.\n\nIn today’s series premiere, we’re covering:\n\n- The Transatlantic Alliance: Why this partnership was a gamble that defined the regional market .\n- Military DNA: How techniques from the JAS 39 Gripen, like rivetless diffusion bonding, changed everything .\n- The First Flight: Reliving the 1983 certification journey of the SF340 .The \"Frozen Controls\" \n- Fix: We troubleshoot the infamous Gust Lock so you can actually get off the ramp! \n\nIf you want to transition from a novice to a proficient operator of this Swedish-American hybrid, this is your starting point.Set your reminders for 17:00 CET!\n\nPoll: Which era of the Saab 340 are you most excited to fly?\n\n✈️ The 1980s \"SF340\" Golden Age\n🏔️ Modern-day regional hops (Loganair/REX)\n📦 Cargo & Freighter operationsSee you at the premiere!\n\n#MSFS2024 #Saab340 #FlightSim #Aviation #HighInTheFlightSimSky #ComingSoon",
+    "published_relative": "5 months ago",
+    "published_date": "2026-03-09",
+    "url": "https://www.youtube.com/post/UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
+    "likes": "3",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/IX3j9rwpksYlTAVmHhN2jy82hsHFtytdmWadVp1RLKSTN1hU3sdWAreuJoHFbvSiQrcb2WX0x4J5MYo=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-08-06T02:50:45.504632Z"
+  },
+  {
+    "id": "UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
+    "text": "A0423/26 - NOTICE TO ALL FLIGHT SIMULATORS / YOUTUBE SUBSCRIBERS\n\nQ) MSFS / QMSFS / AZ / SERIES / IV / / /\nA) YOUTUBE COMMUNITY TAB\nB) 2603191400\nC) 2603191700 EST\nE) FLIGHT UPDATE / DELAY NOTIFICATION:\n\nTHE LATEST EPISODE OF THE MSFS A-Z SERIES, \"THE ART OF TRIM,\" HAS BEEN TEMPORARILY GROUNDED DUE TO UNANTICIPATED AIRCRAFT MAINTENANCE.\n\nPRODUCTION CREWS ENCOUNTERED TECH ISSUES IN THE RENDERING BAY DURING FINAL INSPECTION OF THE DUAL LIVE-DEMONSTRATION SEGMENTS (CESSNA 172 GA PITCH-HOLD-TRIM AND ADVANCED AIRSPEED CONFIGURATIONS). TO ENSURE FULL COMPLIANCE WITH HIGH-QUALITY BROADCAST STANDARDS, THE VIDEO RELEASE IS DELAYED BY A FEW HOURS.\n\n- EXPECTED SECTIONS INBOUND:\n- THE HOOK & HANDS-OFF FLIGHT\n- CORE AERODYNAMICS (ELEVATOR VS. TRIM TAB)\n- THE GOLDEN RULE (PITCH, HOLD, TRIM)\n- DEMO: GA DEPARTURE\n- ADVANCED AIRSPEED & CONFIGURATION BALLOONING\n- DEMO: FLAP DEPLOYMENT & GLIDESLOPE MANAGEMENT\n- COMMERCIAL AIRLINER SYSTEMS (BOEING MANUAL VS. AIRBUS FBW)\n\nREVISED ESTIMATED TIME OF DEPARTURE (ETD) IS DELAYED BY APPROX 2-3 HOURS. WE APOLOGIZE FOR THE INCONVENIENCE TO YOUR FLIGHT PLANNING.\n\nPREPARE YOUR REFRESHMENTS, DECIDE IF YOU ARE TEAM BOEING OR TEAM AIRBUS IN THE COMMENTS UPON ARRIVAL, AND STAND BY FOR TAXI.\n\nF) SURFACE\nG) FLIGHT LEVEL HIGH",
+    "published_relative": "2 months ago",
+    "published_date": "2026-06-07",
+    "url": "https://www.youtube.com/post/UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
+    "likes": "3",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-08-06T02:50:45.504615Z"
+  },
+  {
+    "id": "Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
+    "text": "Episode 6: \"F\" is for Flight Director! 🎯\n\nThe Alphabet Challenge marches on — and today we’re tackling one of the most misunderstood tools in the cockpit.\n\nEver felt like the airplane was whispering instructions you couldn’t quite decode? That’s the Flight Director: the “ghost in the cockpit” guiding you toward professional, razor‑sharp flying. Whether you’re hand‑flying a SID in the 737 or following a GPS track in the G1000, mastering the FD is the key to flying with intention instead of reaction.\n\nTomorrow at 17:00 UTC+1, we’re pulling back the curtain on those magenta bars and showing you how to turn them into your best friend in the sky.\n\nWhat we’re covering:\n\n- The Logic Behind the Bars: What the FD is actually telling you.\n- FD vs Autopilot: Why one thinks and the other acts.\n- Aircraft Differences: V‑bars in the G1000, crosshairs in the 737, magenta magic in the A320.\n- Common Mistakes: How to stop “chasing the ghost” and start flying proactively.\n\nSix letters down, nineteen to go. Let’s keep climbing! ✈️🔥",
+    "published_relative": "5 months ago",
+    "published_date": "2026-03-09",
+    "url": "https://www.youtube.com/post/Ugkxv8ldVGFIK6bkuhgyDN5EUsQ5j-GA6x4T",
+    "likes": "1",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/P_kphVDnsrTPOvnjhy17Xej5yBTLDcaamQOSY4Mi4No3XkSYkU0NPVvUlx2mXdvoWAukq5rANWwdqg=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-08-06T02:50:45.504603Z"
+  },
+  {
+    "id": "Ugkx2PjK6-XnqFTtTYUbj8PS_05OZCGRrgnA",
+    "text": "The Final Flight is almost here! 🏁✈️\n\nWe’ve spent the last few weeks mastering the Pilatus PC-12 NGX, from the high-altitude peaks of Courchevel to the complex Honeywell systems. Today, we bring it all home.\n\nThe Flight Ops II Series Finale drops in just a few hours! We’re tackling the descent into Perpignan, fixing those pesky FMS discontinuities, and walking through the proper way to shut down the PT6 turbine to keep it in the green.\n\nBut as one door closes, another opens... I need your help deciding our next Masterclass aircraft for MSFS 2024. 🗳️\n\nOnce you've watched the finale, head to the pinned comment on the video to cast your vote for our next series:\n\n\n1️⃣ Beechcraft C90 GTX King Air\n2️⃣ Cessna 408 SkyCourier\n3️⃣ Cirrus Vision SF50 (Vision Jet)\n4️⃣ [Your Suggestion] — Is there another MSFS 2024 bird you’re struggling with?\n\nSee you on the flight deck in a couple of hours!",
+    "published_relative": "5 months ago",
+    "published_date": "2026-03-09",
+    "url": "https://www.youtube.com/post/Ugkx2PjK6-XnqFTtTYUbj8PS_05OZCGRrgnA",
+    "likes": "3",
+    "comments": "2",
+    "images": [
+      "https://yt3.ggpht.com/9JorMfkTDcyAFpW9tM8zmCADP5xDWQAmvi6aLKGVEVjhyylgT4bVmft4tWZLPLtgd5JcJhH_RX4o4Q=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-08-06T02:50:45.504589Z"
+  },
+  {
+    "id": "Ugkx0qMtNPkCBvzjXPMoUfqYVStQTeN6cTnm",
+    "text": "Episode 7: “G” is for GO‑AROUND — The Maneuver of Champions. 🔥✈️\n\nThe best pilots aren’t the ones who \"stick\" every landing; they’re the ones who know when to say NOPE, push the power forward, and live to fly another lap.\n\nIf you’ve ever forced a landing because you were \"already there,\" this episode is your wake-up call. We’re breaking down the physics and the \"Get Out of Jail Free\" card that every pro swears by.\n\nWhat’s on the Flight Plan:\n\n🧠 The Psychology: Why a Go-Around is a sign of discipline, not failure.\n\n🎯 The \"Gate\" System: Stabilized Approach criteria for IMC (1,000ft) vs VFR (500ft).\n\n🛩️ Cessna vs. Airbus: From manual pitch-up chaos to TO/GA automation magic.\n\n⚠️ The Nightmare: What happens when an engine fails during the climb-out?\n\nStep-By-Step Demo:\nWe’ll execute a full Go-Around from 200ft, showing you exactly how to manage Power → Pitch → Flaps → Gear without losing your cool.\n\n📅 Premieres tomorrow at 17:00 UTC+1.\n\nSeven letters down, nineteen to go. Let’s keep climbing! ✈️🔥",
+    "published_relative": "5 months ago (edited)",
+    "published_date": "2026-03-09",
+    "url": "https://www.youtube.com/post/Ugkx0qMtNPkCBvzjXPMoUfqYVStQTeN6cTnm",
+    "likes": "2",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/WRTQ5PWzS_Wm4b_FKokSLnKf9pkJFosrGoToOj-LYAMfJQCSUucHbsHLxFTmLXPm_ARBEPq3xb7xxjw=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-08-06T02:50:45.504517Z"
+  },
+  {
+    "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
+    "text": "World Update 22: United States National Parks available!\nLooks like someone pushed the release button to early, wasn't this scheduled to be released on the 4th of July?",
+    "published_relative": "1 month ago",
+    "published_date": "2026-07-07",
+    "url": "https://www.youtube.com/post/UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
+    "likes": "8",
+    "comments": "2",
+    "images": [
+      "https://yt3.ggpht.com/Jca4NmdUzDyoemPRDXQXm-t5qasMawuSv4YcXIRuSk5eEBeSuoSr5QQs_mVu5FcJvuO0zIz9X1i01g=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-08-06T02:50:45.504500Z"
+  },
+  {
+    "id": "UgkxjdL_Be56SGPfhYH8QyuVfe1DR_1qNDFj",
+    "text": "🚀 Switching to VR in MSFS: The 7-Day Challenge! 🥽✈️\nEver wondered if Virtual Reality can truly replace your monitors for flight simulation? I’m putting it to the ultimate test with the Pimax Crystal Light over a 7-day challenge—testing setup, performance, aircraft demos, and real flight deck experience in MSFS 2024!\nHere’s where we are in the series so far:\n\n▶️ Part 1: Setup & First Flight (First 48 Hours)\nIf you missed it, check out my initial hands-on setup, first impressions, and whether the Crystal Light can stand up against traditional displays:\n👉 https://youtu.be/_VxcD0S0YXI\n🔥 Part 2: VR Hacks & Overcoming Challenges (96 Hours In) — Releasing Later Today! (21:00 CET)\nVR isn’t always smooth sailing out of the box. In today’s episode, I cover the main challenges I hit, how I fixed them, and the essential tweaks that saved my flight deck:\n👉 https://youtu.be/o2jQ7OgkG9E\n\nDrop a comment on the videos and let me know your thoughts, are you flying in VR yet, or are you holding out for monitors? Clear skies! 🌤️",
+    "published_relative": "13 days ago",
+    "published_date": "2026-07-24",
+    "url": "https://www.youtube.com/post/UgkxjdL_Be56SGPfhYH8QyuVfe1DR_1qNDFj",
+    "likes": "1",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/wi19QeG82O8WwRPLhForTCuMu1m1VtxPVxf35e6S5ceV5SHUUdYOHJgtXgoNyA7jR0XmgEyeuvtsfg=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-08-06T02:50:45.504477Z"
   },
   {
     "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
@@ -43,49 +144,6 @@
     "scraped_at": "2026-08-05T19:39:48.102156Z"
   },
   {
-    "id": "UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
-    "text": "🇸🇪🇺🇸 Incoming: The Saab 340 Mastery Series begins today!\n\nThe wait is almost over. Today at 17:00 (CET), we officially launch our deep-dive series into the Saab 340 for Microsoft Flight Simulator 2024.\n\nThis aircraft is a masterpiece of regional aviation, but it isn't your average turboprop. It’s a machine born from a unique partnership between Saab and Fairchild, utilizing military engineering techniques usually reserved for fighter jets.\n\nIn today’s series premiere, we’re covering:\n\n- The Transatlantic Alliance: Why this partnership was a gamble that defined the regional market .\n- Military DNA: How techniques from the JAS 39 Gripen, like rivetless diffusion bonding, changed everything .\n- The First Flight: Reliving the 1983 certification journey of the SF340 .The \"Frozen Controls\" \n- Fix: We troubleshoot the infamous Gust Lock so you can actually get off the ramp! \n\nIf you want to transition from a novice to a proficient operator of this Swedish-American hybrid, this is your starting point.Set your reminders for 17:00 CET!\n\nPoll: Which era of the Saab 340 are you most excited to fly?\n\n✈️ The 1980s \"SF340\" Golden Age\n🏔️ Modern-day regional hops (Loganair/REX)\n📦 Cargo & Freighter operationsSee you at the premiere!\n\n#MSFS2024 #Saab340 #FlightSim #Aviation #HighInTheFlightSimSky #ComingSoon",
-    "published_relative": "5 months ago",
-    "published_date": "2026-03-08",
-    "url": "https://www.youtube.com/post/UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
-    "likes": "3",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/IX3j9rwpksYlTAVmHhN2jy82hsHFtytdmWadVp1RLKSTN1hU3sdWAreuJoHFbvSiQrcb2WX0x4J5MYo=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-08-05T19:39:48.102141Z"
-  },
-  {
-    "id": "UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
-    "text": "A0423/26 - NOTICE TO ALL FLIGHT SIMULATORS / YOUTUBE SUBSCRIBERS\n\nQ) MSFS / QMSFS / AZ / SERIES / IV / / /\nA) YOUTUBE COMMUNITY TAB\nB) 2603191400\nC) 2603191700 EST\nE) FLIGHT UPDATE / DELAY NOTIFICATION:\n\nTHE LATEST EPISODE OF THE MSFS A-Z SERIES, \"THE ART OF TRIM,\" HAS BEEN TEMPORARILY GROUNDED DUE TO UNANTICIPATED AIRCRAFT MAINTENANCE.\n\nPRODUCTION CREWS ENCOUNTERED TECH ISSUES IN THE RENDERING BAY DURING FINAL INSPECTION OF THE DUAL LIVE-DEMONSTRATION SEGMENTS (CESSNA 172 GA PITCH-HOLD-TRIM AND ADVANCED AIRSPEED CONFIGURATIONS). TO ENSURE FULL COMPLIANCE WITH HIGH-QUALITY BROADCAST STANDARDS, THE VIDEO RELEASE IS DELAYED BY A FEW HOURS.\n\n- EXPECTED SECTIONS INBOUND:\n- THE HOOK & HANDS-OFF FLIGHT\n- CORE AERODYNAMICS (ELEVATOR VS. TRIM TAB)\n- THE GOLDEN RULE (PITCH, HOLD, TRIM)\n- DEMO: GA DEPARTURE\n- ADVANCED AIRSPEED & CONFIGURATION BALLOONING\n- DEMO: FLAP DEPLOYMENT & GLIDESLOPE MANAGEMENT\n- COMMERCIAL AIRLINER SYSTEMS (BOEING MANUAL VS. AIRBUS FBW)\n\nREVISED ESTIMATED TIME OF DEPARTURE (ETD) IS DELAYED BY APPROX 2-3 HOURS. WE APOLOGIZE FOR THE INCONVENIENCE TO YOUR FLIGHT PLANNING.\n\nPREPARE YOUR REFRESHMENTS, DECIDE IF YOU ARE TEAM BOEING OR TEAM AIRBUS IN THE COMMENTS UPON ARRIVAL, AND STAND BY FOR TAXI.\n\nF) SURFACE\nG) FLIGHT LEVEL HIGH",
-    "published_relative": "2 months ago",
-    "published_date": "2026-06-06",
-    "url": "https://www.youtube.com/post/UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
-    "likes": "3",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-08-05T19:39:48.102120Z"
-  },
-  {
-    "id": "UgkxjdL_Be56SGPfhYH8QyuVfe1DR_1qNDFj",
-    "text": "🚀 Switching to VR in MSFS: The 7-Day Challenge! 🥽✈️\nEver wondered if Virtual Reality can truly replace your monitors for flight simulation? I’m putting it to the ultimate test with the Pimax Crystal Light over a 7-day challenge—testing setup, performance, aircraft demos, and real flight deck experience in MSFS 2024!\nHere’s where we are in the series so far:\n\n▶️ Part 1: Setup & First Flight (First 48 Hours)\nIf you missed it, check out my initial hands-on setup, first impressions, and whether the Crystal Light can stand up against traditional displays:\n👉 https://youtu.be/_VxcD0S0YXI\n🔥 Part 2: VR Hacks & Overcoming Challenges (96 Hours In) — Releasing Later Today! (21:00 CET)\nVR isn’t always smooth sailing out of the box. In today’s episode, I cover the main challenges I hit, how I fixed them, and the essential tweaks that saved my flight deck:\n👉 https://youtu.be/o2jQ7OgkG9E\n\nDrop a comment on the videos and let me know your thoughts, are you flying in VR yet, or are you holding out for monitors? Clear skies! 🌤️",
-    "published_relative": "12 days ago",
-    "published_date": "2026-07-24",
-    "url": "https://www.youtube.com/post/UgkxjdL_Be56SGPfhYH8QyuVfe1DR_1qNDFj",
-    "likes": "1",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/wi19QeG82O8WwRPLhForTCuMu1m1VtxPVxf35e6S5ceV5SHUUdYOHJgtXgoNyA7jR0XmgEyeuvtsfg=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-08-05T19:39:48.102104Z"
-  },
-  {
     "id": "UgkxVgvjZwI4Dz7WiOwqej2K1G93EzdeQt3E",
     "text": "⚠️ NOTAM: Saab 340 Departure Delay – Episode 4\n\nTo: All Virtual Aviators & Saab Enthusiasts\n\nFrom: The Flight Deck\n\nSubject: Ground Stop on Episode 4 – \"Beyond the Engines\"\n\nAttention all crew, we’ve hit a bit of a snag during the pre-flight inspection for our next installment. While we were hoping to \"rotate\" into your feeds today, the tower has issued a temporary ground stop.\n\nIt turns out that managing the Saab 340 is a bit like the aircraft itself: rugged, reliable, but occasionally prone to a stubborn warning light that refuses to go out. We’re currently troubleshooting some technical \"gremlins\" in the editing suite to ensure your experience is smooth sailing (and not a gear-up landing).\n\nWhat’s Waiting at the Gate?\nDon’t unfasten your seatbelts just yet. \nEpisode 4: Beyond the Engines is going to be a deep dive into the guts of this Swedish masterpiece. We’ll be covering:\n\n- Hydraulics: Learning how to keep the pressure up so your gear actually goes down.\n- Electrics: Navigating the bus ties without blowing a fuse (literally or figuratively).\n- The Infamous Gust Lock: The #1 reason pilots try to taxi and end up looking like they’ve forgotten how to move their arms. We’ll show you how to unlock your controls before you embarrass yourself in front of Ground Control.\n\nRevised Flight Plan\nWe are currently \"holding short\" of the runway, but we expect to be Clear for Takeoff within the next 2 days.\n\nPilot’s Note: \"A delayed video is eventually good, but a rushed video is forever stuck in the hangar with a broken flap motor.\" - Management (probably).\n\nWe appreciate your patience while we cycle the breakers and get this bird back in the air. Stay tuned, keep your airspeeds up, and we’ll see you in the cockpit very soon!",
     "published_relative": "4 months ago",
@@ -99,64 +157,6 @@
     "video_id": null,
     "poll": null,
     "scraped_at": "2026-08-05T19:39:48.102060Z"
-  },
-  {
-    "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
-    "text": "World Update 22: United States National Parks available!\nLooks like someone pushed the release button to early, wasn't this scheduled to be released on the 4th of July?",
-    "published_relative": "1 month ago",
-    "published_date": "2026-07-06",
-    "url": "https://www.youtube.com/post/UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
-    "likes": "8",
-    "comments": "2",
-    "images": [
-      "https://yt3.ggpht.com/Jca4NmdUzDyoemPRDXQXm-t5qasMawuSv4YcXIRuSk5eEBeSuoSr5QQs_mVu5FcJvuO0zIz9X1i01g=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-08-05T19:39:48.102033Z"
-  },
-  {
-    "id": "Ugkx2PjK6-XnqFTtTYUbj8PS_05OZCGRrgnA",
-    "text": "The Final Flight is almost here! 🏁✈️\n\nWe’ve spent the last few weeks mastering the Pilatus PC-12 NGX, from the high-altitude peaks of Courchevel to the complex Honeywell systems. Today, we bring it all home.\n\nThe Flight Ops II Series Finale drops in just a few hours! We’re tackling the descent into Perpignan, fixing those pesky FMS discontinuities, and walking through the proper way to shut down the PT6 turbine to keep it in the green.\n\nBut as one door closes, another opens... I need your help deciding our next Masterclass aircraft for MSFS 2024. 🗳️\n\nOnce you've watched the finale, head to the pinned comment on the video to cast your vote for our next series:\n\n\n1️⃣ Beechcraft C90 GTX King Air\n2️⃣ Cessna 408 SkyCourier\n3️⃣ Cirrus Vision SF50 (Vision Jet)\n4️⃣ [Your Suggestion] — Is there another MSFS 2024 bird you’re struggling with?\n\nSee you on the flight deck in a couple of hours!",
-    "published_relative": "5 months ago",
-    "published_date": "2026-03-08",
-    "url": "https://www.youtube.com/post/Ugkx2PjK6-XnqFTtTYUbj8PS_05OZCGRrgnA",
-    "likes": "3",
-    "comments": "2",
-    "images": [
-      "https://yt3.ggpht.com/9JorMfkTDcyAFpW9tM8zmCADP5xDWQAmvi6aLKGVEVjhyylgT4bVmft4tWZLPLtgd5JcJhH_RX4o4Q=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-08-05T14:17:21.286985Z"
-  },
-  {
-    "id": "Ugkx0qMtNPkCBvzjXPMoUfqYVStQTeN6cTnm",
-    "text": "Episode 7: “G” is for GO‑AROUND — The Maneuver of Champions. 🔥✈️\n\nThe best pilots aren’t the ones who \"stick\" every landing; they’re the ones who know when to say NOPE, push the power forward, and live to fly another lap.\n\nIf you’ve ever forced a landing because you were \"already there,\" this episode is your wake-up call. We’re breaking down the physics and the \"Get Out of Jail Free\" card that every pro swears by.\n\nWhat’s on the Flight Plan:\n\n🧠 The Psychology: Why a Go-Around is a sign of discipline, not failure.\n\n🎯 The \"Gate\" System: Stabilized Approach criteria for IMC (1,000ft) vs VFR (500ft).\n\n🛩️ Cessna vs. Airbus: From manual pitch-up chaos to TO/GA automation magic.\n\n⚠️ The Nightmare: What happens when an engine fails during the climb-out?\n\nStep-By-Step Demo:\nWe’ll execute a full Go-Around from 200ft, showing you exactly how to manage Power → Pitch → Flaps → Gear without losing your cool.\n\n📅 Premieres tomorrow at 17:00 UTC+1.\n\nSeven letters down, nineteen to go. Let’s keep climbing! ✈️🔥",
-    "published_relative": "5 months ago (edited)",
-    "published_date": "2026-03-08",
-    "url": "https://www.youtube.com/post/Ugkx0qMtNPkCBvzjXPMoUfqYVStQTeN6cTnm",
-    "likes": "2",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/WRTQ5PWzS_Wm4b_FKokSLnKf9pkJFosrGoToOj-LYAMfJQCSUucHbsHLxFTmLXPm_ARBEPq3xb7xxjw=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-08-05T14:17:21.286918Z"
-  },
-  {
-    "id": "UgkxtwM4nhAIqt_HYgidk66K31VJpkTMwYoN",
-    "text": "In MSFS 2024, if you’re performing a Cold & Dark start in the new A320neo (v2) and your EFB won’t power on, what is the most likely \"sim-accurate\" reason?",
-    "published_relative": "5 months ago",
-    "published_date": "2026-03-08",
-    "url": "https://www.youtube.com/post/UgkxtwM4nhAIqt_HYgidk66K31VJpkTMwYoN",
-    "likes": "19",
-    "comments": "4",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-08-05T02:47:50.863958Z"
   },
   {
     "id": "Ugkx3F1Gj310_U0d0GSCTwh8JyZ0uFWTKlB1",
