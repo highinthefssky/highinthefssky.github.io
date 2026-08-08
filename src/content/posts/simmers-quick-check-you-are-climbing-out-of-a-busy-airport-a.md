@@ -17,4 +17,4 @@ Ever wondered why flying on local QNH at high altitudes can lead to dangerous al
 Watch the full guide here: https://youtu.be/6nKqRSDbzyE
 
 Original post: https://www.youtube.com/post/UgkxQ1Vl0oNoEwWlAQa_ZiPlh3L62jvxKCKT
-Likes: 0 | Comments: 0
+Likes: 1 | Comments: 0
