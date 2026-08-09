@@ -1,7 +1,7 @@
 ---
 title: "Hi all,"
 description: "Hi all,  For years I have used the logo which you can currently see in the profile which is a jet engine. I am currently doing some investigation to see if it i"
-publishedAt: 2026-08-07
+publishedAt: 2026-08-08
 tags: ["community", "youtube"]
 draft: false
 ---
