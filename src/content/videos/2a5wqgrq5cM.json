@@ -1,0 +1,31 @@
+{
+  "videoId": "2a5wqgrq5cM",
+  "title": "WinWing Vibration & FFB Guide: SimAppPro & Community Tools (MSFS 2024/2020)",
+  "description": "For years, experiencing realistic haptic telemetry and tactile vibration in flight simulation meant settling for generic, static rumble or spending hours tweaking complex configs. WinWing’s default vibration profiles offer a decent starting point, but in under 10 minutes, you can turn your joystick into an active tactical instrument that warns you before your wings lose lift.\n\nIn this step-by-step haptic setup guide, we dive deep into customizing WinWing vibration profiles for both Microsoft Flight Simulator 2020 and MSFS 2024. We break down the 3-panel workflow in SimAppPro—from configuring True Airspeed (TAS) curves to fine-tuning positional landing gear haptics, angle of attack (AOA) stall warnings, and touchdown impacts.\n\nWe also explore powerful third-party community alternatives like Ursa Minor FFB and Aurora Vibra—showing you how live SimConnect telemetry data can unlock effortless preset profiles for Airbus, General Aviation, and Fighter jets without manual curve editing. Stick around until the end to grab custom pre-built vibration profiles for the Airbus A320, A321, A330, Beluga, and A380!\n\n📥 Download my custom MSFS WinWing Control Profiles: https://highintheflightsimsky.nl/controllers/\n\nIf this configuration guide helps you optimize your flight stick haptics and improve stall awareness, please hit that like button and subscribe for more technical flight simulation analysis! Drop your questions about SimAppPro or custom curves down in the comments below!\n\n📖 Chapters\n00:00 - Intro\n00:32 - The 3-panel workflow & master parameters\n09:45 - Community Tools\n\n🔔 Subscribe\nIf you like this video please consider to subscribe to my channel: https://bit.ly/34eNWDP\n\n#MSFS2024 #FlightSimulator #WinWing #ForceFeedback #AviationHardware #SimAppPro #UrsaMinorFFB #FlightSim",
+  "thumbnail": "https://i.ytimg.com/vi/2a5wqgrq5cM/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/2a5wqgrq5cM/mqdefault.jpg",
+  "publishedAt": "2026-08-13T18:00:37.000Z",
+  "duration": 879,
+  "viewCount": 67,
+  "tags": [
+    "WinWing MSFS 2024",
+    "WinWing vibration profile",
+    "SimAppPro tutorial",
+    "WinWing Ursa Minor FFB",
+    "WinWing dynamic vibration motor",
+    "Ursa Minor FFB tool",
+    "Aurora Vibra MSFS",
+    "WinWing Airbus A320 profile",
+    "MSFS 2024 hardware setup",
+    "WinWing joystick vibration settings",
+    "Fenix A320 WinWing profile",
+    "MSFS telemetry haptics",
+    "MSFS angle of attack vibration",
+    "SimConnect telemetry FFB",
+    "WinWing throttle rumble",
+    "MSFS 2020 WinWing setup",
+    "flight simulator force feedback guide",
+    "winwing ursa minor"
+  ],
+  "featured": false
+}
