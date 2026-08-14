@@ -1,7 +1,7 @@
 ---
 title: "🛫 Simmer's Quick Check: You are climbing out of a busy airport and just passed t"
 description: "🛫 Simmer's Quick Check: You are climbing out of a busy airport and just passed the local Transition Altitude (TA). Your altimeter is currently set to the local"
-publishedAt: 2026-08-08
+publishedAt: 2026-08-07
 tags: ["community", "youtube"]
 draft: false
 ---
