@@ -21,7 +21,7 @@ draft: false
 ​📺 Watch the full breakdown in action: https://youtu.be/1srGO9HEXs8
 
 Original post: https://www.youtube.com/post/UgkxyqxF1qH8dUsnFFkDGje_0wY9E156J8ot
-Likes: 0 | Comments: 0
+Likes: 1 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/N7mJ1REB4XqQjEjMy784m4Yw-2RTLtKHy_kgf2ilEQIshtcYGghawFAE2GLHOUAbMIG1xMGmwglnyuw=s1280)
