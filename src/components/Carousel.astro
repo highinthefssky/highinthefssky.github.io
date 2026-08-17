@@ -19,7 +19,12 @@ const latestVideos = videos
       latestVideos.length > 0 ? (
         <div class="carousel-slides">
           {latestVideos.map((video, index) => (
-            <div class="carousel-slide" data-index={index}>
+            <div
+              class="carousel-slide"
+              data-index={index}
+              aria-hidden={index === 0 ? 'false' : 'true'}
+              inert={index === 0 ? undefined : true}
+            >
               <a href={`/videos/${video.data.videoId}/`} class="slide-link">
                 <img
                   src={video.data.thumbnail}
@@ -33,7 +38,7 @@ const latestVideos = videos
                 <YouTubeBrandFeature className="slide-brand" />
                 <div class="slide-overlay">
                   <h3 class="slide-title">{video.data.title}</h3>
-                  <button class="play-button">
+                  <span class="play-button" aria-hidden="true">
                     <svg
                       class="play-icon"
                       viewBox="0 0 24 24"
@@ -41,7 +46,7 @@ const latestVideos = videos
                     >
                       <path d="M8 5v14l11-7z" />
                     </svg>
-                  </button>
+                  </span>
                 </div>
               </a>
             </div>
@@ -70,6 +75,9 @@ const latestVideos = videos
         </div>
         <button class="carousel-btn carousel-next" aria-label="Next slide">
           &#10095;
+        </button>
+        <button class="carousel-btn carousel-autoplay" aria-label="Pause carousel" title="Pause carousel">
+          <span aria-hidden="true">&#10074;&#10074;</span>
         </button>
       </div>
     )}
@@ -255,21 +263,44 @@ const latestVideos = videos
   }
 
   .carousel-dot {
-    background: rgba(255, 255, 255, 0.5);
+    position: relative;
+    background: transparent;
     border: none;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .carousel-dot::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
     transition: background 0.3s ease;
   }
 
-  .carousel-dot.active {
+  .carousel-dot.active::before {
     background: rgba(255, 255, 255, 1);
   }
 
-  .carousel-dot:hover {
+  .carousel-dot:hover::before {
     background: rgba(255, 255, 255, 0.8);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .carousel-slide,
+    .slide-overlay,
+    .play-button,
+    .carousel-dot::before {
+      transition: none;
+    }
   }
 
   @media (max-width: 768px) {
@@ -294,6 +325,11 @@ const latestVideos = videos
     }
 
     .carousel-dot {
+      width: 24px;
+      height: 24px;
+    }
+
+    .carousel-dot::before {
       width: 8px;
       height: 8px;
     }
@@ -308,17 +344,35 @@ const latestVideos = videos
       const slides = carousel.querySelectorAll('.carousel-slide');
       const prevBtn = carousel.querySelector('.carousel-prev');
       const nextBtn = carousel.querySelector('.carousel-next');
+      const autoplayBtn = carousel.querySelector('.carousel-autoplay');
       const dots = carousel.querySelectorAll('.carousel-dot');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       let currentIndex = 0;
       let autoplayInterval = null;
+      let isPaused = prefersReducedMotion || !autoplay;
+
+      const updateAutoplayButton = () => {
+        if (!autoplayBtn) return;
+        autoplayBtn.setAttribute('aria-label', isPaused ? 'Play carousel' : 'Pause carousel');
+        autoplayBtn.setAttribute('title', isPaused ? 'Play carousel' : 'Pause carousel');
+        const icon = autoplayBtn.querySelector('span');
+        if (icon) icon.textContent = isPaused ? '▶' : '❚❚';
+      };
 
       const showSlide = (index) => {
         slides.forEach((slide, i) => {
           slide.classList.toggle('active', i === index);
+          slide.setAttribute('aria-hidden', String(i !== index));
+          slide.toggleAttribute('inert', i !== index);
         });
         dots.forEach((dot, i) => {
           dot.classList.toggle('active', i === index);
+          if (i === index) {
+            dot.setAttribute('aria-current', 'true');
+          } else {
+            dot.removeAttribute('aria-current');
+          }
         });
         currentIndex = index;
       };
@@ -332,7 +386,7 @@ const latestVideos = videos
       };
 
       const startAutoplay = () => {
-        if (autoplay && slides.length > 1) {
+        if (autoplay && !isPaused && slides.length > 1) {
           autoplayInterval = setInterval(nextSlide, 5000);
         }
       };
@@ -356,6 +410,13 @@ const latestVideos = videos
         startAutoplay();
       });
 
+      autoplayBtn?.addEventListener('click', () => {
+        isPaused = !isPaused;
+        stopAutoplay();
+        updateAutoplayButton();
+        if (!isPaused) startAutoplay();
+      });
+
       dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
           showSlide(index);
@@ -366,7 +427,11 @@ const latestVideos = videos
 
       carousel.addEventListener('mouseenter', stopAutoplay);
       carousel.addEventListener('mouseleave', startAutoplay);
+      carousel.addEventListener('focusin', stopAutoplay);
+      carousel.addEventListener('focusout', startAutoplay);
 
+      showSlide(0);
+      updateAutoplayButton();
       startAutoplay();
     });
   });

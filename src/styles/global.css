@@ -35,7 +35,7 @@
     --text-heading: #e6efff;
     --text-secondary: #94a3b8;
     --text-muted: #9fb6d5;
-    --text-input-placeholder: #6b8cb3;
+    --text-input-placeholder: #7898bd;
     --text-card: #1f2937;
     --text-card-secondary: #6b7280;
     --text-card-desc: #4b5563;
@@ -81,15 +81,15 @@
 
     --text-primary: #1e293b;
     --text-heading: #0f172a;
-    --text-secondary: #64748b;
+    --text-secondary: #475569;
     --text-muted: #475569;
-    --text-input-placeholder: #94a3b8;
+    --text-input-placeholder: #64748b;
     --text-card: #1f2937;
     --text-card-secondary: #6b7280;
     --text-card-desc: #4b5563;
 
-    --accent: #0284c7;
-    --accent-hover: #0369a1;
+    --accent: #0369a1;
+    --accent-hover: #075985;
     --accent-solid: #0ea5e9;
 
     --tag-bg: #f1f5f9;

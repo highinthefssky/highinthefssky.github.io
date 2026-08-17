@@ -34,15 +34,18 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
 
     <div class="search-controls">
       <div class="search-box">
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Search videos (e.g. title:landing, description:IFR, navigation tutorial)"
-          class="search-input"
-          autocomplete="off"
-        />
-        <kbd class="search-kbd-hint" title="Press / to focus">/</kbd>
-        <span class="search-icon">🔍</span>
+        <label class="search-label" for="search-input">Search videos</label>
+        <div class="search-input-wrap">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search videos (e.g. title:landing, description:IFR, navigation tutorial)"
+            class="search-input"
+            autocomplete="off"
+          />
+          <kbd class="search-kbd-hint" title="Press / to focus">/</kbd>
+          <span class="search-icon" aria-hidden="true">🔍</span>
+        </div>
       </div>
 
       <div class="filter-section">
@@ -51,6 +54,7 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
           <button id="toggle-tags" class="toggle-btn" type="button">▼</button>
         </div>
         <div class="tag-filter-container" id="tag-container" style="display: none;">
+          <label class="search-label" for="tag-search">Search video tags</label>
           <input
             type="text"
             id="tag-search"
@@ -145,8 +149,18 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
   }
 
   .search-box {
-    position: relative;
     margin-bottom: 2rem;
+  }
+
+  .search-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-heading);
+    font-weight: 600;
+  }
+
+  .search-input-wrap {
+    position: relative;
   }
 
   .search-input {

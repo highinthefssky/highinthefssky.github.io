@@ -402,6 +402,7 @@ const heroImage = sortedVideos[0]?.data.thumbnail;
     color: var(--text-muted);
     line-height: 1.6;
     margin-bottom: 0.75rem;
+    overflow-wrap: anywhere;
   }
 
   .read-more {
@@ -512,6 +513,10 @@ const heroImage = sortedVideos[0]?.data.thumbnail;
   }
 
   @media (max-width: 768px) {
+    .bento {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
     .hero {
       padding: 1rem 0.75rem 0;
     }
