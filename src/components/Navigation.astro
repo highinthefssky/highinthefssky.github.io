@@ -76,11 +76,14 @@ import ThemeToggle from './ThemeToggle.astro';
     links.forEach((link) => {
       const linkPath = link.getAttribute('data-link');
       link.classList.remove('active');
+      link.removeAttribute('aria-current');
       
       if (linkPath === '/' && currentPath === '/') {
         link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
       } else if (linkPath && linkPath !== '/' && currentPath.startsWith(linkPath)) {
         link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
         // If a dropdown item is active, also highlight the dropdown button
         if (link.classList.contains('dropdown-item')) {
           const dropdownBtn = document.querySelector('.dropdown-toggle');
@@ -104,10 +107,17 @@ import ThemeToggle from './ThemeToggle.astro';
   const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
   const mobileMenu = document.getElementById('primary-navigation');
 
-  function closeMobileMenu() {
+  function closeMobileMenu(restoreFocus = false) {
     mobileMenu?.classList.remove('mobile-open');
     mobileMenuToggle?.setAttribute('aria-expanded', 'false');
     mobileMenuToggle?.setAttribute('aria-label', 'Open navigation menu');
+    if (restoreFocus) mobileMenuToggle?.focus();
+  }
+
+  function closeDropdown(restoreFocus = false) {
+    dropdownMenu?.classList.remove('active');
+    dropdownBtn?.setAttribute('aria-expanded', 'false');
+    if (restoreFocus) dropdownBtn?.focus();
   }
 
   mobileMenuToggle?.addEventListener('click', () => {
@@ -123,7 +133,13 @@ import ThemeToggle from './ThemeToggle.astro';
   });
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeMobileMenu();
+    if (event.key !== 'Escape') return;
+
+    if (dropdownBtn?.getAttribute('aria-expanded') === 'true') {
+      closeDropdown(true);
+    } else if (mobileMenuToggle?.getAttribute('aria-expanded') === 'true') {
+      closeMobileMenu(true);
+    }
   });
   
   if (dropdownBtn && dropdownMenu) {
@@ -136,8 +152,7 @@ import ThemeToggle from './ThemeToggle.astro';
     // Close dropdown when clicking a link
     dropdownMenu.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
-        dropdownMenu.classList.remove('active');
-        dropdownBtn.setAttribute('aria-expanded', 'false');
+        closeDropdown();
       });
     });
 
@@ -145,8 +160,7 @@ import ThemeToggle from './ThemeToggle.astro';
     document.addEventListener('click', (e) => {
       const target = e.target;
       if (!(target instanceof Element) || !target.closest('.navbar-dropdown')) {
-        dropdownMenu.classList.remove('active');
-        dropdownBtn.setAttribute('aria-expanded', 'false');
+        closeDropdown();
       }
     });
   }
