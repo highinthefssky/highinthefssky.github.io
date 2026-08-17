@@ -5,10 +5,23 @@ import ThemeToggle from './ThemeToggle.astro';
 <nav class="navbar">
   <div class="navbar-container">
     <a href="/" class="navbar-logo">
-      High in the FlightSim Sky
+      <img src="/high-in-the-flightsim-sky-logo.PNG" alt="" width="48" height="48" />
+      <span>High in the FlightSim Sky</span>
     </a>
+    <button
+      class="mobile-menu-toggle"
+      id="mobile-menu-toggle"
+      type="button"
+      aria-controls="primary-navigation"
+      aria-expanded="false"
+      aria-label="Open navigation menu"
+    >
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </svg>
+    </button>
     <div class="navbar-right">
-    <ul class="navbar-menu">
+    <ul class="navbar-menu" id="primary-navigation">
       <li>
         <a href="/" class="navbar-link" data-link="/">Home</a>
       </li>
@@ -22,7 +35,7 @@ import ThemeToggle from './ThemeToggle.astro';
         <a href="/tracks" class="navbar-link" data-link="/tracks">Tracks <span class="beta-badge">Beta</span></a>
       </li>
       <li class="navbar-dropdown">
-        <button class="navbar-link dropdown-toggle" id="tools-dropdown-btn" type="button">
+        <button class="navbar-link dropdown-toggle" id="tools-dropdown-btn" type="button" aria-controls="tools-dropdown" aria-expanded="false">
           Tools & Resources
           <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="6 9 12 15 18 9"></polyline>
@@ -88,17 +101,43 @@ import ThemeToggle from './ThemeToggle.astro';
   // Dropdown menu functionality
   const dropdownBtn = document.getElementById('tools-dropdown-btn');
   const dropdownMenu = document.getElementById('tools-dropdown');
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('primary-navigation');
+
+  function closeMobileMenu() {
+    mobileMenu?.classList.remove('mobile-open');
+    mobileMenuToggle?.setAttribute('aria-expanded', 'false');
+    mobileMenuToggle?.setAttribute('aria-label', 'Open navigation menu');
+  }
+
+  mobileMenuToggle?.addEventListener('click', () => {
+    const isOpen = mobileMenu?.classList.toggle('mobile-open') ?? false;
+    mobileMenuToggle.setAttribute('aria-expanded', String(isOpen));
+    mobileMenuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+  });
+
+  mobileMenu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.matchMedia('(max-width: 1100px)').matches) closeMobileMenu();
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMobileMenu();
+  });
   
   if (dropdownBtn && dropdownMenu) {
     dropdownBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      dropdownMenu.classList.toggle('active');
+      const isOpen = dropdownMenu.classList.toggle('active');
+      dropdownBtn.setAttribute('aria-expanded', String(isOpen));
     });
 
     // Close dropdown when clicking a link
     dropdownMenu.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
         dropdownMenu.classList.remove('active');
+        dropdownBtn.setAttribute('aria-expanded', 'false');
       });
     });
 
@@ -107,6 +146,7 @@ import ThemeToggle from './ThemeToggle.astro';
       const target = e.target;
       if (!(target instanceof Element) || !target.closest('.navbar-dropdown')) {
         dropdownMenu.classList.remove('active');
+        dropdownBtn.setAttribute('aria-expanded', 'false');
       }
     });
   }
@@ -153,7 +193,10 @@ import ThemeToggle from './ThemeToggle.astro';
   }
 
   .navbar-logo {
-    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--text-heading);
     text-decoration: none;
@@ -163,6 +206,27 @@ import ThemeToggle from './ThemeToggle.astro';
   .navbar-logo:hover {
     color: var(--accent);
     transform: translateY(-1px);
+  }
+
+  .navbar-logo img {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border: 1px solid var(--border-input, #3d5170);
+    border-radius: 0.5rem;
+    background: var(--bg-input, #1a2a3f);
+    color: var(--accent);
+    cursor: pointer;
   }
 
   .navbar-menu {
@@ -346,25 +410,51 @@ import ThemeToggle from './ThemeToggle.astro';
     color: var(--accent);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     .navbar-container {
-      flex-direction: column;
-      gap: 1rem;
+      position: relative;
+      gap: 0.5rem;
     }
 
     .navbar-right {
-      flex-direction: column;
-      gap: 0.75rem;
+      margin-left: auto;
+      gap: 0.5rem;
     }
 
     .navbar-menu {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
+      display: none;
+      position: absolute;
+      top: calc(100% + 1px);
+      right: 0;
+      left: 0;
+      flex-direction: column;
+      gap: 0.25rem;
+      padding: 0.75rem 1rem 1rem;
+      background: var(--bg-elevated);
+      border-bottom: 1px solid var(--border-accent);
+      box-shadow: 0 14px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-menu.mobile-open {
+      display: flex;
+    }
+
+    .navbar-menu li {
+      width: 100%;
     }
 
     .navbar-logo {
-      font-size: 1.25rem;
+      min-width: 0;
+      font-size: 1rem;
+    }
+
+    .navbar-logo img {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .mobile-menu-toggle {
+      display: inline-flex;
     }
 
     .navbar-link {
@@ -372,15 +462,15 @@ import ThemeToggle from './ThemeToggle.astro';
     }
 
     .dropdown-menu {
-      position: fixed;
-      width: 90vw;
-      max-width: 300px;
-      left: 50%;
-      transform: translateX(-50%);
+      position: static;
+      width: auto;
+      max-width: none;
+      margin: 0.25rem 0 0;
+      transform: none;
     }
 
     .dropdown-menu.active {
-      transform: translateX(-50%) translateY(0);
+      transform: none;
     }
   }
 </style>

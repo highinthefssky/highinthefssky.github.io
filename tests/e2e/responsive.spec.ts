@@ -6,6 +6,12 @@ test.describe('mobile responsive smoke', () => {
   test('home page renders on mobile', async ({ page }) => {
     await page.goto('/');
     await expect(page.locator('h1.hero-title')).toBeVisible();
+
+    const menuButton = page.locator('#mobile-menu-toggle');
+    await expect(menuButton).toBeVisible();
+    await expect(menuButton).toHaveAccessibleName('Open navigation menu');
+    await menuButton.click();
+    await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
     await expect(page.locator('.navbar-menu')).toBeVisible();
   });
 
