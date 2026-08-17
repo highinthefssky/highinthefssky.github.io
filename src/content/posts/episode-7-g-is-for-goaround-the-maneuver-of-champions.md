@@ -1,7 +1,7 @@
 ---
 title: "Episode 7: “G” is for GO‑AROUND — The Maneuver of Champions"
 description: "Episode 7: “G” is for GO‑AROUND — The Maneuver of Champions. 🔥✈️  The best pilots aren’t the ones who \"stick\" every landing; they’re the ones who know when to s"
-publishedAt: 2026-03-18
+publishedAt: 2026-02-18
 tags: ["community", "youtube"]
 draft: false
 ---
