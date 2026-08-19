@@ -1,7 +1,7 @@
 ---
 title: "✈️ Flight Deck Cheat Sheet: PFD Speed Trend Vectors"
 description: "✈️ Flight Deck Cheat Sheet: PFD Speed Trend Vectors  ​Ever find yourself constantly chasing target airspeed on short final during manual approaches? That magent"
-publishedAt: 2026-08-15
+publishedAt: 2026-08-14
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -21,7 +21,7 @@ draft: false
 ​📺 Watch the full breakdown in action: https://youtu.be/1srGO9HEXs8
 
 Original post: https://www.youtube.com/post/UgkxyqxF1qH8dUsnFFkDGje_0wY9E156J8ot
-Likes: 1 | Comments: 0
+Likes: 2 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/N7mJ1REB4XqQjEjMy784m4Yw-2RTLtKHy_kgf2ilEQIshtcYGghawFAE2GLHOUAbMIG1xMGmwglnyuw=s1280)
