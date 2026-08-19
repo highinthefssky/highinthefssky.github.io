@@ -1,7 +1,7 @@
 ---
 title: "🇸🇪🇺🇸 Incoming: The Saab 340 Mastery Series begins today!"
 description: "🇸🇪🇺🇸 Incoming: The Saab 340 Mastery Series begins today!  The wait is almost over. Today at 17:00 (CET), we officially launch our deep-dive series into the Saab"
-publishedAt: 2026-03-21
+publishedAt: 2026-03-22
 tags: ["community", "youtube"]
 draft: false
 ---
