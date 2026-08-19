@@ -1,7 +1,7 @@
 ---
 title: "✈️ Episode 9: “I” is for ILS! ✈️"
 description: "✈️ Episode 9: “I” is for ILS! ✈️  Ever wondered how pilots land when they can’t even see the nose of their own plane? Next Tuesday in our MSFS A‑Z series, we’re"
-publishedAt: 2026-03-21
+publishedAt: 2026-03-22
 tags: ["community", "youtube"]
 draft: false
 ---
