@@ -1,0 +1,33 @@
+{
+  "videoId": "17KOWVI4JJ0",
+  "title": "MSFS 2024 keeps crashing? Find the EXACT add-On with AI",
+  "description": "Are random crashes to desktop (CTD) ruining your flights in Microsoft Flight Simulator 2024? Instead of waiting days for support tickets or guessing which Community mod is broken, you can analyze your simulator's raw crash dump files yourself using AI!\n\nIn this step-by-step tutorial, learn how to locate hidden .dmp files in your Windows AppData directory and use Claude AI to translate complex memory errors, GPU overloads, and broken WASM community mods into plain English.\n\n🛠️ What you’ll learn:\n\n📂 Locate Raw Dump Files: Find hidden .dmp files in %localappdata%\\CrashDumps  \n📜 Read ASO Logs: Access plain-text crash logs in Packages\\Microsoft.Limitless...\\LocalState\\  \n🤖 AI Prompting: The exact method to analyze raw dumps using Claude's free tier  \n🧩 Identify Broken Mods: Instantly spot culprit WASM modules and background hooks (RivaTuner, Tobii, OBS)  \n🥽 VR & Hardware Fixes: Diagnose GPU-removed errors and heavy memory overloads during VR flights  \n\n📁 Crash Paths Referenced:\n- Windows Mini-Dumps: %localappdata%\\CrashDumps  \n- Flight Simulator State Logs: %localappdata%\\Packages\\Microsoft.Limitless...\\LocalState\\  \n\n⏱️ Chapters\n0:00 - The MSFS 2024 Crash Problem  \n0:22 - Why Use Claude AI for Dump Analysis?  \n1:02 - Locating the Windows Crash Dump Folder  \n2:03 - Decoding Mini-Dumps & Mod Exceptions  \n3:56 - Finding Readable LocalState Crash Logs  \n5:18 - Diagnosing GPU Crashes & VR Load  \n6:16 - Troubleshooting Takeaways & Next Steps  \n\n👍 If this guide helped stabilize your simulator, hit Like and Subscribe for more MSFS 2024 optimization guides, performance tweaks, and flight tutorials! Drop a comment below with what caused your latest crash! 🛫",
+  "thumbnail": "https://i.ytimg.com/vi/17KOWVI4JJ0/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/17KOWVI4JJ0/mqdefault.jpg",
+  "publishedAt": "2026-08-21T20:50:16.000Z",
+  "duration": 405,
+  "viewCount": 81,
+  "tags": [
+    "msfs 2024 crash fix",
+    "msfs 2024 ctd",
+    "microsoft flight simulator 2024 crash",
+    "msfs dump file analysis",
+    "msfs crash to desktop fix",
+    "claude ai dump file",
+    "msfs 2024 troubleshooting",
+    "msfs community folder crash",
+    "msfs wasm error",
+    "msfs gpu crash",
+    "msfs 2024 vr crash",
+    "msfs 2024 performance",
+    "flight simulator 2024 errors",
+    "how to fix msfs ctd",
+    "msfs 2024 guide",
+    "msfs error log",
+    "asobo crash report",
+    "flight simulator diagnostic",
+    "msfs crash dump location",
+    "analyze dmp files msfs"
+  ],
+  "featured": false
+}
