@@ -1,7 +1,7 @@
 ---
 title: "✈️ Flight Deck Milestone: 6 Years High in the FlightSim Sky!"
 description: "✈️ Flight Deck Milestone: 6 Years High in the FlightSim Sky!  Six years ago today, we pushed back from the gate with our very first video upload. From that firs"
-publishedAt: 2026-08-19
+publishedAt: 2026-08-20
 tags: ["community", "youtube"]
 draft: false
 ---
