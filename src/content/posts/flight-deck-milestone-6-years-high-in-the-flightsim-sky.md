@@ -21,7 +21,7 @@ The Flight Crew: 7,200+ virtual pilots strong in our community hangar!
 📺 Revisit where the journey all began and check out our earliest flights vs. today: https://youtu.be/mnUZlC5KPVQ
 
 Original post: https://www.youtube.com/post/Ugkxj8C8VIupNprjIoYOTSV_gMJDpzueqF-J
-Likes: 5 | Comments: 0
+Likes: 6 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/LC1tA2kT8qWnfuVIcEe9AaDLhK4TOCS9dtCGmDBEzhcCbNUMLwDAJVhNCYpghOQcmL6vfVOMBZCk7A=s1280)
