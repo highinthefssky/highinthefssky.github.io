@@ -1,7 +1,7 @@
 ---
 title: "🛫 Simmer's Quick Check:"
 description: "🛫 Simmer's Quick Check: You are navigating inbound to a VOR station with your OBS dialed to 090° and a TO flag displayed. You notice your CDI (Course Deviation"
-publishedAt: 2026-08-22
+publishedAt: 2026-08-21
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -16,4 +16,4 @@ Ready to turn off the GPS moving map and navigate purely by radio waves? Learn h
 Watch the full guide here: https://youtu.be/9oc8t3xcWek
 
 Original post: https://www.youtube.com/post/UgkxGEg3tHdEVhXAVncmxGQJLf4yTjbDpb49
-Likes: 2 | Comments: 1
+Likes: 2 | Comments: 2
