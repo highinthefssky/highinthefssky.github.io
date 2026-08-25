@@ -10,7 +10,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-25T12:52:42.756859Z"
+    "scraped_at": "2026-08-25T18:42:48.741479Z"
   },
   {
     "id": "Ugkx0qMtNPkCBvzjXPMoUfqYVStQTeN6cTnm",
@@ -25,7 +25,22 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-25T12:52:42.756841Z"
+    "scraped_at": "2026-08-25T18:42:48.741466Z"
+  },
+  {
+    "id": "UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
+    "text": "✈️ Episode 9: “I” is for ILS! ✈️\n\nEver wondered how pilots land when they can’t even see the nose of their own plane? Next Tuesday in our MSFS A‑Z series, we’re tackling one of the most important tools in real-world IFR flying: ILS - the Instrument Landing System.\n\nIt’s the gold standard of precision approaches. And in Microsoft Flight Simulator 2024, it’s also one of the most satisfying skills you can master because once you understand the needles, foggy days stop being scary and start being predictable.\n\n🗺️ What’s on the approach plate for next Tuesday the 3rd of March:\n\n\n📐 ILS, explained visually (no fluff):\nWe break down how ILS gives you two critical cues—horizontal and vertical—so you’re lined up and descending correctly 🎯⬇️\n\n📡 The two beams you must understand:\n➡️ Localizer (LOC): keeps you centered on the runway 🛣️\n⬇️ Glideslope (GS): guides your descent path (usually 3°) so you’re not too high… and not too low ⚖️\n\n🖥️ Cockpit view: reading the “needles” like a pro:\nYou’ll see the LOC and GS diamonds and learn the rule that makes it click instantly:\n\n👉 “Fly toward the needle.”\nNeedle above you? You’re low ⬆️\nNeedle left? You’re right ⬅️\nSimple. Powerful. 💡\n\n\n🛩️ MSFS 2024 Demo #1 — GA ILS (Cessna 172 G1000):\nTune NAV1, set CDI to LOC1, intercept at ~30°, hit APR, and watch the magic ✨\nFirst LOC capture, then GS, then a smooth, stable descent 🧘‍♂️\n\n✈️🤖 MSFS 2024 Demo #2 — Airliner Auto‑Land (Airbus A320neo):\nFrom selecting the ILS in the Flight Plan, pressing LS, engaging APPR, and finally capturing Cat III beams 📶\nWith AP1 + AP2 on, the A320 can fly itself all the way to the flare 😮🛬\n\n🧠 Why ILS changes everything:\nWhen visibility disappears, ILS turns chaos into math 📊\nMaster needle tracking, and low‑vis approaches become calm, repeatable, and safe ✅",
+    "published_relative": "6 months ago",
+    "published_date": "2026-02-26",
+    "url": "https://www.youtube.com/post/UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
+    "likes": "1",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/PWxU0oP2t_Q7JQp4LPt-M-xk_bOcMfVDXgx3WdMO_L3KQ5957Nsz-0VNgQO2kKOKJnL_-S2-ge2kJg=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-08-25T18:42:48.741452Z"
   },
   {
     "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
@@ -38,28 +53,13 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-25T12:52:42.756822Z"
-  },
-  {
-    "id": "UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
-    "text": "✈️ Episode 9: “I” is for ILS! ✈️\n\nEver wondered how pilots land when they can’t even see the nose of their own plane? Next Tuesday in our MSFS A‑Z series, we’re tackling one of the most important tools in real-world IFR flying: ILS - the Instrument Landing System.\n\nIt’s the gold standard of precision approaches. And in Microsoft Flight Simulator 2024, it’s also one of the most satisfying skills you can master because once you understand the needles, foggy days stop being scary and start being predictable.\n\n🗺️ What’s on the approach plate for next Tuesday the 3rd of March:\n\n\n📐 ILS, explained visually (no fluff):\nWe break down how ILS gives you two critical cues—horizontal and vertical—so you’re lined up and descending correctly 🎯⬇️\n\n📡 The two beams you must understand:\n➡️ Localizer (LOC): keeps you centered on the runway 🛣️\n⬇️ Glideslope (GS): guides your descent path (usually 3°) so you’re not too high… and not too low ⚖️\n\n🖥️ Cockpit view: reading the “needles” like a pro:\nYou’ll see the LOC and GS diamonds and learn the rule that makes it click instantly:\n\n👉 “Fly toward the needle.”\nNeedle above you? You’re low ⬆️\nNeedle left? You’re right ⬅️\nSimple. Powerful. 💡\n\n\n🛩️ MSFS 2024 Demo #1 — GA ILS (Cessna 172 G1000):\nTune NAV1, set CDI to LOC1, intercept at ~30°, hit APR, and watch the magic ✨\nFirst LOC capture, then GS, then a smooth, stable descent 🧘‍♂️\n\n✈️🤖 MSFS 2024 Demo #2 — Airliner Auto‑Land (Airbus A320neo):\nFrom selecting the ILS in the Flight Plan, pressing LS, engaging APPR, and finally capturing Cat III beams 📶\nWith AP1 + AP2 on, the A320 can fly itself all the way to the flare 😮🛬\n\n🧠 Why ILS changes everything:\nWhen visibility disappears, ILS turns chaos into math 📊\nMaster needle tracking, and low‑vis approaches become calm, repeatable, and safe ✅",
-    "published_relative": "5 months ago",
-    "published_date": "2026-03-28",
-    "url": "https://www.youtube.com/post/UgkxQCg_ui6BsM_1-B7poW75al-7igZS3bzv",
-    "likes": "1",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/PWxU0oP2t_Q7JQp4LPt-M-xk_bOcMfVDXgx3WdMO_L3KQ5957Nsz-0VNgQO2kKOKJnL_-S2-ge2kJg=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-08-25T12:52:42.756808Z"
+    "scraped_at": "2026-08-25T18:42:48.741440Z"
   },
   {
     "id": "UgkxyqxF1qH8dUsnFFkDGje_0wY9E156J8ot",
     "text": "✈️ Flight Deck Cheat Sheet: PFD Speed Trend Vectors\n\n​Ever find yourself constantly chasing target airspeed on short final during manual approaches? That magenta line extending from your speed bug on the Primary Flight Display (PFD) is your most powerful tool for smooth, proactive airspeed management.\n\n​📌 Key Takeaways:\n\n​The 6-Second Prediction: The length of the magenta vector line indicates where your airspeed will be in exactly 6 seconds if your current acceleration or deceleration rate remains constant.\n\n​Anticipate, Don't React: Instead of waiting for your airspeed to drop or overshoot, use the vector's growth to make small, proactive pitch and power adjustments before the speed deviation actually occurs.\n\n​Targeting V_{APP} on Final: To maintain a stabilized approach, aim to keep the tip of the trend vector resting directly on your target approach speed—eliminating wild throttle adjustments on short final.\n\n​📺 Watch the full breakdown in action: https://youtu.be/1srGO9HEXs8",
-    "published_relative": "10 days ago",
-    "published_date": "2026-08-15",
+    "published_relative": "11 days ago",
+    "published_date": "2026-08-14",
     "url": "https://www.youtube.com/post/UgkxyqxF1qH8dUsnFFkDGje_0wY9E156J8ot",
     "likes": "2",
     "comments": "0",
@@ -68,7 +68,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-25T12:52:42.756790Z"
+    "scraped_at": "2026-08-25T18:42:48.741428Z"
   },
   {
     "id": "UgkxguKtGtNz0jn5RUn4njdw2rEu4PnPonUm",
@@ -84,13 +84,13 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-25T12:52:42.756768Z"
+    "scraped_at": "2026-08-25T18:42:48.741412Z"
   },
   {
     "id": "Ugkxj8C8VIupNprjIoYOTSV_gMJDpzueqF-J",
     "text": "✈️ Flight Deck Milestone: 6 Years High in the FlightSim Sky!\n\nSix years ago today, we pushed back from the gate with our very first video upload. From that first humble takeoff to mastering complex airliner flight decks, glass cockpits, and full VR setups, it has been an incredible journey sharing the skies with you.\n\n📌 Flight Log Highlights:\n\nThe Maiden Flight: 6 years of flight sim tutorials, aircraft breakdowns, and community livestreams.\n\nThe Hangar Fleet: Over 2,100+ videos published covering everything from basic VFR to advanced automation.\n\nThe Flight Crew: 7,200+ virtual pilots strong in our community hangar!\n\n📺 Revisit where the journey all began and check out our earliest flights vs. today: https://youtu.be/mnUZlC5KPVQ",
-    "published_relative": "5 days ago",
-    "published_date": "2026-08-20",
+    "published_relative": "6 days ago",
+    "published_date": "2026-08-19",
     "url": "https://www.youtube.com/post/Ugkxj8C8VIupNprjIoYOTSV_gMJDpzueqF-J",
     "likes": "6",
     "comments": "0",
@@ -99,7 +99,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-25T12:52:42.756746Z"
+    "scraped_at": "2026-08-25T18:42:48.741396Z"
   },
   {
     "id": "UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
@@ -114,7 +114,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-25T12:52:42.756727Z"
+    "scraped_at": "2026-08-25T18:42:48.741382Z"
   },
   {
     "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
@@ -129,20 +129,20 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-25T12:52:42.756698Z"
+    "scraped_at": "2026-08-25T18:42:48.741362Z"
   },
   {
     "id": "UgkxGEg3tHdEVhXAVncmxGQJLf4yTjbDpb49",
     "text": "🛫 Simmer's Quick Check:\nYou are navigating inbound to a VOR station with your OBS dialed to 090° and a TO flag displayed. You notice your CDI (Course Deviation Indicator) needle is deflected to the RIGHT.\nTo intercepTurn LEFT to 060° (30° left intercept angle)t and lock onto the desired inbound course, which heading adjustment should you make?\n\n📺 Master the Flight Deck:\nReady to turn off the GPS moving map and navigate purely by radio waves? Learn how to tune, identify, twist, and execute clean radial interceptions in our full VOR breakdown!\n\nWatch the full guide here: https://youtu.be/9oc8t3xcWek",
-    "published_relative": "3 days ago",
-    "published_date": "2026-08-22",
+    "published_relative": "4 days ago",
+    "published_date": "2026-08-21",
     "url": "https://www.youtube.com/post/UgkxGEg3tHdEVhXAVncmxGQJLf4yTjbDpb49",
     "likes": "2",
     "comments": "2",
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-08-25T12:52:42.756478Z"
+    "scraped_at": "2026-08-25T18:42:48.741215Z"
   },
   {
     "id": "Ugkx2PjK6-XnqFTtTYUbj8PS_05OZCGRrgnA",
