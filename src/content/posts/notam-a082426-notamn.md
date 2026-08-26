@@ -1,7 +1,7 @@
 ---
 title: "!NOTAM A0824/26 NOTAMN"
 description: "!NOTAM A0824/26 NOTAMN  Q) EHAA/QNVAS/IV/BO/AE/000/999/5218N00446E025 A) HIGH IN THE FLIGHTSIM SKY B) WEF COMING MONDAY 0001 UTC C) PERM E) AERODROME AND CHANNE"
-publishedAt: 2026-08-16
+publishedAt: 2026-08-15
 tags: ["community", "youtube"]
 draft: false
 ---
