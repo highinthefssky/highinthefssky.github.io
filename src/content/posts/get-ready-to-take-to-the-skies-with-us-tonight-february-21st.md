@@ -1,7 +1,7 @@
 ---
 title: "Get ready to take to the skies with us TONIGHT, February 21st, at 7:00 PM UTC (2"
 description: "Get ready to take to the skies with us TONIGHT, February 21st, at 7:00 PM UTC (2:00 PM EST) for an exclusive LIVE STREAM of the MSFS 2024 Sim Update 5 Beta - 2n"
-publishedAt: 2026-02-27
+publishedAt: 2026-02-28
 tags: ["community", "youtube"]
 draft: false
 ---
