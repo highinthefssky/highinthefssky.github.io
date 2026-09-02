@@ -2,7 +2,7 @@
   "slug": "msfs-a-to-z",
   "title": "MSFS A to Z",
   "description": "The MSFS Alphabet series — become a better virtual pilot one letter at a time. From Ailerons to Zero-Fuel Weight, covering primary flight controls and technical terms you need to know.",
-  "thumbnail": "https://i.ytimg.com/vi/Jfbb_uBY7T0/sddefault.jpg",
+  "thumbnail": "https://i.ytimg.com/vi/jQu_pSo9SME/sddefault.jpg",
   "matchRules": {
     "titlePatterns": [
       "^[A-Z] is for",
@@ -49,6 +49,7 @@
     "l3tyOxFUDws",
     "zO0hDyA0xfc",
     "g8W-8D_TRtk",
-    "Jfbb_uBY7T0"
+    "Jfbb_uBY7T0",
+    "jQu_pSo9SME"
   ]
 }
