@@ -15,4 +15,4 @@ A butter landing starts miles back on the final approach track! Learn the exact 
 Watch the full guide here: https://youtu.be/D_XePhC33w0
 
 Original post: https://www.youtube.com/post/UgkxqfIcF5b3HwU4Iq-iuE-i47D0GPyCwnnR
-Likes: 0 | Comments: 0
+Likes: 1 | Comments: 0
