@@ -1,0 +1,31 @@
+{
+  "videoId": "jQu_pSo9SME",
+  "title": "How to align the IRS in Microsoft Flight Simulator | MSFS A-Z (Letter I)",
+  "description": "Master the Inertial Reference System (IRS) and ADIRU in Microsoft Flight Simulator and eliminate alignment faults forever. Learn how laser gyroscopes track Earth's rotation, why modern checklists tell you to skip the ALIGN switch, and how to properly initialize cold-and-dark airliners in the PMDG 737, Fenix A320, and Boeing 777.\n\nPowering up an airliner from cold and dark leaves your primary flight displays blind with zero attitude, horizon, or map data. In this episode of Microsoft Flight Simulator A to Z (Letter I), we break down how the IRS and ADIRU use Earth rate sensing to establish orientation without relying on GPS satellites.\n\nYou will learn the mechanics behind laser ring gyroscopes, why your aircraft can sense latitude but requires manual FMC longitude entry, and the critical difference between the ALIGN and NAV switch positions. We cover the pre-flight three-step rule to avoid parking brake alignment faults, the 30-second quick alignment procedure, polar calibration cycles, and how triple-redundant inertial units vote against sensor drift and in-flight failures.\n\n🕒 Chapters\n00:00 - Intro\n00:40 - The smartphone analogy\n01:42 - Step-by-step alignment & the \"ALIGN\" switch secret\n03:37 - In-Flight Redundancy & Quick Fixes\n\n🖥️✈️ Flight Sim Hardware & Setup:\nSim Platform: Microsoft Flight Simulator (2024 / 2020)\nAircraft Featured: Modern Airliners (Boeing 737 / 777 / 787 & Airbus A320)\nAvionics Focus: Inertial Reference System (IRS) & ADIRU\n\n🔗 Resources & links\n👉 MSFS Official Aircraft Manuals: https://www.flightsimulator.com/\n👉 Subscribe for more MSFS tutorials: https://bit.ly/34eNWDP\n👉 Complete MSFS A-Z Playlist: https://bit.ly/3l6fRdL\n\n✈️ About This Series\nThe MSFS Alphabet is designed to help you become a better virtual pilot, one letter at a time. From Angle of Attack to Zero-Fuel Weight, we break down the aviation concepts, physics, and systems every flight simmer should understand.\n\n#msfs2024 #FlightSimulator #AviationTutorial #IRS #ADIRU #Avionics #PilotTraining #FlightSim #MSFSAtoZ",
+  "thumbnail": "https://i.ytimg.com/vi/jQu_pSo9SME/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/jQu_pSo9SME/mqdefault.jpg",
+  "publishedAt": "2026-09-01T18:00:38.000Z",
+  "duration": 271,
+  "viewCount": 190,
+  "tags": [
+    "msfs 2024",
+    "msfs irs alignment",
+    "how to align irs msfs",
+    "msfs adiru explained",
+    "microsoft flight simulator irs",
+    "msfs cold and dark startup",
+    "inertial reference system aviation",
+    "inertial navigation system flight sim",
+    "why do irs fail msfs",
+    "boeing 777 irs align",
+    "msfs fmc position init",
+    "msfs autopilot not following route",
+    "msfs navigation alignment",
+    "msfs a to z series",
+    "flight simulator tutorial",
+    "aviation avionics explained",
+    "laser gyro aircraft navigation",
+    "msfs 2020 irs guide"
+  ],
+  "featured": false
+}
