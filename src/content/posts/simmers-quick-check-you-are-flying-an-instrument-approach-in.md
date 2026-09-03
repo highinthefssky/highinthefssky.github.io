@@ -1,7 +1,7 @@
 ---
 title: "🛫 Simmer's Quick Check: You are flying an instrument approach in IMC and cross 8"
 description: "🛫 Simmer's Quick Check: You are flying an instrument approach in IMC and cross 800 ft AGL. You notice your sink rate is 1,150 FPM, airspeed is 15 knots above Vr"
-publishedAt: 2026-08-28
+publishedAt: 2026-08-29
 tags: ["community", "youtube"]
 draft: false
 ---
