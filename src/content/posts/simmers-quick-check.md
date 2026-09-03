@@ -16,4 +16,4 @@ Ready to turn off the GPS moving map and navigate purely by radio waves? Learn h
 Watch the full guide here: https://youtu.be/9oc8t3xcWek
 
 Original post: https://www.youtube.com/post/UgkxGEg3tHdEVhXAVncmxGQJLf4yTjbDpb49
-Likes: 2 | Comments: 2
+Likes: 3 | Comments: 2
