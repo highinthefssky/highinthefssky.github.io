@@ -42,7 +42,11 @@ function parseFilename(filename) {
   }
   
   const controller = parts[0];
-  const settingsType = parts[parts.length - 1];
+  const rawSettingsType = parts[parts.length - 1];
+  const settingsType = {
+    gc: 'General Controls',
+    hc: 'Helicopter Controls',
+  }[rawSettingsType.toLowerCase()] || rawSettingsType;
   
   // Middle part(s) could be aircraft/config type
   const middleParts = parts.slice(1, -1);
@@ -60,9 +64,10 @@ function parseFilename(filename) {
  */
 function generateTags(controller, aircraft, settingsType) {
   const tags = [];
+  const normalizedController = controller.toLowerCase().replace(/[^a-z0-9]/g, '');
   
   // Add controller type tags
-  if (controller.includes('T.16000M')) tags.push('T.16000M', 'Thrustmaster');
+  if (normalizedController.includes('t16000m')) tags.push('T16000M', 'Thrustmaster', 'Joystick');
   if (controller.includes('TWCS')) tags.push('TWCS', 'Throttle', 'Thrustmaster');
   if (controller.includes('VelocityOne')) tags.push('VelocityOne', 'Turtle Beach');
   if (controller.includes('Yoke')) tags.push('Yoke');
@@ -72,6 +77,7 @@ function generateTags(controller, aircraft, settingsType) {
   // Add settings type tags
   if (settingsType.toLowerCase().includes('airplane')) tags.push('Airplane Controls');
   if (settingsType.toLowerCase().includes('general')) tags.push('General Controls');
+  if (settingsType.toLowerCase().includes('helicopter')) tags.push('Helicopter Controls');
   
   // Add aircraft-specific tags
   if (aircraft) {

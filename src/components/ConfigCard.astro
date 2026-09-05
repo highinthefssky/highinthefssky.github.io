@@ -8,6 +8,18 @@ interface Props {
 const { config } = Astro.props;
 const { filename, controller, settingsType, description, aircraft, downloadUrl, tags } = config.data;
 
+function formatSettingsType(value: string): string {
+  const normalized = value.trim().toUpperCase();
+  if (normalized === 'GC') return 'General Controls';
+  if (normalized === 'HC') return 'Helicopter Controls';
+  return value;
+}
+
+const displaySettingsType = formatSettingsType(settingsType);
+const displayDescription = displaySettingsType !== settingsType && description.startsWith(`${settingsType} for `)
+  ? `${displaySettingsType}${description.slice(settingsType.length)}`
+  : description;
+
 function inferAircraftType(aircraft?: string, settingsType?: string, tags: string[] = []): 'airliner' | 'general' | 'fighter' | 'turboprop' | 'multi-engine' | 'custom' | '' {
   const haystack = [aircraft || '', settingsType || '', ...tags].join(' ').toLowerCase();
 
@@ -56,9 +68,10 @@ const wizardUrl = `/controllers/wizard?${wizardParams.toString()}`;
 
 // Get controller icon/emoji based on type
 function getControllerIcon(controller: string): string {
-  if (controller.includes('Yoke')) return '🎚️';
-  if (controller.includes('Throttle') || controller.includes('Quad')) return '🎛️';
-  if (controller.includes('Joystick') || controller.includes('T.16000M') || controller.includes('Ursa')) return '🕹️';
+  const normalized = controller.toLowerCase().replace(/[^a-z0-9]/g, '');
+  if (normalized.includes('yoke')) return '🎚️';
+  if (normalized.includes('throttle') || normalized.includes('quad')) return '🎛️';
+  if (normalized.includes('joystick') || normalized.includes('t16000m') || normalized.includes('ursa')) return '🕹️';
   return '🎮';
 }
 
@@ -66,6 +79,7 @@ function getControllerIcon(controller: string): string {
 function getSettingsTypeClass(settingsType: string): string {
   if (settingsType.toLowerCase().includes('airplane')) return 'type-airplane';
   if (settingsType.toLowerCase().includes('general')) return 'type-general';
+  if (settingsType.toLowerCase().includes('helicopter')) return 'type-helicopter';
   return 'type-default';
 }
 ---
@@ -98,12 +112,12 @@ function getSettingsTypeClass(settingsType: string): string {
 
   <div class="card-body">
     <div class="settings-type-badge">
-      <span class={`type-badge ${getSettingsTypeClass(settingsType)}`}>
-        {settingsType}
+      <span class={`type-badge ${getSettingsTypeClass(displaySettingsType)}`}>
+        {displaySettingsType}
       </span>
     </div>
     
-    <p class="config-description">{description}</p>
+    <p class="config-description">{displayDescription}</p>
 
     {tags.length > 0 && (
       <div class="card-tags">
@@ -262,6 +276,11 @@ function getSettingsTypeClass(settingsType: string): string {
   .type-general {
     background: #f3e8ff;
     color: #6b21a8;
+  }
+
+  .type-helicopter {
+    background: #dcfce7;
+    color: #166534;
   }
 
   .type-default {
