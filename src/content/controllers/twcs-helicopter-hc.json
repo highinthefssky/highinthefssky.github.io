@@ -1,0 +1,13 @@
+{
+  "filename": "TWCS - helicopter - HC.xml",
+  "controller": "TWCS",
+  "settingsType": "HC",
+  "description": "HC for TWCS - helicopter",
+  "aircraft": "helicopter",
+  "downloadUrl": "https://raw.githubusercontent.com/highinthefssky/msfs-2024-controls-settings/main/profiles/TWCS%20-%20helicopter%20-%20HC.xml",
+  "tags": [
+    "TWCS",
+    "Throttle",
+    "Thrustmaster"
+  ]
+}
