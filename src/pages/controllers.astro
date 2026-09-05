@@ -6,9 +6,13 @@ import KeyboardShortcuts from '../components/KeyboardShortcuts.astro';
 import stats from '../content/stats.json';
 
 const allConfigs = await getCollection('controllers');
+const mozaProfiles = await getCollection('mozaProfiles');
 const totalControllers = (stats as { totalControllers?: number }).totalControllers ?? allConfigs.length;
 const sortedConfigs = allConfigs.sort((a, b) =>
   a.data.controller.localeCompare(b.data.controller)
+);
+const sortedMozaProfiles = [...mozaProfiles].sort((a, b) =>
+  a.data.aircraft.localeCompare(b.data.aircraft)
 );
 
 const allTags = Array.from(
@@ -55,10 +59,25 @@ const allControllers = Array.from(
       <div class="moza-entry">
         <div class="moza-entry-icon">🕹️</div>
         <div class="moza-entry-content">
-          <h2>Moza Cockpit users?</h2>
-          <p>Download import-ready <code>.preset</code> files for your Moza flight device.</p>
+          <h2>Moza Cockpit profiles</h2>
+          <p>{sortedMozaProfiles.length} import-ready <code>.preset</code> profile{sortedMozaProfiles.length !== 1 ? 's' : ''} available.</p>
+          <div class="moza-profile-list" aria-label="Available Moza controller profiles">
+            {sortedMozaProfiles.map(({ data: profile }) => (
+              <a
+                href={profile.downloadUrl}
+                download={profile.filename}
+                class="moza-profile-link"
+                data-profile-filename={profile.filename}
+                title={`Download ${profile.filename}`}
+              >
+                <strong>{profile.device}</strong>
+                <span>{profile.aircraft}</span>
+                <span class="moza-profile-version">MSFS {profile.msfsVersion}</span>
+              </a>
+            ))}
+          </div>
         </div>
-        <a href="/controllers/moza" class="wizard-btn wizard-btn-moza">View Moza Profiles →</a>
+        <a href="/controllers/moza" class="wizard-btn wizard-btn-moza">View all profiles →</a>
       </div>
     </div>
 
@@ -313,6 +332,35 @@ const allControllers = Array.from(
     border-radius: 0.25rem;
     padding: 0.05rem 0.3rem;
     font-size: 0.85em;
+  }
+
+  .moza-profile-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .moza-profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.65rem;
+    border: 1px solid var(--border-default);
+    border-radius: 0.375rem;
+    background: var(--bg-panel);
+    color: var(--text-primary);
+    font-size: 0.82rem;
+    text-decoration: none;
+  }
+
+  .moza-profile-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .moza-profile-version {
+    color: var(--text-muted);
   }
 
   .wizard-btn-moza {
