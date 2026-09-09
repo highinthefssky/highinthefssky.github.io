@@ -1,0 +1,28 @@
+{
+  "videoId": "VenUQRi7nKs",
+  "title": "Why your MSFS landings feel twitchy (Fix joystick settings)",
+  "description": "Struggling with twitchy controls and rough landings in Microsoft Flight Simulator? In this video, we dial in the best MSFS joystick settings, yoke calibration, and sensitivity curves to eliminate control jitter and get buttery-smooth landings every time.\n\nWhether you fly MSFS 2024 or MSFS 2020, default 1:1 linear curves make desktop flight sticks hyper-sensitive on short final. We walk through the exact numbers you need to calibrate your dead zones, align your neutral center, smooth out pitch sensitivity, and unlock 100% control throw with extremity dead zones.\n\n⏱️ Video Chapters:\n0:00 Why Your MSFS Flight Controls Feel Twitchy\n0:35 How to Fix Gimbal Jitter: Axis Dead Zone Setup\n1:12 Recalibrating Off-Center Hardware: Neutral Point\n1:40 Smooth Flare Calibration: Linear vs Sensitivity Curves\n2:42 Full Control Authority: Extremity Dead Zone Setup\n3:25 Calm Wind Circuit Test & Final Verification\n\nRecommended Baseline Calibration Settings:\n• Dead Zone: 2% to 5% (0.02 - 0.05) to eliminate electrical sensor noise and center jitter.\n• Neutral: Align to true mechanical center without sacrificing control travel.\n• Sensitivity (+ / -): -20% to -35% (-0.20 to -0.35) for millimeter precision during landing flare.\n• Extremity Dead Zone: 3% to 8% (0.03 - 0.08) if your hardware stops short of 100% surface deflection.\n\n✈️ Hardware & Platform:\n• Simulators: Microsoft Flight Simulator 2024 / Microsoft Flight Simulator 2020\n• Hardware Supported: Joysticks, HOTAS, Flight Yokes, Rudder Pedals\n\n🔗 Helpful Links & Resources:\n👉 Complete MSFS A-Z Series Playlist: https://bit.ly/3l6fRdL\n👉 Subscribe for more MSFS tutorials and flight controls setup guides: https://bit.ly/34eNWDP\n👉 Official Flight Simulator Support: https://www.flightsimulator.com/\n\nAbout MSFS A–Z:\nPart of our alphabet tutorial series breaking down essential aviation systems, hardware setup, and flying techniques one letter at a time. Juliet is for Joystick & Yoke Setup.\n\n#MSFS #MSFS2024 #FlightSimulator #FlightSim #Aviation",
+  "thumbnail": "https://i.ytimg.com/vi/VenUQRi7nKs/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/VenUQRi7nKs/mqdefault.jpg",
+  "publishedAt": "2026-09-08T18:00:44.000Z",
+  "duration": 375,
+  "viewCount": 6026,
+  "tags": [
+    "msfs joystick settings",
+    "msfs sensitivity settings",
+    "microsoft flight simulator calibration",
+    "msfs yoke setup",
+    "msfs twitchy controls fix",
+    "smooth landings msfs",
+    "msfs deadzone setup",
+    "msfs extremity deadzone",
+    "how to calibrate joystick msfs",
+    "msfs flight controls setup",
+    "msfs rudder sensitivity",
+    "flight sim hardware setup",
+    "msfs controller settings",
+    "msfs a to z",
+    "high in the flightsim sky"
+  ],
+  "featured": false
+}
