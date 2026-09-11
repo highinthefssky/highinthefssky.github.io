@@ -1,0 +1,28 @@
+{
+  "videoId": "SMZPeSiT8S0",
+  "title": "Fix Your MSFS Helicopter Controls! Thrustmaster T.16000M & TWCS Complete Setup",
+  "description": "Struggling to keep a helicopter steady in Microsoft Flight Simulator? You are not alone. Flying rotary-wing aircraft with default fixed-wing bindings is nearly impossible: the collective is inverted, control curves cause massive lag, and twisting the joystick bleeds unwanted yaw straight into your cyclic.\n\nIn this complete step-by-step setup guide, we build dedicated helicopter profiles from scratch for the Thrustmaster T.16000M FCS joystick and TWCS throttle.\n\nLearn how to configure your cyclic, set up your collective properly, bind the anti-torque rocker, handle governor and trim toggles, adjust sensitivity deadzones, and export/import clean controller profiles.\n\n📥 DOWNLOAD CONTROLLER PROFILES:\nhttps://highintheflightsimsky.nl/controllers/\n\n00:00 - Start\n01:00 - T16000M: profile creation\n03:28 - different views\n04:06 - T16000M: cyclic pitch & roll setup\n06:22 - T16000M: CRITICAL: disabling stick twist (Z-Axis)\n07:39 - T16000M: Rotor Brake, Trim & POV Hat\n18:21 - T16000M: base buttons (governor, fuel , starter & lights)\n28:13 - TWCS: profile creation\n29:04 - TWCS: collective axis setup & inversion\n30:54 - TWCS: anti-torque pedals (rocker switch)\n31:26 - TWCS: throttle wheel & cockpit mini-stick\n35:35 - TWCS: autopilot & auto-hover modes\n40:30 - hardware curves: sensitivity & deadzones\n42:05 - Exporting & importing your profiles\n\n💬 Got questions or a custom binding setup that works well for your helicopters? Drop a comment below!\n\nIf this video helped you nail the hover, don't forget to like and subscribe for more Microsoft Flight Simulator tutorials and flight guides.\n\n#MSFS #FlightSimulator #Helicopter #Thrustmaster #T16000M #TWCS #MSFS2024",
+  "thumbnail": "https://i.ytimg.com/vi/SMZPeSiT8S0/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/SMZPeSiT8S0/mqdefault.jpg",
+  "publishedAt": "2026-09-10T18:00:21.000Z",
+  "duration": 2678,
+  "viewCount": 187,
+  "tags": [
+    "MSFS helicopter setup",
+    "MSFS helicopter controls",
+    "Thrustmaster T16000M helicopter",
+    "TWCS throttle helicopter setup",
+    "Microsoft Flight Simulator helicopter tutorial",
+    "MSFS 2024 helicopter setup",
+    "MSFS helicopter sensitivity",
+    "fix helicopter controls MSFS",
+    "how to hover MSFS helicopter",
+    "T16000M flight stick bindings",
+    "TWCS collective setup",
+    "anti-torque pedal binding MSFS",
+    "helicopter trim MSFS",
+    "MSFS controller profile import",
+    "MSFS rotary wing controls"
+  ],
+  "featured": false
+}
