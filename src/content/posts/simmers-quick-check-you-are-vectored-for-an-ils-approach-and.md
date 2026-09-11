@@ -1,7 +1,7 @@
 ---
 title: "🛫 Simmer's Quick Check: You are vectored for an ILS approach and ATC leaves you"
 description: "🛫 Simmer's Quick Check: You are vectored for an ILS approach and ATC leaves you high on the profile. As you approach the final approach fix from above the publi"
-publishedAt: 2026-09-04
+publishedAt: 2026-09-05
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -15,4 +15,4 @@ Capturing the ILS from above isn’t just tricky—it can lead to dangerous auto
 Watch the full guide here: https://youtu.be/Pj0q7eNcsdE
 
 Original post: https://www.youtube.com/post/UgkxSWNGnVqQK_ccEIgfgQhb0TFgDBXEKj8H
-Likes: 0 | Comments: 0
+Likes: 1 | Comments: 0
