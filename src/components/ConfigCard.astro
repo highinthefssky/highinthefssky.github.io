@@ -10,11 +10,13 @@ const { config } = Astro.props;
 const { filename, controller, settingsType, description, aircraft, downloadUrl, tags } = config.data;
 
 const displaySettingsType = formatSettingsType(settingsType);
-const displayDescription = displaySettingsType !== settingsType && description.startsWith(`${settingsType} for `)
-  ? `${displaySettingsType}${description.slice(settingsType.length)}`
-  : description;
 // Keep data-settings as a stable code for selectors; data-settings-label carries display text.
 const settingsTypeCode = getSettingsTypeCode(settingsType);
+const descriptionPrefix = [settingsType, settingsTypeCode, displaySettingsType]
+  .find((prefix) => description.toLowerCase().startsWith(`${prefix.toLowerCase()} for `));
+const displayDescription = descriptionPrefix
+  ? `${displaySettingsType}${description.slice(descriptionPrefix.length)}`
+  : description;
 
 function inferAircraftType(aircraft?: string, settingsType?: string, tags: string[] = []): 'airliner' | 'general' | 'fighter' | 'turboprop' | 'multi-engine' | 'custom' | '' {
   const haystack = [aircraft || '', settingsType || '', ...tags].join(' ').toLowerCase();
