@@ -15,4 +15,4 @@ Turboprop power levers don't behave like standard piston throttles! Discover how
 Watch the full guide here: https://youtu.be/lxHzNhVdLAo
 
 Original post: https://www.youtube.com/post/UgkxUJF6JDdhZnWrfAF_34I1-v-LAz4vHsr0
-Likes: 2 | Comments: 0
+Likes: 2 | Comments: 1
