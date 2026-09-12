@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { formatSettingsType, getSettingsTypeCode } from '../utils/controllerSettings';
 
 interface Props {
   config: CollectionEntry<'controllers'>;
@@ -7,24 +8,6 @@ interface Props {
 
 const { config } = Astro.props;
 const { filename, controller, settingsType, description, aircraft, downloadUrl, tags } = config.data;
-
-const SETTINGS_TYPE_LABELS = new Map([
-  ['gc', 'General Controls'],
-  ['hc', 'Helicopter Controls'],
-]);
-const SETTINGS_TYPE_CODES = new Map([
-  ...Array.from(SETTINGS_TYPE_LABELS.keys(), (code) => [code, code]),
-  ...Array.from(SETTINGS_TYPE_LABELS, ([code, label]) => [label.toLowerCase(), code]),
-]);
-
-function formatSettingsType(value: string): string {
-  return SETTINGS_TYPE_LABELS.get(getSettingsTypeCode(value)) || value;
-}
-
-function getSettingsTypeCode(value: string): string {
-  const normalized = value.trim().toLowerCase();
-  return SETTINGS_TYPE_CODES.get(normalized) || normalized;
-}
 
 const displaySettingsType = formatSettingsType(settingsType);
 const displayDescription = displaySettingsType !== settingsType && description.startsWith(`${settingsType} for `)
