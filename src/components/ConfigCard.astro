@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { formatSettingsType, getSettingsTypeCode } from '../utils/controllerSettings';
 
 interface Props {
   config: CollectionEntry<'controllers'>;
@@ -8,16 +9,13 @@ interface Props {
 const { config } = Astro.props;
 const { filename, controller, settingsType, description, aircraft, downloadUrl, tags } = config.data;
 
-function formatSettingsType(value: string): string {
-  const normalized = value.trim().toUpperCase();
-  if (normalized === 'GC') return 'General Controls';
-  if (normalized === 'HC') return 'Helicopter Controls';
-  return value;
-}
-
 const displaySettingsType = formatSettingsType(settingsType);
-const displayDescription = displaySettingsType !== settingsType && description.startsWith(`${settingsType} for `)
-  ? `${displaySettingsType}${description.slice(settingsType.length)}`
+// Keep data-settings as a stable code for selectors; data-settings-label carries display text.
+const settingsTypeCode = getSettingsTypeCode(settingsType);
+const descriptionPrefix = [settingsType, settingsTypeCode, displaySettingsType]
+  .find((prefix) => description.toLowerCase().startsWith(`${prefix.toLowerCase()} for `));
+const displayDescription = descriptionPrefix
+  ? `${displaySettingsType}${description.slice(descriptionPrefix.length)}`
   : description;
 
 function inferAircraftType(aircraft?: string, settingsType?: string, tags: string[] = []): 'airliner' | 'general' | 'fighter' | 'turboprop' | 'multi-engine' | 'custom' | '' {
@@ -88,7 +86,8 @@ function getSettingsTypeClass(settingsType: string): string {
   class="config-card"
   data-tags={tags.join(',').toLowerCase()}
   data-controller={controller.toLowerCase()}
-  data-settings={settingsType.toLowerCase()}
+  data-settings={settingsTypeCode}
+  data-settings-label={displaySettingsType.toLowerCase()}
 >
   <div class="card-header">
     <div class="controller-icon">{getControllerIcon(controller)}</div>
