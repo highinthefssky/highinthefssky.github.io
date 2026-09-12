@@ -12,6 +12,10 @@ const SETTINGS_TYPE_LABELS = new Map([
   ['gc', 'General Controls'],
   ['hc', 'Helicopter Controls'],
 ]);
+const SETTINGS_TYPE_CODES = new Map([
+  ...SETTINGS_TYPE_LABELS.entries(),
+  ...Array.from(SETTINGS_TYPE_LABELS, ([code, label]) => [label.toLowerCase(), code]),
+]);
 
 function formatSettingsType(value: string): string {
   return SETTINGS_TYPE_LABELS.get(getSettingsTypeCode(value)) || value;
@@ -19,16 +23,15 @@ function formatSettingsType(value: string): string {
 
 function getSettingsTypeCode(value: string): string {
   const normalized = value.trim().toLowerCase();
-  for (const [code, label] of SETTINGS_TYPE_LABELS) {
-    if (normalized === code || normalized === label.toLowerCase()) return code;
-  }
-  return normalized;
+  return SETTINGS_TYPE_CODES.get(normalized) || normalized;
 }
 
 const displaySettingsType = formatSettingsType(settingsType);
 const displayDescription = displaySettingsType !== settingsType && description.startsWith(`${settingsType} for `)
   ? `${displaySettingsType}${description.slice(settingsType.length)}`
   : description;
+// Keep data-settings as a stable code for selectors; data-settings-label carries display text.
+const settingsTypeCode = getSettingsTypeCode(settingsType);
 
 function inferAircraftType(aircraft?: string, settingsType?: string, tags: string[] = []): 'airliner' | 'general' | 'fighter' | 'turboprop' | 'multi-engine' | 'custom' | '' {
   const haystack = [aircraft || '', settingsType || '', ...tags].join(' ').toLowerCase();
@@ -98,7 +101,7 @@ function getSettingsTypeClass(settingsType: string): string {
   class="config-card"
   data-tags={tags.join(',').toLowerCase()}
   data-controller={controller.toLowerCase()}
-  data-settings={getSettingsTypeCode(settingsType)}
+  data-settings={settingsTypeCode}
   data-settings-label={displaySettingsType.toLowerCase()}
 >
   <div class="card-header">
