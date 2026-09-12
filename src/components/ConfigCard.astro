@@ -8,19 +8,18 @@ interface Props {
 const { config } = Astro.props;
 const { filename, controller, settingsType, description, aircraft, downloadUrl, tags } = config.data;
 
-const SETTINGS_TYPE_LABELS = {
-  gc: 'General Controls',
-  hc: 'Helicopter Controls',
-} as const;
+const SETTINGS_TYPE_LABELS = new Map([
+  ['gc', 'General Controls'],
+  ['hc', 'Helicopter Controls'],
+]);
 
 function formatSettingsType(value: string): string {
-  const normalized = value.trim().toLowerCase();
-  return SETTINGS_TYPE_LABELS[normalized as keyof typeof SETTINGS_TYPE_LABELS] || value;
+  return SETTINGS_TYPE_LABELS.get(getSettingsTypeCode(value)) || value;
 }
 
 function getSettingsTypeCode(value: string): string {
   const normalized = value.trim().toLowerCase();
-  for (const [code, label] of Object.entries(SETTINGS_TYPE_LABELS)) {
+  for (const [code, label] of SETTINGS_TYPE_LABELS) {
     if (normalized === code || normalized === label.toLowerCase()) return code;
   }
   return normalized;
