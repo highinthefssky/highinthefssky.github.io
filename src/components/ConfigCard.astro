@@ -13,7 +13,7 @@ const SETTINGS_TYPE_LABELS = new Map([
   ['hc', 'Helicopter Controls'],
 ]);
 const SETTINGS_TYPE_CODES = new Map([
-  ...SETTINGS_TYPE_LABELS.entries(),
+  ...Array.from(SETTINGS_TYPE_LABELS.keys(), (code) => [code, code]),
   ...Array.from(SETTINGS_TYPE_LABELS, ([code, label]) => [label.toLowerCase(), code]),
 ]);
 
