@@ -15,6 +15,13 @@ function formatSettingsType(value: string): string {
   return value;
 }
 
+function getSettingsTypeCode(value: string): string {
+  const normalized = value.trim().toLowerCase();
+  if (normalized === 'gc' || normalized === 'general controls') return 'gc';
+  if (normalized === 'hc' || normalized === 'helicopter controls') return 'hc';
+  return normalized;
+}
+
 const displaySettingsType = formatSettingsType(settingsType);
 const displayDescription = displaySettingsType !== settingsType && description.startsWith(`${settingsType} for `)
   ? `${displaySettingsType}${description.slice(settingsType.length)}`
@@ -88,7 +95,8 @@ function getSettingsTypeClass(settingsType: string): string {
   class="config-card"
   data-tags={tags.join(',').toLowerCase()}
   data-controller={controller.toLowerCase()}
-  data-settings={settingsType.toLowerCase()}
+  data-settings={getSettingsTypeCode(settingsType)}
+  data-settings-label={displaySettingsType.toLowerCase()}
 >
   <div class="card-header">
     <div class="controller-icon">{getControllerIcon(controller)}</div>
