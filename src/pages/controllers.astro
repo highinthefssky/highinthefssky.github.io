@@ -758,6 +758,7 @@ const allControllers = Array.from(
         .map(normalizeString);
       const controller = normalizeString(cardEl.getAttribute('data-controller') || '');
       const settings = normalizeString(cardEl.getAttribute('data-settings') || '');
+      const settingsLabel = normalizeString(cardEl.getAttribute('data-settings-label') || '');
       const description = normalizeString(cardEl.querySelector('.config-description')?.textContent || '');
       const aircraft = normalizeString(cardEl.querySelector('.aircraft-badge')?.textContent || '');
 
@@ -769,7 +770,8 @@ const allControllers = Array.from(
           controller.includes(searchTerm) || 
           description.includes(searchTerm) || 
           aircraft.includes(searchTerm) ||
-          settings.includes(searchTerm)
+          settings.includes(searchTerm) ||
+          settingsLabel.includes(searchTerm)
         ));
 
       const matchesControllers =
