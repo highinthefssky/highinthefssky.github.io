@@ -1,0 +1,31 @@
+{
+  "videoId": "GW0W1n2wpBM",
+  "title": "The best MSFS Keyboard setup for flight stick & yoke pilots",
+  "description": "Struggling with accidental gear drops or hunting 2mm cockpit dials with your mouse while holding your flight stick? In this video, we wipe out conflicting default bindings and turn your keyboard into an ergonomic, high-speed secondary systems deck built specifically to complement your physical joystick or yoke.\n\nWhether you fly MSFS 2024 or MSFS 2020, default keyboard profiles are loaded with dangerous flight surface triggers that can ruin a multi-hour flight with a single desk bump. If you already have pitch, roll, and throttle mapped to hardware, this step-by-step tutorial walks you through creating a clean companion profile for rapid custom cameras, rotary autopilot stepping, IFR radio swaps, and zero-risk pausing.\n\n⏱️ Video Chapters:\n00:00 - Intro: Why Default Keyboards Ruin Flights\n00:44 - The Blank Canvas & Camera Grid Setup\n09:04 - Autopilot Value Stepping (Heading, Alt, VS)\n14:14 - The IFR Fast-Track (Baro, Comms & ATC)\n19:34 - Sim Rate & The Active Pause Reality\n\nRecommended Companion Keyboard Layout:\n• Cockpit Camera Snaps: Map \"Save Custom Camera 0-9\" to Ctrl + Alt + NumPad (0-9) and \"Load Custom Camera\" to bare NumPad (0-9) for instantaneous, 1-touch instrument views (FMC, Overhead, PFD, EICAS, Autopilot).\n• Autopilot Heading Bug: Decrease [ | Increase ] | Sync Current Heading: \\\n• Autopilot Altitude: Decrease ; | Increase ' (Single Quote)\n• Vertical Speed: Decrease . (Period) | Increase / (Slash)\n• Altimeter / Baro: STD 29.92 toggle mapped to Shift + B | Kohlsman manual pressure dial mapped to Page Up / Page Down.\n• COM Radios & ATC: COM1 Standby Swap mapped to Ctrl + 1 | ATC Dialog choices 0–9 mapped to Top-Row Number keys.\n• Sim Rate & Safety Pause: Sim Rate Activate (R) with +/- adjustment; use ESC instead of Active Pause to prevent pitch-trim runaways and stall dives.\n\n✈️ Hardware & Platform:\n• Simulators: Microsoft Flight Simulator 2024 / Microsoft Flight Simulator 2020\n• Setup Profile: Keyboard as Secondary Companion Deck alongside Joystick, HOTAS, or Flight Yoke\n\n🔗 Helpful Links & Resources:\n👉 Complete MSFS A-Z Series Playlist: https://bit.ly/3l6fRdL\n👉 Subscribe for more MSFS tutorials and flight controls setup guides: https://bit.ly/34eNWDP\n👉 Official Flight Simulator Support: https://www.flightsimulator.com/\n\nAbout MSFS A–Z:\nPart of our alphabet tutorial series breaking down essential aviation systems, hardware setup, and flying techniques one letter at a time. Kilo is for Keyboard & Keybinds Setup.\n\n#MSFS #MSFS2024 #FlightSimulator #FlightSim #Aviation",
+  "thumbnail": "https://i.ytimg.com/vi/GW0W1n2wpBM/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/GW0W1n2wpBM/mqdefault.jpg",
+  "publishedAt": "2026-09-15T18:00:25.000Z",
+  "duration": 1378,
+  "viewCount": 782,
+  "tags": [
+    "MSFS keyboard setup",
+    "MSFS keybinds",
+    "MSFS keyboard settings for flight stick",
+    "MSFS keyboard companion profile",
+    "MSFS HOTAS keyboard setup",
+    "MSFS custom camera setup",
+    "MSFS numpad camera views",
+    "MSFS autopilot keybinds",
+    "Microsoft Flight Simulator keyboard controls",
+    "MSFS 2024 controls setup",
+    "MSFS 2020 key bindings",
+    "MSFS yoke keyboard layout",
+    "MSFS cockpit controls",
+    "MSFS active pause fix",
+    "MSFS ATC keyboard shortcuts",
+    "flight simulator keybindings",
+    "MSFS A to Z",
+    "MSFS controls guide"
+  ],
+  "featured": false
+}
