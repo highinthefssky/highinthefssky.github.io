@@ -1,7 +1,7 @@
 ---
 title: "🛫 Simmer's Quick Check: You are flying a high-performance turboprop (such as the"
 description: "🛫 Simmer's Quick Check: You are flying a high-performance turboprop (such as the Daher TBM 930 or Pilatus PC-12) on short final. You are slightly floating over"
-publishedAt: 2026-09-11
+publishedAt: 2026-09-12
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -15,4 +15,4 @@ Turboprop power levers don't behave like standard piston throttles! Discover how
 Watch the full guide here: https://youtu.be/lxHzNhVdLAo
 
 Original post: https://www.youtube.com/post/UgkxUJF6JDdhZnWrfAF_34I1-v-LAz4vHsr0
-Likes: 3 | Comments: 2
+Likes: 4 | Comments: 2
