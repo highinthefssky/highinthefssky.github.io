@@ -1,7 +1,7 @@
 ---
 title: "World Update 22: United States National Parks available!"
 description: "World Update 22: United States National Parks available! Looks like someone pushed the release button to early, wasn't this scheduled to be released on the 4th"
-publishedAt: 2026-07-18
+publishedAt: 2026-07-19
 tags: ["community", "youtube"]
 draft: false
 ---
