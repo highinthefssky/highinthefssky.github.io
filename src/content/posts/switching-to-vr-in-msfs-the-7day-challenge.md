@@ -1,7 +1,7 @@
 ---
 title: "🚀 Switching to VR in MSFS: The 7-Day Challenge! 🥽✈️"
 description: "🚀 Switching to VR in MSFS: The 7-Day Challenge! 🥽✈️ Ever wondered if Virtual Reality can truly replace your monitors for flight simulation? I’m putting it to th"
-publishedAt: 2026-08-17
+publishedAt: 2026-08-19
 tags: ["community", "youtube"]
 draft: false
 ---
