@@ -2,7 +2,7 @@
   "slug": "weekly-marketplace-updates",
   "title": "Weekly Marketplace Updates",
   "description": "Catch up on the latest additions to the MSFS marketplace each week — new aircraft, airports, liveries, scenery, and training missions.",
-  "thumbnail": "https://i.ytimg.com/vi/kM5TkQqwLE0/sddefault.jpg",
+  "thumbnail": "https://i.ytimg.com/vi/d9XWDqkhCAw/sddefault.jpg",
   "matchRules": {
     "titlePatterns": [
       "Weekly Update",
@@ -495,6 +495,7 @@
     "AYKdt4mWDhg",
     "-FpvioCmXpM",
     "sARTQ0HBypI",
-    "kM5TkQqwLE0"
+    "kM5TkQqwLE0",
+    "d9XWDqkhCAw"
   ]
 }
