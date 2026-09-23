@@ -13,4 +13,4 @@ draft: false
 Master the art of the crab-to-de-crab and sideslip techniques in our deep-dive crosswind tutorial!Watch the full guide here: [https://youtu.be/hzyEc7Xqwok
 
 Original post: https://www.youtube.com/post/UgkxnNNZFBXx1TLWzJCby831JbaRNsLwFsiz
-Likes: 1 | Comments: 0
+Likes: 2 | Comments: 0
