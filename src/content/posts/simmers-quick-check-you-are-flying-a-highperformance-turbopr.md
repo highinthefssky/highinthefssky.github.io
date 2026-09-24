@@ -1,7 +1,7 @@
 ---
 title: "🛫 Simmer's Quick Check: You are flying a high-performance turboprop (such as the"
 description: "🛫 Simmer's Quick Check: You are flying a high-performance turboprop (such as the Daher TBM 930 or Pilatus PC-12) on short final. You are slightly floating over"
-publishedAt: 2026-09-12
+publishedAt: 2026-09-11
 tags: ["community", "youtube"]
 draft: false
 ---
