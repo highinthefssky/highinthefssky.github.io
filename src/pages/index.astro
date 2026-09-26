@@ -1,5 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
+import { getImage } from 'astro:assets';
+import brandBanner from '../../public/high-in-the-flightsim-sky-banner-desktop.png';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Carousel from '../components/Carousel.astro';
 
@@ -33,30 +35,39 @@ function formatSubscriberCount(count: number): string {
 
 const subscriberDisplay = formatSubscriberCount(youtubeSubscribers);
 
-// Use the latest video thumbnail as OG image for homepage
-const sortedVideos = [...allVideos].sort(
-  (a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime()
-);
-const heroImage = sortedVideos[0]?.data.thumbnail;
+const bannerWidths = [480, 768, 1200, 1368];
+const bannerVariants = await Promise.all(['avif', 'webp'].map(async (format) => ({
+  format,
+  images: await Promise.all(bannerWidths.map((width) => getImage({
+    src: brandBanner,
+    width,
+    format: format as 'avif' | 'webp',
+    quality: 75,
+  }))),
+})));
+const bannerSizes = '(max-width: 768px) calc(100vw - 32px), (max-width: 1248px) calc(100vw - 48px), 1200px';
 
 ---
 
 <BaseLayout
-  title="Home"
+  title="MSFS Guides & Controller Profiles"
   description="Explore Microsoft Flight Simulator videos, controller configuration guides, curated playlists, and community posts with fast search and regular content updates."
-  image={heroImage}
-  imageAlt="High in the FlightSim Sky homepage featured video thumbnail"
 >
   <div class="home-page">
     <section class="hero" aria-labelledby="home-title">
       <div class="hero-shell">
         <picture class="hero-brand-art" aria-hidden="true">
-          <source media="(max-width: 768px)" srcset="/high-in-the-flightsim-sky-banner-mobile.png" />
+          {bannerVariants.map(({ format, images }) => (
+            <source type={`image/${format}`} srcset={images.map((image, index) => `${image.src} ${bannerWidths[index]}w`).join(', ')} sizes={bannerSizes} />
+          ))}
           <img
-            src="/high-in-the-flightsim-sky-banner-desktop.png"
+            src={bannerVariants[1].images[2].src}
             alt=""
-            width="1376"
-            height="768"
+            width={brandBanner.width}
+            height={brandBanner.height}
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
           />
         </picture>
         <div class="hero-content">
@@ -162,7 +173,7 @@ const heroImage = sortedVideos[0]?.data.thumbnail;
           <h3>Stay Connected</h3>
           <p>Join {subscriberDisplay} flight sim enthusiasts</p>
           <p class="cta-subtext">Subscribe for weekly drop-ins and new liveries.</p>
-          <a href="https://bit.ly/34eNWDP" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <a href="https://www.youtube.com/@Highintheflightsimsky" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
             Subscribe on YouTube
           </a>
           <a href="https://discord.gg/J3tZyhceUM" target="_blank" rel="noopener noreferrer" class="btn btn-discord">

@@ -1,4 +1,5 @@
 import { getCollection } from 'astro:content';
+import { VIDEO_PAGE_SIZE } from '../utils/videoPagination';
 
 export async function GET() {
   const baseUrl = 'https://highintheflightsimsky.nl';
@@ -7,6 +8,8 @@ export async function GET() {
   const posts = await getCollection('posts');
   const playlists = await getCollection('playlists');
   const tracks = await getCollection('tracks');
+  const controllers = await getCollection('controllers');
+  const presets = await getCollection('mozaProfiles');
 
   const staticPages = [
     { loc: '/', changefreq: 'daily', priority: '1.0' },
@@ -15,6 +18,10 @@ export async function GET() {
     { loc: '/tracks/', changefreq: 'weekly', priority: '0.8' },
     { loc: '/posts/', changefreq: 'daily', priority: '0.85' },
     { loc: '/controllers/', changefreq: 'weekly', priority: '0.85' },
+    { loc: '/controllers/moza/', changefreq: 'weekly', priority: '0.8' },
+    { loc: '/tools/community-folder-troubleshooter/', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/community2024/', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/contact/', changefreq: 'monthly', priority: '0.4' },
     { loc: '/feed/', changefreq: 'hourly', priority: '0.7' },
     { loc: '/privacy/', changefreq: 'monthly', priority: '0.4' },
     { loc: '/terms/', changefreq: 'monthly', priority: '0.4' },
@@ -26,7 +33,7 @@ export async function GET() {
     priority: '0.75',
   }));
 
-  const pageSize = 9;
+  const pageSize = VIDEO_PAGE_SIZE;
   const totalVideoPages = Math.ceil(videos.length / pageSize);
   const videoPaginationPages = Array.from({ length: Math.max(0, totalVideoPages - 1) }, (_, i) => i + 2).map((page) => ({
     loc: `/videos/page/${page}/`,
@@ -56,6 +63,8 @@ export async function GET() {
 
   const allPages = [
     ...staticPages,
+    ...controllers.map(({ id }) => ({ loc: `/controllers/download/xml/${id}/`, changefreq: 'monthly', priority: '0.6' })),
+    ...presets.map(({ id }) => ({ loc: `/controllers/download/preset/${id}/`, changefreq: 'monthly', priority: '0.6' })),
     ...videoPages,
     ...videoPaginationPages,
     ...postPages,

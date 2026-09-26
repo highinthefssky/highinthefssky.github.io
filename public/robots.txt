@@ -1,17 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: 
 Disallow: /*?tag=
-Disallow: /*?*tag=
+Disallow: /*?*&tag=
 
 Sitemap: https://highintheflightsimsky.nl/sitemap.xml
-
-# Crawl delay (in seconds)
-Crawl-delay: 1
-
-# User-agent specific rules
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /

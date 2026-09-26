@@ -4,19 +4,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import VideoCard from '../components/VideoCard.astro';
 import KeyboardShortcuts from '../components/KeyboardShortcuts.astro';
 import YouTubeBrandFeature from '../components/YouTubeBrandFeature.astro';
-import stats from '../content/stats.json';
+import VideoPagination from '../components/VideoPagination.astro';
+import { VIDEO_PAGE_SIZE } from '../utils/videoPagination';
 
 const allVideos = await getCollection('videos');
-const totalVideos = stats.totalVideos ?? allVideos.length;
+const totalVideos = allVideos.length;
 const sortedVideos = allVideos.sort(
   (a, b) =>
     new Date(b.data.publishedAt).getTime() -
     new Date(a.data.publishedAt).getTime()
 );
 
-const allTags = Array.from(
-  new Set(allVideos.flatMap((video) => video.data.tags))
-).sort();
+const totalPages = Math.ceil(totalVideos / VIDEO_PAGE_SIZE);
 
 // Use the latest video thumbnail as OG image
 const latestThumbnail = sortedVideos[0]?.data.thumbnail;
@@ -32,7 +31,7 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
       <YouTubeBrandFeature className="brand-feature" size="lg" />
     </div>
 
-    <div class="search-controls">
+    <div class="search-controls" hidden>
       <div class="search-box">
         <label class="search-label" for="search-input">Search videos</label>
         <div class="search-input-wrap">
@@ -51,7 +50,7 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
       <div class="filter-section">
         <div class="filter-header">
           <h3>Filter by Tags</h3>
-          <button id="toggle-tags" class="toggle-btn" type="button">▼</button>
+          <button id="toggle-tags" class="toggle-btn" type="button" aria-label="Filter by tags" aria-controls="tag-container" aria-expanded="false">▼</button>
         </div>
         <div class="tag-filter-container" id="tag-container" style="display: none;">
           <label class="search-label" for="tag-search">Search video tags</label>
@@ -62,23 +61,15 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
             class="tag-search-input"
             autocomplete="off"
           />
-          <div class="tags-list" id="tags-list">
-            {allTags.map((tag) => (
-              <button
-                class="tag-filter"
-                data-tag={tag}
-                type="button"
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
-          <div class="selected-tags" id="selected-tags"></div>
+          <div class="tags-list" id="tags-list"></div>
+          <p id="tag-status" role="status"></p>
+          <template id="tag-template"><button class="tag-filter" type="button" aria-pressed="false"></button></template>
         </div>
+        <div class="selected-tags" id="selected-tags"></div>
       </div>
 
       <div class="controls-footer">
-        <span id="result-count" class="result-count" data-total-videos={totalVideos}>
+        <span id="result-count" class="result-count" data-total-videos={totalVideos} role="status" aria-atomic="true">
           {totalVideos} videos
         </span>
         <button id="clear-btn" class="btn-clear" type="button">
@@ -88,15 +79,22 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
     </div>
 
     <div class="search-results">
-      <div class="videos-grid" id="videos-grid">
-        {sortedVideos.map((video) => (
+      <div id="search-error" role="alert" hidden>
+        <p>Search is unavailable. Please retry or browse the video pages.</p>
+        <button id="retry-search" type="button" class="btn-reset">Retry search</button>
+      </div>
+      <div class="videos-grid" id="videos-grid" tabindex="-1" aria-label="Video results" aria-busy="false">
+        {sortedVideos.slice(0, VIDEO_PAGE_SIZE).map((video) => (
           <VideoCard video={video} showBrandFeature={false} />
         ))}
       </div>
 
-      <div class="load-more-container" id="load-more-container">
+      <div id="archive-pagination"><VideoPagination page={1} totalPages={totalPages} /></div>
+      <div class="load-more-container" id="load-more-container" style="display: none;" role="group" aria-label="Search result pages">
+        <button id="search-previous" class="btn-load-more" type="button">Previous results</button>
+        <span id="search-page"></span>
         <button id="load-more-btn" class="btn-load-more" type="button">
-          Load more videos
+          Next results
         </button>
       </div>
 
@@ -111,7 +109,6 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
     { key: 'Esc', label: 'Clear all filters' },
     { key: 't', label: 'Toggle tag filters' },
   ]} />
-</BaseLayout>
 
 <style>
   .videos-page {
@@ -327,6 +324,8 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
     min-height: 1rem;
   }
 
+  .selected-tags:empty { display: none; }
+
   .selected-tags .tag-filter {
     font-size: 0.8rem;
     padding: 0.35rem 0.75rem;
@@ -381,6 +380,9 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
   .load-more-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
     margin-top: 2rem;
   }
 
@@ -403,6 +405,11 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
   }
+
+  .btn-load-more:disabled { opacity: 0.5; cursor: not-allowed; }
+  #videos-grid { scroll-margin-top: 6rem; }
+  #search-error { margin-bottom: 1.5rem; }
+  #tag-status { color: var(--text-muted); margin-top: 0.75rem; }
 
   .empty-state {
     text-align: center;
@@ -457,267 +464,6 @@ const latestThumbnail = sortedVideos[0]?.data.thumbnail;
   }
 </style>
 <script>
-  const searchInput = document.getElementById('search-input') as HTMLInputElement;
-  const tagSearchInput = document.getElementById('tag-search') as HTMLInputElement;
-  const toggleBtn = document.getElementById('toggle-tags') as HTMLButtonElement;
-  const tagContainer = document.getElementById('tag-container') as HTMLDivElement;
-  const tagButtons = document.querySelectorAll<HTMLButtonElement>('.tag-filter');
-  const videosGrid = document.getElementById('videos-grid') as HTMLDivElement;
-  const emptyState = document.getElementById('empty-state') as HTMLDivElement;
-  const videoCards = document.querySelectorAll<HTMLElement>('[data-tags]');
-  const resultCount = document.getElementById('result-count') as HTMLElement;
-  const clearBtn = document.getElementById('clear-btn') as HTMLButtonElement;
-  const resetBtn = document.getElementById('reset-btn') as HTMLButtonElement;
-  const selectedTagsContainer = document.getElementById('selected-tags') as HTMLDivElement;
-  const loadMoreBtn = document.getElementById('load-more-btn') as HTMLButtonElement;
-  const loadMoreContainer = document.getElementById('load-more-container') as HTMLDivElement;
-  const totalVideos = Number(resultCount?.getAttribute('data-total-videos') || '0');
-
-  const PAGE_SIZE = 24;
-  let visibleLimit = PAGE_SIZE;
-  let activeTags = new Set<string>();
-
-  function getInitialTagFromUrl(): string {
-    const params = new URLSearchParams(window.location.search);
-    const queryTag = params.get('tag')?.trim();
-    if (queryTag) return queryTag;
-
-    if (window.location.hash.startsWith('#tag=')) {
-      const hashTag = window.location.hash.slice('#tag='.length).trim();
-      if (hashTag) return decodeURIComponent(hashTag);
-    }
-
-    return '';
-  }
-
-  // Toggle tag filter visibility
-  toggleBtn?.addEventListener('click', () => {
-    const isOpen = tagContainer.style.display !== 'none';
-    tagContainer.style.display = isOpen ? 'none' : 'block';
-    toggleBtn.classList.toggle('open');
-  });
-
-  function normalizeString(str: string): string {
-    return str.toLowerCase().trim();
-  }
-
-  function parseSearchQuery(raw: string): { term: string; field: 'all' | 'title' | 'description' } {
-    const trimmed = raw.trim();
-    if (!trimmed) return { term: '', field: 'all' };
-    const lower = trimmed.toLowerCase();
-    if (lower.startsWith('title:')) {
-      return { term: trimmed.slice('title:'.length).trim(), field: 'title' };
-    }
-    if (lower.startsWith('description:')) {
-      return { term: trimmed.slice('description:'.length).trim(), field: 'description' };
-    }
-    return { term: trimmed, field: 'all' };
-  }
-
-  function updateSelectedTagsDisplay() {
-    selectedTagsContainer.innerHTML = '';
-    activeTags.forEach((tag) => {
-      const tagBtn = document.createElement('button');
-      tagBtn.className = 'tag-filter active';
-      tagBtn.textContent = `${tag} ✕`;
-      tagBtn.type = 'button';
-      tagBtn.addEventListener('click', () => {
-        activeTags.delete(tag);
-        document.querySelector(`[data-tag="${tag}"]`)?.classList.remove('active');
-        updateSelectedTagsDisplay();
-        updateDisplay();
-      });
-      selectedTagsContainer.appendChild(tagBtn);
-    });
-  }
-
-  function updateDisplay() {
-    const { term, field } = parseSearchQuery(searchInput.value || '');
-    const searchTerm = normalizeString(term);
-    const hasFilters = activeTags.size > 0 || !!searchInput.value.trim();
-
-    // First pass: determine which cards match the current filters
-    const matchingCards: HTMLElement[] = [];
-      videoCards.forEach((cardEl) => {
-      const tags = (cardEl.getAttribute('data-tags') || '')
-        .split(',')
-        .filter((t) => t)
-        .map(normalizeString);
-      const title = normalizeString(cardEl.querySelector('.card-title')?.textContent || '');
-      const description = normalizeString(cardEl.querySelector('.card-content')?.textContent || '');
-
-      const matchesSearch =
-        !searchTerm ||
-        (field === 'title' && title.includes(searchTerm)) ||
-        (field === 'description' && description.includes(searchTerm)) ||
-        (field === 'all' && (title.includes(searchTerm) || description.includes(searchTerm)));
-
-      const matchesTags =
-        activeTags.size === 0 ||
-        Array.from(activeTags).some((tag) => tags.includes(normalizeString(tag)));
-
-      if (matchesSearch && matchesTags) {
-        matchingCards.push(cardEl);
-      }
-    });
-
-    const totalMatching = hasFilters ? matchingCards.length : totalVideos;
-
-    // Second pass: show matching cards up to visibleLimit, hide the rest
-    let shown = 0;
-    videoCards.forEach((cardEl) => {
-      const isMatch = matchingCards.includes(cardEl);
-      if (isMatch && shown < visibleLimit) {
-        cardEl.style.display = '';
-        shown++;
-      } else {
-        cardEl.style.display = 'none';
-      }
-    });
-
-    resultCount!.textContent = `${totalMatching} ${totalMatching === 1 ? 'video' : 'videos'}`;
-    emptyState!.style.display = totalMatching === 0 ? 'block' : 'none';
-    videosGrid!.style.display = totalMatching === 0 ? 'none' : 'grid';
-    clearBtn!.disabled = !hasFilters;
-
-    // Show/hide Load More button
-    const allShown = shown >= matchingCards.length;
-    loadMoreContainer.style.display = allShown || totalMatching === 0 ? 'none' : 'flex';
-    if (!allShown) {
-      const remaining = matchingCards.length - shown;
-      loadMoreBtn.textContent = `Load more videos (${remaining} remaining)`;
-    }
-  }
-
-  // Tag search filter
-  tagSearchInput?.addEventListener('input', (e) => {
-    const searchTerm = normalizeString((e.target as HTMLInputElement).value);
-    tagButtons.forEach((btn) => {
-      const tagText = normalizeString(btn.getAttribute('data-tag') || '');
-      btn.style.display = !searchTerm || tagText.includes(searchTerm) ? '' : 'none';
-    });
-  });
-
-  // Load more button
-  loadMoreBtn?.addEventListener('click', () => {
-    visibleLimit += PAGE_SIZE;
-    updateDisplay();
-  });
-
-  searchInput?.addEventListener('input', () => {
-    visibleLimit = PAGE_SIZE;
-    updateDisplay();
-  });
-
-  // Allow Enter to trigger search without submitting anything
-  searchInput?.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      updateDisplay();
-    }
-  });
-
-  tagButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const tag = button.getAttribute('data-tag');
-      if (tag) {
-        if (activeTags.has(tag)) {
-          activeTags.delete(tag);
-          button.classList.remove('active');
-        } else {
-          activeTags.add(tag);
-          button.classList.add('active');
-        }
-        updateSelectedTagsDisplay();
-        visibleLimit = PAGE_SIZE;
-        updateDisplay();
-      }
-    });
-  });
-
-  clearBtn?.addEventListener('click', () => {
-    searchInput.value = '';
-    tagSearchInput.value = '';
-    activeTags.clear();
-    tagButtons.forEach((btn) => {
-      btn.classList.remove('active');
-      btn.style.display = '';
-    });
-    updateSelectedTagsDisplay();
-    visibleLimit = PAGE_SIZE;
-    updateDisplay();
-  });
-
-  resetBtn?.addEventListener('click', () => {
-    searchInput.value = '';
-    tagSearchInput.value = '';
-    activeTags.clear();
-    tagButtons.forEach((btn) => {
-      btn.classList.remove('active');
-      btn.style.display = '';
-    });
-    updateSelectedTagsDisplay();
-    visibleLimit = PAGE_SIZE;
-    updateDisplay();
-  });
-
-  // ── Keyboard shortcuts ──
-  document.addEventListener('keydown', (e) => {
-    const tag = (e.target as HTMLElement).tagName;
-    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') {
-      // Escape while inside an input: blur and clear
-      if (e.key === 'Escape') {
-        (e.target as HTMLElement).blur();
-      }
-      return;
-    }
-
-    // Don't fire shortcuts when the help overlay is open
-    if (document.getElementById('kbd-help')?.classList.contains('open')) return;
-
-    if (e.key === '/') {
-      e.preventDefault();
-      searchInput?.focus();
-    } else if (e.key === 'Escape') {
-      e.preventDefault();
-      searchInput.value = '';
-      tagSearchInput.value = '';
-      activeTags.clear();
-      tagButtons.forEach((btn) => {
-        btn.classList.remove('active');
-        btn.style.display = '';
-      });
-      updateSelectedTagsDisplay();
-      visibleLimit = PAGE_SIZE;
-      updateDisplay();
-    } else if (e.key === 't') {
-      e.preventDefault();
-      toggleBtn?.click();
-    }
-  });
-
-  // Initialize
-  const initialTag = getInitialTagFromUrl();
-  if (initialTag) {
-    const matchingTagButton = Array.from(tagButtons).find((button) =>
-      normalizeString(button.getAttribute('data-tag') || '') ===
-      normalizeString(initialTag)
-    ) as HTMLElement | undefined;
-
-    if (matchingTagButton) {
-      const canonicalTag = matchingTagButton.getAttribute('data-tag') || initialTag;
-      activeTags.add(canonicalTag);
-      matchingTagButton.classList.add('active');
-      tagContainer.style.display = 'block';
-      toggleBtn?.classList.add('open');
-      history.replaceState(
-        null,
-        '',
-        `${window.location.pathname}#tag=${encodeURIComponent(canonicalTag)}`
-      );
-    }
-  }
-
-  updateSelectedTagsDisplay();
-  updateDisplay();
+  import '../scripts/videoArchive';
 </script>
+</BaseLayout>

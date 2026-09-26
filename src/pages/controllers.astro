@@ -3,11 +3,10 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ConfigCard from '../components/ConfigCard.astro';
 import KeyboardShortcuts from '../components/KeyboardShortcuts.astro';
-import stats from '../content/stats.json';
 
 const allConfigs = await getCollection('controllers');
 const mozaProfiles = await getCollection('mozaProfiles');
-const totalControllers = (stats as { totalControllers?: number }).totalControllers ?? allConfigs.length;
+const totalControllers = allConfigs.length;
 const sortedConfigs = allConfigs.sort((a, b) =>
   a.data.controller.localeCompare(b.data.controller)
 );
@@ -29,7 +28,7 @@ const allControllers = Array.from(
     <div class="controllers-header">
       <h1>🎮 Controller Configurations</h1>
       <p>
-        Download ready-to-use control profiles for {totalControllers} different controller setups
+        {totalControllers} XML profiles across {allControllers.length} controller groups for MSFS 2024
       </p>
       <div class="header-info">
         <a 
@@ -62,13 +61,12 @@ const allControllers = Array.from(
           <h2>Moza Cockpit profiles</h2>
           <p>{sortedMozaProfiles.length} import-ready <code>.preset</code> profile{sortedMozaProfiles.length !== 1 ? 's' : ''} available.</p>
           <div class="moza-profile-list" aria-label="Available Moza controller profiles">
-            {sortedMozaProfiles.map(({ data: profile }) => (
+            {sortedMozaProfiles.map(({ id, data: profile }) => (
               <a
-                href={profile.downloadUrl}
-                download={profile.filename}
+                href={`/controllers/download/preset/${id}/`}
                 class="moza-profile-link"
                 data-profile-filename={profile.filename}
-                title={`Download ${profile.filename}`}
+                title={`Download and import details for ${profile.filename}`}
               >
                 <strong>{profile.device}</strong>
                 <span>{profile.aircraft}</span>
@@ -100,7 +98,7 @@ const allControllers = Array.from(
       <div class="filter-section">
         <div class="filter-header">
           <h3>Filter by Controller</h3>
-          <button id="toggle-controllers" class="toggle-btn" type="button">▼</button>
+          <button id="toggle-controllers" class="toggle-btn" type="button" aria-label="Filter by controller" aria-controls="controller-container" aria-expanded="false">▼</button>
         </div>
         <div class="filter-container" id="controller-container" style="display: none;">
           <div class="filter-list" id="controllers-list">
@@ -109,6 +107,7 @@ const allControllers = Array.from(
                 class="filter-btn controller-filter"
                 data-controller={controller}
                 type="button"
+                aria-pressed="false"
               >
                 {controller}
               </button>
@@ -120,7 +119,7 @@ const allControllers = Array.from(
       <div class="filter-section">
         <div class="filter-header">
           <h3>Filter by Tags</h3>
-          <button id="toggle-tags" class="toggle-btn" type="button">▼</button>
+          <button id="toggle-tags" class="toggle-btn" type="button" aria-label="Filter by tags" aria-controls="tag-container" aria-expanded="false">▼</button>
         </div>
         <div class="filter-container" id="tag-container" style="display: none;">
           <label class="search-label" for="tag-search">Search controller tags</label>
@@ -137,6 +136,7 @@ const allControllers = Array.from(
                 class="filter-btn tag-filter"
                 data-tag={tag}
                 type="button"
+                aria-pressed="false"
               >
                 {tag}
               </button>
@@ -148,7 +148,7 @@ const allControllers = Array.from(
       <div class="selected-filters" id="selected-filters"></div>
 
       <div class="controls-footer">
-        <span id="result-count" class="result-count" data-total-configs={totalControllers}>
+        <span id="result-count" class="result-count" data-total-configs={totalControllers} role="status" aria-atomic="true">
           {totalControllers} configurations
         </span>
         <button id="clear-btn" class="btn-clear" type="button">
@@ -176,7 +176,6 @@ const allControllers = Array.from(
     { key: 'c', label: 'Toggle controller filters' },
     { key: 't', label: 'Toggle tag filters' },
   ]} />
-</BaseLayout>
 
 <style>
   .controllers-page {
@@ -669,8 +668,8 @@ const allControllers = Array.from(
   const toggleTagsBtn = document.getElementById('toggle-tags') as HTMLButtonElement;
   const controllerContainer = document.getElementById('controller-container') as HTMLDivElement;
   const tagContainer = document.getElementById('tag-container') as HTMLDivElement;
-  const controllerButtons = document.querySelectorAll('.controller-filter');
-  const tagButtons = document.querySelectorAll('.tag-filter');
+  const controllerButtons = document.querySelectorAll<HTMLButtonElement>('.controller-filter');
+  const tagButtons = document.querySelectorAll<HTMLButtonElement>('.tag-filter');
   const configsGrid = document.getElementById('configs-grid');
   const emptyState = document.getElementById('empty-state');
   const configCards = document.querySelectorAll('.config-card');
@@ -688,12 +687,14 @@ const allControllers = Array.from(
     const isOpen = controllerContainer.style.display !== 'none';
     controllerContainer.style.display = isOpen ? 'none' : 'block';
     toggleControllersBtn.classList.toggle('open');
+    toggleControllersBtn.setAttribute('aria-expanded', String(!isOpen));
   });
 
   toggleTagsBtn?.addEventListener('click', () => {
     const isOpen = tagContainer.style.display !== 'none';
     tagContainer.style.display = isOpen ? 'none' : 'block';
     toggleTagsBtn.classList.toggle('open');
+    toggleTagsBtn.setAttribute('aria-expanded', String(!isOpen));
   });
 
   function normalizeString(str: string): string {
@@ -714,6 +715,12 @@ const allControllers = Array.from(
   }
 
   function updateSelectedFiltersDisplay() {
+    controllerButtons.forEach((button) => {
+      button.setAttribute('aria-pressed', String(activeControllers.has(button.dataset.controller || '')));
+    });
+    tagButtons.forEach((button) => {
+      button.setAttribute('aria-pressed', String(activeTags.has(button.dataset.tag || '')));
+    });
     selectedFiltersContainer.innerHTML = '';
     
     activeControllers.forEach((controller) => {
@@ -721,11 +728,14 @@ const allControllers = Array.from(
       filterBtn.className = 'filter-btn active';
       filterBtn.textContent = `${controller} ✕`;
       filterBtn.type = 'button';
+      filterBtn.setAttribute('aria-label', `Remove ${controller} filter`);
       filterBtn.addEventListener('click', () => {
         activeControllers.delete(controller);
-        document.querySelector(`[data-controller="${controller}"]`)?.classList.remove('active');
+        const originalButton = Array.from(controllerButtons).find((button) => button.dataset.controller === controller);
+        originalButton?.classList.remove('active');
         updateSelectedFiltersDisplay();
         updateDisplay();
+        (originalButton?.getClientRects().length ? originalButton : toggleControllersBtn)?.focus();
       });
       selectedFiltersContainer.appendChild(filterBtn);
     });
@@ -735,11 +745,14 @@ const allControllers = Array.from(
       filterBtn.className = 'filter-btn active';
       filterBtn.textContent = `${tag} ✕`;
       filterBtn.type = 'button';
+      filterBtn.setAttribute('aria-label', `Remove ${tag} filter`);
       filterBtn.addEventListener('click', () => {
         activeTags.delete(tag);
-        document.querySelector(`[data-tag="${tag}"]`)?.classList.remove('active');
+        const originalButton = Array.from(tagButtons).find((button) => button.dataset.tag === tag);
+        originalButton?.classList.remove('active');
         updateSelectedFiltersDisplay();
         updateDisplay();
+        (originalButton?.getClientRects().length ? originalButton : toggleTagsBtn)?.focus();
       });
       selectedFiltersContainer.appendChild(filterBtn);
     });
@@ -933,3 +946,4 @@ const allControllers = Array.from(
   updateSelectedFiltersDisplay();
   updateDisplay();
 </script>
+</BaseLayout>

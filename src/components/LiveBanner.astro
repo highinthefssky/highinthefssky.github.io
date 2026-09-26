@@ -10,6 +10,8 @@ const liveStatusUrl = import.meta.env.PUBLIC_LIVE_STATUS_URL || '';
   id="live-banner" 
   class="live-banner hidden"
   data-live-status-url={liveStatusUrl}
+  inert
+  aria-hidden="true"
 >
   <a id="live-banner-link" href="#" target="_blank" rel="noopener noreferrer" class="live-banner-content">
     <span class="live-indicator">
@@ -139,6 +141,8 @@ const liveStatusUrl = import.meta.env.PUBLIC_LIVE_STATUS_URL || '';
 
       this.link.href = `https://www.youtube.com/watch?v=${videoId}`;
       this.titleEl.textContent = title;
+      this.banner.inert = false;
+      this.banner.removeAttribute('aria-hidden');
       this.banner.classList.remove('hidden');
       this.banner.classList.add('visible');
 
@@ -148,6 +152,12 @@ const liveStatusUrl = import.meta.env.PUBLIC_LIVE_STATUS_URL || '';
 
     private hideBanner(): void {
       if (!this.banner) return;
+
+      if (this.banner.contains(document.activeElement)) {
+        document.querySelector<HTMLAnchorElement>('.navbar-logo')?.focus();
+      }
+      this.banner.inert = true;
+      this.banner.setAttribute('aria-hidden', 'true');
       
       this.banner.classList.add('hidden');
       this.banner.classList.remove('visible');
@@ -178,13 +188,11 @@ const liveStatusUrl = import.meta.env.PUBLIC_LIVE_STATUS_URL || '';
     }
   }
 
-  // Initialize when DOM is ready
-  document.addEventListener('DOMContentLoaded', () => {
-    new LiveBannerController();
-  });
-
-  // Also initialize immediately if DOM is already loaded
-  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      new LiveBannerController();
+    }, { once: true });
+  } else {
     new LiveBannerController();
   }
 </script>

@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 test('video detail page has embed, canonical, and schema', async ({ page }) => {
   await page.goto('/videos/');
 
-  const cards = page.locator('a.video-card');
+  const cards = page.locator('.video-card-link');
   await expect(cards.first()).toBeVisible();
 
   const hrefs = await cards.evaluateAll((els) =>

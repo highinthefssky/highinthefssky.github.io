@@ -7,7 +7,7 @@ test('controller page exposes synced Moza profiles', async ({ page }) => {
   await expect(profiles).toHaveCount(3);
   await expect(page.getByRole('link', { name: /AB6 A320 MSFS 2024/ })).toHaveAttribute(
     'href',
-    /ab6-a320-msfs2024\.preset$/
+    '/controllers/download/preset/ab6-a320-msfs2024/'
   );
 });
 

@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { config } = Astro.props;
-const { filename, controller, settingsType, description, aircraft, downloadUrl, tags } = config.data;
+const { filename, controller, settingsType, description, aircraft, tags } = config.data;
 
 const displaySettingsType = formatSettingsType(settingsType);
 // Keep data-settings as a stable code for selectors; data-settings-label carries display text.
@@ -139,13 +139,12 @@ function getSettingsTypeClass(settingsType: string): string {
       🧭 Use Wizard
     </a>
     <a
-      href={downloadUrl}
-      download={filename}
+      href={`/controllers/download/xml/${config.id}/`}
       class="btn-download"
-      title={`Download ${filename}`}
+      title={`Download and import details for ${filename}`}
     >
       <span class="download-icon">⬇️</span>
-      Download XML
+      XML &amp; import details
     </a>
   </div>
 </div>

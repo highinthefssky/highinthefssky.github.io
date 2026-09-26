@@ -1,8 +1,10 @@
 ---
+import { metaDescription as formatMetaDescription } from '../../utils/metaDescription';
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import YouTubeBrandFeature from '../../components/YouTubeBrandFeature.astro';
+import { videoDescriptionSegments } from '../../utils/videoDescription';
 
 export async function getStaticPaths() {
   const videos = await getCollection('videos');
@@ -92,7 +94,7 @@ const descriptionParagraphs = video.data.description
   .map((p) => p.trim())
   .filter((p) => p.length > 0);
 
-const metaDescription = video.data.description.replaceAll('\n', ' ').slice(0, 160);
+const metaDescription = formatMetaDescription(video.data.description, title);
 const pageUrl = new URL(`/videos/${video.id}/`, Astro.site).href;
 const videoStructuredData = {
   '@context': 'https://schema.org',
@@ -199,6 +201,7 @@ const breadcrumbStructuredData = {
           data-fav-id={videoId}
           title="Save to favorites"
           aria-label="Save to favorites"
+          aria-pressed="false"
           type="button"
         >
           <svg class="fav-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -220,7 +223,9 @@ const breadcrumbStructuredData = {
 
       <div class="video-description">
         {descriptionParagraphs.map((paragraph) => (
-          <p set:html={paragraph.replaceAll('\n', '<br />')} />
+          <p>{videoDescriptionSegments(paragraph).map((segment) => segment.href
+            ? <a href={segment.href} target="_blank" rel="noopener noreferrer">{segment.text}</a>
+            : segment.text)}</p>
         ))}
       </div>
     </div>
@@ -269,6 +274,9 @@ const breadcrumbStructuredData = {
         }
         var label = btn.querySelector('.fav-label');
         if (label) label.textContent = isSaved ? 'Saved' : 'Save';
+        btn.setAttribute('aria-pressed', String(isSaved));
+        btn.setAttribute('aria-label', isSaved ? 'Remove from favorites' : 'Save to favorites');
+        btn.setAttribute('title', isSaved ? 'Remove from favorites' : 'Save to favorites');
       }
 
       btn.addEventListener('click', function(e) {
@@ -283,7 +291,7 @@ const breadcrumbStructuredData = {
         }
         localStorage.setItem(STORAGE_KEY, JSON.stringify(favs));
         updateUI();
-        window.dispatchEvent(new Event('favs-changed'));
+        window.dispatchEvent(new Event('favorites-changed'));
       });
 
       updateUI();
@@ -470,6 +478,12 @@ const breadcrumbStructuredData = {
 
   .video-description p {
     margin: 0 0 1rem;
+    white-space: pre-line;
+  }
+
+  .video-description a {
+    text-decoration: underline;
+    overflow-wrap: anywhere;
   }
 
   .video-description p:last-child {

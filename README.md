@@ -78,6 +78,96 @@ npm run preview
 
 Visit `http://localhost:3000` to see your site.
 
+### Video Archive and Search
+
+The archive renders nine videos per static page, with ordinary pagination links
+that work without JavaScript. The shared page size in
+[src/utils/videoPagination.ts](src/utils/videoPagination.ts) also controls sitemap pagination.
+
+Search loads a build-generated MiniSearch index on first use and queries it in a
+Web Worker. It searches complete descriptions, titles, and tags. `title:`,
+`description:`, and `tags:` restrict the searched field; multiple words use AND
+matching with word-prefix support. Selected tag filters use exact,
+case-insensitive OR matching. Results remain newest-first and are rendered in
+pages of at most 24 cards. Search and selected tags are retained in the URL hash;
+legacy `?tag=` links remain supported.
+
+The tag list loads separately when expanded and displays at most 60 matching
+tags. Search failures leave static browsing available and offer a retry.
+No external search service or search analytics is used.
+
+Run a fresh `npm run build` before
+`npx playwright test tests/e2e/video-search.spec.ts`. These tests verify static
+archive coverage, description-only matches, lazy loading, favorites, retry,
+mobile reflow, and HTML/index size budgets.
+
+### Controller Matching and Downloads
+
+The wizard ranks the full video collection at build time. Each controller,
+aircraft, and goal combination has a compact static JSON response, fetched only
+when requested. Ranking rules live in
+[src/lib/controllerMatches.ts](src/lib/controllerMatches.ts); XML results are
+restricted to the selected controller group. Controller groups can include
+multiple models, so users must still check the filename and aircraft details.
+
+Controller cards, wizard results, and Moza listings lead to profile-specific
+download pages. The download button fetches the original file and uses a local
+Blob URL to preserve its filename. Failed requests offer retry and an original-file
+link; import guidance and source links also work without JavaScript.
+
+Moza presets are imported into Moza Cockpit, separately from MSFS XML bindings.
+XML download pages follow the [official Microsoft Flight Simulator Support guide](https://flightsimulator.zendesk.com/hc/en-us/articles/21862909046428-How-to-Export-and-Import-your-controller-profiles):
+open Settings > Controls, select the original controller and matching profile
+category, then use the profile cogwheel to Export a backup or Import the file.
+Backups should be saved outside the simulator installation directory. General,
+Airplane, and Helicopter Controls profiles are not interchangeable.
+
+After `npm run build`, run
+`npx playwright test tests/e2e/controller-journey.spec.ts` for ranking, payload,
+retry/cancellation, download filename/byte preservation, and mobile fallback checks.
+
+### Privacy-Focused Analytics
+
+Plausible integration is **disabled by default**. No account has been created
+and enabling it requires a new build. It runs only on
+`https://highintheflightsimsky.nl`, never localhost or preview domains.
+
+Activation steps:
+
+1. Add `highintheflightsimsky.nl` as a site in your hosted Plausible account, with a plan supporting custom events.
+2. Review the provider's [data policy](https://plausible.io/data-policy), [DPA](https://plausible.io/dpa), and your applicable privacy/consent obligations before activation. Provider claims are not a blanket legal determination for this website.
+3. Create custom event goals with these exact names: `Wizard Results`, `XML Download Started`, `Preset Download Started`, and `YouTube Click`.
+4. Analytics is explicitly pinned off in [.github/workflows/deploy.yml](.github/workflows/deploy.yml). After approval to activate it, replace that build step's `PUBLIC_ANALYTICS_ENABLED: 'false'` with `PUBLIC_ANALYTICS_ENABLED: ${{ vars.PUBLIC_ANALYTICS_ENABLED }}` and set the matching repository Actions variable to `true`. Deploy through the normal reviewed release process. No API key or analytics secret is needed. Keep the workflow value `false` to leave it off; after activation, unset the repository variable or set it to `false` and rebuild/deploy to disable collection.
+5. Verify events in the Plausible dashboard on the production site. An HTTP 202 response alone is not proof of ingestion; Plausible may silently drop filtered events. Do not install a second tracking snippet.
+
+The small first-party client uses the documented [Events API](https://plausible.io/docs/events-api)
+instead of the default script so URLs can be strictly minimized. It sends only
+fixed event names, the registered domain, and allowlisted page categories.
+Detail pages are grouped (for example `/videos/detail/`), pagination is grouped,
+and favorites, search redirects, and unknown routes are excluded. Query strings,
+hashes, campaign parameters, referrers, video metadata, filenames, form contents,
+and local favorites/progress are never included. This intentionally sacrifices
+campaign attribution and per-video reports. Only direct YouTube links are counted;
+shortened links and embedded player interactions are not measured.
+
+Requests omit cookies and referrer headers. Plausible still receives IP and
+User-Agent data and uses them for device/location statistics and daily
+site-specific identifiers, as disclosed on the privacy page. No persistent
+analytics identifier is created. Do Not Track, Global Privacy Control, and the
+privacy-page opt-out suppress events. The opt-out stores only
+`analytics-opt-out=true` locally; clearing browser storage removes that preference.
+If storage cannot be read, analytics fails closed. Blocked requests do not affect
+browsing or downloads and are not retried or proxied around blockers.
+
+Start with a 2-4 week baseline of page categories, displayed wizard results,
+download starts, and outbound YouTube clicks. A download start does not prove a
+file was saved or imported, and a YouTube click does not prove a video was watched.
+Use these counts to prioritize subsequent usability work, not as proof of growth.
+
+After `npm run build`, run `npx playwright test tests/e2e/analytics.spec.ts`.
+Enabled-path tests mock the production origin and intercept all provider traffic;
+CI builds remain unconfigured and no test events are sent to Plausible.
+
 ## 📁 Project Structure
 
 ```text

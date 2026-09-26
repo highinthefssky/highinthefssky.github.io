@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const analyticsEnabled = import.meta.env.PUBLIC_ANALYTICS_ENABLED === 'true';
 ---
 
 <BaseLayout
@@ -39,8 +40,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <section>
       <h2>Data Collection and Processing</h2>
       <p>
-        Our website is a static site hosted on GitHub Pages. We do not collect
-        personal information directly. However:
+        Our website is a static site hosted on GitHub Pages. The services below
+        process public content, technical request data, or information you choose to submit:
       </p>
       <ul>
         <li>
@@ -74,16 +75,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           GitHub's privacy policy for hosting-related data practices.
         </li>
         <li>
-          <strong>Third-party Analytics:</strong> If implemented, we use
-          analytics services to understand usage patterns.
-        </li>
-        <li>
           <strong>Contact Form:</strong> If enabled, form submissions are
           processed by a third-party form provider. Data you submit (such as
           name, email, and message) is handled according to that provider's
           privacy policy.
         </li>
       </ul>
+    </section>
+
+    <section aria-labelledby="analytics-heading">
+      <h2 id="analytics-heading">Privacy-Focused Analytics</h2>
+      <p>{analyticsEnabled
+        ? 'We use Plausible Analytics to understand aggregate website usage and improve our resources.'
+        : 'Visitor analytics is currently disabled. The following describes the optional Plausible Analytics integration and your controls if it is enabled.'}</p>
+      <p>When enabled, we send broad page categories and counts of displayed wizard results, started XML or preset downloads, and outbound YouTube link clicks. We do not send search text, query strings, URL fragments, filenames, video titles or IDs, form contents, saved favorites, or referring page URLs. Favorites and unrecognized pages are excluded.</p>
+      <p>Plausible receives the IP address and browser User-Agent as part of the network request. According to its data policy, it uses these for approximate location, device statistics, and a daily site-specific visitor identifier, without storing the raw IP address or User-Agent. It stores event and session records and presents aggregate reports; visitor data is processed and stored in the EU.</p>
+      <p>This integration sets no analytics cookies or persistent visitor identifier. We honor Do Not Track and Global Privacy Control signals and the opt-out below. See <a href="https://plausible.io/data-policy" target="_blank" rel="noopener noreferrer">Plausible's data policy</a> for provider details.</p>
+      <label><input id="analytics-opt-out" type="checkbox" disabled /> Disable analytics in this browser</label>
+      <p id="analytics-preference-status" role="status" aria-atomic="true"></p>
+      <noscript><p>Analytics does not run when JavaScript is disabled.</p></noscript>
     </section>
 
     <section>
@@ -99,6 +109,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         This data is never transmitted to our servers. Specifically:
       </p>
       <ul>
+        <li>
+          <strong>Analytics opt-out</strong> (<code>analytics-opt-out</code>): Remembers your choice to disable analytics in this browser. It is not sent to Plausible and is not a visitor identifier. Clearing browser storage removes this preference.
+        </li>
         <li>
           <strong>Theme preference</strong> (<code>theme</code>): Stores your
           light/dark mode choice so it persists across visits.
@@ -160,7 +173,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
     </section>
 
-    <p><strong>Last Modified:</strong> May 2026</p>
+    <p><strong>Last Modified:</strong> September 26, 2026</p>
   </div>
 </BaseLayout>
 

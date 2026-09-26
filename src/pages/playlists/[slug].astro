@@ -1,4 +1,5 @@
 ---
+import { metaDescription as formatMetaDescription } from '../../utils/metaDescription';
 import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -35,7 +36,7 @@ function formatDuration(seconds: number): string {
 }
 
 const firstVideo = videos[0];
-const metaDescription = playlist.description.slice(0, 160);
+const metaDescription = formatMetaDescription(playlist.description, playlist.title);
 const ogImage = playlist.thumbnail || firstVideo?.data.thumbnail || '';
 const pageUrl = new URL(`/playlists/${playlist.slug}/`, Astro.site).href;
 const breadcrumbStructuredData = {

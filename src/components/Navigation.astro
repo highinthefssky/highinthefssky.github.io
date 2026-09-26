@@ -1,11 +1,13 @@
 ---
 import ThemeToggle from './ThemeToggle.astro';
+import { Image } from 'astro:assets';
+import brandLogo from '../../public/high-in-the-flightsim-sky-logo.PNG';
 ---
 
 <nav class="navbar">
   <div class="navbar-container">
     <a href="/" class="navbar-logo">
-      <img src="/high-in-the-flightsim-sky-logo.PNG" alt="" width="48" height="48" />
+      <Image src={brandLogo} alt="" width={48} height={48} widths={[48, 96]} sizes="40px" format="webp" quality={80} />
       <span>High in the FlightSim Sky</span>
     </a>
     <button
@@ -476,6 +478,7 @@ import ThemeToggle from './ThemeToggle.astro';
     }
 
     .dropdown-menu {
+      display: none;
       position: static;
       width: auto;
       max-width: none;
@@ -484,6 +487,7 @@ import ThemeToggle from './ThemeToggle.astro';
     }
 
     .dropdown-menu.active {
+      display: flex;
       transform: none;
     }
   }

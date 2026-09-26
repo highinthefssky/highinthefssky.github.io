@@ -1,0 +1,134 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { formatSettingsType } from '../../../../utils/controllerSettings';
+
+export async function getStaticPaths() {
+  const configs = await getCollection('controllers');
+  const presets = await getCollection('mozaProfiles');
+  return [
+    ...configs.map(({ id, data }) => ({ params: { kind: 'xml', id }, props: {
+      filename: data.filename, device: data.controller, aircraft: data.aircraft || 'Generic',
+      version: '2024', settings: formatSettingsType(data.settingsType), downloadUrl: data.downloadUrl,
+    } })),
+    ...presets.map(({ id, data }) => ({ params: { kind: 'preset', id }, props: {
+      filename: data.filename, device: data.device, aircraft: data.aircraft,
+      version: data.msfsVersion, settings: 'Moza Cockpit preset', downloadUrl: data.downloadUrl,
+    } })),
+  ];
+}
+
+const { filename, device, aircraft, version, settings, downloadUrl } = Astro.props;
+const isXml = Astro.params.kind === 'xml';
+const format = isXml ? 'XML' : '.preset';
+const repository = `https://github.com/highinthefssky/${isXml ? 'msfs-2024-controls-settings' : 'moza-flight-profiles'}`;
+---
+
+<BaseLayout title={`${device} - ${aircraft} ${format} profile`} description={`Download ${settings} for ${device}, ${aircraft}, in MSFS ${version}. Check compatibility, preserve your existing settings, and review import guidance.`}>
+  <div class="download-page">
+    <nav aria-label="Breadcrumb"><a href="/controllers/">Controller configs</a> / {isXml ? 'XML profile' : <a href="/controllers/moza/">Moza profiles</a>}</nav>
+    <header>
+      <h1>{device}</h1>
+      <p class="profile-subtitle">{aircraft} - {settings}</p>
+    </header>
+    <dl>
+      <div><dt>Simulator</dt><dd>Microsoft Flight Simulator {version}</dd></div>
+      <div><dt>Import destination</dt><dd>{isXml ? 'MSFS controller bindings' : 'Moza Cockpit'}</dd></div>
+      <div><dt>File</dt><dd><code id="profile-filename">{filename}</code></dd></div>
+    </dl>
+    <div class="download-actions">
+      <button id="profile-download" type="button" data-url={downloadUrl} data-filename={filename} data-kind={Astro.params.kind} hidden>Download {format}</button>
+      <a href={downloadUrl} target="_blank" rel="noopener noreferrer" id="profile-source">Open original file</a>
+      <a href={repository} target="_blank" rel="noopener noreferrer">Source repository</a>
+    </div>
+    <p id="download-status" role="status" aria-atomic="true"></p>
+    <section aria-labelledby="compatibility-heading">
+      <h2 id="compatibility-heading">Before Importing</h2>
+      <ul>
+        <li>Match the exact device, aircraft, simulator version, and settings type above. The filename may identify a more specific model than the controller group.</li>
+        <li>Back up or duplicate your current profile and keep it available for rollback.</li>
+        <li>{isXml ? 'This XML contains simulator bindings, not a Moza force-feedback preset. Do not place it in the Community folder.' : 'This preset belongs in Moza Cockpit, not the MSFS Controls menu or Community folder.'}</li>
+      </ul>
+    </section>
+    <section aria-labelledby="import-heading">
+      <h2 id="import-heading">{isXml ? 'Import in MSFS 2024' : 'Import in Moza Cockpit'}</h2>
+      {isXml ? <>
+        <p>Imports require the same controller the profile was created for. The category must also match: General Controls, Airplane Controls, or Helicopter Controls. These categories are not interchangeable.</p>
+        <ol>
+          <li>Start Microsoft Flight Simulator 2024 and open <strong>Settings &gt; Controls</strong>.</li>
+          <li>Select the matching controller and profile category. Check this file's settings type: <strong>{settings}</strong>.</li>
+          <li>Open the cogwheel beside the current profile name and choose <strong>Export</strong> to back it up. Save the backup outside the simulator installation directory so a reinstall will not remove it.</li>
+          <li>Open the profile cogwheel again, choose <strong>Import</strong>, then locate and select the downloaded <code>{filename}</code>.</li>
+        </ol>
+        <p>Source: <a href="https://flightsimulator.zendesk.com/hc/en-us/articles/21862909046428-How-to-Export-and-Import-your-controller-profiles" target="_blank" rel="noopener noreferrer">Microsoft Flight Simulator Support: How to Export and Import your controller profiles</a>.</p>
+      </> : <ol>
+        <li>Open Moza Cockpit and select the matching device.</li>
+        <li>Open the device's profile import control and select <code>{filename}</code>. Menu labels may vary by Cockpit version.</li>
+        <li>Review the imported settings before activating the profile. Keep your previous profile available.</li>
+      </ol>}
+    </section>
+    <section aria-labelledby="verify-heading">
+      <h2 id="verify-heading">Verify and Roll Back</h2>
+      <p>Start with the aircraft parked. Check axis direction, centering, throttle travel, brakes, and button assignments. For force feedback, begin with conservative strength settings.</p>
+      <p>If controls behave unexpectedly, switch back to your saved profile and check duplicate bindings, device selection, and aircraft compatibility before trying again.</p>
+    </section>
+    <section aria-labelledby="trouble-heading">
+      <h2 id="trouble-heading">Download Problems</h2>
+      <p>If the download fails, retry or open the original file. If it opens as text, use your browser's Save As command and retain the exact filename and extension shown above, without an extra <code>.txt</code> suffix.</p>
+    </section>
+  </div>
+
+<script>
+  const button = document.querySelector<HTMLButtonElement>('#profile-download')!;
+  const status = document.querySelector<HTMLElement>('#download-status')!;
+  button.hidden = false;
+  const initialLabel = button.textContent;
+  button.addEventListener('click', async () => {
+    button.disabled = true;
+    status.textContent = 'Preparing download...';
+    try {
+      const response = await fetch(button.dataset.url!, { signal: AbortSignal.timeout(30_000) });
+      if (!response.ok) throw new Error('File unavailable');
+      const blob = await response.blob();
+      if (!blob.size || blob.type.includes('text/html')) throw new Error('Invalid file');
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = button.dataset.filename!;
+      document.body.append(link);
+      link.click();
+      link.remove();
+      window.dispatchEvent(new CustomEvent('site-analytics-event', { detail: button.dataset.kind === 'xml' ? 'XML Download Started' : 'Preset Download Started' }));
+      setTimeout(() => URL.revokeObjectURL(url), 60_000);
+      status.textContent = 'Download started. Check your browser downloads, then review the import guidance below.';
+      button.textContent = initialLabel;
+    } catch {
+      status.textContent = 'The file could not be downloaded. Retry or open the original file below.';
+      button.textContent = 'Retry download';
+    } finally {
+      button.disabled = false;
+    }
+  });
+</script>
+</BaseLayout>
+
+<style>
+  .download-page { max-width: 960px; margin: 0 auto; padding: 2rem 1rem 3rem; overflow-wrap: anywhere; }
+  nav { margin-bottom: 1.5rem; color: var(--text-muted); }
+  h1 { font-size: 2rem; color: var(--text-heading); margin-bottom: 0.5rem; }
+  h2 { font-size: 1.25rem; color: var(--text-heading); margin-bottom: 0.75rem; }
+  .profile-subtitle { font-size: 1.125rem; }
+  dl { margin: 1.5rem 0; display: grid; gap: 1rem; }
+  dl > div { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 1rem; }
+  dt { font-weight: 600; } dd { margin: 0; }
+  .download-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  button { padding: 0.75rem 1rem; border: 1px solid var(--accent); border-radius: 0.375rem; background: var(--bg-surface); color: var(--accent); cursor: pointer; font: inherit; }
+  button:disabled { opacity: 0.6; cursor: wait; }
+  button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  a { color: var(--accent); text-decoration: underline; }
+  section { border-top: 1px solid var(--border-default); margin-top: 1.5rem; padding-top: 1.5rem; }
+  p, li { line-height: 1.65; margin-bottom: 0.75rem; }
+  ul, ol { padding-left: 1.5rem; } ul { list-style: disc; } ol { list-style: decimal; }
+  #download-status { min-height: 1.65rem; margin-top: 0.75rem; }
+  @media (max-width: 600px) { dl > div { grid-template-columns: 1fr; gap: 0.25rem; } }
+</style>

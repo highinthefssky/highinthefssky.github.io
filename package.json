@@ -20,6 +20,8 @@
     "@astrojs/rss": "^4.0.19",
     "astro": "^7.2.8",
     "google-auth-library": "^10.6.2",
+    "linkifyjs": "^4.3.3",
+    "minisearch": "^7.2.0",
     "typescript": "^6.0.3",
     "zod": "^3.25.76"
   },

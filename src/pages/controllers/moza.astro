@@ -105,6 +105,7 @@ async function fetchRemoteProfiles(): Promise<MozaProfileData[]> {
 }
 
 const localProfiles = await getCollection('mozaProfiles');
+const profilePages = new Map(localProfiles.map(({ id, data }) => [data.filename, `/controllers/download/preset/${id}/`]));
 const remoteProfiles = localProfiles.length === 0 ? await fetchRemoteProfiles() : [];
 const profiles: MozaProfileData[] =
   localProfiles.length > 0 ? localProfiles.map((entry) => entry.data) : remoteProfiles;
@@ -261,12 +262,11 @@ const allVersions = Array.from(new Set(profiles.map((p) => p.msfsVersion))).sort
 
             <div class="card-footer">
               <a
-                href={downloadUrl}
-                download={filename}
+                href={profilePages.get(filename) || downloadUrl}
                 class="download-btn"
                 rel="noopener noreferrer"
               >
-                ⬇️ Download .preset
+                {profilePages.has(filename) ? '.preset & import details' : 'Open original .preset'}
               </a>
             </div>
           </div>

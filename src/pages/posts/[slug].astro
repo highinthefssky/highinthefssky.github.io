@@ -1,4 +1,5 @@
 ---
+import { metaDescription as formatMetaDescription } from '../../utils/metaDescription';
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
@@ -47,11 +48,7 @@ function normalizeMetaDescription(baseDescription: string, postTitle: string, po
     candidate = `${candidate} Read this Microsoft Flight Simulator community post for practical insights and channel updates.${tagSnippet}`;
   }
 
-  if (candidate.length > 160) {
-    return `${candidate.slice(0, 157).trimEnd()}...`;
-  }
-
-  return candidate;
+  return formatMetaDescription(candidate, fallback);
 }
 
 const metaDescription = normalizeMetaDescription(description, title, tags);

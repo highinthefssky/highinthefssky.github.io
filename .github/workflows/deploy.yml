@@ -45,6 +45,7 @@ jobs:
         run: npm run build
         env:
           PUBLIC_LIVE_STATUS_URL: ${{ vars.PUBLIC_LIVE_STATUS_URL }}
+          PUBLIC_ANALYTICS_ENABLED: 'false'
 
       - name: Upload Playwright artifacts on failure
         if: ${{ failure() }}
