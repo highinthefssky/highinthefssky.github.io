@@ -8,6 +8,7 @@ A beautiful, performant static site built with Astro for showcasing YouTube vide
 - **Featured Carousel**: Eye-catching carousel of featured videos on the homepage
 - **🔴 Live Stream Detection**: Automatic "LIVE NOW" banner when streaming on YouTube
 - **🎮 Controller Configs**: Downloadable MSFS 2024 controller configuration files
+- **🎙️ SimVoice Packs**: Downloadable SimVoice Copilot Community Packs with import guidance
 - **Community Posts**: Markdown-based blog for community updates and discussions
 - **Full-Text Search**: Fast client-side search across video titles and descriptions
 - **Tag Filtering**: Filter content by tags for better discoverability
@@ -126,6 +127,18 @@ After `npm run build`, run
 `npx playwright test tests/e2e/controller-journey.spec.ts` for ranking, payload,
 retry/cancellation, download filename/byte preservation, and mobile fallback checks.
 
+### SimVoice Copilot Community Packs
+
+Pack metadata lives in `src/content/simvoice-packs/`, while downloadable
+`.svcpack` files belong in `public/downloads/simvoice-community-packs/`. Each
+metadata entry supplies the filename, compatibility details, included content,
+and local download path shown on `/simvoice-packs/`.
+
+Keep the file version in the metadata and filename synchronized. The page follows
+the [official Community Packs import workflow](https://simvoicecopilot.com/help/manual/en#community-packs):
+open Community Packs in SimVoice Copilot, choose Import, select the `.svcpack`,
+review compatible content and conflicts, and select Import Pack.
+
 ### Privacy-Focused Analytics
 
 Plausible integration is **disabled by default**. No account has been created
@@ -136,7 +149,7 @@ Activation steps:
 
 1. Add `highintheflightsimsky.nl` as a site in your hosted Plausible account, with a plan supporting custom events.
 2. Review the provider's [data policy](https://plausible.io/data-policy), [DPA](https://plausible.io/dpa), and your applicable privacy/consent obligations before activation. Provider claims are not a blanket legal determination for this website.
-3. Create custom event goals with these exact names: `Wizard Results`, `XML Download Started`, `Preset Download Started`, and `YouTube Click`.
+3. Create custom event goals with these exact names: `Wizard Results`, `XML Download Started`, `Preset Download Started`, `Community Pack Download Started`, and `YouTube Click`.
 4. Analytics is explicitly pinned off in [.github/workflows/deploy.yml](.github/workflows/deploy.yml). After approval to activate it, replace that build step's `PUBLIC_ANALYTICS_ENABLED: 'false'` with `PUBLIC_ANALYTICS_ENABLED: ${{ vars.PUBLIC_ANALYTICS_ENABLED }}` and set the matching repository Actions variable to `true`. Deploy through the normal reviewed release process. No API key or analytics secret is needed. Keep the workflow value `false` to leave it off; after activation, unset the repository variable or set it to `false` and rebuild/deploy to disable collection.
 5. Verify events in the Plausible dashboard on the production site. An HTTP 202 response alone is not proof of ingestion; Plausible may silently drop filtered events. Do not install a second tracking snippet.
 

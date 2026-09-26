@@ -19,7 +19,7 @@ test('sitemap includes public tools and excludes private or redirect pages', asy
     (element) => element.textContent,
   ), await sitemap.text());
   expect(new Set(locations).size).toBe(locations.length);
-  for (const path of ['/controllers/moza/', '/tools/community-folder-troubleshooter/', '/community2024/', '/contact/']) {
+  for (const path of ['/controllers/moza/', '/simvoice-packs/', '/tools/community-folder-troubleshooter/', '/community2024/', '/contact/']) {
     const canonical = `https://highintheflightsimsky.nl${path}`;
     expect(locations).toContain(canonical);
     await page.goto(path);

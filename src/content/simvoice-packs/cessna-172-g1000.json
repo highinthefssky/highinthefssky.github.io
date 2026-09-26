@@ -1,0 +1,21 @@
+{
+  "filename": "Cessna 172 G1000-1.0.0.svcpack",
+  "name": "Cessna 172 G1000",
+  "description": "Voice profile with H-events and advanced workflows for the Cessna 172 G1000.",
+  "author": "High in the FlightSim Sky",
+  "version": "1.0.0",
+  "minimumSvcVersion": "1.1.6.0",
+  "language": "English (United States)",
+  "simulatorVersion": "MSFS 2020 / MSFS 2024",
+  "aircraftScope": "Cessna 172 G1000",
+  "downloadPath": "/downloads/simvoice-community-packs/Cessna%20172%20G1000-1.0.0.svcpack",
+  "videoUrl": "https://youtu.be/zpGeFzoI9I0",
+  "includedContent": [
+    "Voice profile",
+    "Advanced Actions",
+    "Command Groups",
+    "Keyboard Commands",
+    "SimVar Call-outs"
+  ],
+  "tags": ["Cessna 172", "G1000", "general aviation", "MSFS 2020", "MSFS 2024"]
+}

@@ -1,0 +1,461 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const packs = (await getCollection('simVoicePacks')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name)
+);
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'SimVoice Copilot Community Packs',
+  description: 'Download community-created SimVoice Copilot packs and learn how to import them.',
+  url: new URL('/simvoice-packs/', Astro.site).href,
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: packs.length,
+    itemListElement: packs.map(({ data: pack }, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: `${pack.name} ${pack.version}`,
+      url: new URL(pack.downloadPath, Astro.site).href,
+    })),
+  },
+};
+---
+
+<BaseLayout
+  title="SimVoice Copilot Community Packs"
+  description="Download SimVoice Copilot Community Packs for Microsoft Flight Simulator and follow the step-by-step import instructions."
+  structuredData={structuredData}
+>
+  <div class="packs-page">
+    <header class="packs-header">
+      <div class="eyebrow">Community downloads</div>
+      <h1>🎙️ SimVoice Copilot Community Packs</h1>
+      <p class="intro">
+        Download ready-to-import <code>.svcpack</code> files with voice profiles,
+        actions, commands, and call-outs for Microsoft Flight Simulator.
+      </p>
+      <div class="header-meta">
+        <span>{packs.length} community pack{packs.length === 1 ? '' : 's'}</span>
+        <span aria-hidden="true">•</span>
+        <a href="#import-instructions">How to import</a>
+        <span aria-hidden="true">•</span>
+        <a href="https://simvoicecopilot.com/help/manual/en#community-packs" target="_blank" rel="noopener noreferrer">
+          Official manual
+        </a>
+      </div>
+    </header>
+
+    <section aria-labelledby="available-packs">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">Downloads</span>
+          <h2 id="available-packs">Available packs</h2>
+        </div>
+        <p>Check the required SimVoice version and aircraft before importing.</p>
+      </div>
+
+      <div class="packs-grid">
+        {packs.map(({ data: pack }) => (
+          <article class="pack-card" data-pack-filename={pack.filename}>
+            <div class="pack-card-top">
+              <div class="pack-icon" aria-hidden="true">🎙️</div>
+              <div>
+                <h3>{pack.name}</h3>
+                <p class="version">Version {pack.version}</p>
+              </div>
+            </div>
+
+            <p class="pack-description">{pack.description}</p>
+
+            <dl class="pack-details">
+              <div>
+                <dt>Aircraft</dt>
+                <dd>{pack.aircraftScope}</dd>
+              </div>
+              <div>
+                <dt>Simulator</dt>
+                <dd>{pack.simulatorVersion}</dd>
+              </div>
+              <div>
+                <dt>Requires</dt>
+                <dd>SimVoice Copilot {pack.minimumSvcVersion} or newer</dd>
+              </div>
+              <div>
+                <dt>Language</dt>
+                <dd>{pack.language}</dd>
+              </div>
+            </dl>
+
+            <div class="included">
+              <h4>Included content</h4>
+              <ul>
+                {pack.includedContent.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+
+            <div class="tags" aria-label="Pack tags">
+              {pack.tags.map((tag) => <span>{tag}</span>)}
+            </div>
+
+            <div class="pack-actions">
+              <a
+                class="download-button"
+                href={pack.downloadPath}
+                download={pack.filename}
+                data-pack-download
+              >
+                Download {pack.name}
+              </a>
+              {pack.videoUrl && (
+                <a href={pack.videoUrl} target="_blank" rel="noopener noreferrer" class="secondary-link">
+                  Watch demonstration
+                </a>
+              )}
+            </div>
+            <p class="filename"><span>File:</span> {pack.filename}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="instructions" id="import-instructions" aria-labelledby="import-heading">
+      <div class="instructions-copy">
+        <span class="section-kicker">Step by step</span>
+        <h2 id="import-heading">How to import a Community Pack</h2>
+        <p>
+          Import packs through SimVoice Copilot itself. You do not need to extract
+          the <code>.svcpack</code> file or copy its contents manually.
+        </p>
+        <ol>
+          <li>Download the <code>.svcpack</code> file and remember where you saved it.</li>
+          <li>Open <strong>SimVoice Copilot</strong> and select <strong>Community Packs</strong> from the main window.</li>
+          <li>Select the <strong>Import</strong> tab, then browse to the downloaded <code>.svcpack</code> file.</li>
+          <li>Review the human-readable preview and confirm which compatible content should be imported.</li>
+          <li>If SimVoice reports a conflict for shared content, choose whether to keep the current content or replace it.</li>
+          <li>Select <strong>Import Pack</strong> only after reviewing the preview.</li>
+          <li>Follow any prompt to refresh recognition data or restart SimVoice, then test the imported commands on the ground.</li>
+        </ol>
+      </div>
+
+      <aside class="import-note" aria-label="Important import behavior">
+        <h3>Your existing profile stays safe</h3>
+        <p>
+          A complete imported profile does not overwrite an existing profile.
+          SimVoice creates a new profile name when necessary, such as
+          <strong> (imported)</strong>, and may make it active so you can review it.
+        </p>
+        <p>
+          The import preview is the final authority on which content your current
+          SimVoice version and entitlement can apply.
+        </p>
+        <a href="https://simvoicecopilot.com/help/manual/en#community-packs" target="_blank" rel="noopener noreferrer">
+          Read the full Community Packs manual →
+        </a>
+      </aside>
+    </section>
+  </div>
+</BaseLayout>
+
+<script>
+  document.querySelectorAll('[data-pack-download]').forEach((link) => {
+    link.addEventListener('click', () => {
+      window.dispatchEvent(new CustomEvent('site-analytics-event', {
+        detail: 'Community Pack Download Started',
+      }));
+    });
+  });
+</script>
+
+<style>
+  .packs-page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 5rem;
+  }
+
+  .packs-header {
+    padding: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    background:
+      radial-gradient(circle at top right, rgba(88, 166, 255, 0.2), transparent 42%),
+      var(--bg-elevated);
+    border: 1px solid var(--border-accent);
+    border-radius: 1rem;
+  }
+
+  .eyebrow,
+  .section-kicker {
+    color: var(--accent-primary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0.5rem 0 1rem;
+    color: var(--text-heading);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.1;
+  }
+
+  .intro {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+    font-size: 1.08rem;
+    line-height: 1.7;
+  }
+
+  .header-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem;
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+  }
+
+  .header-meta a,
+  .secondary-link,
+  .import-note a {
+    color: var(--accent-primary);
+    font-weight: 600;
+  }
+
+  .section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .section-heading h2,
+  .instructions h2 {
+    margin: 0.25rem 0 0;
+    color: var(--text-heading);
+    font-size: 1.8rem;
+  }
+
+  .section-heading p {
+    max-width: 440px;
+    margin: 0;
+    color: var(--text-secondary);
+  }
+
+  .packs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+    gap: 1.5rem;
+  }
+
+  .pack-card {
+    padding: 1.6rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: 0.85rem;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+  }
+
+  .pack-card-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .pack-icon {
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    place-items: center;
+    flex: 0 0 auto;
+    font-size: 1.45rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-accent);
+    border-radius: 0.7rem;
+  }
+
+  .pack-card h3 {
+    margin: 0;
+    color: var(--text-heading);
+    font-size: 1.35rem;
+  }
+
+  .version,
+  .filename {
+    margin: 0.2rem 0 0;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+  }
+
+  .pack-description {
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+
+  .pack-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+    margin: 1.25rem 0;
+  }
+
+  .pack-details div {
+    padding: 0.75rem;
+    background: var(--bg-primary);
+    border-radius: 0.55rem;
+  }
+
+  dt {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  dd {
+    margin: 0.3rem 0 0;
+    color: var(--text-primary);
+    font-size: 0.88rem;
+  }
+
+  .included h4 {
+    margin: 0 0 0.5rem;
+    color: var(--text-heading);
+  }
+
+  .included ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.35rem 1rem;
+    margin: 0;
+    padding-left: 1.2rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin: 1.25rem 0;
+  }
+
+  .tags span {
+    padding: 0.3rem 0.55rem;
+    color: var(--accent-primary);
+    font-size: 0.76rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+  }
+
+  .pack-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .download-button {
+    display: inline-flex;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    background: var(--accent-primary);
+    border-radius: 0.55rem;
+  }
+
+  .download-button:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+  }
+
+  .filename {
+    margin-top: 1rem;
+    overflow-wrap: anywhere;
+  }
+
+  .filename span {
+    color: var(--text-secondary);
+  }
+
+  .instructions {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(280px, 0.85fr);
+    gap: 2rem;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border-color);
+    scroll-margin-top: 6rem;
+  }
+
+  .instructions-copy > p,
+  .instructions li,
+  .import-note p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .instructions ol {
+    display: grid;
+    gap: 0.75rem;
+    padding-left: 1.4rem;
+  }
+
+  .instructions li::marker {
+    color: var(--accent-primary);
+    font-weight: 700;
+  }
+
+  .import-note {
+    align-self: start;
+    padding: 1.5rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-accent);
+    border-radius: 0.85rem;
+  }
+
+  .import-note h3 {
+    margin-top: 0;
+    color: var(--text-heading);
+  }
+
+  @media (max-width: 760px) {
+    .packs-page {
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    .packs-header {
+      padding: 2rem 1.2rem;
+    }
+
+    .section-heading,
+    .instructions {
+      display: block;
+    }
+
+    .section-heading p {
+      margin-top: 0.75rem;
+    }
+
+    .pack-details,
+    .included ul {
+      grid-template-columns: 1fr;
+    }
+
+    .import-note {
+      margin-top: 2rem;
+    }
+  }
+</style>

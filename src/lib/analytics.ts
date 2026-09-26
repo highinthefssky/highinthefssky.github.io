@@ -2,13 +2,13 @@ export const ANALYTICS_ORIGIN = 'https://highintheflightsimsky.nl';
 export const ANALYTICS_ENDPOINT = 'https://plausible.io/api/event';
 export const ANALYTICS_OPT_OUT = 'analytics-opt-out';
 export const analyticsEvents = [
-  'pageview', 'Wizard Results', 'XML Download Started', 'Preset Download Started', 'YouTube Click',
+  'pageview', 'Wizard Results', 'XML Download Started', 'Preset Download Started', 'Community Pack Download Started', 'YouTube Click',
 ] as const;
 export type AnalyticsEvent = typeof analyticsEvents[number];
 
 export function analyticsPage(pathname: string): string | undefined {
   const path = pathname.replace(/\/+$/, '') || '/';
-  const publicPages = ['/', '/videos', '/controllers', '/controllers/wizard', '/controllers/moza', '/playlists', '/tracks', '/posts', '/feed', '/privacy', '/terms', '/contact', '/community2024', '/tools/community-folder-troubleshooter'];
+  const publicPages = ['/', '/videos', '/controllers', '/controllers/wizard', '/controllers/moza', '/simvoice-packs', '/playlists', '/tracks', '/posts', '/feed', '/privacy', '/terms', '/contact', '/community2024', '/tools/community-folder-troubleshooter'];
   if (publicPages.includes(path)) return path === '/' ? '/' : `${path}/`;
   if (/^\/videos\/page\/\d+$/.test(path)) return '/videos/page/';
   if (/^\/controllers\/download\/xml\/[^/]+$/.test(path)) return '/controllers/download/xml/';

@@ -19,6 +19,7 @@ export async function GET() {
     { loc: '/posts/', changefreq: 'daily', priority: '0.85' },
     { loc: '/controllers/', changefreq: 'weekly', priority: '0.85' },
     { loc: '/controllers/moza/', changefreq: 'weekly', priority: '0.8' },
+    { loc: '/simvoice-packs/', changefreq: 'weekly', priority: '0.8' },
     { loc: '/tools/community-folder-troubleshooter/', changefreq: 'monthly', priority: '0.8' },
     { loc: '/community2024/', changefreq: 'monthly', priority: '0.7' },
     { loc: '/contact/', changefreq: 'monthly', priority: '0.4' },

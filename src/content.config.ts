@@ -102,6 +102,26 @@ const mozaProfileCollection = defineCollection({
   }),
 });
 
+// SimVoice Copilot community pack collection schema
+const simVoicePackCollection = defineCollection({
+  loader: glob({ base: './src/content/simvoice-packs', pattern: '**/*.json' }),
+  schema: z.object({
+    filename: z.string().describe('Download filename for the .svcpack'),
+    name: z.string().describe('Community pack name'),
+    description: z.string().describe('Short description of the pack'),
+    author: z.string().describe('Pack author or publisher'),
+    version: z.string().describe('Pack version'),
+    minimumSvcVersion: z.string().describe('Minimum compatible SimVoice Copilot version'),
+    language: z.string().describe('Voice-command language'),
+    simulatorVersion: z.string().describe('Compatible simulator versions'),
+    aircraftScope: z.string().describe('Aircraft supported by the pack'),
+    downloadPath: z.string().startsWith('/').describe('Local path to the .svcpack download'),
+    videoUrl: z.string().url().optional().describe('Optional demonstration video'),
+    includedContent: z.array(z.string()).min(1).describe('Human-readable list of included content'),
+    tags: z.array(z.string()).describe('Searchable pack tags'),
+  }),
+});
+
 // Export collections
 export const collections = {
   videos: videoCollection,
@@ -110,4 +130,5 @@ export const collections = {
   playlists: playlistCollection,
   tracks: trackCollection,
   mozaProfiles: mozaProfileCollection,
+  simVoicePacks: simVoicePackCollection,
 };

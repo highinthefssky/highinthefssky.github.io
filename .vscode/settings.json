@@ -8,7 +8,12 @@
     },
     "chat.tools.terminal.autoApprove": {
         ".specify/scripts/bash/": true,
-        ".specify/scripts/powershell/": true
+        ".specify/scripts/powershell/": true,
+        "&": true,
+        "/^node --input-type=module -e \"import sharp from 'sharp'; import assert from 'node:assert/strict'; import fs from 'node:fs'; const image=await sharp\\('public/og-image\\.jpg'\\)\\.metadata\\(\\); assert\\.equal\\(image\\.width,1200\\); assert\\.equal\\(image\\.height,630\\); assert\\.equal\\(image\\.format,'jpeg'\\); console\\.log\\(\\{width:image\\.width,height:image\\.height,format:image\\.format,bytes:fs\\.statSync\\('public/og-image\\.jpg'\\)\\.size\\}\\);\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
     }
 }
 
