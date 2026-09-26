@@ -13,4 +13,4 @@ Failing to transition pressure settings at the correct layer can put your aircra
 Watch the full guide here: https://youtu.be/6nKqRSDbzyE
 
 Original post: https://www.youtube.com/post/Ugkx_e3pqJz1uYwoJtj-2zaW6zJh-Ha1G5tm
-Likes: 0 | Comments: 4
+Likes: 0 | Comments: 5
