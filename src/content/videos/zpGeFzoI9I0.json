@@ -1,0 +1,31 @@
+{
+  "videoId": "zpGeFzoI9I0",
+  "title": "Voice Control in MSFS just leveled up: Native H-Events & Smart Logic Demo",
+  "description": "Tired of hunting for tiny knobs or softkeys with a mouse while hand-flying in turbulence or VR? In this video, we dive into SimVoice Copilot v1.1.6 to build a completely hands-free Garmin G1000 cockpit workflow using native simulator H-events and smart conditional logic.\n\nUnlike basic push-to-talk macros, native H-events tap directly into the simulator's internal avionics wiring. Combined with live SimVar telemetry, we can configure dynamic, multi-step voice commands—like a single phrase that arms your flight director, calculates target climb speeds based on pressure altitude, and executes full flight-level-change climb logic automatically.\n\n📥 DOWNLOAD MY C172 G1000 COMMUNITY PACK:\nDownload the exact .SVCpack profile demonstrated in this video via the website link below:\nhttps://highintheflightsimsky.nl\n\n🛠️ G1000 H-EVENT ID LIST:\nAccess the complete G1000 event mapping documentation here:\nhttps://highintheflightsimsky.nl/simvoice-packs/\n\n🎟️ EXCLUSIVE COMMUNITY DISCOUNT:\nGet 10% off SimVoice Copilot Premium with creator code:\nCode: JVELDH10\n• 10% off Premium Monthly (first billing cycle)\n• 10% off Premium Lifetime\n(Note: Limited creator promotion valid for the first 100 redemptions within ~60 days of video launch. Cannot be combined with other offers.)\n\n⏱️ CHAPTER TIMESTAMPS:\n00:00 - Intro\n01:06 - Native H-Events vs. keybindings\n01:54 - Demo: setting up H-events\n05:12 - Demo: hands-free G1000\n05:26 - Beyond fixed macros\n05:48 - Demo: breaking down the AI Builder & smart logic\n12:30 - Demo: The smart climb in action\n13:36 - Demo: Community packs: exporting and importing\n17:03 - Recap\n\n💬 COMMUNITY QUESTION:\nWhat automated command group should we build and export next? An automated engine start flow or a smart go-around procedure? Drop your vote in the comments below!\n\n✈️ ABOUT THIS CHANNEL:\nHigh in the FlightSim Sky delivers in-depth flight simulation guides, avionics breakdowns, VR flight setups, and hardware reviews across Microsoft Flight Simulator. \n\nSubscribe for weekly tutorials, aircraft deep-dives, and flight procedures:\n https://bit.ly/34eNWDP\nJoin our Discord: https://discord.gg/J3tZyhceUM\n\n#MSFS #MicrosoftFlightSimulator #SimVoiceCopilot #FlightSim #G1000 #FlightSimulation #VRFlightSim",
+  "thumbnail": "https://i.ytimg.com/vi/zpGeFzoI9I0/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/zpGeFzoI9I0/mqdefault.jpg",
+  "publishedAt": "2026-09-26T20:00:06.000Z",
+  "duration": 1074,
+  "viewCount": 207,
+  "tags": [
+    "MSFS",
+    "Microsoft Flight Simulator",
+    "Microsoft Flight Simulator 2024",
+    "MSFS 2024",
+    "SimVoice Copilot",
+    "SimVoice Copilot tutorial",
+    "MSFS voice control",
+    "G1000 voice commands",
+    "MSFS G1000 NXi",
+    "MSFS H events",
+    "MSFS VR cockpit",
+    "flight simulator voice copilot",
+    "MSFS AI copilot",
+    "MSFS automation",
+    "C172 G1000 MSFS",
+    "SimConnect events",
+    "flight sim VR setup",
+    "High in the FlightSim Sky"
+  ],
+  "featured": false
+}
