@@ -1,7 +1,7 @@
 ---
 title: "🛫 Simmer's Quick Check: You are climbing out of London Heathrow (EGLL) and ATC c"
 description: "🛫 Simmer's Quick Check: You are climbing out of London Heathrow (EGLL) and ATC clears you to climb from 4,000 ft to Flight Level 70. The local QNH is 1025 hPa."
-publishedAt: 2026-09-25
+publishedAt: 2026-09-26
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -13,4 +13,4 @@ Failing to transition pressure settings at the correct layer can put your aircra
 Watch the full guide here: https://youtu.be/6nKqRSDbzyE
 
 Original post: https://www.youtube.com/post/Ugkx_e3pqJz1uYwoJtj-2zaW6zJh-Ha1G5tm
-Likes: 0 | Comments: 5
+Likes: 1 | Comments: 5
