@@ -1,5 +1,44 @@
 [
   {
+    "id": "UgkxQ1Vl0oNoEwWlAQa_ZiPlh3L62jvxKCKT",
+    "text": "🛫 Simmer's Quick Check: You are climbing out of a busy airport and just passed the local Transition Altitude (TA). Your altimeter is currently set to the local QNH given by ATIS.\n\n​To ensure vertical separation from other aircraft operating at higher flight levels, what is your next immediate action on the barometric altimeter?\n\n​📺 Master the Flight Deck:\n\nEver wondered why flying on local QNH at high altitudes can lead to dangerous altimeter errors or airspace busts?\n\nWatch the full guide here: https://youtu.be/6nKqRSDbzyE",
+    "published_relative": "1 month ago",
+    "published_date": "2026-08-30",
+    "url": "https://www.youtube.com/post/UgkxQ1Vl0oNoEwWlAQa_ZiPlh3L62jvxKCKT",
+    "likes": "5",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-09-29T22:01:58.123603Z"
+  },
+  {
+    "id": "UgkxSWNGnVqQK_ccEIgfgQhb0TFgDBXEKj8H",
+    "text": "🛫 Simmer's Quick Check: You are vectored for an ILS approach and ATC leaves you high on the profile. As you approach the final approach fix from above the published glidepath, your Glideslope (GS) indicator suddenly captures and begins commanding a steep pitch down.\n\nWhat critical risk should you immediately watch out for?\n\n📺 Master the Flight Deck:\nCapturing the ILS from above isn’t just tricky—it can lead to dangerous autopilot traps if you aren’t monitoring your DME and altitudes. Learn how to safely intercept or recover high approaches in our full guide!\nWatch the full guide here: https://youtu.be/Pj0q7eNcsdE",
+    "published_relative": "3 weeks ago",
+    "published_date": "2026-09-08",
+    "url": "https://www.youtube.com/post/UgkxSWNGnVqQK_ccEIgfgQhb0TFgDBXEKj8H",
+    "likes": "1",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-09-29T22:01:58.123576Z"
+  },
+  {
+    "id": "UgkxnNNZFBXx1TLWzJCby831JbaRNsLwFsiz",
+    "text": "🛫 Simmer's Quick Check: You are on final approach in a strong left crosswind (270 degrees at 18 knots onto Runway 36). You are flying the Wing-Low (Sideslip) method into the flare.Which primary flight control inputs must you apply simultaneously to maintain runway centerline and track alignment?\n\n📺 Master the Flight Deck:Tired of sideloading your gear or veering into the grass during stormy landings? \n\nMaster the art of the crab-to-de-crab and sideslip techniques in our deep-dive crosswind tutorial!Watch the full guide here: [https://youtu.be/hzyEc7Xqwok",
+    "published_relative": "11 days ago",
+    "published_date": "2026-09-18",
+    "url": "https://www.youtube.com/post/UgkxnNNZFBXx1TLWzJCby831JbaRNsLwFsiz",
+    "likes": "2",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-09-29T22:01:58.123469Z"
+  },
+  {
     "id": "UgkxyqxF1qH8dUsnFFkDGje_0wY9E156J8ot",
     "text": "✈️ Flight Deck Cheat Sheet: PFD Speed Trend Vectors\n\n​Ever find yourself constantly chasing target airspeed on short final during manual approaches? That magenta line extending from your speed bug on the Primary Flight Display (PFD) is your most powerful tool for smooth, proactive airspeed management.\n\n​📌 Key Takeaways:\n\n​The 6-Second Prediction: The length of the magenta vector line indicates where your airspeed will be in exactly 6 seconds if your current acceleration or deceleration rate remains constant.\n\n​Anticipate, Don't React: Instead of waiting for your airspeed to drop or overshoot, use the vector's growth to make small, proactive pitch and power adjustments before the speed deviation actually occurs.\n\n​Targeting V_{APP} on Final: To maintain a stabilized approach, aim to keep the tip of the trend vector resting directly on your target approach speed—eliminating wild throttle adjustments on short final.\n\n​📺 Watch the full breakdown in action: https://youtu.be/1srGO9HEXs8",
     "published_relative": "1 month ago",
@@ -177,19 +216,6 @@
     "video_id": null,
     "poll": null,
     "scraped_at": "2026-09-29T12:25:47.838498Z"
-  },
-  {
-    "id": "UgkxnNNZFBXx1TLWzJCby831JbaRNsLwFsiz",
-    "text": "🛫 Simmer's Quick Check: You are on final approach in a strong left crosswind (270 degrees at 18 knots onto Runway 36). You are flying the Wing-Low (Sideslip) method into the flare.Which primary flight control inputs must you apply simultaneously to maintain runway centerline and track alignment?\n\n📺 Master the Flight Deck:Tired of sideloading your gear or veering into the grass during stormy landings? \n\nMaster the art of the crab-to-de-crab and sideslip techniques in our deep-dive crosswind tutorial!Watch the full guide here: [https://youtu.be/hzyEc7Xqwok",
-    "published_relative": "10 days ago",
-    "published_date": "2026-09-19",
-    "url": "https://www.youtube.com/post/UgkxnNNZFBXx1TLWzJCby831JbaRNsLwFsiz",
-    "likes": "2",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-09-29T12:25:47.838480Z"
   },
   {
     "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
@@ -395,19 +421,6 @@
     "scraped_at": "2026-09-25T11:28:39.820732Z"
   },
   {
-    "id": "UgkxSWNGnVqQK_ccEIgfgQhb0TFgDBXEKj8H",
-    "text": "🛫 Simmer's Quick Check: You are vectored for an ILS approach and ATC leaves you high on the profile. As you approach the final approach fix from above the published glidepath, your Glideslope (GS) indicator suddenly captures and begins commanding a steep pitch down.\n\nWhat critical risk should you immediately watch out for?\n\n📺 Master the Flight Deck:\nCapturing the ILS from above isn’t just tricky—it can lead to dangerous autopilot traps if you aren’t monitoring your DME and altitudes. Learn how to safely intercept or recover high approaches in our full guide!\nWatch the full guide here: https://youtu.be/Pj0q7eNcsdE",
-    "published_relative": "13 days ago",
-    "published_date": "2026-09-05",
-    "url": "https://www.youtube.com/post/UgkxSWNGnVqQK_ccEIgfgQhb0TFgDBXEKj8H",
-    "likes": "1",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-09-18T16:05:46.128338Z"
-  },
-  {
     "id": "Ugkx0qMtNPkCBvzjXPMoUfqYVStQTeN6cTnm",
     "text": "Episode 7: “G” is for GO‑AROUND — The Maneuver of Champions. 🔥✈️\n\nThe best pilots aren’t the ones who \"stick\" every landing; they’re the ones who know when to say NOPE, push the power forward, and live to fly another lap.\n\nIf you’ve ever forced a landing because you were \"already there,\" this episode is your wake-up call. We’re breaking down the physics and the \"Get Out of Jail Free\" card that every pro swears by.\n\nWhat’s on the Flight Plan:\n\n🧠 The Psychology: Why a Go-Around is a sign of discipline, not failure.\n\n🎯 The \"Gate\" System: Stabilized Approach criteria for IMC (1,000ft) vs VFR (500ft).\n\n🛩️ Cessna vs. Airbus: From manual pitch-up chaos to TO/GA automation magic.\n\n⚠️ The Nightmare: What happens when an engine fails during the climb-out?\n\nStep-By-Step Demo:\nWe’ll execute a full Go-Around from 200ft, showing you exactly how to manage Power → Pitch → Flaps → Gear without losing your cool.\n\n📅 Premieres tomorrow at 17:00 UTC+1.\n\nSeven letters down, nineteen to go. Let’s keep climbing! ✈️🔥",
     "published_relative": "6 months ago (edited)",
@@ -434,19 +447,6 @@
     "video_id": null,
     "poll": null,
     "scraped_at": "2026-09-04T16:00:46.914562Z"
-  },
-  {
-    "id": "UgkxQ1Vl0oNoEwWlAQa_ZiPlh3L62jvxKCKT",
-    "text": "🛫 Simmer's Quick Check: You are climbing out of a busy airport and just passed the local Transition Altitude (TA). Your altimeter is currently set to the local QNH given by ATIS.\n\n​To ensure vertical separation from other aircraft operating at higher flight levels, what is your next immediate action on the barometric altimeter?\n\n​📺 Master the Flight Deck:\n\nEver wondered why flying on local QNH at high altitudes can lead to dangerous altimeter errors or airspace busts?\n\nWatch the full guide here: https://youtu.be/6nKqRSDbzyE",
-    "published_relative": "3 weeks ago",
-    "published_date": "2026-08-12",
-    "url": "https://www.youtube.com/post/UgkxQ1Vl0oNoEwWlAQa_ZiPlh3L62jvxKCKT",
-    "likes": "3",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-09-02T16:15:18.531911Z"
   },
   {
     "id": "UgkxtwM4nhAIqt_HYgidk66K31VJpkTMwYoN",
