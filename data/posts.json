@@ -1,20 +1,5 @@
 [
   {
-    "id": "UgkxjdL_Be56SGPfhYH8QyuVfe1DR_1qNDFj",
-    "text": "🚀 Switching to VR in MSFS: The 7-Day Challenge! 🥽✈️\nEver wondered if Virtual Reality can truly replace your monitors for flight simulation? I’m putting it to the ultimate test with the Pimax Crystal Light over a 7-day challenge—testing setup, performance, aircraft demos, and real flight deck experience in MSFS 2024!\nHere’s where we are in the series so far:\n\n▶️ Part 1: Setup & First Flight (First 48 Hours)\nIf you missed it, check out my initial hands-on setup, first impressions, and whether the Crystal Light can stand up against traditional displays:\n👉 https://youtu.be/_VxcD0S0YXI\n🔥 Part 2: VR Hacks & Overcoming Challenges (96 Hours In) — Releasing Later Today! (21:00 CET)\nVR isn’t always smooth sailing out of the box. In today’s episode, I cover the main challenges I hit, how I fixed them, and the essential tweaks that saved my flight deck:\n👉 https://youtu.be/o2jQ7OgkG9E\n\nDrop a comment on the videos and let me know your thoughts, are you flying in VR yet, or are you holding out for monitors? Clear skies! 🌤️",
-    "published_relative": "2 months ago",
-    "published_date": "2026-08-03",
-    "url": "https://www.youtube.com/post/UgkxjdL_Be56SGPfhYH8QyuVfe1DR_1qNDFj",
-    "likes": "1",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/wi19QeG82O8WwRPLhForTCuMu1m1VtxPVxf35e6S5ceV5SHUUdYOHJgtXgoNyA7jR0XmgEyeuvtsfg=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-02T12:09:00.491458Z"
-  },
-  {
     "id": "UgkxsDDGY3wiVy2G81vVXm53W0g0XQZsCi0n",
     "text": "Ever felt intimidated by the \"invisible walls\" in the sky? ✈️🧱\n\nYou're cruising along fine, and suddenly you're risking a license revocation—or ruining a VATSIM controller's day! If you've ever avoided ATC or online networks because airspace classes feel like a bowl of alphabet soup, this episode is your ultimate cheat code.\nIn the latest episode of Microsoft Flight Simulator A to Z, we're tackling C for Controlled Airspace!\nHere is what we break down:\n\n🔤 Classes A through G: Simple, real-world analogies to finally make them click.\n🛑 The Two-Way Rule vs. Explicit Clearance: Why talking to ATC works in Class C, but will get you a violation in Class B.\n🗺️ Map & EFB Navigation: Reading ceilings, floors, and invisible boundaries on the fly.\n🎙️ Live MSFS 2024 Radio Demo: Exactly what to say to request flight following and clear a Class C transition seamlessly.\nStop guessing where you can legally fly and level up your virtual pilot skills!\n\n🍿 Watch the new episode now: https://youtu.be/2n_A4bwnkYE\n\n🕒 Quick Chapters:\n00:00 - Intro\n01:03 - Class Delta\n01:38 - Class Charlie\n02:07 - Class Bravo\n02:39 - Class Alpha\n03:15 - Class Echo & Golf\n03:29 - Demo: Moving Map\n04:43 - Demo: The Radio Call",
     "published_relative": "2 months ago",
@@ -27,50 +12,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-02T12:09:00.491432Z"
-  },
-  {
-    "id": "UgkxKAlu6Uo2trkM19QEs1kt7Y0FnbD42ySH",
-    "text": "The \"Muscle\" of the Saab 340 is here. 🇸🇪✈️\n\nAt 17:00 CET, Part 2 of our Saab 340 Masterclass goes live! Today, we’re moving past the airframe and diving deep into the GE CT7 engines and the system that confuses almost every new pilot: CTOT (Constant Torque on Takeoff).\n\nIf you've ever struggled to reach your cruise altitude or wondered how the APR (Automatic Power Reserve) actually works during an engine failure—this is the episode you’ve been waiting for.\n\nInside today’s briefing:\n\n\n✅ Engine Anatomy: Five-stage axial vs. centrifugal compression.\n✅ EFB Masterclass: Mastering Weight & Balance in MSFS 2024.\n✅ CTOT Live Demo: Why it's NOT an autothrottle.\n\nQuestion for the ramp: Do you prefer the quiet \"Active Noise Control\" of the 340B+ or the raw, legendary turboprop drone of the early A-models? Let me know in the comments below! 👇\n\nWatch here at 17:00 CET: https://youtu.be/UwVWiujfxW0",
-    "published_relative": "6 months ago",
-    "published_date": "2026-04-05",
-    "url": "https://www.youtube.com/post/UgkxKAlu6Uo2trkM19QEs1kt7Y0FnbD42ySH",
-    "likes": "1",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/vNGEBh8-uFpPvsV3SwSkGnIg7baqEKVU4syRYWUVHs1PsCbRBR3qD_HuOF8lYkceaYBbh1PeTpaVyvk=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-02T12:09:00.491415Z"
-  },
-  {
-    "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
-    "text": "ATTENTION PILOTS: NOTAM ISSUED\n----------------------------------------------------------------------------------------------------------------------------------------\nNOTAM ID: SAAB-VIRTUAL-0340\nLOCATION: High in the flightsim sky Flight Operations\nEFFECTIVE: IMMEDIATELY\nSUBJECT: GROUND DELAY - SAAB 340 \"GETTING STARTED\" SERIES EP. 6\n\nSCHEDULE UPDATE:\nExpected Departure Clearance (EDC) for the Cold and Dark / Autopilot Tutorial has been pushed back by several hours due to unscheduled maintenance in the rendering bay. All systems are currently being cycled to ensure a smooth delivery.\n\nFLIGHT PLAN OVERVIEW:\nOnce wheels are up later today, this sortie will cover:\n\n- Pre-Flight: Comprehensive \"Cold and Dark\" procedures.\n- Walkthrough: Extended guided tour and technical explanation of the cockpit layout.\n- Departure: Standard takeoff procedures and climb-out.\n- Automation: In-depth guide to mastering Autopilot functionality for stable cruise operations.\n\nREMARKS:\nCheck your sub-feeds and notifications for the updated ATIS. We appreciate your patience while we clear these technical squawks.\n\nSTAY VIGILANT. SEE YOU ON THE FLIGHT DECK LATER TODAY.",
-    "published_relative": "5 months ago",
-    "published_date": "2026-05-05",
-    "url": "https://www.youtube.com/post/Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
-    "likes": "3",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-02T12:09:00.491397Z"
-  },
-  {
-    "id": "UgkxFQqVaAqKk8gqbK8dWbUa8kgNhVaNfCek",
-    "text": "Tomorrow at 17:00 CET: X is for... CROSSWIND! 💨✈️\n\nHey everyone! The MSFS A-Z series rolls on, and tomorrow we are tackling the one letter combination that every pilot deeply respects—and loves to conquer. If you’ve ever had a sudden gust violently shove you off the centerline on short final, this next episode is for you.\n\nWe are breaking down exactly how wind drift forces your plane off course and walking through live demonstrations of the two classic techniques used to pull off a safe, stable landing every single time:\n👉 The Crab Method (Letting the plane fly sideways—essential for heavy airliners)\n👉 The Wing-Low / Side Slip Method (Advanced stick-and-rudder work to save your landing gear)\n\nWe’ll also look at why the flying doesn't stop just because your tires hit the tarmac, covering critical ground rollout and taxiing control inputs.\n\n🔔 Set your reminders: The video drops tomorrow at 17:00 CET. Come hang out in the live chat during the premiere!\n\n👇 While you wait, let me know in the comments: What’s the highest crosswind component you’ve successfully landed in without wrecking your virtual landing gear? Let's see who holds the community record!\n\nFly safe, and see you tomorrow! 🧭",
-    "published_relative": "3 months ago",
-    "published_date": "2026-07-04",
-    "url": "https://www.youtube.com/post/UgkxFQqVaAqKk8gqbK8dWbUa8kgNhVaNfCek",
-    "likes": "5",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/-BERapUKAgE0tAR5xvE1DJn7FDJ2J-2BCoKd0ffXoOOla7VpNvnoxxidITJOLBfzQZJqA8BnF_IYRGM=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-02T12:09:00.491382Z"
+    "scraped_at": "2026-10-02T21:59:01.861581Z"
   },
   {
     "id": "Ugkx2PjK6-XnqFTtTYUbj8PS_05OZCGRrgnA",
@@ -85,22 +27,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-02T12:09:00.491364Z"
-  },
-  {
-    "id": "Ugkx3F1Gj310_U0d0GSCTwh8JyZ0uFWTKlB1",
-    "text": "THE \"LONG ONE\" HAS ARRIVED! ✈️ 🔴\n\nThe wait is finally over! Yesterday, the Aerosoft x ToLiss A340-600 Pro officially hit the skies in MSFS, and we are going live tonight to see if it lives up to the massive hype!\n\nThis isn't just a \"pretty\" aircraft—we’re talking legendary ToLiss system depth combined with Aerosoft’s stunning visuals. From the unique 4-wheel center bogie to the custom Fly-By-Wire logic, we’re unpacking it all.\n\nWhat’s on the schedule for tonight?\n🔹 Full exterior walkaround (it's a long walk!)\n🔹 Cabin tour & livery showcase\n🔹 Deep dive into the ToLiss systems & EFB\n🔹 First startup, taxi, and a HEAVY takeoff!\n\n⏰ START TIME: 20:00 CET | 19:00 UTC | 14:00 EST\n📍 WHERE: Right here on the channel!\n\nI’ll be answering your questions live: Is it worth the \"Pro\" price tag? How does the flight model feel?\n\nCast your vote below:\nWhich livery should we use for our first flight tonight? 🗳️\n1️⃣ Lufthansa (The Classic)\n2️⃣ Virgin Atlantic (Four Engines 4 Long Haul)\n3️⃣ Iberia (The Long Haul King)\n4️⃣ South African (The Rare Beauty)\n\nSee you all at 20:00 CET! Don't forget to set your reminders! 👇\n\nhttps://youtube.com/live/Abqo_nLgAWo",
-    "published_relative": "6 months ago",
-    "published_date": "2026-04-05",
-    "url": "https://www.youtube.com/post/Ugkx3F1Gj310_U0d0GSCTwh8JyZ0uFWTKlB1",
-    "likes": "3",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/KBpu-381BvBhoErCwusSU3N-1bGKiiYlK2GS7EOT4Vto8d8_3F1z1KjI58rMpc3TkGObbtRQ8RZ5fw=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-02T12:09:00.491347Z"
+    "scraped_at": "2026-10-02T21:59:01.861546Z"
   },
   {
     "id": "UgkxaZJSYNSKG64HIJvFBtwleGIPV6H_LEGi",
@@ -115,7 +42,37 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-02T12:09:00.491328Z"
+    "scraped_at": "2026-10-02T21:59:01.861531Z"
+  },
+  {
+    "id": "UgkxKAlu6Uo2trkM19QEs1kt7Y0FnbD42ySH",
+    "text": "The \"Muscle\" of the Saab 340 is here. 🇸🇪✈️\n\nAt 17:00 CET, Part 2 of our Saab 340 Masterclass goes live! Today, we’re moving past the airframe and diving deep into the GE CT7 engines and the system that confuses almost every new pilot: CTOT (Constant Torque on Takeoff).\n\nIf you've ever struggled to reach your cruise altitude or wondered how the APR (Automatic Power Reserve) actually works during an engine failure—this is the episode you’ve been waiting for.\n\nInside today’s briefing:\n\n\n✅ Engine Anatomy: Five-stage axial vs. centrifugal compression.\n✅ EFB Masterclass: Mastering Weight & Balance in MSFS 2024.\n✅ CTOT Live Demo: Why it's NOT an autothrottle.\n\nQuestion for the ramp: Do you prefer the quiet \"Active Noise Control\" of the 340B+ or the raw, legendary turboprop drone of the early A-models? Let me know in the comments below! 👇\n\nWatch here at 17:00 CET: https://youtu.be/UwVWiujfxW0",
+    "published_relative": "6 months ago",
+    "published_date": "2026-04-05",
+    "url": "https://www.youtube.com/post/UgkxKAlu6Uo2trkM19QEs1kt7Y0FnbD42ySH",
+    "likes": "1",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/vNGEBh8-uFpPvsV3SwSkGnIg7baqEKVU4syRYWUVHs1PsCbRBR3qD_HuOF8lYkceaYBbh1PeTpaVyvk=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-02T21:59:01.861515Z"
+  },
+  {
+    "id": "UgkxFQqVaAqKk8gqbK8dWbUa8kgNhVaNfCek",
+    "text": "Tomorrow at 17:00 CET: X is for... CROSSWIND! 💨✈️\n\nHey everyone! The MSFS A-Z series rolls on, and tomorrow we are tackling the one letter combination that every pilot deeply respects—and loves to conquer. If you’ve ever had a sudden gust violently shove you off the centerline on short final, this next episode is for you.\n\nWe are breaking down exactly how wind drift forces your plane off course and walking through live demonstrations of the two classic techniques used to pull off a safe, stable landing every single time:\n👉 The Crab Method (Letting the plane fly sideways—essential for heavy airliners)\n👉 The Wing-Low / Side Slip Method (Advanced stick-and-rudder work to save your landing gear)\n\nWe’ll also look at why the flying doesn't stop just because your tires hit the tarmac, covering critical ground rollout and taxiing control inputs.\n\n🔔 Set your reminders: The video drops tomorrow at 17:00 CET. Come hang out in the live chat during the premiere!\n\n👇 While you wait, let me know in the comments: What’s the highest crosswind component you’ve successfully landed in without wrecking your virtual landing gear? Let's see who holds the community record!\n\nFly safe, and see you tomorrow! 🧭",
+    "published_relative": "3 months ago",
+    "published_date": "2026-07-04",
+    "url": "https://www.youtube.com/post/UgkxFQqVaAqKk8gqbK8dWbUa8kgNhVaNfCek",
+    "likes": "5",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/-BERapUKAgE0tAR5xvE1DJn7FDJ2J-2BCoKd0ffXoOOla7VpNvnoxxidITJOLBfzQZJqA8BnF_IYRGM=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-02T21:59:01.861496Z"
   },
   {
     "id": "UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
@@ -130,7 +87,35 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-02T12:09:00.491311Z"
+    "scraped_at": "2026-10-02T21:59:01.861478Z"
+  },
+  {
+    "id": "Ugkx3F1Gj310_U0d0GSCTwh8JyZ0uFWTKlB1",
+    "text": "THE \"LONG ONE\" HAS ARRIVED! ✈️ 🔴\n\nThe wait is finally over! Yesterday, the Aerosoft x ToLiss A340-600 Pro officially hit the skies in MSFS, and we are going live tonight to see if it lives up to the massive hype!\n\nThis isn't just a \"pretty\" aircraft—we’re talking legendary ToLiss system depth combined with Aerosoft’s stunning visuals. From the unique 4-wheel center bogie to the custom Fly-By-Wire logic, we’re unpacking it all.\n\nWhat’s on the schedule for tonight?\n🔹 Full exterior walkaround (it's a long walk!)\n🔹 Cabin tour & livery showcase\n🔹 Deep dive into the ToLiss systems & EFB\n🔹 First startup, taxi, and a HEAVY takeoff!\n\n⏰ START TIME: 20:00 CET | 19:00 UTC | 14:00 EST\n📍 WHERE: Right here on the channel!\n\nI’ll be answering your questions live: Is it worth the \"Pro\" price tag? How does the flight model feel?\n\nCast your vote below:\nWhich livery should we use for our first flight tonight? 🗳️\n1️⃣ Lufthansa (The Classic)\n2️⃣ Virgin Atlantic (Four Engines 4 Long Haul)\n3️⃣ Iberia (The Long Haul King)\n4️⃣ South African (The Rare Beauty)\n\nSee you all at 20:00 CET! Don't forget to set your reminders! 👇\n\nhttps://youtube.com/live/Abqo_nLgAWo",
+    "published_relative": "6 months ago",
+    "published_date": "2026-04-05",
+    "url": "https://www.youtube.com/post/Ugkx3F1Gj310_U0d0GSCTwh8JyZ0uFWTKlB1",
+    "likes": "3",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/KBpu-381BvBhoErCwusSU3N-1bGKiiYlK2GS7EOT4Vto8d8_3F1z1KjI58rMpc3TkGObbtRQ8RZ5fw=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-02T21:59:01.861454Z"
+  },
+  {
+    "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
+    "text": "ATTENTION PILOTS: NOTAM ISSUED\n----------------------------------------------------------------------------------------------------------------------------------------\nNOTAM ID: SAAB-VIRTUAL-0340\nLOCATION: High in the flightsim sky Flight Operations\nEFFECTIVE: IMMEDIATELY\nSUBJECT: GROUND DELAY - SAAB 340 \"GETTING STARTED\" SERIES EP. 6\n\nSCHEDULE UPDATE:\nExpected Departure Clearance (EDC) for the Cold and Dark / Autopilot Tutorial has been pushed back by several hours due to unscheduled maintenance in the rendering bay. All systems are currently being cycled to ensure a smooth delivery.\n\nFLIGHT PLAN OVERVIEW:\nOnce wheels are up later today, this sortie will cover:\n\n- Pre-Flight: Comprehensive \"Cold and Dark\" procedures.\n- Walkthrough: Extended guided tour and technical explanation of the cockpit layout.\n- Departure: Standard takeoff procedures and climb-out.\n- Automation: In-depth guide to mastering Autopilot functionality for stable cruise operations.\n\nREMARKS:\nCheck your sub-feeds and notifications for the updated ATIS. We appreciate your patience while we clear these technical squawks.\n\nSTAY VIGILANT. SEE YOU ON THE FLIGHT DECK LATER TODAY.",
+    "published_relative": "6 months ago",
+    "published_date": "2026-04-05",
+    "url": "https://www.youtube.com/post/Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
+    "likes": "3",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-02T21:59:01.861430Z"
   },
   {
     "id": "UgkxmXp9kg_FPWEPK-z0kvPoAWnSI4eU2_DX",
@@ -145,20 +130,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-02T12:09:00.491290Z"
-  },
-  {
-    "id": "UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
-    "text": "A0423/26 - NOTICE TO ALL FLIGHT SIMULATORS / YOUTUBE SUBSCRIBERS\n\nQ) MSFS / QMSFS / AZ / SERIES / IV / / /\nA) YOUTUBE COMMUNITY TAB\nB) 2603191400\nC) 2603191700 EST\nE) FLIGHT UPDATE / DELAY NOTIFICATION:\n\nTHE LATEST EPISODE OF THE MSFS A-Z SERIES, \"THE ART OF TRIM,\" HAS BEEN TEMPORARILY GROUNDED DUE TO UNANTICIPATED AIRCRAFT MAINTENANCE.\n\nPRODUCTION CREWS ENCOUNTERED TECH ISSUES IN THE RENDERING BAY DURING FINAL INSPECTION OF THE DUAL LIVE-DEMONSTRATION SEGMENTS (CESSNA 172 GA PITCH-HOLD-TRIM AND ADVANCED AIRSPEED CONFIGURATIONS). TO ENSURE FULL COMPLIANCE WITH HIGH-QUALITY BROADCAST STANDARDS, THE VIDEO RELEASE IS DELAYED BY A FEW HOURS.\n\n- EXPECTED SECTIONS INBOUND:\n- THE HOOK & HANDS-OFF FLIGHT\n- CORE AERODYNAMICS (ELEVATOR VS. TRIM TAB)\n- THE GOLDEN RULE (PITCH, HOLD, TRIM)\n- DEMO: GA DEPARTURE\n- ADVANCED AIRSPEED & CONFIGURATION BALLOONING\n- DEMO: FLAP DEPLOYMENT & GLIDESLOPE MANAGEMENT\n- COMMERCIAL AIRLINER SYSTEMS (BOEING MANUAL VS. AIRBUS FBW)\n\nREVISED ESTIMATED TIME OF DEPARTURE (ETD) IS DELAYED BY APPROX 2-3 HOURS. WE APOLOGIZE FOR THE INCONVENIENCE TO YOUR FLIGHT PLANNING.\n\nPREPARE YOUR REFRESHMENTS, DECIDE IF YOU ARE TEAM BOEING OR TEAM AIRBUS IN THE COMMENTS UPON ARRIVAL, AND STAND BY FOR TAXI.\n\nF) SURFACE\nG) FLIGHT LEVEL HIGH",
-    "published_relative": "4 months ago",
-    "published_date": "2026-06-04",
-    "url": "https://www.youtube.com/post/UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
-    "likes": "3",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-02T12:09:00.491266Z"
+    "scraped_at": "2026-10-02T21:59:01.861406Z"
   },
   {
     "id": "UgkxTNz19tJEt-gjx7rb4fAQK5lkBABJLJLC",
@@ -174,7 +146,63 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-02T12:09:00.491236Z"
+    "scraped_at": "2026-10-02T21:59:01.861384Z"
+  },
+  {
+    "id": "UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
+    "text": "A0423/26 - NOTICE TO ALL FLIGHT SIMULATORS / YOUTUBE SUBSCRIBERS\n\nQ) MSFS / QMSFS / AZ / SERIES / IV / / /\nA) YOUTUBE COMMUNITY TAB\nB) 2603191400\nC) 2603191700 EST\nE) FLIGHT UPDATE / DELAY NOTIFICATION:\n\nTHE LATEST EPISODE OF THE MSFS A-Z SERIES, \"THE ART OF TRIM,\" HAS BEEN TEMPORARILY GROUNDED DUE TO UNANTICIPATED AIRCRAFT MAINTENANCE.\n\nPRODUCTION CREWS ENCOUNTERED TECH ISSUES IN THE RENDERING BAY DURING FINAL INSPECTION OF THE DUAL LIVE-DEMONSTRATION SEGMENTS (CESSNA 172 GA PITCH-HOLD-TRIM AND ADVANCED AIRSPEED CONFIGURATIONS). TO ENSURE FULL COMPLIANCE WITH HIGH-QUALITY BROADCAST STANDARDS, THE VIDEO RELEASE IS DELAYED BY A FEW HOURS.\n\n- EXPECTED SECTIONS INBOUND:\n- THE HOOK & HANDS-OFF FLIGHT\n- CORE AERODYNAMICS (ELEVATOR VS. TRIM TAB)\n- THE GOLDEN RULE (PITCH, HOLD, TRIM)\n- DEMO: GA DEPARTURE\n- ADVANCED AIRSPEED & CONFIGURATION BALLOONING\n- DEMO: FLAP DEPLOYMENT & GLIDESLOPE MANAGEMENT\n- COMMERCIAL AIRLINER SYSTEMS (BOEING MANUAL VS. AIRBUS FBW)\n\nREVISED ESTIMATED TIME OF DEPARTURE (ETD) IS DELAYED BY APPROX 2-3 HOURS. WE APOLOGIZE FOR THE INCONVENIENCE TO YOUR FLIGHT PLANNING.\n\nPREPARE YOUR REFRESHMENTS, DECIDE IF YOU ARE TEAM BOEING OR TEAM AIRBUS IN THE COMMENTS UPON ARRIVAL, AND STAND BY FOR TAXI.\n\nF) SURFACE\nG) FLIGHT LEVEL HIGH",
+    "published_relative": "4 months ago",
+    "published_date": "2026-06-04",
+    "url": "https://www.youtube.com/post/UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
+    "likes": "3",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-02T21:59:01.861357Z"
+  },
+  {
+    "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
+    "text": "World Update 22: United States National Parks available!\nLooks like someone pushed the release button to early, wasn't this scheduled to be released on the 4th of July?",
+    "published_relative": "3 months ago",
+    "published_date": "2026-07-04",
+    "url": "https://www.youtube.com/post/UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
+    "likes": "8",
+    "comments": "2",
+    "images": [
+      "https://yt3.ggpht.com/Jca4NmdUzDyoemPRDXQXm-t5qasMawuSv4YcXIRuSk5eEBeSuoSr5QQs_mVu5FcJvuO0zIz9X1i01g=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-02T21:59:01.861334Z"
+  },
+  {
+    "id": "Ugkx6kF4vT0iFAqN76ti63dP1xtLPjSNI6Ta",
+    "text": "🛫 Simmer's Quick Check: During engine start on a turboprop like the Daher TBM 930 or Pilatus PC-12, your ITT (Interstage Turbine Temperature) rapidly spikes toward the redline while Ng is still sluggish below 12%. What is your immediate memory item?\n\n📺 Master the Flight Deck:\nTurboprop turbine damage in flight simulation is costly if you run realism addons, but knowing how to recognize a hung or hot start within 3 seconds will save your engine every time.\nWatch the full guide here: https://www.youtube.com/playlist?list...",
+    "published_relative": "3 hours ago",
+    "published_date": "2026-10-02",
+    "url": "https://www.youtube.com/post/Ugkx6kF4vT0iFAqN76ti63dP1xtLPjSNI6Ta",
+    "likes": "0",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-02T21:59:01.861055Z"
+  },
+  {
+    "id": "UgkxjdL_Be56SGPfhYH8QyuVfe1DR_1qNDFj",
+    "text": "🚀 Switching to VR in MSFS: The 7-Day Challenge! 🥽✈️\nEver wondered if Virtual Reality can truly replace your monitors for flight simulation? I’m putting it to the ultimate test with the Pimax Crystal Light over a 7-day challenge—testing setup, performance, aircraft demos, and real flight deck experience in MSFS 2024!\nHere’s where we are in the series so far:\n\n▶️ Part 1: Setup & First Flight (First 48 Hours)\nIf you missed it, check out my initial hands-on setup, first impressions, and whether the Crystal Light can stand up against traditional displays:\n👉 https://youtu.be/_VxcD0S0YXI\n🔥 Part 2: VR Hacks & Overcoming Challenges (96 Hours In) — Releasing Later Today! (21:00 CET)\nVR isn’t always smooth sailing out of the box. In today’s episode, I cover the main challenges I hit, how I fixed them, and the essential tweaks that saved my flight deck:\n👉 https://youtu.be/o2jQ7OgkG9E\n\nDrop a comment on the videos and let me know your thoughts, are you flying in VR yet, or are you holding out for monitors? Clear skies! 🌤️",
+    "published_relative": "2 months ago",
+    "published_date": "2026-08-03",
+    "url": "https://www.youtube.com/post/UgkxjdL_Be56SGPfhYH8QyuVfe1DR_1qNDFj",
+    "likes": "1",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/wi19QeG82O8WwRPLhForTCuMu1m1VtxPVxf35e6S5ceV5SHUUdYOHJgtXgoNyA7jR0XmgEyeuvtsfg=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-02T12:09:00.491458Z"
   },
   {
     "id": "Ugkxj8C8VIupNprjIoYOTSV_gMJDpzueqF-J",
@@ -218,21 +246,6 @@
     "video_id": null,
     "poll": null,
     "scraped_at": "2026-10-02T12:09:00.491167Z"
-  },
-  {
-    "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
-    "text": "World Update 22: United States National Parks available!\nLooks like someone pushed the release button to early, wasn't this scheduled to be released on the 4th of July?",
-    "published_relative": "2 months ago",
-    "published_date": "2026-08-03",
-    "url": "https://www.youtube.com/post/UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
-    "likes": "8",
-    "comments": "2",
-    "images": [
-      "https://yt3.ggpht.com/Jca4NmdUzDyoemPRDXQXm-t5qasMawuSv4YcXIRuSk5eEBeSuoSr5QQs_mVu5FcJvuO0zIz9X1i01g=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-02T12:09:00.491127Z"
   },
   {
     "id": "UgkxQ1Vl0oNoEwWlAQa_ZiPlh3L62jvxKCKT",
