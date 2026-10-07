@@ -1,0 +1,30 @@
+{
+  "videoId": "gOFnS4pz0ww",
+  "title": "How to read NOTAMs in 30 Seconds (don't ruin your flight!)",
+  "description": "You just spent two hours cruising across the continent, break out beneath the clouds at 200 feet, and discover your destination runway is barricaded with repaving equipment. Why did your flight plan send you straight into a closed airport?\n\nEvery time you generate a SimBrief dispatch release, you receive up to 20 pages of dense, all-caps NOTAMs. Most simmers scroll right past them because 95% of the data consists of unlit radio towers and irrelevant clutter. But skipping them entirely exposes you to dead ILS transmitters, blocked taxiways, and unlit ghost airports.\n\nIn this tutorial, discover the 30-second pre-flight sweep that filters through 20 pages of SimBrief NOTAMs instantly. Learn how to identify line E plain-language summaries, decipher the critical code words (CLSD, U/S, WIP, TWY, and HR OPS), and avoid the three silent traps that cause disastrous diversions on VATSIM and offline flights.\n\n⏱️ Video Chapters:\n00:00 - Intro\n00:33 - The 30-second sweep architecture\n01:46 - The Dead ILS trap\n03:06 - The taxiway & stand blockade\n04:17 - Runway closures & curfews\n\nPre-Flight NOTAM SOP Cheat Sheet:\n• Destination First: Skip en-route clutter; scroll immediately to your Destination Aerodrome NOTAMs section.\n• Line E Scanning: In SimBrief, Line E tags are omitted—scan the bold body text for plain-language operational status.\n• The 3 Universal Threat Codes:\n  - CLSD (Closed): Runways, taxiways, or facilities out of service.\n  - U/S (Unserviceable): Navigation aids, ILS glideslope/localizers, or lighting systems powered off.\n  - WIP (Work in Progress): Ground construction, repaving, and equipment hazards on movement areas.\n• The Dead ILS Check: If an ILS frequency is NOTAMed U/S, the ground transmitter is off. Your PFD needles will remain flagged red. Plan a RNAV (GPS), VOR, or visual approach instead of descending blind.\n• Surface & Stand Sweep: Search for \"TWY\" and \"PRKG\" / \"STAND\" to identify blocked taxi routes or closed gates before pushback to avoid ground gridlock on VATSIM.\n• Runway & Curfew Check: Verify secondary runway length margins if primary strips show CLSD, and check \"HR OPS\" for airfield operating hours to avoid arriving after tower shutdown and runway light curfews.\n\n✈️ Hardware & Platform:\n• Simulators: Microsoft Flight Simulator 2024 / Microsoft Flight Simulator 2020\n• Planning Tools: SimBrief / Navigraph Charts\n\n🔗 Helpful Links & Resources:\n👉 Complete MSFS A-Z Series Playlist: https://bit.ly/3l6fRdL\n👉 Subscribe for more MSFS tutorials and flight controls setup guides: https://bit.ly/34eNWDP\n👉 Official Flight Simulator Support: https://www.flightsimulator.com/\n\nAbout MSFS A–Z:\nPart of our alphabet tutorial series breaking down essential aviation systems, hardware setup, and flying techniques one letter at a time. N is for NOTAMs.\n\n#MSFS #MSFS2024 #FlightSimulator #SimBrief #Aviation #FlightSim #VATSIM #A320",
+  "thumbnail": "https://i.ytimg.com/vi/gOFnS4pz0ww/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/gOFnS4pz0ww/mqdefault.jpg",
+  "publishedAt": "2026-10-06T18:00:04.000Z",
+  "duration": 334,
+  "viewCount": 142,
+  "tags": [
+    "MSFS NOTAMs",
+    "how to read NOTAMs",
+    "SimBrief NOTAMs",
+    "MSFS preflight planning",
+    "Microsoft Flight Simulator 2024",
+    "Microsoft Flight Simulator 2020",
+    "SimBrief tutorial",
+    "VATSIM flight planning",
+    "MSFS ILS approach not working",
+    "MSFS A to Z series",
+    "unserviceable ILS",
+    "runway closure NOTAM",
+    "flight simulator tutorial",
+    "aviation NOTAM explained",
+    "MSFS IFR planning",
+    "Navigraph SimBrief",
+    "MSFS flight plan guide"
+  ],
+  "featured": false
+}
