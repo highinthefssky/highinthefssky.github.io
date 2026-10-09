@@ -21,7 +21,7 @@ We’ll be running the new courses at full throttle—testing the updated flight
 Set a reminder, drop in the chat, and let’s see if this expansion delivers the real deal or arcade fluff. See you on the starting grid!
 
 Original post: https://www.youtube.com/post/UgkxOrZ8dt-pxQ0pxqRQ-llpUBPkSXZ-ePQV
-Likes: 1 | Comments: 0
+Likes: 2 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/e_-KSEikNIwqPFzxJ1qT_9EN0_v-8kGTYCcdA-iIED_klF61aFvBdq5PGByRLeGTG0aNcFPkfvUy=s1280)
