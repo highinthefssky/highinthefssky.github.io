@@ -1,0 +1,30 @@
+{
+  "videoId": "cnYvtC7tKsI",
+  "title": "Moza AB6 MSFS 2024 Setup: P-51 Mustang FFB Tuning & Master Layout Guide",
+  "description": "Dial in your Moza AB6 direct drive base for the North American P-51 Mustang in Microsoft Flight Simulator.\n\nAt high speeds just 30 feet off the desert floor, pulling heavy Gs around racing pylons causes stall speeds to skyrocket past 230 knots. Standard centering springs offer zero warning before an unrecoverable snap roll. In this kickoff guide, we break down essential pylon aerodynamics (\"bank before you pull\"), establish our universal master controller layout, calibrate Moza Cockpit force feedback telemetry to transmit the aerodynamic stall buffet before flow separation, and solve broken fuel booster toggles using MobiFlight Connector.\n\nWant to skip manual slider adjustments? Download the ready-to-import profiles on the website:\n🔗 Download FFB & Control Profiles: https://highintheflightsimsky.nl\n\n━━━━━━━━━━━━━━━━━━━━━\n⏱️ CHAPTERS\n━━━━━━━━━━━━━━━━━━━━━\n00:00 - Intro\n00:40 - Aerodynamics & core technique\n01:40 - Master controller architecture & universal FFB baseline\n06:25 - Controller config & FFB setup\n29:49 - Import profiles\n\n━━━━━━━━━━━━━━━━━━━━━\n🛠️ CORE HARDWARE & SETTINGS COVERED\n━━━━━━━━━━━━━━━━━━━━━\n• Master Controller Architecture: Cockpit camera hat switches & view binds\n• Universal FFB Baseline: 6 Nm peak torque output, gain calibration, and telemetry mode\n• P-51 Flight Controls: Primary axes, Z-axis lock, trim management, and throttle mapping\n• Engine & Systems: Manifold pressure boost, radiator/oil cowl flaps, and MobiFlight boost pump fix\n• Moza Cockpit Q-Feel: Dynamic stick pressure, damping, friction, and inertia curves\n• High-G Stall Buffet: AoA buffet onset (10°) and critical stall vibration (15° at 85% strength)\n• MSFS & Moza Cockpit profile import walkthrough\n\n━━━━━━━━━━━━━━━━━━━━━---------\n🏁 NATIONAL CHAMPIONSHIP AIR RACES SERIES\n━━━━━━━━━━━━━━━━━━━━━---------\nThis video is part of our comprehensive hardware and force feedback series covering the aircraft of the National Championship Air Races in Microsoft Flight Simulator. We dial in each airframe class step-by-step so you can master the pylons with authentic tactile feedback:\n\n• Episode 1 (This Video): Unlimited Class — North American P-51D Mustang\n• Episode 2 (Coming Next): T-6 Class — North American T-6 Texan\n\n#MSFS2024 #MozaAB6 #ForceFeedback #FlightSimulator #P51Mustang #RenoAirRaces #SimFlight #AirRacing",
+  "thumbnail": "https://i.ytimg.com/vi/cnYvtC7tKsI/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/cnYvtC7tKsI/mqdefault.jpg",
+  "publishedAt": "2026-10-09T21:01:19.000Z",
+  "duration": 1944,
+  "viewCount": 133,
+  "tags": [
+    "moza ab6",
+    "moza ab6 msfs",
+    "moza force feedback flight simulator",
+    "msfs force feedback setup",
+    "p51 mustang msfs",
+    "p51 mustang msfs 2024",
+    "reno air races msfs",
+    "national championship air races msfs",
+    "moza cockpit ffb settings",
+    "moza ab6 profile import",
+    "mobiflight msfs",
+    "p51 stall buffet msfs",
+    "high in the flightsim sky",
+    "moza racing flight sim",
+    "moza ffb joystick settings",
+    "direct drive flight stick msfs",
+    "msfs warbird force feedback"
+  ],
+  "featured": false
+}
