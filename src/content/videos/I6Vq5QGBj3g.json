@@ -1,0 +1,29 @@
+{
+  "videoId": "I6Vq5QGBj3g",
+  "title": "Moza AB6 MSFS Setup: North American T-6 Texan FFB tuning & bindings guide",
+  "description": "Dial in your Moza AB6 direct drive base for the North American T-6 Texan in Microsoft Flight Simulator.\n\nIn the pilot's class, identical airframes make energy preservation and precision line-flying decisive. Under heavy G-loads, radial engine torque and prop slipstream will snap your right wing straight into the deck if you overpull around a pylon. In this walkthrough, we configure full in-game control assignments and calibrate Moza Cockpit force feedback telemetry so your hands feel the angle-of-attack stall buffet and control wash long before the wing drops.\n\nWant to skip manual slider adjustments? Download the ready-to-import profiles on the website:\n🔗 Download FFB & Control Profiles: https://highintheflightsimsky.nl\n\n━━━━━━━━━━━━━━━━━━━━━\n⏱️ CHAPTERS\n━━━━━━━━━━━━━━━━━━━━━\n00:00 - Intro\n00:43 - Controller config & FFB setup\n16:08 - Import profiles\n\n━━━━━━━━━━━━━━━━━━━━━\n🛠️ CORE HARDWARE & SETTINGS COVERED\n━━━━━━━━━━━━━━━━━━━━━\n• Moza AB6 Direct Drive Base calibration & Z-axis twist\n• Flight controls: Ailerons, elevators, and trim hat configuration\n• Engine bindings: Throttle, prop pitch slider, magnetos, and cowl flaps\n• Moza Cockpit Q-Feel: Dynamic stick pressure, damping, friction, and inertia\n• Buffet & Stall setup: AoA buffet onset (9°) and critical stall (13° at 90% strength)\n• MSFS & Moza Cockpit profile import walkthrough\n\n━━━━━━━━━━━━━━━━━━━━━---------\n🏁 NATIONAL CHAMPIONSHIP AIR RACES SERIES\n━━━━━━━━━━━━━━━━━━━━━---------\nThis video is part of our comprehensive hardware and force feedback series covering the aircraft of the National Championship Air Races in Microsoft Flight Simulator. We dial in each airframe class step-by-step so you can master the pylons with authentic tactile feedback:\n\n• Episode 1: Unlimited Class — North American P-51D Mustang\n• Episode 2 (This Video): T-6 Class — North American T-6 Texan\n• Episode 3 (Coming Next): Biplane Class — Aviat Pitts Special S1S\n\n#MSFS #MozaAB6 #ForceFeedback #FlightSimulator #T6Texan #RenoAirRaces #SimFlight #AirRacing",
+  "thumbnail": "https://i.ytimg.com/vi/I6Vq5QGBj3g/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/I6Vq5QGBj3g/mqdefault.jpg",
+  "publishedAt": "2026-10-10T20:00:23.000Z",
+  "duration": 1110,
+  "viewCount": 81,
+  "tags": [
+    "moza ab6",
+    "moza ab6 msfs",
+    "moza force feedback flight simulator",
+    "msfs force feedback",
+    "north american t6 texan msfs",
+    "t6 texan reno air races",
+    "national championship air races msfs",
+    "moza cockpit ffb settings",
+    "moza ab6 profile import",
+    "msfs reno air races guide",
+    "t6 stall buffet msfs",
+    "high in the flightsim sky",
+    "moza racing flight sim",
+    "moza ffb joystick settings",
+    "direct drive flight stick msfs",
+    "msfs warbird force feedback"
+  ],
+  "featured": false
+}
