@@ -1,0 +1,29 @@
+{
+  "videoId": "rET5lIDlx-I",
+  "title": "Tame the 300°/s Knife Fight: Moza AB6 Setup for the MSFS Pitts S1S",
+  "description": "Dial in your Moza AB6 direct drive base for the Aviat Pitts Special S1S in Microsoft Flight Simulator.\n\nWith a roll rate exceeding 300° per second, the Biplane Class is a high-speed knife fight around the pylons. While pitch response is instantaneous, the biplane's high drag creates a lethal trap: yank back too hard on the stick and you generate a massive induced drag spike that instantly evaporates all your kinetic energy. In this guide, we configure in-game control assignments and fine-tune Moza Cockpit force feedback telemetry—using low damping, unlocked Z-axis twist, and a 95% stall buffet—so your hands feel maximum lift without bleeding a single knot of airspeed.\n\nWant to skip manual slider adjustments? Download the ready-to-import profiles on the website:\n🔗 Download FFB & Control Profiles: https://highintheflightsimsky.nl\n\n━━━━━━━━━━━━━━━━━━━━━\n⏱️ CHAPTERS\n━━━━━━━━━━━━━━━━━━━━━\n00:00 - Start\n00:57 - Controller config & FFB setup\n16:35 - Import profiles\n\n━━━━━━━━━━━━━━━━━━━━━\n🛠️ CORE HARDWARE & SETTINGS COVERED\n━━━━━━━━━━━━━━━━━━━━━\n- Moza AB6 Direct Drive Base calibration & Z-axis twist unlock\n- Flight controls: Aileron/elevator axes, trim hat configuration, and brakes\n- Engine & Systems: Throttle, mixture axis slider, fuel pump toggle, and smoke system\n- Moza Cockpit Q-Feel: Low dynamic damping (15-20%), stick pressure, and inertia\n- High-G Buffeting: 95% stall buffet strength at 60 Hz (AoA onset 11° / critical stall 15°)\n- MSFS & Moza Cockpit profile import walkthrough\n\n━━━━━━━━━━━━━━━━━━━━━\n🏁 NATIONAL CHAMPIONSHIP AIR RACES SERIES\n━━━━━━━━━━━━━━━━━━━━━\nThis video is part of our comprehensive hardware and force feedback series covering the aircraft of the National Championship Air Races in Microsoft Flight Simulator. We dial in each airframe class step-by-step so you can master the pylons with authentic tactile feedback:\n\n- Episode 1: Unlimited Class — North American P-51D Mustang\n- Episode 2: T-6 Class — North American T-6 Texan\n- Episode 3 (This Video): Biplane Class — Aviat Pitts Special S1S\n- Episode 4 (Coming Next): STOL Drag Class — CubCrafters XCub\n\n#MSFS #MozaAB6 #ForceFeedback #FlightSimulator #PittsSpecial #RenoAirRaces #SimFlight #AirRacing",
+  "thumbnail": "https://i.ytimg.com/vi/rET5lIDlx-I/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/rET5lIDlx-I/mqdefault.jpg",
+  "publishedAt": "2026-10-11T20:00:04.000Z",
+  "duration": 1131,
+  "viewCount": 134,
+  "tags": [
+    "moza ab6",
+    "moza ab6 msfs",
+    "moza force feedback flight simulator",
+    "msfs force feedback setup",
+    "aviat pitts special s1s",
+    "pitts special msfs",
+    "reno air races biplane class",
+    "national championship air races msfs",
+    "moza cockpit ffb settings",
+    "moza ab6 profile import",
+    "pitts s1s stall buffet msfs",
+    "high in the flightsim sky",
+    "moza racing flight sim",
+    "moza ffb joystick settings",
+    "direct drive flight stick msfs",
+    "msfs aerobatics force feedback"
+  ],
+  "featured": false
+}
