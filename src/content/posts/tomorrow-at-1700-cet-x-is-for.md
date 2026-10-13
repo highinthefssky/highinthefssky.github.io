@@ -1,7 +1,7 @@
 ---
 title: "Tomorrow at 17:00 CET: X is for"
 description: "Tomorrow at 17:00 CET: X is for... CROSSWIND! 💨✈️  Hey everyone! The MSFS A-Z series rolls on, and tomorrow we are tackling the one letter combination that ever"
-publishedAt: 2026-07-14
+publishedAt: 2026-07-15
 tags: ["community", "youtube"]
 draft: false
 ---
