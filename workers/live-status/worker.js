@@ -4,8 +4,8 @@
  * Checks if a YouTube channel is currently live by fetching the
  * channel's /live page — uses ZERO YouTube API quota.
  * 
- * Environment Variables Required (set in Cloudflare Dashboard):
- * - YOUTUBE_CHANNEL_ID: Your YouTube channel ID (starts with UC)
+ * Environment Variables Required:
+ * - YOUTUBE_CHANNEL_ID: Public YouTube channel ID (starts with UC)
  * - ALLOWED_ORIGIN: Your website origin (e.g., https://highintheflightsimsky.nl)
  */
 
@@ -126,6 +126,8 @@ async function checkLiveStatus(env) {
       // Request English to ensure consistent parsing of status text
       'Accept-Language': 'en-US,en;q=0.9',
       'User-Agent': 'Mozilla/5.0 (compatible; LiveStatusBot/1.0)',
+      // Skip the regional consent interstitial so the response contains video metadata.
+      'Cookie': 'SOCS=CAI; CONSENT=YES+cb.20210328-17-p0.en+FX+471',
     },
     redirect: 'follow',
   });
@@ -174,7 +176,9 @@ async function checkLiveStatus(env) {
 
   // Extract the stream title from og:title meta tag
   const titleMatch = html.match(/<meta\s+(?:name|property)="og:title"\s+content="([^"]*)"/) ||
-                     html.match(/<meta\s+content="([^"]*)"\s+(?:name|property)="og:title"/);
+                     html.match(/<meta\s+content="([^"]*)"\s+(?:name|property)="og:title"/) ||
+                     html.match(/<meta\s+name="title"\s+content="([^"]*)"/) ||
+                     html.match(/<meta\s+content="([^"]*)"\s+name="title"/);
   const title = titleMatch ? decodeHTMLEntities(titleMatch[1]) : 'Live now!';
 
   // Extract thumbnail

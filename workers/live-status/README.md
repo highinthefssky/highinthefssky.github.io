@@ -33,20 +33,14 @@ cd workers/live-status
 wrangler deploy
 ```
 
-### 4. Add Secrets
+### 4. Configure the Channel
 
-After deploying, add your YouTube channel ID as a secret:
+Set the public YouTube channel ID in `wrangler.toml` as
+`YOUTUBE_CHANNEL_ID`. This is public channel metadata, not a secret.
 
-```bash
-wrangler secret put YOUTUBE_CHANNEL_ID
-# Paste your channel ID (starts with UC) when prompted
-```
-
-Alternatively, add it in the Cloudflare Dashboard:
-1. Go to Workers & Pages → highinthesky-live-status → Settings → Variables
-2. Add `YOUTUBE_CHANNEL_ID` as an encrypted secret
-
-> **Note:** `YOUTUBE_API_KEY` is no longer required. If you previously set it, you can safely remove it.
+> **Note:** `YOUTUBE_API_KEY` is no longer required. If you previously set it,
+> you can safely remove it. A legacy `YOUTUBE_CHANNEL_ID` secret may also be
+> removed after deploying the `wrangler.toml` binding.
 
 ### 5. Get Your Worker URL
 
