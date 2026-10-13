@@ -1,12 +1,13 @@
 /**
  * Cloudflare Worker: YouTube Live Status Checker
  * 
- * Checks if a YouTube channel is currently live by fetching the
- * channel's /live page — uses ZERO YouTube API quota.
+ * Checks if a YouTube channel is currently live by combining its
+ * public RSS feed with the YouTube Data API.
  * 
  * Environment Variables Required:
  * - YOUTUBE_CHANNEL_ID: Public YouTube channel ID (starts with UC)
  * - ALLOWED_ORIGIN: Your website origin (e.g., https://highintheflightsimsky.nl)
+ * - YOUTUBE_API_KEY: YouTube Data API v3 key (Cloudflare secret)
  */
 
 // Cache key for KV storage
@@ -103,110 +104,82 @@ async function getCachedLiveStatus(env, ctx) {
 }
 
 /**
- * Check if the channel is live by fetching the YouTube channel's /live page.
- * 
- * When a channel is streaming, youtube.com/channel/CHANNEL_ID/live serves a
- * page containing the live video's metadata in embedded JSON (ytInitialPlayerResponse).
- * When not live, the page either redirects to the channel's featured tab or
- * shows the most recent VOD.
- * 
- * This approach uses ZERO YouTube Data API quota.
+ * Check recent channel videos using the public RSS feed and one videos.list request.
+ * The channel /live page cannot be used reliably because YouTube rate-limits
+ * requests from Cloudflare datacenter IPs.
  */
 async function checkLiveStatus(env) {
-  const { YOUTUBE_CHANNEL_ID } = env;
+  const { YOUTUBE_API_KEY, YOUTUBE_CHANNEL_ID } = env;
 
   if (!YOUTUBE_CHANNEL_ID) {
     throw new Error('Missing YOUTUBE_CHANNEL_ID environment variable');
   }
+  if (!YOUTUBE_API_KEY) {
+    throw new Error('Missing YOUTUBE_API_KEY environment variable');
+  }
 
-  const liveUrl = `https://www.youtube.com/channel/${YOUTUBE_CHANNEL_ID}/live`;
+  const headers = {
+    'Accept-Language': 'en-US,en;q=0.9',
+    'User-Agent': 'Mozilla/5.0 (compatible; LiveStatusBot/1.0)',
+  };
+  const feedResponse = await fetch(
+    `https://www.youtube.com/feeds/videos.xml?channel_id=${YOUTUBE_CHANNEL_ID}`,
+    { headers }
+  );
 
-  const response = await fetch(liveUrl, {
-    headers: {
-      // Request English to ensure consistent parsing of status text
-      'Accept-Language': 'en-US,en;q=0.9',
-      'User-Agent': 'Mozilla/5.0 (compatible; LiveStatusBot/1.0)',
-      // Skip the regional consent interstitial so the response contains video metadata.
-      'Cookie': 'SOCS=CAI; CONSENT=YES+cb.20210328-17-p0.en+FX+471',
-    },
-    redirect: 'follow',
+  if (!feedResponse.ok) {
+    throw new Error(`YouTube feed fetch error: ${feedResponse.status}`);
+  }
+
+  const feed = await feedResponse.text();
+  const videoIds = [...feed.matchAll(/<yt:videoId>([a-zA-Z0-9_-]{11})<\/yt:videoId>/g)]
+    .slice(0, 5)
+    .map((match) => match[1]);
+
+  if (videoIds.length === 0) {
+    throw new Error('YouTube feed contained no video IDs');
+  }
+
+  const params = new URLSearchParams({
+    part: 'snippet,liveStreamingDetails',
+    id: videoIds.join(','),
+    key: YOUTUBE_API_KEY,
   });
+  const videosResponse = await fetch(`https://www.googleapis.com/youtube/v3/videos?${params}`);
 
-  if (!response.ok) {
-    throw new Error(`YouTube page fetch error: ${response.status}`);
+  if (!videosResponse.ok) {
+    throw new Error(`YouTube Data API error: ${videosResponse.status}`);
   }
 
-  const html = await response.text();
+  const videos = await videosResponse.json();
+  const liveVideo = videos.items?.find((item) =>
+    item.snippet?.liveBroadcastContent === 'live' &&
+    !item.liveStreamingDetails?.actualEndTime
+  );
 
-  const scheduledStartTimeMatch = html.match(/"scheduledStartTime":\s*"([^"]+)"/) ||
-                                  html.match(/"startTimestamp":\s*"([^"]+)"/) ||
-                                  html.match(/<meta\s+(?:name|property)="video:release_date"\s+content="([^"]+)"/);
-  const scheduledStartTime = scheduledStartTimeMatch ? scheduledStartTimeMatch[1] : null;
-
-  // Check for robust live indicators in the page's embedded JSON data.
-  // Relying on isLiveContent alone causes false positives for upcoming/ended streams.
-  const isLiveNow = html.includes('"isLive":true') || html.includes('"isLiveNow":true');
-  const isOfflineOrUpcoming =
-    html.includes('"LIVE_STREAM_OFFLINE"') ||
-    html.includes('"status":"LIVE_STREAM_OFFLINE"') ||
-    html.includes('"isUpcoming":true');
-
-  if (isOfflineOrUpcoming || !isLiveNow) {
+  if (!liveVideo) {
     return { isLive: false };
   }
 
-  // Safety guard: if a valid scheduled start time is still in the future,
-  // treat the stream as not live even if other markers are stale/inconsistent.
-  if (scheduledStartTime) {
-    const scheduledStartMs = Date.parse(scheduledStartTime);
-    if (!Number.isNaN(scheduledStartMs) && Date.now() < scheduledStartMs) {
-      return { isLive: false };
-    }
-  }
-
-  // Extract video ID from the canonical URL or og:url meta tag
-  // Pattern: /watch?v=VIDEO_ID
-  const videoIdMatch = html.match(/"videoId":\s*"([a-zA-Z0-9_-]{11})"/);
-  const videoId = videoIdMatch ? videoIdMatch[1] : null;
-
-  if (!videoId) {
-    // Page says live but we can't find a video ID — treat as not live
-    return { isLive: false };
-  }
-
-  // Extract the stream title from og:title meta tag
-  const titleMatch = html.match(/<meta\s+(?:name|property)="og:title"\s+content="([^"]*)"/) ||
-                     html.match(/<meta\s+content="([^"]*)"\s+(?:name|property)="og:title"/) ||
-                     html.match(/<meta\s+name="title"\s+content="([^"]*)"/) ||
-                     html.match(/<meta\s+content="([^"]*)"\s+name="title"/);
-  const title = titleMatch ? decodeHTMLEntities(titleMatch[1]) : 'Live now!';
-
-  // Extract thumbnail
-  const thumbMatch = html.match(/<meta\s+(?:name|property)="og:image"\s+content="([^"]*)"/) ||
-                     html.match(/<meta\s+content="([^"]*)"\s+(?:name|property)="og:image"/);
-  const thumbnail = thumbMatch ? thumbMatch[1] : null;
+  const thumbnails = liveVideo.snippet.thumbnails || {};
+  const thumbnail =
+    thumbnails.maxres?.url ||
+    thumbnails.standard?.url ||
+    thumbnails.high?.url ||
+    thumbnails.medium?.url ||
+    thumbnails.default?.url ||
+    null;
 
   return {
     isLive: true,
-    videoId,
-    title,
+    videoId: liveVideo.id,
+    title: liveVideo.snippet.title || 'Live now!',
     thumbnail,
-    scheduledStartTime,
+    scheduledStartTime:
+      liveVideo.liveStreamingDetails?.actualStartTime ||
+      liveVideo.liveStreamingDetails?.scheduledStartTime ||
+      null,
   };
-}
-
-/**
- * Decode basic HTML entities in extracted text.
- */
-function decodeHTMLEntities(text) {
-  return text
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&#x27;/g, "'")
-    .replace(/&#x2F;/g, '/')
-    .replace(/&amp;/g, '&');
 }
 
 function handleCORS(env) {

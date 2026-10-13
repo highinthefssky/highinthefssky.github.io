@@ -1,11 +1,13 @@
 # YouTube Live Status Worker
 
-A Cloudflare Worker that checks if the YouTube channel is currently live streaming by fetching the channel's `/live` page.
+A Cloudflare Worker that checks whether the YouTube channel is currently live
+using its public RSS feed and a quota-efficient YouTube Data API request.
 
 ## Why a Worker?
 
 Browsers cannot reliably fetch YouTube pages due to CORS restrictions. This worker acts as a proxy that:
-- Fetches the channel's `/live` page server-side
+- Reads recent channel video IDs from the public RSS feed
+- Checks those IDs with one `videos.list` request for an active live broadcast
 - Parses the live status, video ID, and title from the page HTML
 - Caches the result in Cloudflare KV (5-minute TTL) to avoid excessive requests
 - **Uses ZERO YouTube Data API quota** — no API key needed
@@ -33,14 +35,20 @@ cd workers/live-status
 wrangler deploy
 ```
 
-### 4. Configure the Channel
+### 4. Configure the Channel and API Key
 
 Set the public YouTube channel ID in `wrangler.toml` as
 `YOUTUBE_CHANNEL_ID`. This is public channel metadata, not a secret.
 
-> **Note:** `YOUTUBE_API_KEY` is no longer required. If you previously set it,
-> you can safely remove it. A legacy `YOUTUBE_CHANNEL_ID` secret may also be
-> removed after deploying the `wrangler.toml` binding.
+Set a YouTube Data API v3 key as an encrypted Worker secret:
+
+```bash
+wrangler secret put YOUTUBE_API_KEY
+```
+
+The worker reads recent IDs from RSS and uses one low-cost `videos.list`
+request per five-minute cache miss. A legacy `YOUTUBE_CHANNEL_ID` secret may
+be removed after deploying the `wrangler.toml` binding.
 
 ### 5. Get Your Worker URL
 
