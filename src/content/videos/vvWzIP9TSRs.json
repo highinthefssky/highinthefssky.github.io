@@ -1,0 +1,33 @@
+{
+  "videoId": "vvWzIP9TSRs",
+  "title": "Master STOL Drag: Moza AB6 FFB setup & controls for the CubCrafters XCub | MSFS",
+  "description": "Dial in your Moza AB6 direct drive base for the CubCrafters XCub in Microsoft Flight Simulator.\n\nSTOL Drag racing throws high-altitude speed out the window for a brutal 2,000-foot head-to-head sprint. The real danger isn't high bank angles—it's the extreme deceleration flare right before touchdown. Pitch up too aggressively to bleed speed and you risk an instant tip stall straight into the dirt, while the 180° ground pivot demands instant rudder and differential brake authority. In this guide, we map essential in-game controls and dial in Moza Cockpit force feedback telemetry—calibrating low-speed damping, tailwheel lock handling, and a 100% stall buffet—so your hands feel the stall onset before the gear touches down.\n\nWant to skip manual slider adjustments? Download the ready-to-import profiles on the website:\n\n🔗 Download FFB & Control Profiles: https://highintheflightsimsky.nl\n\n━━━━━━━━━━━━━━━━━━━━━\n⏱️ CHAPTERS\n━━━━━━━━━━━━━━━━━━━━━\n\n00:00 Intro\n01:07 Controller config & FFB setup\n14:38 Import profiles\n\n━━━━━━━━━━━━━━━━━━━━━\n🛠️ CORE HARDWARE & SETTINGS COVERED\n━━━━━━━━━━━━━━━━━━━━━\n\n- Moza AB6 base calibration & R-Axis Z twist unlock for tight 180° ground pivots\n- Control assignments: Elevator, aileron, trim hat, differential brakes, and tailwheel lock toggle\n- Base unit mappings: Throttle axis, reversed flap lever assignment, and master ignition toggle\n- Moza Cockpit Q-Feel: Telemetry FFB at 100% torque, reduced basic damping/spring (20%), and low-speed dynamic damping\n- Critical STOL Telemetry: 100% stall buffet strength (12 Hz frequency / 12° onset / 16° critical AoA)\n- Ground & Engine Effects: Deceleration pilot feeling (60%), prop wash (85%), and ground vibration (75%)\n- MSFS in-game control profile & Moza Cockpit preset import walkthrough\n\n━━━━━━━━━━━━━━━━━━━━━----------\n🏁 NATIONAL CHAMPIONSHIP AIR RACES SERIES\n━━━━━━━━━━━━━━━━━━━━━----------\n\nThis video is part of our comprehensive hardware and force feedback series covering the aircraft of the National Championship Air Races in Microsoft Flight Simulator. We dial in each airframe class step-by-step so you can master the racecourse with authentic tactile feedback:\n\n- Episode 1: Unlimited Class — North American P-51D Mustang\n- Episode 2: T-6 Class — North American T-6 Texan\n- Episode 3: Biplane Class — Aviat Pitts Special S1S\n- Episode 4 (This Video): STOL Drag Class — CubCrafters XCub\n- Episode 5 (Coming Next): Jet Class — Aero Vodochody L-39 Albatros\n\n#MSFS #MozaAB6 #ForceFeedback #STOLDrag #CubCrafters #XCub #FlightSimulator #RenoAirRaces #SimFlight",
+  "thumbnail": "https://i.ytimg.com/vi/vvWzIP9TSRs/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/vvWzIP9TSRs/mqdefault.jpg",
+  "publishedAt": "2026-10-12T20:00:38.000Z",
+  "duration": 1013,
+  "viewCount": 154,
+  "tags": [
+    "MSFS",
+    "Microsoft Flight Simulator",
+    "MSFS 2024",
+    "Moza AB6",
+    "Moza Cockpit",
+    "Force Feedback",
+    "FFB setup",
+    "CubCrafters XCub",
+    "XCub MSFS",
+    "STOL Drag",
+    "Reno Air Races",
+    "National Championship Air Races",
+    "flight sim hardware",
+    "Moza Racing",
+    "direct drive joystick",
+    "flight simulator controls",
+    "rudder axis setup",
+    "differential brakes",
+    "stall buffet settings",
+    "highintheflightsimsky"
+  ],
+  "featured": false
+}
