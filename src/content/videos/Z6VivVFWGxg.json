@@ -1,0 +1,32 @@
+{
+  "videoId": "Z6VivVFWGxg",
+  "title": "Dial in your Moza AB6 for the L-39 Albatros | MSFS Jet Class FFB Guide",
+  "description": "Dial in your Moza AB6 direct drive base for the Aero L-39 Albatros in Microsoft Flight Simulator.\n\nThe Jet Class on the 11.3-mile Roswell course is the fastest, most unforgiving track in the National Championship Air Races. Racing military jets low to the terrain introduces a punishing penalty: 4 to 6 seconds of turbofan spool lag. Induce an accelerated stall around a high-G pylon turn, and you instantly bleed all forward kinetic energy with zero immediate engine recovery. In this guide, we map complete in-game flight controls and fine-tune Moza Cockpit force feedback telemetry—calibrating dynamic aerodynamic pressure across a 220 m/s range, locking the Z-axis, and programming an authentic 12° stick shaker alongside tactical stall buffet cues so you can push the L-39 to the edge of the envelope without washing out.\n\nWant to skip manual slider adjustments? Download the ready-to-import profiles on the website:\n🔗 Download FFB & Control Profiles: https://highintheflightsimsky.nl\n\n━━━━━━━━━━━━━━━━━━━━━\n⏱️ CHAPTERS\n━━━━━━━━━━━━━━━━━━━━━\n00:00 - Intro\n00:56 - Controller config & FFB setup\n17:23 - Import profiles\n\n━━━━━━━━━━━━━━━━━━━━━\n🛠️ CORE HARDWARE & SETTINGS COVERED\n━━━━━━━━━━━━━━━━━━━━━\n- Moza AB6 Direct Drive Base calibration & Z-axis twist lock\n- Flight Controls: Pitch/roll axes, stick-mounted wheel brakes, and trim hat configuration\n- Systems Mapping: Engine throttle, spoiler/speedbrake lever, turbine ignition, landing gear toggle, flaps, and pitot heat\n- Moza Cockpit Basic FFB: 85% overall intensity, 55% damper, 35% inertia, and 10% friction\n- Dynamic Aerodynamics: Dynamic pressure scaling up to 220 m/s and elevator load modeling\n- Stall & Transonic Buffeting: 12° AoA stick shaker (30 Hz), 80% stall buffet, and Mach 0.68–0.85 shock-induced wave buffet\n- Engine & Airframe Effects: Gear/spoiler vibration mapping and afterburner cancellation for non-afterburning jets\n- MSFS & Moza Cockpit profile import walkthrough\n\n━━━━━━━━━━━━━━━━━━━━━\n🏁 NATIONAL CHAMPIONSHIP AIR RACES SERIES\n━━━━━━━━━━━━━━━━━━━━━\nThis video closes out our comprehensive hardware and force feedback series covering the aircraft of the National Championship Air Races in Microsoft Flight Simulator. We dial in each airframe class step-by-step so you can master the pylons with authentic tactile feedback:\n\n- Episode 1: Unlimited Class — North American P-51D Mustang\n- Episode 2: T-6 Class — North American T-6 Texan\n- Episode 3: Biplane Class — Aviat Pitts Special S1S\n- Episode 4: STOL Drag Class — CubCrafters XCub\n- Episode 5 (This Video): Jet Class — Aero L-39 Albatros\n\n#MSFS #MozaAB6 #ForceFeedback #FlightSimulator #L39Albatros #RenoAirRaces #AirRacing #MSFS2024",
+  "thumbnail": "https://i.ytimg.com/vi/Z6VivVFWGxg/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/Z6VivVFWGxg/mqdefault.jpg",
+  "publishedAt": "2026-10-13T20:00:04.000Z",
+  "duration": 1193,
+  "viewCount": 114,
+  "tags": [
+    "MSFS",
+    "Microsoft Flight Simulator",
+    "MSFS 2024",
+    "Moza AB6",
+    "Moza AB6 settings",
+    "Moza AB6 force feedback",
+    "Moza Cockpit",
+    "Moza Racing",
+    "L-39 Albatros",
+    "L-39 MSFS",
+    "National Championship Air Races",
+    "Reno Air Races MSFS",
+    "Jet Class MSFS",
+    "Roswell Air Race",
+    "Force Feedback Flight Simulator",
+    "Direct Drive Joystick",
+    "MSFS FFB profiles",
+    "L-39 Albatros setup",
+    "High in the Flightsim Sky"
+  ],
+  "featured": false
+}
