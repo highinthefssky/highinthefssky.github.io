@@ -1,7 +1,7 @@
 ---
 title: "✈️ Flight Deck Cheat Sheet: Mastering the Roswell Pylon Apex"
 description: "✈️ Flight Deck Cheat Sheet: Mastering the Roswell Pylon Apex  Pulling maximum Gs around the pylons in MSFS 2024 will cost you the race if you don't manage your"
-publishedAt: 2026-10-12
+publishedAt: 2026-10-13
 tags: ["community", "youtube"]
 draft: false
 ---
