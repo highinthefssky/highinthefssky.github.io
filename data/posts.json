@@ -1,33 +1,18 @@
 [
   {
-    "id": "UgkxyqxF1qH8dUsnFFkDGje_0wY9E156J8ot",
-    "text": "✈️ Flight Deck Cheat Sheet: PFD Speed Trend Vectors\n\n​Ever find yourself constantly chasing target airspeed on short final during manual approaches? That magenta line extending from your speed bug on the Primary Flight Display (PFD) is your most powerful tool for smooth, proactive airspeed management.\n\n​📌 Key Takeaways:\n\n​The 6-Second Prediction: The length of the magenta vector line indicates where your airspeed will be in exactly 6 seconds if your current acceleration or deceleration rate remains constant.\n\n​Anticipate, Don't React: Instead of waiting for your airspeed to drop or overshoot, use the vector's growth to make small, proactive pitch and power adjustments before the speed deviation actually occurs.\n\n​Targeting V_{APP} on Final: To maintain a stabilized approach, aim to keep the tip of the trend vector resting directly on your target approach speed—eliminating wild throttle adjustments on short final.\n\n​📺 Watch the full breakdown in action: https://youtu.be/1srGO9HEXs8",
-    "published_relative": "2 months ago",
-    "published_date": "2026-08-17",
-    "url": "https://www.youtube.com/post/UgkxyqxF1qH8dUsnFFkDGje_0wY9E156J8ot",
-    "likes": "2",
+    "id": "UgkxFQqVaAqKk8gqbK8dWbUa8kgNhVaNfCek",
+    "text": "Tomorrow at 17:00 CET: X is for... CROSSWIND! 💨✈️\n\nHey everyone! The MSFS A-Z series rolls on, and tomorrow we are tackling the one letter combination that every pilot deeply respects—and loves to conquer. If you’ve ever had a sudden gust violently shove you off the centerline on short final, this next episode is for you.\n\nWe are breaking down exactly how wind drift forces your plane off course and walking through live demonstrations of the two classic techniques used to pull off a safe, stable landing every single time:\n👉 The Crab Method (Letting the plane fly sideways—essential for heavy airliners)\n👉 The Wing-Low / Side Slip Method (Advanced stick-and-rudder work to save your landing gear)\n\nWe’ll also look at why the flying doesn't stop just because your tires hit the tarmac, covering critical ground rollout and taxiing control inputs.\n\n🔔 Set your reminders: The video drops tomorrow at 17:00 CET. Come hang out in the live chat during the premiere!\n\n👇 While you wait, let me know in the comments: What’s the highest crosswind component you’ve successfully landed in without wrecking your virtual landing gear? Let's see who holds the community record!\n\nFly safe, and see you tomorrow! 🧭",
+    "published_relative": "4 months ago",
+    "published_date": "2026-06-18",
+    "url": "https://www.youtube.com/post/UgkxFQqVaAqKk8gqbK8dWbUa8kgNhVaNfCek",
+    "likes": "5",
     "comments": "0",
     "images": [
-      "https://yt3.ggpht.com/N7mJ1REB4XqQjEjMy784m4Yw-2RTLtKHy_kgf2ilEQIshtcYGghawFAE2GLHOUAbMIG1xMGmwglnyuw=s1280"
+      "https://yt3.ggpht.com/-BERapUKAgE0tAR5xvE1DJn7FDJ2J-2BCoKd0ffXoOOla7VpNvnoxxidITJOLBfzQZJqA8BnF_IYRGM=s1280"
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-16T16:20:00.794757Z"
-  },
-  {
-    "id": "Ugkxj8C8VIupNprjIoYOTSV_gMJDpzueqF-J",
-    "text": "✈️ Flight Deck Milestone: 6 Years High in the FlightSim Sky!\n\nSix years ago today, we pushed back from the gate with our very first video upload. From that first humble takeoff to mastering complex airliner flight decks, glass cockpits, and full VR setups, it has been an incredible journey sharing the skies with you.\n\n📌 Flight Log Highlights:\n\nThe Maiden Flight: 6 years of flight sim tutorials, aircraft breakdowns, and community livestreams.\n\nThe Hangar Fleet: Over 2,100+ videos published covering everything from basic VFR to advanced automation.\n\nThe Flight Crew: 7,200+ virtual pilots strong in our community hangar!\n\n📺 Revisit where the journey all began and check out our earliest flights vs. today: https://youtu.be/mnUZlC5KPVQ",
-    "published_relative": "1 month ago",
-    "published_date": "2026-09-16",
-    "url": "https://www.youtube.com/post/Ugkxj8C8VIupNprjIoYOTSV_gMJDpzueqF-J",
-    "likes": "6",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/LC1tA2kT8qWnfuVIcEe9AaDLhK4TOCS9dtCGmDBEzhcCbNUMLwDAJVhNCYpghOQcmL6vfVOMBZCk7A=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-16T16:20:00.794745Z"
+    "scraped_at": "2026-10-16T20:42:36.537737Z"
   },
   {
     "id": "UgkxTNz19tJEt-gjx7rb4fAQK5lkBABJLJLC",
@@ -43,7 +28,22 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-16T16:20:00.794731Z"
+    "scraped_at": "2026-10-16T20:42:36.537720Z"
+  },
+  {
+    "id": "Ugkxj8C8VIupNprjIoYOTSV_gMJDpzueqF-J",
+    "text": "✈️ Flight Deck Milestone: 6 Years High in the FlightSim Sky!\n\nSix years ago today, we pushed back from the gate with our very first video upload. From that first humble takeoff to mastering complex airliner flight decks, glass cockpits, and full VR setups, it has been an incredible journey sharing the skies with you.\n\n📌 Flight Log Highlights:\n\nThe Maiden Flight: 6 years of flight sim tutorials, aircraft breakdowns, and community livestreams.\n\nThe Hangar Fleet: Over 2,100+ videos published covering everything from basic VFR to advanced automation.\n\nThe Flight Crew: 7,200+ virtual pilots strong in our community hangar!\n\n📺 Revisit where the journey all began and check out our earliest flights vs. today: https://youtu.be/mnUZlC5KPVQ",
+    "published_relative": "1 month ago",
+    "published_date": "2026-09-16",
+    "url": "https://www.youtube.com/post/Ugkxj8C8VIupNprjIoYOTSV_gMJDpzueqF-J",
+    "likes": "6",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/LC1tA2kT8qWnfuVIcEe9AaDLhK4TOCS9dtCGmDBEzhcCbNUMLwDAJVhNCYpghOQcmL6vfVOMBZCk7A=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-16T20:42:36.537697Z"
   },
   {
     "id": "UgkxsDDGY3wiVy2G81vVXm53W0g0XQZsCi0n",
@@ -58,7 +58,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-16T16:20:00.794715Z"
+    "scraped_at": "2026-10-16T20:42:36.537681Z"
   },
   {
     "id": "Ugkxu4Cs_JcbJiNZaCWqxcDmi5gjvkkUlnrO",
@@ -73,35 +73,22 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-16T16:20:00.794701Z"
+    "scraped_at": "2026-10-16T20:42:36.537662Z"
   },
   {
-    "id": "UgkxmXp9kg_FPWEPK-z0kvPoAWnSI4eU2_DX",
-    "text": "✈️ Ready to Stop Guessing on the Radios? \"U\" is for UNICOM!\nEver dropped through the clouds on a perfect flight, only to find another aircraft sitting right on your runway? Or maybe you avoid uncontrolled airfields entirely because you aren't sure what to say on 122.800?\n\nYou don't need a control tower to have a perfectly safe, deeply immersive flight. You just need to master UNICOM.\n\nIn our latest episode of the MSFS A-Z Series, we are breaking down everything you need to know to transition from an offline casual simmer to a highly respected community pilot.\n\nWhat’s inside the video:\nThe Basics: Exactly what UNICOM is and why it's the ultimate \"turn signal\" of the skies.\n\nThe 3 Golden Rules: The absolute mandatory layout for every single radio transmission.\n\nStep-by-Step GA Demos: Watch a full flight from Jaffrey Airport (3AF) covering taxi, takeoff, en-route coordination, pattern entry, and final landing calls.\n\nHigh-Altitude Airliner Scenarios: How to safely coordinate across the sky when flying heavy jets at 400 knots without active ATC.\n\n🎁 Free Community Download!\nTo help you stay sharp in the cockpit, we’ve put together the Pilot’s Communication Checklist for Uncontrolled Fields shown in the screenshot below! Keep this handy on your tablet or second monitor during your next flight so you always know exactly what to announce, when.\n\n👉 https://youtu.be/RodH1TZvqjo: Watch the Ultimate UNICOM Guide Now!\n\nLet us know in the comments: Do you usually fly solo in GA aircraft, or do you brave the busy multiplayer skies?\n\nClear skies, happy radios, and we'll see you in the sky! 🎙️🛫",
-    "published_relative": "4 months ago",
-    "published_date": "2026-06-18",
-    "url": "https://www.youtube.com/post/UgkxmXp9kg_FPWEPK-z0kvPoAWnSI4eU2_DX",
-    "likes": "6",
+    "id": "UgkxzHQpS2aHdfWw-1s8memyySmmAilAzeRb",
+    "text": "Tired of repeating the exact same robotic phrase three times on final approach just to get the landing gear down? 😅 \n\nLet me know in the comments: what’s the one cockpit command your voice assistant usually messes up the most?\n\nIf you want to grab the SimVoice Copilot Premium Lifetime license while it’s on sale for $39.99 (down from $59.99 through October 19), make sure to stack our community code at checkout for an extra discount on top of that promo price!\n\n👉 Get SimVoice Copilot here: https://simvoicecopilot.com/hitfs\n🎟️ Use code: JVELDH10",
+    "published_relative": "7 days ago",
+    "published_date": "2026-10-09",
+    "url": "https://www.youtube.com/post/UgkxzHQpS2aHdfWw-1s8memyySmmAilAzeRb",
+    "likes": "0",
     "comments": "0",
     "images": [
-      "https://yt3.ggpht.com/MBoTr0yTI_M6OFtUVhOeIDnvy0eMIxXLq92fbLBT02ErNWhnP-QnODdaN1hJ3vVsM5oDxjajJIHGag=s1280"
+      "https://yt3.ggpht.com/FTBiO1BZfnsJ0tgtGIhRrfH_s_xR-V7qFfsptOFvsLNPnSylBD429wx_50yaeYTQYEtUJUubuMY6zQ=s1280"
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-16T16:20:00.794690Z"
-  },
-  {
-    "id": "Ugkx6kF4vT0iFAqN76ti63dP1xtLPjSNI6Ta",
-    "text": "🛫 Simmer's Quick Check: During engine start on a turboprop like the Daher TBM 930 or Pilatus PC-12, your ITT (Interstage Turbine Temperature) rapidly spikes toward the redline while Ng is still sluggish below 12%. What is your immediate memory item?\n\n📺 Master the Flight Deck:\nTurboprop turbine damage in flight simulation is costly if you run realism addons, but knowing how to recognize a hung or hot start within 3 seconds will save your engine every time.\nWatch the full guide here: https://www.youtube.com/playlist?list...",
-    "published_relative": "13 days ago",
-    "published_date": "2026-10-03",
-    "url": "https://www.youtube.com/post/Ugkx6kF4vT0iFAqN76ti63dP1xtLPjSNI6Ta",
-    "likes": "0",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-16T16:20:00.794676Z"
+    "scraped_at": "2026-10-16T20:42:36.537645Z"
   },
   {
     "id": "UgkxOrZ8dt-pxQ0pxqRQ-llpUBPkSXZ-ePQV",
@@ -116,13 +103,13 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-16T16:20:00.794667Z"
+    "scraped_at": "2026-10-16T20:42:36.537630Z"
   },
   {
     "id": "Ugkxq2_9srlQSH8dNVnrF4O0bU5wOFlxwylW",
     "text": "✈️ Flight Deck Cheat Sheet: Mastering the Roswell Pylon Apex\n\nPulling maximum Gs around the pylons in MSFS 2024 will cost you the race if you don't manage your aircraft's energy line. Bleeding airspeed or overboosting cylinder temperatures into Turn 1 is the easiest way to end up at the back of the pack.\n\n📌 Key Takeaways:\n\nThe Late Apex Line: Roll into a 65–70° bank early and apex late on Pylon 2 to carry maximum kinetic energy onto the long desert straightaway.\n\nBuffet & G-Load Awareness: Ease off abrupt stick pull when you hear wing buffet—exceeding critical angle of attack bleeds up to 50 knots instantly.\n\nThermal Management: Keep manifold pressure off the absolute stop during level runs to give cylinder heads room to cool before the next high-G climb.\n\n📺 Watch our 5-class breakdown and get circuit ready: https://youtube.com/shorts/iJvQpfdaNX...",
-    "published_relative": "3 days ago",
-    "published_date": "2026-10-13",
+    "published_relative": "4 days ago",
+    "published_date": "2026-10-12",
     "url": "https://www.youtube.com/post/Ugkxq2_9srlQSH8dNVnrF4O0bU5wOFlxwylW",
     "likes": "0",
     "comments": "0",
@@ -131,7 +118,22 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-16T16:20:00.794655Z"
+    "scraped_at": "2026-10-16T20:42:36.537615Z"
+  },
+  {
+    "id": "UgkxmXp9kg_FPWEPK-z0kvPoAWnSI4eU2_DX",
+    "text": "✈️ Ready to Stop Guessing on the Radios? \"U\" is for UNICOM!\nEver dropped through the clouds on a perfect flight, only to find another aircraft sitting right on your runway? Or maybe you avoid uncontrolled airfields entirely because you aren't sure what to say on 122.800?\n\nYou don't need a control tower to have a perfectly safe, deeply immersive flight. You just need to master UNICOM.\n\nIn our latest episode of the MSFS A-Z Series, we are breaking down everything you need to know to transition from an offline casual simmer to a highly respected community pilot.\n\nWhat’s inside the video:\nThe Basics: Exactly what UNICOM is and why it's the ultimate \"turn signal\" of the skies.\n\nThe 3 Golden Rules: The absolute mandatory layout for every single radio transmission.\n\nStep-by-Step GA Demos: Watch a full flight from Jaffrey Airport (3AF) covering taxi, takeoff, en-route coordination, pattern entry, and final landing calls.\n\nHigh-Altitude Airliner Scenarios: How to safely coordinate across the sky when flying heavy jets at 400 knots without active ATC.\n\n🎁 Free Community Download!\nTo help you stay sharp in the cockpit, we’ve put together the Pilot’s Communication Checklist for Uncontrolled Fields shown in the screenshot below! Keep this handy on your tablet or second monitor during your next flight so you always know exactly what to announce, when.\n\n👉 https://youtu.be/RodH1TZvqjo: Watch the Ultimate UNICOM Guide Now!\n\nLet us know in the comments: Do you usually fly solo in GA aircraft, or do you brave the busy multiplayer skies?\n\nClear skies, happy radios, and we'll see you in the sky! 🎙️🛫",
+    "published_relative": "4 months ago",
+    "published_date": "2026-06-18",
+    "url": "https://www.youtube.com/post/UgkxmXp9kg_FPWEPK-z0kvPoAWnSI4eU2_DX",
+    "likes": "6",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/MBoTr0yTI_M6OFtUVhOeIDnvy0eMIxXLq92fbLBT02ErNWhnP-QnODdaN1hJ3vVsM5oDxjajJIHGag=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-16T20:42:36.537598Z"
   },
   {
     "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
@@ -144,7 +146,37 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-16T16:20:00.794641Z"
+    "scraped_at": "2026-10-16T20:42:36.537577Z"
+  },
+  {
+    "id": "UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
+    "text": "",
+    "published_relative": "1 day ago",
+    "published_date": "2026-10-15",
+    "url": "https://www.youtube.com/post/UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
+    "likes": "1",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/FmxSgnymhnCYc9tGG98EfbLs_lh2MLDTmHRYLiPfvhF2dJyKO0HGM2xp4xhKccPsIoiG_G3vwmGT=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-16T20:42:36.537539Z"
+  },
+  {
+    "id": "UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS",
+    "text": "✈️ Flight Deck Cheat Sheet: The 3:1 Rule for Top of Descent (TOD)\n\nStruggling to calculate your descent without an active VNAV profile? Whether you fly a steam-gauge Cessna, a modern turboprop, or an airliner, the classic 3:1 rule guarantees you never end up 5,000 ft too high on final.\n\n📌 Key Takeaways:\n\nThe Distance Formula (Altitude to Lose × 3): Drop the last three zeros of your altitude to lose, then multiply by 3. If you are cruising at FL240 and need to enter the pattern at 2,000 ft (22,000 ft to lose: 22 × 3), your Top of Descent is 66 nautical miles out.\n\nThe Descent Rate Formula (Groundspeed × 5): Take your current groundspeed and multiply by 5 (or divide by 2 and add a zero). At a 240-knot groundspeed, aim for roughly 1,200 fpm on the vertical speed indicator.\n\nThe Buffer Factor: Always add 5 to 10 nautical miles to your calculated TOD distance to comfortably decelerate and configure flaps/gear before reaching the initial approach fix.\n\n📺 Watch the full breakdown in action: https://youtu.be/MCbT-90kDl8",
+    "published_relative": "2 hours ago",
+    "published_date": "2026-10-16",
+    "url": "https://www.youtube.com/post/UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS",
+    "likes": "0",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/UkM3TtSMEJ2r5u8SChSLqLWOSUxZUPjaLVqNou0xz_dhXho96gwwUePiB6peFSqqMuGaQDxXQkxo=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-16T20:42:36.537519Z"
   },
   {
     "id": "UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
@@ -157,22 +189,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-16T16:20:00.794626Z"
-  },
-  {
-    "id": "UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
-    "text": "",
-    "published_relative": "21 hours ago",
-    "published_date": "2026-10-15",
-    "url": "https://www.youtube.com/post/UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
-    "likes": "1",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/FmxSgnymhnCYc9tGG98EfbLs_lh2MLDTmHRYLiPfvhF2dJyKO0HGM2xp4xhKccPsIoiG_G3vwmGT=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-16T16:20:00.794598Z"
+    "scraped_at": "2026-10-16T20:42:36.537493Z"
   },
   {
     "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
@@ -187,22 +204,35 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-16T16:20:00.794562Z"
+    "scraped_at": "2026-10-16T20:42:36.537470Z"
   },
   {
-    "id": "UgkxzHQpS2aHdfWw-1s8memyySmmAilAzeRb",
-    "text": "Tired of repeating the exact same robotic phrase three times on final approach just to get the landing gear down? 😅 \n\nLet me know in the comments: what’s the one cockpit command your voice assistant usually messes up the most?\n\nIf you want to grab the SimVoice Copilot Premium Lifetime license while it’s on sale for $39.99 (down from $59.99 through October 19), make sure to stack our community code at checkout for an extra discount on top of that promo price!\n\n👉 Get SimVoice Copilot here: https://simvoicecopilot.com/hitfs\n🎟️ Use code: JVELDH10",
-    "published_relative": "6 days ago",
-    "published_date": "2026-10-10",
-    "url": "https://www.youtube.com/post/UgkxzHQpS2aHdfWw-1s8memyySmmAilAzeRb",
-    "likes": "0",
+    "id": "UgkxyqxF1qH8dUsnFFkDGje_0wY9E156J8ot",
+    "text": "✈️ Flight Deck Cheat Sheet: PFD Speed Trend Vectors\n\n​Ever find yourself constantly chasing target airspeed on short final during manual approaches? That magenta line extending from your speed bug on the Primary Flight Display (PFD) is your most powerful tool for smooth, proactive airspeed management.\n\n​📌 Key Takeaways:\n\n​The 6-Second Prediction: The length of the magenta vector line indicates where your airspeed will be in exactly 6 seconds if your current acceleration or deceleration rate remains constant.\n\n​Anticipate, Don't React: Instead of waiting for your airspeed to drop or overshoot, use the vector's growth to make small, proactive pitch and power adjustments before the speed deviation actually occurs.\n\n​Targeting V_{APP} on Final: To maintain a stabilized approach, aim to keep the tip of the trend vector resting directly on your target approach speed—eliminating wild throttle adjustments on short final.\n\n​📺 Watch the full breakdown in action: https://youtu.be/1srGO9HEXs8",
+    "published_relative": "2 months ago",
+    "published_date": "2026-08-17",
+    "url": "https://www.youtube.com/post/UgkxyqxF1qH8dUsnFFkDGje_0wY9E156J8ot",
+    "likes": "2",
     "comments": "0",
     "images": [
-      "https://yt3.ggpht.com/FTBiO1BZfnsJ0tgtGIhRrfH_s_xR-V7qFfsptOFvsLNPnSylBD429wx_50yaeYTQYEtUJUubuMY6zQ=s1280"
+      "https://yt3.ggpht.com/N7mJ1REB4XqQjEjMy784m4Yw-2RTLtKHy_kgf2ilEQIshtcYGghawFAE2GLHOUAbMIG1xMGmwglnyuw=s1280"
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-16T16:20:00.794448Z"
+    "scraped_at": "2026-10-16T16:20:00.794757Z"
+  },
+  {
+    "id": "Ugkx6kF4vT0iFAqN76ti63dP1xtLPjSNI6Ta",
+    "text": "🛫 Simmer's Quick Check: During engine start on a turboprop like the Daher TBM 930 or Pilatus PC-12, your ITT (Interstage Turbine Temperature) rapidly spikes toward the redline while Ng is still sluggish below 12%. What is your immediate memory item?\n\n📺 Master the Flight Deck:\nTurboprop turbine damage in flight simulation is costly if you run realism addons, but knowing how to recognize a hung or hot start within 3 seconds will save your engine every time.\nWatch the full guide here: https://www.youtube.com/playlist?list...",
+    "published_relative": "13 days ago",
+    "published_date": "2026-10-03",
+    "url": "https://www.youtube.com/post/Ugkx6kF4vT0iFAqN76ti63dP1xtLPjSNI6Ta",
+    "likes": "0",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-16T16:20:00.794676Z"
   },
   {
     "id": "UgkxWi4WrmbDMd6q7POyIxII1Ieq1mnH63Dk",
@@ -274,21 +304,6 @@
     "video_id": null,
     "poll": null,
     "scraped_at": "2026-10-15T03:54:20.818354Z"
-  },
-  {
-    "id": "UgkxFQqVaAqKk8gqbK8dWbUa8kgNhVaNfCek",
-    "text": "Tomorrow at 17:00 CET: X is for... CROSSWIND! 💨✈️\n\nHey everyone! The MSFS A-Z series rolls on, and tomorrow we are tackling the one letter combination that every pilot deeply respects—and loves to conquer. If you’ve ever had a sudden gust violently shove you off the centerline on short final, this next episode is for you.\n\nWe are breaking down exactly how wind drift forces your plane off course and walking through live demonstrations of the two classic techniques used to pull off a safe, stable landing every single time:\n👉 The Crab Method (Letting the plane fly sideways—essential for heavy airliners)\n👉 The Wing-Low / Side Slip Method (Advanced stick-and-rudder work to save your landing gear)\n\nWe’ll also look at why the flying doesn't stop just because your tires hit the tarmac, covering critical ground rollout and taxiing control inputs.\n\n🔔 Set your reminders: The video drops tomorrow at 17:00 CET. Come hang out in the live chat during the premiere!\n\n👇 While you wait, let me know in the comments: What’s the highest crosswind component you’ve successfully landed in without wrecking your virtual landing gear? Let's see who holds the community record!\n\nFly safe, and see you tomorrow! 🧭",
-    "published_relative": "3 months ago",
-    "published_date": "2026-07-16",
-    "url": "https://www.youtube.com/post/UgkxFQqVaAqKk8gqbK8dWbUa8kgNhVaNfCek",
-    "likes": "5",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/-BERapUKAgE0tAR5xvE1DJn7FDJ2J-2BCoKd0ffXoOOla7VpNvnoxxidITJOLBfzQZJqA8BnF_IYRGM=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-14T21:24:22.511179Z"
   },
   {
     "id": "UgkxNW5rf5Q8lmCsvqxb4hC50KoXZb7f2snA",
