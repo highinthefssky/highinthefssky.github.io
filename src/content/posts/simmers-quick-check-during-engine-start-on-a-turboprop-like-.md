@@ -1,7 +1,7 @@
 ---
 title: "🛫 Simmer's Quick Check: During engine start on a turboprop like the Daher TBM 93"
 description: "🛫 Simmer's Quick Check: During engine start on a turboprop like the Daher TBM 930 or Pilatus PC-12, your ITT (Interstage Turbine Temperature) rapidly spikes tow"
-publishedAt: 2026-10-02
+publishedAt: 2026-10-03
 tags: ["community", "youtube"]
 draft: false
 ---
