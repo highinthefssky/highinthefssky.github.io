@@ -21,7 +21,7 @@ The Buffer Factor: Always add 5 to 10 nautical miles to your calculated TOD dist
 📺 Watch the full breakdown in action: https://youtu.be/MCbT-90kDl8
 
 Original post: https://www.youtube.com/post/UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS
-Likes: 1 | Comments: 0
+Likes: 2 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/UkM3TtSMEJ2r5u8SChSLqLWOSUxZUPjaLVqNou0xz_dhXho96gwwUePiB6peFSqqMuGaQDxXQkxo=s1280)
