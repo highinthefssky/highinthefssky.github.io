@@ -1,0 +1,30 @@
+{
+  "videoId": "Aav-AAqWFCA",
+  "title": "Why your planes wouldn't slow down! MSFS 2024 SU7.1 drag six (Build 1.9.20.0) is on it's way",
+  "description": "Sim Update 7.1 (SU7.1 Beta) for Microsoft Flight Simulator 2024 is officially live (Build 1.9.20.0), and it delivers an emergency fix to the simulator's global flight model! If you've been floating 3,000 ft past your touchdown zone or struggling to bleed speed on approach this week, you weren't crazy. \n\nIn this video, we break down what went wrong with the core aerodynamics in Sim Update 7, how Build 1.9.20.0 restores parasite and induced drag across general aviation and airliners, and why this spared 3rd-party developers from having to push emergency flight model overrides. We also cover key quality-of-life repairs to the National Championship Air Races (NCAR)—including playable Time Trials and controller menu fixes—along with early beta tester feedback regarding frame rate dips and unfixed bugs.\n\n⚠️ Quick Tip: Updating to 1.9.20.0 on PC? Because this build alters core aerodynamic coefficients, temporarily move or empty your Community folder before testing to avoid physics conflicts and long load times!\n\nHave you tested your approach speeds in 1.9.20.0 yet? Are you seeing proper drag, or noticing any beta performance overhead? Let me know your aircraft type and landing results in the comments!\n\n⏱️ Timestamps:\n00:00 - Why your planes won't slow down\n00:24 - The drag regression explained\n00:56 - The 3rd-Party developer dilemma\n01:12 - NCAR Fixes: Time Trials & UI Patches\n01:49 - The frame rate dip & unfixed bugs\n02:22 - Critical PSA: your community folder\n\n👇 Support the Channel & Join the Community!\n✈️ Subscribe for more MSFS tutorials & updates: https://bit.ly/34eNWDP\n🌐 Check out my website for more flight sim content: https://highintheflightsimsky.nl\n\n#msfs2024 #simupdate #su7 #flightmodel #flightsimulator",
+  "thumbnail": "https://i.ytimg.com/vi/Aav-AAqWFCA/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/Aav-AAqWFCA/mqdefault.jpg",
+  "publishedAt": "2026-10-17T18:40:30.000Z",
+  "duration": 177,
+  "viewCount": 506,
+  "tags": [
+    "msfs 2024",
+    "microsoft flight simulator 2024",
+    "sim update 7.1",
+    "su7.1 beta",
+    "build 1.9.20.0",
+    "msfs drag bug",
+    "msfs flight model fix",
+    "msfs 2024 landing float",
+    "asobo su7.1",
+    "msfs ground effect bug",
+    "ncar time trials fix",
+    "msfs beta update",
+    "flight simulator physics update",
+    "msfs 2024 update",
+    "msfs community folder warning",
+    "high in the flight sim sky",
+    "national championship air races time trial"
+  ],
+  "featured": false
+}
