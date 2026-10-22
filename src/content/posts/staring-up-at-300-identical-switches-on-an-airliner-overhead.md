@@ -1,7 +1,7 @@
 ---
 title: "✈️ Staring up at 300 identical switches on an airliner overhead panel? Stop memo"
 description: "✈️ Staring up at 300 identical switches on an airliner overhead panel? Stop memorizing individual buttons!  Whether you're stepping into the Fenix A320, PMDG 73"
-publishedAt: 2026-10-20
+publishedAt: 2026-10-21
 tags: ["community", "youtube"]
 draft: false
 ---
