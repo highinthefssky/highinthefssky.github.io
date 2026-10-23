@@ -1,7 +1,7 @@
 ---
-title: "🛫 Boarding has started: Destination MSFS 2024! 🌍"
-description: "🛫 Boarding has started: Destination MSFS 2024! 🌍  Attention, Flight Sim Enthusiasts!  This is your flight attendant speaking. We are pleased to announce that bo"
-publishedAt: 2025-03-30
+title: "\ud83d\udeeb Boarding has started: Destination MSFS 2024! \ud83c\udf0d"
+description: "\ud83d\udeeb Boarding has started: Destination MSFS 2024! \ud83c\udf0d  Attention, Flight Sim Enthusiasts!  This is your flight attendant speaking. We are pleased to announce that bo"
+publishedAt: "2025-03-30"
 tags: ["community", "youtube"]
 draft: false
 ---

@@ -1,7 +1,7 @@
 ---
-title: "🔥 NEW PC‑12 NGX EPISODE DROPS LATER TONIGHT! 🔥"
-description: "🔥 NEW PC‑12 NGX EPISODE DROPS LATER TONIGHT! 🔥 MSFS 2024 pilots… get READY.   We’re going inside the beast. 🧨✈️ Tonight’s video is the FULL cockpit breakdown of"
-publishedAt: 2026-02-17
+title: "\ud83d\udd25 NEW PC\u201112 NGX EPISODE DROPS LATER TONIGHT! \ud83d\udd25"
+description: "\ud83d\udd25 NEW PC\u201112 NGX EPISODE DROPS LATER TONIGHT! \ud83d\udd25 MSFS 2024 pilots\u2026 get READY.   We\u2019re going inside the beast. \ud83e\udde8\u2708\ufe0f Tonight\u2019s video is the FULL cockpit breakdown of"
+publishedAt: "2026-02-17"
 tags: ["community", "youtube"]
 draft: false
 ---

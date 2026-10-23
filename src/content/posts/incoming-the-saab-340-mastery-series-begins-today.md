@@ -1,7 +1,7 @@
 ---
-title: "🇸🇪🇺🇸 Incoming: The Saab 340 Mastery Series begins today!"
-description: "🇸🇪🇺🇸 Incoming: The Saab 340 Mastery Series begins today!  The wait is almost over. Today at 17:00 (CET), we officially launch our deep-dive series into the Saab"
-publishedAt: 2026-03-16
+title: "\ud83c\uddf8\ud83c\uddea\ud83c\uddfa\ud83c\uddf8 Incoming: The Saab 340 Mastery Series begins today!"
+description: "\ud83c\uddf8\ud83c\uddea\ud83c\uddfa\ud83c\uddf8 Incoming: The Saab 340 Mastery Series begins today!  The wait is almost over. Today at 17:00 (CET), we officially launch our deep-dive series into the Saab"
+publishedAt: "2026-03-16"
 tags: ["community", "youtube"]
 draft: false
 ---

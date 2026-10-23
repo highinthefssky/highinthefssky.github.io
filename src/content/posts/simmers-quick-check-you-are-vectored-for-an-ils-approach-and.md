@@ -1,7 +1,7 @@
 ---
-title: "🛫 Simmer's Quick Check: You are vectored for an ILS approach and ATC leaves you"
-description: "🛫 Simmer's Quick Check: You are vectored for an ILS approach and ATC leaves you high on the profile. As you approach the final approach fix from above the publi"
-publishedAt: 2026-09-09
+title: "\ud83d\udeeb Simmer's Quick Check: You are vectored for an ILS approach and ATC leaves you"
+description: "\ud83d\udeeb Simmer's Quick Check: You are vectored for an ILS approach and ATC leaves you high on the profile. As you approach the final approach fix from above the publi"
+publishedAt: "2026-09-09"
 tags: ["community", "youtube"]
 draft: false
 ---

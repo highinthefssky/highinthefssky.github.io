@@ -1,7 +1,7 @@
 ---
-title: "📊 We Need Your Input! 📊"
-description: "📊 We Need Your Input! 📊   Hey, Flight Sim Enthusiasts! As we plan our next video, I want to hear from YOU! What topics are you most interested in? Please take a"
-publishedAt: 2025-04-02
+title: "\ud83d\udcca We Need Your Input! \ud83d\udcca"
+description: "\ud83d\udcca We Need Your Input! \ud83d\udcca   Hey, Flight Sim Enthusiasts! As we plan our next video, I want to hear from YOU! What topics are you most interested in? Please take a"
+publishedAt: "2025-04-02"
 tags: ["community", "youtube"]
 draft: false
 ---

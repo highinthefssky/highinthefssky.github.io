@@ -1,7 +1,7 @@
 ---
 title: "Tired of repeating the exact same robotic phrase three times on final approach j"
-description: "Tired of repeating the exact same robotic phrase three times on final approach just to get the landing gear down? 😅   Let me know in the comments: what’s the on"
-publishedAt: 2026-10-10
+description: "Tired of repeating the exact same robotic phrase three times on final approach just to get the landing gear down? \ud83d\ude05   Let me know in the comments: what\u2019s the on"
+publishedAt: "2026-10-10"
 tags: ["community", "youtube"]
 draft: false
 ---

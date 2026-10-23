@@ -1,7 +1,7 @@
 ---
-title: "🛫 Rewatch the live stream: Mastering Flight Planning in MSFS 2024! 🛫"
-description: "🛫 Rewatch the live stream: Mastering Flight Planning in MSFS 2024! 🛫  Attention, Flight Sim Enthusiasts! 🌍✈️  If you didn't catch the live stream earlier, it's"
-publishedAt: 2025-03-02
+title: "\ud83d\udeeb Rewatch the live stream: Mastering Flight Planning in MSFS 2024! \ud83d\udeeb"
+description: "\ud83d\udeeb Rewatch the live stream: Mastering Flight Planning in MSFS 2024! \ud83d\udeeb  Attention, Flight Sim Enthusiasts! \ud83c\udf0d\u2708\ufe0f  If you didn't catch the live stream earlier, it's"
+publishedAt: "2025-03-02"
 tags: ["community", "youtube"]
 draft: false
 ---

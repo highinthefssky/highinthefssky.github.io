@@ -1,7 +1,7 @@
 ---
-title: "🛫 Upcoming Live Stream: Mastering the autopilot MSFS 2024! - part 2 🛫"
-description: "🛫 Upcoming Live Stream: Mastering the autopilot MSFS 2024! - part 2 🛫    Attention, Flight Sim Enthusiasts! 🌍🛫    I'm thrilled to announce our next live str"
-publishedAt: 2025-03-18
+title: "\ud83d\udeeb Upcoming Live Stream: Mastering the autopilot MSFS 2024! - part 2 \ud83d\udeeb"
+description: "\ud83d\udeeb Upcoming Live Stream: Mastering the autopilot MSFS 2024! - part 2 \ud83d\udeeb  \r \r Attention, Flight Sim Enthusiasts! \ud83c\udf0d\ud83d\udeeb  \r \r I'm thrilled to announce our next live str"
+publishedAt: "2025-03-18"
 tags: ["community", "youtube"]
 draft: false
 ---

@@ -1,7 +1,7 @@
 ---
-title: "✈️ Episode 9: “I” is for ILS! ✈️"
-description: "✈️ Episode 9: “I” is for ILS! ✈️  Ever wondered how pilots land when they can’t even see the nose of their own plane? Next Tuesday in our MSFS A‑Z series, we’re"
-publishedAt: 2026-03-06
+title: "\u2708\ufe0f Episode 9: \u201cI\u201d is for ILS! \u2708\ufe0f"
+description: "\u2708\ufe0f Episode 9: \u201cI\u201d is for ILS! \u2708\ufe0f  Ever wondered how pilots land when they can\u2019t even see the nose of their own plane? Next Tuesday in our MSFS A\u2011Z series, we\u2019re"
+publishedAt: "2026-03-06"
 tags: ["community", "youtube"]
 draft: false
 ---

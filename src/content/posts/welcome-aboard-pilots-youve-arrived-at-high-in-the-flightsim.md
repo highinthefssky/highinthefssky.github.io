@@ -1,7 +1,7 @@
 ---
-title: "Welcome Aboard, Pilots! You've Arrived at High in the Flightsim Sky! ✈️"
-description: "Welcome Aboard, Pilots! You've Arrived at High in the Flightsim Sky! ✈️  Hey everyone, and a huge welcome to the official community for High in the Flightsim sk"
-publishedAt: 2025-10-03
+title: "Welcome Aboard, Pilots! You've Arrived at High in the Flightsim Sky! \u2708\ufe0f"
+description: "Welcome Aboard, Pilots! You've Arrived at High in the Flightsim Sky! \u2708\ufe0f  Hey everyone, and a huge welcome to the official community for High in the Flightsim sk"
+publishedAt: "2025-10-03"
 tags: ["community", "youtube"]
 draft: false
 ---

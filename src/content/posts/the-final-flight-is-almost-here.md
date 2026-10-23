@@ -1,7 +1,7 @@
 ---
-title: "The Final Flight is almost here! 🏁✈️"
-description: "The Final Flight is almost here! 🏁✈️  We’ve spent the last few weeks mastering the Pilatus PC-12 NGX, from the high-altitude peaks of Courchevel to the complex"
-publishedAt: 2026-03-12
+title: "The Final Flight is almost here! \ud83c\udfc1\u2708\ufe0f"
+description: "The Final Flight is almost here! \ud83c\udfc1\u2708\ufe0f  We\u2019ve spent the last few weeks mastering the Pilatus PC-12 NGX, from the high-altitude peaks of Courchevel to the complex"
+publishedAt: "2026-03-12"
 tags: ["community", "youtube"]
 draft: false
 ---

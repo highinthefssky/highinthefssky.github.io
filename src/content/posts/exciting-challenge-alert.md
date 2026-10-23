@@ -1,7 +1,7 @@
 ---
-title: "🎉 Exciting Challenge Alert! 🎉"
-description: "🎉 Exciting Challenge Alert! 🎉  Have you seen our latest video? If not, you’re missing out on an amazing challenge! 🌟  👉 Watch the video now and take on the ch"
-publishedAt: 2025-03-16
+title: "\ud83c\udf89 Exciting Challenge Alert! \ud83c\udf89"
+description: "\ud83c\udf89 Exciting Challenge Alert! \ud83c\udf89 \r Have you seen our latest video? If not, you\u2019re missing out on an amazing challenge! \ud83c\udf1f \r \ud83d\udc49 Watch the video now and take on the ch"
+publishedAt: "2025-03-16"
 tags: ["community", "youtube"]
 draft: false
 ---

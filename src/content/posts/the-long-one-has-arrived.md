@@ -1,7 +1,7 @@
 ---
-title: "THE \"LONG ONE\" HAS ARRIVED! ✈️ 🔴"
-description: "THE \"LONG ONE\" HAS ARRIVED! ✈️ 🔴  The wait is finally over! Yesterday, the Aerosoft x ToLiss A340-600 Pro officially hit the skies in MSFS, and we are going liv"
-publishedAt: 2026-03-19
+title: "THE \"LONG ONE\" HAS ARRIVED! \u2708\ufe0f \ud83d\udd34"
+description: "THE \"LONG ONE\" HAS ARRIVED! \u2708\ufe0f \ud83d\udd34  The wait is finally over! Yesterday, the Aerosoft x ToLiss A340-600 Pro officially hit the skies in MSFS, and we are going liv"
+publishedAt: "2026-03-19"
 tags: ["community", "youtube"]
 draft: false
 ---

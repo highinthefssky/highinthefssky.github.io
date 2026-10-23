@@ -1,7 +1,7 @@
 ---
-title: "✈️ LIVE: Friday the 13th — MSFS 2024 SU5 Beta first look!"
-description: "✈️ LIVE: Friday the 13th — MSFS 2024 SU5 Beta first look!  Hey pilots! 👨‍✈️👩‍✈️  Is it a lucky day or a cursed one? This Friday the 13th, we’re diving headfirst"
-publishedAt: 2026-03-14
+title: "\u2708\ufe0f LIVE: Friday the 13th \u2014 MSFS 2024 SU5 Beta first look!"
+description: "\u2708\ufe0f LIVE: Friday the 13th \u2014 MSFS 2024 SU5 Beta first look!  Hey pilots! \ud83d\udc68\u200d\u2708\ufe0f\ud83d\udc69\u200d\u2708\ufe0f  Is it a lucky day or a cursed one? This Friday the 13th, we\u2019re diving headfirst"
+publishedAt: "2026-03-14"
 tags: ["community", "youtube"]
 draft: false
 ---

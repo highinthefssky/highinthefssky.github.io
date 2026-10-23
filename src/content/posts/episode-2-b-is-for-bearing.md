@@ -1,7 +1,7 @@
 ---
-title: "Episode 2: \"B\" is for Bearing! ✈️"
-description: "Episode 2: \"B\" is for Bearing! ✈️  We’re keeping the momentum going. After kicking things off last week, it’s time to tackle the letter B.  Navigation can get c"
-publishedAt: 2026-02-07
+title: "Episode 2: \"B\" is for Bearing! \u2708\ufe0f"
+description: "Episode 2: \"B\" is for Bearing! \u2708\ufe0f  We\u2019re keeping the momentum going. After kicking things off last week, it\u2019s time to tackle the letter B.  Navigation can get c"
+publishedAt: "2026-02-07"
 tags: ["community", "youtube"]
 draft: false
 ---

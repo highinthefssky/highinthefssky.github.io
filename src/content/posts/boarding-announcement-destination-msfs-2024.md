@@ -1,7 +1,7 @@
 ---
-title: "🛫 Boarding Announcement: Destination MSFS 2024! 🌍"
-description: "🛫 Boarding Announcement: Destination MSFS 2024! 🌍 Attention, Flight Sim Enthusiasts!  The time has come to fasten your seatbelts and prepare for takeoff! 🛫 Our"
-publishedAt: 2025-03-16
+title: "\ud83d\udeeb Boarding Announcement: Destination MSFS 2024! \ud83c\udf0d"
+description: "\ud83d\udeeb Boarding Announcement: Destination MSFS 2024! \ud83c\udf0d Attention, Flight Sim Enthusiasts!  The time has come to fasten your seatbelts and prepare for takeoff! \ud83d\udeeb Our"
+publishedAt: "2025-03-16"
 tags: ["community", "youtube"]
 draft: false
 ---

@@ -1,7 +1,7 @@
 ---
-title: "🛫 Simmer's Quick Check: You are being vectored for an ILS approach on a 45° inte"
-description: "🛫 Simmer's Quick Check: You are being vectored for an ILS approach on a 45° intercept angle at 3,000 ft. Your PFD shows the localizer needle starting to move in"
-publishedAt: 2026-10-09
+title: "\ud83d\udeeb Simmer's Quick Check: You are being vectored for an ILS approach on a 45\u00b0 inte"
+description: "\ud83d\udeeb Simmer's Quick Check: You are being vectored for an ILS approach on a 45\u00b0 intercept angle at 3,000 ft. Your PFD shows the localizer needle starting to move in"
+publishedAt: "2026-10-09"
 tags: ["community", "youtube"]
 draft: false
 ---

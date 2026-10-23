@@ -1,7 +1,7 @@
 ---
-title: "✈️ The Ultimate Flight Sim Journey Begins: MSFS A-Z! ✈️"
-description: "✈️ The Ultimate Flight Sim Journey Begins: MSFS A-Z! ✈️ Are you ready to master every corner of Microsoft Flight Simulator?  I’m thrilled to announce my brand-n"
-publishedAt: 2026-01-18
+title: "\u2708\ufe0f The Ultimate Flight Sim Journey Begins: MSFS A-Z! \u2708\ufe0f"
+description: "\u2708\ufe0f The Ultimate Flight Sim Journey Begins: MSFS A-Z! \u2708\ufe0f Are you ready to master every corner of Microsoft Flight Simulator?  I\u2019m thrilled to announce my brand-n"
+publishedAt: "2026-01-18"
 tags: ["community", "youtube"]
 draft: false
 ---

@@ -1,7 +1,7 @@
 ---
-title: "✈️ Attention Aviation Enthusiasts! ✈️"
-description: "✈️ Attention Aviation Enthusiasts! ✈️    Have you checked out my latest video? If not, you’re in for a treat! 🌟    In this video, I dive deep into the pros"
-publishedAt: 2025-03-05
+title: "\u2708\ufe0f Attention Aviation Enthusiasts! \u2708\ufe0f"
+description: "\u2708\ufe0f Attention Aviation Enthusiasts! \u2708\ufe0f  \r \r Have you checked out my latest video? If not, you\u2019re in for a treat! \ud83c\udf1f  \r \r In this video, I dive deep into the pros"
+publishedAt: "2025-03-05"
 tags: ["community", "youtube"]
 draft: false
 ---

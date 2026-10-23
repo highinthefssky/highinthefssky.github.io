@@ -1,7 +1,7 @@
 ---
-title: "🛫 Simmer's Quick Check:"
-description: "🛫 Simmer's Quick Check: You are navigating inbound to a VOR station with your OBS dialed to 090° and a TO flag displayed. You notice your CDI (Course Deviation"
-publishedAt: 2026-09-01
+title: "\ud83d\udeeb Simmer's Quick Check:"
+description: "\ud83d\udeeb Simmer's Quick Check: You are navigating inbound to a VOR station with your OBS dialed to 090\u00b0 and a TO flag displayed. You notice your CDI (Course Deviation"
+publishedAt: "2026-09-01"
 tags: ["community", "youtube"]
 draft: false
 ---

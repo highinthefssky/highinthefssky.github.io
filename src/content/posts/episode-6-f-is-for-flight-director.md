@@ -1,7 +1,7 @@
 ---
-title: "Episode 6: \"F\" is for Flight Director! 🎯"
-description: "Episode 6: \"F\" is for Flight Director! 🎯  The Alphabet Challenge marches on — and today we’re tackling one of the most misunderstood tools in the cockpit.  Ever"
-publishedAt: 2026-03-10
+title: "Episode 6: \"F\" is for Flight Director! \ud83c\udfaf"
+description: "Episode 6: \"F\" is for Flight Director! \ud83c\udfaf  The Alphabet Challenge marches on \u2014 and today we\u2019re tackling one of the most misunderstood tools in the cockpit.  Ever"
+publishedAt: "2026-03-10"
 tags: ["community", "youtube"]
 draft: false
 ---

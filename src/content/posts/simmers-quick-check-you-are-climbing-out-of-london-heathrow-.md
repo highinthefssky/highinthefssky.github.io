@@ -1,7 +1,7 @@
 ---
-title: "🛫 Simmer's Quick Check: You are climbing out of London Heathrow (EGLL) and ATC c"
-description: "🛫 Simmer's Quick Check: You are climbing out of London Heathrow (EGLL) and ATC clears you to climb from 4,000 ft to Flight Level 70. The local QNH is 1025 hPa."
-publishedAt: 2026-09-26
+title: "\ud83d\udeeb Simmer's Quick Check: You are climbing out of London Heathrow (EGLL) and ATC c"
+description: "\ud83d\udeeb Simmer's Quick Check: You are climbing out of London Heathrow (EGLL) and ATC clears you to climb from 4,000 ft to Flight Level 70. The local QNH is 1025 hPa."
+publishedAt: "2026-09-26"
 tags: ["community", "youtube"]
 draft: false
 ---

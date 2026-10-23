@@ -1,7 +1,7 @@
 ---
-title: "✈️It's a beautiful day the ☀️sun☀️is shining✈️"
-description: "✈️It's a beautiful day the ☀️sun☀️is shining✈️"
-publishedAt: 2024-03-22
+title: "\u2708\ufe0fIt's a beautiful day the \u2600\ufe0fsun\u2600\ufe0fis shining\u2708\ufe0f"
+description: "\u2708\ufe0fIt's a beautiful day the \u2600\ufe0fsun\u2600\ufe0fis shining\u2708\ufe0f"
+publishedAt: "2024-03-22"
 tags: ["community", "youtube"]
 draft: false
 ---

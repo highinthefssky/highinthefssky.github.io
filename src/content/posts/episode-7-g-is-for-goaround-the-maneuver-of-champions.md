@@ -1,7 +1,7 @@
 ---
-title: "Episode 7: “G” is for GO‑AROUND — The Maneuver of Champions"
-description: "Episode 7: “G” is for GO‑AROUND — The Maneuver of Champions. 🔥✈️  The best pilots aren’t the ones who \"stick\" every landing; they’re the ones who know when to s"
-publishedAt: 2026-03-08
+title: "Episode 7: \u201cG\u201d is for GO\u2011AROUND \u2014 The Maneuver of Champions"
+description: "Episode 7: \u201cG\u201d is for GO\u2011AROUND \u2014 The Maneuver of Champions. \ud83d\udd25\u2708\ufe0f  The best pilots aren\u2019t the ones who \"stick\" every landing; they\u2019re the ones who know when to s"
+publishedAt: "2026-03-08"
 tags: ["community", "youtube"]
 draft: false
 ---

@@ -1,7 +1,7 @@
 ---
-title: "🚨 WARNING NEW EXPERIMENT 🚨"
-description: "🚨 WARNING NEW EXPERIMENT 🚨  🚨 MSFS 2024 Beta DISASTER?! 🚨  Did the Sim Update 2 beta just crash land on social media? 💥 The internet is EXPLODING with reactions"
-publishedAt: 2025-04-29
+title: "\ud83d\udea8 WARNING NEW EXPERIMENT \ud83d\udea8"
+description: "\ud83d\udea8 WARNING NEW EXPERIMENT \ud83d\udea8  \ud83d\udea8 MSFS 2024 Beta DISASTER?! \ud83d\udea8  Did the Sim Update 2 beta just crash land on social media? \ud83d\udca5 The internet is EXPLODING with reactions"
+publishedAt: "2025-04-29"
 tags: ["community", "youtube"]
 draft: false
 ---

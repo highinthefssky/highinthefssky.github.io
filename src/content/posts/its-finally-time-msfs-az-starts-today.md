@@ -1,7 +1,7 @@
 ---
-title: "It’s finally time: MSFS A-Z starts today! ✈️"
-description: "It’s finally time: MSFS A-Z starts today! ✈️  After the teaser last week, I’m really excited to get this series off the ground. Episode 1 drops later today, mar"
-publishedAt: 2026-01-26
+title: "It\u2019s finally time: MSFS A-Z starts today! \u2708\ufe0f"
+description: "It\u2019s finally time: MSFS A-Z starts today! \u2708\ufe0f  After the teaser last week, I\u2019m really excited to get this series off the ground. Episode 1 drops later today, mar"
+publishedAt: "2026-01-26"
 tags: ["community", "youtube"]
 draft: false
 ---

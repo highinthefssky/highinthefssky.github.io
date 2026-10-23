@@ -1,7 +1,7 @@
 ---
-title: "🚀 New Video Series Alert: Microsoft Flight Simulator Quiz Questions! ✈️"
-description: "🚀 New Video Series Alert: Microsoft Flight Simulator Quiz Questions! ✈️  Hey Flight Sim enthusiasts! 🌟    I’m thrilled to announce a brand-new category of vid"
-publishedAt: 2025-03-16
+title: "\ud83d\ude80 New Video Series Alert: Microsoft Flight Simulator Quiz Questions! \u2708\ufe0f"
+description: "\ud83d\ude80 New Video Series Alert: Microsoft Flight Simulator Quiz Questions! \u2708\ufe0f  Hey Flight Sim enthusiasts! \ud83c\udf1f  \r \r I\u2019m thrilled to announce a brand-new category of vid"
+publishedAt: "2025-03-16"
 tags: ["community", "youtube"]
 draft: false
 ---

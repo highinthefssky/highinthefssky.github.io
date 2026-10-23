@@ -1,7 +1,7 @@
 ---
-title: "Don’t Fly Blind! Master TBM 930 weather radar & VNAV drops TODAY at 17:00 (UTC+1"
-description: "Don’t Fly Blind! Master TBM 930 weather radar & VNAV drops TODAY at 17:00 (UTC+1)! ⛈️📡  We are stepping into the \"High-Altitude Office\" today to master the syst"
-publishedAt: 2026-02-19
+title: "Don\u2019t Fly Blind! Master TBM 930 weather radar & VNAV drops TODAY at 17:00 (UTC+1"
+description: "Don\u2019t Fly Blind! Master TBM 930 weather radar & VNAV drops TODAY at 17:00 (UTC+1)! \u26c8\ufe0f\ud83d\udce1  We are stepping into the \"High-Altitude Office\" today to master the syst"
+publishedAt: "2026-02-19"
 tags: ["community", "youtube"]
 draft: false
 ---

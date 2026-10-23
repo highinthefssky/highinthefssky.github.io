@@ -1,7 +1,7 @@
 ---
-title: "🎉 We’re Live on Discord! Join the Community! 🚀"
-description: "🎉 We’re Live on Discord! Join the Community! 🚀  Hey everyone! I’ve just launched a Discord channel to bring our amazing community even closer together. Whether"
-publishedAt: 2025-09-01
+title: "\ud83c\udf89 We\u2019re Live on Discord! Join the Community! \ud83d\ude80"
+description: "\ud83c\udf89 We\u2019re Live on Discord! Join the Community! \ud83d\ude80  Hey everyone! I\u2019ve just launched a Discord channel to bring our amazing community even closer together. Whether"
+publishedAt: "2025-09-01"
 tags: ["community", "youtube"]
 draft: false
 ---

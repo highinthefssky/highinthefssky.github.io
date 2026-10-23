@@ -1,7 +1,7 @@
 ---
-title: "SHOW ME YOUR OFFICE! 🖥️✈️"
-description: "SHOW ME YOUR OFFICE! 🖥️✈️  \"We spend hundreds of hours in these virtual skies, but I want to see where the magic happens on the ground!  With MSFS 2024 being so"
-publishedAt: 2026-02-16
+title: "SHOW ME YOUR OFFICE! \ud83d\udda5\ufe0f\u2708\ufe0f"
+description: "SHOW ME YOUR OFFICE! \ud83d\udda5\ufe0f\u2708\ufe0f  \"We spend hundreds of hours in these virtual skies, but I want to see where the magic happens on the ground!  With MSFS 2024 being so"
+publishedAt: "2026-02-16"
 tags: ["community", "youtube"]
 draft: false
 ---

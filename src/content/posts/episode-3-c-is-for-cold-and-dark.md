@@ -1,7 +1,7 @@
 ---
-title: "Episode 3: \"C\" is for Cold and Dark! ❄️"
-description: "Episode 3: \"C\" is for Cold and Dark! ❄️    We’re keeping the momentum going! We’ve covered Ailerons and Bearings, and now it’s time to tackle the letter C."
-publishedAt: 2026-01-24
+title: "Episode 3: \"C\" is for Cold and Dark! \u2744\ufe0f"
+description: "Episode 3: \"C\" is for Cold and Dark! \u2744\ufe0f  \r \r We\u2019re keeping the momentum going! We\u2019ve covered Ailerons and Bearings, and now it\u2019s time to tackle the letter C."
+publishedAt: "2026-01-24"
 tags: ["community", "youtube"]
 draft: false
 ---
