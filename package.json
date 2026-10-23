@@ -20,7 +20,7 @@
     "@astrojs/markdown-remark": "^7.3.4",
     "@astrojs/rss": "^4.0.19",
     "astro": "^7.4.2",
-    "google-auth-library": "^10.6.2",
+    "google-auth-library": "^11.3.1",
     "linkifyjs": "^4.3.3",
     "minisearch": "^7.2.0",
     "rehype-sanitize": "^6.0.0",
