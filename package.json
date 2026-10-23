@@ -24,8 +24,8 @@
     "linkifyjs": "^4.3.3",
     "minisearch": "^7.2.0",
     "rehype-sanitize": "^6.0.0",
-    "typescript": "^7.0.2",
-    "zod": "^3.25.76"
+    "typescript": "^6.0.3",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0",
