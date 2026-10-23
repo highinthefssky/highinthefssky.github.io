@@ -91,6 +91,9 @@ and encodes frontmatter scalars safely. Local environment files and generated
 Wrangler state are ignored; copy `.env.local.example` for local configuration.
 
 CI actions are pinned to commit SHAs, with Dependabot proposing reviewed updates.
+Jobs installing Playwright Chromium use `ubuntu-24.04`, not `ubuntu-latest`,
+because Playwright 1.60 does not support Ubuntu 26.04. Keep browser-test runners
+on an explicitly supported image when upgrading Playwright.
 Pages/OIDC deployment privileges are limited to the deployment job, and content
 imports obtain Google credentials only after dependency installation.
 
