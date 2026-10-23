@@ -43,7 +43,8 @@ jobs:
 
   e2e-smoke:
     if: ${{ github.event_name == 'pull_request' }}
-    runs-on: ubuntu-latest
+    # Playwright 1.60 does not support Ubuntu 26.04.
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
 
     steps:
@@ -77,7 +78,8 @@ jobs:
 
   e2e-full:
     if: ${{ github.event_name != 'pull_request' }}
-    runs-on: ubuntu-latest
+    # Playwright 1.60 does not support Ubuntu 26.04.
+    runs-on: ubuntu-24.04
     timeout-minutes: 45
 
     steps:
