@@ -2,6 +2,7 @@
 import Navigation from '../components/Navigation.astro';
 import LiveBanner from '../components/LiveBanner.astro';
 import BackToTop from '../components/BackToTop.astro';
+import { serializeJson } from '../utils/serializeJson';
 import { Image, getImage } from 'astro:assets';
 import brandLogo from '../../public/high-in-the-flightsim-sky-logo.PNG';
 import '../styles/global.css';
@@ -94,7 +95,7 @@ const schemas = [
     <link rel="canonical" href={canonicalUrl} />
 
     {schemas.map((schema) => (
-      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+      <script type="application/ld+json" set:html={serializeJson(schema)} />
     ))}
     
     <!-- Icons -->

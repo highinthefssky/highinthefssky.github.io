@@ -228,7 +228,7 @@ const options = controllerOptions(allConfigs);
                 </a>` + videoMatches
           .map(({ video, score }) => `
             <article class="result-card video-card">
-              <img src="${video.thumbnail}" alt="${escapeHtml(video.title)}" loading="lazy" decoding="async" />
+              <img alt="${escapeHtml(video.title)}" loading="lazy" decoding="async" />
               <div>
                 <div class="result-topline">
                   <span class="result-score">Score ${score}</span>
@@ -244,6 +244,12 @@ const options = controllerOptions(allConfigs);
           `)
           .join('')
       : '<p class="empty-note">No closely related videos found. Try selecting another goal.</p>';
+
+    videoResults.querySelectorAll('.video-card > img').forEach((image, index) => {
+      const url = new URL(videoMatches[index].video.thumbnail);
+      if (url.protocol !== 'https:') throw new Error('Invalid video thumbnail protocol');
+      image.src = url.href;
+    });
 
     resultsPanel.style.display = 'block';
     if (moveFocus) resultsSummary.focus({ preventScroll: true });

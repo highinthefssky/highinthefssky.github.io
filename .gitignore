@@ -18,6 +18,10 @@ pnpm-debug.log*
 .env.local
 .env.production
 .env*.local
+.dev.vars
+.dev.vars.*
+.wrangler/
+__pycache__/
 
 # macOS-specific files
 .DS_Store

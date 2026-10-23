@@ -12,6 +12,7 @@ import sys
 import argparse
 from datetime import datetime, timezone, timedelta
 from typing import Optional
+from urllib.parse import urljoin, urlsplit
 
 
 # CONFIGURATION (can be overridden via command line or environment variables)
@@ -25,6 +26,19 @@ def get_channel_url() -> str:
     """Get channel URL from environment variable or use default."""
     url = os.environ.get("CHANNEL_URL", "").strip()
     return url if url else DEFAULT_CHANNEL_URL
+
+
+def validate_channel_url(url: str) -> str:
+    parsed = urlsplit(url)
+    if (
+        parsed.scheme != "https"
+        or parsed.hostname not in {"youtube.com", "www.youtube.com", "m.youtube.com"}
+        or parsed.username is not None
+        or parsed.password is not None
+        or parsed.port not in {None, 443}
+    ):
+        raise ValueError("Channel URL must be an HTTPS YouTube URL without credentials")
+    return url
 
 
 def parse_relative_time(relative_time: str) -> Optional[str]:
@@ -271,7 +285,7 @@ def scrape_community(channel_url: Optional[str] = None) -> list:
     Returns:
         List of scraped posts
     """
-    url = channel_url or get_channel_url()
+    url = validate_channel_url(channel_url or get_channel_url())
     
     # Ensure URL ends with /community
     if not url.endswith('/community'):
@@ -294,9 +308,16 @@ def scrape_community(channel_url: Optional[str] = None) -> list:
     }
     
     try:
-        response = requests.get(url, headers=headers, cookies=cookies, timeout=30)
-        response.raise_for_status()
-    except requests.RequestException as e:
+        for _ in range(6):
+            validate_channel_url(url)
+            response = requests.get(url, headers=headers, cookies=cookies, timeout=30, allow_redirects=False)
+            if not response.is_redirect:
+                response.raise_for_status()
+                break
+            url = urljoin(url, response.headers["Location"])
+        else:
+            raise requests.TooManyRedirects("Too many YouTube redirects")
+    except (requests.RequestException, ValueError) as e:
         print(f"Error: Failed to fetch page: {e}")
         sys.exit(1)
     
@@ -400,6 +421,8 @@ def write_markdown_posts(posts: list, posts_dir: str = POSTS_MD_DIR) -> int:
     written = 0
     for post in posts:
         post_id = post.get("id") or "unknown"
+        if not re.fullmatch(r"[A-Za-z0-9_-]+", post_id):
+            raise ValueError("Invalid community post ID")
         text = post.get("text") or ""
         pub_date = post.get("published_date") or (post.get("scraped_at", "")[:10] or datetime.now(timezone.utc).strftime('%Y-%m-%d'))
         url = post.get("url") or ""
@@ -409,9 +432,6 @@ def write_markdown_posts(posts: list, posts_dir: str = POSTS_MD_DIR) -> int:
 
         title = _title_from_text(text)
         description = _description_from_text(text)
-        # YAML-safe quoting: escape double quotes in values
-        def yaml_quote(s: str) -> str:
-            return '"' + s.replace('"', '\\"') + '"'
         base_slug = f"community-{post_id}"
         content_slug = _slugify(title, base_slug)
         filename = f"{content_slug}.md"
@@ -420,9 +440,9 @@ def write_markdown_posts(posts: list, posts_dir: str = POSTS_MD_DIR) -> int:
         # Frontmatter for Astro content schema
         frontmatter = [
             "---",
-            f"title: {yaml_quote(title)}",
-            f"description: {yaml_quote(description)}",
-            f"publishedAt: {pub_date}",
+            f"title: {json.dumps(title)}",
+            f"description: {json.dumps(description)}",
+            f"publishedAt: {json.dumps(pub_date)}",
             "tags: [\"community\", \"youtube\"]",
             "draft: false",
             "---",

@@ -10,15 +10,84 @@
  * - YOUTUBE_API_KEY: YouTube Data API v3 key (Cloudflare secret)
  */
 
-// Cache key for KV storage
 const CACHE_KEY = 'live-status';
-// Cache TTL in seconds — limits how often we fetch the YouTube page.
-// Since this no longer costs API quota, 5 minutes is a comfortable interval
-// that balances responsiveness with polite scraping.
 const CACHE_TTL_SECONDS = 300; // 5 minutes
+const FAILURE_BACKOFF_MS = 60_000;
+const MAX_STALE_MS = 60 * 60_000;
+const UPSTREAM_TIMEOUT_MS = 10_000;
+
+const unavailable = () => ({
+  status: 503,
+  body: { isLive: false, error: 'Failed to check live status' },
+});
+
+function cachedResult(entry, now) {
+  if (!entry?.data || now >= entry.staleUntil) return unavailable();
+  return { status: 200, body: { ...entry.data, stale: true } };
+}
+
+export class LiveStatusCoordinator {
+  constructor(state, env) {
+    this.state = state;
+    this.env = env;
+    this.refresh = null;
+  }
+
+  async fetch() {
+    try {
+      const entry = await this.state.storage.get(CACHE_KEY);
+      const now = Date.now();
+      if (entry?.data && now < entry.freshUntil) {
+        return Response.json(entry.data);
+      }
+      if (!this.refresh && now >= (entry?.retryAt || 0)) {
+        this.refresh = this.update(entry).catch((error) => {
+          console.error('Live status cache update failed:', error);
+          return unavailable();
+        }).finally(() => { this.refresh = null; });
+      }
+      if (entry?.data && now < entry.staleUntil) {
+        if (this.refresh) this.state.waitUntil(this.refresh);
+        return Response.json(cachedResult(entry, now).body);
+      }
+      const result = this.refresh ? await this.refresh : unavailable();
+      return Response.json(result.body, { status: result.status });
+    } catch (error) {
+      console.error('Live status coordinator failed:', error);
+      return Response.json(unavailable().body, { status: 503 });
+    }
+  }
+
+  async update(entry) {
+    // Persist a reservation before network I/O so an eviction cannot bypass backoff.
+    await this.state.storage.put(CACHE_KEY, {
+      ...entry,
+      retryAt: Date.now() + CACHE_TTL_SECONDS * 1000,
+    });
+    let data;
+    try {
+      data = await checkLiveStatus(this.env);
+    } catch (error) {
+      console.error('YouTube live status refresh failed:', error);
+      await this.state.storage.put(CACHE_KEY, {
+        ...entry,
+        retryAt: Date.now() + FAILURE_BACKOFF_MS,
+      });
+      return cachedResult(entry, Date.now());
+    }
+    const now = Date.now();
+    await this.state.storage.put(CACHE_KEY, {
+      data,
+      freshUntil: now + CACHE_TTL_SECONDS * 1000,
+      staleUntil: now + MAX_STALE_MS,
+      retryAt: now + CACHE_TTL_SECONDS * 1000,
+    });
+    return { status: 200, body: data };
+  }
+}
 
 export default {
-  async fetch(request, env, ctx) {
+  async fetch(request, env) {
     // Handle CORS preflight
     if (request.method === 'OPTIONS') {
       return handleCORS(env);
@@ -29,7 +98,7 @@ export default {
       return new Response('Method not allowed', { status: 405 });
     }
 
-    // Validate origin - require Origin header for security
+    // CORS limits browser consumers, not clients that can supply their own Origin.
     const origin = request.headers.get('Origin');
     const allowedOrigin = env.ALLOWED_ORIGIN || 'https://highintheflightsimsky.nl';
     const allowLocalhost = env.ALLOW_LOCALHOST === 'true';
@@ -45,17 +114,24 @@ export default {
     }
 
     try {
-      const liveStatus = await getCachedLiveStatus(env, ctx);
+      if (!env.LIVE_STATUS_COORDINATOR) {
+        throw new Error('Missing LIVE_STATUS_COORDINATOR binding');
+      }
+      const id = env.LIVE_STATUS_COORDINATOR.idFromName('youtube-channel');
+      const response = await env.LIVE_STATUS_COORDINATOR.get(id).fetch('https://live-status.internal/');
+      const liveStatus = await response.json();
       
       return new Response(JSON.stringify(liveStatus), {
-        status: 200,
+        status: response.status,
         headers: {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': origin || allowedOrigin,
           'Access-Control-Allow-Methods': 'GET, OPTIONS',
           'Access-Control-Max-Age': '86400',
-          // Client-side cache matches KV TTL
-          'Cache-Control': `public, max-age=${CACHE_TTL_SECONDS}`,
+          'Cache-Control': response.ok && !liveStatus.stale
+            ? `public, max-age=${CACHE_TTL_SECONDS}` : 'no-store',
+          'Vary': 'Origin',
+          ...(!response.ok ? { 'Retry-After': String(FAILURE_BACKOFF_MS / 1000) } : {}),
         },
       });
     } catch (error) {
@@ -65,43 +141,18 @@ export default {
         isLive: false, 
         error: 'Failed to check live status' 
       }), {
-        status: 500,
+        status: 503,
         headers: {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': origin || allowedOrigin,
+          'Cache-Control': 'no-store',
+          'Retry-After': String(FAILURE_BACKOFF_MS / 1000),
+          'Vary': 'Origin',
         },
       });
     }
   },
 };
-
-/**
- * Get live status from KV cache, falling back to a fresh check.
- * This ensures at most 1 page fetch per CACHE_TTL_SECONDS, regardless of traffic.
- */
-async function getCachedLiveStatus(env, ctx) {
-  // Try reading from KV cache first
-  if (env.LIVE_STATUS_CACHE) {
-    const cached = await env.LIVE_STATUS_CACHE.get(CACHE_KEY, { type: 'json' });
-    if (cached !== null) {
-      return cached;
-    }
-  }
-
-  // Cache miss — check YouTube channel live page
-  const liveStatus = await checkLiveStatus(env);
-
-  // Store the result in KV with TTL so it auto-expires
-  if (env.LIVE_STATUS_CACHE) {
-    ctx.waitUntil(
-      env.LIVE_STATUS_CACHE.put(CACHE_KEY, JSON.stringify(liveStatus), {
-        expirationTtl: CACHE_TTL_SECONDS,
-      })
-    );
-  }
-
-  return liveStatus;
-}
 
 /**
  * Check recent channel videos using the public RSS feed and one videos.list request.
@@ -124,7 +175,7 @@ async function checkLiveStatus(env) {
   };
   const feedResponse = await fetch(
     `https://www.youtube.com/feeds/videos.xml?channel_id=${YOUTUBE_CHANNEL_ID}`,
-    { headers }
+    { headers, signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS) }
   );
 
   if (!feedResponse.ok) {
@@ -145,7 +196,9 @@ async function checkLiveStatus(env) {
     id: videoIds.join(','),
     key: YOUTUBE_API_KEY,
   });
-  const videosResponse = await fetch(`https://www.googleapis.com/youtube/v3/videos?${params}`);
+  const videosResponse = await fetch(`https://www.googleapis.com/youtube/v3/videos?${params}`, {
+    signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
+  });
 
   if (!videosResponse.ok) {
     throw new Error(`YouTube Data API error: ${videosResponse.status}`);

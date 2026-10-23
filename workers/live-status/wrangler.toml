@@ -11,12 +11,13 @@ ALLOWED_ORIGIN = "https://highintheflightsimsky.nl"
 ALLOW_LOCALHOST = "false"
 YOUTUBE_CHANNEL_ID = "UCyyc5Gnzs5sxgvOmJ96Rfqw"
 
-# KV namespace for caching live status (reduces YouTube API quota usage)
-# Create via: wrangler kv namespace create "LIVE_STATUS_CACHE"
-# Then replace the id below with the one returned by the command.
-[[kv_namespaces]]
-binding = "LIVE_STATUS_CACHE"
-id = "3762f5f3b6fc4c7d923f5dc93ef6ba2e"
+[[durable_objects.bindings]]
+name = "LIVE_STATUS_COORDINATOR"
+class_name = "LiveStatusCoordinator"
+
+[[migrations]]
+tag = "v1-live-status-coordinator"
+new_sqlite_classes = ["LiveStatusCoordinator"]
 
 # Required secret: YOUTUBE_API_KEY
 # Configure with: wrangler secret put YOUTUBE_API_KEY

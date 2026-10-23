@@ -23,7 +23,7 @@ A beautiful, performant static site built with Astro for showcasing YouTube vide
 
 ### Prerequisites
 
-- Node.js 20 or higher
+- Node.js 24 (matching CI)
 - npm or yarn
 - GitHub repository
 
@@ -34,8 +34,8 @@ A beautiful, performant static site built with Astro for showcasing YouTube vide
 git clone https://github.com/yourusername/highinthefssky.github.io.git
 cd highinthefssky.github.io
 
-# Install dependencies
-npm install
+# Install the locked dependency versions
+npm ci
 
 # Create environment variables
 cp .env.local.example .env.local
@@ -78,6 +78,25 @@ npm run preview
 ```
 
 Visit `http://localhost:3000` to see your site.
+
+### Content Security
+
+Structured JSON embedded in HTML uses `src/utils/serializeJson.ts` to prevent
+closing script tags in imported metadata from becoming markup. Markdown posts
+are sanitized with `rehype-sanitize` through Astro's unified Markdown processor;
+scripts, event handlers, and unsafe link protocols are not supported in posts.
+The controller wizard assigns validated HTTPS thumbnails through DOM properties.
+The community scraper restricts source URLs and redirects to HTTPS YouTube hosts
+and encodes frontmatter scalars safely. Local environment files and generated
+Wrangler state are ignored; copy `.env.local.example` for local configuration.
+
+CI actions are pinned to commit SHAs, with Dependabot proposing reviewed updates.
+Pages/OIDC deployment privileges are limited to the deployment job, and content
+imports obtain Google credentials only after dependency installation.
+
+After changing these paths, run the security rendering tests with
+`npx playwright test tests/e2e/security-rendering.spec.ts` and the scraper tests
+with `python3 -m unittest discover -s tests/scripts`.
 
 ### Video Archive and Search
 
