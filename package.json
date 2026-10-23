@@ -31,7 +31,7 @@
     "@playwright/test": "^1.60.0",
     "@tailwindcss/vite": "^4.1.8",
     "@types/node": "^24.13.2",
-    "tailwindcss": "^4.1.8",
+    "tailwindcss": "^4.3.3",
     "wrangler": "^4.152.0"
   },
   "overrides": {
