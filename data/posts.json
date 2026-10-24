@@ -13,7 +13,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-24T10:34:35.501033Z"
+    "scraped_at": "2026-10-24T15:37:35.327694Z"
   },
   {
     "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
@@ -28,7 +28,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-24T10:34:35.501010Z"
+    "scraped_at": "2026-10-24T15:37:35.327671Z"
   },
   {
     "id": "UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS",
@@ -43,7 +43,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-24T10:34:35.500987Z"
+    "scraped_at": "2026-10-24T15:37:35.327652Z"
   },
   {
     "id": "UgkxaZJSYNSKG64HIJvFBtwleGIPV6H_LEGi",
@@ -58,7 +58,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-24T10:34:35.500929Z"
+    "scraped_at": "2026-10-24T15:37:35.327615Z"
   },
   {
     "id": "UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
@@ -73,7 +73,7 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-24T10:34:35.500872Z"
+    "scraped_at": "2026-10-24T15:37:35.327569Z"
   },
   {
     "id": "UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
@@ -86,7 +86,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-24T10:34:35.500828Z"
+    "scraped_at": "2026-10-24T15:37:35.327434Z"
   },
   {
     "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
@@ -99,7 +99,20 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-24T10:34:35.500806Z"
+    "scraped_at": "2026-10-24T15:37:35.327413Z"
+  },
+  {
+    "id": "UgkxbRQaJz_I0Hc7JUJ6_1YY-TKEFHzg_7M7",
+    "text": "You step into a cold-and-dark cockpit of an airliner you've never flown before. Instead of staring blankly at hundreds of switches or memorizing a 20-page checklist, what is the golden scanning rule used by real-world crews to power up the overhead panel logically?\n\n📺 Master the Flight Deck:\nStop hunting for switches one by one. Once you understand the systematic flow pattern shared across Boeing, Airbus, and regional jets, you can get any airliner powered up in under 2 minutes.\n\n\nWatch the full guide here: https://youtu.be/g5awgjo-KHQ",
+    "published_relative": "21 hours ago",
+    "published_date": "2026-10-23",
+    "url": "https://www.youtube.com/post/UgkxbRQaJz_I0Hc7JUJ6_1YY-TKEFHzg_7M7",
+    "likes": "1",
+    "comments": "1",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-24T15:37:35.327217Z"
   },
   {
     "id": "UgkxY651OLb96KWK9TDgIdyzRFq4G7705Imu",
