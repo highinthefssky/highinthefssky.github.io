@@ -73,7 +73,7 @@ for (const stale of [true, false]) {
     await page.route('http://127.0.0.1:4321/', async (route) => {
       const response = await route.fetch();
       const html = (await response.text()).replace(
-        /data-live-status-url="[^"]*"/,
+        /data-live-status-url(?:="[^"]*")?/,
         'data-live-status-url="/security-live-status"',
       );
       await route.fulfill({ response, body: html });
