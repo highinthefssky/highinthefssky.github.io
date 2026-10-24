@@ -13,37 +13,52 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-24T15:37:35.327694Z"
+    "scraped_at": "2026-10-24T20:27:55.252276Z"
   },
   {
-    "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
-    "text": "World Update 22: United States National Parks available!\nLooks like someone pushed the release button to early, wasn't this scheduled to be released on the 4th of July?",
-    "published_relative": "3 months ago",
-    "published_date": "2026-07-26",
-    "url": "https://www.youtube.com/post/UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
-    "likes": "8",
-    "comments": "2",
-    "images": [
-      "https://yt3.ggpht.com/Jca4NmdUzDyoemPRDXQXm-t5qasMawuSv4YcXIRuSk5eEBeSuoSr5QQs_mVu5FcJvuO0zIz9X1i01g=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-24T15:37:35.327671Z"
-  },
-  {
-    "id": "UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS",
-    "text": "✈️ Flight Deck Cheat Sheet: The 3:1 Rule for Top of Descent (TOD)\n\nStruggling to calculate your descent without an active VNAV profile? Whether you fly a steam-gauge Cessna, a modern turboprop, or an airliner, the classic 3:1 rule guarantees you never end up 5,000 ft too high on final.\n\n📌 Key Takeaways:\n\nThe Distance Formula (Altitude to Lose × 3): Drop the last three zeros of your altitude to lose, then multiply by 3. If you are cruising at FL240 and need to enter the pattern at 2,000 ft (22,000 ft to lose: 22 × 3), your Top of Descent is 66 nautical miles out.\n\nThe Descent Rate Formula (Groundspeed × 5): Take your current groundspeed and multiply by 5 (or divide by 2 and add a zero). At a 240-knot groundspeed, aim for roughly 1,200 fpm on the vertical speed indicator.\n\nThe Buffer Factor: Always add 5 to 10 nautical miles to your calculated TOD distance to comfortably decelerate and configure flaps/gear before reaching the initial approach fix.\n\n📺 Watch the full breakdown in action: https://youtu.be/MCbT-90kDl8",
-    "published_relative": "7 days ago",
-    "published_date": "2026-10-17",
-    "url": "https://www.youtube.com/post/UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS",
-    "likes": "9",
+    "id": "Ugkxu4Cs_JcbJiNZaCWqxcDmi5gjvkkUlnrO",
+    "text": "You don't need a subscription to have busy skies! 💸 Whether you're sticking with the new FSLTL Static mode or finally braving that AIG install, there are still great free options. I’ve included a step-by-step AIG installation guide to save you the headache! Watch here: https://youtu.be/fvyn5-lf7UQ",
+    "published_relative": "5 months ago",
+    "published_date": "2026-05-27",
+    "url": "https://www.youtube.com/post/Ugkxu4Cs_JcbJiNZaCWqxcDmi5gjvkkUlnrO",
+    "likes": "7",
     "comments": "0",
     "images": [
-      "https://yt3.ggpht.com/UkM3TtSMEJ2r5u8SChSLqLWOSUxZUPjaLVqNou0xz_dhXho96gwwUePiB6peFSqqMuGaQDxXQkxo=s1280"
+      "https://yt3.ggpht.com/75vidMqBAewW7hkOk3kgN4hZ9S7bCWSZfbDcHZJ58gv1idD1bTTYYG4Mp3KFBLZi4EwweH-HgNvf3g=s1280"
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-24T15:37:35.327652Z"
+    "scraped_at": "2026-10-24T20:27:55.252256Z"
+  },
+  {
+    "id": "UgkxFQqVaAqKk8gqbK8dWbUa8kgNhVaNfCek",
+    "text": "Tomorrow at 17:00 CET: X is for... CROSSWIND! 💨✈️\n\nHey everyone! The MSFS A-Z series rolls on, and tomorrow we are tackling the one letter combination that every pilot deeply respects—and loves to conquer. If you’ve ever had a sudden gust violently shove you off the centerline on short final, this next episode is for you.\n\nWe are breaking down exactly how wind drift forces your plane off course and walking through live demonstrations of the two classic techniques used to pull off a safe, stable landing every single time:\n👉 The Crab Method (Letting the plane fly sideways—essential for heavy airliners)\n👉 The Wing-Low / Side Slip Method (Advanced stick-and-rudder work to save your landing gear)\n\nWe’ll also look at why the flying doesn't stop just because your tires hit the tarmac, covering critical ground rollout and taxiing control inputs.\n\n🔔 Set your reminders: The video drops tomorrow at 17:00 CET. Come hang out in the live chat during the premiere!\n\n👇 While you wait, let me know in the comments: What’s the highest crosswind component you’ve successfully landed in without wrecking your virtual landing gear? Let's see who holds the community record!\n\nFly safe, and see you tomorrow! 🧭",
+    "published_relative": "4 months ago",
+    "published_date": "2026-06-26",
+    "url": "https://www.youtube.com/post/UgkxFQqVaAqKk8gqbK8dWbUa8kgNhVaNfCek",
+    "likes": "5",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/-BERapUKAgE0tAR5xvE1DJn7FDJ2J-2BCoKd0ffXoOOla7VpNvnoxxidITJOLBfzQZJqA8BnF_IYRGM=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-24T20:27:55.252239Z"
+  },
+  {
+    "id": "UgkxOrZ8dt-pxQ0pxqRQ-llpUBPkSXZ-ePQV",
+    "text": "🏁 Launch Day Live Stream: October 13th at 20:00 CET!\n\nThe National Championship Air Races expansion officially drops for MSFS 2024 next Tuesday, and we are jumping straight into the cockpit live on release night.\n\nWe’ll be running the new courses at full throttle—testing the updated flight physics, pushing edge-of-stall pylon turns, and seeing how the high-speed aerodynamics feel when the pressure is on.\n\n🔴 Date: Tuesday, October 13\n\n⏰ Time: 20:00 CET (19:00 UTC / 2:00 PM EDT)\n\n✈️ Focus: Flight dynamics, multi-class heats, and real-time handling\n\nSet a reminder, drop in the chat, and let’s see if this expansion delivers the real deal or arcade fluff. See you on the starting grid!",
+    "published_relative": "2 weeks ago",
+    "published_date": "2026-10-10",
+    "url": "https://www.youtube.com/post/UgkxOrZ8dt-pxQ0pxqRQ-llpUBPkSXZ-ePQV",
+    "likes": "4",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/e_-KSEikNIwqPFzxJ1qT_9EN0_v-8kGTYCcdA-iIED_klF61aFvBdq5PGByRLeGTG0aNcFPkfvUy=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-24T20:27:55.252220Z"
   },
   {
     "id": "UgkxaZJSYNSKG64HIJvFBtwleGIPV6H_LEGi",
@@ -58,22 +73,22 @@
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-24T15:37:35.327615Z"
+    "scraped_at": "2026-10-24T20:27:55.252202Z"
   },
   {
-    "id": "UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
-    "text": "",
-    "published_relative": "8 days ago",
-    "published_date": "2026-10-16",
-    "url": "https://www.youtube.com/post/UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
-    "likes": "3",
+    "id": "Ugkxq2_9srlQSH8dNVnrF4O0bU5wOFlxwylW",
+    "text": "✈️ Flight Deck Cheat Sheet: Mastering the Roswell Pylon Apex\n\nPulling maximum Gs around the pylons in MSFS 2024 will cost you the race if you don't manage your aircraft's energy line. Bleeding airspeed or overboosting cylinder temperatures into Turn 1 is the easiest way to end up at the back of the pack.\n\n📌 Key Takeaways:\n\nThe Late Apex Line: Roll into a 65–70° bank early and apex late on Pylon 2 to carry maximum kinetic energy onto the long desert straightaway.\n\nBuffet & G-Load Awareness: Ease off abrupt stick pull when you hear wing buffet—exceeding critical angle of attack bleeds up to 50 knots instantly.\n\nThermal Management: Keep manifold pressure off the absolute stop during level runs to give cylinder heads room to cool before the next high-G climb.\n\n📺 Watch our 5-class breakdown and get circuit ready: https://youtube.com/shorts/iJvQpfdaNX...",
+    "published_relative": "12 days ago",
+    "published_date": "2026-10-12",
+    "url": "https://www.youtube.com/post/Ugkxq2_9srlQSH8dNVnrF4O0bU5wOFlxwylW",
+    "likes": "0",
     "comments": "0",
     "images": [
-      "https://yt3.ggpht.com/FmxSgnymhnCYc9tGG98EfbLs_lh2MLDTmHRYLiPfvhF2dJyKO0HGM2xp4xhKccPsIoiG_G3vwmGT=s1280"
+      "https://yt3.ggpht.com/bhtNzZ-LVO30TYpdENfCAdRzi6fTO5U1C5Xkr-j--sKEnKt9lX1AMAQvd6t2MjDMogC08ynPhRLAdw=s1280"
     ],
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-24T15:37:35.327569Z"
+    "scraped_at": "2026-10-24T20:27:55.252171Z"
   },
   {
     "id": "UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
@@ -86,7 +101,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-24T15:37:35.327434Z"
+    "scraped_at": "2026-10-24T20:27:55.252153Z"
   },
   {
     "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
@@ -99,12 +114,72 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-24T15:37:35.327413Z"
+    "scraped_at": "2026-10-24T20:27:55.252137Z"
+  },
+  {
+    "id": "UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS",
+    "text": "✈️ Flight Deck Cheat Sheet: The 3:1 Rule for Top of Descent (TOD)\n\nStruggling to calculate your descent without an active VNAV profile? Whether you fly a steam-gauge Cessna, a modern turboprop, or an airliner, the classic 3:1 rule guarantees you never end up 5,000 ft too high on final.\n\n📌 Key Takeaways:\n\nThe Distance Formula (Altitude to Lose × 3): Drop the last three zeros of your altitude to lose, then multiply by 3. If you are cruising at FL240 and need to enter the pattern at 2,000 ft (22,000 ft to lose: 22 × 3), your Top of Descent is 66 nautical miles out.\n\nThe Descent Rate Formula (Groundspeed × 5): Take your current groundspeed and multiply by 5 (or divide by 2 and add a zero). At a 240-knot groundspeed, aim for roughly 1,200 fpm on the vertical speed indicator.\n\nThe Buffer Factor: Always add 5 to 10 nautical miles to your calculated TOD distance to comfortably decelerate and configure flaps/gear before reaching the initial approach fix.\n\n📺 Watch the full breakdown in action: https://youtu.be/MCbT-90kDl8",
+    "published_relative": "8 days ago",
+    "published_date": "2026-10-16",
+    "url": "https://www.youtube.com/post/UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS",
+    "likes": "9",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/UkM3TtSMEJ2r5u8SChSLqLWOSUxZUPjaLVqNou0xz_dhXho96gwwUePiB6peFSqqMuGaQDxXQkxo=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-24T20:27:55.252097Z"
+  },
+  {
+    "id": "UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
+    "text": "",
+    "published_relative": "9 days ago",
+    "published_date": "2026-10-15",
+    "url": "https://www.youtube.com/post/UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
+    "likes": "3",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/FmxSgnymhnCYc9tGG98EfbLs_lh2MLDTmHRYLiPfvhF2dJyKO0HGM2xp4xhKccPsIoiG_G3vwmGT=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-24T20:27:55.252077Z"
+  },
+  {
+    "id": "UgkxmXp9kg_FPWEPK-z0kvPoAWnSI4eU2_DX",
+    "text": "✈️ Ready to Stop Guessing on the Radios? \"U\" is for UNICOM!\nEver dropped through the clouds on a perfect flight, only to find another aircraft sitting right on your runway? Or maybe you avoid uncontrolled airfields entirely because you aren't sure what to say on 122.800?\n\nYou don't need a control tower to have a perfectly safe, deeply immersive flight. You just need to master UNICOM.\n\nIn our latest episode of the MSFS A-Z Series, we are breaking down everything you need to know to transition from an offline casual simmer to a highly respected community pilot.\n\nWhat’s inside the video:\nThe Basics: Exactly what UNICOM is and why it's the ultimate \"turn signal\" of the skies.\n\nThe 3 Golden Rules: The absolute mandatory layout for every single radio transmission.\n\nStep-by-Step GA Demos: Watch a full flight from Jaffrey Airport (3AF) covering taxi, takeoff, en-route coordination, pattern entry, and final landing calls.\n\nHigh-Altitude Airliner Scenarios: How to safely coordinate across the sky when flying heavy jets at 400 knots without active ATC.\n\n🎁 Free Community Download!\nTo help you stay sharp in the cockpit, we’ve put together the Pilot’s Communication Checklist for Uncontrolled Fields shown in the screenshot below! Keep this handy on your tablet or second monitor during your next flight so you always know exactly what to announce, when.\n\n👉 https://youtu.be/RodH1TZvqjo: Watch the Ultimate UNICOM Guide Now!\n\nLet us know in the comments: Do you usually fly solo in GA aircraft, or do you brave the busy multiplayer skies?\n\nClear skies, happy radios, and we'll see you in the sky! 🎙️🛫",
+    "published_relative": "4 months ago",
+    "published_date": "2026-06-26",
+    "url": "https://www.youtube.com/post/UgkxmXp9kg_FPWEPK-z0kvPoAWnSI4eU2_DX",
+    "likes": "6",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/MBoTr0yTI_M6OFtUVhOeIDnvy0eMIxXLq92fbLBT02ErNWhnP-QnODdaN1hJ3vVsM5oDxjajJIHGag=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-24T20:27:55.252054Z"
+  },
+  {
+    "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
+    "text": "World Update 22: United States National Parks available!\nLooks like someone pushed the release button to early, wasn't this scheduled to be released on the 4th of July?",
+    "published_relative": "3 months ago",
+    "published_date": "2026-07-26",
+    "url": "https://www.youtube.com/post/UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
+    "likes": "8",
+    "comments": "2",
+    "images": [
+      "https://yt3.ggpht.com/Jca4NmdUzDyoemPRDXQXm-t5qasMawuSv4YcXIRuSk5eEBeSuoSr5QQs_mVu5FcJvuO0zIz9X1i01g=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-24T20:27:55.252025Z"
   },
   {
     "id": "UgkxbRQaJz_I0Hc7JUJ6_1YY-TKEFHzg_7M7",
     "text": "You step into a cold-and-dark cockpit of an airliner you've never flown before. Instead of staring blankly at hundreds of switches or memorizing a 20-page checklist, what is the golden scanning rule used by real-world crews to power up the overhead panel logically?\n\n📺 Master the Flight Deck:\nStop hunting for switches one by one. Once you understand the systematic flow pattern shared across Boeing, Airbus, and regional jets, you can get any airliner powered up in under 2 minutes.\n\n\nWatch the full guide here: https://youtu.be/g5awgjo-KHQ",
-    "published_relative": "21 hours ago",
+    "published_relative": "1 day ago",
     "published_date": "2026-10-23",
     "url": "https://www.youtube.com/post/UgkxbRQaJz_I0Hc7JUJ6_1YY-TKEFHzg_7M7",
     "likes": "1",
@@ -112,7 +187,7 @@
     "images": null,
     "video_id": null,
     "poll": null,
-    "scraped_at": "2026-10-24T15:37:35.327217Z"
+    "scraped_at": "2026-10-24T20:27:55.251775Z"
   },
   {
     "id": "UgkxY651OLb96KWK9TDgIdyzRFq4G7705Imu",
@@ -145,21 +220,6 @@
     "scraped_at": "2026-10-24T03:55:18.354856Z"
   },
   {
-    "id": "UgkxFQqVaAqKk8gqbK8dWbUa8kgNhVaNfCek",
-    "text": "Tomorrow at 17:00 CET: X is for... CROSSWIND! 💨✈️\n\nHey everyone! The MSFS A-Z series rolls on, and tomorrow we are tackling the one letter combination that every pilot deeply respects—and loves to conquer. If you’ve ever had a sudden gust violently shove you off the centerline on short final, this next episode is for you.\n\nWe are breaking down exactly how wind drift forces your plane off course and walking through live demonstrations of the two classic techniques used to pull off a safe, stable landing every single time:\n👉 The Crab Method (Letting the plane fly sideways—essential for heavy airliners)\n👉 The Wing-Low / Side Slip Method (Advanced stick-and-rudder work to save your landing gear)\n\nWe’ll also look at why the flying doesn't stop just because your tires hit the tarmac, covering critical ground rollout and taxiing control inputs.\n\n🔔 Set your reminders: The video drops tomorrow at 17:00 CET. Come hang out in the live chat during the premiere!\n\n👇 While you wait, let me know in the comments: What’s the highest crosswind component you’ve successfully landed in without wrecking your virtual landing gear? Let's see who holds the community record!\n\nFly safe, and see you tomorrow! 🧭",
-    "published_relative": "4 months ago",
-    "published_date": "2026-06-26",
-    "url": "https://www.youtube.com/post/UgkxFQqVaAqKk8gqbK8dWbUa8kgNhVaNfCek",
-    "likes": "5",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/-BERapUKAgE0tAR5xvE1DJn7FDJ2J-2BCoKd0ffXoOOla7VpNvnoxxidITJOLBfzQZJqA8BnF_IYRGM=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-24T03:55:18.354847Z"
-  },
-  {
     "id": "Ugkxj8C8VIupNprjIoYOTSV_gMJDpzueqF-J",
     "text": "✈️ Flight Deck Milestone: 6 Years High in the FlightSim Sky!\n\nSix years ago today, we pushed back from the gate with our very first video upload. From that first humble takeoff to mastering complex airliner flight decks, glass cockpits, and full VR setups, it has been an incredible journey sharing the skies with you.\n\n📌 Flight Log Highlights:\n\nThe Maiden Flight: 6 years of flight sim tutorials, aircraft breakdowns, and community livestreams.\n\nThe Hangar Fleet: Over 2,100+ videos published covering everything from basic VFR to advanced automation.\n\nThe Flight Crew: 7,200+ virtual pilots strong in our community hangar!\n\n📺 Revisit where the journey all began and check out our earliest flights vs. today: https://youtu.be/mnUZlC5KPVQ",
     "published_relative": "2 months ago",
@@ -173,51 +233,6 @@
     "video_id": null,
     "poll": null,
     "scraped_at": "2026-10-24T03:55:18.354838Z"
-  },
-  {
-    "id": "UgkxmXp9kg_FPWEPK-z0kvPoAWnSI4eU2_DX",
-    "text": "✈️ Ready to Stop Guessing on the Radios? \"U\" is for UNICOM!\nEver dropped through the clouds on a perfect flight, only to find another aircraft sitting right on your runway? Or maybe you avoid uncontrolled airfields entirely because you aren't sure what to say on 122.800?\n\nYou don't need a control tower to have a perfectly safe, deeply immersive flight. You just need to master UNICOM.\n\nIn our latest episode of the MSFS A-Z Series, we are breaking down everything you need to know to transition from an offline casual simmer to a highly respected community pilot.\n\nWhat’s inside the video:\nThe Basics: Exactly what UNICOM is and why it's the ultimate \"turn signal\" of the skies.\n\nThe 3 Golden Rules: The absolute mandatory layout for every single radio transmission.\n\nStep-by-Step GA Demos: Watch a full flight from Jaffrey Airport (3AF) covering taxi, takeoff, en-route coordination, pattern entry, and final landing calls.\n\nHigh-Altitude Airliner Scenarios: How to safely coordinate across the sky when flying heavy jets at 400 knots without active ATC.\n\n🎁 Free Community Download!\nTo help you stay sharp in the cockpit, we’ve put together the Pilot’s Communication Checklist for Uncontrolled Fields shown in the screenshot below! Keep this handy on your tablet or second monitor during your next flight so you always know exactly what to announce, when.\n\n👉 https://youtu.be/RodH1TZvqjo: Watch the Ultimate UNICOM Guide Now!\n\nLet us know in the comments: Do you usually fly solo in GA aircraft, or do you brave the busy multiplayer skies?\n\nClear skies, happy radios, and we'll see you in the sky! 🎙️🛫",
-    "published_relative": "4 months ago",
-    "published_date": "2026-06-26",
-    "url": "https://www.youtube.com/post/UgkxmXp9kg_FPWEPK-z0kvPoAWnSI4eU2_DX",
-    "likes": "6",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/MBoTr0yTI_M6OFtUVhOeIDnvy0eMIxXLq92fbLBT02ErNWhnP-QnODdaN1hJ3vVsM5oDxjajJIHGag=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-24T03:55:18.354828Z"
-  },
-  {
-    "id": "Ugkxq2_9srlQSH8dNVnrF4O0bU5wOFlxwylW",
-    "text": "✈️ Flight Deck Cheat Sheet: Mastering the Roswell Pylon Apex\n\nPulling maximum Gs around the pylons in MSFS 2024 will cost you the race if you don't manage your aircraft's energy line. Bleeding airspeed or overboosting cylinder temperatures into Turn 1 is the easiest way to end up at the back of the pack.\n\n📌 Key Takeaways:\n\nThe Late Apex Line: Roll into a 65–70° bank early and apex late on Pylon 2 to carry maximum kinetic energy onto the long desert straightaway.\n\nBuffet & G-Load Awareness: Ease off abrupt stick pull when you hear wing buffet—exceeding critical angle of attack bleeds up to 50 knots instantly.\n\nThermal Management: Keep manifold pressure off the absolute stop during level runs to give cylinder heads room to cool before the next high-G climb.\n\n📺 Watch our 5-class breakdown and get circuit ready: https://youtube.com/shorts/iJvQpfdaNX...",
-    "published_relative": "11 days ago",
-    "published_date": "2026-10-13",
-    "url": "https://www.youtube.com/post/Ugkxq2_9srlQSH8dNVnrF4O0bU5wOFlxwylW",
-    "likes": "0",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/bhtNzZ-LVO30TYpdENfCAdRzi6fTO5U1C5Xkr-j--sKEnKt9lX1AMAQvd6t2MjDMogC08ynPhRLAdw=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-24T03:55:18.354809Z"
-  },
-  {
-    "id": "Ugkxu4Cs_JcbJiNZaCWqxcDmi5gjvkkUlnrO",
-    "text": "You don't need a subscription to have busy skies! 💸 Whether you're sticking with the new FSLTL Static mode or finally braving that AIG install, there are still great free options. I’ve included a step-by-step AIG installation guide to save you the headache! Watch here: https://youtu.be/fvyn5-lf7UQ",
-    "published_relative": "5 months ago",
-    "published_date": "2026-05-27",
-    "url": "https://www.youtube.com/post/Ugkxu4Cs_JcbJiNZaCWqxcDmi5gjvkkUlnrO",
-    "likes": "7",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/75vidMqBAewW7hkOk3kgN4hZ9S7bCWSZfbDcHZJ58gv1idD1bTTYYG4Mp3KFBLZi4EwweH-HgNvf3g=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-24T03:55:18.354801Z"
   },
   {
     "id": "UgkxQ1Vl0oNoEwWlAQa_ZiPlh3L62jvxKCKT",
@@ -259,21 +274,6 @@
     "video_id": null,
     "poll": null,
     "scraped_at": "2026-10-22T21:20:05.580448Z"
-  },
-  {
-    "id": "UgkxOrZ8dt-pxQ0pxqRQ-llpUBPkSXZ-ePQV",
-    "text": "🏁 Launch Day Live Stream: October 13th at 20:00 CET!\n\nThe National Championship Air Races expansion officially drops for MSFS 2024 next Tuesday, and we are jumping straight into the cockpit live on release night.\n\nWe’ll be running the new courses at full throttle—testing the updated flight physics, pushing edge-of-stall pylon turns, and seeing how the high-speed aerodynamics feel when the pressure is on.\n\n🔴 Date: Tuesday, October 13\n\n⏰ Time: 20:00 CET (19:00 UTC / 2:00 PM EDT)\n\n✈️ Focus: Flight dynamics, multi-class heats, and real-time handling\n\nSet a reminder, drop in the chat, and let’s see if this expansion delivers the real deal or arcade fluff. See you on the starting grid!",
-    "published_relative": "13 days ago",
-    "published_date": "2026-10-09",
-    "url": "https://www.youtube.com/post/UgkxOrZ8dt-pxQ0pxqRQ-llpUBPkSXZ-ePQV",
-    "likes": "4",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/e_-KSEikNIwqPFzxJ1qT_9EN0_v-8kGTYCcdA-iIED_klF61aFvBdq5PGByRLeGTG0aNcFPkfvUy=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-22T16:52:40.252990Z"
   },
   {
     "id": "UgkxjdL_Be56SGPfhYH8QyuVfe1DR_1qNDFj",

@@ -1,7 +1,7 @@
 ---
 title: "\u2708\ufe0f Flight Deck Cheat Sheet: The 3:1 Rule for Top of Descent (TOD)"
 description: "\u2708\ufe0f Flight Deck Cheat Sheet: The 3:1 Rule for Top of Descent (TOD)  Struggling to calculate your descent without an active VNAV profile? Whether you fly a steam-"
-publishedAt: "2026-10-17"
+publishedAt: "2026-10-16"
 tags: ["community", "youtube"]
 draft: false
 ---
