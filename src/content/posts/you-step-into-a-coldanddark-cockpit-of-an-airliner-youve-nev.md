@@ -1,7 +1,7 @@
 ---
 title: "You step into a cold-and-dark cockpit of an airliner you've never flown before"
 description: "You step into a cold-and-dark cockpit of an airliner you've never flown before. Instead of staring blankly at hundreds of switches or memorizing a 20-page check"
-publishedAt: "2026-10-24"
+publishedAt: "2026-10-23"
 tags: ["community", "youtube"]
 draft: false
 ---
