@@ -1,5 +1,78 @@
 [
   {
+    "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
+    "text": "World Update 22: United States National Parks available!\nLooks like someone pushed the release button to early, wasn't this scheduled to be released on the 4th of July?",
+    "published_relative": "3 months ago",
+    "published_date": "2026-07-27",
+    "url": "https://www.youtube.com/post/UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
+    "likes": "8",
+    "comments": "2",
+    "images": [
+      "https://yt3.ggpht.com/Jca4NmdUzDyoemPRDXQXm-t5qasMawuSv4YcXIRuSk5eEBeSuoSr5QQs_mVu5FcJvuO0zIz9X1i01g=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-25T10:59:41.076425Z"
+  },
+  {
+    "id": "UgkxaZJSYNSKG64HIJvFBtwleGIPV6H_LEGi",
+    "text": "Hi all,\n\nFor years I have used the logo which you can currently see in the profile which is a jet engine. I am currently doing some investigation to see if it is time for a new logo. The one I came up with is the logo below, let me know what you think of it should I change it or keep the existing one?",
+    "published_relative": "2 months ago",
+    "published_date": "2026-08-26",
+    "url": "https://www.youtube.com/post/UgkxaZJSYNSKG64HIJvFBtwleGIPV6H_LEGi",
+    "likes": "0",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/z0ZE1vXqenm-O5_DLdIlEAQKyCs3ywPEb8G-pwOEJuTEr6fHVSZwFv1btmOs6RnPyHz8NKbn9mgPIQ=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-25T10:59:41.076410Z"
+  },
+  {
+    "id": "UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS",
+    "text": "✈️ Flight Deck Cheat Sheet: The 3:1 Rule for Top of Descent (TOD)\n\nStruggling to calculate your descent without an active VNAV profile? Whether you fly a steam-gauge Cessna, a modern turboprop, or an airliner, the classic 3:1 rule guarantees you never end up 5,000 ft too high on final.\n\n📌 Key Takeaways:\n\nThe Distance Formula (Altitude to Lose × 3): Drop the last three zeros of your altitude to lose, then multiply by 3. If you are cruising at FL240 and need to enter the pattern at 2,000 ft (22,000 ft to lose: 22 × 3), your Top of Descent is 66 nautical miles out.\n\nThe Descent Rate Formula (Groundspeed × 5): Take your current groundspeed and multiply by 5 (or divide by 2 and add a zero). At a 240-knot groundspeed, aim for roughly 1,200 fpm on the vertical speed indicator.\n\nThe Buffer Factor: Always add 5 to 10 nautical miles to your calculated TOD distance to comfortably decelerate and configure flaps/gear before reaching the initial approach fix.\n\n📺 Watch the full breakdown in action: https://youtu.be/MCbT-90kDl8",
+    "published_relative": "8 days ago",
+    "published_date": "2026-10-17",
+    "url": "https://www.youtube.com/post/UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS",
+    "likes": "9",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/UkM3TtSMEJ2r5u8SChSLqLWOSUxZUPjaLVqNou0xz_dhXho96gwwUePiB6peFSqqMuGaQDxXQkxo=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-25T10:59:41.076319Z"
+  },
+  {
+    "id": "UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
+    "text": "",
+    "published_relative": "9 days ago",
+    "published_date": "2026-10-16",
+    "url": "https://www.youtube.com/post/UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
+    "likes": "3",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/FmxSgnymhnCYc9tGG98EfbLs_lh2MLDTmHRYLiPfvhF2dJyKO0HGM2xp4xhKccPsIoiG_G3vwmGT=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-25T10:59:41.076228Z"
+  },
+  {
+    "id": "UgkxbRQaJz_I0Hc7JUJ6_1YY-TKEFHzg_7M7",
+    "text": "You step into a cold-and-dark cockpit of an airliner you've never flown before. Instead of staring blankly at hundreds of switches or memorizing a 20-page checklist, what is the golden scanning rule used by real-world crews to power up the overhead panel logically?\n\n📺 Master the Flight Deck:\nStop hunting for switches one by one. Once you understand the systematic flow pattern shared across Boeing, Airbus, and regional jets, you can get any airliner powered up in under 2 minutes.\n\n\nWatch the full guide here: https://youtu.be/g5awgjo-KHQ",
+    "published_relative": "1 day ago",
+    "published_date": "2026-10-24",
+    "url": "https://www.youtube.com/post/UgkxbRQaJz_I0Hc7JUJ6_1YY-TKEFHzg_7M7",
+    "likes": "1",
+    "comments": "2",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-25T10:59:41.075958Z"
+  },
+  {
     "id": "UgkxTNz19tJEt-gjx7rb4fAQK5lkBABJLJLC",
     "text": "🚨 TONIGHT: Testing MSFS City Update 15 & the Piper M600!\n\nThe pilot is \"incapacitated\" but the aircraft has everything under control! 🛩️🤖\n\nTake a close look at the cockpit screenshot below—we’ve officially triggered the HALO Emergency Autoland system on the brand-new Expert Series Piper M600 by FSReborn! All three screens are locked in, the system says “EMERGENCY AUTOLAND ACTIVE - No Action Required,” and we are currently enroute to Chicago/Rockford Intl for an entirely automated, hands-free landing.\n\nWill it actually bring us down safely, or are we about to test the structural integrity of the Midwest photogrammetry? Let's find out together!\n\nBeyond pushing this advanced Garmin G3000 avionics suite to its absolute limits, we are flying deep into the American Heartland to review the massive new City Update 15. We'll be checking out the high-fidelity TIN upgrades for:\n\n- Chicago (including a nostalgic trip to the legendary Meigs Field!)\n- Minneapolis-St. Paul\n- Milwaukee\n\n🕒 Livestream Schedule\nTime: 19:30 CET (Europe Time)\n\nWhere: Right here on the channel!\n\nDrop a comment below: Have you picked up the Piper M600 yet, or are you waiting to see the final verdict tonight?\n\nSet your alarms, grab a drink, and I'll see you live in the flight deck at 19:30! ✈️👇\n\n#MSFS #CityUpdate15 #PiperM600 #FlightSimulator #Livestream",
     "published_relative": "4 months ago",
@@ -46,21 +119,6 @@
     "scraped_at": "2026-10-25T03:54:32.158396Z"
   },
   {
-    "id": "UgkxaZJSYNSKG64HIJvFBtwleGIPV6H_LEGi",
-    "text": "Hi all,\n\nFor years I have used the logo which you can currently see in the profile which is a jet engine. I am currently doing some investigation to see if it is time for a new logo. The one I came up with is the logo below, let me know what you think of it should I change it or keep the existing one?",
-    "published_relative": "2 months ago",
-    "published_date": "2026-08-26",
-    "url": "https://www.youtube.com/post/UgkxaZJSYNSKG64HIJvFBtwleGIPV6H_LEGi",
-    "likes": "0",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/z0ZE1vXqenm-O5_DLdIlEAQKyCs3ywPEb8G-pwOEJuTEr6fHVSZwFv1btmOs6RnPyHz8NKbn9mgPIQ=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-25T03:54:32.158381Z"
-  },
-  {
     "id": "Ugkxq2_9srlQSH8dNVnrF4O0bU5wOFlxwylW",
     "text": "✈️ Flight Deck Cheat Sheet: Mastering the Roswell Pylon Apex\n\nPulling maximum Gs around the pylons in MSFS 2024 will cost you the race if you don't manage your aircraft's energy line. Bleeding airspeed or overboosting cylinder temperatures into Turn 1 is the easiest way to end up at the back of the pack.\n\n📌 Key Takeaways:\n\nThe Late Apex Line: Roll into a 65–70° bank early and apex late on Pylon 2 to carry maximum kinetic energy onto the long desert straightaway.\n\nBuffet & G-Load Awareness: Ease off abrupt stick pull when you hear wing buffet—exceeding critical angle of attack bleeds up to 50 knots instantly.\n\nThermal Management: Keep manifold pressure off the absolute stop during level runs to give cylinder heads room to cool before the next high-G climb.\n\n📺 Watch our 5-class breakdown and get circuit ready: https://youtube.com/shorts/iJvQpfdaNX...",
     "published_relative": "12 days ago",
@@ -102,36 +160,6 @@
     "scraped_at": "2026-10-25T03:54:32.158323Z"
   },
   {
-    "id": "UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS",
-    "text": "✈️ Flight Deck Cheat Sheet: The 3:1 Rule for Top of Descent (TOD)\n\nStruggling to calculate your descent without an active VNAV profile? Whether you fly a steam-gauge Cessna, a modern turboprop, or an airliner, the classic 3:1 rule guarantees you never end up 5,000 ft too high on final.\n\n📌 Key Takeaways:\n\nThe Distance Formula (Altitude to Lose × 3): Drop the last three zeros of your altitude to lose, then multiply by 3. If you are cruising at FL240 and need to enter the pattern at 2,000 ft (22,000 ft to lose: 22 × 3), your Top of Descent is 66 nautical miles out.\n\nThe Descent Rate Formula (Groundspeed × 5): Take your current groundspeed and multiply by 5 (or divide by 2 and add a zero). At a 240-knot groundspeed, aim for roughly 1,200 fpm on the vertical speed indicator.\n\nThe Buffer Factor: Always add 5 to 10 nautical miles to your calculated TOD distance to comfortably decelerate and configure flaps/gear before reaching the initial approach fix.\n\n📺 Watch the full breakdown in action: https://youtu.be/MCbT-90kDl8",
-    "published_relative": "8 days ago",
-    "published_date": "2026-10-17",
-    "url": "https://www.youtube.com/post/UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS",
-    "likes": "9",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/UkM3TtSMEJ2r5u8SChSLqLWOSUxZUPjaLVqNou0xz_dhXho96gwwUePiB6peFSqqMuGaQDxXQkxo=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-25T03:54:32.158286Z"
-  },
-  {
-    "id": "UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
-    "text": "",
-    "published_relative": "9 days ago",
-    "published_date": "2026-10-16",
-    "url": "https://www.youtube.com/post/UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
-    "likes": "3",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/FmxSgnymhnCYc9tGG98EfbLs_lh2MLDTmHRYLiPfvhF2dJyKO0HGM2xp4xhKccPsIoiG_G3vwmGT=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-25T03:54:32.158269Z"
-  },
-  {
     "id": "UgkxmXp9kg_FPWEPK-z0kvPoAWnSI4eU2_DX",
     "text": "✈️ Ready to Stop Guessing on the Radios? \"U\" is for UNICOM!\nEver dropped through the clouds on a perfect flight, only to find another aircraft sitting right on your runway? Or maybe you avoid uncontrolled airfields entirely because you aren't sure what to say on 122.800?\n\nYou don't need a control tower to have a perfectly safe, deeply immersive flight. You just need to master UNICOM.\n\nIn our latest episode of the MSFS A-Z Series, we are breaking down everything you need to know to transition from an offline casual simmer to a highly respected community pilot.\n\nWhat’s inside the video:\nThe Basics: Exactly what UNICOM is and why it's the ultimate \"turn signal\" of the skies.\n\nThe 3 Golden Rules: The absolute mandatory layout for every single radio transmission.\n\nStep-by-Step GA Demos: Watch a full flight from Jaffrey Airport (3AF) covering taxi, takeoff, en-route coordination, pattern entry, and final landing calls.\n\nHigh-Altitude Airliner Scenarios: How to safely coordinate across the sky when flying heavy jets at 400 knots without active ATC.\n\n🎁 Free Community Download!\nTo help you stay sharp in the cockpit, we’ve put together the Pilot’s Communication Checklist for Uncontrolled Fields shown in the screenshot below! Keep this handy on your tablet or second monitor during your next flight so you always know exactly what to announce, when.\n\n👉 https://youtu.be/RodH1TZvqjo: Watch the Ultimate UNICOM Guide Now!\n\nLet us know in the comments: Do you usually fly solo in GA aircraft, or do you brave the busy multiplayer skies?\n\nClear skies, happy radios, and we'll see you in the sky! 🎙️🛫",
     "published_relative": "4 months ago",
@@ -145,34 +173,6 @@
     "video_id": null,
     "poll": null,
     "scraped_at": "2026-10-25T03:54:32.158252Z"
-  },
-  {
-    "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
-    "text": "World Update 22: United States National Parks available!\nLooks like someone pushed the release button to early, wasn't this scheduled to be released on the 4th of July?",
-    "published_relative": "3 months ago",
-    "published_date": "2026-07-27",
-    "url": "https://www.youtube.com/post/UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
-    "likes": "8",
-    "comments": "2",
-    "images": [
-      "https://yt3.ggpht.com/Jca4NmdUzDyoemPRDXQXm-t5qasMawuSv4YcXIRuSk5eEBeSuoSr5QQs_mVu5FcJvuO0zIz9X1i01g=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-25T03:54:32.158227Z"
-  },
-  {
-    "id": "UgkxbRQaJz_I0Hc7JUJ6_1YY-TKEFHzg_7M7",
-    "text": "You step into a cold-and-dark cockpit of an airliner you've never flown before. Instead of staring blankly at hundreds of switches or memorizing a 20-page checklist, what is the golden scanning rule used by real-world crews to power up the overhead panel logically?\n\n📺 Master the Flight Deck:\nStop hunting for switches one by one. Once you understand the systematic flow pattern shared across Boeing, Airbus, and regional jets, you can get any airliner powered up in under 2 minutes.\n\n\nWatch the full guide here: https://youtu.be/g5awgjo-KHQ",
-    "published_relative": "1 day ago",
-    "published_date": "2026-10-24",
-    "url": "https://www.youtube.com/post/UgkxbRQaJz_I0Hc7JUJ6_1YY-TKEFHzg_7M7",
-    "likes": "1",
-    "comments": "1",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-25T03:54:32.158040Z"
   },
   {
     "id": "Ugkxu4Cs_JcbJiNZaCWqxcDmi5gjvkkUlnrO",

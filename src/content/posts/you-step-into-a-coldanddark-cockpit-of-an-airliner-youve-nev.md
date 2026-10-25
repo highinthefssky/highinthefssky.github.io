@@ -15,4 +15,4 @@ Stop hunting for switches one by one. Once you understand the systematic flow pa
 Watch the full guide here: https://youtu.be/g5awgjo-KHQ
 
 Original post: https://www.youtube.com/post/UgkxbRQaJz_I0Hc7JUJ6_1YY-TKEFHzg_7M7
-Likes: 1 | Comments: 1
+Likes: 1 | Comments: 2
