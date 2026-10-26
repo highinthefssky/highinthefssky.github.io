@@ -1,7 +1,7 @@
 ---
 title: "Ever felt intimidated by the \"invisible walls\" in the sky? \u2708\ufe0f\ud83e\uddf1"
 description: "Ever felt intimidated by the \"invisible walls\" in the sky? \u2708\ufe0f\ud83e\uddf1  You're cruising along fine, and suddenly you're risking a license revocation\u2014or ruining a VATSIM"
-publishedAt: "2026-07-26"
+publishedAt: "2026-07-28"
 tags: ["community", "youtube"]
 draft: false
 ---
