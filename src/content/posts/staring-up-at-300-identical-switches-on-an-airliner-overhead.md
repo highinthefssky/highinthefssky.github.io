@@ -22,7 +22,7 @@ Here is your quick-reference Overhead Panel SOP Cheat Sheet:
 Which cockpit felt like an absolute maze the first time you sat in it: the classic toggle switchboard on the 737 or the push-button grid on the Airbus? Let me know below! 👇
 
 Original post: https://www.youtube.com/post/UgkxY651OLb96KWK9TDgIdyzRFq4G7705Imu
-Likes: 3 | Comments: 0
+Likes: 4 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/uxom3jaCLN7NAtTZ6u6VpMOSsI8ZKXJKNl9-HCTtvkXAg4jbetronBLmZwzDMIOld-KNVyAIvpR3=s1280)
