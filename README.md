@@ -101,6 +101,11 @@ After changing these paths, run the security rendering tests with
 `npx playwright test tests/e2e/security-rendering.spec.ts` and the scraper tests
 with `python3 -m unittest discover -s tests/scripts`.
 
+The live-banner freshness tests also run in the pull-request smoke suite
+(`npm run test:e2e:smoke`). They inject a mocked live-status URL, including when
+Astro renders the unconfigured URL as a bare HTML attribute, so no deployed
+Worker or live YouTube response is needed.
+
 ### Video Archive and Search
 
 The archive renders nine videos per static page, with ordinary pagination links
