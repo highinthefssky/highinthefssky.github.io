@@ -1,7 +1,7 @@
 ---
 title: "\ud83d\ude80 Switching to VR in MSFS: The 7-Day Challenge! \ud83e\udd7d\u2708\ufe0f"
 description: "\ud83d\ude80 Switching to VR in MSFS: The 7-Day Challenge! \ud83e\udd7d\u2708\ufe0f Ever wondered if Virtual Reality can truly replace your monitors for flight simulation? I\u2019m putting it to th"
-publishedAt: "2026-08-22"
+publishedAt: "2026-07-29"
 tags: ["community", "youtube"]
 draft: false
 ---
