@@ -1,7 +1,7 @@
 ---
 title: "\ud83c\udfc1 Launch Day Live Stream: October 13th at 20:00 CET!"
 description: "\ud83c\udfc1 Launch Day Live Stream: October 13th at 20:00 CET!  The National Championship Air Races expansion officially drops for MSFS 2024 next Tuesday, and we are jump"
-publishedAt: "2026-10-11"
+publishedAt: "2026-10-13"
 tags: ["community", "youtube"]
 draft: false
 ---
