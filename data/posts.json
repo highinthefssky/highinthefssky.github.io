@@ -1,5 +1,113 @@
 [
   {
+    "id": "Ugkx6kF4vT0iFAqN76ti63dP1xtLPjSNI6Ta",
+    "text": "🛫 Simmer's Quick Check: During engine start on a turboprop like the Daher TBM 930 or Pilatus PC-12, your ITT (Interstage Turbine Temperature) rapidly spikes toward the redline while Ng is still sluggish below 12%. What is your immediate memory item?\n\n📺 Master the Flight Deck:\nTurboprop turbine damage in flight simulation is costly if you run realism addons, but knowing how to recognize a hung or hot start within 3 seconds will save your engine every time.\nWatch the full guide here: https://www.youtube.com/playlist?list...",
+    "published_relative": "3 weeks ago",
+    "published_date": "2026-10-07",
+    "url": "https://www.youtube.com/post/Ugkx6kF4vT0iFAqN76ti63dP1xtLPjSNI6Ta",
+    "likes": "0",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-28T12:24:01.427053Z"
+  },
+  {
+    "id": "UgkxUJF6JDdhZnWrfAF_34I1-v-LAz4vHsr0",
+    "text": "🛫 Simmer's Quick Check: You are flying a high-performance turboprop (such as the Daher TBM 930 or Pilatus PC-12) on short final. You are slightly floating over the touchdown zone and decide to pull your power lever back past the flight idle gate into the Beta / Ground Range while still airborne.\n\nWhat is the primary danger of this action?\n\n📺 Master the Flight Deck:\nTurboprop power levers don't behave like standard piston throttles! Discover how blade pitch governing works and how to manage your approach speeds smoothly without stalling over the numbers.\nWatch the full guide here: https://youtu.be/lxHzNhVdLAo",
+    "published_relative": "1 month ago",
+    "published_date": "2026-09-28",
+    "url": "https://www.youtube.com/post/UgkxUJF6JDdhZnWrfAF_34I1-v-LAz4vHsr0",
+    "likes": "5",
+    "comments": "2",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-28T12:24:01.427032Z"
+  },
+  {
+    "id": "UgkxQ1Vl0oNoEwWlAQa_ZiPlh3L62jvxKCKT",
+    "text": "🛫 Simmer's Quick Check: You are climbing out of a busy airport and just passed the local Transition Altitude (TA). Your altimeter is currently set to the local QNH given by ATIS.\n\n​To ensure vertical separation from other aircraft operating at higher flight levels, what is your next immediate action on the barometric altimeter?\n\n​📺 Master the Flight Deck:\n\nEver wondered why flying on local QNH at high altitudes can lead to dangerous altimeter errors or airspace busts?\n\nWatch the full guide here: https://youtu.be/6nKqRSDbzyE",
+    "published_relative": "2 months ago",
+    "published_date": "2026-08-29",
+    "url": "https://www.youtube.com/post/UgkxQ1Vl0oNoEwWlAQa_ZiPlh3L62jvxKCKT",
+    "likes": "8",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-28T12:24:01.426966Z"
+  },
+  {
+    "id": "UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS",
+    "text": "✈️ Flight Deck Cheat Sheet: The 3:1 Rule for Top of Descent (TOD)\n\nStruggling to calculate your descent without an active VNAV profile? Whether you fly a steam-gauge Cessna, a modern turboprop, or an airliner, the classic 3:1 rule guarantees you never end up 5,000 ft too high on final.\n\n📌 Key Takeaways:\n\nThe Distance Formula (Altitude to Lose × 3): Drop the last three zeros of your altitude to lose, then multiply by 3. If you are cruising at FL240 and need to enter the pattern at 2,000 ft (22,000 ft to lose: 22 × 3), your Top of Descent is 66 nautical miles out.\n\nThe Descent Rate Formula (Groundspeed × 5): Take your current groundspeed and multiply by 5 (or divide by 2 and add a zero). At a 240-knot groundspeed, aim for roughly 1,200 fpm on the vertical speed indicator.\n\nThe Buffer Factor: Always add 5 to 10 nautical miles to your calculated TOD distance to comfortably decelerate and configure flaps/gear before reaching the initial approach fix.\n\n📺 Watch the full breakdown in action: https://youtu.be/MCbT-90kDl8",
+    "published_relative": "11 days ago",
+    "published_date": "2026-10-17",
+    "url": "https://www.youtube.com/post/UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS",
+    "likes": "9",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/UkM3TtSMEJ2r5u8SChSLqLWOSUxZUPjaLVqNou0xz_dhXho96gwwUePiB6peFSqqMuGaQDxXQkxo=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-28T12:24:01.426936Z"
+  },
+  {
+    "id": "UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
+    "text": "",
+    "published_relative": "12 days ago",
+    "published_date": "2026-10-16",
+    "url": "https://www.youtube.com/post/UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
+    "likes": "3",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/FmxSgnymhnCYc9tGG98EfbLs_lh2MLDTmHRYLiPfvhF2dJyKO0HGM2xp4xhKccPsIoiG_G3vwmGT=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-28T12:24:01.426918Z"
+  },
+  {
+    "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
+    "text": "ATTENTION PILOTS: NOTAM ISSUED\n----------------------------------------------------------------------------------------------------------------------------------------\nNOTAM ID: SAAB-VIRTUAL-0340\nLOCATION: High in the flightsim sky Flight Operations\nEFFECTIVE: IMMEDIATELY\nSUBJECT: GROUND DELAY - SAAB 340 \"GETTING STARTED\" SERIES EP. 6\n\nSCHEDULE UPDATE:\nExpected Departure Clearance (EDC) for the Cold and Dark / Autopilot Tutorial has been pushed back by several hours due to unscheduled maintenance in the rendering bay. All systems are currently being cycled to ensure a smooth delivery.\n\nFLIGHT PLAN OVERVIEW:\nOnce wheels are up later today, this sortie will cover:\n\n- Pre-Flight: Comprehensive \"Cold and Dark\" procedures.\n- Walkthrough: Extended guided tour and technical explanation of the cockpit layout.\n- Departure: Standard takeoff procedures and climb-out.\n- Automation: In-depth guide to mastering Autopilot functionality for stable cruise operations.\n\nREMARKS:\nCheck your sub-feeds and notifications for the updated ATIS. We appreciate your patience while we clear these technical squawks.\n\nSTAY VIGILANT. SEE YOU ON THE FLIGHT DECK LATER TODAY.",
+    "published_relative": "6 months ago",
+    "published_date": "2026-05-01",
+    "url": "https://www.youtube.com/post/Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
+    "likes": "3",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-28T12:24:01.426851Z"
+  },
+  {
+    "id": "UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
+    "text": "A0423/26 - NOTICE TO ALL FLIGHT SIMULATORS / YOUTUBE SUBSCRIBERS\n\nQ) MSFS / QMSFS / AZ / SERIES / IV / / /\nA) YOUTUBE COMMUNITY TAB\nB) 2603191400\nC) 2603191700 EST\nE) FLIGHT UPDATE / DELAY NOTIFICATION:\n\nTHE LATEST EPISODE OF THE MSFS A-Z SERIES, \"THE ART OF TRIM,\" HAS BEEN TEMPORARILY GROUNDED DUE TO UNANTICIPATED AIRCRAFT MAINTENANCE.\n\nPRODUCTION CREWS ENCOUNTERED TECH ISSUES IN THE RENDERING BAY DURING FINAL INSPECTION OF THE DUAL LIVE-DEMONSTRATION SEGMENTS (CESSNA 172 GA PITCH-HOLD-TRIM AND ADVANCED AIRSPEED CONFIGURATIONS). TO ENSURE FULL COMPLIANCE WITH HIGH-QUALITY BROADCAST STANDARDS, THE VIDEO RELEASE IS DELAYED BY A FEW HOURS.\n\n- EXPECTED SECTIONS INBOUND:\n- THE HOOK & HANDS-OFF FLIGHT\n- CORE AERODYNAMICS (ELEVATOR VS. TRIM TAB)\n- THE GOLDEN RULE (PITCH, HOLD, TRIM)\n- DEMO: GA DEPARTURE\n- ADVANCED AIRSPEED & CONFIGURATION BALLOONING\n- DEMO: FLAP DEPLOYMENT & GLIDESLOPE MANAGEMENT\n- COMMERCIAL AIRLINER SYSTEMS (BOEING MANUAL VS. AIRBUS FBW)\n\nREVISED ESTIMATED TIME OF DEPARTURE (ETD) IS DELAYED BY APPROX 2-3 HOURS. WE APOLOGIZE FOR THE INCONVENIENCE TO YOUR FLIGHT PLANNING.\n\nPREPARE YOUR REFRESHMENTS, DECIDE IF YOU ARE TEAM BOEING OR TEAM AIRBUS IN THE COMMENTS UPON ARRIVAL, AND STAND BY FOR TAXI.\n\nF) SURFACE\nG) FLIGHT LEVEL HIGH",
+    "published_relative": "5 months ago",
+    "published_date": "2026-05-31",
+    "url": "https://www.youtube.com/post/UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
+    "likes": "3",
+    "comments": "0",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-28T12:24:01.426836Z"
+  },
+  {
+    "id": "UgkxbRQaJz_I0Hc7JUJ6_1YY-TKEFHzg_7M7",
+    "text": "You step into a cold-and-dark cockpit of an airliner you've never flown before. Instead of staring blankly at hundreds of switches or memorizing a 20-page checklist, what is the golden scanning rule used by real-world crews to power up the overhead panel logically?\n\n📺 Master the Flight Deck:\nStop hunting for switches one by one. Once you understand the systematic flow pattern shared across Boeing, Airbus, and regional jets, you can get any airliner powered up in under 2 minutes.\n\n\nWatch the full guide here: https://youtu.be/g5awgjo-KHQ",
+    "published_relative": "4 days ago",
+    "published_date": "2026-10-24",
+    "url": "https://www.youtube.com/post/UgkxbRQaJz_I0Hc7JUJ6_1YY-TKEFHzg_7M7",
+    "likes": "1",
+    "comments": "2",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-10-28T12:24:01.426742Z"
+  },
+  {
     "id": "UgkxjdL_Be56SGPfhYH8QyuVfe1DR_1qNDFj",
     "text": "🚀 Switching to VR in MSFS: The 7-Day Challenge! 🥽✈️\nEver wondered if Virtual Reality can truly replace your monitors for flight simulation? I’m putting it to the ultimate test with the Pimax Crystal Light over a 7-day challenge—testing setup, performance, aircraft demos, and real flight deck experience in MSFS 2024!\nHere’s where we are in the series so far:\n\n▶️ Part 1: Setup & First Flight (First 48 Hours)\nIf you missed it, check out my initial hands-on setup, first impressions, and whether the Crystal Light can stand up against traditional displays:\n👉 https://youtu.be/_VxcD0S0YXI\n🔥 Part 2: VR Hacks & Overcoming Challenges (96 Hours In) — Releasing Later Today! (21:00 CET)\nVR isn’t always smooth sailing out of the box. In today’s episode, I cover the main challenges I hit, how I fixed them, and the essential tweaks that saved my flight deck:\n👉 https://youtu.be/o2jQ7OgkG9E\n\nDrop a comment on the videos and let me know your thoughts, are you flying in VR yet, or are you holding out for monitors? Clear skies! 🌤️",
     "published_relative": "3 months ago",
@@ -106,36 +214,6 @@
     "scraped_at": "2026-10-28T04:50:20.523693Z"
   },
   {
-    "id": "UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
-    "text": "",
-    "published_relative": "12 days ago",
-    "published_date": "2026-10-16",
-    "url": "https://www.youtube.com/post/UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
-    "likes": "3",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/FmxSgnymhnCYc9tGG98EfbLs_lh2MLDTmHRYLiPfvhF2dJyKO0HGM2xp4xhKccPsIoiG_G3vwmGT=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-28T04:50:20.523648Z"
-  },
-  {
-    "id": "UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS",
-    "text": "✈️ Flight Deck Cheat Sheet: The 3:1 Rule for Top of Descent (TOD)\n\nStruggling to calculate your descent without an active VNAV profile? Whether you fly a steam-gauge Cessna, a modern turboprop, or an airliner, the classic 3:1 rule guarantees you never end up 5,000 ft too high on final.\n\n📌 Key Takeaways:\n\nThe Distance Formula (Altitude to Lose × 3): Drop the last three zeros of your altitude to lose, then multiply by 3. If you are cruising at FL240 and need to enter the pattern at 2,000 ft (22,000 ft to lose: 22 × 3), your Top of Descent is 66 nautical miles out.\n\nThe Descent Rate Formula (Groundspeed × 5): Take your current groundspeed and multiply by 5 (or divide by 2 and add a zero). At a 240-knot groundspeed, aim for roughly 1,200 fpm on the vertical speed indicator.\n\nThe Buffer Factor: Always add 5 to 10 nautical miles to your calculated TOD distance to comfortably decelerate and configure flaps/gear before reaching the initial approach fix.\n\n📺 Watch the full breakdown in action: https://youtu.be/MCbT-90kDl8",
-    "published_relative": "11 days ago",
-    "published_date": "2026-10-17",
-    "url": "https://www.youtube.com/post/UgkxnUl7PCImi7MAIoFB8M1w_UXFIjI8ErxS",
-    "likes": "9",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/UkM3TtSMEJ2r5u8SChSLqLWOSUxZUPjaLVqNou0xz_dhXho96gwwUePiB6peFSqqMuGaQDxXQkxo=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-28T04:50:20.523629Z"
-  },
-  {
     "id": "UgkxY651OLb96KWK9TDgIdyzRFq4G7705Imu",
     "text": "✈️ Staring up at 300 identical switches on an airliner overhead panel? Stop memorizing individual buttons!\n\nWhether you're stepping into the Fenix A320, PMDG 737, or any modern airliner in MSFS, real pilots don't flip through a 40-step checklist to find a fuel pump. They use the \"Dark Cockpit\" philosophy and a logical top-to-bottom \"Spine\" flow.\n\nHere is your quick-reference Overhead Panel SOP Cheat Sheet:\n🟢 The \"Dark Cockpit\" Rule: If a switch is unlit, it’s aligned, automatic, and happy. Leave it alone!\n🌈 Color Cadence: Dark (normal) | Blue (temporary/APU) | White (overridden/OFF) | Amber (caution) | Red (emergency).\n🧠 The Spine Layout: Fire/Hydraulics ➡️ Fuel ➡️ Electrical Heart ➡️ Air Conditioning/Bleeds ➡️ Lighting Brim.\n🚫 The Big Trap: Never touch red-guarded switches like the IDG Disconnect in flight—it’s physically irreversible!\n\n🎥 Watch the full breakdown and master your cold-and-dark power-up flow in under 2 minutes:\n👉 https://youtu.be/g5awgjo-KHQ\n\nWhich cockpit felt like an absolute maze the first time you sat in it: the classic toggle switchboard on the 737 or the push-button grid on the Airbus? Let me know below! 👇",
     "published_relative": "7 days ago",
@@ -179,32 +257,6 @@
     "video_id": null,
     "poll": null,
     "scraped_at": "2026-10-28T04:50:20.523541Z"
-  },
-  {
-    "id": "Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
-    "text": "ATTENTION PILOTS: NOTAM ISSUED\n----------------------------------------------------------------------------------------------------------------------------------------\nNOTAM ID: SAAB-VIRTUAL-0340\nLOCATION: High in the flightsim sky Flight Operations\nEFFECTIVE: IMMEDIATELY\nSUBJECT: GROUND DELAY - SAAB 340 \"GETTING STARTED\" SERIES EP. 6\n\nSCHEDULE UPDATE:\nExpected Departure Clearance (EDC) for the Cold and Dark / Autopilot Tutorial has been pushed back by several hours due to unscheduled maintenance in the rendering bay. All systems are currently being cycled to ensure a smooth delivery.\n\nFLIGHT PLAN OVERVIEW:\nOnce wheels are up later today, this sortie will cover:\n\n- Pre-Flight: Comprehensive \"Cold and Dark\" procedures.\n- Walkthrough: Extended guided tour and technical explanation of the cockpit layout.\n- Departure: Standard takeoff procedures and climb-out.\n- Automation: In-depth guide to mastering Autopilot functionality for stable cruise operations.\n\nREMARKS:\nCheck your sub-feeds and notifications for the updated ATIS. We appreciate your patience while we clear these technical squawks.\n\nSTAY VIGILANT. SEE YOU ON THE FLIGHT DECK LATER TODAY.",
-    "published_relative": "6 months ago",
-    "published_date": "2026-04-30",
-    "url": "https://www.youtube.com/post/Ugkx6wmLxuiYliNyAZqX_lr4mKCKWrKnXGmX",
-    "likes": "3",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-27T21:57:34.184838Z"
-  },
-  {
-    "id": "UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
-    "text": "A0423/26 - NOTICE TO ALL FLIGHT SIMULATORS / YOUTUBE SUBSCRIBERS\n\nQ) MSFS / QMSFS / AZ / SERIES / IV / / /\nA) YOUTUBE COMMUNITY TAB\nB) 2603191400\nC) 2603191700 EST\nE) FLIGHT UPDATE / DELAY NOTIFICATION:\n\nTHE LATEST EPISODE OF THE MSFS A-Z SERIES, \"THE ART OF TRIM,\" HAS BEEN TEMPORARILY GROUNDED DUE TO UNANTICIPATED AIRCRAFT MAINTENANCE.\n\nPRODUCTION CREWS ENCOUNTERED TECH ISSUES IN THE RENDERING BAY DURING FINAL INSPECTION OF THE DUAL LIVE-DEMONSTRATION SEGMENTS (CESSNA 172 GA PITCH-HOLD-TRIM AND ADVANCED AIRSPEED CONFIGURATIONS). TO ENSURE FULL COMPLIANCE WITH HIGH-QUALITY BROADCAST STANDARDS, THE VIDEO RELEASE IS DELAYED BY A FEW HOURS.\n\n- EXPECTED SECTIONS INBOUND:\n- THE HOOK & HANDS-OFF FLIGHT\n- CORE AERODYNAMICS (ELEVATOR VS. TRIM TAB)\n- THE GOLDEN RULE (PITCH, HOLD, TRIM)\n- DEMO: GA DEPARTURE\n- ADVANCED AIRSPEED & CONFIGURATION BALLOONING\n- DEMO: FLAP DEPLOYMENT & GLIDESLOPE MANAGEMENT\n- COMMERCIAL AIRLINER SYSTEMS (BOEING MANUAL VS. AIRBUS FBW)\n\nREVISED ESTIMATED TIME OF DEPARTURE (ETD) IS DELAYED BY APPROX 2-3 HOURS. WE APOLOGIZE FOR THE INCONVENIENCE TO YOUR FLIGHT PLANNING.\n\nPREPARE YOUR REFRESHMENTS, DECIDE IF YOU ARE TEAM BOEING OR TEAM AIRBUS IN THE COMMENTS UPON ARRIVAL, AND STAND BY FOR TAXI.\n\nF) SURFACE\nG) FLIGHT LEVEL HIGH",
-    "published_relative": "5 months ago",
-    "published_date": "2026-05-30",
-    "url": "https://www.youtube.com/post/UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
-    "likes": "3",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-27T21:57:34.184824Z"
   },
   {
     "id": "Ugkxj8C8VIupNprjIoYOTSV_gMJDpzueqF-J",
@@ -283,32 +335,6 @@
     "scraped_at": "2026-10-26T12:31:48.334197Z"
   },
   {
-    "id": "UgkxbRQaJz_I0Hc7JUJ6_1YY-TKEFHzg_7M7",
-    "text": "You step into a cold-and-dark cockpit of an airliner you've never flown before. Instead of staring blankly at hundreds of switches or memorizing a 20-page checklist, what is the golden scanning rule used by real-world crews to power up the overhead panel logically?\n\n📺 Master the Flight Deck:\nStop hunting for switches one by one. Once you understand the systematic flow pattern shared across Boeing, Airbus, and regional jets, you can get any airliner powered up in under 2 minutes.\n\n\nWatch the full guide here: https://youtu.be/g5awgjo-KHQ",
-    "published_relative": "2 days ago",
-    "published_date": "2026-10-23",
-    "url": "https://www.youtube.com/post/UgkxbRQaJz_I0Hc7JUJ6_1YY-TKEFHzg_7M7",
-    "likes": "1",
-    "comments": "2",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-25T20:35:47.063258Z"
-  },
-  {
-    "id": "UgkxQ1Vl0oNoEwWlAQa_ZiPlh3L62jvxKCKT",
-    "text": "🛫 Simmer's Quick Check: You are climbing out of a busy airport and just passed the local Transition Altitude (TA). Your altimeter is currently set to the local QNH given by ATIS.\n\n​To ensure vertical separation from other aircraft operating at higher flight levels, what is your next immediate action on the barometric altimeter?\n\n​📺 Master the Flight Deck:\n\nEver wondered why flying on local QNH at high altitudes can lead to dangerous altimeter errors or airspace busts?\n\nWatch the full guide here: https://youtu.be/6nKqRSDbzyE",
-    "published_relative": "2 months ago",
-    "published_date": "2026-08-24",
-    "url": "https://www.youtube.com/post/UgkxQ1Vl0oNoEwWlAQa_ZiPlh3L62jvxKCKT",
-    "likes": "8",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-23T21:10:45.501394Z"
-  },
-  {
     "id": "UgkxWi4WrmbDMd6q7POyIxII1Ieq1mnH63Dk",
     "text": "🛫 Simmer's Quick Check: You are being vectored for an ILS approach on a 45° intercept angle at 3,000 ft. Your PFD shows the localizer needle starting to move inward, but the glideslope diamond is still pinned above center. Which autopilot mode sequence ensures a smooth, non-overshooting capture?\n\n📺 Master the Flight Deck:\nArming approach mode too early—or at an excessive intercept angle—can cause your flight director to violently S-turn or dive prematurely. Discover the standard airline-proven arming workflow in our glass cockpit deep dive.\nWatch the full guide here: https://youtu.be/Pj0q7eNcsdE",
     "published_relative": "13 days ago",
@@ -320,19 +346,6 @@
     "video_id": null,
     "poll": null,
     "scraped_at": "2026-10-22T21:20:05.580448Z"
-  },
-  {
-    "id": "Ugkx6kF4vT0iFAqN76ti63dP1xtLPjSNI6Ta",
-    "text": "🛫 Simmer's Quick Check: During engine start on a turboprop like the Daher TBM 930 or Pilatus PC-12, your ITT (Interstage Turbine Temperature) rapidly spikes toward the redline while Ng is still sluggish below 12%. What is your immediate memory item?\n\n📺 Master the Flight Deck:\nTurboprop turbine damage in flight simulation is costly if you run realism addons, but knowing how to recognize a hung or hot start within 3 seconds will save your engine every time.\nWatch the full guide here: https://www.youtube.com/playlist?list...",
-    "published_relative": "13 days ago",
-    "published_date": "2026-10-03",
-    "url": "https://www.youtube.com/post/Ugkx6kF4vT0iFAqN76ti63dP1xtLPjSNI6Ta",
-    "likes": "0",
-    "comments": "0",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-16T16:20:00.794676Z"
   },
   {
     "id": "Ugkx3F1Gj310_U0d0GSCTwh8JyZ0uFWTKlB1",
@@ -406,19 +419,6 @@
     "video_id": null,
     "poll": null,
     "scraped_at": "2026-10-11T04:55:14.272202Z"
-  },
-  {
-    "id": "UgkxUJF6JDdhZnWrfAF_34I1-v-LAz4vHsr0",
-    "text": "🛫 Simmer's Quick Check: You are flying a high-performance turboprop (such as the Daher TBM 930 or Pilatus PC-12) on short final. You are slightly floating over the touchdown zone and decide to pull your power lever back past the flight idle gate into the Beta / Ground Range while still airborne.\n\nWhat is the primary danger of this action?\n\n📺 Master the Flight Deck:\nTurboprop power levers don't behave like standard piston throttles! Discover how blade pitch governing works and how to manage your approach speeds smoothly without stalling over the numbers.\nWatch the full guide here: https://youtu.be/lxHzNhVdLAo",
-    "published_relative": "4 weeks ago",
-    "published_date": "2026-09-12",
-    "url": "https://www.youtube.com/post/UgkxUJF6JDdhZnWrfAF_34I1-v-LAz4vHsr0",
-    "likes": "4",
-    "comments": "2",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-10-10T05:05:38.885660Z"
   },
   {
     "id": "UgkxqfIcF5b3HwU4Iq-iuE-i47D0GPyCwnnR",
