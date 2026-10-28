@@ -1,7 +1,7 @@
 ---
 title: "\u2708\ufe0f Ready to Stop Guessing on the Radios? \"U\" is for UNICOM!"
 description: "\u2708\ufe0f Ready to Stop Guessing on the Radios? \"U\" is for UNICOM! Ever dropped through the clouds on a perfect flight, only to find another aircraft sitting right on"
-publishedAt: "2026-05-30"
+publishedAt: "2026-05-31"
 tags: ["community", "youtube"]
 draft: false
 ---
