@@ -1,7 +1,7 @@
 ---
 title: "\ud83d\udeeb Simmer's Quick Check: You are flying an instrument approach in IMC and cross 8"
 description: "\ud83d\udeeb Simmer's Quick Check: You are flying an instrument approach in IMC and cross 800 ft AGL. You notice your sink rate is 1,150 FPM, airspeed is 15 knots above Vr"
-publishedAt: "2026-09-10"
+publishedAt: "2026-08-30"
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -15,4 +15,4 @@ A butter landing starts miles back on the final approach track! Learn the exact 
 Watch the full guide here: https://youtu.be/D_XePhC33w0
 
 Original post: https://www.youtube.com/post/UgkxqfIcF5b3HwU4Iq-iuE-i47D0GPyCwnnR
-Likes: 6 | Comments: 4
+Likes: 10 | Comments: 4
