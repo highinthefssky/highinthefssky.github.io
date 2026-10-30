@@ -1,7 +1,7 @@
 ---
 title: "\ud83d\udeeb Simmer's Quick Check: You are being vectored for an ILS approach on a 45\u00b0 inte"
 description: "\ud83d\udeeb Simmer's Quick Check: You are being vectored for an ILS approach on a 45\u00b0 intercept angle at 3,000 ft. Your PFD shows the localizer needle starting to move in"
-publishedAt: "2026-10-09"
+publishedAt: "2026-10-16"
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -13,4 +13,4 @@ Arming approach mode too early—or at an excessive intercept angle—can cause 
 Watch the full guide here: https://youtu.be/Pj0q7eNcsdE
 
 Original post: https://www.youtube.com/post/UgkxWi4WrmbDMd6q7POyIxII1Ieq1mnH63Dk
-Likes: 0 | Comments: 2
+Likes: 1 | Comments: 2
