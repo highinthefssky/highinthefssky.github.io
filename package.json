@@ -16,7 +16,7 @@
     "fetch-all": "npm run fetch-videos && npm run fetch-controllers"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.11",
+    "@astrojs/check": "^0.9.12",
     "@astrojs/markdown-remark": "^7.3.4",
     "@astrojs/rss": "^4.0.19",
     "astro": "^7.4.2",
