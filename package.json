@@ -21,7 +21,7 @@
     "@astrojs/rss": "^4.0.19",
     "astro": "^7.4.2",
     "google-auth-library": "^11.3.1",
-    "linkifyjs": "^4.3.3",
+    "linkifyjs": "^4.4.0",
     "minisearch": "^7.2.0",
     "rehype-sanitize": "^6.0.0",
     "typescript": "^6.0.3",
