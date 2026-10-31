@@ -1,7 +1,7 @@
 ---
 title: "\ud83d\udea8 TONIGHT: Testing MSFS City Update 15 & the Piper M600!"
 description: "\ud83d\udea8 TONIGHT: Testing MSFS City Update 15 & the Piper M600!  The pilot is \"incapacitated\" but the aircraft has everything under control! \ud83d\udee9\ufe0f\ud83e\udd16  Take a close look at"
-publishedAt: "2026-07-02"
+publishedAt: "2026-07-03"
 tags: ["community", "youtube"]
 draft: false
 ---
