@@ -1,7 +1,7 @@
 ---
 title: "Is 1:1 real-world parity a 'must-have' for you, or is it just background noise?"
 description: "Is 1:1 real-world parity a 'must-have' for you, or is it just background noise? \u2708\ufe0f For the hardcore purists, PSXT is officially the only path forward after Apri"
-publishedAt: "2026-05-09"
+publishedAt: "2026-06-03"
 tags: ["community", "youtube"]
 draft: false
 ---
