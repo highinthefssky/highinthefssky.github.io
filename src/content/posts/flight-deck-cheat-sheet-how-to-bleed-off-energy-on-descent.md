@@ -1,7 +1,7 @@
 ---
 title: "\u2708\ufe0f Flight Deck Cheat Sheet: How to Bleed Off Energy on Descent"
 description: "\u2708\ufe0f Flight Deck Cheat Sheet: How to Bleed Off Energy on Descent  Ever find yourself screaming down the glidepath at 250 knots with idle thrust and speedbrakes de"
-publishedAt: "2026-10-30"
+publishedAt: "2026-10-31"
 tags: ["community", "youtube"]
 draft: false
 ---
@@ -21,7 +21,7 @@ Dirty Before Steep: Extending the first stage of flaps or gear creates far more 
 📺 Watch the full breakdown on flight model drag changes and descent handling: https://youtu.be/Aav-AAqWFCA
 
 Original post: https://www.youtube.com/post/UgkxK5d7BiNvQqpA-eX6WNmSEI4QHew1QfOK
-Likes: 2 | Comments: 0
+Likes: 3 | Comments: 0
 
 Images:
 ![](https://yt3.ggpht.com/hqaWzTiaBmsThZEQu6JrlmKJ8_haNpY7K3eWIH1BSK8KOwAqL7BD61bwzqCM1jMCh5yt8StmTCrr=s1280)
