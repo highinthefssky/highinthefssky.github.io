@@ -1,0 +1,33 @@
+{
+  "videoId": "qBQiQo9qmpU",
+  "title": "MOZA AB6 Airbus Stick & MTQ Throttle MSFS Setup Guide (A320 Profile)",
+  "description": "Setting up realistic Airbus airliner controls in Microsoft Flight Simulator requires getting every axis, detent, and switch configured just right. With the release of Sim Update 7, the new Lufthansa liveries, and the MOZA Airbus Sidestick grip, it is time to build the ultimate airliner control layout using the MOZA Flight AB6 base and the MTQ Throttle quadrant.\n\nIn this comprehensive, step-by-step setup guide, we walk through configuring the MOZA AB6 Airbus Sidestick and MTQ Throttle from scratch for the Microsoft / iniBuilds A320neo (and compatible Airbus airliners) in MSFS 2024 and 2020. We tackle common simulator binding headaches—including MSFS profile renaming quirks, calibrating reverse thrust detents, and setting up the MTQ speedbrake in mixed mode so analog spoiler extension and digital arming clicks work seamlessly. We also cover how to configure nosewheel steering, autopilot disconnects, rotary encoders for heading/altitude, and how to map rudder control to base sliders if you do not have dedicated rudder pedals.\n\nAvoid the trial-and-error, bypass the MSFS binding bugs, and download my custom profiles to get your flight deck fully operational in minutes.\n\n📥 Download my custom MSFS MOZA AB6 & MTQ Control Profiles: https://highintheflightsimsky.nl/controllers/\nREMARK: both separate and combined profiles are available\n\nIf this configuration guide helps you get the most out of your MOZA Flight gear, please give the video a thumbs up and subscribe for more in-depth flight simulation hardware tutorials. Drop any questions about your MOZA Cockpit curves, button mappings, or detent settings in the comments below!\n\n📖 Chapters\n00:00 Intro & Hardware Overview\n00:31 MSFS Device Detection & Profile Naming Setup\n01:34 Fixing Profile Duplication Quirks in MSFS\n03:49 Primary Flight Controls: Aileron & Elevator Axis Mapping\n05:36 AP Disconnect, PTT & Nosewheel Steering Setup\n08:00 Digital Brakes & Hat Switch Cockpit Camera Views\n11:01 Gear Toggles, Parking Brakes & Lighting Controls\n14:34 Base Sliders Setup: Rudder Axis & Elevator Trim\n17:02 MOZA Cockpit Software: Detents, Reverse Thrust & Mixed Mode\n18:51 MTQ Dual Throttle Axis Calibration & Inversion\n20:31 Speedbrake / Spoiler Axis & Arming Click Binding\n22:21 Flaps Axis Configuration & Verification\n22:56 Autopilot Panel: Master, Heading, Alt & Nav Binds\n27:16 Rotary Encoders: Altitude & Heading Bug Step Controls\n29:00 Autobrake Dial Multi-Position Configuration\n31:28 Engine Master Switches & Guarded APU Toggle\n33:13 Throttle Parking Brake Lever & Final Switches\n35:15 How to Export & Import Custom MSFS Control Profiles\n35:49 Force Feedback (FFB) Notes & Outro\n\n🔗 Links:\nMOZA Flight Ecosystem: https://eu.mozaracing.com/?ref=highintheflightsimsky\n\n🔔 Subscribe\nIf you like this video please consider subscribing to my channel: https://bit.ly/34eNWDP\n\n#MSFS2024 #FlightSimulator #MozaFlight #AirbusA320 #ForceFeedback #AviationHardware #FlightSim",
+  "thumbnail": "https://i.ytimg.com/vi/qBQiQo9qmpU/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/qBQiQo9qmpU/mqdefault.jpg",
+  "publishedAt": "2026-10-31T21:00:03.000Z",
+  "duration": 2178,
+  "viewCount": 218,
+  "tags": [
+    "Moza AB6",
+    "Moza Flight AB6",
+    "Moza Airbus stick",
+    "Moza MTQ throttle",
+    "MSFS 2024",
+    "Microsoft Flight Simulator 2024",
+    "MSFS 2020",
+    "A320 setup MSFS",
+    "Moza Cockpit setup",
+    "MSFS controller profile",
+    "MSFS 2024 joystick setup",
+    "Moza flight stick setup",
+    "Airbus sidestick MSFS",
+    "reverse thrust setup MSFS",
+    "MSFS throttle calibration",
+    "flight simulation hardware",
+    "iniBuilds A320 setup",
+    "highintheflightsimsky",
+    "force feedback flight stick",
+    "MSFS control bindings"
+  ],
+  "featured": false
+}
