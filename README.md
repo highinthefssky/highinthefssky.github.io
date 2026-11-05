@@ -8,7 +8,7 @@ A beautiful, performant static site built with Astro for showcasing YouTube vide
 - **Featured Carousel**: Eye-catching carousel of featured videos on the homepage
 - **🔴 Live Stream Detection**: Automatic "LIVE NOW" banner when streaming on YouTube
 - **🎮 Controller Configs**: Downloadable MSFS 2024 controller configuration files
-- **🎙️ SimVoice Packs**: Downloadable SimVoice Copilot Community Packs with import guidance
+- **🎙️ SimVoice Copilot**: Downloadable SimVoice Copilot Community Packs with import guidance
 - **Community Posts**: Markdown-based blog for community updates and discussions
 - **Full-Text Search**: Fast client-side search across video titles and descriptions
 - **Tag Filtering**: Filter content by tags for better discoverability
@@ -160,6 +160,9 @@ Pack metadata lives in `src/content/simvoice-packs/`, while downloadable
 `.svcpack` files belong in `public/downloads/simvoice-community-packs/`. Each
 metadata entry supplies the filename, compatibility details, included content,
 and local download path shown on `/simvoice-packs/`.
+
+The SimVoice Copilot category includes the Cessna 172 G1000 and A32NX-FBW-Copilot
+packs. The A32NX pack requires SimVoice Copilot 1.1.20.0 or newer.
 
 Keep the file version in the metadata and filename synchronized. The page follows
 the [official Community Packs import workflow](https://simvoicecopilot.com/help/manual/en#community-packs):

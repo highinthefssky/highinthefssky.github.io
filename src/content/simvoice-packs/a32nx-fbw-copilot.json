@@ -1,0 +1,20 @@
+{
+  "filename": "A32NX-FBW-Copilot-1.0.0.svcpack",
+  "name": "A32NX-FBW-Copilot",
+  "description": "Copilot voice profile with advanced actions, command groups, and call-outs for the FlyByWire A32NX.",
+  "author": "High in the flightsim sky in cooperation with SimVoice Copilot",
+  "version": "1.0.0",
+  "minimumSvcVersion": "1.1.20.0",
+  "language": "English (United States)",
+  "simulatorVersion": "MSFS 2020 / MSFS 2024",
+  "aircraftScope": "FlyByWire A32NX",
+  "downloadPath": "/downloads/simvoice-community-packs/A32NX-FBW-Copilot-1.0.0.svcpack",
+  "includedContent": [
+    "Voice profile",
+    "Advanced Actions",
+    "Command Groups",
+    "Keyboard Commands",
+    "SimVar Call-outs"
+  ],
+  "tags": ["Airbus A320", "A32NX", "FlyByWire", "copilot", "MSFS 2020", "MSFS 2024"]
+}
