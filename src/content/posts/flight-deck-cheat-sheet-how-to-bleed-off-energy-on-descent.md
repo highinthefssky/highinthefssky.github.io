@@ -1,7 +1,7 @@
 ---
 title: "\u2708\ufe0f Flight Deck Cheat Sheet: How to Bleed Off Energy on Descent"
 description: "\u2708\ufe0f Flight Deck Cheat Sheet: How to Bleed Off Energy on Descent  Ever find yourself screaming down the glidepath at 250 knots with idle thrust and speedbrakes de"
-publishedAt: "2026-10-30"
+publishedAt: "2026-10-31"
 tags: ["community", "youtube"]
 draft: false
 ---
