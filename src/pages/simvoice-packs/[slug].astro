@@ -1,0 +1,186 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const packs = await getCollection('simVoicePacks');
+  return Promise.all(packs.filter(({ data }) => data.documentation).map(async (pack) => {
+    const reference = pack.data.documentation;
+    if (!reference) {
+      throw new Error(`Missing documentation reference for pack "${pack.id}".`);
+    }
+    const documentation = await getEntry(reference);
+    if (!documentation) {
+      throw new Error(`Documentation "${reference.id}" not found for pack "${pack.id}".`);
+    }
+    if (documentation.data.packVersion !== pack.data.version) {
+      throw new Error(`Documentation version does not match pack "${pack.id}" (${pack.data.version}).`);
+    }
+    return {
+      params: { slug: pack.id },
+      props: { pack, documentation },
+    };
+  }));
+}
+
+const { pack, documentation } = Astro.props;
+const { Content } = await render(documentation);
+const { title, description, updatedAt } = documentation.data;
+const updatedDate = new Intl.DateTimeFormat('en-GB', {
+  day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
+}).format(updatedAt);
+const pageUrl = new URL(`/simvoice-packs/${pack.id}/`, Astro.site).href;
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: title,
+    description,
+    dateModified: updatedAt.toISOString(),
+    mainEntityOfPage: pageUrl,
+    version: documentation.data.packVersion,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).href },
+      { '@type': 'ListItem', position: 2, name: 'SimVoice Copilot Community Packs', item: new URL('/simvoice-packs/', Astro.site).href },
+      { '@type': 'ListItem', position: 3, name: title, item: pageUrl },
+    ],
+  },
+];
+---
+
+<BaseLayout title={title} description={description} ogType="article" structuredData={structuredData}>
+  <article class="guide-page">
+    <header class="guide-header">
+      <a href="/simvoice-packs/">Back to Community Packs</a>
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <dl class="guide-meta">
+        <div><dt>Pack version</dt><dd>{pack.data.version}</dd></div>
+        <div><dt>Aircraft</dt><dd>{pack.data.aircraftScope}</dd></div>
+        <div><dt>Updated</dt><dd><time datetime={updatedAt.toISOString()}>{updatedDate}</time></dd></div>
+      </dl>
+      <div class="guide-actions">
+        <a class="download-button" href={pack.data.downloadPath} download={pack.data.filename} data-pack-download>
+          Download {pack.data.name}
+        </a>
+        <a href="/simvoice-packs/#import-instructions">How to import</a>
+        <a href="#quick-start">Quick start</a>
+        <a href="#voice-command-reference">Voice command reference</a>
+      </div>
+    </header>
+
+    <aside class="guide-warning" aria-label="Important configuration limitations">
+      <h2>Before using this pack</h2>
+      <p>
+        Simulator use only. Simulator execution and speech recognition have not been tested.
+        Radar ON/OFF use the same setting, slide announcements appear reversed, and the initial-climb
+        procedure toggles both packs. Some procedure steps also have inconsistent action routing.
+        Always verify cockpit indications.
+      </p>
+      <a href="#troubleshooting">Read troubleshooting guidance</a>
+    </aside>
+
+    <div class="guide-content">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
+
+<script>
+  document.querySelectorAll('[data-pack-download]').forEach((link) => {
+    link.addEventListener('click', () => {
+      window.dispatchEvent(new CustomEvent('site-analytics-event', {
+        detail: 'Community Pack Download Started',
+      }));
+    });
+  });
+
+  document.querySelectorAll('.guide-content table').forEach((table) => {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'table-scroll';
+    wrapper.tabIndex = 0;
+    wrapper.setAttribute('role', 'region');
+    wrapper.setAttribute('aria-label', 'Scrollable reference table');
+    table.before(wrapper);
+    wrapper.append(table);
+  });
+</script>
+
+<style>
+  .guide-page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 5rem;
+    overflow-wrap: anywhere;
+  }
+
+  .guide-header h1 { margin-top: 1.5rem; }
+  .guide-header > p, .guide-warning p { line-height: 1.7; }
+  .guide-meta, .guide-actions { display: flex; flex-wrap: wrap; gap: 1rem 2rem; }
+  .guide-meta { margin: 1.5rem 0; }
+  .guide-meta dt { color: var(--text-secondary); font-size: 0.85rem; }
+  .guide-meta dd { margin: 0.25rem 0 0; font-weight: 600; }
+  .guide-actions { align-items: center; }
+  .download-button {
+    padding: 0.75rem 1rem;
+    color: white;
+    background: var(--color-primary);
+    border-radius: 0.55rem;
+    font-weight: 700;
+  }
+  .download-button:hover { filter: brightness(1.08); }
+  .guide-warning {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-accent);
+    border-radius: 0.85rem;
+  }
+  .guide-warning h2 { font-size: 1.3rem; }
+  .guide-content { min-width: 0; line-height: 1.75; }
+  .guide-content :global(h2) { margin-top: 2.5rem; scroll-margin-top: 6rem; }
+  .guide-content :global(h3) { margin-top: 1.75rem; scroll-margin-top: 6rem; font-size: 1.25rem; }
+  .guide-content :global(p) { margin: 1rem 0; }
+  .guide-content :global(ul) { list-style: disc; padding-left: 1.5rem; margin: 1rem 0; }
+  .guide-content :global(li) { margin: 0.5rem 0; }
+  .guide-content :global(code) {
+    background: var(--bg-input);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.25rem;
+    font-size: 0.85em;
+  }
+  .guide-content :global(.table-scroll) { overflow-x: auto; margin: 1.25rem 0; }
+  .guide-content :global(table) {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .guide-content :global(.table-scroll table) { display: table; margin: 0; }
+  .guide-content :global(th), .guide-content :global(td) {
+    padding: 0.75rem;
+    border: 1px solid var(--border-default);
+    text-align: left;
+    vertical-align: top;
+    min-width: 160px;
+  }
+  .guide-content :global(th) { background: var(--bg-panel); font-weight: 700; }
+  .guide-content :global(a:hover) { text-decoration: underline; }
+  .guide-content :global(.table-scroll:focus-visible), .guide-page a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  @media (max-width: 760px) {
+    .guide-page { padding: 1.5rem 1rem 3rem; }
+    .guide-header h1 { font-size: 1.8rem; }
+    .guide-warning { padding: 1rem; }
+    .guide-content :global(h2) { font-size: 1.5rem; }
+  }
+</style>

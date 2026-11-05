@@ -59,7 +59,7 @@ const structuredData = {
       </div>
 
       <div class="packs-grid">
-        {packs.map(({ data: pack }) => (
+        {packs.map(({ id, data: pack }) => (
           <article class="pack-card" data-pack-filename={pack.filename}>
             <div class="pack-card-top">
               <div class="pack-icon" aria-hidden="true">🎙️</div>
@@ -110,6 +110,11 @@ const structuredData = {
               >
                 Download {pack.name}
               </a>
+              {pack.documentation && (
+                <a href={`/simvoice-packs/${id}/`} class="secondary-link">
+                  Read documentation
+                </a>
+              )}
               {pack.videoUrl && (
                 <a href={pack.videoUrl} target="_blank" rel="noopener noreferrer" class="secondary-link">
                   Watch demonstration

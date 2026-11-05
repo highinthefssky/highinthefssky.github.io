@@ -1,5 +1,5 @@
 import { glob } from 'astro/loaders';
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, reference, z } from 'astro:content';
 
 // Video collection schema
 const videoCollection = defineCollection({
@@ -117,8 +117,19 @@ const simVoicePackCollection = defineCollection({
     aircraftScope: z.string().describe('Aircraft supported by the pack'),
     downloadPath: z.string().startsWith('/').describe('Local path to the .svcpack download'),
     videoUrl: z.string().url().optional().describe('Optional demonstration video'),
+    documentation: reference('simVoicePackDocs').optional().describe('Optional pack documentation'),
     includedContent: z.array(z.string()).min(1).describe('Human-readable list of included content'),
     tags: z.array(z.string()).describe('Searchable pack tags'),
+  }),
+});
+
+const simVoicePackDocsCollection = defineCollection({
+  loader: glob({ base: './src/content/simvoice-packs', pattern: '**/*.md' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    updatedAt: z.coerce.date(),
+    packVersion: z.string().describe('Pack version covered by the documentation'),
   }),
 });
 
@@ -131,4 +142,5 @@ export const collections = {
   tracks: trackCollection,
   mozaProfiles: mozaProfileCollection,
   simVoicePacks: simVoicePackCollection,
+  simVoicePackDocs: simVoicePackDocsCollection,
 };

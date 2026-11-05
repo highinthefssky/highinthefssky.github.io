@@ -10,6 +10,7 @@ export async function GET() {
   const tracks = await getCollection('tracks');
   const controllers = await getCollection('controllers');
   const presets = await getCollection('mozaProfiles');
+  const packs = await getCollection('simVoicePacks');
 
   const staticPages = [
     { loc: '/', changefreq: 'daily', priority: '1.0' },
@@ -66,6 +67,11 @@ export async function GET() {
     ...staticPages,
     ...controllers.map(({ id }) => ({ loc: `/controllers/download/xml/${id}/`, changefreq: 'monthly', priority: '0.6' })),
     ...presets.map(({ id }) => ({ loc: `/controllers/download/preset/${id}/`, changefreq: 'monthly', priority: '0.6' })),
+    ...packs.filter(({ data }) => data.documentation).map(({ id }) => ({
+      loc: `/simvoice-packs/${id}/`,
+      changefreq: 'monthly',
+      priority: '0.7',
+    })),
     ...videoPages,
     ...videoPaginationPages,
     ...postPages,

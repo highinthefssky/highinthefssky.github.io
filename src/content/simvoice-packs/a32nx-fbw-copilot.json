@@ -9,6 +9,7 @@
   "simulatorVersion": "MSFS 2020 / MSFS 2024",
   "aircraftScope": "FlyByWire A32NX",
   "downloadPath": "/downloads/simvoice-community-packs/A32NX-FBW-Copilot-1.0.0.svcpack",
+  "documentation": "a32nx-fbw-copilot-documentation",
   "includedContent": [
     "Voice profile",
     "Advanced Actions",
