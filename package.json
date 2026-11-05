@@ -16,12 +16,12 @@
     "fetch-all": "npm run fetch-videos && npm run fetch-controllers"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.11",
+    "@astrojs/check": "^0.9.12",
     "@astrojs/markdown-remark": "^7.3.4",
     "@astrojs/rss": "^4.0.19",
     "astro": "^7.4.2",
     "google-auth-library": "^11.3.1",
-    "linkifyjs": "^4.3.3",
+    "linkifyjs": "^4.4.0",
     "minisearch": "^7.2.0",
     "rehype-sanitize": "^6.0.0",
     "typescript": "^6.0.3",
@@ -32,7 +32,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "@types/node": "^26.6.5",
     "tailwindcss": "^4.3.3",
-    "wrangler": "^4.152.0"
+    "wrangler": "^4.153.0"
   },
   "overrides": {
     "esbuild": "0.28.1",

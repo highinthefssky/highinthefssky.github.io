@@ -129,6 +129,19 @@ Run a fresh `npm run build` before
 archive coverage, description-only matches, lazy loading, favorites, retry,
 mobile reflow, and HTML/index size budgets.
 
+Search interaction tests serve a fixed search-index fixture so new YouTube uploads
+cannot change their expected result counts. Archive coverage, payload budgets,
+and tag integration still check the real build-generated content.
+
+### Content Automation Reliability
+
+The full video refresh runs on the first Monday of each month at 10:00 UTC,
+or manually. Its schedule checks the first seven days and gates the refresh on
+Monday: cron day-of-month and day-of-week restrictions otherwise use OR, not AND.
+Content workflows fail on unsuccessful deployment-trigger HTTP responses and
+retry transient HTTP errors instead of silently reporting a successful trigger.
+Superseded Pages runs are intentionally cancelled so only the newest build deploys.
+
 ### Controller Matching and Downloads
 
 The wizard ranks the full video collection at build time. Each controller,

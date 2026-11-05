@@ -5,6 +5,22 @@ import { buildVideoIndex, findSearchVideos, videoSearchOptions } from '../../src
 import { readFileSync, readdirSync } from 'node:fs';
 import { gzipSync } from 'node:zlib';
 
+const searchVideos = Array.from({ length: 50 }, (_, position) => ({
+  id: position === 0 ? 'k0i_g-8ibws' : `search-fixture-${position}`,
+  videoId: position === 0 ? 'K0I_G-8Ibws' : `fixture-${position}`,
+  title: `MSFS tutorial ${position + 1}`,
+  description: position === 0 ? 'An aspheric lens demonstration.' : 'Flight simulator tutorial.',
+  thumbnail: 'https://i.ytimg.com/vi/K0I_G-8Ibws/mqdefault.jpg',
+  tags: ['msfs2024', 'microsoft-flight-simulator'],
+  duration: 60,
+  publishedAt: new Date(Date.UTC(2026, 0, 30 - position)).toISOString(),
+  viewCount: 1,
+}));
+const searchFixture = {
+  index: buildVideoIndex(searchVideos).toJSON(),
+  videos: searchVideos.map(({ description, ...video }) => video),
+};
+
 test('video pagination preserves existing archive boundaries and routes', () => {
   expect(VIDEO_PAGE_SIZE).toBe(9);
   expect(videoPageUrl(1)).toBe('/videos/');
@@ -72,6 +88,7 @@ test('archive pagination works without JavaScript and has no duplicate page-one 
 });
 
 test('search loads lazily, finds description-only terms, and preserves favorites and routes', async ({ page, context }) => {
+  await context.route('**/videos/search-index.json', (route) => route.fulfill({ json: searchFixture }));
   const requests: string[] = [];
   context.on('request', (request) => requests.push(request.url()));
   await page.goto('/videos/');
@@ -101,7 +118,8 @@ test('search loads lazily, finds description-only terms, and preserves favorites
   await expect(page.locator('#search-input')).toBeFocused();
 });
 
-test('search result pages keep the DOM bounded and ignore superseded queries', async ({ page }) => {
+test('search result pages keep the DOM bounded and ignore superseded queries', async ({ page, context }) => {
+  await context.route('**/videos/search-index.json', (route) => route.fulfill({ json: searchFixture }));
   await page.goto('/videos/');
   await page.getByLabel('Search videos', { exact: true }).fill('msfs');
   await expect(page.locator('#videos-grid')).toHaveAttribute('aria-busy', 'false');
@@ -144,7 +162,7 @@ test('failed index request offers retry and keeps static navigation available', 
   await context.route('**/videos/search-index.json', async (route) => {
     attempts++;
     if (attempts === 1) await route.fulfill({ status: 503, body: 'Unavailable' });
-    else await route.continue();
+    else await route.fulfill({ json: searchFixture });
   });
   await page.goto('/videos/');
   await page.getByLabel('Search videos', { exact: true }).fill('description:aspheric');
@@ -157,7 +175,8 @@ test('failed index request offers retry and keeps static navigation available', 
   expect(attempts).toBe(2);
 });
 
-test('archive controls and dynamic cards reflow at narrow mobile widths', async ({ page }) => {
+test('archive controls and dynamic cards reflow at narrow mobile widths', async ({ page, context }) => {
+  await context.route('**/videos/search-index.json', (route) => route.fulfill({ json: searchFixture }));
   for (const width of [320, 390]) {
     await page.setViewportSize({ width, height: 844 });
     await page.goto('/videos/');

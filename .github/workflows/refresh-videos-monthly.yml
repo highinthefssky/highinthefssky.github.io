@@ -3,7 +3,7 @@ name: Refresh Videos Monthly
 on:
   schedule:
     # Run on the first Monday of each month at 10:00 UTC (after quota reset, avoids daily overlap)
-    - cron: '0 10 1-7 * 1'
+    - cron: '0 10 1-7 * *'
   workflow_dispatch:
 
 concurrency:
@@ -11,7 +11,26 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  check-schedule:
+    runs-on: ubuntu-latest
+    permissions: {}
+    outputs:
+      should-run: ${{ steps.check.outputs.should-run }}
+    steps:
+      - name: Check for first Monday or manual run
+        id: check
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [[ "$EVENT_NAME" != "schedule" || "$(date -u +%u)" == "1" ]]; then
+            echo "should-run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should-run=false" >> "$GITHUB_OUTPUT"
+          fi
+
   refresh-videos:
+    needs: check-schedule
+    if: needs.check-schedule.outputs.should-run == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -85,7 +104,7 @@ jobs:
       - name: Trigger deploy
         if: steps.check-changes.outputs.changed == 'true'
         run: |
-          curl -X POST \
+          curl --fail-with-body --show-error --retry 3 -X POST \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/${{ github.repository }}/dispatches \
