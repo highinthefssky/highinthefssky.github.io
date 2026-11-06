@@ -1,0 +1,26 @@
+{
+  "videoId": "SvQhEhwvVgQ",
+  "title": "I automated the FlyByWire A320 Copilot in MSFS using voice commands! (Full Guide & Pack)",
+  "description": "Tired of hunting for tiny knobs or softkeys with a mouse while managing pre-flights or engine starts in the FlyByWire A320? In this video, we build and test a complete hands-free virtual co-pilot workflow using SimVoice Copilot v1.1.16 https://simvoicecopilot.com/hitfs (Use code: JVELDH10) and advanced simulator actions.\n\nUnlike basic macros, we leverage L-vars, indexed sim variables, and smart grouping to execute complex multi-step flows—from initial power-up and adirs alignment to pushback, takeoff, and landing procedures—completely hands-free in Microsoft Flight Simulator!\n\n🎟️ EXCLUSIVE 10% DISCOUNT details:\n- 10% off Premium Monthly (first billing cycle)\n- 10% off Premium Lifetime\n(Note: Limited creator promotion valid for the first 100 redemptions. Cannot be combined with other offers.)\n\n📥 download the A320 FBW community pack:\nDownload the exact .SVCpack profile demonstrated in this video via the website link below:\nhttps://highintheflightsimsky.nl/simvoice-packs/\n\nAutomate your FlyByWire A320 cockpit with a hands-free virtual co-pilot. Follow this guide to configure voice commands for MSFS.\n\nManaging complex pre-flights, engine starts, and landing procedures in the FlyByWire A320 can be tedious when using only a mouse. This tutorial demonstrates how to implement a hands-free virtual co-pilot using SimVoice Copilot, allowing you to execute multi-step flows and simulator actions through simple spoken commands.\n\nWe walk through the setup of L-vars and indexed sim variables to build a professional-grade workflow. By importing our custom community pack, you can achieve a fully automated cockpit experience in Microsoft Flight Simulator. Whether you are aligning ADIRS or performing takeoff sequences, this setup minimizes manual clicking and enhances immersion for every flight.\n\nSubscribe for weekly flight simulation tutorials and aircraft deep-dives. What automated command group should we build next: an emergency procedure flow or a descent profile? Let us know in the comments below.\n\n⏱️ chapters:\n00:00 Introduction & FBW A320 Voice Co-Pilot Overview\n01:16 Exploring Voice Commands & Advanced Actions Setup\n05:54 Using the AI Command Builder & Grouping Actions\n09:12 Demo: Pushback & Engine Start Flow in Action\n10:02 Demo: Prepare for Taxi & Config Checks\n11:57 Demo: Takeoff & Initial Climb Procedures\n13:42 Demo: Landing & Post-Flight Parking Procedures\n17:03 How to Import & Activate Community Packs in SimVoice Copilot\n\n💬 community question:\nWhat automated command group should we build and export next? An emergency procedure flow or an automated descent profile? Drop your vote in the comments below!\n\n✈️ about this channel:\nHigh in the FlightSim Sky delivers in-depth flight simulation guides, avionics breakdowns, VR flight setups, and hardware reviews across Microsoft Flight Simulator. \n\nSubscribe for weekly tutorials, aircraft deep-dives, and flight procedures:\nhttps://bit.ly/34eNWDP\nJoin our Discord: https://discord.gg/J3tZyhceUM",
+  "thumbnail": "https://i.ytimg.com/vi/SvQhEhwvVgQ/sddefault.jpg",
+  "thumbnailMedium": "https://i.ytimg.com/vi/SvQhEhwvVgQ/mqdefault.jpg",
+  "publishedAt": "2026-11-05T21:03:20.000Z",
+  "duration": 1120,
+  "viewCount": 242,
+  "tags": [
+    "Microsoft Flight Simulator",
+    "MSFS 2024",
+    "FlyByWire A320",
+    "FBW A320",
+    "SimVoice Copilot",
+    "voice commands",
+    "flight sim automation",
+    "virtual co-pilot",
+    "Airbus A320 tutorial",
+    "flight simulation",
+    "MSFS guide",
+    "PC flight sim",
+    "sim automation"
+  ],
+  "featured": false
+}
