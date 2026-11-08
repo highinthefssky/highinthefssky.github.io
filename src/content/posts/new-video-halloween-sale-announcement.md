@@ -1,7 +1,7 @@
 ---
 title: "\ud83d\ude81 NEW VIDEO + HALLOWEEN SALE ANNOUNCEMENT! \ud83c\udf83"
 description: "\ud83d\ude81 NEW VIDEO + HALLOWEEN SALE ANNOUNCEMENT! \ud83c\udf83  I took the incredible Mi-2 Hoplite by Digital Aeronautics out for a spin in full VR using the Pimax Crystal Light!"
-publishedAt: "2026-10-30"
+publishedAt: "2026-10-29"
 tags: ["community", "youtube"]
 draft: false
 ---
