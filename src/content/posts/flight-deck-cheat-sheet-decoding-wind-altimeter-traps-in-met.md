@@ -21,7 +21,7 @@ Altimeter Settings (A2992 vs Q1013): In North America, pressure is given in inch
 📺 Watch the full breakdown to avoid critical approach mistakes: https://youtu.be/Sb4PHX2yQ2Q
 
 Original post: https://www.youtube.com/post/UgkxAdgnKiL2nvj8NU3ig4mjHMwArx-HoZB3
-Likes: 1 | Comments: 1
+Likes: 2 | Comments: 1
 
 Images:
 ![](https://yt3.ggpht.com/RWzaWK85xc64rhUczE2ejQQQB8iFdQ30To1Z6eAhy6qeSAoF7T9p8M2qP0xA451EL9tDJRstdJrZxg=s1280)

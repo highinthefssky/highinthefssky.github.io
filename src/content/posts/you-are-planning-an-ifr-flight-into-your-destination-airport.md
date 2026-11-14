@@ -1,7 +1,7 @@
 ---
 title: "You are planning an IFR flight into your destination airport and spot this line"
 description: "You are planning an IFR flight into your destination airport and spot this line in the briefing package:Q) ... /QMRLC/ ... A) EGLL ... E) RWY 09R/27L CLSD DUE W"
-publishedAt: "2026-11-06"
+publishedAt: "2026-11-07"
 tags: ["community", "youtube"]
 draft: false
 ---
