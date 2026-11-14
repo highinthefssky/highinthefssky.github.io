@@ -1,7 +1,7 @@
 ---
 title: "\ud83d\udeeb Simmer's Quick Check: You are on final approach in a strong left crosswind (27"
 description: "\ud83d\udeeb Simmer's Quick Check: You are on final approach in a strong left crosswind (270 degrees at 18 knots onto Runway 36). You are flying the Wing-Low (Sideslip) me"
-publishedAt: "2026-10-12"
+publishedAt: "2026-10-15"
 tags: ["community", "youtube"]
 draft: false
 ---
