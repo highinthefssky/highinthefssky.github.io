@@ -1,0 +1,253 @@
+---
+const resources = [
+  {
+    title: 'Controller Profiles',
+    description: 'Find a setup for your hardware.',
+    action: 'Browse profiles',
+    href: '/controllers',
+    icon: 'M7 7h10a4 4 0 0 1 4 4v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3a4 4 0 0 1 4-4Z M7 10v5 M5 13h4 M15 11h.01 M18 14h.01',
+  },
+  {
+    title: 'Community Folder Troubleshooter',
+    description: 'Diagnose missing add-ons and folder issues.',
+    action: 'Start troubleshooting',
+    href: '/tools/community-folder-troubleshooter',
+    icon: 'M3 7V5h6l2 2h10v13H3Z M9 13h6 M12 10v6',
+  },
+  {
+    title: 'SimVoice Copilot',
+    description: 'Explore downloadable community voice packs.',
+    action: 'Explore packs',
+    href: '/simvoice-packs',
+    icon: 'M4 14v-3a8 8 0 0 1 16 0v3 M5 11h2v7H5a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2Z M19 11h-2v7h2a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2Z M19 18v2h-7',
+  },
+  {
+    title: 'Community2024 Compatibility',
+    description: 'Check installer support and migration guidance.',
+    action: 'Check compatibility',
+    href: '/community2024',
+    icon: 'M7 3h10a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z M8 12l3 3 5-6',
+  },
+  {
+    title: 'MSFS History',
+    description: 'Explore four decades of flight simulation.',
+    action: 'Explore the timeline',
+    href: '/msfs-history/',
+    icon: 'M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z M12 7v5l3 2',
+  },
+];
+---
+
+<section class="homepage-resources" aria-labelledby="homepage-resources-title">
+  <div class="resources-heading">
+    <p class="resources-eyebrow">Your flight sim toolkit</p>
+    <h2 id="homepage-resources-title">Tools &amp; Resources</h2>
+    <p class="resources-intro">Practical help for your next flight, all in one place.</p>
+  </div>
+  <div
+    class="resource-cards"
+    role="region"
+    aria-label="Tools and resources, scroll horizontally on mobile"
+    tabindex="0"
+  >
+    {resources.map((resource) => (
+      <a class="resource-card" href={resource.href}>
+        <span class="resource-icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d={resource.icon} />
+          </svg>
+        </span>
+        <h3>{resource.title}</h3>
+        <p>{resource.description}</p>
+        <span class="resource-action">
+          {resource.action}<span aria-hidden="true">&rarr;</span>
+        </span>
+      </a>
+    ))}
+  </div>
+  <p class="resources-swipe">Swipe to explore all 5 resources <span aria-hidden="true">&rarr;</span></p>
+</section>
+
+<style>
+  .homepage-resources {
+    grid-column: 1 / -1;
+    min-width: 0;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 8px 0;
+    color: var(--text-primary);
+  }
+
+  .resources-heading {
+    margin-bottom: 20px;
+  }
+
+  .resources-eyebrow {
+    margin: 0 0 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .resources-heading h2 {
+    margin: 0 0 8px;
+    font-family: var(--font-heading);
+    font-size: 25px;
+    line-height: 1.25;
+    color: var(--text-heading);
+  }
+
+  .resources-intro {
+    margin: 0;
+    font-size: 15px;
+    color: var(--text-secondary);
+  }
+
+  .resource-cards {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .resource-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 20px 18px;
+    background: linear-gradient(145deg, var(--bg-elevated), var(--bg-surface));
+    border: 1px solid var(--border-accent);
+    border-radius: 18px;
+    text-decoration: none;
+    color: var(--text-primary);
+    box-shadow: var(--shadow-card);
+  }
+
+  .resource-card:hover {
+    border-color: var(--accent);
+  }
+
+  .resource-card:focus-visible,
+  .resource-cards:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .resource-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 17px;
+    background: var(--bg-panel);
+    border: 1px solid var(--border-accent);
+    border-radius: 12px;
+    color: var(--accent);
+  }
+
+  .resource-card h3 {
+    min-height: 69px;
+    margin: 0 0 10px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--text-heading);
+  }
+
+  .resource-card p {
+    margin: 0 0 22px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  .resource-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7px;
+    margin-top: auto;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .resources-swipe {
+    display: none;
+  }
+
+  @media (min-width: 769px) and (max-width: 1100px) {
+    .resource-cards {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    .homepage-resources {
+      padding-top: 24px;
+    }
+
+    .resources-heading {
+      margin-bottom: 18px;
+    }
+
+    .resources-heading h2 {
+      font-size: 22px;
+    }
+
+    .resources-intro {
+      max-width: 280px;
+      font-size: 14px;
+    }
+
+    .resource-cards {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-padding-inline: 6px;
+      gap: 12px;
+      padding: 6px 6px 12px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border-default) transparent;
+    }
+
+    .resource-card {
+      flex: 0 0 83%;
+      min-height: 260px;
+      padding: 20px;
+      scroll-snap-align: start;
+    }
+
+    .resource-card h3 {
+      min-height: 46px;
+      font-size: 19px;
+    }
+
+    .resource-card p {
+      font-size: 15px;
+    }
+
+    .resource-action {
+      font-size: 14px;
+    }
+
+    .resources-swipe {
+      display: block;
+      margin: 8px 0 0;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+  }
+</style>

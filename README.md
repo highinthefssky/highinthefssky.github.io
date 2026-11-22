@@ -6,6 +6,7 @@ A beautiful, performant static site built with Astro for showcasing YouTube vide
 
 - **Video Showcase**: Display YouTube videos with automatic thumbnail and metadata fetching
 - **Featured Carousel**: Eye-catching carousel of featured videos on the homepage
+- **Homepage Resources**: Five resource cards below Latest Videos and the featured post, displayed as a desktop grid and a swipeable mobile row without autoplay
 - **🔴 Live Stream Detection**: Automatic "LIVE NOW" banner when streaming on YouTube
 - **🎮 Controller Configs**: Downloadable MSFS 2024 controller configuration files
 - **🎙️ SimVoice Copilot**: Downloadable SimVoice Copilot Community Packs with import guidance

@@ -4,6 +4,7 @@ import { getImage } from 'astro:assets';
 import brandBanner from '../../public/high-in-the-flightsim-sky-banner-desktop.png';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Carousel from '../components/Carousel.astro';
+import HomepageResources from '../components/HomepageResources.astro';
 
 const allVideos = await getCollection('videos');
 const allPosts = await getCollection('posts');
@@ -123,6 +124,8 @@ const bannerSizes = '(max-width: 768px) calc(100vw - 32px), (max-width: 1248px) 
           </div>
         )}
 
+        <HomepageResources />
+
         <div class="tile tile-stats">
           <div class="stat">
             <span class="stat-label">Videos</span>
@@ -182,6 +185,7 @@ const bannerSizes = '(max-width: 768px) calc(100vw - 32px), (max-width: 1248px) 
         </div>
       </section>
     )}
+    {allVideos.length === 0 && <HomepageResources />}
   </div>
 </BaseLayout>
 
