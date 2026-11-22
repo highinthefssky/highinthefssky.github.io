@@ -18,11 +18,18 @@
   "dependencies": {
     "@astrojs/check": "^0.9.12",
     "@astrojs/markdown-remark": "^7.3.9",
+    "@astrojs/react": "^7.1.9",
     "@astrojs/rss": "^4.0.19",
     "astro": "^7.4.12",
     "google-auth-library": "^11.3.4",
+    "gsap": "^3.12.7",
+    "lenis": "^1.1.20",
     "linkifyjs": "^4.4.0",
+    "lucide-react": "^0.475.0",
     "minisearch": "^7.2.0",
+    "oxc-transform-react": ">=0.145.0 <0.157.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "rehype-sanitize": "^6.0.0",
     "typescript": "^6.0.3",
     "zod": "^4.6.7"
@@ -31,6 +38,8 @@
     "@playwright/test": "^1.65.1",
     "@tailwindcss/vite": "^4.3.5",
     "@types/node": "^26.6.6",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
     "tailwindcss": "^4.3.5",
     "wrangler": "^4.164.0"
   },

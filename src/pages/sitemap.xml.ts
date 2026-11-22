@@ -23,6 +23,7 @@ export async function GET() {
     { loc: '/simvoice-packs/', changefreq: 'weekly', priority: '0.8' },
     { loc: '/tools/community-folder-troubleshooter/', changefreq: 'monthly', priority: '0.8' },
     { loc: '/community2024/', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/msfs-history/', changefreq: 'monthly', priority: '0.8' },
     { loc: '/contact/', changefreq: 'monthly', priority: '0.4' },
     { loc: '/feed/', changefreq: 'hourly', priority: '0.7' },
     { loc: '/privacy/', changefreq: 'monthly', priority: '0.4' },

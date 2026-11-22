@@ -1,0 +1,54 @@
+---
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HistoryExperience from '../components/msfs-history/HistoryExperience';
+import type { HistoryAsset } from '../components/msfs-history/HistoryImage';
+import { ERAS } from '../data/msfsHistory';
+import '../styles/msfs-history.css';
+
+const images = import.meta.glob<{ default: ImageMetadata }>('../assets/msfs-history/*.jpg', { eager: true });
+const assets: Record<string, HistoryAsset> = Object.fromEntries(await Promise.all(
+  Object.entries(images).map(async ([path, { default: image }]) => {
+    const widths = [...new Set([480, 768, Math.min(1200, image.width)].map(width => Math.min(width, image.width)))];
+    const [avif, webp, full] = await Promise.all([
+      Promise.all(widths.map(width => getImage({ src: image, width, format: 'avif', quality: 65 }))),
+      Promise.all(widths.map(width => getImage({ src: image, width, format: 'webp', quality: 75 }))),
+      getImage({ src: image, format: 'webp', quality: 85 }),
+    ]);
+    return [`./screenshots/${path.split('/').pop()}`, {
+      src: webp[webp.length - 1].src, width: image.width, height: image.height,
+      avif: avif.map((variant, index) => `${variant.src} ${widths[index]}w`).join(', '),
+      webp: webp.map((variant, index) => `${variant.src} ${widths[index]}w`).join(', '),
+      fullSrc: full.src,
+    }];
+  }),
+));
+const releaseCount = ERAS.reduce((count, era) => count + era.releases.length, 0);
+---
+
+<BaseLayout
+  title="History of Microsoft Flight Simulator"
+  description={`Explore five eras of Microsoft Flight Simulator, with ${releaseCount} releases and spin-offs, era imagery, hardware comparisons, and an interactive timeline.`}
+  structuredData={{
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'History of Microsoft Flight Simulator',
+    url: new URL('/msfs-history/', Astro.site).href,
+    description: 'An illustrated historical archive of Microsoft Flight Simulator and related spin-offs.',
+  }}
+>
+  <HistoryExperience assets={assets} client:load />
+  <section id="history-sources" class="history-sources" aria-labelledby="history-sources-title">
+    <h2 id="history-sources-title">Sources &amp; editorial notes</h2>
+    <p>This archive includes {releaseCount} releases and related spin-offs. Last editorial review:
+      <time datetime="2026-11-22">November 22, 2026</time>. Roadmap dates describe plans, not completed releases.</p>
+    <p>Era images are supplied illustrations and captures; historical reproductions are not presented as original screenshots.
+      Detailed historical anecdotes and specifications remain subject to further source review.</p>
+    <ul>
+      <li><a href="https://www.flightsimulator.com/microsoft-flight-simulator-2024-available-today-on-playstation-5/">Official PlayStation 5 launch announcement (December 8, 2025)</a></li>
+      <li><a href="https://www.flightsimulator.com/release-notes-sim-update-5-1-7-27-0-now-available-msfs-2024/">Official Sim Update 5 release notes and PS VR2 support (April 30, 2026)</a></li>
+      <li><a href="https://www.flightsimulator.com/november-19-2026-weekly-briefing/">Official November 19, 2026 briefing and upcoming releases</a></li>
+    </ul>
+  </section>
+</BaseLayout>

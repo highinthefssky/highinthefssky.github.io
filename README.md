@@ -10,6 +10,7 @@ A beautiful, performant static site built with Astro for showcasing YouTube vide
 - **🎮 Controller Configs**: Downloadable MSFS 2024 controller configuration files
 - **🎙️ SimVoice Copilot**: Downloadable SimVoice Copilot Community Packs with import guidance
 - **Community Posts**: Markdown-based blog for community updates and discussions
+- **MSFS History**: An illustrated five-era archive with release search, timelines, hardware comparisons, and an image viewer
 - **Full-Text Search**: Fast client-side search across video titles and descriptions
 - **Tag Filtering**: Filter content by tags for better discoverability
 - **RSS Feed**: Subscribe to latest videos and posts via RSS
@@ -132,6 +133,30 @@ mobile reflow, and HTML/index size budgets.
 Search interaction tests serve a fixed search-index fixture so new YouTube uploads
 cannot change their expected result counts. Archive coverage, payload budgets,
 and tag integration still check the real build-generated content.
+
+### Microsoft Flight Simulator History
+
+The native `/msfs-history/` page uses the shared site layout and a server-rendered
+React island. History scripts and styles load only on this route. The archive
+remains readable without JavaScript; enhanced filtering and the image viewer
+require JavaScript. Reduced-motion preferences disable smooth scrolling and
+scroll-triggered animations.
+
+Edit [src/data/msfsHistory.ts](src/data/msfsHistory.ts) for archive entries,
+timeline milestones, hardware comparisons, and stories. Components live in
+[src/components/msfs-history/](src/components/msfs-history/), with scoped styles in
+[src/styles/msfs-history.css](src/styles/msfs-history.css). Original images in
+[src/assets/msfs-history/](src/assets/msfs-history/) are transformed at build time
+into responsive AVIF/WebP variants; full-size viewer images load on demand.
+
+Keep image provenance and historical claims accurate, add official references to
+the page's Sources & editorial notes section, and label roadmap dates as planned.
+The supplied archive is not an independently verified historical database.
+Release and timeline filter counts derive from the data. Playlist automation is
+separate and does not modify this archive.
+
+Validate with `npm run build`, `npx astro check`, and
+`npx playwright test tests/e2e/msfs-history.spec.ts`.
 
 ### Content Automation Reliability
 
