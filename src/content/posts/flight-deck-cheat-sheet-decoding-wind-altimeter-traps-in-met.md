@@ -1,7 +1,7 @@
 ---
 title: "\u2708\ufe0f Flight Deck Cheat Sheet: Decoding Wind & Altimeter Traps in METARs"
 description: "\u2708\ufe0f Flight Deck Cheat Sheet: Decoding Wind & Altimeter Traps in METARs  Looking at METAR KJFK 201851Z 31015G25KT 270V350 10SM BKN040 18/09 A2992? Misreading just"
-publishedAt: "2026-11-14"
+publishedAt: "2026-11-13"
 tags: ["community", "youtube"]
 draft: false
 ---
