@@ -1,5 +1,64 @@
 [
   {
+    "id": "UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
+    "text": "",
+    "published_relative": "1 month ago",
+    "published_date": "2026-10-29",
+    "url": "https://www.youtube.com/post/UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
+    "likes": "3",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/FmxSgnymhnCYc9tGG98EfbLs_lh2MLDTmHRYLiPfvhF2dJyKO0HGM2xp4xhKccPsIoiG_G3vwmGT=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-11-28T06:59:46.612733Z"
+  },
+  {
+    "id": "UgkxUJF6JDdhZnWrfAF_34I1-v-LAz4vHsr0",
+    "text": "🛫 Simmer's Quick Check: You are flying a high-performance turboprop (such as the Daher TBM 930 or Pilatus PC-12) on short final. You are slightly floating over the touchdown zone and decide to pull your power lever back past the flight idle gate into the Beta / Ground Range while still airborne.\n\nWhat is the primary danger of this action?\n\n📺 Master the Flight Deck:\nTurboprop power levers don't behave like standard piston throttles! Discover how blade pitch governing works and how to manage your approach speeds smoothly without stalling over the numbers.\nWatch the full guide here: https://youtu.be/lxHzNhVdLAo",
+    "published_relative": "2 months ago",
+    "published_date": "2026-09-29",
+    "url": "https://www.youtube.com/post/UgkxUJF6JDdhZnWrfAF_34I1-v-LAz4vHsr0",
+    "likes": "5",
+    "comments": "2",
+    "images": null,
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-11-28T06:59:46.612722Z"
+  },
+  {
+    "id": "UgkxTNz19tJEt-gjx7rb4fAQK5lkBABJLJLC",
+    "text": "🚨 TONIGHT: Testing MSFS City Update 15 & the Piper M600!\n\nThe pilot is \"incapacitated\" but the aircraft has everything under control! 🛩️🤖\n\nTake a close look at the cockpit screenshot below—we’ve officially triggered the HALO Emergency Autoland system on the brand-new Expert Series Piper M600 by FSReborn! All three screens are locked in, the system says “EMERGENCY AUTOLAND ACTIVE - No Action Required,” and we are currently enroute to Chicago/Rockford Intl for an entirely automated, hands-free landing.\n\nWill it actually bring us down safely, or are we about to test the structural integrity of the Midwest photogrammetry? Let's find out together!\n\nBeyond pushing this advanced Garmin G3000 avionics suite to its absolute limits, we are flying deep into the American Heartland to review the massive new City Update 15. We'll be checking out the high-fidelity TIN upgrades for:\n\n- Chicago (including a nostalgic trip to the legendary Meigs Field!)\n- Minneapolis-St. Paul\n- Milwaukee\n\n🕒 Livestream Schedule\nTime: 19:30 CET (Europe Time)\n\nWhere: Right here on the channel!\n\nDrop a comment below: Have you picked up the Piper M600 yet, or are you waiting to see the final verdict tonight?\n\nSet your alarms, grab a drink, and I'll see you live in the flight deck at 19:30! ✈️👇\n\n#MSFS #CityUpdate15 #PiperM600 #FlightSimulator #Livestream",
+    "published_relative": "5 months ago",
+    "published_date": "2026-07-01",
+    "url": "https://www.youtube.com/post/UgkxTNz19tJEt-gjx7rb4fAQK5lkBABJLJLC",
+    "likes": "3",
+    "comments": "0",
+    "images": [
+      "https://yt3.ggpht.com/ApmN2j0KcJPFRx6oHYbeVO9QLJn4vwSqdd3BC4HRP0GQ8Zxyv8U1bT4z4Z33r8pNZzUbFYSaLA3xlro=s1280",
+      "https://yt3.ggpht.com/3OJ4c8ETesBtCHDAiTrTTWVZMbIYoP1LXH0S0f64wuNsUgwvyPwFGjgv1Ys6uCKbMP35wJHCg8SU-w=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-11-28T06:59:46.612713Z"
+  },
+  {
+    "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
+    "text": "World Update 22: United States National Parks available!\nLooks like someone pushed the release button to early, wasn't this scheduled to be released on the 4th of July?",
+    "published_relative": "4 months ago",
+    "published_date": "2026-07-31",
+    "url": "https://www.youtube.com/post/UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
+    "likes": "8",
+    "comments": "2",
+    "images": [
+      "https://yt3.ggpht.com/Jca4NmdUzDyoemPRDXQXm-t5qasMawuSv4YcXIRuSk5eEBeSuoSr5QQs_mVu5FcJvuO0zIz9X1i01g=s1280"
+    ],
+    "video_id": null,
+    "poll": null,
+    "scraped_at": "2026-11-28T06:59:46.612694Z"
+  },
+  {
     "id": "UgkxJ-9-HEwkgLdU4Em5ysrwilAMaj461zfm",
     "text": "Is 1:1 real-world parity a 'must-have' for you, or is it just background noise? ✈️ For the hardcore purists, PSXT is officially the only path forward after April 30th. I've tested the setup and the cost in my latest guide. Watch here: https://youtu.be/fvyn5-lf7UQ",
     "published_relative": "6 months ago",
@@ -60,21 +119,6 @@
     "scraped_at": "2026-11-27T20:53:10.465334Z"
   },
   {
-    "id": "UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
-    "text": "World Update 22: United States National Parks available!\nLooks like someone pushed the release button to early, wasn't this scheduled to be released on the 4th of July?",
-    "published_relative": "4 months ago",
-    "published_date": "2026-07-30",
-    "url": "https://www.youtube.com/post/UgkxvvkN5jAJsxfFesDjAEN0bqtf2r8xD7Wd",
-    "likes": "8",
-    "comments": "2",
-    "images": [
-      "https://yt3.ggpht.com/Jca4NmdUzDyoemPRDXQXm-t5qasMawuSv4YcXIRuSk5eEBeSuoSr5QQs_mVu5FcJvuO0zIz9X1i01g=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-11-27T20:53:10.465292Z"
-  },
-  {
     "id": "UgkxzHQpS2aHdfWw-1s8memyySmmAilAzeRb",
     "text": "Tired of repeating the exact same robotic phrase three times on final approach just to get the landing gear down? 😅 \n\nLet me know in the comments: what’s the one cockpit command your voice assistant usually messes up the most?\n\nIf you want to grab the SimVoice Copilot Premium Lifetime license while it’s on sale for $39.99 (down from $59.99 through October 19), make sure to stack our community code at checkout for an extra discount on top of that promo price!\n\n👉 Get SimVoice Copilot here: https://simvoicecopilot.com/hitfs\n🎟️ Use code: JVELDH10",
     "published_relative": "1 month ago",
@@ -133,37 +177,6 @@
     "video_id": null,
     "poll": null,
     "scraped_at": "2026-11-27T07:31:21.785115Z"
-  },
-  {
-    "id": "UgkxTNz19tJEt-gjx7rb4fAQK5lkBABJLJLC",
-    "text": "🚨 TONIGHT: Testing MSFS City Update 15 & the Piper M600!\n\nThe pilot is \"incapacitated\" but the aircraft has everything under control! 🛩️🤖\n\nTake a close look at the cockpit screenshot below—we’ve officially triggered the HALO Emergency Autoland system on the brand-new Expert Series Piper M600 by FSReborn! All three screens are locked in, the system says “EMERGENCY AUTOLAND ACTIVE - No Action Required,” and we are currently enroute to Chicago/Rockford Intl for an entirely automated, hands-free landing.\n\nWill it actually bring us down safely, or are we about to test the structural integrity of the Midwest photogrammetry? Let's find out together!\n\nBeyond pushing this advanced Garmin G3000 avionics suite to its absolute limits, we are flying deep into the American Heartland to review the massive new City Update 15. We'll be checking out the high-fidelity TIN upgrades for:\n\n- Chicago (including a nostalgic trip to the legendary Meigs Field!)\n- Minneapolis-St. Paul\n- Milwaukee\n\n🕒 Livestream Schedule\nTime: 19:30 CET (Europe Time)\n\nWhere: Right here on the channel!\n\nDrop a comment below: Have you picked up the Piper M600 yet, or are you waiting to see the final verdict tonight?\n\nSet your alarms, grab a drink, and I'll see you live in the flight deck at 19:30! ✈️👇\n\n#MSFS #CityUpdate15 #PiperM600 #FlightSimulator #Livestream",
-    "published_relative": "5 months ago",
-    "published_date": "2026-06-30",
-    "url": "https://www.youtube.com/post/UgkxTNz19tJEt-gjx7rb4fAQK5lkBABJLJLC",
-    "likes": "3",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/ApmN2j0KcJPFRx6oHYbeVO9QLJn4vwSqdd3BC4HRP0GQ8Zxyv8U1bT4z4Z33r8pNZzUbFYSaLA3xlro=s1280",
-      "https://yt3.ggpht.com/3OJ4c8ETesBtCHDAiTrTTWVZMbIYoP1LXH0S0f64wuNsUgwvyPwFGjgv1Ys6uCKbMP35wJHCg8SU-w=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-11-27T07:31:21.785067Z"
-  },
-  {
-    "id": "UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
-    "text": "",
-    "published_relative": "1 month ago",
-    "published_date": "2026-10-28",
-    "url": "https://www.youtube.com/post/UgkxH9LwjRvVuVrTchg04Qgiy9SKYONtqoX0",
-    "likes": "3",
-    "comments": "0",
-    "images": [
-      "https://yt3.ggpht.com/FmxSgnymhnCYc9tGG98EfbLs_lh2MLDTmHRYLiPfvhF2dJyKO0HGM2xp4xhKccPsIoiG_G3vwmGT=s1280"
-    ],
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-11-27T07:31:21.785039Z"
   },
   {
     "id": "UgkxqV-_pCecN9s5rYHKofrsxm7BeqdQ01bo",
@@ -363,19 +376,6 @@
     "video_id": null,
     "poll": null,
     "scraped_at": "2026-11-20T00:24:55.517134Z"
-  },
-  {
-    "id": "UgkxUJF6JDdhZnWrfAF_34I1-v-LAz4vHsr0",
-    "text": "🛫 Simmer's Quick Check: You are flying a high-performance turboprop (such as the Daher TBM 930 or Pilatus PC-12) on short final. You are slightly floating over the touchdown zone and decide to pull your power lever back past the flight idle gate into the Beta / Ground Range while still airborne.\n\nWhat is the primary danger of this action?\n\n📺 Master the Flight Deck:\nTurboprop power levers don't behave like standard piston throttles! Discover how blade pitch governing works and how to manage your approach speeds smoothly without stalling over the numbers.\nWatch the full guide here: https://youtu.be/lxHzNhVdLAo",
-    "published_relative": "2 months ago",
-    "published_date": "2026-09-15",
-    "url": "https://www.youtube.com/post/UgkxUJF6JDdhZnWrfAF_34I1-v-LAz4vHsr0",
-    "likes": "5",
-    "comments": "2",
-    "images": null,
-    "video_id": null,
-    "poll": null,
-    "scraped_at": "2026-11-14T22:07:24.960382Z"
   },
   {
     "id": "Ugkx_e3pqJz1uYwoJtj-2zaW6zJh-Ha1G5tm",
